@@ -124,6 +124,10 @@
   .chart-head .toss:hover { background: var(--cyan); color: #000; }
   .chart-head .star { background: none; border: none; color: var(--amber); cursor: pointer; font-size: 16px; padding: 0 4px; }
   .chart-head .star.off { color: var(--dim); }
+  .chart-head .rec-badge {
+    background: var(--amber); color: #000; padding: 1px 8px; font-size: 10px;
+    font-weight: 700; letter-spacing: 0.04em; border-radius: 0;
+  }
   .charts { flex: 1; display: flex; flex-direction: column; min-height: 0; }
   .chart-cell { flex: 1; position: relative; min-height: 0; border-top: 1px solid var(--rule); }
   .chart-cell:first-child { border-top: none; }
@@ -195,6 +199,9 @@
   .fav { background: none; border: none; color: var(--amber); cursor: pointer; font-size: 13px; padding: 0; }
   .fav.off { color: var(--dim); }
   .new-tag { color: var(--magenta); font-size: 9px; margin-left: 2px; }
+  .rec-tag { margin-right: 4px; font-size: 12px; }
+  table.tbl tbody tr.is-rec td:first-child { border-left: 2px solid var(--amber); }
+  table.tbl tbody tr.is-rec .tk { color: var(--amber); }
   .earn-tag {
     background: var(--amber); color: #000; font-size: 9px; padding: 0 3px; margin-left: 3px;
     font-weight: 700;
@@ -317,6 +324,7 @@
   };
   const FILTER_GROUPS = [
     { key: "status", label: "상태", chips: [
+      { k:"recommended", label:"🏆 추천" },
       { k:"alerts", label:"알림" }, { k:"favorites", label:"즐겨" },
       { k:"is_new", label:"신생" }, { k:"earnings_soon", label:"실적임박" },
       { k:"earnings_post", label:"실적후" }, { k:"volume_up_candle", label:"거래량+" },
@@ -419,6 +427,7 @@
   }
   function passStatus(p, sel) {
     return sel.some(k => {
+      if (k === "recommended") return !!p.is_recommended;
       if (k === "alerts") return p.alerts.length > 0;
       if (k === "favorites") return favs.has(p.ticker_2x);
       if (k === "is_new") return !!p.is_new;
@@ -489,9 +498,10 @@
         const d = ALERT_GLYPHS[k] || SIGNAL_GLYPHS[k];
         return d ? `<span class="cl ${d.cls}" title="${d.t}">${d.g}</span>` : "";
       }).join(" ");
-      return `<tr data-ticker="${p.ticker_2x}" class="row${hasA?' has-alert':''}">
+      const rec = p.is_recommended ? `<span class="rec-tag" title="${(p.rec_reasons||[]).join(', ')} (score ${p.rec_score})">🏆</span>` : "";
+      return `<tr data-ticker="${p.ticker_2x}" class="row${hasA?' has-alert':''}${p.is_recommended?' is-rec':''}">
         <td><button class="fav ${fav?'':'off'}" data-ticker="${p.ticker_2x}">${fav?'★':'☆'}</button></td>
-        <td class="l"><div class="tk">${p.ticker_2x}${isNew?'<span class="new-tag">NEW</span>':''}${earn}</div><div class="sub">${subtitle}</div></td>
+        <td class="l"><div class="tk">${rec}${p.ticker_2x}${isNew?'<span class="new-tag">NEW</span>':''}${earn}</div><div class="sub">${subtitle}</div></td>
         <td class="num">${fmtPx(p.price_2x)}</td>
         <td class="num ${pctC(p.daily_pct)}">${fmtPct(p.daily_pct)}</td>
         <td class="num ${p.volume_ratio!=null&&p.volume_ratio>=2?'amb':''}">${fmtVol(p.volume_ratio)}</td>
@@ -557,10 +567,13 @@
       const d = ALERT_GLYPHS[k]||SIGNAL_GLYPHS[k];
       return d ? `<span class="cl ${d.cls}" title="${d.t}">${d.g}</span>` : "";
     }).join(" ");
+    const recBadge = p.is_recommended
+      ? `<span class="rec-badge" title="점수 ${p.rec_score}">🏆 추천 · ${(p.rec_reasons||[]).slice(0,3).join(', ')}</span>` : "";
     document.getElementById("chart-head").innerHTML = `
       <button class="star ${isFav?'':'off'}" id="chart-fav">${isFav?'★':'☆'}</button>
       <span class="tk">${p.ticker_2x}</span>
       <span class="name">${undKr ? undKr+' 2X' : p.ticker_underlying+' 2X'} · ${p.issuer}</span>
+      ${recBadge}
       <span class="price">${fmtPx(p.price_2x)}</span>
       <span class="num ${pctC(p.daily_pct)}">${fmtPct(p.daily_pct)}%</span>
       <span class="meta">

@@ -322,6 +322,81 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
     }
 
 
+def recommendation_score(p: dict) -> tuple[float, list[str]]:
+    """Score a pair for daily recommendation. Returns (score, reasons[])."""
+    score = 0.0
+    reasons: list[str] = []
+    sigs = p.get("signals") or []
+    alerts = p.get("alerts") or []
+
+    # Premium setups (long-term + tactical entry)
+    if "monthly_bull_near_long" in sigs:
+        score += 3.5; reasons.append("월정배+장기근접")
+    if "bull_align_pullback" in sigs:
+        score += 3.0; reasons.append("정배눌림")
+
+    # Trend confirmation
+    if "monthly_bull_align" in sigs and "monthly_bull_near_long" not in sigs:
+        score += 1.5; reasons.append("월정배")
+    if "ma_bull_align" in sigs:
+        score += 2.0; reasons.append("일정배")
+
+    # Cross events (recent)
+    if "golden_cross" in sigs:
+        score += 2.0; reasons.append("골드크로스")
+    if "dead_cross" in sigs:
+        score -= 2.0
+
+    # Support tests (only score once)
+    if any(s in sigs for s in ("ma20_support", "ma60_support", "ma120_support")):
+        score += 1.0; reasons.append("MA지지")
+
+    # Buying momentum
+    if p.get("volume_up_candle"):
+        score += 2.0; reasons.append("거래량+양봉")
+    if p.get("near_52w_high"):
+        score += 1.0; reasons.append("52신고가")
+
+    # RSI sweet spot
+    rsi = p.get("rsi")
+    if rsi is not None:
+        if 30 <= rsi <= 50:
+            score += 1.0; reasons.append(f"RSI {rsi:.0f}")
+        elif 50 < rsi <= 65:
+            score += 0.5
+        elif rsi < 25:
+            score += 0.5
+        elif rsi > 75:
+            score -= 1.0
+
+    # Liquidity (avoid micro-cap traps)
+    dv = p.get("dollar_volume_20d")
+    if dv is not None:
+        if dv >= 100e6:
+            score += 1.5
+        elif dv >= 10e6:
+            score += 0.5
+        elif dv < 1e6:
+            score -= 2.0
+
+    # Negatives
+    if "ma_bear_align" in sigs: score -= 3.0
+    if "monthly_bear_align" in sigs: score -= 2.5
+    drag = p.get("drag_6m")
+    if drag is not None and drag <= -15: score -= 1.5
+
+    # Earnings risk (0~3d before) — binary event, neither buy nor avoid
+    days = p.get("days_to_earnings")
+    if days is not None and 0 <= days <= 3:
+        score -= 0.5; reasons.append(f"실적 D-{days}")
+
+    # Recent big drop = potentially bounce candidate, slight bonus if oversold
+    if "big_drop" in alerts and rsi is not None and rsi < 35:
+        score += 0.5; reasons.append("과매도 바닥")
+
+    return round(score, 2), reasons
+
+
 def _earnings_fields(info: dict | None, today: date) -> dict:
     if not info or not info.get("next_earnings"):
         return {
@@ -425,6 +500,21 @@ def main() -> int:
     alerts_count = sum(1 for p in pairs if p["alerts"])
     proxy_count = sum(1 for p in pairs if p.get("proxy_fields"))
 
+    # Recommendation scoring — top picks for today
+    for p in pairs:
+        score, reasons = recommendation_score(p)
+        p["rec_score"] = score
+        p["rec_reasons"] = reasons
+    REC_MIN_SCORE = 5.0
+    REC_TOP_N = 10
+    rec_candidates = sorted(
+        [p for p in pairs if p["rec_score"] >= REC_MIN_SCORE],
+        key=lambda p: -p["rec_score"],
+    )[:REC_TOP_N]
+    rec_tickers = {p["ticker_2x"] for p in rec_candidates}
+    for p in pairs:
+        p["is_recommended"] = p["ticker_2x"] in rec_tickers
+
     summary = {
         "total_pairs": len(pairs),
         "alerts_count": alerts_count,
@@ -432,6 +522,12 @@ def main() -> int:
         "delisted_count": len(delisted),
         "avg_daily_return": round(float(np.mean(daily_rets)), 2) if daily_rets else None,
         "as_of": str(ref_date.date()),
+        "recommended_count": len(rec_candidates),
+        "recommended": [
+            {"ticker_2x": p["ticker_2x"], "underlying": p["ticker_underlying"],
+             "score": p["rec_score"], "reasons": p["rec_reasons"]}
+            for p in rec_candidates
+        ],
     }
 
     pairs_sorted = sorted(
@@ -456,6 +552,10 @@ def main() -> int:
     print(f"  delisted     : {len(delisted)}  {[d['ticker_2x'] for d in delisted][:10]}")
     print(f"  skipped(no $): {len(skipped)}  {skipped[:10]}")
     print(f"  avg daily    : {summary['avg_daily_return']}%")
+    print(f"  recommended  : {len(rec_candidates)}")
+    for p in rec_candidates:
+        rs = ", ".join(p["rec_reasons"][:4])
+        print(f"    {p['ticker_2x']:6s} {p['ticker_underlying']:6s}  score={p['rec_score']:>4.1f}  [{rs}]")
     return 0
 
 

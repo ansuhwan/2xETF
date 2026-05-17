@@ -1,12 +1,127 @@
 {
-  "updated_at": "2026-05-17T18:38:23+09:00",
+  "updated_at": "2026-05-17T23:58:50+09:00",
   "summary": {
     "total_pairs": 178,
     "alerts_count": 35,
     "using_underlying_proxy": 7,
     "delisted_count": 14,
     "avg_daily_return": -0.27,
-    "as_of": "2026-05-14"
+    "as_of": "2026-05-14",
+    "recommended_count": 10,
+    "recommended": [
+      {
+        "ticker_2x": "AMZU",
+        "underlying": "AMZN",
+        "score": 10.5,
+        "reasons": [
+          "정배눌림",
+          "월정배",
+          "일정배",
+          "MA지지",
+          "52신고가"
+        ]
+      },
+      {
+        "ticker_2x": "TSMX",
+        "underlying": "TSM",
+        "score": 9.5,
+        "reasons": [
+          "정배눌림",
+          "월정배",
+          "일정배",
+          "MA지지",
+          "52신고가"
+        ]
+      },
+      {
+        "ticker_2x": "AMZZ",
+        "underlying": "AMZN",
+        "score": 9.0,
+        "reasons": [
+          "정배눌림",
+          "월정배",
+          "일정배",
+          "MA지지",
+          "52신고가"
+        ]
+      },
+      {
+        "ticker_2x": "AVGU",
+        "underlying": "AVGO",
+        "score": 9.0,
+        "reasons": [
+          "정배눌림",
+          "월정배",
+          "일정배",
+          "MA지지",
+          "52신고가"
+        ]
+      },
+      {
+        "ticker_2x": "TSMU",
+        "underlying": "TSM",
+        "score": 9.0,
+        "reasons": [
+          "정배눌림",
+          "월정배",
+          "일정배",
+          "MA지지",
+          "52신고가"
+        ]
+      },
+      {
+        "ticker_2x": "AVGX",
+        "underlying": "AVGO",
+        "score": 8.5,
+        "reasons": [
+          "정배눌림",
+          "월정배",
+          "일정배",
+          "MA지지"
+        ]
+      },
+      {
+        "ticker_2x": "AMKL",
+        "underlying": "AMKR",
+        "score": 8.5,
+        "reasons": [
+          "정배눌림",
+          "월정배",
+          "일정배",
+          "MA지지",
+          "RSI 45"
+        ]
+      },
+      {
+        "ticker_2x": "BABX",
+        "underlying": "BABA",
+        "score": 6.5,
+        "reasons": [
+          "월정배+장기근접",
+          "골드크로스"
+        ]
+      },
+      {
+        "ticker_2x": "AMDL",
+        "underlying": "AMD",
+        "score": 6.0,
+        "reasons": [
+          "월정배",
+          "일정배",
+          "52신고가"
+        ]
+      },
+      {
+        "ticker_2x": "NVDL",
+        "underlying": "NVDA",
+        "score": 6.0,
+        "reasons": [
+          "월정배",
+          "일정배",
+          "52신고가"
+        ]
+      }
+    ]
   },
   "skipped_no_price": [
     "JPNL"
@@ -133,7 +248,13 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": 0.39429
+      "eps_estimate": 0.39429,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "TTDU",
@@ -169,7 +290,10 @@
       "next_earnings": "2026-08-07",
       "days_to_earnings": 82,
       "earnings_window": null,
-      "eps_estimate": 0.4035
+      "eps_estimate": 0.4035,
+      "rec_score": -7.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "USAX",
@@ -203,7 +327,12 @@
       "next_earnings": "2026-05-14",
       "days_to_earnings": -3,
       "earnings_window": "post",
-      "eps_estimate": -0.225
+      "eps_estimate": -0.225,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "MPL",
@@ -240,7 +369,14 @@
       "next_earnings": "2026-08-07",
       "days_to_earnings": 82,
       "earnings_window": null,
-      "eps_estimate": 0.05143
+      "eps_estimate": 0.05143,
+      "rec_score": 5.5,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "MA지지",
+        "RSI 48"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "CRMX",
@@ -274,7 +410,13 @@
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
-      "eps_estimate": null
+      "eps_estimate": null,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "MA지지",
+        "RSI 45"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "CRMU",
@@ -308,7 +450,13 @@
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
-      "eps_estimate": null
+      "eps_estimate": null,
+      "rec_score": 2.0,
+      "rec_reasons": [
+        "MA지지",
+        "RSI 45"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "HIMZ",
@@ -340,7 +488,10 @@
       "next_earnings": "2026-08-11",
       "days_to_earnings": 86,
       "earnings_window": null,
-      "eps_estimate": 0.13919
+      "eps_estimate": 0.13919,
+      "rec_score": 0.5,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "PATX",
@@ -377,7 +528,12 @@
       "next_earnings": "2026-05-29",
       "days_to_earnings": 12,
       "earnings_window": null,
-      "eps_estimate": 0.15874
+      "eps_estimate": 0.15874,
+      "rec_score": -6.5,
+      "rec_reasons": [
+        "RSI 34"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "VSTL",
@@ -413,7 +569,10 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": 2.59081
+      "eps_estimate": 2.59081,
+      "rec_score": -3.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "OPEX",
@@ -445,7 +604,10 @@
       "next_earnings": "2026-08-07",
       "days_to_earnings": 82,
       "earnings_window": null,
-      "eps_estimate": -0.03214
+      "eps_estimate": -0.03214,
+      "rec_score": -1.5,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "EOSU",
@@ -479,7 +641,14 @@
       "next_earnings": "2026-07-29",
       "days_to_earnings": 73,
       "earnings_window": null,
-      "eps_estimate": -0.1454
+      "eps_estimate": -0.1454,
+      "rec_score": 4.5,
+      "rec_reasons": [
+        "월정배",
+        "골드크로스",
+        "RSI 46"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "USGG",
@@ -512,7 +681,12 @@
       "next_earnings": "2026-05-14",
       "days_to_earnings": -3,
       "earnings_window": "post",
-      "eps_estimate": -0.225
+      "eps_estimate": -0.225,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "PLUL",
@@ -545,7 +719,12 @@
       "next_earnings": "2026-08-11",
       "days_to_earnings": 86,
       "earnings_window": null,
-      "eps_estimate": -0.08
+      "eps_estimate": -0.08,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "XPEG",
@@ -581,7 +760,12 @@
       "next_earnings": "2026-05-15",
       "days_to_earnings": -2,
       "earnings_window": "post",
-      "eps_estimate": -1.115
+      "eps_estimate": -1.115,
+      "rec_score": -6.5,
+      "rec_reasons": [
+        "RSI 38"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "LMNX",
@@ -614,7 +798,12 @@
       "next_earnings": "2026-04-29",
       "days_to_earnings": -18,
       "earnings_window": null,
-      "eps_estimate": -0.55
+      "eps_estimate": -0.55,
+      "rec_score": 0.0,
+      "rec_reasons": [
+        "월정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "PONX",
@@ -647,7 +836,10 @@
       "next_earnings": "2026-05-26",
       "days_to_earnings": 9,
       "earnings_window": null,
-      "eps_estimate": -0.12621
+      "eps_estimate": -0.12621,
+      "rec_score": -5.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "XNDX",
@@ -680,7 +872,12 @@
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
-      "eps_estimate": null
+      "eps_estimate": null,
+      "rec_score": 1.0,
+      "rec_reasons": [
+        "RSI 31"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "SOUX",
@@ -713,7 +910,12 @@
       "next_earnings": "2026-08-07",
       "days_to_earnings": 82,
       "earnings_window": null,
-      "eps_estimate": -0.04
+      "eps_estimate": -0.04,
+      "rec_score": 1.0,
+      "rec_reasons": [
+        "RSI 48"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "CPNX",
@@ -747,7 +949,10 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": -0.053
+      "eps_estimate": -0.053,
+      "rec_score": -4.5,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "RBLU",
@@ -780,7 +985,10 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": -0.35665
+      "eps_estimate": -0.35665,
+      "rec_score": -4.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "SOFX",
@@ -815,7 +1023,10 @@
       "next_earnings": "2026-07-28",
       "days_to_earnings": 72,
       "earnings_window": null,
-      "eps_estimate": 0.11576
+      "eps_estimate": 0.11576,
+      "rec_score": -4.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "ISUL",
@@ -848,7 +1059,10 @@
       "next_earnings": "2026-07-22",
       "days_to_earnings": 66,
       "earnings_window": null,
-      "eps_estimate": 2.50267
+      "eps_estimate": 2.50267,
+      "rec_score": -2.5,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "FBL",
@@ -881,7 +1095,10 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": 7.48333
+      "eps_estimate": 7.48333,
+      "rec_score": 0.5,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "METU",
@@ -914,7 +1131,10 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": 7.48333
+      "eps_estimate": 7.48333,
+      "rec_score": 1.5,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "APHU",
@@ -947,7 +1167,12 @@
       "next_earnings": "2026-07-29",
       "days_to_earnings": 73,
       "earnings_window": null,
-      "eps_estimate": 1.17282
+      "eps_estimate": 1.17282,
+      "rec_score": 0.0,
+      "rec_reasons": [
+        "월정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "APLZ",
@@ -978,7 +1203,10 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": null
+      "eps_estimate": null,
+      "rec_score": 0.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "CEGX",
@@ -1012,7 +1240,12 @@
       "next_earnings": "2026-08-10",
       "days_to_earnings": 85,
       "earnings_window": null,
-      "eps_estimate": 2.52649
+      "eps_estimate": 2.52649,
+      "rec_score": -4.0,
+      "rec_reasons": [
+        "RSI 32"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AVXX",
@@ -1047,7 +1280,10 @@
       "next_earnings": "2026-06-24",
       "days_to_earnings": 38,
       "earnings_window": null,
-      "eps_estimate": 1.47206
+      "eps_estimate": 1.47206,
+      "rec_score": -4.5,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "RVNL",
@@ -1080,7 +1316,10 @@
       "next_earnings": "2026-05-01",
       "days_to_earnings": -16,
       "earnings_window": null,
-      "eps_estimate": -0.62963
+      "eps_estimate": -0.62963,
+      "rec_score": 0.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "CWVX",
@@ -1113,7 +1352,12 @@
       "next_earnings": "2026-05-08",
       "days_to_earnings": -9,
       "earnings_window": null,
-      "eps_estimate": -1.02786
+      "eps_estimate": -1.02786,
+      "rec_score": 1.5,
+      "rec_reasons": [
+        "RSI 50"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "CRWU",
@@ -1146,7 +1390,10 @@
       "next_earnings": "2026-05-08",
       "days_to_earnings": -9,
       "earnings_window": null,
-      "eps_estimate": -1.02786
+      "eps_estimate": -1.02786,
+      "rec_score": 1.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "CRWG",
@@ -1179,7 +1426,12 @@
       "next_earnings": "2026-05-08",
       "days_to_earnings": -9,
       "earnings_window": null,
-      "eps_estimate": -1.02786
+      "eps_estimate": -1.02786,
+      "rec_score": 1.5,
+      "rec_reasons": [
+        "RSI 50"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "RCAX",
@@ -1212,7 +1464,12 @@
       "next_earnings": "2026-05-08",
       "days_to_earnings": -9,
       "earnings_window": null,
-      "eps_estimate": -0.17
+      "eps_estimate": -0.17,
+      "rec_score": 1.5,
+      "rec_reasons": [
+        "월정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "ANEL",
@@ -1249,7 +1506,13 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": 0.88335
+      "eps_estimate": 0.88335,
+      "rec_score": 5.0,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "UPSX",
@@ -1284,7 +1547,10 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": 0.58622
+      "eps_estimate": 0.58622,
+      "rec_score": -2.5,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "OKLL",
@@ -1315,7 +1581,12 @@
       "next_earnings": "2026-08-11",
       "days_to_earnings": 86,
       "earnings_window": null,
-      "eps_estimate": -0.18404
+      "eps_estimate": -0.18404,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "RSI 44"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AXTX",
@@ -1349,7 +1620,13 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 0.074
+      "eps_estimate": 0.074,
+      "rec_score": 3.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AAOX",
@@ -1384,7 +1661,13 @@
       "next_earnings": "2026-08-07",
       "days_to_earnings": 82,
       "earnings_window": null,
-      "eps_estimate": 0.015
+      "eps_estimate": 0.015,
+      "rec_score": 5.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AXTU",
@@ -1420,7 +1703,13 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 0.074
+      "eps_estimate": 0.074,
+      "rec_score": 3.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "CRCG",
@@ -1451,7 +1740,12 @@
       "next_earnings": "2026-08-11",
       "days_to_earnings": 86,
       "earnings_window": null,
-      "eps_estimate": 0.23063
+      "eps_estimate": 0.23063,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "CCUP",
@@ -1482,7 +1776,12 @@
       "next_earnings": "2026-08-11",
       "days_to_earnings": 86,
       "earnings_window": null,
-      "eps_estimate": 0.23063
+      "eps_estimate": 0.23063,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "BABX",
@@ -1515,7 +1814,13 @@
       "next_earnings": "2026-05-13",
       "days_to_earnings": -4,
       "earnings_window": "post",
-      "eps_estimate": 11.28957
+      "eps_estimate": 11.28957,
+      "rec_score": 6.5,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "골드크로스"
+      ],
+      "is_recommended": true
     },
     {
       "ticker_2x": "UECG",
@@ -1550,7 +1855,13 @@
       "next_earnings": "2026-05-28",
       "days_to_earnings": 11,
       "earnings_window": null,
-      "eps_estimate": -0.01
+      "eps_estimate": -0.01,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "LCDL",
@@ -1584,7 +1895,12 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": -2.382
+      "eps_estimate": -2.382,
+      "rec_score": -6.0,
+      "rec_reasons": [
+        "RSI 47"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "PDDL",
@@ -1615,7 +1931,12 @@
       "next_earnings": "2026-05-27",
       "days_to_earnings": 10,
       "earnings_window": null,
-      "eps_estimate": 16.3658
+      "eps_estimate": 16.3658,
+      "rec_score": -4.0,
+      "rec_reasons": [
+        "RSI 45"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "DNNG",
@@ -1650,7 +1971,13 @@
       "next_earnings": "2026-08-07",
       "days_to_earnings": 82,
       "earnings_window": null,
-      "eps_estimate": -0.01918
+      "eps_estimate": -0.01918,
+      "rec_score": 0.5,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "RSI 38"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "CRDU",
@@ -1679,7 +2006,12 @@
       "next_earnings": "2026-06-02",
       "days_to_earnings": 16,
       "earnings_window": null,
-      "eps_estimate": 1.03414
+      "eps_estimate": 1.03414,
+      "rec_score": 1.5,
+      "rec_reasons": [
+        "RSI 44"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "QCML",
@@ -1712,7 +2044,12 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": 2.22896
+      "eps_estimate": 2.22896,
+      "rec_score": 2.0,
+      "rec_reasons": [
+        "월정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "QSU",
@@ -1743,7 +2080,10 @@
       "next_earnings": "2026-07-23",
       "days_to_earnings": 67,
       "earnings_window": null,
-      "eps_estimate": -0.17761
+      "eps_estimate": -0.17761,
+      "rec_score": -2.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "SMUP",
@@ -1776,7 +2116,13 @@
       "next_earnings": "2026-08-07",
       "days_to_earnings": 82,
       "earnings_window": null,
-      "eps_estimate": -0.1217
+      "eps_estimate": -0.1217,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "골드크로스",
+        "RSI 46"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "SNOU",
@@ -1810,7 +2156,12 @@
       "next_earnings": "2026-05-28",
       "days_to_earnings": 11,
       "earnings_window": null,
-      "eps_estimate": 0.31812
+      "eps_estimate": 0.31812,
+      "rec_score": -1.0,
+      "rec_reasons": [
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "SMU",
@@ -1843,7 +2194,13 @@
       "next_earnings": "2026-08-07",
       "days_to_earnings": 82,
       "earnings_window": null,
-      "eps_estimate": -0.1217
+      "eps_estimate": -0.1217,
+      "rec_score": 2.0,
+      "rec_reasons": [
+        "골드크로스",
+        "RSI 46"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "NVOX",
@@ -1877,7 +2234,12 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": 5.188
+      "eps_estimate": 5.188,
+      "rec_score": -1.0,
+      "rec_reasons": [
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "RDTL",
@@ -1908,7 +2270,13 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 1.44852
+      "eps_estimate": 1.44852,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "MA지지",
+        "RSI 45"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "LABX",
@@ -1940,7 +2308,10 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": 0.69059
+      "eps_estimate": 0.69059,
+      "rec_score": 1.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "FCXG",
@@ -1972,7 +2343,13 @@
       "next_earnings": "2026-07-22",
       "days_to_earnings": 66,
       "earnings_window": null,
-      "eps_estimate": 0.56347
+      "eps_estimate": 0.56347,
+      "rec_score": 2.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "CONL",
@@ -2004,7 +2381,12 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 0.11728
+      "eps_estimate": 0.11728,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "RSI 47"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "MRNX",
@@ -2035,7 +2417,12 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": -1.95
+      "eps_estimate": -1.95,
+      "rec_score": -1.0,
+      "rec_reasons": [
+        "RSI 44"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "BU",
@@ -2069,7 +2456,13 @@
       "next_earnings": "2026-08-11",
       "days_to_earnings": 86,
       "earnings_window": null,
-      "eps_estimate": 0.83694
+      "eps_estimate": 0.83694,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "ORLG",
@@ -2101,7 +2494,13 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": 0.86168
+      "eps_estimate": 0.86168,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "RSI 40"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "RIOX",
@@ -2134,7 +2533,12 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": -0.22592
+      "eps_estimate": -0.22592,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "ETRL",
@@ -2163,7 +2567,10 @@
       "next_earnings": "2026-08-11",
       "days_to_earnings": 86,
       "earnings_window": null,
-      "eps_estimate": 0.58472
+      "eps_estimate": 0.58472,
+      "rec_score": -1.5,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "UBRL",
@@ -2192,7 +2599,12 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": 0.81
+      "eps_estimate": 0.81,
+      "rec_score": 1.0,
+      "rec_reasons": [
+        "RSI 45"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "LITX",
@@ -2224,7 +2636,13 @@
       "next_earnings": "2026-05-06",
       "days_to_earnings": -11,
       "earnings_window": null,
-      "eps_estimate": 2.96184
+      "eps_estimate": 2.96184,
+      "rec_score": 5.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "LEUX",
@@ -2257,7 +2675,13 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": 1.05333
+      "eps_estimate": 1.05333,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "월정배",
+        "RSI 42"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "BEX",
@@ -2289,7 +2713,13 @@
       "next_earnings": "2026-04-29",
       "days_to_earnings": -18,
       "earnings_window": null,
-      "eps_estimate": 0.38607
+      "eps_estimate": 0.38607,
+      "rec_score": 4.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "TEMT",
@@ -2318,7 +2748,12 @@
       "next_earnings": "2026-05-06",
       "days_to_earnings": -11,
       "earnings_window": null,
-      "eps_estimate": -0.16
+      "eps_estimate": -0.16,
+      "rec_score": 1.0,
+      "rec_reasons": [
+        "RSI 32"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "QUBX",
@@ -2347,7 +2782,10 @@
       "next_earnings": "2026-08-11",
       "days_to_earnings": 86,
       "earnings_window": null,
-      "eps_estimate": -0.08
+      "eps_estimate": -0.08,
+      "rec_score": 1.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "FGRU",
@@ -2376,7 +2814,10 @@
       "next_earnings": "2026-05-12",
       "days_to_earnings": -5,
       "earnings_window": "post",
-      "eps_estimate": 0.3075
+      "eps_estimate": 0.3075,
+      "rec_score": -3.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "QBTX",
@@ -2412,7 +2853,13 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": -0.08231
+      "eps_estimate": -0.08231,
+      "rec_score": 5.5,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "INTW",
@@ -2445,7 +2892,12 @@
       "next_earnings": "2026-07-24",
       "days_to_earnings": 68,
       "earnings_window": null,
-      "eps_estimate": 0.21038
+      "eps_estimate": 0.21038,
+      "rec_score": 2.0,
+      "rec_reasons": [
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "LLYX",
@@ -2479,7 +2931,12 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": 8.80842
+      "eps_estimate": 8.80842,
+      "rec_score": 4.0,
+      "rec_reasons": [
+        "월정배+장기근접"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "ARCX",
@@ -2511,7 +2968,12 @@
       "next_earnings": "2026-08-11",
       "days_to_earnings": 86,
       "earnings_window": null,
-      "eps_estimate": -0.22121
+      "eps_estimate": -0.22121,
+      "rec_score": -0.5,
+      "rec_reasons": [
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "DJTU",
@@ -2542,7 +3004,12 @@
       "next_earnings": "2026-08-01",
       "days_to_earnings": 76,
       "earnings_window": null,
-      "eps_estimate": null
+      "eps_estimate": null,
+      "rec_score": -2.0,
+      "rec_reasons": [
+        "RSI 38"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "NOWL",
@@ -2573,7 +3040,12 @@
       "next_earnings": "2026-07-23",
       "days_to_earnings": 67,
       "earnings_window": null,
-      "eps_estimate": 0.85501
+      "eps_estimate": 0.85501,
+      "rec_score": -3.0,
+      "rec_reasons": [
+        "RSI 39"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "HOOX",
@@ -2604,7 +3076,12 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": 0.495
+      "eps_estimate": 0.495,
+      "rec_score": 1.0,
+      "rec_reasons": [
+        "RSI 34"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "ROBN",
@@ -2635,7 +3112,12 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": 0.495
+      "eps_estimate": 0.495,
+      "rec_score": 1.5,
+      "rec_reasons": [
+        "RSI 34"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "BMNG",
@@ -2666,7 +3148,12 @@
       "next_earnings": "2026-07-03",
       "days_to_earnings": 47,
       "earnings_window": null,
-      "eps_estimate": 0.18
+      "eps_estimate": 0.18,
+      "rec_score": 1.5,
+      "rec_reasons": [
+        "RSI 40"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "ORCX",
@@ -2695,7 +3182,10 @@
       "next_earnings": "2026-06-11",
       "days_to_earnings": 25,
       "earnings_window": null,
-      "eps_estimate": 1.95927
+      "eps_estimate": 1.95927,
+      "rec_score": 2.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "GLXU",
@@ -2724,7 +3214,10 @@
       "next_earnings": "2026-07-28",
       "days_to_earnings": 72,
       "earnings_window": null,
-      "eps_estimate": 0.00057
+      "eps_estimate": 0.00057,
+      "rec_score": 0.5,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "BULX",
@@ -2753,7 +3246,10 @@
       "next_earnings": "2026-05-22",
       "days_to_earnings": 5,
       "earnings_window": "soon",
-      "eps_estimate": 0.03
+      "eps_estimate": 0.03,
+      "rec_score": -1.5,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "BMNU",
@@ -2784,7 +3280,12 @@
       "next_earnings": "2026-07-03",
       "days_to_earnings": 47,
       "earnings_window": null,
-      "eps_estimate": 0.18
+      "eps_estimate": 0.18,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "RSI 41"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "RGTX",
@@ -2819,7 +3320,13 @@
       "next_earnings": "2026-05-12",
       "days_to_earnings": -5,
       "earnings_window": "post",
-      "eps_estimate": -0.04625
+      "eps_estimate": -0.04625,
+      "rec_score": 3.5,
+      "rec_reasons": [
+        "월정배",
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "COHX",
@@ -2851,7 +3358,14 @@
       "next_earnings": "2026-05-07",
       "days_to_earnings": -10,
       "earnings_window": null,
-      "eps_estimate": 1.61491
+      "eps_estimate": 1.61491,
+      "rec_score": 5.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "GLWG",
@@ -2883,7 +3397,14 @@
       "next_earnings": "2026-07-28",
       "days_to_earnings": 72,
       "earnings_window": null,
-      "eps_estimate": 0.7575
+      "eps_estimate": 0.7575,
+      "rec_score": 5.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "MSTU",
@@ -2916,7 +3437,12 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 24.21188
+      "eps_estimate": 24.21188,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "MSTX",
@@ -2949,7 +3475,12 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 24.21188
+      "eps_estimate": 24.21188,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "JOBX",
@@ -2980,7 +3511,12 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": null
+      "eps_estimate": null,
+      "rec_score": 2.0,
+      "rec_reasons": [
+        "골드크로스"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "SNDU",
@@ -3011,7 +3547,12 @@
       "next_earnings": "2026-05-01",
       "days_to_earnings": -16,
       "earnings_window": null,
-      "eps_estimate": 33.05285
+      "eps_estimate": 33.05285,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "RKLX",
@@ -3045,7 +3586,14 @@
       "next_earnings": "2026-08-07",
       "days_to_earnings": 82,
       "earnings_window": null,
-      "eps_estimate": -0.025
+      "eps_estimate": -0.025,
+      "rec_score": 5.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "MRAL",
@@ -3078,7 +3626,10 @@
       "next_earnings": "2026-07-29",
       "days_to_earnings": 73,
       "earnings_window": null,
-      "eps_estimate": -0.51
+      "eps_estimate": -0.51,
+      "rec_score": -2.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "GEVX",
@@ -3107,7 +3658,12 @@
       "next_earnings": "2026-07-29",
       "days_to_earnings": 73,
       "earnings_window": null,
-      "eps_estimate": 2.90576
+      "eps_estimate": 2.90576,
+      "rec_score": 1.0,
+      "rec_reasons": [
+        "RSI 33"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "ZETX",
@@ -3136,7 +3692,12 @@
       "next_earnings": "2026-05-01",
       "days_to_earnings": -16,
       "earnings_window": null,
-      "eps_estimate": 0.19941
+      "eps_estimate": 0.19941,
+      "rec_score": -1.0,
+      "rec_reasons": [
+        "RSI 32"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "SNXX",
@@ -3167,7 +3728,12 @@
       "next_earnings": "2026-05-01",
       "days_to_earnings": -16,
       "earnings_window": null,
-      "eps_estimate": 33.05285
+      "eps_estimate": 33.05285,
+      "rec_score": 3.5,
+      "rec_reasons": [
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "RGTU",
@@ -3202,7 +3768,13 @@
       "next_earnings": "2026-05-12",
       "days_to_earnings": -5,
       "earnings_window": "post",
-      "eps_estimate": -0.04625
+      "eps_estimate": -0.04625,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "월정배",
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "MSTP",
@@ -3235,7 +3807,12 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 24.21188
+      "eps_estimate": 24.21188,
+      "rec_score": 1.5,
+      "rec_reasons": [
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "OSCX",
@@ -3266,7 +3843,12 @@
       "next_earnings": "2026-05-06",
       "days_to_earnings": -11,
       "earnings_window": null,
-      "eps_estimate": 0.39645
+      "eps_estimate": 0.39645,
+      "rec_score": -1.5,
+      "rec_reasons": [
+        "월정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "SRPU",
@@ -3297,7 +3879,12 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": 0.56193
+      "eps_estimate": 0.56193,
+      "rec_score": -3.5,
+      "rec_reasons": [
+        "RSI 40"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "GOU",
@@ -3331,7 +3918,14 @@
       "next_earnings": "2026-07-24",
       "days_to_earnings": 68,
       "earnings_window": null,
-      "eps_estimate": 2.88458
+      "eps_estimate": 2.88458,
+      "rec_score": 3.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "GGLL",
@@ -3365,7 +3959,14 @@
       "next_earnings": "2026-07-24",
       "days_to_earnings": 68,
       "earnings_window": null,
-      "eps_estimate": 2.88458
+      "eps_estimate": 2.88458,
+      "rec_score": 5.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "GOOX",
@@ -3399,7 +4000,14 @@
       "next_earnings": "2026-07-24",
       "days_to_earnings": 68,
       "earnings_window": null,
-      "eps_estimate": 2.88458
+      "eps_estimate": 2.88458,
+      "rec_score": 3.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "MSFX",
@@ -3432,7 +4040,13 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": 4.24777
+      "eps_estimate": 4.24777,
+      "rec_score": 2.0,
+      "rec_reasons": [
+        "MA지지",
+        "RSI 32"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "CRWL",
@@ -3465,7 +4079,12 @@
       "next_earnings": "2026-06-04",
       "days_to_earnings": 18,
       "earnings_window": null,
-      "eps_estimate": 1.06745
+      "eps_estimate": 1.06745,
+      "rec_score": 0.5,
+      "rec_reasons": [
+        "월정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "MSFL",
@@ -3498,7 +4117,13 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": 4.24777
+      "eps_estimate": 4.24777,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "MA지지",
+        "RSI 32"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "MSFU",
@@ -3531,7 +4156,13 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": 4.24777
+      "eps_estimate": 4.24777,
+      "rec_score": 3.5,
+      "rec_reasons": [
+        "MA지지",
+        "RSI 32"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AAPB",
@@ -3564,7 +4195,13 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 1.89077
+      "eps_estimate": 1.89077,
+      "rec_score": 1.5,
+      "rec_reasons": [
+        "월정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "XOVL",
@@ -3598,7 +4235,12 @@
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
-      "eps_estimate": null
+      "eps_estimate": null,
+      "rec_score": 1.5,
+      "rec_reasons": [
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AAPX",
@@ -3631,7 +4273,13 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 1.89077
+      "eps_estimate": 1.89077,
+      "rec_score": 1.5,
+      "rec_reasons": [
+        "월정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "MULL",
@@ -3665,7 +4313,14 @@
       "next_earnings": "2026-06-25",
       "days_to_earnings": 39,
       "earnings_window": null,
-      "eps_estimate": 18.97141
+      "eps_estimate": 18.97141,
+      "rec_score": 3.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "TSLL",
@@ -3700,7 +4355,13 @@
       "next_earnings": "2026-07-23",
       "days_to_earnings": 67,
       "earnings_window": null,
-      "eps_estimate": 0.45438
+      "eps_estimate": 0.45438,
+      "rec_score": 4.0,
+      "rec_reasons": [
+        "월정배",
+        "골드크로스"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AAPU",
@@ -3733,7 +4394,13 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 1.89077
+      "eps_estimate": 1.89077,
+      "rec_score": 2.0,
+      "rec_reasons": [
+        "월정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "TSLR",
@@ -3768,7 +4435,13 @@
       "next_earnings": "2026-07-23",
       "days_to_earnings": 67,
       "earnings_window": null,
-      "eps_estimate": 0.45438
+      "eps_estimate": 0.45438,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "월정배",
+        "골드크로스"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "TSLT",
@@ -3803,7 +4476,13 @@
       "next_earnings": "2026-07-23",
       "days_to_earnings": 67,
       "earnings_window": null,
-      "eps_estimate": 0.45438
+      "eps_estimate": 0.45438,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "월정배",
+        "골드크로스"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "GMEU",
@@ -3834,7 +4513,12 @@
       "next_earnings": "2026-06-10",
       "days_to_earnings": 24,
       "earnings_window": null,
-      "eps_estimate": 0.16
+      "eps_estimate": 0.16,
+      "rec_score": -1.5,
+      "rec_reasons": [
+        "RSI 35"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "APLX",
@@ -3863,7 +4547,10 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": null
+      "eps_estimate": null,
+      "rec_score": 0.5,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AMZU",
@@ -3899,7 +4586,16 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 1.81692
+      "eps_estimate": 1.81692,
+      "rec_score": 10.5,
+      "rec_reasons": [
+        "정배눌림",
+        "월정배",
+        "일정배",
+        "MA지지",
+        "52신고가"
+      ],
+      "is_recommended": true
     },
     {
       "ticker_2x": "SBTU",
@@ -3930,7 +4626,12 @@
       "next_earnings": "2026-05-09",
       "days_to_earnings": -8,
       "earnings_window": null,
-      "eps_estimate": null
+      "eps_estimate": null,
+      "rec_score": -3.5,
+      "rec_reasons": [
+        "RSI 42"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "PAAU",
@@ -3961,7 +4662,13 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": 1.22722
+      "eps_estimate": 1.22722,
+      "rec_score": 0.5,
+      "rec_reasons": [
+        "월정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "HLXX",
@@ -3994,7 +4701,14 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": 0.20895
+      "eps_estimate": 0.20895,
+      "rec_score": 4.0,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "MA지지",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "KEEX",
@@ -4023,7 +4737,10 @@
       "next_earnings": "2026-08-10",
       "days_to_earnings": 85,
       "earnings_window": null,
-      "eps_estimate": null
+      "eps_estimate": null,
+      "rec_score": -1.5,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "RKTL",
@@ -4055,7 +4772,13 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 0.17996
+      "eps_estimate": 0.17996,
+      "rec_score": -2.5,
+      "rec_reasons": [
+        "월정배",
+        "RSI 35"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AFRU",
@@ -4086,7 +4809,12 @@
       "next_earnings": "2026-05-08",
       "days_to_earnings": -9,
       "earnings_window": null,
-      "eps_estimate": 0.8461
+      "eps_estimate": 0.8461,
+      "rec_score": -1.0,
+      "rec_reasons": [
+        "RSI 49"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "UNX",
@@ -4118,7 +4846,12 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": 0.2429
+      "eps_estimate": 0.2429,
+      "rec_score": -3.0,
+      "rec_reasons": [
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "MPWX",
@@ -4153,7 +4886,13 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 5.85953
+      "eps_estimate": 5.85953,
+      "rec_score": 4.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "NFLU",
@@ -4184,7 +4923,12 @@
       "next_earnings": "2026-07-17",
       "days_to_earnings": 61,
       "earnings_window": null,
-      "eps_estimate": 0.78931
+      "eps_estimate": 0.78931,
+      "rec_score": -1.0,
+      "rec_reasons": [
+        "RSI 33"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "ETU",
@@ -4215,7 +4959,13 @@
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
-      "eps_estimate": null
+      "eps_estimate": null,
+      "rec_score": 0.0,
+      "rec_reasons": [
+        "MA지지",
+        "RSI 42"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AMZZ",
@@ -4251,7 +5001,16 @@
       "next_earnings": "2026-07-31",
       "days_to_earnings": 75,
       "earnings_window": null,
-      "eps_estimate": 1.81692
+      "eps_estimate": 1.81692,
+      "rec_score": 9.0,
+      "rec_reasons": [
+        "정배눌림",
+        "월정배",
+        "일정배",
+        "MA지지",
+        "52신고가"
+      ],
+      "is_recommended": true
     },
     {
       "ticker_2x": "CIFU",
@@ -4282,7 +5041,12 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": -0.055
+      "eps_estimate": -0.055,
+      "rec_score": 2.0,
+      "rec_reasons": [
+        "월정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "PLU",
@@ -4314,7 +5078,14 @@
       "next_earnings": "2026-06-05",
       "days_to_earnings": 19,
       "earnings_window": null,
-      "eps_estimate": -0.042
+      "eps_estimate": -0.042,
+      "rec_score": 5.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "BTCL",
@@ -4345,7 +5116,12 @@
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
-      "eps_estimate": null
+      "eps_estimate": null,
+      "rec_score": 1.5,
+      "rec_reasons": [
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "LRCU",
@@ -4379,7 +5155,14 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": 1.6774
+      "eps_estimate": 1.6774,
+      "rec_score": 5.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "LUNL",
@@ -4410,7 +5193,13 @@
       "next_earnings": "2026-05-14",
       "days_to_earnings": -3,
       "earnings_window": "post",
-      "eps_estimate": -0.06
+      "eps_estimate": -0.06,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "SMCX",
@@ -4443,7 +5232,12 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": 0.7133
+      "eps_estimate": 0.7133,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "골드크로스"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "FLYT",
@@ -4474,7 +5268,12 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": -0.51739
+      "eps_estimate": -0.51739,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "MUU",
@@ -4508,7 +5307,14 @@
       "next_earnings": "2026-06-25",
       "days_to_earnings": 39,
       "earnings_window": null,
-      "eps_estimate": 18.97141
+      "eps_estimate": 18.97141,
+      "rec_score": 3.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "IONX",
@@ -4542,7 +5348,12 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": -0.29642
+      "eps_estimate": -0.29642,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "월정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AMKL",
@@ -4580,7 +5391,16 @@
       "next_earnings": "2026-07-28",
       "days_to_earnings": 72,
       "earnings_window": null,
-      "eps_estimate": 0.47177
+      "eps_estimate": 0.47177,
+      "rec_score": 8.5,
+      "rec_reasons": [
+        "정배눌림",
+        "월정배",
+        "일정배",
+        "MA지지",
+        "RSI 45"
+      ],
+      "is_recommended": true
     },
     {
       "ticker_2x": "IONL",
@@ -4614,7 +5434,12 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": -0.29642
+      "eps_estimate": -0.29642,
+      "rec_score": 2.0,
+      "rec_reasons": [
+        "월정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AMDL",
@@ -4648,7 +5473,14 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": 1.60513
+      "eps_estimate": 1.60513,
+      "rec_score": 6.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": true
     },
     {
       "ticker_2x": "VRTL",
@@ -4682,7 +5514,14 @@
       "next_earnings": "2026-07-29",
       "days_to_earnings": 73,
       "earnings_window": null,
-      "eps_estimate": 1.42783
+      "eps_estimate": 1.42783,
+      "rec_score": 3.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "PTIR",
@@ -4716,7 +5555,13 @@
       "next_earnings": "2026-08-04",
       "days_to_earnings": 79,
       "earnings_window": null,
-      "eps_estimate": 0.34414
+      "eps_estimate": 0.34414,
+      "rec_score": 0.0,
+      "rec_reasons": [
+        "월정배",
+        "RSI 33"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AMPU",
@@ -4749,7 +5594,13 @@
       "next_earnings": "2026-08-07",
       "days_to_earnings": 82,
       "earnings_window": null,
-      "eps_estimate": -0.02
+      "eps_estimate": -0.02,
+      "rec_score": 2.0,
+      "rec_reasons": [
+        "MA지지",
+        "RSI 41"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "APPX",
@@ -4784,7 +5635,13 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": 4.09241
+      "eps_estimate": 4.09241,
+      "rec_score": 5.5,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "MA지지"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "SMCL",
@@ -4817,7 +5674,12 @@
       "next_earnings": "2026-08-05",
       "days_to_earnings": 80,
       "earnings_window": null,
-      "eps_estimate": 0.7133
+      "eps_estimate": 0.7133,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "골드크로스"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AMA",
@@ -4853,7 +5715,13 @@
       "next_earnings": "2026-05-15",
       "days_to_earnings": -2,
       "earnings_window": "post",
-      "eps_estimate": 2.67993
+      "eps_estimate": 2.67993,
+      "rec_score": 4.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "COZX",
@@ -4884,7 +5752,12 @@
       "next_earnings": "2026-05-07",
       "days_to_earnings": -10,
       "earnings_window": null,
-      "eps_estimate": -0.02
+      "eps_estimate": -0.02,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "IBX",
@@ -4915,7 +5788,12 @@
       "next_earnings": "2026-07-23",
       "days_to_earnings": 67,
       "earnings_window": null,
-      "eps_estimate": 3.0318
+      "eps_estimate": 3.0318,
+      "rec_score": -4.0,
+      "rec_reasons": [
+        "RSI 37"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "CLSX",
@@ -4948,7 +5826,12 @@
       "next_earnings": "2026-08-07",
       "days_to_earnings": 82,
       "earnings_window": null,
-      "eps_estimate": -0.18
+      "eps_estimate": -0.18,
+      "rec_score": 2.0,
+      "rec_reasons": [
+        "월정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "ASTX",
@@ -4982,7 +5865,14 @@
       "next_earnings": "2026-08-11",
       "days_to_earnings": 86,
       "earnings_window": null,
-      "eps_estimate": -0.29367
+      "eps_estimate": -0.29367,
+      "rec_score": 5.0,
+      "rec_reasons": [
+        "월정배",
+        "MA지지",
+        "RSI 46"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AXPG",
@@ -5016,7 +5906,13 @@
       "next_earnings": "2026-07-24",
       "days_to_earnings": 68,
       "earnings_window": null,
-      "eps_estimate": 4.37935
+      "eps_estimate": 4.37935,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "RSI 48"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "DLLL",
@@ -5050,7 +5946,13 @@
       "next_earnings": "2026-05-29",
       "days_to_earnings": 12,
       "earnings_window": null,
-      "eps_estimate": 2.9412
+      "eps_estimate": 2.9412,
+      "rec_score": 4.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "DKNX",
@@ -5081,7 +5983,12 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": 0.33312
+      "eps_estimate": 0.33312,
+      "rec_score": 0.0,
+      "rec_reasons": [
+        "골드크로스"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "WDCX",
@@ -5113,7 +6020,13 @@
       "next_earnings": "2026-07-30",
       "days_to_earnings": 74,
       "earnings_window": null,
-      "eps_estimate": 3.27229
+      "eps_estimate": 3.27229,
+      "rec_score": 4.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "STXL",
@@ -5145,7 +6058,13 @@
       "next_earnings": "2026-07-29",
       "days_to_earnings": 73,
       "earnings_window": null,
-      "eps_estimate": 5.05821
+      "eps_estimate": 5.05821,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "LNOK",
@@ -5177,7 +6096,14 @@
       "next_earnings": "2026-07-23",
       "days_to_earnings": 67,
       "earnings_window": null,
-      "eps_estimate": 0.06861
+      "eps_estimate": 0.06861,
+      "rec_score": 5.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "STXX",
@@ -5209,7 +6135,13 @@
       "next_earnings": "2026-07-29",
       "days_to_earnings": 73,
       "earnings_window": null,
-      "eps_estimate": 5.05821
+      "eps_estimate": 5.05821,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "WULX",
@@ -5243,7 +6175,13 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": -0.1725
+      "eps_estimate": -0.1725,
+      "rec_score": 4.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "NVTX",
@@ -5274,7 +6212,12 @@
       "next_earnings": "2026-08-04",
       "days_to_earnings": 79,
       "earnings_window": null,
-      "eps_estimate": -0.04255
+      "eps_estimate": -0.04255,
+      "rec_score": 3.0,
+      "rec_reasons": [
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "TSMU",
@@ -5311,7 +6254,16 @@
       "next_earnings": "2026-07-16",
       "days_to_earnings": 60,
       "earnings_window": null,
-      "eps_estimate": 3.73677
+      "eps_estimate": 3.73677,
+      "rec_score": 9.0,
+      "rec_reasons": [
+        "정배눌림",
+        "월정배",
+        "일정배",
+        "MA지지",
+        "52신고가"
+      ],
+      "is_recommended": true
     },
     {
       "ticker_2x": "TSMX",
@@ -5348,7 +6300,16 @@
       "next_earnings": "2026-07-16",
       "days_to_earnings": 60,
       "earnings_window": null,
-      "eps_estimate": 3.73677
+      "eps_estimate": 3.73677,
+      "rec_score": 9.5,
+      "rec_reasons": [
+        "정배눌림",
+        "월정배",
+        "일정배",
+        "MA지지",
+        "52신고가"
+      ],
+      "is_recommended": true
     },
     {
       "ticker_2x": "CSEX",
@@ -5379,7 +6340,13 @@
       "next_earnings": "2026-07-28",
       "days_to_earnings": 72,
       "earnings_window": null,
-      "eps_estimate": 2.30562
+      "eps_estimate": 2.30562,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "월정배",
+        "RSI 41"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AVGX",
@@ -5415,7 +6382,15 @@
       "next_earnings": "2026-06-04",
       "days_to_earnings": 18,
       "earnings_window": null,
-      "eps_estimate": 2.39061
+      "eps_estimate": 2.39061,
+      "rec_score": 8.5,
+      "rec_reasons": [
+        "정배눌림",
+        "월정배",
+        "일정배",
+        "MA지지"
+      ],
+      "is_recommended": true
     },
     {
       "ticker_2x": "NVDL",
@@ -5451,7 +6426,14 @@
       "next_earnings": "2026-05-21",
       "days_to_earnings": 4,
       "earnings_window": "soon",
-      "eps_estimate": 1.77461
+      "eps_estimate": 1.77461,
+      "rec_score": 6.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": true
     },
     {
       "ticker_2x": "NVDU",
@@ -5487,7 +6469,14 @@
       "next_earnings": "2026-05-21",
       "days_to_earnings": 4,
       "earnings_window": "soon",
-      "eps_estimate": 1.77461
+      "eps_estimate": 1.77461,
+      "rec_score": 5.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "NVDX",
@@ -5523,7 +6512,14 @@
       "next_earnings": "2026-05-21",
       "days_to_earnings": 4,
       "earnings_window": "soon",
-      "eps_estimate": 1.77461
+      "eps_estimate": 1.77461,
+      "rec_score": 6.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "AVGU",
@@ -5559,7 +6555,16 @@
       "next_earnings": "2026-06-04",
       "days_to_earnings": 18,
       "earnings_window": null,
-      "eps_estimate": 2.39061
+      "eps_estimate": 2.39061,
+      "rec_score": 9.0,
+      "rec_reasons": [
+        "정배눌림",
+        "월정배",
+        "일정배",
+        "MA지지",
+        "52신고가"
+      ],
+      "is_recommended": true
     },
     {
       "ticker_2x": "KTUP",
@@ -5591,7 +6596,13 @@
       "next_earnings": "2026-08-07",
       "days_to_earnings": 82,
       "earnings_window": null,
-      "eps_estimate": 0.15148
+      "eps_estimate": 0.15148,
+      "rec_score": -0.5,
+      "rec_reasons": [
+        "월정배",
+        "RSI 37"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "IRE",
@@ -5620,7 +6631,10 @@
       "next_earnings": "2026-05-08",
       "days_to_earnings": -9,
       "earnings_window": null,
-      "eps_estimate": -0.46
+      "eps_estimate": -0.46,
+      "rec_score": 2.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "IREX",
@@ -5649,7 +6663,10 @@
       "next_earnings": "2026-05-08",
       "days_to_earnings": -9,
       "earnings_window": null,
-      "eps_estimate": -0.46
+      "eps_estimate": -0.46,
+      "rec_score": 1.0,
+      "rec_reasons": [],
+      "is_recommended": false
     },
     {
       "ticker_2x": "MVLL",
@@ -5683,7 +6700,14 @@
       "next_earnings": "2026-05-28",
       "days_to_earnings": 11,
       "earnings_window": null,
-      "eps_estimate": 0.79663
+      "eps_estimate": 0.79663,
+      "rec_score": 4.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "NEBX",
@@ -5716,7 +6740,13 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": -0.74387
+      "eps_estimate": -0.74387,
+      "rec_score": 3.5,
+      "rec_reasons": [
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "NBIL",
@@ -5749,7 +6779,13 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": -0.74387
+      "eps_estimate": -0.74387,
+      "rec_score": 3.5,
+      "rec_reasons": [
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "NBIG",
@@ -5782,7 +6818,13 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": -0.74387
+      "eps_estimate": -0.74387,
+      "rec_score": 3.5,
+      "rec_reasons": [
+        "일정배",
+        "52신고가"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "RDWU",
@@ -5813,7 +6855,12 @@
       "next_earnings": "2026-08-06",
       "days_to_earnings": 81,
       "earnings_window": null,
-      "eps_estimate": -0.15
+      "eps_estimate": -0.15,
+      "rec_score": 2.5,
+      "rec_reasons": [
+        "일정배"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "ONDU",
@@ -5847,7 +6894,14 @@
       "next_earnings": "2026-05-14",
       "days_to_earnings": -3,
       "earnings_window": "post",
-      "eps_estimate": -0.03
+      "eps_estimate": -0.03,
+      "rec_score": -0.5,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "거래량+양봉",
+        "RSI 43"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "ONDL",
@@ -5881,7 +6935,13 @@
       "next_earnings": "2026-05-14",
       "days_to_earnings": -3,
       "earnings_window": "post",
-      "eps_estimate": -0.03
+      "eps_estimate": -0.03,
+      "rec_score": 0.0,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "RSI 42"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "ONDG",
@@ -5915,7 +6975,13 @@
       "next_earnings": "2026-05-14",
       "days_to_earnings": -3,
       "earnings_window": "post",
-      "eps_estimate": -0.03
+      "eps_estimate": -0.03,
+      "rec_score": -0.5,
+      "rec_reasons": [
+        "월정배+장기근접",
+        "RSI 43"
+      ],
+      "is_recommended": false
     },
     {
       "ticker_2x": "POEL",
@@ -5949,7 +7015,13 @@
       "next_earnings": "2026-05-15",
       "days_to_earnings": -2,
       "earnings_window": "post",
-      "eps_estimate": -0.04
+      "eps_estimate": -0.04,
+      "rec_score": 4.0,
+      "rec_reasons": [
+        "월정배",
+        "일정배"
+      ],
+      "is_recommended": false
     }
   ]
 }
