@@ -1,0 +1,1582 @@
+{
+  "updated_at": "2026-05-10T22:49:07+09:00",
+  "total": 193,
+  "per_issuer": {
+    "Direxion": {
+      "count": 10,
+      "ms": 441,
+      "ok": true
+    },
+    "GraniteShares": {
+      "count": 34,
+      "ms": 1627,
+      "ok": true
+    },
+    "Defiance": {
+      "count": 41,
+      "ms": 1877,
+      "ok": true
+    },
+    "REX": {
+      "count": 31,
+      "ms": 1146,
+      "ok": true
+    },
+    "Tradr": {
+      "count": 62,
+      "ms": 856,
+      "ok": true
+    },
+    "LeverageShares": {
+      "count": 15,
+      "ms": 1382,
+      "ok": true
+    }
+  },
+  "etfs": [
+    {
+      "ticker_2x": "TSLL",
+      "name": "Daily TSLA Bull 2X Shares",
+      "underlying": "TSLA",
+      "issuer": "Direxion",
+      "url": "https://www.direxion.com/etfs/tsll",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AAPU",
+      "name": "Daily AAPL Bull 2X Shares",
+      "underlying": "AAPL",
+      "issuer": "Direxion",
+      "url": "https://www.direxion.com/etfs/aapu",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AMZU",
+      "name": "Daily AMZN Bull 2X Shares",
+      "underlying": "AMZN",
+      "issuer": "Direxion",
+      "url": "https://www.direxion.com/etfs/amzu",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "GGLL",
+      "name": "Daily GOOGL Bull 2X Shares",
+      "underlying": "GOOGL",
+      "issuer": "Direxion",
+      "url": "https://www.direxion.com/etfs/ggll",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MSFU",
+      "name": "Daily MSFT Bull 2X Shares",
+      "underlying": "MSFT",
+      "issuer": "Direxion",
+      "url": "https://www.direxion.com/etfs/msfu",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "NVDU",
+      "name": "Daily NVDA Bull 2X Shares",
+      "underlying": "NVDA",
+      "issuer": "Direxion",
+      "url": "https://www.direxion.com/etfs/nvdu",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "METU",
+      "name": "Daily META Bull 2X Shares",
+      "underlying": "META",
+      "issuer": "Direxion",
+      "url": "https://www.direxion.com/etfs/metu",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MUU",
+      "name": "Daily MU Bull 2X Shares",
+      "underlying": "MU",
+      "issuer": "Direxion",
+      "url": "https://www.direxion.com/etfs/muu",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "TSMX",
+      "name": "Daily TSM Bull 2X Shares",
+      "underlying": "TSM",
+      "issuer": "Direxion",
+      "url": "https://www.direxion.com/etfs/tsmx",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "JPNL",
+      "name": "Daily JPM Bull 2X Shares",
+      "underlying": "JPM",
+      "issuer": "Direxion",
+      "url": "https://www.direxion.com/etfs/jpnl",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AAPB",
+      "name": "GraniteShares 2x Long AAPL Daily ETF 2x long exposure to\r\n                                Apple (AAPL)",
+      "underlying": "AAPL",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/aapb/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AMDL",
+      "name": "GraniteShares 2x Long AMD Daily ETF 2x long exposure to\r\n                                Advanced Micro Devices, Inc (AM",
+      "underlying": "AMD",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/amdl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AMZZ",
+      "name": "GraniteShares 2x Long AMZN Daily ETF 2x long exposure to\r\n                                Amazon (AMZN)",
+      "underlying": "AMZN",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/amzz/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AVGU",
+      "name": "GraniteShares 2x Long AVGO Daily ETF 2x long exposure to\r\n                                Broadcom Inc (AVGO)",
+      "underlying": "AVGO",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/avgu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "BABX",
+      "name": "GraniteShares 2x Long BABA Daily ETF 2x long exposure to\r\n                                Alibaba Group Holding Limited ",
+      "underlying": "BABA",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/babx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "BULX",
+      "name": "GraniteShares 2x Long BULL Daily ETF 2x long exposure to\r\n                                Webull Corporation (BULL)",
+      "underlying": "BULL",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/bulx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CONL",
+      "name": "GraniteShares 2x Long COIN Daily ETF 2x long exposure to\r\n                                Coinbase Global Inc (COIN)",
+      "underlying": "COIN",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/conl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CRWL",
+      "name": "GraniteShares 2x Long CRWD Daily ETF 2x long exposure to\r\n                                CrowdStrike Holdings Inc (CRWD",
+      "underlying": "CRWD",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/crwl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "DLLL",
+      "name": "GraniteShares 2x Long DELL Daily ETF 2x long exposure to\r\n                                Dell Technologies Inc (DELL)",
+      "underlying": "DELL",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/dlll/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ETRL",
+      "name": "GraniteShares 2x Long ETOR Daily ETF 2x long exposure to\r\n                                eToro Group Ltd (ETOR)",
+      "underlying": "ETOR",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/etrl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "GOU",
+      "name": "GraniteShares 2x Long GOOGL Daily ETF 2x long exposure to\r\n                                Alphabet Inc (GOOGL)",
+      "underlying": "GOOGL",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/gou/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "INTW",
+      "name": "GraniteShares 2x Long INTC Daily ETF 2x long exposure to\r\n                                Intel Corp (INTC)",
+      "underlying": "INTC",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/intw/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "IONL",
+      "name": "GraniteShares 2x Long IONQ Daily ETF 2x long exposure to\r\n                                IonQ Inc (IONQ)",
+      "underlying": "IONQ",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/ionl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ISUL",
+      "name": "GraniteShares 2x Long ISRG Daily ETF 2x long exposure to\r\n                                Intuitive Surgical, Inc (ISRG)",
+      "underlying": "ISRG",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/isul/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "LCDL",
+      "name": "GraniteShares 2x Long LCID Daily ETF 2x long exposure to\r\n                                Lucid Group Inc (LCID)",
+      "underlying": "LCID",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/lcdl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MRAL",
+      "name": "GraniteShares 2x Long MARA Daily ETF 2x long exposure to\r\n                                MARA Holdings Inc (MARA)",
+      "underlying": "MARA",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/mral/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "FBL",
+      "name": "GraniteShares 2x Long META Daily ETF 2x long exposure to\r\n                                Meta Platforms Inc (META)",
+      "underlying": "META",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/fbl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MVLL",
+      "name": "GraniteShares 2x Long MRVL Daily ETF 2x long exposure to\r\n                                Marvell Technology, Inc (MRVL)",
+      "underlying": "MRVL",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/mvll/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MSFL",
+      "name": "GraniteShares 2x Long MSFT Daily ETF 2x long exposure to\r\n                                Microsoft (MSFT)",
+      "underlying": "MSFT",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/msfl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MSTP",
+      "name": "GraniteShares 2x Long MSTR Daily ETF 2x long exposure to\r\n                                MicroStrategy Inc (MSTR)",
+      "underlying": "MSTR",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/mstp/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MULL",
+      "name": "GraniteShares 2x Long MU Daily ETF 2x long exposure to\r\n                                Micron Technology Inc (MU)",
+      "underlying": "MU",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/mull/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "NBIL",
+      "name": "GraniteShares 2x Long NBIS Daily ETF 2x long exposure to\r\n                                Nebius Group N.V (NBIS)",
+      "underlying": "NBIS",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/nbil/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "NOWL",
+      "name": "GraniteShares 2x Long NOW Daily ETF 2x long exposure to\r\n                                ServiceNow Inc (NOW)",
+      "underlying": "NOW",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/nowl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "NVDL",
+      "name": "GraniteShares 2x Long NVDA Daily ETF 2x long exposure to\r\n                                NVIDIA Corp (NVDA)",
+      "underlying": "NVDA",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/nvdl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "PDDL",
+      "name": "GraniteShares 2x Long PDD Daily ETF 2x long exposure to\r\n                                PDD Holdings Inc (PDD)",
+      "underlying": "PDD",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/pddl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "PTIR",
+      "name": "GraniteShares 2x Long PLTR Daily ETF 2x long exposure to\r\n                                Palantir Technologies Inc (PLT",
+      "underlying": "PLTR",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/ptir/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "QCML",
+      "name": "GraniteShares 2x Long QCOM Daily ETF 2x long exposure to\r\n                                Qualcomm Inc (QCOM)",
+      "underlying": "QCOM",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/qcml/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "RDTL",
+      "name": "GraniteShares 2x Long RDDT Daily ETF 2x long exposure to\r\n                                Reddit Inc (RDDT)",
+      "underlying": "RDDT",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/rdtl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "RVNL",
+      "name": "GraniteShares 2x Long RIVN Daily ETF 2x long exposure to\r\n                                Rivian Automotive Inc (RIVN)",
+      "underlying": "RIVN",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/rvnl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "SMCL",
+      "name": "GraniteShares 2x Long SMCI Daily ETF 2x long exposure to\r\n                                Super Micro Computer Inc (SMCI",
+      "underlying": "SMCI",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/smcl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "TSLR",
+      "name": "GraniteShares 2x Long TSLA Daily ETF 2x long exposure to\r\n                                Tesla Inc (TSLA)",
+      "underlying": "TSLA",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/tslr/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "TSMU",
+      "name": "GraniteShares 2x Long TSM Daily ETF 2x long exposure to\r\n                                Taiwan Semiconductor Manufactur",
+      "underlying": "TSM",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/tsmu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "UBRL",
+      "name": "GraniteShares 2x Long Uber Daily ETF 2x long exposure to\r\n                                Uber Technologies Inc (UBER)",
+      "underlying": "UBER",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/ubrl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "VRTL",
+      "name": "GraniteShares 2x Long VRT Daily ETF 2x long exposure to\r\n                                Vertiv Holdings Co (VRT)",
+      "underlying": "VRT",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/vrtl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "STXL",
+      "name": "STXL Daily Target 2X Long STX ETF",
+      "underlying": "STX",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/stxl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ONDL",
+      "name": "ONDL Daily Target 2X Long ONDS ETF",
+      "underlying": "ONDS",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/ondl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MSTX",
+      "name": "MSTX Daily Target 2X Long MSTR ETF",
+      "underlying": "MSTR",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/mstx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "SMCX",
+      "name": "SMCX Daily Target 2X Long SMCI ETF",
+      "underlying": "SMCI",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/smcx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ORCX",
+      "name": "ORCX Daily Target 2X Long ORCL ETF",
+      "underlying": "ORCL",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/orcx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "IONX",
+      "name": "IONX Daily Target 2X Long IONQ ETF",
+      "underlying": "IONQ",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/ionx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "HIMZ",
+      "name": "HIMZ Daily Target 2X Long HIMS ETF",
+      "underlying": "HIMS",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/himz/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "OKLL",
+      "name": "OKLL Daily Target 2X Long OKLO ETF",
+      "underlying": "OKLO",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/okll/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "IRE",
+      "name": "IRE Daily Target 2X Long IREN ETF",
+      "underlying": "IREN",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/ire/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AVGX",
+      "name": "AVGX Daily Target 2X Long AVGO ETF",
+      "underlying": "AVGO",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/avgx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "RKLX",
+      "name": "RKLX Daily Target 2X Long RKLB ETF",
+      "underlying": "RKLB",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/rklx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "RGTX",
+      "name": "RGTX Daily Target 2X Long RGTI ETF",
+      "underlying": "RGTI",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/rgtx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "SOFX",
+      "name": "SOFX Daily Target 2X Long SOFI ETF",
+      "underlying": "SOFI",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/sofx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "NVOX",
+      "name": "NVOX Daily Target 2X Long NVO ETF",
+      "underlying": "NVO",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/nvox/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "LLYX",
+      "name": "LLYX Daily Target 2X Long LLY ETF",
+      "underlying": "LLY",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/llyx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "SOUX",
+      "name": "SOUX Daily Target 2X Long SOUN ETF",
+      "underlying": "SOUN",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/soux/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "HOOX",
+      "name": "HOOX Daily Target 2X Long HOOD ETF",
+      "underlying": "HOOD",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/hoox/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "RIOX",
+      "name": "RIOX Daily Target 2X Long RIOT ETF",
+      "underlying": "RIOT",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/riox/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "QSU",
+      "name": "QSU Daily Target 2X Long QS ETF",
+      "underlying": "QS",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/qsu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MPL",
+      "name": "MPL Daily Target 2X Long MP ETF",
+      "underlying": "MP",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/mpl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "OSCX",
+      "name": "OSCX Daily Target 2X Long OSCR ETF",
+      "underlying": "OSCR",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/oscx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "DKNX",
+      "name": "DKNX Daily Target 2X Long DKNG ETF",
+      "underlying": "DKNG",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/dknx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ANEL",
+      "name": "ANEL Daily Target 2X Long ANET ETF",
+      "underlying": "ANET",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/anel/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "VSTL",
+      "name": "VSTL Daily Target 2X Long VST ETF",
+      "underlying": "VST",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/vstl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CVNX",
+      "name": "CVNX Daily Target 2X Long CVNA ETF",
+      "underlying": "CVNA",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/cvnx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "LMNX",
+      "name": "LMNX Daily Target 2X Long LMND ETF",
+      "underlying": "LMND",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/lmnx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AVXX",
+      "name": "AVXX Daily Target 2X Long AVAV ETF",
+      "underlying": "AVAV",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/avxx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "BU",
+      "name": "BU Daily Target 2X Long B ETF",
+      "underlying": "B",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/bu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "PLU",
+      "name": "PLU Daily Target 2X Long PL ETF",
+      "underlying": "PL",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/plu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "KEEX",
+      "name": "KEEX Daily Target 2X Long KEEL ETF",
+      "underlying": "KEEL",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/keex/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "RKTL",
+      "name": "RKTL Daily Target 2X Long RKT ETF",
+      "underlying": "RKT",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/rktl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "LUNL",
+      "name": "LUNL Daily Target 2X Long LUNR ETF",
+      "underlying": "LUNR",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/lunl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "LNOK",
+      "name": "LNOK Daily Target 2X Long NOK ETF",
+      "underlying": "NOK",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/lnok/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "RCAX",
+      "name": "RCAX Daily Target 2X Long RCAT ETF",
+      "underlying": "RCAT",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/rcax/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MRNX",
+      "name": "MRNX Daily Target 2X Long MRNA ETF",
+      "underlying": "MRNA",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/mrnx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ZETX",
+      "name": "ZETX Daily Target 2X Long ZETA ETF",
+      "underlying": "ZETA",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/zetx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AMA",
+      "name": "AMA Daily Target 2X Long AMAT ETF",
+      "underlying": "AMAT",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/ama/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "POEL",
+      "name": "POEL Daily Target 2X Long POET ETF",
+      "underlying": "POET",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/poel/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "XOVL",
+      "name": "XOVL Daily Target 2X Long XOVR ETF",
+      "underlying": "XOVR",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/xovl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AMKL",
+      "name": "AMKL Daily Target 2X Long AMKR ETF",
+      "underlying": "AMKR",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/amkl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AMPU",
+      "name": "AMPU Daily Target 2X Long AMPX ETF",
+      "underlying": "AMPX",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/ampu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MSTU",
+      "name": "MSTU | +2X Daily MSTR",
+      "underlying": "MSTR",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/mstu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "NVDX",
+      "name": "NVDX | +2X Daily NVDA",
+      "underlying": "NVDA",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/nvdx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "TSLT",
+      "name": "TSLT | +2X Daily TSLA",
+      "underlying": "TSLA",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/tslt/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "BTCL",
+      "name": "BTCL | +2X Daily Bitcoin",
+      "underlying": "BTC-USD",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/btcl/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CRWU",
+      "name": "CRWU | +2X Daily CRWV",
+      "underlying": "CRWV",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/crwu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CCUP",
+      "name": "CCUP | +2X Daily CRCL",
+      "underlying": "CRCL",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/ccup/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ROBN",
+      "name": "ROBN | +2X Daily HOOD",
+      "underlying": "HOOD",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/robn/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ETU",
+      "name": "ETU | +2X Daily Ether",
+      "underlying": "ETH-USD",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/etu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "NFLU",
+      "name": "NFLU | +2X Daily NFLX",
+      "underlying": "NFLX",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/nflu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "GMEU",
+      "name": "GMEU | +2X Daily GME",
+      "underlying": "GME",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/gmeu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "DJTU",
+      "name": "DJTU | +2X Daily DJT",
+      "underlying": "DJT",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/djtu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AAPX",
+      "name": "AAPX | +2X Daily AAPL",
+      "underlying": "AAPL",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/aapx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "GOOX",
+      "name": "GOOX | +2X Daily GOOG",
+      "underlying": "GOOG",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/goox/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MSFX",
+      "name": "MSFX | +2X Daily MSFT",
+      "underlying": "MSFT",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/msfx/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "RBLU",
+      "name": "RBLU | +2X Daily RBLX",
+      "underlying": "RBLX",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/rblu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "BMNU",
+      "name": "BMNU | +2X Daily BMNR",
+      "underlying": "BMNR",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/bmnu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "GLXU",
+      "name": "GLXU | +2X Daily GLXY",
+      "underlying": "GLXY",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/glxu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "TTDU",
+      "name": "TTDU | +2X Daily TTD",
+      "underlying": "TTD",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/ttdu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "KTUP",
+      "name": "KTUP | +2X Daily KTOS",
+      "underlying": "KTOS",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/ktup/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "SMUP",
+      "name": "SMUP | +2X Daily SMR",
+      "underlying": "SMR",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/smup/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AFRU",
+      "name": "AFRU | +2X Daily AFRM",
+      "underlying": "AFRM",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/afru/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "SNOU",
+      "name": "SNOU | +2X Daily SNOW",
+      "underlying": "SNOW",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/snou/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "SBTU",
+      "name": "SBTU | +2X Daily SBET",
+      "underlying": "SBET",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/sbtu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CIFU",
+      "name": "CIFU | +2X Daily CIFR",
+      "underlying": "CIFR",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/cifu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "EOSU",
+      "name": "EOSU | +2X Daily EOSE",
+      "underlying": "EOSE",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/eosu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "RDWU",
+      "name": "RDWU | +2X Daily RDW",
+      "underlying": "RDW",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/rdwu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "FGRU",
+      "name": "FGRU | +2X Daily FIGR",
+      "underlying": "FIGR",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/fgru/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "APHU",
+      "name": "APHU | +2X Daily APH",
+      "underlying": "APH",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/aphu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "PAAU",
+      "name": "PAAU | +2X Daily PAAS",
+      "underlying": "PAAS",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/paau/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "SNDU",
+      "name": "SNDU | +2X Daily SNDK",
+      "underlying": "SNDK",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/sndu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AXTU",
+      "name": "AXTU | +2X Daily AXTI",
+      "underlying": "AXTI",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/axtu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "XNDX",
+      "name": "XNDX Tradr 2X Long XNDU Daily ETF",
+      "underlying": "XNDU",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/xndx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AXTX",
+      "name": "AXTX Tradr 2X Long AXTI Daily ETF",
+      "underlying": "AXTI",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/axtx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CPNX",
+      "name": "CPNX Tradr 2X Long CPNG Daily ETF",
+      "underlying": "CPNG",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/cpnx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MPWX",
+      "name": "MPWX Tradr 2X Long MPWR Daily ETF",
+      "underlying": "MPWR",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/mpwx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "STXX",
+      "name": "STXX Tradr 2X Long STX Daily ETF",
+      "underlying": "STX",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/stxx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "APLX",
+      "name": "APLX Tradr 2X Long APLD Daily ETF",
+      "underlying": "APLD",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/aplx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "IREX",
+      "name": "IREX Tradr 2X Long IREN Daily ETF",
+      "underlying": "IREN",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/irex?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "NEBX",
+      "name": "NEBX Tradr 2X Long NBIS Daily ETF",
+      "underlying": "NBIS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/nebx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "LITX",
+      "name": "LITX Tradr 2X Long LITE Daily ETF",
+      "underlying": "LITE",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/litx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "SNXX",
+      "name": "SNXX Tradr 2X Long SNDK Daily ETF",
+      "underlying": "SNDK",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/snxx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ASTX",
+      "name": "ASTX Tradr 2X Long ASTS Daily ETF",
+      "underlying": "ASTS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/astx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AAOX",
+      "name": "AAOX Tradr 2X Long AAOI Daily ETF",
+      "underlying": "AAOI",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/aaox?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "NVTX",
+      "name": "NVTX Tradr 2X Long NVTS Daily ETF",
+      "underlying": "NVTS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/nvtx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CRMX",
+      "name": "CRMX Tradr 2X Long CRML Daily ETF",
+      "underlying": "CRML",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/crmx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "APLZ",
+      "name": "APLZ Tradr 2X Long APLD Daily ETF",
+      "underlying": "APLD",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/aplz?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CWVX",
+      "name": "CWVX Tradr 2X Long CRWV Daily ETF",
+      "underlying": "CRWV",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/cwvx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "BEX",
+      "name": "BEX Tradr 2X Long BE Daily ETF",
+      "underlying": "BE",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/bex?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CEGX",
+      "name": "CEGX Tradr 2X Long CEG Daily ETF",
+      "underlying": "CEG",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/cegx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "GEVX",
+      "name": "GEVX Tradr 2X Long GEV Daily ETF",
+      "underlying": "GEV",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/gevx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "LEUX",
+      "name": "LEUX Tradr 2X Long LEU Daily ETF",
+      "underlying": "LEU",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/leux?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "SMU",
+      "name": "SMU Tradr 2X Long SMR Daily ETF",
+      "underlying": "SMR",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/smu?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "COHX",
+      "name": "COHX Tradr 2X Long COHR Daily ETF",
+      "underlying": "COHR",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/cohx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CRDU",
+      "name": "CRDU Tradr 2X Long CRDO Daily ETF",
+      "underlying": "CRDO",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/crdu?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CSEX",
+      "name": "CSEX Tradr 2X Long CLS Daily ETF",
+      "underlying": "CLS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/csex?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CLSX",
+      "name": "CLSX Tradr 2X Long CLSK Daily ETF",
+      "underlying": "CLSK",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/clsx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "WULX",
+      "name": "WULX Tradr 2X Long WULF Daily ETF",
+      "underlying": "WULF",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/wulx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "HLXX",
+      "name": "HLXX Tradr 2X Long HL Daily ETF",
+      "underlying": "HL",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/hlxx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "USAX",
+      "name": "USAX Tradr 2X Long USAR Daily ETF",
+      "underlying": "USAR",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/usax?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ARCX",
+      "name": "ARCX Tradr 2X Long ACHR Daily ETF",
+      "underlying": "ACHR",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/arcx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "JOBX",
+      "name": "JOBX Tradr 2X Long JOBY Daily ETF",
+      "underlying": "JOBY",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/jobx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "PONX",
+      "name": "PONX Tradr 2X Long PONY Daily ETF",
+      "underlying": "PONY",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/ponx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "QBTX",
+      "name": "QBTX Tradr 2X Long QBTS Daily ETF",
+      "underlying": "QBTS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/qbtx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "QUBX",
+      "name": "QUBX Tradr 2X Long QUBT Daily ETF",
+      "underlying": "QUBT",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/qubx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "RGTU",
+      "name": "RGTU Tradr 2X Long RGTI Daily ETF",
+      "underlying": "RGTI",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/rgtu?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "LABX",
+      "name": "LABX Tradr 2X Long ALAB Daily ETF",
+      "underlying": "ALAB",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/labx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "LRCU",
+      "name": "LRCU Tradr 2X Long LRCX Daily ETF",
+      "underlying": "LRCX",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/lrcu?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "WDCX",
+      "name": "WDCX Tradr 2X Long WDC Daily ETF",
+      "underlying": "WDC",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/wdcx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "APPX",
+      "name": "APPX Tradr 2X Long APP Daily ETF",
+      "underlying": "APP",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/appx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "IBX",
+      "name": "IBX Tradr 2X Long IBM Daily ETF",
+      "underlying": "IBM",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/ibx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "UNX",
+      "name": "UNX Tradr 2X Long U Daily ETF",
+      "underlying": "U",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/unx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "PATX",
+      "name": "PATX Tradr 2X Long PATH Daily ETF",
+      "underlying": "PATH",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/patx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "TEMT",
+      "name": "TEMT Tradr 2X Long TEM Daily ETF",
+      "underlying": "TEM",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/temt?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "FLYT",
+      "name": "FLYT Tradr 2X Long FLY Daily ETF",
+      "underlying": "FLY",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/flyt?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ONDU",
+      "name": "ONDU Tradr 2X Long ONDS Daily ETF",
+      "underlying": "ONDS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/ondu?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "COZX",
+      "name": "Tradr 2X Long CORZ Daily ETF",
+      "underlying": "CORZ",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/cozx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "OPEX",
+      "name": "Tradr 2X Long OPEN Daily ETF",
+      "underlying": "OPEN",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/opex?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "SRPU",
+      "name": "Tradr 2X Long SRPT Daily ETF",
+      "underlying": "SRPT",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/srpu?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "UPSX",
+      "name": "Tradr 2X Long UPST Daily ETF",
+      "underlying": "UPST",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/upsx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AURU",
+      "name": "Tradr 2X Long AUR Daily ETF",
+      "underlying": "AUR",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/auru?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "BLSX",
+      "name": "Tradr 2X Long BLSH Daily ETF",
+      "underlying": "BLSH",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/blsx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CELT",
+      "name": "Tradr 2X Long CELH Daily ETF",
+      "underlying": "CELH",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/celt?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "DASX",
+      "name": "Tradr 2X Long DASH Daily ETF",
+      "underlying": "DASH",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/dasx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "DOGD",
+      "name": "Tradr 2X Long DDOG Daily ETF",
+      "underlying": "DDOG",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/dogd?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ENPX",
+      "name": "Tradr 2X Long ENPH Daily ETF",
+      "underlying": "ENPH",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/enpx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "GSX",
+      "name": "Tradr 2X Long GS Daily ETF",
+      "underlying": "GS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/gsx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "LYFX",
+      "name": "Tradr 2X Long LYFT Daily ETF",
+      "underlying": "LYFT",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/lyfx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "MDBX",
+      "name": "Tradr 2X Long MDB Daily ETF",
+      "underlying": "MDB",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/mdbx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "NETX",
+      "name": "Tradr 2X Long NET Daily ETF",
+      "underlying": "NET",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/netx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "NWMX",
+      "name": "Tradr 2X Long NEM Daily ETF",
+      "underlying": "NEM",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/nwmx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "OKTX",
+      "name": "Tradr 2X Long OKTA Daily ETF",
+      "underlying": "OKTA",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/oktx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "QSX",
+      "name": "Tradr 2X Long QS Daily ETF",
+      "underlying": "QS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/qsx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "VOYX",
+      "name": "Tradr 2X Long VOYG Daily ETF",
+      "underlying": "VOYG",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/voyx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "GLWG",
+      "name": "GLWG 2x Long GLW Daily ETF",
+      "underlying": "GLW",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-glw-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "BMNG",
+      "name": "BMNG 2x Long BMNR",
+      "underlying": "BMNR",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-bmnr-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CRWG",
+      "name": "CRWG 2x Long CRWV",
+      "underlying": "CRWV",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-crwv-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CRCG",
+      "name": "CRCG 2x Long CRCL",
+      "underlying": "CRCL",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-crcl-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "NBIG",
+      "name": "NBIG 2x Long NBIS",
+      "underlying": "NBIS",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-nbis-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "AXPG",
+      "name": "AXPG 2x Long AXP",
+      "underlying": "AXP",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-axp-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "FCXG",
+      "name": "FCXG 2x Long FCX",
+      "underlying": "FCX",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-fcx-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "CRMU",
+      "name": "CRMU 2x Long CRML",
+      "underlying": "CRML",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-crml-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "UECG",
+      "name": "UECG 2x Long UEC",
+      "underlying": "UEC",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-uec-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "DNNG",
+      "name": "DNNG 2x Long DNN",
+      "underlying": "DNN",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-dnn-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "XPEG",
+      "name": "XPEG 2x Long XPEV",
+      "underlying": "XPEV",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-xpev-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ORLG",
+      "name": "ORLG 2x Long ORLY",
+      "underlying": "ORLY",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-orly-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "USGG",
+      "name": "USGG 2x Long USAR",
+      "underlying": "USAR",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-usar-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ONDG",
+      "name": "ONDG 2x Long ONDS",
+      "underlying": "ONDS",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-onds-daily-etf/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "PLUL",
+      "name": "PLUL 2x Long PLUG",
+      "underlying": "PLUG",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-plug-daily-etf/",
+      "expense_ratio": null
+    }
+  ]
+}

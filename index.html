@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>US 2X ETF Monitor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://s3.tradingview.com/tv.js"></script>
+  <style>
+    body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+    .num { font-variant-numeric: tabular-nums; }
+    /* Header height accounted for in sticky offsets */
+    :root { --hdr: 38px; }
+    .chart-pane { height: calc(100vh - var(--hdr) - 36px); }
+    @media (max-width: 1023px) {
+      .chart-pane { height: 60vh; min-height: 360px; }
+    }
+    /* Hide TradingView's tiny watermark/edges flicker on re-instantiation */
+    #tv_chart > iframe { background: #0f172a; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+  <header class="border-b border-slate-800 sticky top-0 bg-slate-950/95 backdrop-blur z-20" style="height: var(--hdr)">
+    <div class="max-w-[1800px] mx-auto px-3 h-full flex items-center">
+      <div class="flex items-baseline gap-x-4 gap-y-0 whitespace-nowrap overflow-x-auto">
+        <h1 class="text-xs font-semibold tracking-tight text-slate-300">2X ETF</h1>
+        <div id="summary" class="flex items-baseline gap-x-3 text-[11px] text-slate-400 num"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-[1800px] mx-auto px-3 py-3">
+    <div class="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,380px)]">
+
+      <!-- LIST PANEL (compact) — visually on the right via grid order -->
+      <section class="min-w-0 lg:order-2">
+        <!-- Controls -->
+        <div class="mb-2 space-y-1.5">
+          <div class="flex items-center justify-between gap-2">
+            <input id="search" type="search" placeholder="티커 검색…" autocomplete="off"
+                   class="flex-1 bg-slate-900 border border-slate-800 rounded px-2 py-1 text-xs text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-slate-600 num">
+            <button id="reset-filters" class="text-[10px] text-slate-500 hover:text-blue-300 underline-offset-2 hover:underline whitespace-nowrap">초기화</button>
+          </div>
+          <div id="filter-groups" class="space-y-1"></div>
+          <div class="text-[10px] text-slate-500 num flex items-center justify-between">
+            <span id="visible-count">—</span>
+            <span id="active-count" class="text-slate-600"></span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-lg border border-slate-800">
+          <table class="w-full text-xs num">
+            <thead class="bg-slate-900 text-slate-400 text-[10px] uppercase tracking-wider">
+              <tr>
+                <th class="py-2 px-1 text-center w-5"></th>
+                <th class="py-2 px-1.5 text-left cursor-pointer hover:text-slate-200" data-sort="ticker_2x">종목</th>
+                <th class="py-2 px-1.5 text-right">현재가</th>
+                <th class="py-2 px-1.5 text-right cursor-pointer hover:text-slate-200" data-sort="daily_pct" data-default-dir="asc">일일</th>
+                <th class="py-2 px-1.5 text-right cursor-pointer hover:text-slate-200" data-sort="five_day_pct" data-default-dir="asc">5일</th>
+                <th class="py-2 px-1 text-right cursor-pointer hover:text-slate-200" data-sort="volume_ratio" data-default-dir="desc">거래량</th>
+                <th class="py-2 px-1.5 text-right cursor-pointer hover:text-slate-200" data-sort="rsi" data-default-dir="asc">RSI</th>
+                <th class="py-2 px-1 text-left">알림</th>
+              </tr>
+            </thead>
+            <tbody id="rows" class="divide-y divide-slate-800/70"></tbody>
+          </table>
+        </div>
+
+        <div class="mt-3 text-[10px] text-slate-500 leading-relaxed">
+          <div class="flex flex-wrap gap-x-3 gap-y-1">
+            <span><span class="text-rose-400">🔻</span>급락 ≤ −10%</span>
+            <span><span class="text-amber-400">📊</span>거래량 2×</span>
+            <span><span class="text-amber-400">📉</span>RSI&lt;30</span>
+            <span><span class="text-rose-400">📅</span>5일 ≤ −20%</span>
+            <span><span class="text-amber-400">🎯</span>BB 이탈</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHART PANEL: split into 2X / underlying -->
+      <aside class="lg:order-1 lg:sticky lg:top-[calc(var(--hdr)+12px)] self-start w-full">
+        <div class="rounded-lg border border-slate-800 bg-slate-900/40 chart-pane flex flex-col overflow-hidden">
+          <div id="chart-header" class="px-3 py-2 border-b border-slate-800 text-sm text-slate-400">
+            행을 클릭하면 차트가 여기 표시됩니다.
+          </div>
+
+          <div class="flex-1 flex flex-col min-h-0">
+            <div class="relative min-h-0" style="flex: 3 1 0">
+              <div class="absolute top-1.5 left-2.5 z-10 text-[11px] font-mono font-semibold text-cyan-300 bg-slate-950/85 px-2 py-0.5 rounded" id="label-2x">2X</div>
+              <div id="chart-2x-wrap" class="absolute inset-0">
+                <div class="absolute inset-0 flex items-center justify-center text-slate-600 text-sm">⬅ 종목 선택</div>
+              </div>
+            </div>
+            <div class="h-px bg-slate-800/80 mx-3"></div>
+            <div class="relative min-h-0 pb-2" style="flex: 2 1 0">
+              <div class="absolute top-1.5 left-2.5 z-10 text-[11px] font-mono font-semibold text-indigo-300 bg-slate-950/85 px-2 py-0.5 rounded" id="label-und">본주</div>
+              <div id="chart-und-wrap" class="absolute inset-0 bottom-2"></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <script>
+    const ALERT_LABELS = {
+      big_drop:       { icon: "🔻", label: "급락",   cls: "text-rose-400" },
+      volume_spike:   { icon: "📊", label: "거래량", cls: "text-amber-400" },
+      oversold:       { icon: "📉", label: "과매도", cls: "text-amber-400" },
+      five_day_crash: { icon: "📅", label: "5일",    cls: "text-rose-400" },
+      bb_breakdown:   { icon: "🎯", label: "BB",     cls: "text-amber-400" },
+    };
+
+    const SIGNAL_LABELS = {
+      ma_bull_align:       { icon: "🟢", label: "정배열",       cls: "text-emerald-400" },
+      ma_bear_align:       { icon: "🔴", label: "역배열",       cls: "text-rose-400" },
+      ma20_support:        { icon: "🛡",  label: "MA20지지",   cls: "text-blue-300" },
+      ma60_support:        { icon: "🛡",  label: "MA60지지",   cls: "text-emerald-300" },
+      ma120_support:       { icon: "🛡",  label: "MA120지지",  cls: "text-cyan-300" },
+      golden_cross:        { icon: "✨", label: "골크",         cls: "text-amber-300" },
+      dead_cross:          { icon: "💀", label: "데크",         cls: "text-slate-400" },
+      bull_align_pullback: { icon: "🎯", label: "정배열 눌림", cls: "text-emerald-400 font-semibold" },
+    };
+
+    const fmtPct   = x => x === null || x === undefined ? "—" : (x > 0 ? "+" : "") + x.toFixed(1) + "%";
+    const fmtPrice = x => x === null || x === undefined ? "—" : "$" + x.toFixed(2);
+    const fmtVol   = x => x === null || x === undefined ? "—" : x.toFixed(1) + "×";
+    const fmtRsi   = x => x === null || x === undefined ? "—" : x.toFixed(1);
+
+    const pctClass = x => {
+      if (x === null || x === undefined) return "text-slate-500";
+      if (x <= -10) return "text-rose-400 font-semibold";
+      if (x < 0)    return "text-rose-300";
+      if (x >= 5)   return "text-emerald-400 font-semibold";
+      if (x > 0)    return "text-emerald-300";
+      return "text-slate-400";
+    };
+    const rsiClass = x => x === null ? "text-slate-500" : x < 30 ? "text-amber-400 font-semibold" : x > 70 ? "text-emerald-400" : "text-slate-300";
+    const dragClass = x => x === null ? "text-slate-500" : x <= -15 ? "text-rose-400 font-semibold" : x < 0 ? "text-rose-300" : "text-slate-400";
+    const catClass = c => ({
+      Mag7: "bg-indigo-500/20 text-indigo-300",
+      AI:   "bg-cyan-500/20 text-cyan-300",
+      Other:"bg-slate-800 text-slate-400",
+    }[c] || "bg-slate-800 text-slate-400");
+
+    let pairs = [];
+    let pairsByTicker = {};
+    let currentTicker = null;
+    let tossIds = {};  // ticker -> { code, name_kr, market }
+
+    // ----- favorites & filter/sort state -----
+    const FAVS_KEY = "us2x_favs";
+    const STATE_KEY = "us2x_state_v2";
+    let favs = new Set();
+    try { favs = new Set(JSON.parse(localStorage.getItem(FAVS_KEY) || "[]")); } catch {}
+
+    const FILTER_GROUPS = [
+      {
+        key: "status", label: "상태", chips: [
+          { k: "alerts",           label: "⚠️ 알림" },
+          { k: "favorites",        label: "★ 즐겨" },
+          { k: "is_new",           label: "🆕 신생" },
+          { k: "earnings_soon",    label: "📅 실적 임박" },
+          { k: "earnings_post",    label: "📅 실적 직후" },
+          { k: "volume_up_candle", label: "📊 거래량+양봉" },
+          { k: "near_52w_high",   label: "📈 52w 신고가" },
+          { k: "near_52w_low",    label: "📉 52w 신저가" },
+        ],
+      },
+      {
+        key: "setup", label: "셋업", chips: [
+          { k: "bull_align_pullback", label: "🎯 정배열 눌림" },
+          { k: "ma20_support",        label: "🛡 MA20" },
+          { k: "ma60_support",        label: "🛡 MA60" },
+          { k: "ma120_support",       label: "🛡 MA120" },
+        ],
+      },
+      {
+        key: "trend", label: "추세", chips: [
+          { k: "ma_bull_align", label: "🟢 정배열" },
+          { k: "ma_bear_align", label: "🔴 역배열" },
+          { k: "golden_cross",  label: "✨ 골크" },
+          { k: "dead_cross",    label: "💀 데크" },
+        ],
+      },
+      {
+        key: "sector", label: "섹터", chips: [
+          { k: "Mag7",    label: "Mag7" },
+          { k: "AI",      label: "AI" },
+          { k: "Semi",    label: "반도체" },
+          { k: "Nuclear", label: "원자력" },
+          { k: "Defense", label: "방산" },
+          { k: "Bio",     label: "바이오" },
+          { k: "Fintech", label: "핀테크" },
+          { k: "Quantum", label: "양자" },
+          { k: "EV",      label: "전기차" },
+          { k: "Crypto",  label: "크립토" },
+        ],
+      },
+      {
+        key: "issuer", label: "운용", chips: [
+          { k: "Direxion",       label: "Direxion" },
+          { k: "GraniteShares",  label: "Granite" },
+          { k: "Defiance",       label: "Defiance" },
+          { k: "REX",            label: "REX" },
+          { k: "Tradr",          label: "Tradr" },
+          { k: "LeverageShares", label: "LS" },
+        ],
+      },
+    ];
+
+    function emptyFilters() {
+      return Object.fromEntries(FILTER_GROUPS.map(g => [g.key, []]));
+    }
+
+    let state = { filters: emptyFilters(), search: "", sortKey: null, sortDir: "desc" };
+    try {
+      const saved = JSON.parse(localStorage.getItem(STATE_KEY) || "null");
+      if (saved && saved.filters) {
+        state = { ...state, ...saved };
+        // make sure all groups exist
+        for (const g of FILTER_GROUPS) {
+          if (!Array.isArray(state.filters[g.key])) state.filters[g.key] = [];
+        }
+      }
+    } catch {}
+
+    function saveFavs() { localStorage.setItem(FAVS_KEY, JSON.stringify([...favs])); }
+    function saveState() { localStorage.setItem(STATE_KEY, JSON.stringify(state)); }
+
+    function toggleFav(ticker) {
+      if (favs.has(ticker)) favs.delete(ticker); else favs.add(ticker);
+      saveFavs();
+      renderFilterChips();
+      applyAndRender();
+      // Update chart-header star if showing this ticker
+      if (currentTicker === ticker) {
+        const p = pairsByTicker[ticker];
+        if (p) renderChartHeader(p);
+      }
+    }
+
+    function renderSummary(d) {
+      const s = d.summary;
+      const updated = new Date(d.updated_at).toLocaleString("ko-KR", {
+        timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit",
+        hour: "2-digit", minute: "2-digit"
+      });
+      document.getElementById("summary").innerHTML = `
+        <span>업데이트 <span class="text-slate-300">${updated}</span></span>
+        <span>기준 <span class="text-slate-300">${s.as_of}</span></span>
+        <span>페어 <b class="text-slate-200">${s.total_pairs}</b></span>
+        <span>알림 <b class="${s.alerts_count > 0 ? 'text-amber-400' : 'text-slate-300'}">${s.alerts_count}</b></span>
+        <span>평균 일일 <b class="${pctClass(s.avg_daily_return)}">${fmtPct(s.avg_daily_return)}</b></span>
+        <span class="text-slate-500">상폐 ${s.delisted_count} · 신생 ${s.using_underlying_proxy}</span>
+      `;
+    }
+
+    function pairSubtitle(p) {
+      const undKr = tossIds[p.ticker_underlying] && tossIds[p.ticker_underlying].name_kr;
+      const base = undKr || p.ticker_underlying || "";
+      return base ? `${base} 2X` : "—";
+    }
+
+    function earningsBadge(p) {
+      const d = p.days_to_earnings;
+      if (d === null || d === undefined) return "";
+      if (d > 7 || d < -7) return "";
+      const label = d === 0 ? "오늘" : (d > 0 ? `D-${d}` : `D+${-d}`);
+      const cls = d >= 0 && d <= 7
+        ? "bg-amber-500/20 text-amber-300"
+        : "bg-slate-700/40 text-slate-400";
+      return `<span class="px-1 py-0 rounded text-[9px] font-mono ${cls}" title="실적 ${p.next_earnings}">📅 ${label}</span>`;
+    }
+
+    function renderRows(list) {
+      const tbody = document.getElementById("rows");
+      tbody.innerHTML = list.map(p => {
+        const hasAlerts = p.alerts.length > 0;
+        const isNew = (p.proxy_fields && p.proxy_fields.length > 0) || (p.history_days_2x && p.history_days_2x < 60);
+        const fav = favs.has(p.ticker_2x);
+        const subtitle = pairSubtitle(p);
+        const alertChips = p.alerts.map(a => {
+          const def = ALERT_LABELS[a] || { icon: "•", label: a, cls: "text-slate-400" };
+          return `<span class="${def.cls}" title="${a} - ${def.label}">${def.icon}</span>`;
+        }).join("");
+        const signalChips = (p.signals || []).map(s => {
+          const def = SIGNAL_LABELS[s] || { icon: "·", label: s, cls: "text-slate-400" };
+          return `<span class="${def.cls}" title="${def.label}">${def.icon}</span>`;
+        }).join("");
+        return `
+          <tr data-ticker="${p.ticker_2x}" class="row cursor-pointer ${hasAlerts ? 'bg-slate-900/40' : ''} hover:bg-slate-800/60 transition-colors">
+            <td class="py-2 px-1 text-center align-middle">
+              <button class="fav-btn leading-none text-base ${fav ? 'text-amber-400' : 'text-slate-700 hover:text-slate-500'}" data-ticker="${p.ticker_2x}" title="즐겨찾기">${fav ? "★" : "☆"}</button>
+            </td>
+            <td class="py-2 px-1.5 align-middle">
+              <div class="flex items-center gap-1 min-w-0 flex-wrap">
+                ${hasAlerts ? '<span class="text-xs leading-none">⚠️</span>' : ''}
+                <span class="font-mono font-semibold text-sm text-slate-100">${p.ticker_2x}</span>
+                ${isNew ? '<span class="text-[9px] text-slate-500">·신</span>' : ''}
+                ${earningsBadge(p)}
+              </div>
+              <div class="text-[10px] text-slate-500 truncate" title="${subtitle}">${subtitle}</div>
+            </td>
+            <td class="py-2 px-1.5 text-right font-mono text-xs align-middle">${fmtPrice(p.price_2x)}</td>
+            <td class="py-2 px-1.5 text-right font-mono text-xs align-middle ${pctClass(p.daily_pct)}">${fmtPct(p.daily_pct)}</td>
+            <td class="py-2 px-1.5 text-right font-mono text-[11px] align-middle ${pctClass(p.five_day_pct)}">${fmtPct(p.five_day_pct)}</td>
+            <td class="py-2 px-1 text-right font-mono text-[11px] align-middle ${p.volume_ratio !== null && p.volume_ratio >= 2 ? 'text-amber-400 font-semibold' : (p.volume_ratio !== null && p.volume_ratio >= 1.5 ? 'text-amber-300' : 'text-slate-500')}">${p.volume_ratio === null || p.volume_ratio === undefined ? '—' : p.volume_ratio.toFixed(1) + '×'}</td>
+            <td class="py-2 px-1.5 text-right font-mono text-[11px] align-middle ${rsiClass(p.rsi)}">${fmtRsi(p.rsi)}</td>
+            <td class="py-2 px-1 whitespace-nowrap text-sm align-middle">
+              ${alertChips}${alertChips && signalChips ? '<span class="mx-0.5 text-slate-700">·</span>' : ''}${signalChips}
+            </td>
+          </tr>
+        `;
+      }).join("");
+
+      tbody.querySelectorAll(".row").forEach(tr => {
+        tr.addEventListener("click", () => selectTicker(tr.dataset.ticker));
+      });
+      tbody.querySelectorAll(".fav-btn").forEach(btn => {
+        btn.addEventListener("click", e => {
+          e.stopPropagation();
+          toggleFav(btn.dataset.ticker);
+        });
+      });
+
+      if (currentTicker) highlightRow(currentTicker);
+    }
+
+    function passStatus(p, sel) {
+      return sel.some(k => {
+        if (k === "alerts")           return p.alerts.length > 0;
+        if (k === "favorites")        return favs.has(p.ticker_2x);
+        if (k === "is_new")           return !!p.is_new;
+        if (k === "earnings_soon")    return p.earnings_window === "soon";
+        if (k === "earnings_post")    return p.earnings_window === "post";
+        if (k === "volume_up_candle") return !!p.volume_up_candle;
+        if (k === "near_52w_high")    return !!p.near_52w_high;
+        if (k === "near_52w_low")     return !!p.near_52w_low;
+        return false;
+      });
+    }
+
+    function applyFilter(p) {
+      const f = state.filters;
+      if (state.search) {
+        const q = state.search.toUpperCase();
+        const t = p.ticker_2x || "", u = p.ticker_underlying || "";
+        if (!t.includes(q) && !u.includes(q)) return false;
+      }
+      if (f.status.length && !passStatus(p, f.status)) return false;
+      if (f.setup.length  && !f.setup.some(k  => (p.signals  || []).includes(k))) return false;
+      if (f.trend.length  && !f.trend.some(k  => (p.signals  || []).includes(k))) return false;
+      if (f.sector.length && !f.sector.some(k => (p.sectors  || []).includes(k))) return false;
+      if (f.issuer.length && !f.issuer.includes(p.issuer))                         return false;
+      return true;
+    }
+
+    function countMatching(groupKey, chipKey) {
+      const probe = { ...state.filters };
+      probe[groupKey] = [chipKey];
+      // Match within group only — show what *that single chip* would yield
+      return pairs.filter(p => {
+        if (groupKey === "status") return passStatus(p, [chipKey]);
+        if (groupKey === "setup" || groupKey === "trend") return (p.signals || []).includes(chipKey);
+        if (groupKey === "sector") return (p.sectors || []).includes(chipKey);
+        if (groupKey === "issuer") return p.issuer === chipKey;
+        return false;
+      }).length;
+    }
+
+    function applyAndRender() {
+      let list = pairs.filter(applyFilter);
+      if (state.sortKey) {
+        const dir = state.sortDir === "asc" ? 1 : -1;
+        list.sort((a, b) => {
+          const av = a[state.sortKey], bv = b[state.sortKey];
+          if (av === null || av === undefined) return 1;
+          if (bv === null || bv === undefined) return -1;
+          if (typeof av === "string") return av.localeCompare(bv) * dir;
+          return (av - bv) * dir;
+        });
+      } else {
+        list.sort((a, b) => {
+          if (a.alerts.length !== b.alerts.length) return b.alerts.length - a.alerts.length;
+          return (a.daily_pct ?? 0) - (b.daily_pct ?? 0);
+        });
+      }
+      renderRows(list);
+      const total = pairs.length;
+      document.getElementById("visible-count").textContent = list.length === total ? `전체 ${total}` : `${list.length} / ${total}`;
+      renderSortIndicators();
+    }
+
+    function renderFilterChips() {
+      const host = document.getElementById("filter-groups");
+      host.innerHTML = FILTER_GROUPS.map(g => {
+        const sel = new Set(state.filters[g.key] || []);
+        const chips = g.chips.map(c => {
+          const n = countMatching(g.key, c.k);
+          const active = sel.has(c.k);
+          const dim = n === 0 && !active ? "opacity-40" : "";
+          return `<button data-group="${g.key}" data-chip="${c.k}"
+            class="px-1.5 py-0.5 rounded text-[10px] leading-tight transition-colors ${dim} ${active ? 'bg-blue-500/25 text-blue-200 ring-1 ring-blue-400/40' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}">
+            ${c.label}<span class="ml-1 text-[9px] opacity-60">${n}</span>
+          </button>`;
+        }).join("");
+        return `
+          <div class="flex items-start gap-1.5">
+            <span class="text-[10px] text-slate-500 w-6 shrink-0 pt-1">${g.label}</span>
+            <div class="flex-1 flex flex-wrap gap-1">${chips}</div>
+          </div>`;
+      }).join("");
+
+      host.querySelectorAll("button").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const g = btn.dataset.group, k = btn.dataset.chip;
+          const arr = state.filters[g];
+          const i = arr.indexOf(k);
+          if (i >= 0) arr.splice(i, 1); else arr.push(k);
+          saveState();
+          renderFilterChips();
+          applyAndRender();
+        });
+      });
+
+      // Active count display
+      const active = Object.values(state.filters).reduce((s, a) => s + a.length, 0);
+      document.getElementById("active-count").textContent = active > 0 ? `필터 ${active}` : "";
+    }
+
+    function resetFilters() {
+      state.filters = emptyFilters();
+      state.search = "";
+      document.getElementById("search").value = "";
+      saveState();
+      renderFilterChips();
+      applyAndRender();
+    }
+
+    function renderSortIndicators() {
+      document.querySelectorAll("th[data-sort]").forEach(th => {
+        const key = th.dataset.sort;
+        const indEl = th.querySelector(".sort-ind");
+        if (indEl) indEl.remove();
+        if (state.sortKey === key) {
+          const arrow = state.sortDir === "asc" ? "↑" : "↓";
+          th.insertAdjacentHTML("beforeend", `<span class="sort-ind ml-0.5 text-blue-400">${arrow}</span>`);
+        }
+      });
+    }
+
+    function setupSortHandlers() {
+      document.querySelectorAll("th[data-sort]").forEach(th => {
+        th.addEventListener("click", () => {
+          const key = th.dataset.sort;
+          if (state.sortKey === key) {
+            // toggle direction, then on third click reset
+            if (state.sortDir === (th.dataset.defaultDir || "desc")) {
+              state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
+            } else {
+              state.sortKey = null;
+            }
+          } else {
+            state.sortKey = key;
+            state.sortDir = th.dataset.defaultDir || "desc";
+          }
+          saveState();
+          applyAndRender();
+        });
+      });
+    }
+
+    function setupSearch() {
+      const inp = document.getElementById("search");
+      inp.value = state.search || "";
+      inp.addEventListener("input", () => {
+        state.search = inp.value.trim();
+        saveState();
+        applyAndRender();
+      });
+      document.getElementById("reset-filters").addEventListener("click", resetFilters);
+    }
+
+    function highlightRow(ticker) {
+      document.querySelectorAll("tbody tr.row").forEach(tr => {
+        const sel = tr.dataset.ticker === ticker;
+        tr.classList.toggle("ring-1", sel);
+        tr.classList.toggle("ring-cyan-400", sel);
+        tr.classList.toggle("bg-cyan-900/20", sel);
+      });
+    }
+
+    function renderChartHeader(p) {
+      const proxyNote = p.proxy_fields && p.proxy_fields.length
+        ? `<span class="ml-2 px-1.5 py-0.5 rounded bg-slate-800 text-slate-400 text-[10px]">신생 · ${p.proxy_fields.join(",")} 본주 대체</span>`
+        : "";
+      const dragLine = p.drag_6m !== null
+        ? `<span>끌림 6M <span class="${dragClass(p.drag_6m)} font-mono">${fmtPct(p.drag_6m)}</span></span>`
+        : `<span class="text-slate-600">끌림 6M —</span>`;
+      const earningsLine = p.next_earnings ? (() => {
+        const d = p.days_to_earnings;
+        const sign = d === 0 ? "오늘" : (d > 0 ? `D-${d}` : `D+${-d}`);
+        const cls = (d !== null && d >= 0 && d <= 7) ? "text-amber-300 font-semibold" :
+                    (d !== null && d > -7 && d < 0) ? "text-slate-300" : "text-slate-500";
+        return `<span>실적 <span class="${cls} font-mono">${p.next_earnings} ${sign}</span></span>`;
+      })() : "";
+      const undLine = p.daily_pct_underlying !== null
+        ? `<span>본주 <span class="${pctClass(p.daily_pct_underlying)} font-mono">${fmtPct(p.daily_pct_underlying)}</span></span>`
+        : "";
+      const alertChips = p.alerts.map(a => {
+        const d = ALERT_LABELS[a] || { icon:"•", label:a, cls:"text-slate-400" };
+        return `<span class="inline-flex items-center gap-0.5 ${d.cls}">${d.icon}<span class="text-[10px]">${d.label}</span></span>`;
+      }).join(" ");
+      const tossLink = (t) => {
+        const info = tossIds[t];
+        if (!info || !info.code) return "";
+        return `<a href="https://www.tossinvest.com/stocks/${info.code}" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-blue-500/15 hover:bg-blue-500/25 text-blue-300 text-[11px] font-mono transition-colors"
+           title="토스에서 ${t} 보기${info.name_kr ? ' · ' + info.name_kr : ''}">↗ ${t}</a>`;
+      };
+      const tossLinks = `${tossLink(p.ticker_2x)}${p.ticker_underlying ? tossLink(p.ticker_underlying) : ""}`;
+      const isFav = favs.has(p.ticker_2x);
+      document.getElementById("chart-header").innerHTML = `
+        <div class="flex items-baseline justify-between gap-3 flex-wrap">
+          <div class="flex items-baseline gap-2 flex-wrap">
+            <button id="chart-fav-btn" class="leading-none ${isFav ? 'text-amber-400' : 'text-slate-600 hover:text-slate-400'} text-lg" title="즐겨찾기">${isFav ? "★" : "☆"}</button>
+            <span class="font-mono text-lg font-semibold text-slate-100">${p.ticker_2x}</span>
+            <span class="text-slate-400 text-sm">· ${p.ticker_underlying} 2X · ${p.issuer}</span>
+            ${proxyNote}
+          </div>
+          <div class="flex items-baseline gap-2">
+            <span class="text-xl font-mono">${fmtPrice(p.price_2x)}</span>
+            <span class="${pctClass(p.daily_pct)} font-mono">${fmtPct(p.daily_pct)}</span>
+          </div>
+        </div>
+        <div class="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400 num">
+          ${undLine}
+          <span>5일 <span class="${pctClass(p.five_day_pct)} font-mono">${fmtPct(p.five_day_pct)}</span></span>
+          <span>RSI <span class="${rsiClass(p.rsi)} font-mono">${fmtRsi(p.rsi)}</span></span>
+          <span>거래량 <span class="font-mono ${p.volume_ratio !== null && p.volume_ratio >= 2 ? 'text-amber-400' : 'text-slate-300'}">${fmtVol(p.volume_ratio)}</span></span>
+          ${dragLine}
+          ${earningsLine}
+          ${alertChips ? `<span>${alertChips}</span>` : ""}
+          <span class="ml-auto flex gap-1.5">${tossLinks}</span>
+        </div>
+      `;
+      const favBtn = document.getElementById("chart-fav-btn");
+      if (favBtn) favBtn.addEventListener("click", () => toggleFav(p.ticker_2x));
+    }
+
+    function tvWidget(containerId, symbol, isPrimary) {
+      // eslint-disable-next-line no-new, no-undef
+      new TradingView.widget({
+        container_id: containerId,
+        symbol,
+        interval: "D",
+        timezone: "Asia/Seoul",
+        theme: "dark",
+        style: "1",
+        locale: "kr",
+        toolbar_bg: "#0f172a",
+        enable_publishing: false,
+        allow_symbol_change: false,
+        hide_side_toolbar: true,
+        hide_top_toolbar: !isPrimary,
+        withdateranges: isPrimary,
+        save_image: false,
+        autosize: true,
+        studies: [
+          { id: "MASimple@tv-basicstudies", inputs: { length: 5 } },
+          { id: "MASimple@tv-basicstudies", inputs: { length: 20 } },
+          { id: "MASimple@tv-basicstudies", inputs: { length: 60 } },
+          { id: "MASimple@tv-basicstudies", inputs: { length: 120 } },
+        ],
+      });
+    }
+
+    function renderCharts(p) {
+      document.getElementById("label-2x").textContent = p.ticker_2x;
+      document.getElementById("label-und").textContent = p.ticker_underlying || "본주";
+
+      const top = document.getElementById("chart-2x-wrap");
+      const bot = document.getElementById("chart-und-wrap");
+      top.innerHTML = '<div id="tv_2x" class="absolute inset-0"></div>';
+      tvWidget("tv_2x", p.ticker_2x, true);
+
+      if (p.ticker_underlying) {
+        bot.innerHTML = '<div id="tv_und" class="absolute inset-0"></div>';
+        tvWidget("tv_und", p.ticker_underlying, false);
+      } else {
+        bot.innerHTML = '<div class="absolute inset-0 flex items-center justify-center text-slate-600 text-xs">본주 정보 없음</div>';
+      }
+    }
+
+    function selectTicker(ticker) {
+      const p = pairsByTicker[ticker];
+      if (!p) return;
+      if (currentTicker === ticker) return;
+      currentTicker = ticker;
+      history.replaceState(null, "", "#" + ticker);
+      highlightRow(ticker);
+      renderChartHeader(p);
+      renderCharts(p);
+    }
+
+    async function load() {
+      const [dataRes, tossRes] = await Promise.all([
+        fetch("data/data.json", { cache: "no-store" }),
+        fetch("data/toss_ids.json", { cache: "no-store" }).catch(() => null),
+      ]);
+      if (!dataRes.ok) throw new Error(`HTTP ${dataRes.status}`);
+      const data = await dataRes.json();
+      if (tossRes && tossRes.ok) {
+        try { tossIds = await tossRes.json(); } catch {}
+      }
+      pairs = data.pairs;
+      pairsByTicker = Object.fromEntries(pairs.map(p => [p.ticker_2x, p]));
+      renderSummary(data);
+      renderFilterChips();
+      setupSortHandlers();
+      setupSearch();
+      applyAndRender();
+
+      const initial = (location.hash || "").replace(/^#/, "").toUpperCase();
+      if (initial && pairsByTicker[initial]) {
+        selectTicker(initial);
+      } else if (pairs.length) {
+        // Pick first row from current filtered/sorted view
+        const firstVisible = pairs.filter(applyFilter)[0] || pairs[0];
+        selectTicker(firstVisible.ticker_2x);
+      }
+    }
+
+    load().catch(err => {
+      document.getElementById("rows").innerHTML =
+        `<tr><td colspan="12" class="py-6 px-4 text-rose-400 text-center">데이터 로드 실패: ${err.message}<br><span class="text-slate-500 text-xs">file:// 로 직접 열면 CORS로 막힘. <code class="text-slate-300">python -m http.server</code> 후 http://localhost:8000 접속.</span></td></tr>`;
+    });
+  </script>
+</body>
+</html>

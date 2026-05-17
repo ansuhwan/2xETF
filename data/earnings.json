@@ -1,0 +1,916 @@
+{
+  "updated_at": "2026-05-14T22:48:45+09:00",
+  "tickers": {
+    "AAOI": {
+      "next_earnings": "2026-08-07",
+      "eps_estimate": 0.015,
+      "eps_low": -0.01,
+      "eps_high": 0.04
+    },
+    "AAPL": {
+      "next_earnings": "2026-07-31",
+      "eps_estimate": 1.89077,
+      "eps_low": 1.83,
+      "eps_high": 1.99
+    },
+    "ACHR": {
+      "next_earnings": "2026-08-11",
+      "eps_estimate": -0.22121,
+      "eps_low": -0.22121,
+      "eps_high": -0.22121
+    },
+    "AFRM": {
+      "next_earnings": "2026-05-08",
+      "eps_estimate": 0.8461,
+      "eps_low": 0.67,
+      "eps_high": 0.93
+    },
+    "ALAB": {
+      "next_earnings": "2026-08-05",
+      "eps_estimate": 0.69059,
+      "eps_low": 0.64522,
+      "eps_high": 0.72
+    },
+    "AMAT": {
+      "next_earnings": "2026-05-15",
+      "eps_estimate": 2.67993,
+      "eps_low": 2.63,
+      "eps_high": 2.82
+    },
+    "AMD": {
+      "next_earnings": "2026-08-05",
+      "eps_estimate": 1.60513,
+      "eps_low": 1.48,
+      "eps_high": 1.74
+    },
+    "AMKR": {
+      "next_earnings": "2026-07-28",
+      "eps_estimate": 0.47177,
+      "eps_low": 0.46,
+      "eps_high": 0.49
+    },
+    "AMPX": {
+      "next_earnings": "2026-08-07",
+      "eps_estimate": -0.02,
+      "eps_low": -0.03,
+      "eps_high": -0.01
+    },
+    "AMZN": {
+      "next_earnings": "2026-07-31",
+      "eps_estimate": 1.81692,
+      "eps_low": 1.56,
+      "eps_high": 2.1
+    },
+    "ANET": {
+      "next_earnings": "2026-08-05",
+      "eps_estimate": 0.88335,
+      "eps_low": 0.87,
+      "eps_high": 0.9
+    },
+    "APH": {
+      "next_earnings": "2026-07-29",
+      "eps_estimate": 1.17282,
+      "eps_low": 1.09,
+      "eps_high": 1.31
+    },
+    "APLD": {
+      "next_earnings": "2026-07-30",
+      "eps_estimate": null,
+      "eps_low": null,
+      "eps_high": null
+    },
+    "APP": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": 4.09241,
+      "eps_low": 3.97482,
+      "eps_high": 4.21
+    },
+    "ASTS": {
+      "next_earnings": "2026-08-11",
+      "eps_estimate": -0.29367,
+      "eps_low": -0.29367,
+      "eps_high": -0.29367
+    },
+    "AUR": {
+      "next_earnings": "2026-07-30",
+      "eps_estimate": -0.12,
+      "eps_low": -0.12,
+      "eps_high": -0.12
+    },
+    "AVAV": {
+      "next_earnings": "2026-06-24",
+      "eps_estimate": 1.47206,
+      "eps_low": 1.28483,
+      "eps_high": 1.67
+    },
+    "AVGO": {
+      "next_earnings": "2026-06-04",
+      "eps_estimate": 2.39061,
+      "eps_low": 2.36,
+      "eps_high": 2.5
+    },
+    "AXP": {
+      "next_earnings": "2026-07-24",
+      "eps_estimate": 4.37935,
+      "eps_low": 4.09,
+      "eps_high": 4.53
+    },
+    "AXTI": {
+      "next_earnings": "2026-07-31",
+      "eps_estimate": 0.074,
+      "eps_low": 0.07,
+      "eps_high": 0.08
+    },
+    "B": {
+      "next_earnings": "2026-08-11",
+      "eps_estimate": 0.83694,
+      "eps_low": 0.77173,
+      "eps_high": 0.92
+    },
+    "BABA": {
+      "next_earnings": "2026-05-13",
+      "eps_estimate": 11.28957,
+      "eps_low": 6.52,
+      "eps_high": 15.62
+    },
+    "BE": {
+      "next_earnings": "2026-04-29",
+      "eps_estimate": 0.38607,
+      "eps_low": 0.29,
+      "eps_high": 0.46517
+    },
+    "BLSH": {
+      "next_earnings": "2026-05-14",
+      "eps_estimate": 0.17027,
+      "eps_low": 0.14,
+      "eps_high": 0.2
+    },
+    "BMNR": {
+      "next_earnings": "2026-07-03",
+      "eps_estimate": 0.18,
+      "eps_low": 0.18,
+      "eps_high": 0.18
+    },
+    "BTC-USD": null,
+    "BULL": {
+      "next_earnings": "2026-05-22",
+      "eps_estimate": 0.03,
+      "eps_low": 0.02,
+      "eps_high": 0.04
+    },
+    "CEG": {
+      "next_earnings": "2026-08-10",
+      "eps_estimate": 2.52649,
+      "eps_low": 2.1,
+      "eps_high": 3.34
+    },
+    "CELH": {
+      "next_earnings": "2026-05-07",
+      "eps_estimate": 0.43433,
+      "eps_low": 0.34,
+      "eps_high": 0.58
+    },
+    "CIFR": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": -0.055,
+      "eps_low": -0.1,
+      "eps_high": -0.01
+    },
+    "CLS": {
+      "next_earnings": "2026-07-28",
+      "eps_estimate": 2.30562,
+      "eps_low": 2.223,
+      "eps_high": 2.45
+    },
+    "CLSK": {
+      "next_earnings": "2026-08-07",
+      "eps_estimate": -0.18,
+      "eps_low": -0.18,
+      "eps_high": -0.18
+    },
+    "COHR": {
+      "next_earnings": "2026-05-07",
+      "eps_estimate": 1.61491,
+      "eps_low": 1.49,
+      "eps_high": 1.75
+    },
+    "COIN": {
+      "next_earnings": "2026-07-31",
+      "eps_estimate": 0.11728,
+      "eps_low": -0.35,
+      "eps_high": 0.57
+    },
+    "CORZ": {
+      "next_earnings": "2026-05-07",
+      "eps_estimate": -0.02,
+      "eps_low": -0.02,
+      "eps_high": -0.02
+    },
+    "CPNG": {
+      "next_earnings": "2026-08-05",
+      "eps_estimate": -0.053,
+      "eps_low": -0.053,
+      "eps_high": -0.053
+    },
+    "CRCL": {
+      "next_earnings": "2026-08-11",
+      "eps_estimate": 0.23063,
+      "eps_low": 0.16,
+      "eps_high": 0.35
+    },
+    "CRDO": {
+      "next_earnings": "2026-06-02",
+      "eps_estimate": 1.03414,
+      "eps_low": 1.01,
+      "eps_high": 1.08
+    },
+    "CRML": null,
+    "CRWD": {
+      "next_earnings": "2026-06-04",
+      "eps_estimate": 1.06745,
+      "eps_low": 1.05,
+      "eps_high": 1.08
+    },
+    "CRWV": {
+      "next_earnings": "2026-05-08",
+      "eps_estimate": -1.02786,
+      "eps_low": -1.82,
+      "eps_high": -0.38
+    },
+    "CVNA": {
+      "next_earnings": "2026-07-30",
+      "eps_estimate": 0.39429,
+      "eps_low": 0.34,
+      "eps_high": 0.44101
+    },
+    "DASH": {
+      "next_earnings": "2026-05-07",
+      "eps_estimate": 1.2271,
+      "eps_low": 1.1,
+      "eps_high": 1.31
+    },
+    "DDOG": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": 0.58184,
+      "eps_low": 0.567,
+      "eps_high": 0.61
+    },
+    "DELL": {
+      "next_earnings": "2026-05-29",
+      "eps_estimate": 2.9412,
+      "eps_low": 2.85,
+      "eps_high": 3.05
+    },
+    "DJT": {
+      "next_earnings": "2026-08-01",
+      "eps_estimate": null,
+      "eps_low": null,
+      "eps_high": null
+    },
+    "DKNG": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": 0.33312,
+      "eps_low": 0.23,
+      "eps_high": 0.4
+    },
+    "DNN": {
+      "next_earnings": "2026-08-07",
+      "eps_estimate": -0.01918,
+      "eps_low": -0.02,
+      "eps_high": -0.01835
+    },
+    "ENPH": {
+      "next_earnings": "2026-07-29",
+      "eps_estimate": 0.47178,
+      "eps_low": 0.39,
+      "eps_high": 0.54
+    },
+    "EOSE": {
+      "next_earnings": "2026-07-29",
+      "eps_estimate": -0.1454,
+      "eps_low": -0.15,
+      "eps_high": -0.14
+    },
+    "ETH-USD": null,
+    "ETOR": {
+      "next_earnings": "2026-08-11",
+      "eps_estimate": 0.58472,
+      "eps_low": 0.5276,
+      "eps_high": 0.67
+    },
+    "FCX": {
+      "next_earnings": "2026-07-22",
+      "eps_estimate": 0.56347,
+      "eps_low": 0.4,
+      "eps_high": 0.74
+    },
+    "FIGR": {
+      "next_earnings": "2026-05-12",
+      "eps_estimate": 0.3075,
+      "eps_low": 0.21,
+      "eps_high": 0.36
+    },
+    "FLY": {
+      "next_earnings": "2026-08-05",
+      "eps_estimate": -0.51739,
+      "eps_low": -0.60434,
+      "eps_high": -0.45
+    },
+    "GEV": {
+      "next_earnings": "2026-07-29",
+      "eps_estimate": 2.90576,
+      "eps_low": 2.4,
+      "eps_high": 3.31
+    },
+    "GLW": {
+      "next_earnings": "2026-07-28",
+      "eps_estimate": 0.7575,
+      "eps_low": 0.736,
+      "eps_high": 0.78575
+    },
+    "GLXY": {
+      "next_earnings": "2026-07-28",
+      "eps_estimate": 0.00057,
+      "eps_low": -0.21,
+      "eps_high": 0.4
+    },
+    "GME": {
+      "next_earnings": "2026-06-10",
+      "eps_estimate": 0.16,
+      "eps_low": 0.16,
+      "eps_high": 0.16
+    },
+    "GOOG": {
+      "next_earnings": "2026-07-24",
+      "eps_estimate": 2.88458,
+      "eps_low": 2.6,
+      "eps_high": 3.13
+    },
+    "GOOGL": {
+      "next_earnings": "2026-07-24",
+      "eps_estimate": 2.88458,
+      "eps_low": 2.6,
+      "eps_high": 3.13
+    },
+    "GS": {
+      "next_earnings": "2026-07-14",
+      "eps_estimate": 13.72498,
+      "eps_low": 12.99611,
+      "eps_high": 15.16
+    },
+    "HIMS": {
+      "next_earnings": "2026-08-11",
+      "eps_estimate": 0.13919,
+      "eps_low": 0.09,
+      "eps_high": 0.18
+    },
+    "HL": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": 0.20895,
+      "eps_low": 0.17,
+      "eps_high": 0.24685
+    },
+    "HOOD": {
+      "next_earnings": "2026-07-30",
+      "eps_estimate": 0.495,
+      "eps_low": 0.45,
+      "eps_high": 0.54
+    },
+    "IBM": {
+      "next_earnings": "2026-07-23",
+      "eps_estimate": 3.0318,
+      "eps_low": 2.92,
+      "eps_high": 3.16
+    },
+    "INTC": {
+      "next_earnings": "2026-07-24",
+      "eps_estimate": 0.21038,
+      "eps_low": 0.2,
+      "eps_high": 0.32628
+    },
+    "IONQ": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": -0.29642,
+      "eps_low": -0.41,
+      "eps_high": -0.25
+    },
+    "IREN": {
+      "next_earnings": "2026-05-08",
+      "eps_estimate": -0.46,
+      "eps_low": -0.46,
+      "eps_high": -0.46
+    },
+    "ISRG": {
+      "next_earnings": "2026-07-22",
+      "eps_estimate": 2.50267,
+      "eps_low": 2.41,
+      "eps_high": 2.61
+    },
+    "JOBY": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": null,
+      "eps_low": null,
+      "eps_high": null
+    },
+    "JPM": {
+      "next_earnings": "2026-07-14",
+      "eps_estimate": 5.39566,
+      "eps_low": 5.09,
+      "eps_high": 5.54
+    },
+    "KEEL": {
+      "next_earnings": "2026-08-10",
+      "eps_estimate": null,
+      "eps_low": null,
+      "eps_high": null
+    },
+    "KTOS": {
+      "next_earnings": "2026-08-07",
+      "eps_estimate": 0.15148,
+      "eps_low": 0.07,
+      "eps_high": 0.2
+    },
+    "LCID": {
+      "next_earnings": "2026-08-05",
+      "eps_estimate": -2.382,
+      "eps_low": -3.25,
+      "eps_high": -1.67
+    },
+    "LEU": {
+      "next_earnings": "2026-08-05",
+      "eps_estimate": 1.05333,
+      "eps_low": 0.87,
+      "eps_high": 1.41
+    },
+    "LITE": {
+      "next_earnings": "2026-05-06",
+      "eps_estimate": 2.96184,
+      "eps_low": 2.87,
+      "eps_high": 3.06
+    },
+    "LLY": {
+      "next_earnings": "2026-08-05",
+      "eps_estimate": 8.80842,
+      "eps_low": 8.16,
+      "eps_high": 9.42531
+    },
+    "LMND": {
+      "next_earnings": "2026-04-29",
+      "eps_estimate": -0.55,
+      "eps_low": -0.55,
+      "eps_high": -0.55
+    },
+    "LRCX": {
+      "next_earnings": "2026-07-30",
+      "eps_estimate": 1.6774,
+      "eps_low": 1.64,
+      "eps_high": 1.79
+    },
+    "LUNR": {
+      "next_earnings": "2026-05-14",
+      "eps_estimate": -0.06,
+      "eps_low": -0.09,
+      "eps_high": -0.04
+    },
+    "LYFT": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": 0.38789,
+      "eps_low": 0.33,
+      "eps_high": 0.45099
+    },
+    "MARA": {
+      "next_earnings": "2026-07-29",
+      "eps_estimate": -0.51,
+      "eps_low": -0.8,
+      "eps_high": -0.22
+    },
+    "MDB": {
+      "next_earnings": "2026-05-29",
+      "eps_estimate": 1.18275,
+      "eps_low": 1.09,
+      "eps_high": 1.35
+    },
+    "META": {
+      "next_earnings": "2026-07-30",
+      "eps_estimate": 7.48333,
+      "eps_low": 6.8,
+      "eps_high": 8.55
+    },
+    "MP": {
+      "next_earnings": "2026-08-07",
+      "eps_estimate": 0.05143,
+      "eps_low": null,
+      "eps_high": null
+    },
+    "MPWR": {
+      "next_earnings": "2026-07-31",
+      "eps_estimate": 5.85953,
+      "eps_low": 5.82,
+      "eps_high": 6.05
+    },
+    "MRNA": {
+      "next_earnings": "2026-07-31",
+      "eps_estimate": -1.95,
+      "eps_low": -1.95,
+      "eps_high": -1.95
+    },
+    "MRVL": {
+      "next_earnings": "2026-05-28",
+      "eps_estimate": 0.79663,
+      "eps_low": 0.78,
+      "eps_high": 0.83
+    },
+    "MSFT": {
+      "next_earnings": "2026-07-30",
+      "eps_estimate": 4.24777,
+      "eps_low": 4.07,
+      "eps_high": 4.89
+    },
+    "MSTR": {
+      "next_earnings": "2026-07-31",
+      "eps_estimate": 24.21188,
+      "eps_low": 24.21188,
+      "eps_high": 24.21188
+    },
+    "MU": {
+      "next_earnings": "2026-06-25",
+      "eps_estimate": 18.97141,
+      "eps_low": 7.53,
+      "eps_high": 21.05
+    },
+    "NBIS": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": -0.74387,
+      "eps_low": -1.27,
+      "eps_high": -0.40935
+    },
+    "NEM": {
+      "next_earnings": "2026-07-24",
+      "eps_estimate": 2.172,
+      "eps_low": 2.03,
+      "eps_high": 2.26
+    },
+    "NET": {
+      "next_earnings": "2026-07-31",
+      "eps_estimate": 0.2698,
+      "eps_low": 0.25,
+      "eps_high": 0.29
+    },
+    "NFLX": {
+      "next_earnings": "2026-07-17",
+      "eps_estimate": 0.78931,
+      "eps_low": 0.74,
+      "eps_high": 0.83
+    },
+    "NOK": {
+      "next_earnings": "2026-07-23",
+      "eps_estimate": 0.06861,
+      "eps_low": 0.059,
+      "eps_high": 0.08203
+    },
+    "NOW": {
+      "next_earnings": "2026-07-23",
+      "eps_estimate": 0.85501,
+      "eps_low": 0.74,
+      "eps_high": 0.92
+    },
+    "NVDA": {
+      "next_earnings": "2026-05-21",
+      "eps_estimate": 1.77461,
+      "eps_low": 1.69,
+      "eps_high": 1.99
+    },
+    "NVO": {
+      "next_earnings": "2026-08-05",
+      "eps_estimate": 5.188,
+      "eps_low": 4.82,
+      "eps_high": 5.55
+    },
+    "NVTS": {
+      "next_earnings": "2026-08-04",
+      "eps_estimate": -0.04255,
+      "eps_low": -0.05,
+      "eps_high": -0.04
+    },
+    "OKLO": {
+      "next_earnings": "2026-08-11",
+      "eps_estimate": -0.18404,
+      "eps_low": -0.25,
+      "eps_high": -0.09
+    },
+    "OKTA": {
+      "next_earnings": "2026-05-29",
+      "eps_estimate": 0.85292,
+      "eps_low": 0.84,
+      "eps_high": 0.88
+    },
+    "ONDS": {
+      "next_earnings": "2026-05-14",
+      "eps_estimate": -0.03,
+      "eps_low": -0.03,
+      "eps_high": -0.03
+    },
+    "OPEN": {
+      "next_earnings": "2026-08-07",
+      "eps_estimate": -0.03214,
+      "eps_low": -0.04,
+      "eps_high": -0.02427
+    },
+    "ORCL": {
+      "next_earnings": "2026-06-11",
+      "eps_estimate": 1.95927,
+      "eps_low": 1.76,
+      "eps_high": 2.03
+    },
+    "ORLY": {
+      "next_earnings": "2026-07-30",
+      "eps_estimate": 0.86168,
+      "eps_low": 0.83,
+      "eps_high": 0.89616
+    },
+    "OSCR": {
+      "next_earnings": "2026-05-06",
+      "eps_estimate": 0.39645,
+      "eps_low": 0.14,
+      "eps_high": 0.69
+    },
+    "PAAS": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": 1.22722,
+      "eps_low": 0.98,
+      "eps_high": 1.37165
+    },
+    "PATH": {
+      "next_earnings": "2026-05-29",
+      "eps_estimate": 0.15874,
+      "eps_low": 0.139,
+      "eps_high": 0.19
+    },
+    "PDD": {
+      "next_earnings": "2026-05-27",
+      "eps_estimate": 16.3658,
+      "eps_low": 13.62,
+      "eps_high": 18.876
+    },
+    "PL": {
+      "next_earnings": "2026-06-05",
+      "eps_estimate": -0.042,
+      "eps_low": -0.05,
+      "eps_high": -0.04
+    },
+    "PLTR": {
+      "next_earnings": "2026-08-04",
+      "eps_estimate": 0.34414,
+      "eps_low": 0.3,
+      "eps_high": 0.4
+    },
+    "PLUG": {
+      "next_earnings": "2026-08-11",
+      "eps_estimate": -0.08,
+      "eps_low": -0.09,
+      "eps_high": -0.07
+    },
+    "POET": {
+      "next_earnings": "2026-05-15",
+      "eps_estimate": -0.04,
+      "eps_low": -0.04,
+      "eps_high": -0.04
+    },
+    "PONY": {
+      "next_earnings": "2026-05-26",
+      "eps_estimate": -0.12621,
+      "eps_low": -0.14642,
+      "eps_high": -0.106
+    },
+    "QBTS": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": -0.08231,
+      "eps_low": -0.11,
+      "eps_high": -0.04
+    },
+    "QCOM": {
+      "next_earnings": "2026-07-30",
+      "eps_estimate": 2.22896,
+      "eps_low": 2.15199,
+      "eps_high": 2.52
+    },
+    "QS": {
+      "next_earnings": "2026-07-23",
+      "eps_estimate": -0.17761,
+      "eps_low": -0.19,
+      "eps_high": -0.17
+    },
+    "QUBT": {
+      "next_earnings": "2026-08-11",
+      "eps_estimate": -0.08,
+      "eps_low": -0.08,
+      "eps_high": -0.08
+    },
+    "RBLX": {
+      "next_earnings": "2026-07-31",
+      "eps_estimate": -0.35665,
+      "eps_low": -0.43,
+      "eps_high": -0.32637
+    },
+    "RCAT": {
+      "next_earnings": "2026-05-08",
+      "eps_estimate": -0.17,
+      "eps_low": -0.17,
+      "eps_high": -0.17
+    },
+    "RDDT": {
+      "next_earnings": "2026-07-31",
+      "eps_estimate": 1.44852,
+      "eps_low": 1.32,
+      "eps_high": 1.53
+    },
+    "RDW": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": -0.15,
+      "eps_low": -0.15,
+      "eps_high": -0.15
+    },
+    "RGTI": {
+      "next_earnings": "2026-05-12",
+      "eps_estimate": -0.04625,
+      "eps_low": -0.06,
+      "eps_high": -0.03
+    },
+    "RIOT": {
+      "next_earnings": "2026-07-31",
+      "eps_estimate": -0.22592,
+      "eps_low": -0.33,
+      "eps_high": -0.07775
+    },
+    "RIVN": {
+      "next_earnings": "2026-05-01",
+      "eps_estimate": -0.62963,
+      "eps_low": -0.9,
+      "eps_high": -0.47
+    },
+    "RKLB": {
+      "next_earnings": "2026-08-07",
+      "eps_estimate": -0.025,
+      "eps_low": -0.03,
+      "eps_high": -0.02
+    },
+    "RKT": {
+      "next_earnings": "2026-07-31",
+      "eps_estimate": 0.17996,
+      "eps_low": 0.16,
+      "eps_high": 0.21
+    },
+    "SBET": {
+      "next_earnings": "2026-05-09",
+      "eps_estimate": null,
+      "eps_low": null,
+      "eps_high": null
+    },
+    "SMCI": {
+      "next_earnings": "2026-08-05",
+      "eps_estimate": 0.7133,
+      "eps_low": 0.67,
+      "eps_high": 0.77
+    },
+    "SMR": {
+      "next_earnings": "2026-08-07",
+      "eps_estimate": -0.1217,
+      "eps_low": -0.1402,
+      "eps_high": -0.1
+    },
+    "SNDK": {
+      "next_earnings": "2026-05-01",
+      "eps_estimate": 33.05285,
+      "eps_low": 32.0,
+      "eps_high": 36.5
+    },
+    "SNOW": {
+      "next_earnings": "2026-05-28",
+      "eps_estimate": 0.31812,
+      "eps_low": 0.27,
+      "eps_high": 0.38
+    },
+    "SOFI": {
+      "next_earnings": "2026-07-28",
+      "eps_estimate": 0.11576,
+      "eps_low": 0.10459,
+      "eps_high": 0.15
+    },
+    "SOUN": {
+      "next_earnings": "2026-08-07",
+      "eps_estimate": -0.04,
+      "eps_low": -0.06,
+      "eps_high": -0.01
+    },
+    "SRPT": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": 0.56193,
+      "eps_low": 0.41802,
+      "eps_high": 0.79
+    },
+    "STX": {
+      "next_earnings": "2026-07-29",
+      "eps_estimate": 5.05821,
+      "eps_low": 4.99,
+      "eps_high": 5.44111
+    },
+    "TEM": {
+      "next_earnings": "2026-05-06",
+      "eps_estimate": -0.16,
+      "eps_low": -0.23,
+      "eps_high": -0.1
+    },
+    "TSLA": {
+      "next_earnings": "2026-07-23",
+      "eps_estimate": 0.45438,
+      "eps_low": 0.26483,
+      "eps_high": 0.59
+    },
+    "TSM": {
+      "next_earnings": "2026-07-16",
+      "eps_estimate": 3.73677,
+      "eps_low": 3.67,
+      "eps_high": 3.82
+    },
+    "TTD": {
+      "next_earnings": "2026-08-07",
+      "eps_estimate": 0.4035,
+      "eps_low": 0.32997,
+      "eps_high": 0.47
+    },
+    "U": {
+      "next_earnings": "2026-08-05",
+      "eps_estimate": 0.2429,
+      "eps_low": 0.2,
+      "eps_high": 0.32
+    },
+    "UBER": {
+      "next_earnings": "2026-08-05",
+      "eps_estimate": 0.81,
+      "eps_low": 0.81,
+      "eps_high": 0.83
+    },
+    "UEC": {
+      "next_earnings": "2026-05-28",
+      "eps_estimate": -0.01,
+      "eps_low": -0.01,
+      "eps_high": -0.01
+    },
+    "UPST": {
+      "next_earnings": "2026-08-05",
+      "eps_estimate": 0.58622,
+      "eps_low": 0.4063,
+      "eps_high": 0.74342
+    },
+    "USAR": {
+      "next_earnings": "2026-05-14",
+      "eps_estimate": -0.225,
+      "eps_low": -0.35,
+      "eps_high": -0.1
+    },
+    "VOYG": {
+      "next_earnings": "2026-08-04",
+      "eps_estimate": -0.91,
+      "eps_low": -0.94,
+      "eps_high": -0.87
+    },
+    "VRT": {
+      "next_earnings": "2026-07-29",
+      "eps_estimate": 1.42783,
+      "eps_low": 1.39,
+      "eps_high": 1.59
+    },
+    "VST": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": 2.59081,
+      "eps_low": 2.21,
+      "eps_high": 3.07
+    },
+    "WDC": {
+      "next_earnings": "2026-07-30",
+      "eps_estimate": 3.27229,
+      "eps_low": 3.2,
+      "eps_high": 3.42387
+    },
+    "WULF": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": -0.1725,
+      "eps_low": -0.24,
+      "eps_high": -0.12
+    },
+    "XNDU": null,
+    "XOVR": null,
+    "XPEV": {
+      "next_earnings": "2026-05-15",
+      "eps_estimate": -1.115,
+      "eps_low": -1.19,
+      "eps_high": -1.04
+    },
+    "ZETA": {
+      "next_earnings": "2026-05-01",
+      "eps_estimate": 0.19941,
+      "eps_low": 0.14,
+      "eps_high": 0.31
+    }
+  }
+}

@@ -1,0 +1,67 @@
+name: Daily data refresh
+
+# 22:00 UTC = 07:00 KST 매일.
+# GH Actions cron은 5~30분 지연될 수 있어 정확한 시간 보장은 아님.
+# Actions 탭에서 수동 실행도 가능 (workflow_dispatch).
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 운용사 사이트에서 ETF 리스트 (구성 변경 드물어서 실패해도 진행)
+      - name: Scrape issuer ETF lists
+        run: python scrape_all.py
+        continue-on-error: true
+
+      # 1년치 일봉 OHLCV (필수)
+      - name: Fetch 1y daily prices
+        run: python fetch_prices.py
+
+      # 월봉 본주 (월봉 정배열 계산에 필요)
+      - name: Fetch monthly closes
+        run: python fetch_monthly.py
+        continue-on-error: true
+
+      # 실적 캘린더 (incremental, 지난 실적만 재호출)
+      - name: Fetch earnings calendar
+        run: python fetch_earnings.py
+        continue-on-error: true
+
+      # 토스 productCode (신규 ETF만 매핑)
+      - name: Update Toss product IDs
+        run: python build_toss_ids.py
+        continue-on-error: true
+
+      # 모든 분석 재계산 → data.json
+      - name: Analyze and write data.json
+        run: python analyze.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/etf_list.json data/data.json data/earnings.json data/toss_ids.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "::notice::No data changes to commit"
+          else
+            git commit -m "data: daily refresh $(date -u +%Y-%m-%d)"
+            git push
+          fi

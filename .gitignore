@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Ephemeral pipeline outputs (regenerated each run, too big for git)
+data/prices.pkl
+data/monthly.pkl
+data/prices_meta.json
+data/series/
+
+# Editor & local tooling
+.claude/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Local scratch
+_tmp.py
+*.log

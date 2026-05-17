@@ -1,0 +1,1655 @@
+{
+  "AAOI": {
+    "code": "US20130925001",
+    "name_kr": "AAOI",
+    "market": "NSQ"
+  },
+  "AAOX": {
+    "code": "AMX2603024001",
+    "name_kr": "TRADR 어플라이드 옵토일렉트로닉스 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "AAPB": {
+    "code": "US20220809001",
+    "name_kr": "그래닛셰어즈 애플 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "AAPL": {
+    "code": "US19801212001",
+    "name_kr": "AAPL",
+    "market": "NSQ"
+  },
+  "AAPU": {
+    "code": "US20220809002",
+    "name_kr": "디렉시온 애플 2배 ETF",
+    "market": "NSQ"
+  },
+  "AAPX": {
+    "code": "AMX0240111001",
+    "name_kr": "T-REX 애플 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "ACHR": {
+    "code": "US20210917001",
+    "name_kr": "ACHR",
+    "market": "NYS"
+  },
+  "AFRM": {
+    "code": "US20210112001",
+    "name_kr": "AFRM",
+    "market": "NSQ"
+  },
+  "AFRU": {
+    "code": "AMX0250916001",
+    "name_kr": "T-REX 어펌 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "ALAB": {
+    "code": "NAS0240320001",
+    "name_kr": "ALAB",
+    "market": "NSQ"
+  },
+  "AMA": {
+    "code": "NAS2605001001",
+    "name_kr": "디파이언스 어플라이드 머티리얼즈 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "AMAT": {
+    "code": "US19721012001",
+    "name_kr": "AMAT",
+    "market": "NSQ"
+  },
+  "AMD": {
+    "code": "US20150102001",
+    "name_kr": "",
+    "market": "NSQ"
+  },
+  "AMDL": {
+    "code": "NAS0240318001",
+    "name_kr": "그래닛셰어즈 AMD 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "AMKL": {
+    "code": "AMX2605005001",
+    "name_kr": "디파이언스 엠코 테크놀로지 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "AMKR": {
+    "code": "US19980501001",
+    "name_kr": "AMKR",
+    "market": "NSQ"
+  },
+  "AMPU": {
+    "code": "AMX2605006001",
+    "name_kr": "디파이언스 앰프리어스 테크놀로지스 2배 롱 ETF",
+    "market": "AMX"
+  },
+  "AMPX": {
+    "code": "US20220915002",
+    "name_kr": "AMPX",
+    "market": "NYS"
+  },
+  "AMZN": {
+    "code": "US19970515001",
+    "name_kr": "AMZN",
+    "market": "NSQ"
+  },
+  "AMZU": {
+    "code": "US20220907002",
+    "name_kr": "디렉시온 아마존 2배 ETF",
+    "market": "NSQ"
+  },
+  "AMZZ": {
+    "code": "NAS0240318002",
+    "name_kr": "그래닛셰어즈 아마존 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "ANEL": {
+    "code": "NAS0250904001",
+    "name_kr": "디파이언스 아리스타 네트웍스 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "ANET": {
+    "code": "US20140606002",
+    "name_kr": "ANET",
+    "market": "NYS"
+  },
+  "APH": {
+    "code": "US19911108001",
+    "name_kr": "APH",
+    "market": "NYS"
+  },
+  "APHU": {
+    "code": "AMX2602018001",
+    "name_kr": "T-REX APH 데일리 타겟 2배 롱 ETF",
+    "market": "AMX"
+  },
+  "APLD": {
+    "code": "US20220413001",
+    "name_kr": "APLD",
+    "market": "NSQ"
+  },
+  "APLX": {
+    "code": "AMX0250909001",
+    "name_kr": "TRADR 어플라이드 디지털 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "APLZ": {
+    "code": "AMX0260122001",
+    "name_kr": "TRADR 어플라이드 디지털 데일리 2배 인버스 ETF",
+    "market": "AMX"
+  },
+  "APP": {
+    "code": "US20210414001",
+    "name_kr": "APP",
+    "market": "NSQ"
+  },
+  "APPX": {
+    "code": "NAS0250425001",
+    "name_kr": "TRADR 앱러빈 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "ARCX": {
+    "code": "AMX0250610001",
+    "name_kr": "TRADR 아처 에비에이션 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "ASTS": {
+    "code": "US20210407001",
+    "name_kr": "ASTS",
+    "market": "NSQ"
+  },
+  "ASTX": {
+    "code": "AMX0250711001",
+    "name_kr": "Tradr AST 스페이스모바일 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "AUR": {
+    "code": "US20211104001",
+    "name_kr": "AUR",
+    "market": "NSQ"
+  },
+  "AURU": null,
+  "AVAV": {
+    "code": "US20070123001",
+    "name_kr": "AVAV",
+    "market": "NSQ"
+  },
+  "AVGO": {
+    "code": "US20090806002",
+    "name_kr": "AVGO",
+    "market": "NSQ"
+  },
+  "AVGU": {
+    "code": "NAS0250715001",
+    "name_kr": "그래닛셰어즈 브로드컴 2배 ETF",
+    "market": "NSQ"
+  },
+  "AVGX": {
+    "code": "NAS0240822001",
+    "name_kr": "디파이언스 브로드컴 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "AVXX": {
+    "code": "NAS0251024001",
+    "name_kr": "디파이언스 에어로바이런먼트 데일리 타겟 2배 ETF",
+    "market": "NSQ"
+  },
+  "AXP": {
+    "code": "US19770518001",
+    "name_kr": "AXP",
+    "market": "NYS"
+  },
+  "AXPG": {
+    "code": "NAS2602019005",
+    "name_kr": "레버리지 셰어즈 아메리칸 익스프레스 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "AXTI": {
+    "code": "US19980521001",
+    "name_kr": "AXTI",
+    "market": "NSQ"
+  },
+  "AXTU": {
+    "code": "AMX2605005002",
+    "name_kr": "T-REX AXT 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "AXTX": {
+    "code": "AMX2604024001",
+    "name_kr": "TRADR 2배 롱 AXT 데일리 ETF",
+    "market": "AMX"
+  },
+  "B": null,
+  "BABA": {
+    "code": "US20140915003",
+    "name_kr": "BABA",
+    "market": "NYS"
+  },
+  "BABX": {
+    "code": "NAS0221213001",
+    "name_kr": "그래닛셰어즈 알리바바 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "BE": {
+    "code": "US20180724003",
+    "name_kr": "BE",
+    "market": "NYS"
+  },
+  "BEX": {
+    "code": "AMX0251113001",
+    "name_kr": "TRADR 블룸 에너지 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "BLSH": {
+    "code": "NYS0250813001",
+    "name_kr": "BLSH",
+    "market": "NYS"
+  },
+  "BLSX": null,
+  "BMNG": {
+    "code": "NAS0251027002",
+    "name_kr": "레버리지 셰어즈 비트마인 이머션 테크놀로지스 2배 데일리 ETF",
+    "market": "NSQ"
+  },
+  "BMNR": {
+    "code": "AMX0250605001",
+    "name_kr": "BMNR",
+    "market": "NYS"
+  },
+  "BMNU": {
+    "code": "AMX0250926001",
+    "name_kr": "T-REX 비트마인 이머션 테크놀로지스 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "BTC-USD": null,
+  "BTCL": {
+    "code": "AMX0240710001",
+    "name_kr": "T-REX 비트코인 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "BU": {
+    "code": "NAS0251119003",
+    "name_kr": "디파이언스 데일리 타겟 2배 롱 배릭 마이닝 코퍼레이션 ETF",
+    "market": "NSQ"
+  },
+  "BULL": {
+    "code": "US20220815003",
+    "name_kr": "BULL",
+    "market": "NSQ"
+  },
+  "BULX": {
+    "code": "NAS0250903011",
+    "name_kr": "그래닛셰어즈 위불 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "CCUP": {
+    "code": "AMX0250811002",
+    "name_kr": "T-REX 써클 인터넷 그룹 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "CEG": {
+    "code": "US20220202001",
+    "name_kr": "CEG",
+    "market": "NSQ"
+  },
+  "CEGX": {
+    "code": "AMX0250711003",
+    "name_kr": "TRADR 2배 컨스털레이션 에너지 ETF",
+    "market": "AMX"
+  },
+  "CELH": {
+    "code": "US20170524001",
+    "name_kr": "CELH",
+    "market": "NSQ"
+  },
+  "CELT": null,
+  "CIFR": {
+    "code": "US20210830003",
+    "name_kr": "CIFR",
+    "market": "NSQ"
+  },
+  "CIFU": {
+    "code": "AMX0251121001",
+    "name_kr": "T-REX 사이퍼 마이닝 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "CLS": {
+    "code": "US19980630001",
+    "name_kr": "CLS",
+    "market": "NYS"
+  },
+  "CLSK": {
+    "code": "US20200124001",
+    "name_kr": "CLSK",
+    "market": "NSQ"
+  },
+  "CLSX": {
+    "code": "AMX0250916004",
+    "name_kr": "TRADR 클린스파크 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "COHR": {
+    "code": "US19871002001",
+    "name_kr": "COHR",
+    "market": "NYS"
+  },
+  "COHX": {
+    "code": "AMX2602019002",
+    "name_kr": "TRADR 코히런트 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "COIN": {
+    "code": "US20210414003",
+    "name_kr": "COIN",
+    "market": "NSQ"
+  },
+  "CONL": {
+    "code": "US20220809007",
+    "name_kr": null,
+    "market": "NSQ"
+  },
+  "CORZ": {
+    "code": "NAS0240124001",
+    "name_kr": "CORZ",
+    "market": "NSQ"
+  },
+  "COZX": {
+    "code": "AMX0251105001",
+    "name_kr": "TRADR 코어 사이언티픽 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "CPNG": {
+    "code": "US20210310005",
+    "name_kr": "CPNG",
+    "market": "NYS"
+  },
+  "CPNX": {
+    "code": "AMX2604024002",
+    "name_kr": "TRADR 쿠팡 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "CRCG": {
+    "code": "NAS0250811002",
+    "name_kr": "레버리지 셰어즈 써클 인터넷 그룹 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "CRCL": {
+    "code": "NYS0250605001",
+    "name_kr": "CRCL",
+    "market": "NYS"
+  },
+  "CRDO": {
+    "code": "US20220126002",
+    "name_kr": "CRDO",
+    "market": "NSQ"
+  },
+  "CRDU": {
+    "code": "AMX0250916005",
+    "name_kr": "TRADR 크리도 테크놀로지 그룹 홀딩 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "CRML": {
+    "code": "US20220201007",
+    "name_kr": "CRML",
+    "market": "NSQ"
+  },
+  "CRMU": {
+    "code": "NAS2602010004",
+    "name_kr": "레버리지 셰어즈 크리티컬 메탈스 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "CRMX": {
+    "code": "AMX0260113002",
+    "name_kr": "TRADR 크리티컬 메탈스 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "CRWD": {
+    "code": "US20190611002",
+    "name_kr": "CRWD",
+    "market": "NSQ"
+  },
+  "CRWG": {
+    "code": "NAS0250811003",
+    "name_kr": "레버리지 셰어즈 코어위브 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "CRWL": {
+    "code": "NAS0241112003",
+    "name_kr": "그래닛셰어즈 크라우드스트라이크 홀딩스 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "CRWU": {
+    "code": "AMX0250725001",
+    "name_kr": "T-REX 코어위브 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "CRWV": {
+    "code": "NAS0250328002",
+    "name_kr": "CRWV",
+    "market": "NSQ"
+  },
+  "CSEX": {
+    "code": "AMX0251113002",
+    "name_kr": "TRADR CLS 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "CVNA": {
+    "code": "US20170425003",
+    "name_kr": "CVNA",
+    "market": "NYS"
+  },
+  "CVNX": {
+    "code": "NAS0250529001",
+    "name_kr": "디파이언스 데일리 타겟 2배 롱 카바나 ETF",
+    "market": "NSQ"
+  },
+  "CWVX": {
+    "code": "AMX0250711004",
+    "name_kr": "Tradr 코어위브 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "DASH": {
+    "code": "US20201207007",
+    "name_kr": "DASH",
+    "market": "NSQ"
+  },
+  "DASX": null,
+  "DDOG": {
+    "code": "US20190918001",
+    "name_kr": "DDOG",
+    "market": "NSQ"
+  },
+  "DELL": {
+    "code": "US20181228002",
+    "name_kr": "DELL",
+    "market": "NYS"
+  },
+  "DJT": {
+    "code": "US20210930006",
+    "name_kr": "DJT",
+    "market": "NSQ"
+  },
+  "DJTU": {
+    "code": "AMX0250304003",
+    "name_kr": "T-REX DJT 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "DKNG": {
+    "code": "US20200424002",
+    "name_kr": "DKNG",
+    "market": "NSQ"
+  },
+  "DKNX": {
+    "code": "NAS0250731007",
+    "name_kr": "디파이언스 드래프트킹스 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "DLLL": {
+    "code": "NAS0250213003",
+    "name_kr": "그래닛셰어즈 델 테크놀로지스 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "DNN": {
+    "code": "US20070419002",
+    "name_kr": "DNN",
+    "market": "AMX"
+  },
+  "DNNG": null,
+  "DOGD": null,
+  "ENPH": {
+    "code": "US20120330001",
+    "name_kr": "ENPH",
+    "market": "NSQ"
+  },
+  "ENPX": null,
+  "EOSE": {
+    "code": "US20201117002",
+    "name_kr": "EOSE",
+    "market": "NSQ"
+  },
+  "EOSU": null,
+  "ETH-USD": null,
+  "ETOR": {
+    "code": "NAS0250514002",
+    "name_kr": "ETOR",
+    "market": "NSQ"
+  },
+  "ETRL": {
+    "code": "NAS0250903013",
+    "name_kr": "그래닛셰어즈 이토로 그룹 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "ETU": {
+    "code": "AMX0241024002",
+    "name_kr": "T-REX 이더리움 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "FBL": {
+    "code": "NAS0221213002",
+    "name_kr": "그래닛셰어즈 메타 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "FCX": {
+    "code": "US19950801001",
+    "name_kr": "FCX",
+    "market": "NYS"
+  },
+  "FCXG": {
+    "code": "NAS2602019006",
+    "name_kr": "레버리지 셰어즈 프리포트 맥모란 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "FGRU": {
+    "code": "AMX2602018002",
+    "name_kr": "T-REX FIGR 데일리 타겟 2배 롱 ETF",
+    "market": "AMX"
+  },
+  "FIGR": {
+    "code": "NAS0250911001",
+    "name_kr": "FIGR",
+    "market": "NSQ"
+  },
+  "FLY": {
+    "code": "NAS0250807003",
+    "name_kr": "FLY",
+    "market": "NSQ"
+  },
+  "FLYT": {
+    "code": "AMX0251023006",
+    "name_kr": "TRADR 2배 롱 FLY 데일리 ETF",
+    "market": "AMX"
+  },
+  "GEV": {
+    "code": "NYS0240402001",
+    "name_kr": "GEV",
+    "market": "NYS"
+  },
+  "GEVX": {
+    "code": "AMX0250711005",
+    "name_kr": "Tradr GE 버노바 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "GGLL": {
+    "code": "US20220907003",
+    "name_kr": "디렉시온 알파벳 A 2배 ETF",
+    "market": "NSQ"
+  },
+  "GLW": {
+    "code": "US19450521001",
+    "name_kr": "GLW",
+    "market": "NYS"
+  },
+  "GLWG": {
+    "code": "NAS2603010007",
+    "name_kr": "레버리지 셰어즈 코닝 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "GLXU": {
+    "code": "AMX0250808001",
+    "name_kr": "T-REX 갤럭시 디지털 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "GLXY": {
+    "code": "NAS0250516003",
+    "name_kr": "GLXY",
+    "market": "NSQ"
+  },
+  "GME": {
+    "code": "US20020211001",
+    "name_kr": "GME",
+    "market": "NYS"
+  },
+  "GMEU": {
+    "code": "AMX0250424001",
+    "name_kr": "T-REX 게임스탑 데일리 타겟 2배 롱 ETF",
+    "market": "AMX"
+  },
+  "GOOG": {
+    "code": "US20040819001",
+    "name_kr": "GOOG",
+    "market": "NSQ"
+  },
+  "GOOGL": {
+    "code": "US20040819002",
+    "name_kr": "GOOGL",
+    "market": "NSQ"
+  },
+  "GOOX": {
+    "code": "AMX0240111009",
+    "name_kr": "T-REX 알파벳 C 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "GOU": {
+    "code": "NAS0251202001",
+    "name_kr": "그래닛셰어즈 알파벳 A 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "GS": {
+    "code": "US19990504001",
+    "name_kr": "GS",
+    "market": "NYS"
+  },
+  "GSX": null,
+  "HIMS": {
+    "code": "US20210121009",
+    "name_kr": "HIMS",
+    "market": "NYS"
+  },
+  "HIMZ": {
+    "code": "NAS0250313002",
+    "name_kr": "디파이언스 힘스 앤 허스 헬스 데일리 타겟 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "HL": {
+    "code": "US19830607001",
+    "name_kr": "HL",
+    "market": "NYS"
+  },
+  "HLXX": {
+    "code": "AMX2603024004",
+    "name_kr": "TRADR 헤클라 마이닝 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "HOOD": {
+    "code": "US20210727005",
+    "name_kr": "HOOD",
+    "market": "NSQ"
+  },
+  "HOOX": {
+    "code": "NAS0250319001",
+    "name_kr": "디파이언스 로빈후드 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "IBM": {
+    "code": "US19490128001",
+    "name_kr": "",
+    "market": "NYS"
+  },
+  "IBX": null,
+  "INTC": {
+    "code": "US19711013001",
+    "name_kr": "INTC",
+    "market": "NSQ"
+  },
+  "INTW": {
+    "code": "NAS0250213005",
+    "name_kr": "그래닛셰어즈 인텔 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "IONL": {
+    "code": "NAS0250325001",
+    "name_kr": "그래닛셰어즈 아이온큐 데일리  2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "IONQ": {
+    "code": "US20211001008",
+    "name_kr": "IONQ",
+    "market": "NYS"
+  },
+  "IONX": {
+    "code": "NAS0250312004",
+    "name_kr": "디파이언스 아이온큐 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "IRE": {
+    "code": "AMX0251020002",
+    "name_kr": "디파이언스 데일리 타겟 2배 롱 아이렌 ETF",
+    "market": "AMX"
+  },
+  "IREN": {
+    "code": "US20211116005",
+    "name_kr": "IREN",
+    "market": "NSQ"
+  },
+  "IREX": {
+    "code": "AMX0251023008",
+    "name_kr": "TRADR 아이렌 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "ISRG": {
+    "code": "US20000613001",
+    "name_kr": "ISRG",
+    "market": "NSQ"
+  },
+  "ISUL": {
+    "code": "NAS0251007004",
+    "name_kr": "그래닛셰어즈 ISRG 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "JOBX": {
+    "code": "AMX0250909004",
+    "name_kr": "TRADR 조비 에비에이션 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "JOBY": {
+    "code": "US20210811006",
+    "name_kr": "JOBY",
+    "market": "NYS"
+  },
+  "JPM": {
+    "code": "US19690401002",
+    "name_kr": "JPM",
+    "market": "NYS"
+  },
+  "JPNL": null,
+  "KEEL": {
+    "code": "US20210621001",
+    "name_kr": "KEEL",
+    "market": "NSQ"
+  },
+  "KEEX": {
+    "code": "AMX0251230002",
+    "name_kr": "디파이언스 키엘 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "KTOS": {
+    "code": "US19991105001",
+    "name_kr": "KTOS",
+    "market": "NSQ"
+  },
+  "KTUP": {
+    "code": "AMX0250916009",
+    "name_kr": "T-REX KTOS 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "LABX": {
+    "code": "AMX0250812002",
+    "name_kr": "TRADR 아스테라 랩스 2배 데일리 ETF",
+    "market": "AMX"
+  },
+  "LCDL": {
+    "code": "NAS0250422004",
+    "name_kr": "그래닛셰어즈 루시드 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "LCID": {
+    "code": "US20200918008",
+    "name_kr": "LCID",
+    "market": "NSQ"
+  },
+  "LEU": {
+    "code": "US20150316002",
+    "name_kr": "LEU",
+    "market": "NYS"
+  },
+  "LEUX": {
+    "code": "AMX2602019003",
+    "name_kr": "TRADR 센트러스 에너지 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "LITE": {
+    "code": "US20150805002",
+    "name_kr": "LITE",
+    "market": "NSQ"
+  },
+  "LITX": {
+    "code": "AMX0260127002",
+    "name_kr": "TRADR 루멘텀 홀딩스 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "LLY": {
+    "code": "US19700709001",
+    "name_kr": "LLY",
+    "market": "NYS"
+  },
+  "LLYX": {
+    "code": "AMX0240807002",
+    "name_kr": "디파이언스 일라이 릴리 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "LMND": {
+    "code": "US20200701007",
+    "name_kr": "LMND",
+    "market": "NYS"
+  },
+  "LMNX": {
+    "code": "NAS0251016005",
+    "name_kr": "디파이언스 레모네이드 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "LNOK": {
+    "code": "AMX0260121004",
+    "name_kr": "디파이언스 노키아(ADR) 데일리 2배 롱 ETF",
+    "market": "AMX"
+  },
+  "LRCU": {
+    "code": "AMX0250819003",
+    "name_kr": "TRADR 램 리서치 2배 데일리 ETF",
+    "market": "AMX"
+  },
+  "LRCX": {
+    "code": "US19840504001",
+    "name_kr": "LRCX",
+    "market": "NSQ"
+  },
+  "LUNL": {
+    "code": "AMX0260113004",
+    "name_kr": "디파이언스 인튜이티브 머신스 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "LUNR": {
+    "code": "NAS0230214003",
+    "name_kr": "LUNR",
+    "market": "NSQ"
+  },
+  "LYFT": {
+    "code": "US20190328002",
+    "name_kr": "LYFT",
+    "market": "NSQ"
+  },
+  "LYFX": null,
+  "MARA": {
+    "code": "US20140728001",
+    "name_kr": "MARA",
+    "market": "NSQ"
+  },
+  "MDB": {
+    "code": "US20171018002",
+    "name_kr": "MDB",
+    "market": "NSQ"
+  },
+  "MDBX": null,
+  "META": {
+    "code": "US20120518001",
+    "name_kr": "META",
+    "market": "NSQ"
+  },
+  "METU": {
+    "code": "NAS0240605005",
+    "name_kr": "디렉시온 메타 2배 ETF",
+    "market": "NSQ"
+  },
+  "MP": {
+    "code": "US20201118015",
+    "name_kr": "",
+    "market": "NYS"
+  },
+  "MPL": {
+    "code": "AMX0251020003",
+    "name_kr": "디파이언스 데일리 타겟 2배 롱 MP 머티리얼스 ETF",
+    "market": "AMX"
+  },
+  "MPWR": {
+    "code": "US20041119001",
+    "name_kr": "MPWR",
+    "market": "NSQ"
+  },
+  "MPWX": {
+    "code": "AMX2604024003",
+    "name_kr": "TRADR 모놀리식 파워 시스템 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "MRAL": {
+    "code": "NAS0250307002",
+    "name_kr": "그래닛셰어즈 마라 홀딩스 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "MRNA": {
+    "code": "US20181206001",
+    "name_kr": "MRNA",
+    "market": "NSQ"
+  },
+  "MRNX": {
+    "code": "AMX2602003002",
+    "name_kr": "디파이언스 모더나 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "MRVL": {
+    "code": "US20000627001",
+    "name_kr": "MRVL",
+    "market": "NSQ"
+  },
+  "MSFL": {
+    "code": "NAS0240318004",
+    "name_kr": "그래닛셰어즈 마이크로소프트 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "MSFT": {
+    "code": "US19860313001",
+    "name_kr": "MSFT",
+    "market": "NSQ"
+  },
+  "MSFU": {
+    "code": "US20220907007",
+    "name_kr": "디렉시온 마이크로소프트 2배 ETF",
+    "market": "NSQ"
+  },
+  "MSFX": {
+    "code": "AMX0240111012",
+    "name_kr": "T-REX 마이크로소프트 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "MSTP": {
+    "code": "NAS0250610005",
+    "name_kr": "그래닛셰어즈 스트래티지 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "MSTR": {
+    "code": "US19980611001",
+    "name_kr": "MSTR",
+    "market": "NSQ"
+  },
+  "MSTU": {
+    "code": "AMX0240918002",
+    "name_kr": "T-REX 스트래티지 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "MSTX": {
+    "code": "NAS0240815003",
+    "name_kr": "디파이언스 스트래티지 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "MU": {
+    "code": "US19890516001",
+    "name_kr": "MU",
+    "market": "NSQ"
+  },
+  "MULL": {
+    "code": "NAS0241112005",
+    "name_kr": "그래닛셰어즈 마이크론 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "MUU": {
+    "code": "NAS0241010007",
+    "name_kr": "디렉시온 마이크론 테크놀로지 2배 ETF",
+    "market": "NSQ"
+  },
+  "MVLL": {
+    "code": "NAS0250307003",
+    "name_kr": "그래닛셰어즈 마벨 테크놀로지 2배 데일리 롱 ETF",
+    "market": "NSQ"
+  },
+  "NBIG": {
+    "code": "NAS0251027009",
+    "name_kr": "레버리지 셰어즈 네비우스 그룹 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "NBIL": {
+    "code": "NAS0251007006",
+    "name_kr": "그래닛셰어즈 NBIS 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "NBIS": {
+    "code": "US20110524001",
+    "name_kr": "NBIS",
+    "market": "NSQ"
+  },
+  "NEBX": {
+    "code": "AMX0250909005",
+    "name_kr": "TRADR 네비우스 그룹 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "NEM": {
+    "code": "US19511221001",
+    "name_kr": "NEM",
+    "market": "NYS"
+  },
+  "NET": {
+    "code": "US20190912003",
+    "name_kr": "NET",
+    "market": "NYS"
+  },
+  "NETX": null,
+  "NFLU": {
+    "code": "AMX0240927001",
+    "name_kr": "T-REX 넷플릭스 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "NFLX": {
+    "code": "US20020523001",
+    "name_kr": "NFLX",
+    "market": "NSQ"
+  },
+  "NOK": {
+    "code": "US19940701001",
+    "name_kr": "NOK",
+    "market": "NYS"
+  },
+  "NOW": {
+    "code": "US20120629001",
+    "name_kr": "NOW",
+    "market": "NYS"
+  },
+  "NOWL": {
+    "code": "NAS0250715004",
+    "name_kr": "그래닛셰어즈 서비스나우 2배 ETF",
+    "market": "NSQ"
+  },
+  "NVDA": {
+    "code": "US19990122001",
+    "name_kr": "NVDA",
+    "market": "NSQ"
+  },
+  "NVDL": {
+    "code": "NAS0221213008",
+    "name_kr": "그래닛셰어즈 엔비디아 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "NVDU": {
+    "code": "NAS0230913004",
+    "name_kr": "디렉시온 엔비디아 2배 ETF",
+    "market": "NSQ"
+  },
+  "NVDX": {
+    "code": "AMX0231019003",
+    "name_kr": "T-REX 엔비디아 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "NVO": {
+    "code": "US19810709001",
+    "name_kr": "NVO",
+    "market": "NYS"
+  },
+  "NVOX": {
+    "code": "AMX0241202006",
+    "name_kr": "디파이언스 노보노디스크(ADR) 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "NVTS": {
+    "code": "US20211020011",
+    "name_kr": "NVTS",
+    "market": "NSQ"
+  },
+  "NVTX": {
+    "code": "AMX0250909007",
+    "name_kr": "TRADR 나비타스 세미컨덕터 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "NWMX": null,
+  "OKLL": {
+    "code": "NAS0250624007",
+    "name_kr": "디파이언스 오클로 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "OKLO": {
+    "code": "US20210701009",
+    "name_kr": "OKLO",
+    "market": "NYS"
+  },
+  "OKTA": {
+    "code": "US20170404001",
+    "name_kr": "OKTA",
+    "market": "NSQ"
+  },
+  "OKTX": null,
+  "ONDG": {
+    "code": "NAS0260113004",
+    "name_kr": "레버리지 셰어즈 온다스 홀딩스 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "ONDL": {
+    "code": "AMX0251230004",
+    "name_kr": "디파이언스 온다스 홀딩스 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "ONDS": {
+    "code": "US20201204002",
+    "name_kr": "ONDS",
+    "market": "NSQ"
+  },
+  "ONDU": {
+    "code": "AMX0260113005",
+    "name_kr": "TRADR 온다스 홀딩스 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "OPEN": {
+    "code": "US20201221005",
+    "name_kr": "OPEN",
+    "market": "NSQ"
+  },
+  "OPEX": {
+    "code": "AMX0251023011",
+    "name_kr": "TRADR 2배 롱 오픈도어 테크놀로지스 데일리 ETF",
+    "market": "AMX"
+  },
+  "ORCL": {
+    "code": "US19860312001",
+    "name_kr": "ORCL",
+    "market": "NYS"
+  },
+  "ORCX": {
+    "code": "NAS0250207003",
+    "name_kr": "디파이언스 데일리 타겟 2배 롱 오라클 ETF",
+    "market": "NSQ"
+  },
+  "ORLG": {
+    "code": "NAS0260115003",
+    "name_kr": "레버리지 셰어즈 오릴리 오토모티브 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "ORLY": {
+    "code": "US19930422001",
+    "name_kr": "ORLY",
+    "market": "NSQ"
+  },
+  "OSCR": {
+    "code": "US20210301020",
+    "name_kr": "OSCR",
+    "market": "NYS"
+  },
+  "OSCX": {
+    "code": "NAS0250925006",
+    "name_kr": "디파이언스 오스카 헬스 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "PAAS": {
+    "code": "US19950612001",
+    "name_kr": "PAAS",
+    "market": "NYS"
+  },
+  "PAAU": {
+    "code": "AMX2603012001",
+    "name_kr": "T-REX 팬 아메리칸 실버 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "PATH": {
+    "code": "US20210420010",
+    "name_kr": "PATH",
+    "market": "NYS"
+  },
+  "PATX": {
+    "code": "AMX0260113006",
+    "name_kr": "TRADR 유아이패스 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "PDD": {
+    "code": "US20180725004",
+    "name_kr": "PDD",
+    "market": "NSQ"
+  },
+  "PDDL": {
+    "code": "NAS0250715005",
+    "name_kr": "그래닛셰어즈 핀둬둬 2배 ETF",
+    "market": "NSQ"
+  },
+  "PL": {
+    "code": "US20211208011",
+    "name_kr": "PL",
+    "market": "NYS"
+  },
+  "PLTR": {
+    "code": "US20200930014",
+    "name_kr": "PLTR",
+    "market": "NSQ"
+  },
+  "PLU": {
+    "code": "AMX0260107001",
+    "name_kr": "디파이언스 PL 데일리 2배 롱 ETF",
+    "market": "AMX"
+  },
+  "PLUG": {
+    "code": "US19991029003",
+    "name_kr": "PLUG",
+    "market": "NSQ"
+  },
+  "PLUL": {
+    "code": "NAS0260113005",
+    "name_kr": "레버리지 셰어즈 플러그 파워 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "POEL": {
+    "code": "AMX2605001009",
+    "name_kr": "디파이언스 포엣 테크놀로지스 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "POET": {
+    "code": "US20220314008",
+    "name_kr": "POET",
+    "market": "NSQ"
+  },
+  "PONX": {
+    "code": "AMX0250909009",
+    "name_kr": "TRADR 포니 AI 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "PONY": {
+    "code": "NAS0241127002",
+    "name_kr": "PONY",
+    "market": "NSQ"
+  },
+  "PTIR": {
+    "code": "NAS0240904003",
+    "name_kr": "그래닛셰어즈 팔란티어 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "QBTS": {
+    "code": "US20220808006",
+    "name_kr": "QBTS",
+    "market": "NYS"
+  },
+  "QBTX": {
+    "code": "AMX0250425001",
+    "name_kr": "트레이더 디 웨이브 퀀텀 데일리 2배 롱 ETF",
+    "market": "AMX"
+  },
+  "QCML": {
+    "code": "NAS0250213007",
+    "name_kr": "그래닛셰어즈 퀄컴 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "QCOM": {
+    "code": "US19911213001",
+    "name_kr": "QCOM",
+    "market": "NSQ"
+  },
+  "QS": {
+    "code": "US20201127007",
+    "name_kr": "QS",
+    "market": "NSQ"
+  },
+  "QSU": {
+    "code": "AMX0251020004",
+    "name_kr": "디파이언스 데일리 타겟 2배 롱 퀀텀스케이프 ETF",
+    "market": "AMX"
+  },
+  "QSX": null,
+  "QUBT": {
+    "code": "US20210715012",
+    "name_kr": "QUBT",
+    "market": "NSQ"
+  },
+  "QUBX": {
+    "code": "AMX0250624003",
+    "name_kr": "TRADR 퀀텀 컴퓨팅 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "RBLU": {
+    "code": "AMX0250304005",
+    "name_kr": "T-REX 로블록스 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "RBLX": {
+    "code": "US20210309012",
+    "name_kr": "RBLX",
+    "market": "NYS"
+  },
+  "RCAT": {
+    "code": "US20210430005",
+    "name_kr": "RCAT",
+    "market": "NSQ"
+  },
+  "RCAX": {
+    "code": "NAS2602003003",
+    "name_kr": "디파이언스 레드 캣 홀딩스 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "RDDT": {
+    "code": "NYS0240321001",
+    "name_kr": "RDDT",
+    "market": "NYS"
+  },
+  "RDTL": {
+    "code": "NAS0250325002",
+    "name_kr": "그래닛셰어즈 레딧 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "RDW": {
+    "code": "US20210903005",
+    "name_kr": "RDW",
+    "market": "NYS"
+  },
+  "RDWU": {
+    "code": "AMX0260130004",
+    "name_kr": "T-REX 레드와이어 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "RGTI": {
+    "code": "US20210422015",
+    "name_kr": "RGTI",
+    "market": "NSQ"
+  },
+  "RGTU": {
+    "code": "AMX0250624004",
+    "name_kr": "TRADR 리게티 컴퓨팅 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "RGTX": {
+    "code": "NAS0250401005",
+    "name_kr": "디파이언스 리게티 컴퓨팅 데일리 타겟 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "RIOT": {
+    "code": "US20171019002",
+    "name_kr": "RIOT",
+    "market": "NSQ"
+  },
+  "RIOX": {
+    "code": "AMX0250102007",
+    "name_kr": "디파이언스 데일리 타겟 2배 롱 라이엇 ETF",
+    "market": "AMX"
+  },
+  "RIVN": {
+    "code": "US20211109013",
+    "name_kr": "RIVN",
+    "market": "NSQ"
+  },
+  "RKLB": {
+    "code": "US20210825002",
+    "name_kr": "RKLB",
+    "market": "NSQ"
+  },
+  "RKLX": {
+    "code": "NAS0250313006",
+    "name_kr": "디파이언스 로켓 랩 데일리 타겟 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "RKT": {
+    "code": "US20200806007",
+    "name_kr": "RKT",
+    "market": "NYS"
+  },
+  "RKTL": {
+    "code": "AMX0260113009",
+    "name_kr": "디파이언스 로켓 컴퍼니스 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "ROBN": {
+    "code": "AMX0250131003",
+    "name_kr": "T-REX 로빈후드 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "RVNL": {
+    "code": "NAS0250422009",
+    "name_kr": "그래닛셰어즈 리비안 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "SBET": {
+    "code": "NAS0240214003",
+    "name_kr": "SBET",
+    "market": "NSQ"
+  },
+  "SBTU": {
+    "code": "AMX0251021003",
+    "name_kr": "T-REX 샤프링크 게이밍 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "SMCI": {
+    "code": "US20200114002",
+    "name_kr": "SMCI",
+    "market": "NSQ"
+  },
+  "SMCL": {
+    "code": "NAS0241212001",
+    "name_kr": "그래닛셰어즈 슈퍼 마이크로 컴퓨터 2배 롱 데일리 ETF",
+    "market": "NSQ"
+  },
+  "SMCX": {
+    "code": "NAS0240822002",
+    "name_kr": "디파이언스 슈퍼 마이크로 컴퓨터 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "SMR": {
+    "code": "US20201208006",
+    "name_kr": "SMR",
+    "market": "NYS"
+  },
+  "SMU": {
+    "code": "AMX0250711008",
+    "name_kr": "Tradr 뉴스케일파워 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "SMUP": {
+    "code": "AMX0250725002",
+    "name_kr": "T-REX SMR DAILY 2X",
+    "market": "AMX"
+  },
+  "SNDK": {
+    "code": "NAS0250224006",
+    "name_kr": "SNDK",
+    "market": "NSQ"
+  },
+  "SNDU": {
+    "code": "AMX2603012002",
+    "name_kr": "T-REX 샌디스크 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "SNOU": {
+    "code": "AMX0250424002",
+    "name_kr": "T-REX 스노우플레이크 데일리 2배 롱 ETF",
+    "market": "AMX"
+  },
+  "SNOW": {
+    "code": "US20200915015",
+    "name_kr": "SNOW",
+    "market": "NYS"
+  },
+  "SNXX": {
+    "code": "AMX0260127004",
+    "name_kr": "TRADR 샌디스크 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "SOFI": {
+    "code": "US20210601001",
+    "name_kr": "SOFI",
+    "market": "NSQ"
+  },
+  "SOFX": {
+    "code": "NAS0250116006",
+    "name_kr": "디파이언스 데일리 타겟 2배 롱 소파이 테크놀로지스 ETF",
+    "market": "NSQ"
+  },
+  "SOUN": {
+    "code": "US20220428003",
+    "name_kr": "SOUN",
+    "market": "NSQ"
+  },
+  "SOUX": {
+    "code": "NAS0250624008",
+    "name_kr": "디파이언스 사운드하운드 AI 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "SRPT": {
+    "code": "US19970604001",
+    "name_kr": "SRPT",
+    "market": "NSQ"
+  },
+  "SRPU": {
+    "code": "AMX0251023013",
+    "name_kr": "TRADR 2배 롱 사렙타 테라퓨틱스 데일리 ETF",
+    "market": "AMX"
+  },
+  "STX": {
+    "code": "US20021211002",
+    "name_kr": "STX",
+    "market": "NSQ"
+  },
+  "STXL": {
+    "code": "AMX2604023003",
+    "name_kr": "디파이언스 씨게이트 데일리 2배 롱 ETF",
+    "market": "AMX"
+  },
+  "STXX": {
+    "code": "AMX2604024004",
+    "name_kr": "TRADR 2배 롱 씨게이트 데일리 ETF",
+    "market": "AMX"
+  },
+  "TEM": {
+    "code": "NAS0240614002",
+    "name_kr": "TEM",
+    "market": "NSQ"
+  },
+  "TEMT": {
+    "code": "AMX0250513002",
+    "name_kr": "TRADR 템퍼스 AI 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "TSLA": {
+    "code": "US20100629001",
+    "name_kr": "TSLA",
+    "market": "NSQ"
+  },
+  "TSLL": {
+    "code": "US20220809012",
+    "name_kr": "디렉시온 테슬라 2배 ETF",
+    "market": "NSQ"
+  },
+  "TSLR": {
+    "code": "NAS0230822008",
+    "name_kr": "그래닛셰어즈 테슬라 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "TSLT": {
+    "code": "NAS0231019002",
+    "name_kr": "T-REX 테슬라 데일리 타겟 2배 ETF",
+    "market": "AMX"
+  },
+  "TSM": {
+    "code": "US19971008002",
+    "name_kr": "",
+    "market": "NYS"
+  },
+  "TSMU": {
+    "code": "NAS0241112008",
+    "name_kr": "그래닛셰어즈 2배 롱 TSMC 데일리 ETF",
+    "market": "NSQ"
+  },
+  "TSMX": {
+    "code": "NAS0241003009",
+    "name_kr": "디렉시온 TSMC 2배 ETF",
+    "market": "NSQ"
+  },
+  "TTD": {
+    "code": "US20160921009",
+    "name_kr": "TTD",
+    "market": "NSQ"
+  },
+  "TTDU": {
+    "code": "AMX0250917007",
+    "name_kr": "T-REX 트레이드 데스크 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "U": {
+    "code": "US20200917008",
+    "name_kr": "U",
+    "market": "NYS"
+  },
+  "UBER": {
+    "code": "US20190509010",
+    "name_kr": "UBER",
+    "market": "NYS"
+  },
+  "UBRL": {
+    "code": "NAS0240904004",
+    "name_kr": "그래닛셰어즈 우버 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "UEC": {
+    "code": "US20070405001",
+    "name_kr": "UEC",
+    "market": "AMX"
+  },
+  "UECG": {
+    "code": "NAS2602010009",
+    "name_kr": "레버리지 셰어즈 우라늄 에너지 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "UNX": {
+    "code": "AMX0250916010",
+    "name_kr": "TRADR 유니티 소프트웨어 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "UPST": {
+    "code": "US20201215008",
+    "name_kr": "UPST",
+    "market": "NSQ"
+  },
+  "UPSX": {
+    "code": "AMX0250610004",
+    "name_kr": "TRADR 업스타트 홀딩스 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "USAR": {
+    "code": "NAS0250314005",
+    "name_kr": "USAR",
+    "market": "NSQ"
+  },
+  "USAX": {
+    "code": "AMX0260113010",
+    "name_kr": "TRADR USA 레어 어스 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "USGG": null,
+  "VOYG": {
+    "code": "NYS0250611002",
+    "name_kr": "VOYG",
+    "market": "NYS"
+  },
+  "VOYX": null,
+  "VRT": {
+    "code": "US20200210005",
+    "name_kr": "VRT",
+    "market": "NYS"
+  },
+  "VRTL": {
+    "code": "NAS0250325003",
+    "name_kr": "그래닛셰어즈 버티브 홀딩스 데일리 2배 롱 ETF",
+    "market": "NSQ"
+  },
+  "VST": {
+    "code": "US20170510003",
+    "name_kr": "VST",
+    "market": "NYS"
+  },
+  "VSTL": {
+    "code": "NAS0250722005",
+    "name_kr": "디파이언스 비스트라 에너지 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "WDC": {
+    "code": "US19910131001",
+    "name_kr": "WDC",
+    "market": "NSQ"
+  },
+  "WDCX": {
+    "code": "AMX0260127005",
+    "name_kr": "TRADR 웨스턴 디지털 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "WULF": {
+    "code": "US20211214013",
+    "name_kr": "WULF",
+    "market": "NSQ"
+  },
+  "WULX": {
+    "code": "AMX0251023015",
+    "name_kr": "TRADR 2배 롱 테라울프 데일리 ETF",
+    "market": "AMX"
+  },
+  "XNDU": {
+    "code": "NAS0250519002",
+    "name_kr": "XNDU",
+    "market": "NSQ"
+  },
+  "XNDX": null,
+  "XOVL": {
+    "code": "AMX2605005007",
+    "name_kr": "디파이언스 XOVR 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "XOVR": {
+    "code": "US20171108003",
+    "name_kr": "ER셰어즈 창업가 ETF",
+    "market": "NSQ"
+  },
+  "XPEG": {
+    "code": "NAS0260115004",
+    "name_kr": "레버리지 셰어즈 샤오펑 데일리 2배 ETF",
+    "market": "NSQ"
+  },
+  "XPEV": {
+    "code": "US20200826004",
+    "name_kr": "XPEV",
+    "market": "NYS"
+  },
+  "ZETA": {
+    "code": "US20210609013",
+    "name_kr": "ZETA",
+    "market": "NYS"
+  },
+  "ZETX": {
+    "code": "AMX2602003004",
+    "name_kr": "디파이언스 제타 글로벌 홀딩스 데일리 2배 ETF",
+    "market": "AMX"
+  }
+}

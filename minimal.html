@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>二倍 — 米国レバレッジETFモニター</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://s3.tradingview.com/tv.js"></script>
+<style>
+  :root {
+    --bg:      #fafafa;
+    --surface: #ffffff;
+    --ink:     #0a0a0a;
+    --ink-2:   #5a5a5a;
+    --ink-3:   #a0a0a0;
+    --ink-4:   #d4d4d4;
+    --line:    rgba(0,0,0,0.07);
+    --line-2:  rgba(0,0,0,0.14);
+    --accent:  #d5322b;
+    --accent-soft: #fce9e7;
+    --up:      #d5322b;
+    --down:    #00766f;
+    --hot:     #b8860b;
+    --hdr:     54px;
+    --serif:   'Noto Serif KR', 'Times New Roman', serif;
+    --sans:    'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --mono:    'JetBrains Mono', 'Menlo', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg); color: var(--ink); font-family: var(--sans);
+    font-size: 13px; line-height: 1.5; -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01", "ss02";
+  }
+  .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .serif { font-family: var(--serif); font-weight: 300; }
+  .micro { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+  .up    { color: var(--up); }
+  .down  { color: var(--down); }
+  .hot   { color: var(--hot); }
+  .dim   { color: var(--ink-3); }
+  .soft  { color: var(--ink-2); }
+  a { color: inherit; text-decoration: none; }
+
+  /* HEADER */
+  header.mn {
+    position: sticky; top: 0; height: var(--hdr); background: var(--surface);
+    border-bottom: 1px solid var(--line); z-index: 10;
+    display: flex; align-items: center; padding: 0 28px; gap: 32px;
+  }
+  header.mn .brand {
+    display: flex; align-items: baseline; gap: 10px;
+  }
+  header.mn .brand .ja { font-family: var(--serif); font-weight: 200; font-size: 22px; letter-spacing: -0.02em; }
+  header.mn .brand .ko { font-family: var(--sans); font-weight: 400; font-size: 11px; letter-spacing: 0.18em; color: var(--ink-3); text-transform: uppercase; }
+  header.mn .summary { display: flex; gap: 28px; align-items: baseline; font-size: 11px; flex: 1; flex-wrap: wrap; overflow: hidden; }
+  header.mn .summary .item .lbl { display: block; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 1px; }
+  header.mn .summary .item .val { font-family: var(--mono); font-size: 13px; font-weight: 500; color: var(--ink); }
+  header.mn .clock { font-family: var(--mono); font-size: 13px; font-weight: 400; color: var(--accent); }
+
+  /* MAIN */
+  main.mn {
+    padding: 16px 28px 28px;
+    display: grid; grid-template-columns: minmax(0,1fr) 380px; gap: 24px;
+    height: calc(100vh - var(--hdr));
+  }
+  @media (max-width: 1023px) {
+    main.mn { grid-template-columns: 1fr; grid-template-rows: 58vh auto; padding: 16px; height: auto; }
+  }
+
+  /* CHART PANE */
+  section.chart-pane {
+    background: var(--surface); border: 1px solid var(--line); display: flex; flex-direction: column; min-height: 0;
+  }
+  .chart-head { padding: 16px 20px; border-bottom: 1px solid var(--line); }
+  .chart-head .row1 { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 10px; }
+  .chart-head .ticker { font-family: var(--serif); font-weight: 300; font-size: 30px; letter-spacing: -0.02em; line-height: 1; color: var(--ink); }
+  .chart-head .kr-name { font-family: var(--sans); font-weight: 500; font-size: 15px; color: var(--ink); }
+  .chart-head .issuer { font-size: 11px; color: var(--ink-3); letter-spacing: 0.04em; }
+  .chart-head .star {
+    background: none; border: none; cursor: pointer; font-size: 22px;
+    color: var(--ink-4); padding: 0; line-height: 1;
+  }
+  .chart-head .star.on { color: var(--accent); }
+  .chart-head .price-row { display: flex; align-items: baseline; gap: 16px; margin-bottom: 12px; }
+  .chart-head .price { font-family: var(--serif); font-weight: 300; font-size: 36px; line-height: 1; letter-spacing: -0.02em; color: var(--ink); }
+  .chart-head .price-change { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+  .chart-head .meta {
+    display: flex; flex-wrap: wrap; gap: 12px 28px; padding-top: 10px;
+    border-top: 1px solid var(--line); font-size: 11px;
+  }
+  .chart-head .meta-item { display: flex; flex-direction: column; gap: 1px; }
+  .chart-head .meta-item .l { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); }
+  .chart-head .meta-item .v { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--ink); }
+  .chart-head .toss-bar { display: flex; gap: 6px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
+  .chart-head .toss {
+    font-size: 10px; padding: 4px 10px; border: 1px solid var(--line-2);
+    color: var(--ink-2); transition: all .15s;
+    display: inline-flex; align-items: center; gap: 4px;
+  }
+  .chart-head .toss:hover { border-color: var(--accent); color: var(--accent); }
+
+  .charts { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+  .chart-cell { flex: 1; position: relative; min-height: 0; }
+  .chart-cell + .chart-cell { border-top: 1px solid var(--line); }
+  .chart-cell .label {
+    position: absolute; top: 10px; left: 14px; z-index: 5;
+    font-family: var(--mono); font-size: 10px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--surface); padding: 2px 6px; border-left: 2px solid var(--accent);
+  }
+  .chart-cell .label.und { border-left-color: var(--ink-2); color: var(--ink-2); }
+  .chart-cell .wrap { position: absolute; inset: 0; }
+
+  /* LIST PANE */
+  aside.list-pane { display: flex; flex-direction: column; gap: 12px; min-height: 0; }
+  .ctrl-card {
+    background: var(--surface); border: 1px solid var(--line); padding: 14px 16px;
+  }
+  .search-row { display: flex; align-items: center; gap: 10px; }
+  .search-row .lbl { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); }
+  .search-row input {
+    flex: 1; border: none; border-bottom: 1px solid var(--line-2);
+    background: transparent; padding: 4px 0; font-family: var(--sans); font-size: 13px; color: var(--ink);
+    transition: border-color .2s;
+  }
+  .search-row input:focus { outline: none; border-bottom-color: var(--accent); }
+  .search-row input::placeholder { color: var(--ink-3); font-style: italic; }
+  .search-row .reset {
+    background: none; border: none; cursor: pointer; font-size: 10px;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3);
+    padding: 4px; transition: color .15s;
+  }
+  .search-row .reset:hover { color: var(--accent); }
+
+  .filter-grp { margin-top: 14px; display: flex; gap: 12px; align-items: flex-start; }
+  .filter-grp .glabel {
+    flex-shrink: 0; width: 36px; font-size: 9px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-3); padding-top: 6px;
+  }
+  .filter-grp .chips { flex: 1; display: flex; flex-wrap: wrap; gap: 4px 2px; }
+  .chip {
+    background: none; border: none; cursor: pointer; padding: 4px 8px;
+    font-family: var(--sans); font-size: 11px; color: var(--ink-2);
+    border-bottom: 1px solid transparent; transition: all .15s; letter-spacing: 0.01em;
+  }
+  .chip:hover { color: var(--ink); }
+  .chip.on { color: var(--accent); border-bottom-color: var(--accent); font-weight: 500; }
+  .chip .n { color: var(--ink-3); font-size: 10px; margin-left: 3px; font-family: var(--mono); }
+  .chip.on .n { color: var(--accent); }
+  .chip.zero { opacity: 0.35; }
+
+  .meta-line {
+    padding: 0 4px; font-size: 10px; color: var(--ink-3);
+    display: flex; justify-content: space-between; letter-spacing: 0.04em;
+  }
+  .meta-line .active { color: var(--accent); }
+
+  /* TABLE */
+  .tbl-card { background: var(--surface); border: 1px solid var(--line); flex: 1; overflow: auto; min-height: 0; }
+  table.tbl { width: 100%; border-collapse: collapse; font-size: 12px; }
+  table.tbl thead th {
+    position: sticky; top: 0; background: var(--surface); z-index: 1;
+    text-align: right; padding: 12px 8px; font-weight: 500;
+    font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-3); cursor: pointer; border-bottom: 1px solid var(--line);
+    user-select: none;
+  }
+  table.tbl thead th.l { text-align: left; }
+  table.tbl thead th:hover { color: var(--ink); }
+  table.tbl thead th .ind { color: var(--accent); margin-left: 2px; }
+  table.tbl tbody tr {
+    cursor: pointer; transition: background .12s;
+    border-bottom: 1px solid var(--line);
+  }
+  table.tbl tbody tr:hover { background: rgba(0,0,0,0.018); }
+  table.tbl tbody tr.sel { background: var(--accent-soft); }
+  table.tbl tbody tr.sel td:first-child { border-left: 2px solid var(--accent); }
+  table.tbl tbody tr:last-child { border-bottom: none; }
+  table.tbl td { padding: 11px 8px; vertical-align: middle; text-align: right; }
+  table.tbl td.l { text-align: left; }
+  table.tbl td .tk { font-family: var(--sans); font-weight: 600; font-size: 13px; color: var(--ink); letter-spacing: -0.01em; }
+  table.tbl td .sub { font-size: 10px; color: var(--ink-3); margin-top: 1px; letter-spacing: 0.02em; }
+  table.tbl td .num-val { font-family: var(--mono); font-size: 12px; font-weight: 500; }
+
+  .fav { background: none; border: none; cursor: pointer; font-size: 15px; color: var(--ink-4); padding: 0; line-height: 1; }
+  .fav.on { color: var(--accent); }
+  .new-pill {
+    display: inline-block; margin-left: 6px; padding: 0 4px; font-size: 9px;
+    font-family: var(--mono); font-weight: 500; color: var(--ink-3); border: 1px solid var(--line-2);
+    letter-spacing: 0.08em;
+  }
+  .earn-pill {
+    display: inline-block; margin-left: 6px; padding: 1px 6px; font-size: 9px;
+    font-family: var(--mono); font-weight: 600; letter-spacing: 0.06em;
+    background: var(--accent); color: white;
+  }
+  .earn-pill.past { background: var(--ink-3); }
+
+  .cluster { display: inline-flex; gap: 4px; align-items: center; }
+  .cl {
+    font-family: var(--mono); font-size: 9px; padding: 1px 3px; line-height: 1;
+    border: 1px solid currentColor; letter-spacing: 0.05em; font-weight: 600;
+  }
+  .cl.alrt { color: var(--accent); }
+  .cl.bull { color: var(--down); /* teal = bullish */ }
+  .cl.warn { color: var(--hot); }
+
+  /* footnote */
+  .footer-note {
+    font-size: 10px; color: var(--ink-3); padding: 12px 0 4px;
+    border-top: 1px solid var(--line); margin-top: 8px; text-align: center;
+    font-family: var(--serif); font-style: italic; letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+
+<header class="mn">
+  <div class="brand">
+    <span class="ja">二倍</span>
+    <span class="ko">US 2X Monitor</span>
+  </div>
+  <div class="summary num" id="summary"></div>
+  <div class="clock" id="clock">––:––:––</div>
+</header>
+
+<main class="mn">
+
+  <section class="chart-pane">
+    <div class="chart-head" id="chart-head">
+      <span class="dim serif" style="font-style: italic; font-size: 14px;">행을 선택하여 차트를 확인하세요.</span>
+    </div>
+    <div class="charts">
+      <div class="chart-cell">
+        <span class="label" id="label-2x">2X</span>
+        <div class="wrap" id="chart-2x-wrap"></div>
+      </div>
+      <div class="chart-cell">
+        <span class="label und" id="label-und">UND</span>
+        <div class="wrap" id="chart-und-wrap"></div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="list-pane">
+    <div class="ctrl-card">
+      <div class="search-row">
+        <span class="lbl">검색</span>
+        <input id="search" type="search" placeholder="ticker..." autocomplete="off">
+        <button class="reset" id="reset-filters">초기화</button>
+      </div>
+      <div id="filter-groups"></div>
+    </div>
+    <div class="meta-line">
+      <span id="visible-count">— / —</span>
+      <span class="active" id="active-count"></span>
+    </div>
+    <div class="tbl-card">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th style="width:24px"></th>
+            <th class="l" data-sort="ticker_2x">종목</th>
+            <th data-sort="price_2x" data-default-dir="desc">현재가</th>
+            <th data-sort="daily_pct" data-default-dir="asc">일일</th>
+            <th data-sort="five_day_pct" data-default-dir="asc">5일</th>
+            <th data-sort="volume_ratio" data-default-dir="desc">거래량</th>
+            <th data-sort="rsi" data-default-dir="asc">RSI</th>
+            <th class="l">시그널</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <div class="footer-note">明日も静かに見つめる。 — 내일도 조용히 지켜본다.</div>
+  </aside>
+
+</main>
+
+<script>
+  // Same data + state model as bloomberg, just different UI.
+  const ALERT_GLYPHS = {
+    big_drop:       { g: "급락",   cls: "alrt", t: "급락" },
+    volume_spike:   { g: "거래량", cls: "warn", t: "거래량+하락" },
+    oversold:       { g: "과매도", cls: "warn", t: "RSI<30" },
+    five_day_crash: { g: "5일",    cls: "alrt", t: "5일 -20%" },
+    bb_breakdown:   { g: "BB",     cls: "warn", t: "BB이탈" },
+  };
+  const SIGNAL_GLYPHS = {
+    ma_bull_align:       { g: "정배열", cls: "bull", t: "정배열" },
+    ma_bear_align:       { g: "역배열", cls: "alrt", t: "역배열" },
+    ma20_support:        { g: "20지지", cls: "bull", t: "MA20 지지" },
+    ma60_support:        { g: "60지지", cls: "bull", t: "MA60 지지" },
+    ma120_support:       { g: "120지지", cls: "bull", t: "MA120 지지" },
+    golden_cross:        { g: "골크", cls: "bull", t: "골든크로스" },
+    dead_cross:          { g: "데크", cls: "alrt", t: "데드크로스" },
+    bull_align_pullback: { g: "정눌림", cls: "bull", t: "정배열 눌림" },
+  };
+  const FILTER_GROUPS = [
+    { key: "status", label: "상태", chips: [
+      { k:"alerts", label:"알림" }, { k:"favorites", label:"즐겨" },
+      { k:"is_new", label:"신생" }, { k:"earnings_soon", label:"실적임박" },
+      { k:"earnings_post", label:"실적직후" }, { k:"volume_up_candle", label:"거래량+양봉" },
+      { k:"near_52w_high", label:"52w 고가" }, { k:"near_52w_low", label:"52w 저가" },
+    ]},
+    { key: "setup", label: "셋업", chips: [
+      { k:"bull_align_pullback", label:"정배열 눌림" }, { k:"ma20_support", label:"MA20 지지" },
+      { k:"ma60_support", label:"MA60 지지" }, { k:"ma120_support", label:"MA120 지지" },
+    ]},
+    { key: "trend", label: "추세", chips: [
+      { k:"ma_bull_align", label:"정배열" }, { k:"ma_bear_align", label:"역배열" },
+      { k:"golden_cross", label:"골든크로스" }, { k:"dead_cross", label:"데드크로스" },
+    ]},
+    { key: "sector", label: "섹터", chips: [
+      { k:"Mag7", label:"Mag7" }, { k:"AI", label:"AI" }, { k:"Semi", label:"반도체" },
+      { k:"Nuclear", label:"원자력" }, { k:"Defense", label:"방산" }, { k:"Bio", label:"바이오" },
+      { k:"Fintech", label:"핀테크" }, { k:"Quantum", label:"양자" }, { k:"EV", label:"전기차" },
+      { k:"Crypto", label:"크립토" },
+    ]},
+  ];
+
+  const FAVS_KEY = "us2x_favs";
+  const STATE_KEY = "us2x_state_v2";
+  let favs = new Set();
+  try { favs = new Set(JSON.parse(localStorage.getItem(FAVS_KEY) || "[]")); } catch {}
+  const emptyFilters = () => Object.fromEntries(FILTER_GROUPS.map(g => [g.key, []]));
+  let state = { filters: emptyFilters(), search: "", sortKey: null, sortDir: "desc" };
+  try {
+    const s = JSON.parse(localStorage.getItem(STATE_KEY) || "null");
+    if (s && s.filters) {
+      state = { ...state, ...s };
+      for (const g of FILTER_GROUPS) if (!Array.isArray(state.filters[g.key])) state.filters[g.key] = [];
+    }
+  } catch {}
+  const saveFavs  = () => localStorage.setItem(FAVS_KEY,  JSON.stringify([...favs]));
+  const saveState = () => localStorage.setItem(STATE_KEY, JSON.stringify(state));
+
+  const fmtPx  = x => x == null ? "—" : x.toFixed(2);
+  const fmtPct = x => x == null ? "—" : (x > 0 ? "+" : "") + x.toFixed(2);
+  const fmtVol = x => x == null ? "—" : x.toFixed(2);
+  const fmtRsi = x => x == null ? "—" : x.toFixed(0);
+  const pctC   = x => x == null ? "dim" : x < 0 ? "down" : x > 0 ? "up" : "soft";
+
+  let pairs = [], pairsByTicker = {}, tossIds = {}, currentTicker = null;
+
+  function renderSummary(d) {
+    const s = d.summary;
+    const dt = new Date(d.updated_at).toLocaleString("ko-KR", { timeZone:"Asia/Seoul", month:"numeric", day:"numeric", hour:"2-digit", minute:"2-digit" });
+    document.getElementById("summary").innerHTML = `
+      <div class="item"><span class="lbl">Update</span><span class="val">${dt}</span></div>
+      <div class="item"><span class="lbl">Pairs</span><span class="val">${s.total_pairs}</span></div>
+      <div class="item"><span class="lbl">Alert</span><span class="val ${s.alerts_count>0?'hot':''}">${s.alerts_count}</span></div>
+      <div class="item"><span class="lbl">Avg.Day</span><span class="val ${pctC(s.avg_daily_return)}">${fmtPct(s.avg_daily_return)}%</span></div>
+    `;
+  }
+
+  function passStatus(p, sel) {
+    return sel.some(k => {
+      if (k === "alerts") return p.alerts.length > 0;
+      if (k === "favorites") return favs.has(p.ticker_2x);
+      if (k === "is_new") return !!p.is_new;
+      if (k === "earnings_soon") return p.earnings_window === "soon";
+      if (k === "earnings_post") return p.earnings_window === "post";
+      if (k === "volume_up_candle") return !!p.volume_up_candle;
+      if (k === "near_52w_high") return !!p.near_52w_high;
+      if (k === "near_52w_low") return !!p.near_52w_low;
+      return false;
+    });
+  }
+  function applyFilter(p) {
+    const f = state.filters;
+    if (state.search) {
+      const q = state.search.toUpperCase();
+      if (!(p.ticker_2x||"").includes(q) && !(p.ticker_underlying||"").includes(q)) return false;
+    }
+    if (f.status.length && !passStatus(p, f.status)) return false;
+    if (f.setup.length && !f.setup.some(k => (p.signals||[]).includes(k))) return false;
+    if (f.trend.length && !f.trend.some(k => (p.signals||[]).includes(k))) return false;
+    if (f.sector.length && !f.sector.some(k => (p.sectors||[]).includes(k))) return false;
+    return true;
+  }
+  function countMatching(gk, ck) {
+    return pairs.filter(p => {
+      if (gk === "status") return passStatus(p, [ck]);
+      if (gk === "setup" || gk === "trend") return (p.signals||[]).includes(ck);
+      if (gk === "sector") return (p.sectors||[]).includes(ck);
+      return false;
+    }).length;
+  }
+
+  function renderFilters() {
+    const host = document.getElementById("filter-groups");
+    host.innerHTML = FILTER_GROUPS.map(g => {
+      const sel = new Set(state.filters[g.key]||[]);
+      const chips = g.chips.map(c => {
+        const n = countMatching(g.key, c.k);
+        const on = sel.has(c.k);
+        return `<button data-group="${g.key}" data-chip="${c.k}" class="chip ${on?'on':''} ${n===0&&!on?'zero':''}">${c.label}<span class="n">${n}</span></button>`;
+      }).join("");
+      return `<div class="filter-grp"><span class="glabel">${g.label}</span><div class="chips">${chips}</div></div>`;
+    }).join("");
+    host.querySelectorAll("button.chip").forEach(b => b.addEventListener("click", () => {
+      const g = b.dataset.group, k = b.dataset.chip;
+      const arr = state.filters[g];
+      const i = arr.indexOf(k);
+      if (i>=0) arr.splice(i,1); else arr.push(k);
+      saveState(); renderFilters(); applyAndRender();
+    }));
+    const active = Object.values(state.filters).reduce((s,a)=>s+a.length,0);
+    document.getElementById("active-count").textContent = active ? `필터 ${active}` : "";
+  }
+
+  function renderRows(list) {
+    const tbody = document.getElementById("rows");
+    tbody.innerHTML = list.map(p => {
+      const hasA = p.alerts.length>0;
+      const isNew = p.is_new || (p.proxy_fields&&p.proxy_fields.length);
+      const fav = favs.has(p.ticker_2x);
+      const undKr = (tossIds[p.ticker_underlying]||{}).name_kr;
+      const subtitle = undKr ? `${undKr} 2X` : `${p.ticker_underlying||'—'} 2X`;
+      const earn = p.next_earnings && p.days_to_earnings!=null && Math.abs(p.days_to_earnings)<=7
+        ? `<span class="earn-pill ${p.days_to_earnings<0?'past':''}">${p.days_to_earnings===0?'D-0':p.days_to_earnings>0?'D-'+p.days_to_earnings:'D+'+(-p.days_to_earnings)}</span>` : "";
+      const cluster = [...p.alerts, ...(p.signals||[])].slice(0, 3).map(k => {
+        const d = ALERT_GLYPHS[k] || SIGNAL_GLYPHS[k];
+        return d ? `<span class="cl ${d.cls}" title="${d.t}">${d.g}</span>` : "";
+      }).join("");
+      const overflow = p.alerts.length + (p.signals||[]).length > 3 ? `<span class="cl" style="border-color:var(--ink-4); color:var(--ink-3)">+${p.alerts.length + (p.signals||[]).length - 3}</span>` : "";
+      return `<tr data-ticker="${p.ticker_2x}" class="row">
+        <td><button class="fav ${fav?'on':''}" data-ticker="${p.ticker_2x}">${fav?'●':'○'}</button></td>
+        <td class="l"><div class="tk">${p.ticker_2x}${isNew?'<span class="new-pill">NEW</span>':''}${earn}</div><div class="sub">${subtitle}</div></td>
+        <td><span class="num-val">${fmtPx(p.price_2x)}</span></td>
+        <td><span class="num-val ${pctC(p.daily_pct)}">${fmtPct(p.daily_pct)}</span></td>
+        <td><span class="num-val ${pctC(p.five_day_pct)}">${fmtPct(p.five_day_pct)}</span></td>
+        <td><span class="num-val ${p.volume_ratio!=null&&p.volume_ratio>=2?'hot':''}">${fmtVol(p.volume_ratio)}×</span></td>
+        <td><span class="num-val ${p.rsi!=null&&p.rsi<30?'hot':p.rsi!=null&&p.rsi>70?'down':''}">${fmtRsi(p.rsi)}</span></td>
+        <td class="l"><span class="cluster">${cluster}${overflow}</span></td>
+      </tr>`;
+    }).join("");
+    tbody.querySelectorAll(".row").forEach(tr => tr.addEventListener("click", e => {
+      if (e.target.closest(".fav")) return;
+      selectTicker(tr.dataset.ticker);
+    }));
+    tbody.querySelectorAll(".fav").forEach(b => b.addEventListener("click", e => {
+      e.stopPropagation();
+      const t = b.dataset.ticker;
+      if (favs.has(t)) favs.delete(t); else favs.add(t);
+      saveFavs(); renderFilters(); applyAndRender();
+      if (currentTicker === t) renderChartHead(pairsByTicker[t]);
+    }));
+    if (currentTicker) {
+      const tr = tbody.querySelector(`tr[data-ticker="${currentTicker}"]`);
+      if (tr) tr.classList.add("sel");
+    }
+  }
+
+  function applyAndRender() {
+    let list = pairs.filter(applyFilter);
+    if (state.sortKey) {
+      const dir = state.sortDir==="asc"?1:-1;
+      list.sort((a,b) => {
+        const av=a[state.sortKey], bv=b[state.sortKey];
+        if (av==null) return 1; if (bv==null) return -1;
+        if (typeof av==="string") return av.localeCompare(bv)*dir;
+        return (av-bv)*dir;
+      });
+    } else {
+      list.sort((a,b) => a.alerts.length!==b.alerts.length ? b.alerts.length-a.alerts.length : (a.daily_pct??0)-(b.daily_pct??0));
+    }
+    renderRows(list);
+    document.getElementById("visible-count").textContent = `${list.length} / ${pairs.length}`;
+    document.querySelectorAll("th[data-sort]").forEach(th => {
+      const old = th.querySelector(".ind"); if (old) old.remove();
+      if (state.sortKey===th.dataset.sort) {
+        th.insertAdjacentHTML("beforeend", `<span class="ind">${state.sortDir==="asc"?"↑":"↓"}</span>`);
+      }
+    });
+  }
+
+  function renderChartHead(p) {
+    const isFav = favs.has(p.ticker_2x);
+    const undKr = (tossIds[p.ticker_underlying]||{}).name_kr || "";
+    const tossLink = (t) => {
+      const info = tossIds[t];
+      return info && info.code ? `<a class="toss" target="_blank" href="https://www.tossinvest.com/stocks/${info.code}">↗ 토스 ${t}</a>` : "";
+    };
+    const earn = p.next_earnings ? `
+      <div class="meta-item">
+        <span class="l">Earnings</span>
+        <span class="v ${(p.days_to_earnings!=null&&p.days_to_earnings>=0&&p.days_to_earnings<=7)?'hot':''}">${p.next_earnings} · ${p.days_to_earnings===0?'TODAY':p.days_to_earnings>0?'D-'+p.days_to_earnings:'D+'+(-p.days_to_earnings)}</span>
+      </div>` : "";
+    const drag = p.drag_6m != null ? `
+      <div class="meta-item">
+        <span class="l">Drag 6M</span>
+        <span class="v ${p.drag_6m<=-15?'down':p.drag_6m<0?'soft':''}">${fmtPct(p.drag_6m)}%</span>
+      </div>` : "";
+    const sigs = [...p.alerts, ...(p.signals||[])].map(k => {
+      const d = ALERT_GLYPHS[k]||SIGNAL_GLYPHS[k];
+      return d ? `<span class="cl ${d.cls}" title="${d.t}">${d.g}</span>` : "";
+    }).join(" ");
+
+    document.getElementById("chart-head").innerHTML = `
+      <div class="row1">
+        <button class="star ${isFav?'on':''}" id="chart-fav">${isFav?'●':'○'}</button>
+        <span class="ticker">${p.ticker_2x}</span>
+        <span class="kr-name">${undKr || p.ticker_underlying || ''} 2X</span>
+        <span class="issuer">${p.issuer || ''}</span>
+      </div>
+      <div class="price-row">
+        <span class="price">$${fmtPx(p.price_2x)}</span>
+        <span class="price-change ${pctC(p.daily_pct)}">${fmtPct(p.daily_pct)}%</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item">
+          <span class="l">Underlying</span>
+          <span class="v ${pctC(p.daily_pct_underlying)}">${fmtPct(p.daily_pct_underlying)}%</span>
+        </div>
+        <div class="meta-item">
+          <span class="l">5-Day</span>
+          <span class="v ${pctC(p.five_day_pct)}">${fmtPct(p.five_day_pct)}%</span>
+        </div>
+        <div class="meta-item">
+          <span class="l">RSI 14</span>
+          <span class="v ${p.rsi!=null&&p.rsi<30?'hot':p.rsi!=null&&p.rsi>70?'down':''}">${fmtRsi(p.rsi)}</span>
+        </div>
+        <div class="meta-item">
+          <span class="l">Volume</span>
+          <span class="v ${p.volume_ratio!=null&&p.volume_ratio>=2?'hot':''}">${fmtVol(p.volume_ratio)}×</span>
+        </div>
+        ${drag}
+        ${earn}
+      </div>
+      ${sigs ? `<div class="meta" style="border-top: none; padding-top: 0; gap: 4px;"><div class="cluster">${sigs}</div></div>` : ''}
+      ${tossIds[p.ticker_2x] || tossIds[p.ticker_underlying] ? `<div class="toss-bar">${tossLink(p.ticker_2x)} ${p.ticker_underlying ? tossLink(p.ticker_underlying) : ''}</div>` : ''}
+    `;
+    const fb = document.getElementById("chart-fav");
+    if (fb) fb.addEventListener("click", () => {
+      const t = p.ticker_2x;
+      if (favs.has(t)) favs.delete(t); else favs.add(t);
+      saveFavs(); renderFilters(); applyAndRender();
+      renderChartHead(p);
+    });
+  }
+
+  function tvWidget(id, sym, primary) {
+    new TradingView.widget({
+      container_id: id, symbol: sym, interval: "D", timezone: "Asia/Seoul",
+      theme: "light", style: "1", locale: "kr", toolbar_bg: "#fafafa",
+      enable_publishing: false, allow_symbol_change: false, hide_side_toolbar: true,
+      hide_top_toolbar: !primary, withdateranges: primary, save_image: false, autosize: true,
+      studies: [
+        { id: "MASimple@tv-basicstudies", inputs: { length: 5 } },
+        { id: "MASimple@tv-basicstudies", inputs: { length: 20 } },
+        { id: "MASimple@tv-basicstudies", inputs: { length: 60 } },
+        { id: "MASimple@tv-basicstudies", inputs: { length: 120 } },
+      ],
+    });
+  }
+  function renderCharts(p) {
+    document.getElementById("label-2x").textContent = p.ticker_2x;
+    document.getElementById("label-und").textContent = p.ticker_underlying || "UND";
+    const t = document.getElementById("chart-2x-wrap");
+    const b = document.getElementById("chart-und-wrap");
+    t.innerHTML = '<div id="tv_2x" style="position:absolute;inset:0"></div>';
+    tvWidget("tv_2x", p.ticker_2x, true);
+    if (p.ticker_underlying) {
+      b.innerHTML = '<div id="tv_und" style="position:absolute;inset:0"></div>';
+      tvWidget("tv_und", p.ticker_underlying, false);
+    } else {
+      b.innerHTML = '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--ink-3)">본주 정보 없음</div>';
+    }
+  }
+  function selectTicker(t) {
+    const p = pairsByTicker[t]; if (!p) return;
+    if (currentTicker === t) return;
+    currentTicker = t;
+    history.replaceState(null, "", "#"+t);
+    document.querySelectorAll("tbody tr").forEach(r => r.classList.toggle("sel", r.dataset.ticker===t));
+    renderChartHead(p);
+    renderCharts(p);
+  }
+
+  document.querySelectorAll("th[data-sort]").forEach(th => th.addEventListener("click", () => {
+    const k = th.dataset.sort;
+    if (state.sortKey === k) {
+      const def = th.dataset.defaultDir || "desc";
+      if (state.sortDir === def) state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
+      else state.sortKey = null;
+    } else { state.sortKey = k; state.sortDir = th.dataset.defaultDir || "desc"; }
+    saveState(); applyAndRender();
+  }));
+  document.getElementById("search").addEventListener("input", e => {
+    state.search = e.target.value.trim(); saveState(); applyAndRender();
+  });
+  document.getElementById("reset-filters").addEventListener("click", () => {
+    state.filters = emptyFilters(); state.search = "";
+    document.getElementById("search").value = "";
+    saveState(); renderFilters(); applyAndRender();
+  });
+
+  function clock() {
+    const now = new Date();
+    const opts = { timeZone: "Asia/Seoul", hour:"2-digit", minute:"2-digit", second:"2-digit", hour12: false };
+    document.getElementById("clock").textContent = now.toLocaleTimeString("en-US", opts);
+  }
+  clock(); setInterval(clock, 1000);
+
+  (async () => {
+    const [d, t] = await Promise.all([
+      fetch("data/data.json", {cache:"no-store"}).then(r=>r.json()),
+      fetch("data/toss_ids.json", {cache:"no-store"}).then(r=>r.ok?r.json():{}).catch(()=>({})),
+    ]);
+    tossIds = t || {};
+    pairs = d.pairs;
+    pairsByTicker = Object.fromEntries(pairs.map(p => [p.ticker_2x, p]));
+    renderSummary(d);
+    renderFilters();
+    applyAndRender();
+    const initial = (location.hash||"").replace(/^#/,"").toUpperCase();
+    if (initial && pairsByTicker[initial]) selectTicker(initial);
+    else {
+      const first = pairs.filter(applyFilter)[0] || pairs[0];
+      if (first) selectTicker(first.ticker_2x);
+    }
+  })().catch(err => {
+    document.getElementById("rows").innerHTML = `<tr><td colspan="8" style="color:var(--accent);padding:32px;text-align:center;font-family:var(--serif);font-style:italic">데이터 로드 실패: ${err.message}</td></tr>`;
+  });
+</script>
+</body>
+</html>
