@@ -69,7 +69,18 @@
 
   /* MAIN */
   main.bbg { padding-top: var(--hdr-h); padding-bottom: var(--foot-h); height: 100vh; display: grid; grid-template-columns: minmax(0,1fr) 460px; }
-  @media (max-width: 1023px) { main.bbg { grid-template-columns: 1fr; grid-template-rows: 55vh auto; } }
+  @media (max-width: 1023px) {
+    main.bbg {
+      grid-template-columns: 1fr;
+      height: auto;
+      min-height: calc(100vh - var(--foot-h));
+      padding-bottom: calc(var(--foot-h) + 8px);
+    }
+    section.chart-pane { height: 60vh; min-height: 320px; border-right: none; border-bottom: 1px solid var(--rule-2); }
+    aside.list-pane { height: auto; }
+    .tbl-wrap { overflow: visible; }
+    footer.bbg { display: none; }  /* function keys aren't useful on mobile */
+  }
 
   /* CHART PANE */
   section.chart-pane { border-right: 1px solid var(--rule-2); display: flex; flex-direction: column; min-height: 0; }

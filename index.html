@@ -1,642 +1,646 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>US 2X ETF Monitor</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://s3.tradingview.com/tv.js"></script>
-  <style>
-    body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
-    .num { font-variant-numeric: tabular-nums; }
-    /* Header height accounted for in sticky offsets */
-    :root { --hdr: 38px; }
-    .chart-pane { height: calc(100vh - var(--hdr) - 36px); }
-    @media (max-width: 1023px) {
-      .chart-pane { height: 60vh; min-height: 360px; }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BBG/2X — US LEVERAGED ETF TERMINAL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=VT323&display=swap" rel="stylesheet">
+<script src="https://s3.tradingview.com/tv.js"></script>
+<style>
+  :root {
+    --bg:        #000000;
+    --bg-1:     #0a0a0a;
+    --bg-2:     #141414;
+    --rule:      #1f1f1f;
+    --rule-2:    #2a2a2a;
+    --dim:       #444444;
+    --txt:       #d4d4d4;
+    --txt-soft:  #888888;
+    --green:     #18ff8a;
+    --green-d:   #0a9d52;
+    --amber:     #ffb000;
+    --amber-d:   #b87800;
+    --red:       #ff2e4f;
+    --red-d:     #b30024;
+    --cyan:      #00f0ff;
+    --magenta:   #ff44ff;
+    --white:     #ffffff;
+    --hdr-h:     30px;
+    --foot-h:    24px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--txt); font-family: 'IBM Plex Mono', 'D2Coding', 'Malgun Gothic', 'Apple SD Gothic Neo', monospace; font-size: 13px; line-height: 1.35; -webkit-font-smoothing: antialiased; }
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 100;
+    background: repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0 1px, transparent 1px 3px);
+  }
+  .num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+  .upper { text-transform: uppercase; letter-spacing: 0.06em; }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .amb { color: var(--amber); }
+  .cyn { color: var(--cyan); }
+  .dim { color: var(--dim); }
+  .soft { color: var(--txt-soft); }
+
+  /* HEADER — terminal top bar */
+  header.bbg {
+    position: fixed; top: 0; left: 0; right: 0; height: var(--hdr-h);
+    background: var(--bg); border-bottom: 1px solid var(--green-d);
+    display: flex; align-items: stretch; z-index: 10;
+    font-size: 11px;
+  }
+  header.bbg .brand {
+    background: var(--green); color: #000; padding: 0 10px; font-weight: 700;
+    display: flex; align-items: center; letter-spacing: 0.1em;
+  }
+  header.bbg .summary {
+    flex: 1; display: flex; align-items: center; gap: 18px; padding: 0 14px;
+    overflow-x: auto; white-space: nowrap;
+  }
+  header.bbg .summary > span { display: inline-flex; align-items: baseline; gap: 6px; }
+  header.bbg .summary b { color: var(--white); font-weight: 600; }
+  header.bbg .clock {
+    padding: 0 12px; border-left: 1px solid var(--rule-2);
+    display: flex; align-items: center; color: var(--amber);
+  }
+
+  /* MAIN */
+  main.bbg { padding-top: var(--hdr-h); padding-bottom: var(--foot-h); height: 100vh; display: grid; grid-template-columns: minmax(0,1fr) 460px; }
+  @media (max-width: 1023px) {
+    main.bbg {
+      grid-template-columns: 1fr;
+      height: auto;
+      min-height: calc(100vh - var(--foot-h));
+      padding-bottom: calc(var(--foot-h) + 8px);
     }
-    /* Hide TradingView's tiny watermark/edges flicker on re-instantiation */
-    #tv_chart > iframe { background: #0f172a; }
-  </style>
+    section.chart-pane { height: 60vh; min-height: 320px; border-right: none; border-bottom: 1px solid var(--rule-2); }
+    aside.list-pane { height: auto; }
+    .tbl-wrap { overflow: visible; }
+    footer.bbg { display: none; }  /* function keys aren't useful on mobile */
+  }
+
+  /* CHART PANE */
+  section.chart-pane { border-right: 1px solid var(--rule-2); display: flex; flex-direction: column; min-height: 0; }
+  .chart-head {
+    border-bottom: 1px solid var(--rule-2); padding: 6px 10px;
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 18px;
+    background: var(--bg-1);
+  }
+  .chart-head .tk { font-size: 16px; font-weight: 700; color: var(--white); }
+  .chart-head .name { color: var(--txt-soft); font-size: 11px; }
+  .chart-head .price { font-size: 18px; font-weight: 700; color: var(--amber); }
+  .chart-head .dot { color: var(--dim); }
+  .chart-head .meta { display: flex; flex-wrap: wrap; gap: 10px 16px; font-size: 11px; }
+  .chart-head .toss { background: transparent; border: 1px solid var(--cyan); color: var(--cyan); padding: 1px 6px; text-decoration: none; font-size: 10px; }
+  .chart-head .toss:hover { background: var(--cyan); color: #000; }
+  .chart-head .star { background: none; border: none; color: var(--amber); cursor: pointer; font-size: 16px; padding: 0 4px; }
+  .chart-head .star.off { color: var(--dim); }
+  .charts { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+  .chart-cell { flex: 1; position: relative; min-height: 0; border-top: 1px solid var(--rule); }
+  .chart-cell:first-child { border-top: none; }
+  .chart-cell .label {
+    position: absolute; top: 4px; left: 8px; z-index: 5;
+    font-size: 10px; font-weight: 700; color: var(--green); padding: 1px 5px;
+    background: var(--bg); border: 1px solid var(--green-d);
+  }
+  .chart-cell .label.und { color: var(--cyan); border-color: var(--cyan); }
+  .chart-cell .wrap { position: absolute; inset: 0; }
+
+  /* LIST PANE */
+  aside.list-pane { display: flex; flex-direction: column; min-height: 0; }
+  .ctrl { padding: 6px 8px; border-bottom: 1px solid var(--rule-2); background: var(--bg); }
+  .ctrl-row { display: flex; align-items: center; gap: 6px; }
+  .ctrl input {
+    flex: 1; background: var(--bg-1); border: 1px solid var(--rule-2); color: var(--white);
+    padding: 3px 6px; font-family: inherit; font-size: 11px;
+  }
+  .ctrl input:focus { outline: none; border-color: var(--amber); }
+  .ctrl input::placeholder { color: var(--dim); }
+  .ctrl button.reset {
+    background: transparent; border: 1px solid var(--rule-2); color: var(--txt-soft);
+    padding: 3px 8px; font-family: inherit; font-size: 10px; cursor: pointer;
+  }
+  .ctrl button.reset:hover { color: var(--amber); border-color: var(--amber); }
+  .filter-group { display: flex; align-items: flex-start; gap: 5px; margin-top: 4px; }
+  .filter-group .gl {
+    width: 36px; flex-shrink: 0; font-size: 10px; color: var(--txt-soft); padding-top: 2px;
+    letter-spacing: 0.1em;
+  }
+  .filter-group .chips { flex: 1; display: flex; flex-wrap: wrap; gap: 2px; }
+  .chip {
+    background: var(--bg-1); border: 1px solid var(--rule-2); color: var(--txt-soft);
+    padding: 1px 5px; font-family: inherit; font-size: 10px; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 3px;
+  }
+  .chip:hover { color: var(--white); }
+  .chip.on { background: var(--amber); color: #000; border-color: var(--amber); }
+  .chip .n { color: var(--dim); font-size: 9px; }
+  .chip.on .n { color: rgba(0,0,0,0.55); }
+  .chip.zero { opacity: 0.35; }
+
+  .meta-bar { display: flex; justify-content: space-between; padding: 3px 8px; font-size: 10px; border-bottom: 1px solid var(--rule); color: var(--txt-soft); }
+  .meta-bar .active { color: var(--amber); }
+
+  /* TABLE */
+  .tbl-wrap { flex: 1; overflow: auto; }
+  table.tbl { width: 100%; border-collapse: collapse; font-size: 11px; }
+  table.tbl thead th {
+    position: sticky; top: 0; background: var(--bg); color: var(--cyan);
+    padding: 4px 5px; border-bottom: 1px solid var(--cyan); text-align: right;
+    font-weight: 500; cursor: pointer; user-select: none; z-index: 1;
+  }
+  table.tbl thead th.l { text-align: left; }
+  table.tbl thead th:hover { color: var(--white); }
+  table.tbl thead th .ind { color: var(--amber); margin-left: 2px; }
+  table.tbl tbody tr {
+    border-bottom: 1px dotted var(--rule); cursor: pointer;
+  }
+  table.tbl tbody tr:hover { background: var(--bg-1); }
+  table.tbl tbody tr.sel { background: rgba(255,176,0,0.08); outline: 1px solid var(--amber-d); }
+  table.tbl td { padding: 4px 5px; vertical-align: middle; text-align: right; }
+  table.tbl td.l { text-align: left; }
+  table.tbl td.tk { color: var(--white); font-weight: 600; }
+  table.tbl td.sub { color: var(--txt-soft); font-size: 10px; }
+  table.tbl td.alert { color: var(--red); font-weight: 700; padding-right: 0; padding-left: 4px; }
+  table.tbl td.alert.empty { color: var(--dim); }
+  .fav { background: none; border: none; color: var(--amber); cursor: pointer; font-size: 13px; padding: 0; }
+  .fav.off { color: var(--dim); }
+  .new-tag { color: var(--magenta); font-size: 9px; margin-left: 2px; }
+  .earn-tag {
+    background: var(--amber); color: #000; font-size: 9px; padding: 0 3px; margin-left: 3px;
+    font-weight: 700;
+  }
+  .earn-tag.past { background: var(--rule-2); color: var(--amber); }
+
+  /* alert/signal cluster cell */
+  .cluster { display: inline-flex; gap: 1px; }
+  .cl { font-size: 11px; }
+  .cl.r { color: var(--red); }
+  .cl.a { color: var(--amber); }
+  .cl.g { color: var(--green); }
+  .cl.c { color: var(--cyan); }
+  .cl.m { color: var(--magenta); }
+
+  /* FOOTER */
+  footer.bbg {
+    position: fixed; bottom: 0; left: 0; right: 0; height: var(--foot-h);
+    background: var(--bg); border-top: 1px solid var(--green-d);
+    display: flex; align-items: center; gap: 1px; padding: 0 4px;
+    font-size: 10px; color: var(--txt-soft); overflow-x: auto;
+  }
+  footer.bbg .fk {
+    background: var(--green-d); color: var(--bg); padding: 1px 5px; margin-right: 4px;
+    font-weight: 700;
+  }
+  footer.bbg .sep { margin: 0 8px; color: var(--dim); }
+</style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen">
-  <header class="border-b border-slate-800 sticky top-0 bg-slate-950/95 backdrop-blur z-20" style="height: var(--hdr)">
-    <div class="max-w-[1800px] mx-auto px-3 h-full flex items-center">
-      <div class="flex items-baseline gap-x-4 gap-y-0 whitespace-nowrap overflow-x-auto">
-        <h1 class="text-xs font-semibold tracking-tight text-slate-300">2X ETF</h1>
-        <div id="summary" class="flex items-baseline gap-x-3 text-[11px] text-slate-400 num"></div>
+<body>
+
+<header class="bbg">
+  <div class="brand">BBG/2X · TERMINAL</div>
+  <div class="summary num" id="summary"></div>
+  <div class="clock" id="clock">--:--:--</div>
+</header>
+
+<main class="bbg">
+
+  <section class="chart-pane">
+    <div class="chart-head" id="chart-head">
+      <span class="soft">SELECT TICKER FROM RIGHT PANE &gt;</span>
+    </div>
+    <div class="charts">
+      <div class="chart-cell">
+        <span class="label" id="label-2x">2X</span>
+        <div class="wrap" id="chart-2x-wrap"></div>
+      </div>
+      <div class="chart-cell">
+        <span class="label und" id="label-und">UND</span>
+        <div class="wrap" id="chart-und-wrap"></div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main class="max-w-[1800px] mx-auto px-3 py-3">
-    <div class="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,380px)]">
-
-      <!-- LIST PANEL (compact) — visually on the right via grid order -->
-      <section class="min-w-0 lg:order-2">
-        <!-- Controls -->
-        <div class="mb-2 space-y-1.5">
-          <div class="flex items-center justify-between gap-2">
-            <input id="search" type="search" placeholder="티커 검색…" autocomplete="off"
-                   class="flex-1 bg-slate-900 border border-slate-800 rounded px-2 py-1 text-xs text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-slate-600 num">
-            <button id="reset-filters" class="text-[10px] text-slate-500 hover:text-blue-300 underline-offset-2 hover:underline whitespace-nowrap">초기화</button>
-          </div>
-          <div id="filter-groups" class="space-y-1"></div>
-          <div class="text-[10px] text-slate-500 num flex items-center justify-between">
-            <span id="visible-count">—</span>
-            <span id="active-count" class="text-slate-600"></span>
-          </div>
-        </div>
-
-        <div class="overflow-x-auto rounded-lg border border-slate-800">
-          <table class="w-full text-xs num">
-            <thead class="bg-slate-900 text-slate-400 text-[10px] uppercase tracking-wider">
-              <tr>
-                <th class="py-2 px-1 text-center w-5"></th>
-                <th class="py-2 px-1.5 text-left cursor-pointer hover:text-slate-200" data-sort="ticker_2x">종목</th>
-                <th class="py-2 px-1.5 text-right">현재가</th>
-                <th class="py-2 px-1.5 text-right cursor-pointer hover:text-slate-200" data-sort="daily_pct" data-default-dir="asc">일일</th>
-                <th class="py-2 px-1.5 text-right cursor-pointer hover:text-slate-200" data-sort="five_day_pct" data-default-dir="asc">5일</th>
-                <th class="py-2 px-1 text-right cursor-pointer hover:text-slate-200" data-sort="volume_ratio" data-default-dir="desc">거래량</th>
-                <th class="py-2 px-1.5 text-right cursor-pointer hover:text-slate-200" data-sort="rsi" data-default-dir="asc">RSI</th>
-                <th class="py-2 px-1 text-left">알림</th>
-              </tr>
-            </thead>
-            <tbody id="rows" class="divide-y divide-slate-800/70"></tbody>
-          </table>
-        </div>
-
-        <div class="mt-3 text-[10px] text-slate-500 leading-relaxed">
-          <div class="flex flex-wrap gap-x-3 gap-y-1">
-            <span><span class="text-rose-400">🔻</span>급락 ≤ −10%</span>
-            <span><span class="text-amber-400">📊</span>거래량 2×</span>
-            <span><span class="text-amber-400">📉</span>RSI&lt;30</span>
-            <span><span class="text-rose-400">📅</span>5일 ≤ −20%</span>
-            <span><span class="text-amber-400">🎯</span>BB 이탈</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- CHART PANEL: split into 2X / underlying -->
-      <aside class="lg:order-1 lg:sticky lg:top-[calc(var(--hdr)+12px)] self-start w-full">
-        <div class="rounded-lg border border-slate-800 bg-slate-900/40 chart-pane flex flex-col overflow-hidden">
-          <div id="chart-header" class="px-3 py-2 border-b border-slate-800 text-sm text-slate-400">
-            행을 클릭하면 차트가 여기 표시됩니다.
-          </div>
-
-          <div class="flex-1 flex flex-col min-h-0">
-            <div class="relative min-h-0" style="flex: 3 1 0">
-              <div class="absolute top-1.5 left-2.5 z-10 text-[11px] font-mono font-semibold text-cyan-300 bg-slate-950/85 px-2 py-0.5 rounded" id="label-2x">2X</div>
-              <div id="chart-2x-wrap" class="absolute inset-0">
-                <div class="absolute inset-0 flex items-center justify-center text-slate-600 text-sm">⬅ 종목 선택</div>
-              </div>
-            </div>
-            <div class="h-px bg-slate-800/80 mx-3"></div>
-            <div class="relative min-h-0 pb-2" style="flex: 2 1 0">
-              <div class="absolute top-1.5 left-2.5 z-10 text-[11px] font-mono font-semibold text-indigo-300 bg-slate-950/85 px-2 py-0.5 rounded" id="label-und">본주</div>
-              <div id="chart-und-wrap" class="absolute inset-0 bottom-2"></div>
-            </div>
-          </div>
-        </div>
-      </aside>
-
+  <aside class="list-pane">
+    <div class="ctrl">
+      <div class="ctrl-row">
+        <input id="search" type="search" placeholder="SEARCH TICKER..." autocomplete="off">
+        <button class="reset" id="reset-filters">RESET</button>
+      </div>
+      <div id="filter-groups"></div>
     </div>
-  </main>
+    <div class="meta-bar">
+      <span id="visible-count">— / —</span>
+      <span class="active" id="active-count"></span>
+    </div>
+    <div class="tbl-wrap">
+      <table class="tbl num">
+        <thead>
+          <tr>
+            <th style="width:18px"></th>
+            <th class="l" data-sort="ticker_2x">TICKER</th>
+            <th data-sort="price_2x" data-default-dir="desc">PX</th>
+            <th data-sort="daily_pct" data-default-dir="asc">CHG%</th>
+            <th data-sort="volume_ratio" data-default-dir="desc">VOL×</th>
+            <th data-sort="dollar_volume_20d" data-default-dir="desc">거래대금</th>
+            <th data-sort="rsi" data-default-dir="asc">RSI</th>
+            <th class="l">시그널</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </aside>
 
-  <script>
-    const ALERT_LABELS = {
-      big_drop:       { icon: "🔻", label: "급락",   cls: "text-rose-400" },
-      volume_spike:   { icon: "📊", label: "거래량", cls: "text-amber-400" },
-      oversold:       { icon: "📉", label: "과매도", cls: "text-amber-400" },
-      five_day_crash: { icon: "📅", label: "5일",    cls: "text-rose-400" },
-      bb_breakdown:   { icon: "🎯", label: "BB",     cls: "text-amber-400" },
-    };
+</main>
 
-    const SIGNAL_LABELS = {
-      ma_bull_align:       { icon: "🟢", label: "정배열",       cls: "text-emerald-400" },
-      ma_bear_align:       { icon: "🔴", label: "역배열",       cls: "text-rose-400" },
-      ma20_support:        { icon: "🛡",  label: "MA20지지",   cls: "text-blue-300" },
-      ma60_support:        { icon: "🛡",  label: "MA60지지",   cls: "text-emerald-300" },
-      ma120_support:       { icon: "🛡",  label: "MA120지지",  cls: "text-cyan-300" },
-      golden_cross:        { icon: "✨", label: "골크",         cls: "text-amber-300" },
-      dead_cross:          { icon: "💀", label: "데크",         cls: "text-slate-400" },
-      bull_align_pullback: { icon: "🎯", label: "정배열 눌림", cls: "text-emerald-400 font-semibold" },
-    };
+<footer class="bbg">
+  <span><span class="fk">F1</span>HELP</span>
+  <span><span class="fk">F2</span>EQUITY</span>
+  <span><span class="fk">F3</span>ALERT</span>
+  <span><span class="fk">F4</span>EARN</span>
+  <span><span class="fk">F5</span>FAV</span>
+  <span class="sep">│</span>
+  <span class="amb" id="footer-msg">Press chip to filter · Click row to chart · Click ★ to favorite</span>
+</footer>
 
-    const fmtPct   = x => x === null || x === undefined ? "—" : (x > 0 ? "+" : "") + x.toFixed(1) + "%";
-    const fmtPrice = x => x === null || x === undefined ? "—" : "$" + x.toFixed(2);
-    const fmtVol   = x => x === null || x === undefined ? "—" : x.toFixed(1) + "×";
-    const fmtRsi   = x => x === null || x === undefined ? "—" : x.toFixed(1);
+<script>
+  const ALERT_GLYPHS = {
+    big_drop:       { g: "▼", cls: "r", t: "급락" },
+    volume_spike:   { g: "V", cls: "a", t: "거래량+하락" },
+    oversold:       { g: "O", cls: "a", t: "RSI<30" },
+    five_day_crash: { g: "5", cls: "r", t: "5일 -20%" },
+    bb_breakdown:   { g: "B", cls: "a", t: "BB이탈" },
+  };
+  const SIGNAL_GLYPHS = {
+    ma_bull_align:           { g: "▲", cls: "g", t: "일봉 정배열" },
+    ma_bear_align:           { g: "▽", cls: "r", t: "일봉 역배열" },
+    monthly_bull_align:      { g: "▲M", cls: "g", t: "월봉 정배열" },
+    monthly_bear_align:      { g: "▽M", cls: "r", t: "월봉 역배열" },
+    monthly_bull_near_long:  { g: "★M", cls: "g", t: "월봉정배 + MA60/120 근접" },
+    ma20_support:            { g: "20", cls: "c", t: "MA20 지지" },
+    ma60_support:            { g: "60", cls: "c", t: "MA60 지지" },
+    ma120_support:           { g: "120", cls: "c", t: "MA120 지지" },
+    golden_cross:            { g: "X+", cls: "g", t: "골든크로스" },
+    dead_cross:              { g: "X-", cls: "r", t: "데드크로스" },
+    bull_align_pullback:     { g: "★", cls: "g", t: "정배열 눌림" },
+  };
+  const FILTER_GROUPS = [
+    { key: "status", label: "상태", chips: [
+      { k:"alerts", label:"알림" }, { k:"favorites", label:"즐겨" },
+      { k:"is_new", label:"신생" }, { k:"earnings_soon", label:"실적임박" },
+      { k:"earnings_post", label:"실적후" }, { k:"volume_up_candle", label:"거래량+" },
+      { k:"near_52w_high", label:"52신고" }, { k:"near_52w_low", label:"52신저" },
+    ]},
+    { key: "liquidity", label: "거래대금", chips: [
+      { k:"dv_100m", label:"$100M+" }, { k:"dv_10m", label:"$10M+" }, { k:"dv_1m", label:"$1M+" },
+    ]},
+    { key: "setup", label: "셋업", chips: [
+      { k:"monthly_bull_near_long", label:"월정배+장기근접" },
+      { k:"bull_align_pullback", label:"정배눌림" }, { k:"ma20_support", label:"MA20지지" },
+      { k:"ma60_support", label:"MA60지지" }, { k:"ma120_support", label:"MA120지지" },
+    ]},
+    { key: "trend", label: "추세", chips: [
+      { k:"ma_bull_align", label:"일봉정배" }, { k:"ma_bear_align", label:"일봉역배" },
+      { k:"monthly_bull_align", label:"월봉정배" }, { k:"monthly_bear_align", label:"월봉역배" },
+      { k:"golden_cross", label:"골든크로스" }, { k:"dead_cross", label:"데드크로스" },
+    ]},
+    { key: "sector", label: "섹터", chips: [
+      { k:"Mag7", label:"Mag7" }, { k:"AI", label:"AI" }, { k:"Semi", label:"반도체" },
+      { k:"Nuclear", label:"원자력" }, { k:"Defense", label:"방산" }, { k:"Bio", label:"바이오" },
+      { k:"Fintech", label:"핀테크" }, { k:"Quantum", label:"양자" }, { k:"EV", label:"전기차" },
+      { k:"Crypto", label:"크립토" },
+    ]},
+  ];
 
-    const pctClass = x => {
-      if (x === null || x === undefined) return "text-slate-500";
-      if (x <= -10) return "text-rose-400 font-semibold";
-      if (x < 0)    return "text-rose-300";
-      if (x >= 5)   return "text-emerald-400 font-semibold";
-      if (x > 0)    return "text-emerald-300";
-      return "text-slate-400";
-    };
-    const rsiClass = x => x === null ? "text-slate-500" : x < 30 ? "text-amber-400 font-semibold" : x > 70 ? "text-emerald-400" : "text-slate-300";
-    const dragClass = x => x === null ? "text-slate-500" : x <= -15 ? "text-rose-400 font-semibold" : x < 0 ? "text-rose-300" : "text-slate-400";
-    const catClass = c => ({
-      Mag7: "bg-indigo-500/20 text-indigo-300",
-      AI:   "bg-cyan-500/20 text-cyan-300",
-      Other:"bg-slate-800 text-slate-400",
-    }[c] || "bg-slate-800 text-slate-400");
+  const FAVS_KEY = "us2x_favs";
+  const STATE_KEY = "us2x_state_v2";
+  let favs = new Set();
+  try { favs = new Set(JSON.parse(localStorage.getItem(FAVS_KEY) || "[]")); } catch {}
 
-    let pairs = [];
-    let pairsByTicker = {};
-    let currentTicker = null;
-    let tossIds = {};  // ticker -> { code, name_kr, market }
-
-    // ----- favorites & filter/sort state -----
-    const FAVS_KEY = "us2x_favs";
-    const STATE_KEY = "us2x_state_v2";
-    let favs = new Set();
-    try { favs = new Set(JSON.parse(localStorage.getItem(FAVS_KEY) || "[]")); } catch {}
-
-    const FILTER_GROUPS = [
-      {
-        key: "status", label: "상태", chips: [
-          { k: "alerts",           label: "⚠️ 알림" },
-          { k: "favorites",        label: "★ 즐겨" },
-          { k: "is_new",           label: "🆕 신생" },
-          { k: "earnings_soon",    label: "📅 실적 임박" },
-          { k: "earnings_post",    label: "📅 실적 직후" },
-          { k: "volume_up_candle", label: "📊 거래량+양봉" },
-          { k: "near_52w_high",   label: "📈 52w 신고가" },
-          { k: "near_52w_low",    label: "📉 52w 신저가" },
-        ],
-      },
-      {
-        key: "setup", label: "셋업", chips: [
-          { k: "bull_align_pullback", label: "🎯 정배열 눌림" },
-          { k: "ma20_support",        label: "🛡 MA20" },
-          { k: "ma60_support",        label: "🛡 MA60" },
-          { k: "ma120_support",       label: "🛡 MA120" },
-        ],
-      },
-      {
-        key: "trend", label: "추세", chips: [
-          { k: "ma_bull_align", label: "🟢 정배열" },
-          { k: "ma_bear_align", label: "🔴 역배열" },
-          { k: "golden_cross",  label: "✨ 골크" },
-          { k: "dead_cross",    label: "💀 데크" },
-        ],
-      },
-      {
-        key: "sector", label: "섹터", chips: [
-          { k: "Mag7",    label: "Mag7" },
-          { k: "AI",      label: "AI" },
-          { k: "Semi",    label: "반도체" },
-          { k: "Nuclear", label: "원자력" },
-          { k: "Defense", label: "방산" },
-          { k: "Bio",     label: "바이오" },
-          { k: "Fintech", label: "핀테크" },
-          { k: "Quantum", label: "양자" },
-          { k: "EV",      label: "전기차" },
-          { k: "Crypto",  label: "크립토" },
-        ],
-      },
-      {
-        key: "issuer", label: "운용", chips: [
-          { k: "Direxion",       label: "Direxion" },
-          { k: "GraniteShares",  label: "Granite" },
-          { k: "Defiance",       label: "Defiance" },
-          { k: "REX",            label: "REX" },
-          { k: "Tradr",          label: "Tradr" },
-          { k: "LeverageShares", label: "LS" },
-        ],
-      },
-    ];
-
-    function emptyFilters() {
-      return Object.fromEntries(FILTER_GROUPS.map(g => [g.key, []]));
+  const emptyFilters = () => Object.fromEntries(FILTER_GROUPS.map(g => [g.key, []]));
+  let state = { filters: emptyFilters(), search: "", sortKey: null, sortDir: "desc" };
+  try {
+    const s = JSON.parse(localStorage.getItem(STATE_KEY) || "null");
+    if (s && s.filters) {
+      state = { ...state, ...s };
+      for (const g of FILTER_GROUPS) if (!Array.isArray(state.filters[g.key])) state.filters[g.key] = [];
     }
+  } catch {}
+  const saveFavs  = () => localStorage.setItem(FAVS_KEY,  JSON.stringify([...favs]));
+  const saveState = () => localStorage.setItem(STATE_KEY, JSON.stringify(state));
 
-    let state = { filters: emptyFilters(), search: "", sortKey: null, sortDir: "desc" };
+  const fmtPx  = x => x == null ? "—" : x.toFixed(2);
+  const fmtPct = x => x == null ? "—" : (x > 0 ? "+" : "") + x.toFixed(1);
+  const fmtVol = x => x == null ? "—" : x.toFixed(1);
+  const fmtRsi = x => x == null ? "—" : x.toFixed(0);
+  const fmtDV  = x => x == null ? "—" :
+    x >= 1e9 ? (x/1e9).toFixed(2) + "B" :
+    x >= 1e6 ? (x/1e6).toFixed(0) + "M" :
+    x >= 1e3 ? (x/1e3).toFixed(0) + "K" : x.toFixed(0);
+  const dvCls  = x => x == null ? "dim" : x >= 100e6 ? "amb" : x >= 10e6 ? "cyn" : x >= 1e6 ? "" : "dim";
+  const pctC   = x => x == null ? "dim" : x < 0 ? "neg" : x > 0 ? "pos" : "soft";
+
+  // USD/KRW for hover tooltips on dollar amounts
+  let usdKrwRate = 1400;
+  let usdKrwUpdated = null;
+  async function fetchFxRate() {
     try {
-      const saved = JSON.parse(localStorage.getItem(STATE_KEY) || "null");
-      if (saved && saved.filters) {
-        state = { ...state, ...saved };
-        // make sure all groups exist
-        for (const g of FILTER_GROUPS) {
-          if (!Array.isArray(state.filters[g.key])) state.filters[g.key] = [];
-        }
+      const r = await fetch("https://open.er-api.com/v6/latest/USD");
+      const j = await r.json();
+      if (j && j.rates && j.rates.KRW) {
+        usdKrwRate = j.rates.KRW;
+        usdKrwUpdated = j.time_last_update_utc || null;
       }
     } catch {}
+  }
+  function krw(usd) {
+    if (usd == null) return "";
+    const won = usd * usdKrwRate;
+    let main;
+    if (won >= 1e12)      main = `약 ${(won/1e12).toFixed(2)}조원`;
+    else if (won >= 1e8)  main = `약 ${(won/1e8).toFixed(0)}억원`;
+    else if (won >= 1e4)  main = `약 ${(won/1e4).toFixed(0)}만원`;
+    else                  main = Math.round(won).toLocaleString() + "원";
+    return `${main} · 1$ = ${usdKrwRate.toFixed(0)}원`;
+  }
 
-    function saveFavs() { localStorage.setItem(FAVS_KEY, JSON.stringify([...favs])); }
-    function saveState() { localStorage.setItem(STATE_KEY, JSON.stringify(state)); }
+  let pairs = [], pairsByTicker = {}, tossIds = {}, currentTicker = null;
 
-    function toggleFav(ticker) {
-      if (favs.has(ticker)) favs.delete(ticker); else favs.add(ticker);
-      saveFavs();
-      renderFilterChips();
-      applyAndRender();
-      // Update chart-header star if showing this ticker
-      if (currentTicker === ticker) {
-        const p = pairsByTicker[ticker];
-        if (p) renderChartHeader(p);
-      }
-    }
+  function renderSummary(d) {
+    const s = d.summary;
+    const dt = new Date(d.updated_at).toLocaleString("ko-KR", { timeZone: "Asia/Seoul", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit" });
+    document.getElementById("summary").innerHTML = `
+      <span class="soft">UPD <b class="cyn">${dt}</b></span>
+      <span class="soft">AS-OF <b class="cyn">${s.as_of}</b></span>
+      <span class="soft">PAIRS <b>${s.total_pairs}</b></span>
+      <span class="soft">ALERTS <b class="${s.alerts_count>0?'amb':''}">${s.alerts_count}</b></span>
+      <span class="soft">AVG.D <b class="${pctC(s.avg_daily_return)}">${fmtPct(s.avg_daily_return)}%</b></span>
+      <span class="dim">DEL ${s.delisted_count} · NEW ${s.using_underlying_proxy}</span>
+    `;
+  }
 
-    function renderSummary(d) {
-      const s = d.summary;
-      const updated = new Date(d.updated_at).toLocaleString("ko-KR", {
-        timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit",
-        hour: "2-digit", minute: "2-digit"
-      });
-      document.getElementById("summary").innerHTML = `
-        <span>업데이트 <span class="text-slate-300">${updated}</span></span>
-        <span>기준 <span class="text-slate-300">${s.as_of}</span></span>
-        <span>페어 <b class="text-slate-200">${s.total_pairs}</b></span>
-        <span>알림 <b class="${s.alerts_count > 0 ? 'text-amber-400' : 'text-slate-300'}">${s.alerts_count}</b></span>
-        <span>평균 일일 <b class="${pctClass(s.avg_daily_return)}">${fmtPct(s.avg_daily_return)}</b></span>
-        <span class="text-slate-500">상폐 ${s.delisted_count} · 신생 ${s.using_underlying_proxy}</span>
-      `;
-    }
-
-    function pairSubtitle(p) {
-      const undKr = tossIds[p.ticker_underlying] && tossIds[p.ticker_underlying].name_kr;
-      const base = undKr || p.ticker_underlying || "";
-      return base ? `${base} 2X` : "—";
-    }
-
-    function earningsBadge(p) {
-      const d = p.days_to_earnings;
-      if (d === null || d === undefined) return "";
-      if (d > 7 || d < -7) return "";
-      const label = d === 0 ? "오늘" : (d > 0 ? `D-${d}` : `D+${-d}`);
-      const cls = d >= 0 && d <= 7
-        ? "bg-amber-500/20 text-amber-300"
-        : "bg-slate-700/40 text-slate-400";
-      return `<span class="px-1 py-0 rounded text-[9px] font-mono ${cls}" title="실적 ${p.next_earnings}">📅 ${label}</span>`;
-    }
-
-    function renderRows(list) {
-      const tbody = document.getElementById("rows");
-      tbody.innerHTML = list.map(p => {
-        const hasAlerts = p.alerts.length > 0;
-        const isNew = (p.proxy_fields && p.proxy_fields.length > 0) || (p.history_days_2x && p.history_days_2x < 60);
-        const fav = favs.has(p.ticker_2x);
-        const subtitle = pairSubtitle(p);
-        const alertChips = p.alerts.map(a => {
-          const def = ALERT_LABELS[a] || { icon: "•", label: a, cls: "text-slate-400" };
-          return `<span class="${def.cls}" title="${a} - ${def.label}">${def.icon}</span>`;
-        }).join("");
-        const signalChips = (p.signals || []).map(s => {
-          const def = SIGNAL_LABELS[s] || { icon: "·", label: s, cls: "text-slate-400" };
-          return `<span class="${def.cls}" title="${def.label}">${def.icon}</span>`;
-        }).join("");
-        return `
-          <tr data-ticker="${p.ticker_2x}" class="row cursor-pointer ${hasAlerts ? 'bg-slate-900/40' : ''} hover:bg-slate-800/60 transition-colors">
-            <td class="py-2 px-1 text-center align-middle">
-              <button class="fav-btn leading-none text-base ${fav ? 'text-amber-400' : 'text-slate-700 hover:text-slate-500'}" data-ticker="${p.ticker_2x}" title="즐겨찾기">${fav ? "★" : "☆"}</button>
-            </td>
-            <td class="py-2 px-1.5 align-middle">
-              <div class="flex items-center gap-1 min-w-0 flex-wrap">
-                ${hasAlerts ? '<span class="text-xs leading-none">⚠️</span>' : ''}
-                <span class="font-mono font-semibold text-sm text-slate-100">${p.ticker_2x}</span>
-                ${isNew ? '<span class="text-[9px] text-slate-500">·신</span>' : ''}
-                ${earningsBadge(p)}
-              </div>
-              <div class="text-[10px] text-slate-500 truncate" title="${subtitle}">${subtitle}</div>
-            </td>
-            <td class="py-2 px-1.5 text-right font-mono text-xs align-middle">${fmtPrice(p.price_2x)}</td>
-            <td class="py-2 px-1.5 text-right font-mono text-xs align-middle ${pctClass(p.daily_pct)}">${fmtPct(p.daily_pct)}</td>
-            <td class="py-2 px-1.5 text-right font-mono text-[11px] align-middle ${pctClass(p.five_day_pct)}">${fmtPct(p.five_day_pct)}</td>
-            <td class="py-2 px-1 text-right font-mono text-[11px] align-middle ${p.volume_ratio !== null && p.volume_ratio >= 2 ? 'text-amber-400 font-semibold' : (p.volume_ratio !== null && p.volume_ratio >= 1.5 ? 'text-amber-300' : 'text-slate-500')}">${p.volume_ratio === null || p.volume_ratio === undefined ? '—' : p.volume_ratio.toFixed(1) + '×'}</td>
-            <td class="py-2 px-1.5 text-right font-mono text-[11px] align-middle ${rsiClass(p.rsi)}">${fmtRsi(p.rsi)}</td>
-            <td class="py-2 px-1 whitespace-nowrap text-sm align-middle">
-              ${alertChips}${alertChips && signalChips ? '<span class="mx-0.5 text-slate-700">·</span>' : ''}${signalChips}
-            </td>
-          </tr>
-        `;
-      }).join("");
-
-      tbody.querySelectorAll(".row").forEach(tr => {
-        tr.addEventListener("click", () => selectTicker(tr.dataset.ticker));
-      });
-      tbody.querySelectorAll(".fav-btn").forEach(btn => {
-        btn.addEventListener("click", e => {
-          e.stopPropagation();
-          toggleFav(btn.dataset.ticker);
-        });
-      });
-
-      if (currentTicker) highlightRow(currentTicker);
-    }
-
-    function passStatus(p, sel) {
-      return sel.some(k => {
-        if (k === "alerts")           return p.alerts.length > 0;
-        if (k === "favorites")        return favs.has(p.ticker_2x);
-        if (k === "is_new")           return !!p.is_new;
-        if (k === "earnings_soon")    return p.earnings_window === "soon";
-        if (k === "earnings_post")    return p.earnings_window === "post";
-        if (k === "volume_up_candle") return !!p.volume_up_candle;
-        if (k === "near_52w_high")    return !!p.near_52w_high;
-        if (k === "near_52w_low")     return !!p.near_52w_low;
-        return false;
-      });
-    }
-
-    function applyFilter(p) {
-      const f = state.filters;
-      if (state.search) {
-        const q = state.search.toUpperCase();
-        const t = p.ticker_2x || "", u = p.ticker_underlying || "";
-        if (!t.includes(q) && !u.includes(q)) return false;
-      }
-      if (f.status.length && !passStatus(p, f.status)) return false;
-      if (f.setup.length  && !f.setup.some(k  => (p.signals  || []).includes(k))) return false;
-      if (f.trend.length  && !f.trend.some(k  => (p.signals  || []).includes(k))) return false;
-      if (f.sector.length && !f.sector.some(k => (p.sectors  || []).includes(k))) return false;
-      if (f.issuer.length && !f.issuer.includes(p.issuer))                         return false;
-      return true;
-    }
-
-    function countMatching(groupKey, chipKey) {
-      const probe = { ...state.filters };
-      probe[groupKey] = [chipKey];
-      // Match within group only — show what *that single chip* would yield
-      return pairs.filter(p => {
-        if (groupKey === "status") return passStatus(p, [chipKey]);
-        if (groupKey === "setup" || groupKey === "trend") return (p.signals || []).includes(chipKey);
-        if (groupKey === "sector") return (p.sectors || []).includes(chipKey);
-        if (groupKey === "issuer") return p.issuer === chipKey;
-        return false;
-      }).length;
-    }
-
-    function applyAndRender() {
-      let list = pairs.filter(applyFilter);
-      if (state.sortKey) {
-        const dir = state.sortDir === "asc" ? 1 : -1;
-        list.sort((a, b) => {
-          const av = a[state.sortKey], bv = b[state.sortKey];
-          if (av === null || av === undefined) return 1;
-          if (bv === null || bv === undefined) return -1;
-          if (typeof av === "string") return av.localeCompare(bv) * dir;
-          return (av - bv) * dir;
-        });
-      } else {
-        list.sort((a, b) => {
-          if (a.alerts.length !== b.alerts.length) return b.alerts.length - a.alerts.length;
-          return (a.daily_pct ?? 0) - (b.daily_pct ?? 0);
-        });
-      }
-      renderRows(list);
-      const total = pairs.length;
-      document.getElementById("visible-count").textContent = list.length === total ? `전체 ${total}` : `${list.length} / ${total}`;
-      renderSortIndicators();
-    }
-
-    function renderFilterChips() {
-      const host = document.getElementById("filter-groups");
-      host.innerHTML = FILTER_GROUPS.map(g => {
-        const sel = new Set(state.filters[g.key] || []);
-        const chips = g.chips.map(c => {
-          const n = countMatching(g.key, c.k);
-          const active = sel.has(c.k);
-          const dim = n === 0 && !active ? "opacity-40" : "";
-          return `<button data-group="${g.key}" data-chip="${c.k}"
-            class="px-1.5 py-0.5 rounded text-[10px] leading-tight transition-colors ${dim} ${active ? 'bg-blue-500/25 text-blue-200 ring-1 ring-blue-400/40' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}">
-            ${c.label}<span class="ml-1 text-[9px] opacity-60">${n}</span>
-          </button>`;
-        }).join("");
-        return `
-          <div class="flex items-start gap-1.5">
-            <span class="text-[10px] text-slate-500 w-6 shrink-0 pt-1">${g.label}</span>
-            <div class="flex-1 flex flex-wrap gap-1">${chips}</div>
-          </div>`;
-      }).join("");
-
-      host.querySelectorAll("button").forEach(btn => {
-        btn.addEventListener("click", () => {
-          const g = btn.dataset.group, k = btn.dataset.chip;
-          const arr = state.filters[g];
-          const i = arr.indexOf(k);
-          if (i >= 0) arr.splice(i, 1); else arr.push(k);
-          saveState();
-          renderFilterChips();
-          applyAndRender();
-        });
-      });
-
-      // Active count display
-      const active = Object.values(state.filters).reduce((s, a) => s + a.length, 0);
-      document.getElementById("active-count").textContent = active > 0 ? `필터 ${active}` : "";
-    }
-
-    function resetFilters() {
-      state.filters = emptyFilters();
-      state.search = "";
-      document.getElementById("search").value = "";
-      saveState();
-      renderFilterChips();
-      applyAndRender();
-    }
-
-    function renderSortIndicators() {
-      document.querySelectorAll("th[data-sort]").forEach(th => {
-        const key = th.dataset.sort;
-        const indEl = th.querySelector(".sort-ind");
-        if (indEl) indEl.remove();
-        if (state.sortKey === key) {
-          const arrow = state.sortDir === "asc" ? "↑" : "↓";
-          th.insertAdjacentHTML("beforeend", `<span class="sort-ind ml-0.5 text-blue-400">${arrow}</span>`);
-        }
-      });
-    }
-
-    function setupSortHandlers() {
-      document.querySelectorAll("th[data-sort]").forEach(th => {
-        th.addEventListener("click", () => {
-          const key = th.dataset.sort;
-          if (state.sortKey === key) {
-            // toggle direction, then on third click reset
-            if (state.sortDir === (th.dataset.defaultDir || "desc")) {
-              state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
-            } else {
-              state.sortKey = null;
-            }
-          } else {
-            state.sortKey = key;
-            state.sortDir = th.dataset.defaultDir || "desc";
-          }
-          saveState();
-          applyAndRender();
-        });
-      });
-    }
-
-    function setupSearch() {
-      const inp = document.getElementById("search");
-      inp.value = state.search || "";
-      inp.addEventListener("input", () => {
-        state.search = inp.value.trim();
-        saveState();
-        applyAndRender();
-      });
-      document.getElementById("reset-filters").addEventListener("click", resetFilters);
-    }
-
-    function highlightRow(ticker) {
-      document.querySelectorAll("tbody tr.row").forEach(tr => {
-        const sel = tr.dataset.ticker === ticker;
-        tr.classList.toggle("ring-1", sel);
-        tr.classList.toggle("ring-cyan-400", sel);
-        tr.classList.toggle("bg-cyan-900/20", sel);
-      });
-    }
-
-    function renderChartHeader(p) {
-      const proxyNote = p.proxy_fields && p.proxy_fields.length
-        ? `<span class="ml-2 px-1.5 py-0.5 rounded bg-slate-800 text-slate-400 text-[10px]">신생 · ${p.proxy_fields.join(",")} 본주 대체</span>`
-        : "";
-      const dragLine = p.drag_6m !== null
-        ? `<span>끌림 6M <span class="${dragClass(p.drag_6m)} font-mono">${fmtPct(p.drag_6m)}</span></span>`
-        : `<span class="text-slate-600">끌림 6M —</span>`;
-      const earningsLine = p.next_earnings ? (() => {
-        const d = p.days_to_earnings;
-        const sign = d === 0 ? "오늘" : (d > 0 ? `D-${d}` : `D+${-d}`);
-        const cls = (d !== null && d >= 0 && d <= 7) ? "text-amber-300 font-semibold" :
-                    (d !== null && d > -7 && d < 0) ? "text-slate-300" : "text-slate-500";
-        return `<span>실적 <span class="${cls} font-mono">${p.next_earnings} ${sign}</span></span>`;
-      })() : "";
-      const undLine = p.daily_pct_underlying !== null
-        ? `<span>본주 <span class="${pctClass(p.daily_pct_underlying)} font-mono">${fmtPct(p.daily_pct_underlying)}</span></span>`
-        : "";
-      const alertChips = p.alerts.map(a => {
-        const d = ALERT_LABELS[a] || { icon:"•", label:a, cls:"text-slate-400" };
-        return `<span class="inline-flex items-center gap-0.5 ${d.cls}">${d.icon}<span class="text-[10px]">${d.label}</span></span>`;
-      }).join(" ");
-      const tossLink = (t) => {
-        const info = tossIds[t];
-        if (!info || !info.code) return "";
-        return `<a href="https://www.tossinvest.com/stocks/${info.code}" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-blue-500/15 hover:bg-blue-500/25 text-blue-300 text-[11px] font-mono transition-colors"
-           title="토스에서 ${t} 보기${info.name_kr ? ' · ' + info.name_kr : ''}">↗ ${t}</a>`;
-      };
-      const tossLinks = `${tossLink(p.ticker_2x)}${p.ticker_underlying ? tossLink(p.ticker_underlying) : ""}`;
-      const isFav = favs.has(p.ticker_2x);
-      document.getElementById("chart-header").innerHTML = `
-        <div class="flex items-baseline justify-between gap-3 flex-wrap">
-          <div class="flex items-baseline gap-2 flex-wrap">
-            <button id="chart-fav-btn" class="leading-none ${isFav ? 'text-amber-400' : 'text-slate-600 hover:text-slate-400'} text-lg" title="즐겨찾기">${isFav ? "★" : "☆"}</button>
-            <span class="font-mono text-lg font-semibold text-slate-100">${p.ticker_2x}</span>
-            <span class="text-slate-400 text-sm">· ${p.ticker_underlying} 2X · ${p.issuer}</span>
-            ${proxyNote}
-          </div>
-          <div class="flex items-baseline gap-2">
-            <span class="text-xl font-mono">${fmtPrice(p.price_2x)}</span>
-            <span class="${pctClass(p.daily_pct)} font-mono">${fmtPct(p.daily_pct)}</span>
-          </div>
-        </div>
-        <div class="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400 num">
-          ${undLine}
-          <span>5일 <span class="${pctClass(p.five_day_pct)} font-mono">${fmtPct(p.five_day_pct)}</span></span>
-          <span>RSI <span class="${rsiClass(p.rsi)} font-mono">${fmtRsi(p.rsi)}</span></span>
-          <span>거래량 <span class="font-mono ${p.volume_ratio !== null && p.volume_ratio >= 2 ? 'text-amber-400' : 'text-slate-300'}">${fmtVol(p.volume_ratio)}</span></span>
-          ${dragLine}
-          ${earningsLine}
-          ${alertChips ? `<span>${alertChips}</span>` : ""}
-          <span class="ml-auto flex gap-1.5">${tossLinks}</span>
-        </div>
-      `;
-      const favBtn = document.getElementById("chart-fav-btn");
-      if (favBtn) favBtn.addEventListener("click", () => toggleFav(p.ticker_2x));
-    }
-
-    function tvWidget(containerId, symbol, isPrimary) {
-      // eslint-disable-next-line no-new, no-undef
-      new TradingView.widget({
-        container_id: containerId,
-        symbol,
-        interval: "D",
-        timezone: "Asia/Seoul",
-        theme: "dark",
-        style: "1",
-        locale: "kr",
-        toolbar_bg: "#0f172a",
-        enable_publishing: false,
-        allow_symbol_change: false,
-        hide_side_toolbar: true,
-        hide_top_toolbar: !isPrimary,
-        withdateranges: isPrimary,
-        save_image: false,
-        autosize: true,
-        studies: [
-          { id: "MASimple@tv-basicstudies", inputs: { length: 5 } },
-          { id: "MASimple@tv-basicstudies", inputs: { length: 20 } },
-          { id: "MASimple@tv-basicstudies", inputs: { length: 60 } },
-          { id: "MASimple@tv-basicstudies", inputs: { length: 120 } },
-        ],
-      });
-    }
-
-    function renderCharts(p) {
-      document.getElementById("label-2x").textContent = p.ticker_2x;
-      document.getElementById("label-und").textContent = p.ticker_underlying || "본주";
-
-      const top = document.getElementById("chart-2x-wrap");
-      const bot = document.getElementById("chart-und-wrap");
-      top.innerHTML = '<div id="tv_2x" class="absolute inset-0"></div>';
-      tvWidget("tv_2x", p.ticker_2x, true);
-
-      if (p.ticker_underlying) {
-        bot.innerHTML = '<div id="tv_und" class="absolute inset-0"></div>';
-        tvWidget("tv_und", p.ticker_underlying, false);
-      } else {
-        bot.innerHTML = '<div class="absolute inset-0 flex items-center justify-center text-slate-600 text-xs">본주 정보 없음</div>';
-      }
-    }
-
-    function selectTicker(ticker) {
-      const p = pairsByTicker[ticker];
-      if (!p) return;
-      if (currentTicker === ticker) return;
-      currentTicker = ticker;
-      history.replaceState(null, "", "#" + ticker);
-      highlightRow(ticker);
-      renderChartHeader(p);
-      renderCharts(p);
-    }
-
-    async function load() {
-      const [dataRes, tossRes] = await Promise.all([
-        fetch("data/data.json", { cache: "no-store" }),
-        fetch("data/toss_ids.json", { cache: "no-store" }).catch(() => null),
-      ]);
-      if (!dataRes.ok) throw new Error(`HTTP ${dataRes.status}`);
-      const data = await dataRes.json();
-      if (tossRes && tossRes.ok) {
-        try { tossIds = await tossRes.json(); } catch {}
-      }
-      pairs = data.pairs;
-      pairsByTicker = Object.fromEntries(pairs.map(p => [p.ticker_2x, p]));
-      renderSummary(data);
-      renderFilterChips();
-      setupSortHandlers();
-      setupSearch();
-      applyAndRender();
-
-      const initial = (location.hash || "").replace(/^#/, "").toUpperCase();
-      if (initial && pairsByTicker[initial]) {
-        selectTicker(initial);
-      } else if (pairs.length) {
-        // Pick first row from current filtered/sorted view
-        const firstVisible = pairs.filter(applyFilter)[0] || pairs[0];
-        selectTicker(firstVisible.ticker_2x);
-      }
-    }
-
-    load().catch(err => {
-      document.getElementById("rows").innerHTML =
-        `<tr><td colspan="12" class="py-6 px-4 text-rose-400 text-center">데이터 로드 실패: ${err.message}<br><span class="text-slate-500 text-xs">file:// 로 직접 열면 CORS로 막힘. <code class="text-slate-300">python -m http.server</code> 후 http://localhost:8000 접속.</span></td></tr>`;
+  const DV_THRESH = { dv_100m: 100e6, dv_10m: 10e6, dv_1m: 1e6 };
+  function passLiquidity(p, sel) {
+    // OR within group: any threshold passing
+    const dv = p.dollar_volume_20d;
+    if (dv == null) return false;
+    return sel.some(k => dv >= (DV_THRESH[k] || 0));
+  }
+  function passStatus(p, sel) {
+    return sel.some(k => {
+      if (k === "alerts") return p.alerts.length > 0;
+      if (k === "favorites") return favs.has(p.ticker_2x);
+      if (k === "is_new") return !!p.is_new;
+      if (k === "earnings_soon") return p.earnings_window === "soon";
+      if (k === "earnings_post") return p.earnings_window === "post";
+      if (k === "volume_up_candle") return !!p.volume_up_candle;
+      if (k === "near_52w_high") return !!p.near_52w_high;
+      if (k === "near_52w_low") return !!p.near_52w_low;
+      return false;
     });
-  </script>
+  }
+  function applyFilter(p) {
+    const f = state.filters;
+    if (state.search) {
+      const q = state.search.toUpperCase();
+      if (!(p.ticker_2x||"").includes(q) && !(p.ticker_underlying||"").includes(q)) return false;
+    }
+    if (f.status.length    && !passStatus(p, f.status))             return false;
+    if (f.liquidity && f.liquidity.length && !passLiquidity(p, f.liquidity)) return false;
+    if (f.setup.length     && !f.setup.some(k => (p.signals||[]).includes(k))) return false;
+    if (f.trend.length     && !f.trend.some(k => (p.signals||[]).includes(k))) return false;
+    if (f.sector.length    && !f.sector.some(k => (p.sectors||[]).includes(k))) return false;
+    return true;
+  }
+  function countMatching(gk, ck) {
+    return pairs.filter(p => {
+      if (gk === "status") return passStatus(p, [ck]);
+      if (gk === "liquidity") return passLiquidity(p, [ck]);
+      if (gk === "setup" || gk === "trend") return (p.signals||[]).includes(ck);
+      if (gk === "sector") return (p.sectors||[]).includes(ck);
+      return false;
+    }).length;
+  }
+
+  function renderFilters() {
+    const host = document.getElementById("filter-groups");
+    host.innerHTML = FILTER_GROUPS.map(g => {
+      const sel = new Set(state.filters[g.key]||[]);
+      const chips = g.chips.map(c => {
+        const n = countMatching(g.key, c.k);
+        const on = sel.has(c.k);
+        return `<button data-group="${g.key}" data-chip="${c.k}" class="chip ${on?'on':''} ${n===0&&!on?'zero':''}">${c.label}<span class="n">${n}</span></button>`;
+      }).join("");
+      return `<div class="filter-group"><span class="gl">${g.label}</span><div class="chips">${chips}</div></div>`;
+    }).join("");
+    host.querySelectorAll("button.chip").forEach(b => b.addEventListener("click", () => {
+      const g = b.dataset.group, k = b.dataset.chip;
+      const arr = state.filters[g];
+      const i = arr.indexOf(k);
+      if (i>=0) arr.splice(i,1); else arr.push(k);
+      saveState(); renderFilters(); applyAndRender();
+    }));
+    const active = Object.values(state.filters).reduce((s,a)=>s+a.length,0);
+    document.getElementById("active-count").textContent = active ? `FLT ${active}` : "";
+  }
+
+  function renderRows(list) {
+    const tbody = document.getElementById("rows");
+    tbody.innerHTML = list.map(p => {
+      const hasA = p.alerts.length>0;
+      const isNew = p.is_new || (p.proxy_fields&&p.proxy_fields.length);
+      const fav = favs.has(p.ticker_2x);
+      const undKr = (tossIds[p.ticker_underlying]||{}).name_kr;
+      const subtitle = undKr || p.ticker_underlying || "—";
+      const earn = p.next_earnings && p.days_to_earnings!=null && Math.abs(p.days_to_earnings)<=7
+        ? `<span class="earn-tag ${p.days_to_earnings<0?'past':''}">${p.days_to_earnings===0?'!E':p.days_to_earnings>0?'E-'+p.days_to_earnings:'E+'+(-p.days_to_earnings)}</span>` : "";
+      const cluster = [...p.alerts, ...(p.signals||[])].map(k => {
+        const d = ALERT_GLYPHS[k] || SIGNAL_GLYPHS[k];
+        return d ? `<span class="cl ${d.cls}" title="${d.t}">${d.g}</span>` : "";
+      }).join(" ");
+      return `<tr data-ticker="${p.ticker_2x}" class="row${hasA?' has-alert':''}">
+        <td><button class="fav ${fav?'':'off'}" data-ticker="${p.ticker_2x}">${fav?'★':'☆'}</button></td>
+        <td class="l"><div class="tk">${p.ticker_2x}${isNew?'<span class="new-tag">NEW</span>':''}${earn}</div><div class="sub">${subtitle}</div></td>
+        <td class="num">${fmtPx(p.price_2x)}</td>
+        <td class="num ${pctC(p.daily_pct)}">${fmtPct(p.daily_pct)}</td>
+        <td class="num ${p.volume_ratio!=null&&p.volume_ratio>=2?'amb':''}">${fmtVol(p.volume_ratio)}</td>
+        <td class="num ${dvCls(p.dollar_volume_20d)}" title="${krw(p.dollar_volume_20d)}">${fmtDV(p.dollar_volume_20d)}</td>
+        <td class="num ${p.rsi!=null&&p.rsi<30?'amb':p.rsi!=null&&p.rsi>70?'pos':''}">${fmtRsi(p.rsi)}</td>
+        <td class="l alert ${cluster?'':'empty'}"><span class="cluster">${cluster||'·'}</span></td>
+      </tr>`;
+    }).join("");
+    tbody.querySelectorAll(".row").forEach(tr => tr.addEventListener("click", e => {
+      if (e.target.closest(".fav")) return;
+      selectTicker(tr.dataset.ticker);
+    }));
+    tbody.querySelectorAll(".fav").forEach(b => b.addEventListener("click", e => {
+      e.stopPropagation();
+      const t = b.dataset.ticker;
+      if (favs.has(t)) favs.delete(t); else favs.add(t);
+      saveFavs(); renderFilters(); applyAndRender();
+      if (currentTicker === t) renderChartHead(pairsByTicker[t]);
+    }));
+    if (currentTicker) {
+      const tr = tbody.querySelector(`tr[data-ticker="${currentTicker}"]`);
+      if (tr) tr.classList.add("sel");
+    }
+  }
+
+  function applyAndRender() {
+    let list = pairs.filter(applyFilter);
+    if (state.sortKey) {
+      const dir = state.sortDir==="asc"?1:-1;
+      list.sort((a,b) => {
+        const av=a[state.sortKey], bv=b[state.sortKey];
+        if (av==null) return 1; if (bv==null) return -1;
+        if (typeof av==="string") return av.localeCompare(bv)*dir;
+        return (av-bv)*dir;
+      });
+    } else {
+      list.sort((a,b) => a.alerts.length!==b.alerts.length ? b.alerts.length-a.alerts.length : (a.daily_pct??0)-(b.daily_pct??0));
+    }
+    renderRows(list);
+    document.getElementById("visible-count").textContent = `${list.length} / ${pairs.length}`;
+    document.querySelectorAll("th[data-sort]").forEach(th => {
+      const old = th.querySelector(".ind"); if (old) old.remove();
+      if (state.sortKey===th.dataset.sort) {
+        th.insertAdjacentHTML("beforeend", `<span class="ind">${state.sortDir==="asc"?"↑":"↓"}</span>`);
+      }
+    });
+  }
+
+  function renderChartHead(p) {
+    const isFav = favs.has(p.ticker_2x);
+    const undKr = (tossIds[p.ticker_underlying]||{}).name_kr || "";
+    const toss = (t) => {
+      const info = tossIds[t];
+      return info && info.code ? `<a class="toss" target="_blank" href="https://www.tossinvest.com/stocks/${info.code}">↗${t}</a>` : "";
+    };
+    const earn = p.next_earnings ? `<span><span class="soft">EARN</span> <span class="amb">${p.next_earnings} ${p.days_to_earnings===0?'TODAY':p.days_to_earnings>0?'D-'+p.days_to_earnings:'D+'+(-p.days_to_earnings)}</span></span>` : "";
+    const drag = p.drag_6m != null ? `<span><span class="soft">DRAG6M</span> <span class="${p.drag_6m<=-15?'neg':p.drag_6m<0?'amb':'soft'}">${fmtPct(p.drag_6m)}%</span></span>` : "";
+    const dv = p.dollar_volume_20d;
+    const dvFmt = dv == null ? "—" : dv >= 1e9 ? `$${(dv/1e9).toFixed(2)}B` : dv >= 1e6 ? `$${(dv/1e6).toFixed(0)}M` : `$${(dv/1e3).toFixed(0)}K`;
+    const dvCls = dv == null ? "soft" : dv >= 100e6 ? "amb" : dv >= 10e6 ? "cyn" : dv >= 1e6 ? "" : "dim";
+    const dvLine = `<span title="${krw(dv)}"><span class="soft">DV20</span> <span class="${dvCls}">${dvFmt}</span></span>`;
+    const sigs = [...p.alerts, ...(p.signals||[])].map(k => {
+      const d = ALERT_GLYPHS[k]||SIGNAL_GLYPHS[k];
+      return d ? `<span class="cl ${d.cls}" title="${d.t}">${d.g}</span>` : "";
+    }).join(" ");
+    document.getElementById("chart-head").innerHTML = `
+      <button class="star ${isFav?'':'off'}" id="chart-fav">${isFav?'★':'☆'}</button>
+      <span class="tk">${p.ticker_2x}</span>
+      <span class="name">${undKr ? undKr+' 2X' : p.ticker_underlying+' 2X'} · ${p.issuer}</span>
+      <span class="price">${fmtPx(p.price_2x)}</span>
+      <span class="num ${pctC(p.daily_pct)}">${fmtPct(p.daily_pct)}%</span>
+      <span class="meta">
+        <span><span class="soft">UND</span> <span class="num ${pctC(p.daily_pct_underlying)}">${fmtPct(p.daily_pct_underlying)}%</span></span>
+        <span><span class="soft">5D</span> <span class="num ${pctC(p.five_day_pct)}">${fmtPct(p.five_day_pct)}%</span></span>
+        <span><span class="soft">RSI</span> <span class="num ${p.rsi<30?'amb':p.rsi>70?'pos':''}">${fmtRsi(p.rsi)}</span></span>
+        <span><span class="soft">VOL</span> <span class="num ${p.volume_ratio>=2?'amb':''}">${fmtVol(p.volume_ratio)}×</span></span>
+        ${drag}
+        ${dvLine}
+        ${earn}
+      </span>
+      <span class="meta">${sigs}</span>
+      <span class="meta" style="margin-left:auto">${toss(p.ticker_2x)} ${p.ticker_underlying ? toss(p.ticker_underlying) : ''}</span>
+    `;
+    const fb = document.getElementById("chart-fav");
+    if (fb) fb.addEventListener("click", () => {
+      const t = p.ticker_2x;
+      if (favs.has(t)) favs.delete(t); else favs.add(t);
+      saveFavs(); renderFilters(); applyAndRender();
+      renderChartHead(p);
+    });
+  }
+
+  function tvWidget(id, sym, primary) {
+    new TradingView.widget({
+      container_id: id, symbol: sym, interval: "D", timezone: "Asia/Seoul",
+      theme: "dark", style: "1", locale: "kr", toolbar_bg: "#000",
+      enable_publishing: false, allow_symbol_change: false, hide_side_toolbar: true,
+      hide_top_toolbar: !primary, withdateranges: primary, save_image: false, autosize: true,
+      studies: [
+        { id: "MASimple@tv-basicstudies", inputs: { length: 5 } },
+        { id: "MASimple@tv-basicstudies", inputs: { length: 20 } },
+        { id: "MASimple@tv-basicstudies", inputs: { length: 60 } },
+        { id: "MASimple@tv-basicstudies", inputs: { length: 120 } },
+      ],
+    });
+  }
+  function renderCharts(p) {
+    document.getElementById("label-2x").textContent = p.ticker_2x;
+    document.getElementById("label-und").textContent = p.ticker_underlying || "UND";
+    const t = document.getElementById("chart-2x-wrap");
+    const b = document.getElementById("chart-und-wrap");
+    t.innerHTML = '<div id="tv_2x" style="position:absolute;inset:0"></div>';
+    tvWidget("tv_2x", p.ticker_2x, true);
+    if (p.ticker_underlying) {
+      b.innerHTML = '<div id="tv_und" style="position:absolute;inset:0"></div>';
+      tvWidget("tv_und", p.ticker_underlying, false);
+    } else {
+      b.innerHTML = '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#444">NO UND</div>';
+    }
+  }
+  function selectTicker(t) {
+    const p = pairsByTicker[t]; if (!p) return;
+    if (currentTicker === t) return;
+    currentTicker = t;
+    history.replaceState(null, "", "#"+t);
+    document.querySelectorAll("tbody tr").forEach(r => r.classList.toggle("sel", r.dataset.ticker===t));
+    renderChartHead(p);
+    renderCharts(p);
+  }
+
+  document.querySelectorAll("th[data-sort]").forEach(th => th.addEventListener("click", () => {
+    const k = th.dataset.sort;
+    if (state.sortKey === k) {
+      const def = th.dataset.defaultDir || "desc";
+      if (state.sortDir === def) state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
+      else state.sortKey = null;
+    } else { state.sortKey = k; state.sortDir = th.dataset.defaultDir || "desc"; }
+    saveState(); applyAndRender();
+  }));
+  document.getElementById("search").addEventListener("input", e => {
+    state.search = e.target.value.trim(); saveState(); applyAndRender();
+  });
+  document.getElementById("reset-filters").addEventListener("click", () => {
+    state.filters = emptyFilters(); state.search = "";
+    document.getElementById("search").value = "";
+    saveState(); renderFilters(); applyAndRender();
+  });
+
+  function clock() {
+    const now = new Date();
+    const opts = { timeZone: "Asia/Seoul", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false };
+    document.getElementById("clock").textContent = now.toLocaleTimeString("en-US", opts) + " KST";
+  }
+  clock(); setInterval(clock, 1000);
+
+  (async () => {
+    const [d, t, _] = await Promise.all([
+      fetch("data/data.json", {cache:"no-store"}).then(r=>r.json()),
+      fetch("data/toss_ids.json", {cache:"no-store"}).then(r=>r.ok?r.json():{}).catch(()=>({})),
+      fetchFxRate(),
+    ]);
+    tossIds = t || {};
+    pairs = d.pairs;
+    pairsByTicker = Object.fromEntries(pairs.map(p => [p.ticker_2x, p]));
+    renderSummary(d);
+    renderFilters();
+    applyAndRender();
+    const initial = (location.hash||"").replace(/^#/,"").toUpperCase();
+    if (initial && pairsByTicker[initial]) selectTicker(initial);
+    else {
+      const first = pairs.filter(applyFilter)[0] || pairs[0];
+      if (first) selectTicker(first.ticker_2x);
+    }
+  })().catch(err => {
+    document.getElementById("rows").innerHTML = `<tr><td colspan="8" style="color:var(--red);padding:20px;text-align:center">LOAD ERROR: ${err.message}</td></tr>`;
+  });
+</script>
 </body>
 </html>
