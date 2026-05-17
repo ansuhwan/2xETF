@@ -73,13 +73,39 @@
     main.bbg {
       grid-template-columns: 1fr;
       height: auto;
-      min-height: calc(100vh - var(--foot-h));
-      padding-bottom: calc(var(--foot-h) + 8px);
+      min-height: 100vh;
+      padding-bottom: 12px;
     }
-    section.chart-pane { height: 60vh; min-height: 320px; border-right: none; border-bottom: 1px solid var(--rule-2); }
+    /* Default mobile: list only, chart hidden until row tapped */
+    section.chart-pane { display: none; }
     aside.list-pane { height: auto; }
     .tbl-wrap { overflow: visible; }
-    footer.bbg { display: none; }  /* function keys aren't useful on mobile */
+    footer.bbg { display: none; }
+
+    /* Full-screen chart when a row is selected */
+    body.chart-open section.chart-pane {
+      display: flex;
+      position: fixed;
+      inset: var(--hdr-h) 0 0 0;
+      z-index: 30;
+      height: calc(100vh - var(--hdr-h));
+      border: none;
+      background: var(--bg);
+    }
+    body.chart-open aside.list-pane,
+    body.chart-open header.bbg .summary { display: none; }
+  }
+  /* Mobile back button — only visible on mobile when chart is open */
+  .mobile-back { display: none; }
+  @media (max-width: 1023px) {
+    body.chart-open .mobile-back {
+      display: flex; align-items: center; gap: 6px;
+      position: fixed; top: 0; right: 0; z-index: 60;
+      height: var(--hdr-h); padding: 0 12px;
+      background: var(--amber); color: #000; font-weight: 700;
+      border: none; font-family: inherit; font-size: 12px; cursor: pointer;
+      letter-spacing: 0.08em;
+    }
   }
 
   /* CHART PANE */
@@ -205,6 +231,7 @@
   <div class="summary num" id="summary"></div>
   <div class="clock" id="clock">--:--:--</div>
 </header>
+<button class="mobile-back" id="mobile-back" type="button">◀ 리스트</button>
 
 <main class="bbg">
 
@@ -585,15 +612,30 @@
       b.innerHTML = '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#444">NO UND</div>';
     }
   }
+  const isMobile = () => window.matchMedia("(max-width: 1023px)").matches;
+  function openChart() {
+    document.body.classList.add("chart-open");
+    window.scrollTo(0, 0);
+  }
+  function closeChart() {
+    document.body.classList.remove("chart-open");
+  }
+
   function selectTicker(t) {
     const p = pairsByTicker[t]; if (!p) return;
-    if (currentTicker === t) return;
+    const changed = currentTicker !== t;
     currentTicker = t;
     history.replaceState(null, "", "#"+t);
     document.querySelectorAll("tbody tr").forEach(r => r.classList.toggle("sel", r.dataset.ticker===t));
-    renderChartHead(p);
-    renderCharts(p);
+    if (changed) {
+      renderChartHead(p);
+      renderCharts(p);
+    }
+    if (isMobile()) openChart();
   }
+
+  document.getElementById("mobile-back").addEventListener("click", closeChart);
+  window.addEventListener("popstate", () => { if (isMobile()) closeChart(); });
 
   document.querySelectorAll("th[data-sort]").forEach(th => th.addEventListener("click", () => {
     const k = th.dataset.sort;
@@ -634,7 +676,8 @@
     applyAndRender();
     const initial = (location.hash||"").replace(/^#/,"").toUpperCase();
     if (initial && pairsByTicker[initial]) selectTicker(initial);
-    else {
+    else if (!isMobile()) {
+      // Desktop: pre-select first row. Mobile: keep list view, user taps to open.
       const first = pairs.filter(applyFilter)[0] || pairs[0];
       if (first) selectTicker(first.ticker_2x);
     }
