@@ -298,7 +298,7 @@
   <span><span class="fk">F4</span>EARN</span>
   <span><span class="fk">F5</span>FAV</span>
   <span class="sep">│</span>
-  <span class="amb" id="footer-msg">Press chip to filter · Click row to chart · Click ★ to favorite</span>
+  <span class="amb" id="footer-msg">↑↓ / J K navigate · ESC close · Click row to chart · ★ favorite</span>
 </footer>
 
 <script>
@@ -649,6 +649,37 @@
 
   document.getElementById("mobile-back").addEventListener("click", closeChart);
   window.addEventListener("popstate", () => { if (isMobile()) closeChart(); });
+
+  // Keyboard navigation: ↑↓ (and vim-style j/k) between visible rows. Esc closes mobile chart.
+  document.addEventListener("keydown", (e) => {
+    const tag = document.activeElement && document.activeElement.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA") return;
+
+    if (e.key === "Escape") {
+      if (isMobile() && document.body.classList.contains("chart-open")) {
+        e.preventDefault(); closeChart();
+      }
+      return;
+    }
+
+    let dir = 0;
+    if (e.key === "ArrowDown" || e.key === "j") dir = 1;
+    else if (e.key === "ArrowUp" || e.key === "k") dir = -1;
+    else return;
+
+    const rows = Array.from(document.querySelectorAll("tbody tr.row"));
+    if (!rows.length) return;
+    e.preventDefault();
+
+    let idx = rows.findIndex(r => r.dataset.ticker === currentTicker);
+    if (idx === -1) idx = dir > 0 ? -1 : rows.length;
+    const next = Math.max(0, Math.min(idx + dir, rows.length - 1));
+    if (next === idx) return;
+
+    const nextTicker = rows[next].dataset.ticker;
+    selectTicker(nextTicker);
+    rows[next].scrollIntoView({ block: "nearest" });
+  });
 
   document.querySelectorAll("th[data-sort]").forEach(th => th.addEventListener("click", () => {
     const k = th.dataset.sort;
