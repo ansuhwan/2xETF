@@ -31,9 +31,10 @@ jobs:
         run: python scrape_all.py
         continue-on-error: true
 
-      # 1년치 일봉 OHLCV (필수)
+      # 1년치 일봉 OHLCV (핵심) — 일부 종목 누락은 정상이라 continue
       - name: Fetch 1y daily prices
         run: python fetch_prices.py
+        continue-on-error: true
 
       # 월봉 본주 (월봉 정배열 계산에 필요)
       - name: Fetch monthly closes

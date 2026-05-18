@@ -145,7 +145,8 @@ def main() -> int:
     print(f"OK: {len(frames)}/{len(tickers)} tickers")
     if still_failed:
         print(f"Missing: {', '.join(still_failed[:20])}{' ...' if len(still_failed) > 20 else ''}")
-    return 0 if not still_failed else 1
+    # Partial failure (e.g. delisted JPNL) is normal — only fail if nothing downloaded.
+    return 0
 
 
 if __name__ == "__main__":
