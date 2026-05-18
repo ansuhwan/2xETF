@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14T22:48:45+09:00",
+  "updated_at": "2026-05-18T23:20:29+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-08-07",
@@ -20,8 +20,8 @@
       "eps_high": -0.22121
     },
     "AFRM": {
-      "next_earnings": "2026-05-08",
-      "eps_estimate": 0.8461,
+      "next_earnings": "2026-05-07",
+      "eps_estimate": 0.8288,
       "eps_low": 0.67,
       "eps_high": 0.93
     },
@@ -32,10 +32,10 @@
       "eps_high": 0.72
     },
     "AMAT": {
-      "next_earnings": "2026-05-15",
-      "eps_estimate": 2.67993,
-      "eps_low": 2.63,
-      "eps_high": 2.82
+      "next_earnings": "2026-08-13",
+      "eps_estimate": 3.38265,
+      "eps_low": 3.17,
+      "eps_high": 3.56
     },
     "AMD": {
       "next_earnings": "2026-08-05",
@@ -129,21 +129,21 @@
     },
     "BABA": {
       "next_earnings": "2026-05-13",
-      "eps_estimate": 11.28957,
-      "eps_low": 6.52,
-      "eps_high": 15.62
+      "eps_estimate": 10.19646,
+      "eps_low": 5.61,
+      "eps_high": 16.73625
     },
     "BE": {
-      "next_earnings": "2026-04-29",
+      "next_earnings": "2026-04-28",
       "eps_estimate": 0.38607,
       "eps_low": 0.29,
       "eps_high": 0.46517
     },
     "BLSH": {
-      "next_earnings": "2026-05-14",
-      "eps_estimate": 0.17027,
-      "eps_low": 0.14,
-      "eps_high": 0.2
+      "next_earnings": "2026-08-13",
+      "eps_estimate": 0.11333,
+      "eps_low": 0.1,
+      "eps_high": 0.13
     },
     "BMNR": {
       "next_earnings": "2026-07-03",
@@ -166,7 +166,7 @@
     },
     "CELH": {
       "next_earnings": "2026-05-07",
-      "eps_estimate": 0.43433,
+      "eps_estimate": 0.43197,
       "eps_low": 0.34,
       "eps_high": 0.58
     },
@@ -189,8 +189,8 @@
       "eps_high": -0.18
     },
     "COHR": {
-      "next_earnings": "2026-05-07",
-      "eps_estimate": 1.61491,
+      "next_earnings": "2026-05-06",
+      "eps_estimate": 1.61518,
       "eps_low": 1.49,
       "eps_high": 1.75
     },
@@ -201,9 +201,9 @@
       "eps_high": 0.57
     },
     "CORZ": {
-      "next_earnings": "2026-05-07",
-      "eps_estimate": -0.02,
-      "eps_low": -0.02,
+      "next_earnings": "2026-05-06",
+      "eps_estimate": -0.06,
+      "eps_low": -0.1,
       "eps_high": -0.02
     },
     "CPNG": {
@@ -232,8 +232,8 @@
       "eps_high": 1.08
     },
     "CRWV": {
-      "next_earnings": "2026-05-08",
-      "eps_estimate": -1.02786,
+      "next_earnings": "2026-05-07",
+      "eps_estimate": -1.0347,
       "eps_low": -1.82,
       "eps_high": -0.38
     },
@@ -244,7 +244,7 @@
       "eps_high": 0.44101
     },
     "DASH": {
-      "next_earnings": "2026-05-07",
+      "next_earnings": "2026-05-06",
       "eps_estimate": 1.2271,
       "eps_low": 1.1,
       "eps_high": 1.31
@@ -305,10 +305,10 @@
       "eps_high": 0.74
     },
     "FIGR": {
-      "next_earnings": "2026-05-12",
-      "eps_estimate": 0.3075,
-      "eps_low": 0.21,
-      "eps_high": 0.36
+      "next_earnings": "2026-05-11",
+      "eps_estimate": 0.305,
+      "eps_low": 0.26,
+      "eps_high": 0.34
     },
     "FLY": {
       "next_earnings": "2026-08-05",
@@ -395,10 +395,10 @@
       "eps_high": -0.25
     },
     "IREN": {
-      "next_earnings": "2026-05-08",
-      "eps_estimate": -0.46,
+      "next_earnings": "2026-05-07",
+      "eps_estimate": -0.395,
       "eps_low": -0.46,
-      "eps_high": -0.46
+      "eps_high": -0.33
     },
     "ISRG": {
       "next_earnings": "2026-07-22",
@@ -443,7 +443,7 @@
       "eps_high": 1.41
     },
     "LITE": {
-      "next_earnings": "2026-05-06",
+      "next_earnings": "2026-05-05",
       "eps_estimate": 2.96184,
       "eps_low": 2.87,
       "eps_high": 3.06
@@ -467,9 +467,9 @@
       "eps_high": 1.79
     },
     "LUNR": {
-      "next_earnings": "2026-05-14",
-      "eps_estimate": -0.06,
-      "eps_low": -0.09,
+      "next_earnings": "2026-08-06",
+      "eps_estimate": -0.09,
+      "eps_low": -0.13,
       "eps_high": -0.04
     },
     "LYFT": {
@@ -605,10 +605,10 @@
       "eps_high": 0.88
     },
     "ONDS": {
-      "next_earnings": "2026-05-14",
-      "eps_estimate": -0.03,
-      "eps_low": -0.03,
-      "eps_high": -0.03
+      "next_earnings": "2026-08-12",
+      "eps_estimate": -0.06,
+      "eps_low": -0.06,
+      "eps_high": -0.06
     },
     "OPEN": {
       "next_earnings": "2026-08-07",
@@ -671,7 +671,7 @@
       "eps_high": -0.07
     },
     "POET": {
-      "next_earnings": "2026-05-15",
+      "next_earnings": "2026-08-11",
       "eps_estimate": -0.04,
       "eps_low": -0.04,
       "eps_high": -0.04
@@ -713,7 +713,7 @@
       "eps_high": -0.32637
     },
     "RCAT": {
-      "next_earnings": "2026-05-08",
+      "next_earnings": "2026-05-07",
       "eps_estimate": -0.17,
       "eps_low": -0.17,
       "eps_high": -0.17
@@ -731,7 +731,7 @@
       "eps_high": -0.15
     },
     "RGTI": {
-      "next_earnings": "2026-05-12",
+      "next_earnings": "2026-05-11",
       "eps_estimate": -0.04625,
       "eps_low": -0.06,
       "eps_high": -0.03
@@ -743,7 +743,7 @@
       "eps_high": -0.07775
     },
     "RIVN": {
-      "next_earnings": "2026-05-01",
+      "next_earnings": "2026-04-30",
       "eps_estimate": -0.62963,
       "eps_low": -0.9,
       "eps_high": -0.47
@@ -761,7 +761,7 @@
       "eps_high": 0.21
     },
     "SBET": {
-      "next_earnings": "2026-05-09",
+      "next_earnings": "2026-05-08",
       "eps_estimate": null,
       "eps_low": null,
       "eps_high": null
@@ -779,7 +779,7 @@
       "eps_high": -0.1
     },
     "SNDK": {
-      "next_earnings": "2026-05-01",
+      "next_earnings": "2026-04-30",
       "eps_estimate": 33.05285,
       "eps_low": 32.0,
       "eps_high": 36.5
@@ -815,7 +815,7 @@
       "eps_high": 5.44111
     },
     "TEM": {
-      "next_earnings": "2026-05-06",
+      "next_earnings": "2026-05-05",
       "eps_estimate": -0.16,
       "eps_low": -0.23,
       "eps_high": -0.1
@@ -863,10 +863,10 @@
       "eps_high": 0.74342
     },
     "USAR": {
-      "next_earnings": "2026-05-14",
-      "eps_estimate": -0.225,
-      "eps_low": -0.35,
-      "eps_high": -0.1
+      "next_earnings": "2026-08-10",
+      "eps_estimate": -0.1125,
+      "eps_low": -0.25,
+      "eps_high": -0.02
     },
     "VOYG": {
       "next_earnings": "2026-08-04",
@@ -907,10 +907,35 @@
       "eps_high": -1.04
     },
     "ZETA": {
-      "next_earnings": "2026-05-01",
+      "next_earnings": "2026-04-30",
       "eps_estimate": 0.19941,
       "eps_low": 0.14,
       "eps_high": 0.31
+    },
+    "CAT": {
+      "next_earnings": "2026-08-04",
+      "eps_estimate": 6.12786,
+      "eps_low": 5.75,
+      "eps_high": 6.96
+    },
+    "CBRS": null,
+    "CIEN": {
+      "next_earnings": "2026-06-04",
+      "eps_estimate": 1.45863,
+      "eps_low": 1.39,
+      "eps_high": 1.55
+    },
+    "ETN": {
+      "next_earnings": "2026-08-04",
+      "eps_estimate": 3.07521,
+      "eps_low": 3.03,
+      "eps_high": 3.19
+    },
+    "HON": {
+      "next_earnings": "2026-07-23",
+      "eps_estimate": 2.41836,
+      "eps_low": 2.36,
+      "eps_high": 2.49
     }
   }
 }

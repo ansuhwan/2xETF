@@ -1621,7 +1621,11 @@
     "name_kr": "XNDU",
     "market": "NSQ"
   },
-  "XNDX": null,
+  "XNDX": {
+    "code": "AMX2605007004",
+    "name_kr": "TRADR 제너두 퀀텀 테크놀로지스 데일리 2배 ETF",
+    "market": "AMX"
+  },
   "XOVL": {
     "code": "AMX2605005007",
     "name_kr": "디파이언스 XOVR 데일리 2배 ETF",
@@ -1650,6 +1654,81 @@
   "ZETX": {
     "code": "AMX2602003004",
     "name_kr": "디파이언스 제타 글로벌 홀딩스 데일리 2배 ETF",
+    "market": "AMX"
+  },
+  "AAOG": {
+    "code": "AMX2605012001",
+    "name_kr": "레버리지셰어즈 AAOI 2배 ETF",
+    "market": "AMX"
+  },
+  "AMAU": {
+    "code": "AMX2605012002",
+    "name_kr": "레버리지셰어즈 AMAT 2배 ETF",
+    "market": "AMX"
+  },
+  "CAT": {
+    "code": "US19291202001",
+    "name_kr": "CAT",
+    "market": "NYS"
+  },
+  "CATG": {
+    "code": "AMX2605012003",
+    "name_kr": "레버리지셰어즈 캐터필러 2배 ETF",
+    "market": "AMX"
+  },
+  "CBRG": {
+    "code": "AMX2605015002",
+    "name_kr": "LEVERAGE SHARES 2X LONG CBRS DAILY ETF",
+    "market": "AMX"
+  },
+  "CBRS": {
+    "code": "NAS2605014002",
+    "name_kr": "CBRS",
+    "market": "NSQ"
+  },
+  "CIEG": {
+    "code": "AMX2605012004",
+    "name_kr": "레버리지셰어즈 시에나 2배 ETF",
+    "market": "AMX"
+  },
+  "CIEN": {
+    "code": "US20131223002",
+    "name_kr": "CIEN",
+    "market": "NYS"
+  },
+  "COHH": {
+    "code": "AMX2605012005",
+    "name_kr": "레버리지셰어즈 코히런트 2배 ETF",
+    "market": "AMX"
+  },
+  "ETN": {
+    "code": "US19481201001",
+    "name_kr": "ETN",
+    "market": "NYS"
+  },
+  "ETNG": {
+    "code": "AMX2605012006",
+    "name_kr": "레버리지셰어즈 이튼 2배 ETF",
+    "market": "AMX"
+  },
+  "HON": {
+    "code": "US20210511003",
+    "name_kr": "HON",
+    "market": "NSQ"
+  },
+  "HONG": {
+    "code": "AMX2605012007",
+    "name_kr": "레버리지셰어즈 허니웰 2배 ETF",
+    "market": "AMX"
+  },
+  "SNDG": {
+    "code": "AMX2605012009",
+    "name_kr": "레버리지셰어즈 샌디스크 2배 ETF",
+    "market": "AMX"
+  },
+  "STXU": {
+    "code": "AMX2605012010",
+    "name_kr": "레버리지셰어즈 씨게이트 2배 ETF",
     "market": "AMX"
   }
 }
