@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
-  "updated_at": "2026-05-19T07:29:54+09:00",
-=======
-  "updated_at": "2026-05-19T14:25:16+09:00",
->>>>>>> Stashed changes
+  "updated_at": "2026-05-19T14:34:59+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-08-07",

@@ -1,23 +1,11 @@
 {
-<<<<<<< Updated upstream
-  "updated_at": "2026-05-19T07:30:15+09:00",
-=======
-  "updated_at": "2026-05-19T14:25:26+09:00",
->>>>>>> Stashed changes
+  "updated_at": "2026-05-19T14:35:01+09:00",
   "summary": {
     "total_pairs": 175,
     "alerts_count": 91,
     "using_underlying_proxy": 16,
     "delisted_count": 14,
     "avg_daily_return": -5.35,
-<<<<<<< Updated upstream
-    "as_of": "2026-05-18",
-    "recommended_count": 10,
-    "recommended": [
-      {
-        "ticker_2x": "AAOX",
-        "underlying": "AAOI",
-=======
     "as_of": "2026-05-19",
     "recommended_count": 10,
     "recommended": [
@@ -36,7 +24,6 @@
       {
         "ticker_2x": "COHX",
         "underlying": "COHR",
->>>>>>> Stashed changes
         "score": 9.5,
         "reasons": [
           "정배눌림",
@@ -47,11 +34,6 @@
         ]
       },
       {
-<<<<<<< Updated upstream
-        "ticker_2x": "MVLL",
-        "underlying": "MRVL",
-        "score": 8.5,
-=======
         "ticker_2x": "GLWG",
         "underlying": "GLW",
         "score": 9.5,
@@ -67,18 +49,13 @@
         "ticker_2x": "VRTL",
         "underlying": "VRT",
         "score": 9.0,
->>>>>>> Stashed changes
         "reasons": [
           "정배눌림",
           "월정배",
           "일정배",
-<<<<<<< Updated upstream
-          "MA지지"
-=======
           "MA지지",
           "섹터선도",
           "4분기 연속 비트"
->>>>>>> Stashed changes
         ]
       },
       {
@@ -107,31 +84,6 @@
       {
         "ticker_2x": "AVGX",
         "underlying": "AVGO",
-<<<<<<< Updated upstream
-        "score": 8.5,
-        "reasons": [
-          "정배눌림",
-          "월정배",
-          "일정배",
-          "MA지지"
-        ]
-      },
-      {
-        "ticker_2x": "COHX",
-        "underlying": "COHR",
-        "score": 8.5,
-        "reasons": [
-          "정배눌림",
-          "월정배",
-          "일정배",
-          "MA지지"
-        ]
-      },
-      {
-        "ticker_2x": "WDCX",
-        "underlying": "WDC",
-=======
->>>>>>> Stashed changes
         "score": 8.5,
         "reasons": [
           "정배눌림",
@@ -142,21 +94,13 @@
         ]
       },
       {
-<<<<<<< Updated upstream
-        "ticker_2x": "GLWG",
-        "underlying": "GLW",
-=======
         "ticker_2x": "AAOX",
         "underlying": "AAOI",
->>>>>>> Stashed changes
         "score": 8.5,
         "reasons": [
           "정배눌림",
           "월정배",
           "일정배",
-<<<<<<< Updated upstream
-          "MA지지"
-=======
           "MA지지",
           "섹터선도"
         ]
@@ -170,48 +114,18 @@
           "일정배",
           "섹터선도",
           "4분기 연속 비트"
->>>>>>> Stashed changes
         ]
       },
       {
         "ticker_2x": "AVGU",
         "underlying": "AVGO",
-<<<<<<< Updated upstream
         "score": 8.0,
         "reasons": [
           "정배눌림",
           "월정배",
           "일정배",
-          "MA지지"
-        ]
-      },
-      {
-        "ticker_2x": "AMA",
-        "underlying": "AMAT",
-=======
->>>>>>> Stashed changes
-        "score": 8.0,
-        "reasons": [
-          "정배눌림",
-          "월정배",
-          "일정배",
-<<<<<<< Updated upstream
-          "MA지지"
-        ]
-      },
-      {
-        "ticker_2x": "LRCU",
-        "underlying": "LRCX",
-        "score": 8.0,
-        "reasons": [
-          "정배눌림",
-          "월정배",
-          "일정배",
-          "MA지지"
-=======
           "MA지지",
           "4분기 연속 비트"
->>>>>>> Stashed changes
         ]
       }
     ]
@@ -329,11 +243,8 @@
         "bb_breakdown"
       ],
       "signals": [
-<<<<<<< Updated upstream
-=======
         "macd_below_zero",
         "macd_momentum_down",
->>>>>>> Stashed changes
         "monthly_bear_align"
       ],
       "sectors": [],
@@ -341,14 +252,6 @@
       "near_52w_low": true,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 344472.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": 0.56193,
-      "rec_score": -4.5,
-=======
       "dollar_volume_20d": 344505.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -360,7 +263,6 @@
       "miss_streak": 0,
       "avg_surprise_pct": 21.89,
       "rec_score": -6.0,
->>>>>>> Stashed changes
       "rec_reasons": [],
       "is_recommended": false
     },
@@ -374,11 +276,7 @@
       "daily_pct": -25.09,
       "daily_pct_underlying": -12.77,
       "five_day_pct": -35.92,
-<<<<<<< Updated upstream
-      "volume_ratio": 1.01,
-=======
       "volume_ratio": 1.02,
->>>>>>> Stashed changes
       "rsi": 44.2,
       "drag_6m": null,
       "underlying_6m_pct": null,
@@ -389,28 +287,16 @@
         "five_day_crash",
         "bb_breakdown"
       ],
-<<<<<<< Updated upstream
-      "signals": [],
-=======
       "signals": [
         "macd_above_zero",
         "macd_momentum_down",
         "earnings_miss_streak"
       ],
->>>>>>> Stashed changes
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 5277593.0,
-      "next_earnings": "2026-08-10",
-      "days_to_earnings": 84,
-      "earnings_window": null,
-      "eps_estimate": -0.1125,
-      "rec_score": 1.0,
-=======
       "dollar_volume_20d": 5279076.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -422,7 +308,6 @@
       "miss_streak": 3,
       "avg_surprise_pct": -569.32,
       "rec_score": -0.5,
->>>>>>> Stashed changes
       "rec_reasons": [
         "RSI 44"
       ],
@@ -438,11 +323,7 @@
       "daily_pct": -21.97,
       "daily_pct_underlying": -11.02,
       "five_day_pct": -44.47,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.86,
-=======
       "volume_ratio": 0.88,
->>>>>>> Stashed changes
       "rsi": 32.8,
       "drag_6m": 0.79,
       "underlying_6m_pct": -39.72,
@@ -453,26 +334,14 @@
         "five_day_crash",
         "bb_breakdown"
       ],
-<<<<<<< Updated upstream
-      "signals": [],
-=======
       "signals": [
         "macd_below_zero"
       ],
->>>>>>> Stashed changes
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 45765219.0,
-      "next_earnings": "2026-08-11",
-      "days_to_earnings": 85,
-      "earnings_window": null,
-      "eps_estimate": 0.13919,
-      "rec_score": 2.0,
-=======
       "dollar_volume_20d": 45791216.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -484,7 +353,6 @@
       "miss_streak": 1,
       "avg_surprise_pct": -321.21,
       "rec_score": 1.5,
->>>>>>> Stashed changes
       "rec_reasons": [
         "RSI 33",
         "과매도 바닥"
@@ -522,13 +390,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 20863314.0,
-=======
       "dollar_volume_20d": 20875361.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": "2026-06-02",
       "days_to_earnings": 14,
       "earnings_window": null,
@@ -538,10 +402,7 @@
       "avg_surprise_pct": 30.27,
       "rec_score": 2.5,
       "rec_reasons": [
-<<<<<<< Updated upstream
-=======
         "4분기 연속 비트",
->>>>>>> Stashed changes
         "RSI 45"
       ],
       "is_recommended": false
@@ -579,13 +440,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 1143425.0,
-=======
       "dollar_volume_20d": 1143466.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": "2026-08-07",
       "days_to_earnings": 80,
       "earnings_window": null,
@@ -596,10 +453,7 @@
       "rec_score": 5.5,
       "rec_reasons": [
         "월정배+장기근접",
-<<<<<<< Updated upstream
-=======
         "4분기 연속 비트",
->>>>>>> Stashed changes
         "RSI 40"
       ],
       "is_recommended": false
@@ -614,11 +468,7 @@
       "daily_pct": -13.89,
       "daily_pct_underlying": -6.68,
       "five_day_pct": -39.63,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.96,
-=======
       "volume_ratio": 1.0,
->>>>>>> Stashed changes
       "rsi": 41.0,
       "drag_6m": -7.84,
       "underlying_6m_pct": -53.32,
@@ -629,15 +479,11 @@
         "five_day_crash",
         "bb_breakdown"
       ],
-<<<<<<< Updated upstream
-      "signals": [],
-=======
       "signals": [
         "macd_below_zero",
         "macd_momentum_down",
         "earnings_miss_streak"
       ],
->>>>>>> Stashed changes
       "sectors": [
         "Nuclear"
       ],
@@ -645,14 +491,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 2154674.0,
-      "next_earnings": "2026-08-07",
-      "days_to_earnings": 81,
-      "earnings_window": null,
-      "eps_estimate": -0.1217,
-      "rec_score": 1.0,
-=======
       "dollar_volume_20d": 2157371.0,
       "rs_20d": -4.91,
       "rs_benchmark": "URA",
@@ -664,7 +502,6 @@
       "miss_streak": 4,
       "avg_surprise_pct": -405.21,
       "rec_score": -1.5,
->>>>>>> Stashed changes
       "rec_reasons": [
         "RSI 41"
       ],
@@ -702,14 +539,6 @@
       "near_52w_low": true,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 253906.0,
-      "next_earnings": "2026-05-08",
-      "days_to_earnings": -10,
-      "earnings_window": null,
-      "eps_estimate": null,
-      "rec_score": -3.5,
-=======
       "dollar_volume_20d": 253936.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -721,7 +550,6 @@
       "miss_streak": 3,
       "avg_surprise_pct": -14924.05,
       "rec_score": -6.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "RSI 38"
       ],
@@ -737,11 +565,7 @@
       "daily_pct": -13.22,
       "daily_pct_underlying": -6.68,
       "five_day_pct": -39.38,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.79,
-=======
       "volume_ratio": 0.81,
->>>>>>> Stashed changes
       "rsi": 40.8,
       "drag_6m": -18.57,
       "underlying_6m_pct": -53.32,
@@ -751,16 +575,12 @@
         "big_drop",
         "five_day_crash",
         "bb_breakdown"
-<<<<<<< Updated upstream
-=======
       ],
       "signals": [
         "macd_below_zero",
         "macd_momentum_down",
         "earnings_miss_streak"
->>>>>>> Stashed changes
       ],
-      "signals": [],
       "sectors": [
         "Nuclear"
       ],
@@ -768,26 +588,17 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 27358656.0,
-=======
       "dollar_volume_20d": 27382752.0,
       "rs_20d": -4.91,
       "rs_benchmark": "URA",
->>>>>>> Stashed changes
       "next_earnings": "2026-08-07",
       "days_to_earnings": 80,
       "earnings_window": null,
-<<<<<<< Updated upstream
-      "eps_estimate": -0.1217,
-      "rec_score": 0.0,
-=======
       "eps_estimate": -0.12431,
       "beat_streak": 0,
       "miss_streak": 4,
       "avg_surprise_pct": -405.21,
       "rec_score": -2.5,
->>>>>>> Stashed changes
       "rec_reasons": [
         "RSI 41"
       ],
@@ -799,17 +610,10 @@
       "issuer": "Defiance",
       "expense_ratio": null,
       "category": "Semi",
-<<<<<<< Updated upstream
-      "price_2x": 16.77,
-      "daily_pct": -12.22,
-      "daily_pct_underlying": -6.13,
-      "five_day_pct": -26.78,
-=======
       "price_2x": 16.78,
       "daily_pct": -12.19,
       "daily_pct_underlying": -6.13,
       "five_day_pct": -26.76,
->>>>>>> Stashed changes
       "volume_ratio": null,
       "rsi": 41.6,
       "drag_6m": null,
@@ -825,15 +629,11 @@
         "bb_breakdown"
       ],
       "signals": [
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "sector_laggard",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Semi"
@@ -843,15 +643,6 @@
       "volume_up_candle": false,
       "is_new": true,
       "dollar_volume_20d": null,
-<<<<<<< Updated upstream
-      "next_earnings": "2026-07-28",
-      "days_to_earnings": 71,
-      "earnings_window": null,
-      "eps_estimate": 0.47177,
-      "rec_score": 2.5,
-      "rec_reasons": [
-        "월정배",
-=======
       "rs_20d": -23.65,
       "rs_benchmark": "SOXX",
       "next_earnings": "2026-07-28",
@@ -865,7 +656,6 @@
       "rec_reasons": [
         "월정배",
         "4분기 연속 비트",
->>>>>>> Stashed changes
         "RSI 42"
       ],
       "is_recommended": false
@@ -891,15 +681,11 @@
         "five_day_crash",
         "bb_breakdown"
       ],
-<<<<<<< Updated upstream
-      "signals": [],
-=======
       "signals": [
         "macd_below_zero",
         "macd_momentum_down",
         "sector_laggard"
       ],
->>>>>>> Stashed changes
       "sectors": [
         "EV"
       ],
@@ -907,14 +693,6 @@
       "near_52w_low": true,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 274902388.0,
-      "next_earnings": "2026-07-03",
-      "days_to_earnings": 46,
-      "earnings_window": null,
-      "eps_estimate": 0.18,
-      "rec_score": 2.5,
-=======
       "dollar_volume_20d": 274998590.0,
       "rs_20d": -17.06,
       "rs_benchmark": "LIT",
@@ -926,7 +704,6 @@
       "miss_streak": 2,
       "avg_surprise_pct": 5244.62,
       "rec_score": 0.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "RSI 37"
       ],
@@ -942,11 +719,7 @@
       "daily_pct": -11.55,
       "daily_pct_underlying": -5.93,
       "five_day_pct": -45.03,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.77,
-=======
       "volume_ratio": 0.78,
->>>>>>> Stashed changes
       "rsi": 40.1,
       "drag_6m": 1.09,
       "underlying_6m_pct": -39.98,
@@ -957,15 +730,11 @@
         "five_day_crash",
         "bb_breakdown"
       ],
-<<<<<<< Updated upstream
-      "signals": [],
-=======
       "signals": [
         "macd_above_zero",
         "macd_momentum_down",
         "earnings_miss_streak"
       ],
->>>>>>> Stashed changes
       "sectors": [
         "Nuclear"
       ],
@@ -973,14 +742,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 167410564.0,
-      "next_earnings": "2026-08-11",
-      "days_to_earnings": 85,
-      "earnings_window": null,
-      "eps_estimate": -0.18404,
-      "rec_score": 2.5,
-=======
       "dollar_volume_20d": 167529407.0,
       "rs_20d": -0.9,
       "rs_benchmark": "URA",
@@ -992,7 +753,6 @@
       "miss_streak": 3,
       "avg_surprise_pct": -39.2,
       "rec_score": 1.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "RSI 40"
       ],
@@ -1007,13 +767,8 @@
       "price_2x": 12.94,
       "daily_pct": -3.5,
       "daily_pct_underlying": -1.71,
-<<<<<<< Updated upstream
-      "five_day_pct": -25.4,
-      "volume_ratio": 0.36,
-=======
       "five_day_pct": -25.39,
       "volume_ratio": 0.33,
->>>>>>> Stashed changes
       "rsi": 18.6,
       "drag_6m": 25.0,
       "underlying_6m_pct": 3.7,
@@ -1025,14 +780,10 @@
         "bb_breakdown"
       ],
       "signals": [
-<<<<<<< Updated upstream
-        "monthly_bull_align",
-=======
         "macd_below_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beats",
->>>>>>> Stashed changes
         "monthly_bull_near_long"
       ],
       "sectors": [],
@@ -1040,14 +791,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 774865.0,
-      "next_earnings": "2026-07-30",
-      "days_to_earnings": 73,
-      "earnings_window": null,
-      "eps_estimate": 0.39429,
-      "rec_score": 2.0,
-=======
       "dollar_volume_20d": 774016.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -1059,7 +802,6 @@
       "miss_streak": 0,
       "avg_surprise_pct": 67.59,
       "rec_score": 1.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "월정배+장기근접"
       ],
@@ -1135,8 +877,6 @@
       "drag_6m": null,
       "underlying_6m_pct": null,
       "history_days_2x": 17,
-<<<<<<< Updated upstream
-=======
       "proxy_fields": [],
       "alerts": [
         "big_drop",
@@ -1236,7 +976,6 @@
       "drag_6m": null,
       "underlying_6m_pct": null,
       "history_days_2x": 78,
->>>>>>> Stashed changes
       "proxy_fields": [],
       "alerts": [
         "big_drop",
@@ -1250,23 +989,10 @@
         "monthly_bull_align",
         "earnings_beat_streak"
       ],
-      "sectors": [
-        "Semi"
-      ],
+      "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
-<<<<<<< Updated upstream
-      "is_new": true,
-      "dollar_volume_20d": null,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": 0.074,
-      "rec_score": 4.0,
-      "rec_reasons": [
-        "월정배",
-=======
       "is_new": false,
       "dollar_volume_20d": 347167314.0,
       "rs_20d": null,
@@ -1483,620 +1209,11 @@
       "avg_surprise_pct": 4.9,
       "rec_score": 3.0,
       "rec_reasons": [
->>>>>>> Stashed changes
         "일정배"
       ],
       "is_recommended": false
     },
     {
-<<<<<<< Updated upstream
-      "ticker_2x": "XNDX",
-      "ticker_underlying": "XNDU",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 15.78,
-      "daily_pct": -21.69,
-      "daily_pct_underlying": -10.59,
-      "five_day_pct": -34.77,
-      "volume_ratio": null,
-      "rsi": 31.5,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 8,
-      "proxy_fields": [
-        "rsi"
-      ],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": null,
-      "next_earnings": null,
-      "days_to_earnings": null,
-      "earnings_window": null,
-      "eps_estimate": null,
-      "rec_score": 1.5,
-      "rec_reasons": [
-        "RSI 32",
-        "과매도 바닥"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "LITX",
-      "ticker_underlying": "LITE",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 40.65,
-      "daily_pct": -17.63,
-      "daily_pct_underlying": -8.83,
-      "five_day_pct": -31.33,
-      "volume_ratio": 1.38,
-      "rsi": 53.9,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 78,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [
-        "ma_bull_align",
-        "monthly_bull_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 347026025.0,
-      "next_earnings": "2026-05-05",
-      "days_to_earnings": -13,
-      "earnings_window": null,
-      "eps_estimate": 2.96184,
-      "rec_score": 5.5,
-      "rec_reasons": [
-        "월정배",
-        "일정배"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "APLX",
-      "ticker_underlying": "APLD",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 25.77,
-      "daily_pct": -16.06,
-      "daily_pct_underlying": -8.04,
-      "five_day_pct": -24.56,
-      "volume_ratio": 0.95,
-      "rsi": 58.6,
-      "drag_6m": 93.38,
-      "underlying_6m_pct": 65.5,
-      "history_days_2x": 174,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [
-        "ma20_support"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 44262318.0,
-      "next_earnings": "2026-07-30",
-      "days_to_earnings": 73,
-      "earnings_window": null,
-      "eps_estimate": null,
-      "rec_score": 2.0,
-      "rec_reasons": [
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "RGTU",
-      "ticker_underlying": "RGTI",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 17.69,
-      "daily_pct": -14.62,
-      "daily_pct_underlying": -6.89,
-      "five_day_pct": -36.07,
-      "volume_ratio": 1.82,
-      "rsi": 49.0,
-      "drag_6m": 4.64,
-      "underlying_6m_pct": -34.77,
-      "history_days_2x": 227,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [
-        "monthly_bull_align",
-        "monthly_bull_near_long"
-      ],
-      "sectors": [
-        "AI",
-        "Quantum"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 2064203.0,
-      "next_earnings": "2026-05-11",
-      "days_to_earnings": -7,
-      "earnings_window": "post",
-      "eps_estimate": -0.04625,
-      "rec_score": 4.5,
-      "rec_reasons": [
-        "월정배+장기근접",
-        "RSI 49"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "RGTX",
-      "ticker_underlying": "RGTI",
-      "issuer": "Defiance",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 17.57,
-      "daily_pct": -14.44,
-      "daily_pct_underlying": -6.89,
-      "five_day_pct": -36.48,
-      "volume_ratio": 1.35,
-      "rsi": 48.6,
-      "drag_6m": 7.58,
-      "underlying_6m_pct": -34.77,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [
-        "monthly_bull_align",
-        "monthly_bull_near_long"
-      ],
-      "sectors": [
-        "AI",
-        "Quantum"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 17561516.0,
-      "next_earnings": "2026-05-11",
-      "days_to_earnings": -7,
-      "earnings_window": "post",
-      "eps_estimate": -0.04625,
-      "rec_score": 5.0,
-      "rec_reasons": [
-        "월정배+장기근접",
-        "RSI 49"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "NVTX",
-      "ticker_underlying": "NVTS",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 77.7,
-      "daily_pct": -13.95,
-      "daily_pct_underlying": -7.74,
-      "five_day_pct": -28.31,
-      "volume_ratio": 0.64,
-      "rsi": 56.6,
-      "drag_6m": 116.86,
-      "underlying_6m_pct": 142.54,
-      "history_days_2x": 174,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [
-        "ma_bull_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 29202978.0,
-      "next_earnings": "2026-08-04",
-      "days_to_earnings": 78,
-      "earnings_window": null,
-      "eps_estimate": -0.04255,
-      "rec_score": 3.0,
-      "rec_reasons": [
-        "일정배"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "GLWG",
-      "ticker_underlying": "GLW",
-      "issuer": "LeverageShares",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 25.06,
-      "daily_pct": -13.91,
-      "daily_pct_underlying": -6.91,
-      "five_day_pct": -27.21,
-      "volume_ratio": 0.98,
-      "rsi": 58.4,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 49,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [
-        "ma_bull_align",
-        "ma20_support",
-        "bull_align_pullback",
-        "monthly_bull_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": 35985765.0,
-      "next_earnings": "2026-07-28",
-      "days_to_earnings": 71,
-      "earnings_window": null,
-      "eps_estimate": 0.7575,
-      "rec_score": 8.5,
-      "rec_reasons": [
-        "정배눌림",
-        "월정배",
-        "일정배",
-        "MA지지"
-      ],
-      "is_recommended": true
-    },
-    {
-      "ticker_2x": "STXX",
-      "ticker_underlying": "STX",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 38.15,
-      "daily_pct": -13.84,
-      "daily_pct_underlying": -6.87,
-      "five_day_pct": -21.95,
-      "volume_ratio": null,
-      "rsi": 66.4,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 17,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [
-        "ma_bull_align",
-        "ma20_support",
-        "bull_align_pullback",
-        "monthly_bull_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": null,
-      "next_earnings": "2026-07-29",
-      "days_to_earnings": 72,
-      "earnings_window": null,
-      "eps_estimate": 5.05821,
-      "rec_score": 7.5,
-      "rec_reasons": [
-        "정배눌림",
-        "월정배",
-        "일정배",
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "STXU",
-      "ticker_underlying": "STX",
-      "issuer": "LeverageShares",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 11.72,
-      "daily_pct": -13.78,
-      "daily_pct_underlying": -6.87,
-      "five_day_pct": -22.34,
-      "volume_ratio": null,
-      "rsi": 70.0,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 5,
-      "proxy_fields": [
-        "rsi",
-        "five_day"
-      ],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [
-        "ma_bull_align",
-        "ma20_support",
-        "bull_align_pullback",
-        "monthly_bull_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": null,
-      "next_earnings": "2026-07-29",
-      "days_to_earnings": 72,
-      "earnings_window": null,
-      "eps_estimate": 5.05821,
-      "rec_score": 7.5,
-      "rec_reasons": [
-        "정배눌림",
-        "월정배",
-        "일정배",
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "STXL",
-      "ticker_underlying": "STX",
-      "issuer": "Defiance",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 30.88,
-      "daily_pct": -13.77,
-      "daily_pct_underlying": -6.87,
-      "five_day_pct": -22.9,
-      "volume_ratio": null,
-      "rsi": 65.5,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 18,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [
-        "ma_bull_align",
-        "ma20_support",
-        "bull_align_pullback",
-        "monthly_bull_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": null,
-      "next_earnings": "2026-07-29",
-      "days_to_earnings": 72,
-      "earnings_window": null,
-      "eps_estimate": 5.05821,
-      "rec_score": 7.5,
-      "rec_reasons": [
-        "정배눌림",
-        "월정배",
-        "일정배",
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "QBTX",
-      "ticker_underlying": "QBTS",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 11.67,
-      "daily_pct": -12.91,
-      "daily_pct_underlying": -6.34,
-      "five_day_pct": -38.93,
-      "volume_ratio": 0.81,
-      "rsi": 51.0,
-      "drag_6m": 25.54,
-      "underlying_6m_pct": -19.27,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [
-        "ma60_support",
-        "monthly_bull_align",
-        "monthly_bull_near_long"
-      ],
-      "sectors": [
-        "AI",
-        "Quantum"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 30348218.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": -0.08231,
-      "rec_score": 5.5,
-      "rec_reasons": [
-        "월정배+장기근접",
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "MSTP",
-      "ticker_underlying": "MSTR",
-      "issuer": "GraniteShares",
-      "expense_ratio": null,
-      "category": "Crypto",
-      "price_2x": 46.5,
-      "daily_pct": -12.65,
-      "daily_pct_underlying": -6.08,
-      "five_day_pct": -29.29,
-      "volume_ratio": 0.23,
-      "rsi": 48.7,
-      "drag_6m": 21.52,
-      "underlying_6m_pct": -16.58,
-      "history_days_2x": 236,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [],
-      "sectors": [
-        "Crypto"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 5285868.0,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": 24.21188,
-      "rec_score": 1.0,
-      "rec_reasons": [
-        "RSI 49"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "MSTU",
-      "ticker_underlying": "MSTR",
-      "issuer": "REX",
-      "expense_ratio": null,
-      "category": "Crypto",
-      "price_2x": 6.84,
-      "daily_pct": -12.42,
-      "daily_pct_underlying": -6.08,
-      "five_day_pct": -28.97,
-      "volume_ratio": 1.19,
-      "rsi": 48.9,
-      "drag_6m": 24.09,
-      "underlying_6m_pct": -16.58,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [],
-      "sectors": [
-        "Crypto"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 296203152.0,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": 24.21188,
-      "rec_score": 2.5,
-      "rec_reasons": [
-        "RSI 49"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "RCAX",
-      "ticker_underlying": "RCAT",
-      "issuer": "Defiance",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 5.45,
-      "daily_pct": -12.1,
-      "daily_pct_underlying": -5.9,
-      "five_day_pct": -39.51,
-      "volume_ratio": 0.89,
-      "rsi": 30.4,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 73,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [
-        "monthly_bull_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": true,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 2797447.0,
-      "next_earnings": "2026-05-07",
-      "days_to_earnings": -11,
-      "earnings_window": null,
-      "eps_estimate": -0.17,
-      "rec_score": 3.0,
-      "rec_reasons": [
-        "월정배",
-        "RSI 30",
-        "과매도 바닥"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "MUU",
-      "ticker_underlying": "MU",
-      "issuer": "Direxion",
-      "expense_ratio": null,
-      "category": "Semi",
-      "price_2x": 442.77,
-      "daily_pct": -12.09,
-      "daily_pct_underlying": -5.95,
-      "five_day_pct": -27.84,
-      "volume_ratio": 1.28,
-      "rsi": 63.4,
-      "drag_6m": -97.29,
-=======
       "ticker_2x": "GLWG",
       "ticker_underlying": "GLW",
       "issuer": "LeverageShares",
@@ -2632,7 +1749,6 @@
       "volume_ratio": 1.21,
       "rsi": 63.2,
       "drag_6m": -78.82,
->>>>>>> Stashed changes
       "underlying_6m_pct": 176.34,
       "history_days_2x": 251,
       "proxy_fields": [],
@@ -2650,107 +1766,11 @@
       ],
       "sectors": [
         "Semi"
-<<<<<<< Updated upstream
       ],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-      "dollar_volume_20d": 1069325906.0,
-      "next_earnings": "2026-06-25",
-      "days_to_earnings": 38,
-      "earnings_window": null,
-      "eps_estimate": 18.97141,
-      "rec_score": 4.0,
-      "rec_reasons": [
-        "월정배",
-        "일정배"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "MSTX",
-      "ticker_underlying": "MSTR",
-      "issuer": "Defiance",
-      "expense_ratio": null,
-      "category": "Crypto",
-      "price_2x": 31.39,
-      "daily_pct": -12.0,
-      "daily_pct_underlying": -6.08,
-      "five_day_pct": -29.01,
-      "volume_ratio": 0.86,
-      "rsi": 48.9,
-      "drag_6m": 23.96,
-      "underlying_6m_pct": -16.58,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [],
-      "sectors": [
-        "Crypto"
-=======
->>>>>>> Stashed changes
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 113564006.0,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": 24.21188,
-      "rec_score": 2.5,
-      "rec_reasons": [
-        "RSI 49"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "MULL",
-      "ticker_underlying": "MU",
-      "issuer": "GraniteShares",
-      "expense_ratio": null,
-      "category": "Semi",
-      "price_2x": 387.09,
-      "daily_pct": -11.84,
-      "daily_pct_underlying": -5.95,
-      "five_day_pct": -28.1,
-      "volume_ratio": 1.19,
-      "rsi": 63.2,
-      "drag_6m": -78.82,
-      "underlying_6m_pct": 176.34,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop",
-        "five_day_crash"
-      ],
-      "signals": [
-        "ma_bull_align",
-        "monthly_bull_align"
-      ],
-      "sectors": [
-        "Semi"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 143881188.0,
-      "next_earnings": "2026-06-25",
-      "days_to_earnings": 38,
-      "earnings_window": null,
-      "eps_estimate": 18.97141,
-      "rec_score": 4.0,
-      "rec_reasons": [
-        "월정배",
-        "일정배"
-=======
       "dollar_volume_20d": 144196228.0,
       "rs_20d": 33.23,
       "rs_benchmark": "SOXX",
@@ -2767,7 +1787,6 @@
         "일정배",
         "섹터선도",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -2791,28 +1810,16 @@
         "big_drop",
         "five_day_crash"
       ],
-<<<<<<< Updated upstream
-      "signals": [],
-=======
       "signals": [
         "macd_above_zero",
         "macd_bear_cross",
         "macd_momentum_down"
       ],
->>>>>>> Stashed changes
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 3184268.0,
-      "next_earnings": "2026-07-28",
-      "days_to_earnings": 71,
-      "earnings_window": null,
-      "eps_estimate": 0.00057,
-      "rec_score": 0.5,
-=======
       "dollar_volume_20d": 3184403.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -2824,7 +1831,6 @@
       "miss_streak": 0,
       "avg_surprise_pct": 57.82,
       "rec_score": -2.0,
->>>>>>> Stashed changes
       "rec_reasons": [],
       "is_recommended": false
     },
@@ -2850,11 +1856,8 @@
       ],
       "signals": [
         "ma20_support",
-<<<<<<< Updated upstream
-=======
         "macd_above_zero",
         "macd_momentum_down",
->>>>>>> Stashed changes
         "monthly_bull_align"
       ],
       "sectors": [],
@@ -2862,14 +1865,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 4658019.0,
-      "next_earnings": "2026-07-29",
-      "days_to_earnings": 72,
-      "earnings_window": null,
-      "eps_estimate": -0.1454,
-      "rec_score": 3.0,
-=======
       "dollar_volume_20d": 4660764.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -2881,7 +1876,6 @@
       "miss_streak": 0,
       "avg_surprise_pct": -408.43,
       "rec_score": 2.5,
->>>>>>> Stashed changes
       "rec_reasons": [
         "월정배",
         "MA지지"
@@ -2898,11 +1892,7 @@
       "daily_pct": -10.76,
       "daily_pct_underlying": -5.3,
       "five_day_pct": -26.8,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.89,
-=======
       "volume_ratio": 0.9,
->>>>>>> Stashed changes
       "rsi": 63.2,
       "drag_6m": null,
       "underlying_6m_pct": null,
@@ -2924,15 +1914,10 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 1303215318.0,
-      "next_earnings": "2026-04-30",
-=======
       "dollar_volume_20d": 1304193201.0,
       "rs_20d": null,
       "rs_benchmark": null,
       "next_earnings": "2026-05-01",
->>>>>>> Stashed changes
       "days_to_earnings": -18,
       "earnings_window": null,
       "eps_estimate": 33.05285,
@@ -2956,11 +1941,7 @@
       "daily_pct": -10.64,
       "daily_pct_underlying": -5.3,
       "five_day_pct": -26.74,
-<<<<<<< Updated upstream
-      "volume_ratio": 1.16,
-=======
       "volume_ratio": 1.17,
->>>>>>> Stashed changes
       "rsi": 63.2,
       "drag_6m": null,
       "underlying_6m_pct": null,
@@ -2971,31 +1952,17 @@
         "five_day_crash"
       ],
       "signals": [
-<<<<<<< Updated upstream
-        "ma_bull_align"
-=======
         "ma_bull_align",
         "macd_above_zero",
         "macd_bear_cross",
         "macd_momentum_down",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": true,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 86807384.0,
-      "next_earnings": "2026-04-30",
-      "days_to_earnings": -18,
-      "earnings_window": null,
-      "eps_estimate": 33.05285,
-      "rec_score": 3.0,
-      "rec_reasons": [
-        "일정배"
-=======
       "dollar_volume_20d": 86884548.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -3010,7 +1977,6 @@
       "rec_reasons": [
         "일정배",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -3049,13 +2015,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 42959161.0,
-=======
       "dollar_volume_20d": 42968584.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": "2026-07-30",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -3068,16 +2030,10 @@
         "정배눌림",
         "월정배",
         "일정배",
-<<<<<<< Updated upstream
-        "MA지지"
-      ],
-      "is_recommended": true
-=======
         "MA지지",
         "4분기 연속 비트"
       ],
       "is_recommended": false
->>>>>>> Stashed changes
     },
     {
       "ticker_2x": "CRMX",
@@ -3100,35 +2056,23 @@
         "five_day_crash"
       ],
       "signals": [
-<<<<<<< Updated upstream
-        "ma60_support"
-=======
         "ma60_support",
         "macd_above_zero",
         "macd_momentum_down"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 14214208.0,
-=======
       "dollar_volume_20d": 14215628.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
       "eps_estimate": null,
-<<<<<<< Updated upstream
-      "rec_score": 2.5,
-=======
       "rec_score": 2.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "MA지지",
         "RSI 41"
@@ -3157,37 +2101,26 @@
         "big_drop",
         "five_day_crash"
       ],
-<<<<<<< Updated upstream
-      "signals": [],
-=======
       "signals": [
         "macd_below_zero",
         "macd_momentum_down"
       ],
->>>>>>> Stashed changes
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": true,
       "dollar_volume_20d": null,
-<<<<<<< Updated upstream
-=======
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": "2026-08-07",
       "days_to_earnings": 80,
       "earnings_window": null,
       "eps_estimate": -0.02,
-<<<<<<< Updated upstream
-      "rec_score": 1.0,
-=======
       "beat_streak": 0,
       "miss_streak": 1,
       "avg_surprise_pct": 24.61,
       "rec_score": -0.5,
->>>>>>> Stashed changes
       "rec_reasons": [
         "RSI 38"
       ],
@@ -3217,28 +2150,16 @@
         "ma_bull_align",
         "ma20_support",
         "bull_align_pullback",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 58689961.0,
-      "next_earnings": "2026-05-06",
-      "days_to_earnings": -12,
-      "earnings_window": null,
-      "eps_estimate": 1.61518,
-      "rec_score": 8.5,
-=======
       "dollar_volume_20d": 58710877.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -3250,17 +2171,12 @@
       "miss_streak": 0,
       "avg_surprise_pct": 6.98,
       "rec_score": 9.5,
->>>>>>> Stashed changes
       "rec_reasons": [
         "정배눌림",
         "월정배",
         "일정배",
-<<<<<<< Updated upstream
-        "MA지지"
-=======
         "MA지지",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": true
     },
@@ -3274,11 +2190,7 @@
       "daily_pct": -10.02,
       "daily_pct_underlying": -5.08,
       "five_day_pct": -26.27,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.69,
-=======
       "volume_ratio": 0.7,
->>>>>>> Stashed changes
       "rsi": 55.3,
       "drag_6m": 47.96,
       "underlying_6m_pct": 4.51,
@@ -3290,16 +2202,12 @@
       ],
       "signals": [
         "ma20_support",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_bear_cross",
         "macd_momentum_down",
         "monthly_bull_align",
         "sector_leader",
         "earnings_beats"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "AI",
@@ -3309,17 +2217,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 129708977.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": -0.29642,
-      "rec_score": 4.5,
-      "rec_reasons": [
-        "월정배",
-        "MA지지"
-=======
       "dollar_volume_20d": 129841796.0,
       "rs_20d": 8.11,
       "rs_benchmark": "ARKK",
@@ -3335,7 +2232,6 @@
         "월정배",
         "MA지지",
         "섹터선도"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -3349,11 +2245,7 @@
       "daily_pct": -9.76,
       "daily_pct_underlying": -5.28,
       "five_day_pct": -34.45,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.85,
-=======
       "volume_ratio": 0.86,
->>>>>>> Stashed changes
       "rsi": 36.0,
       "drag_6m": null,
       "underlying_6m_pct": null,
@@ -3375,13 +2267,9 @@
       "near_52w_low": true,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 1679630.0,
-=======
       "dollar_volume_20d": 1680095.0,
       "rs_20d": -0.21,
       "rs_benchmark": "URA",
->>>>>>> Stashed changes
       "next_earnings": "2026-08-05",
       "days_to_earnings": 78,
       "earnings_window": null,
@@ -3418,14 +2306,10 @@
       ],
       "signals": [
         "ma60_support",
-<<<<<<< Updated upstream
-        "monthly_bull_align",
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beat_streak",
->>>>>>> Stashed changes
         "monthly_bull_near_long"
       ],
       "sectors": [],
@@ -3433,17 +2317,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 3301251.0,
-      "next_earnings": "2026-07-28",
-      "days_to_earnings": 71,
-      "earnings_window": null,
-      "eps_estimate": 2.30562,
-      "rec_score": 5.5,
-      "rec_reasons": [
-        "월정배+장기근접",
-        "MA지지",
-=======
       "dollar_volume_20d": 3301280.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -3459,7 +2332,6 @@
         "월정배+장기근접",
         "MA지지",
         "4분기 연속 비트",
->>>>>>> Stashed changes
         "RSI 44"
       ],
       "is_recommended": false
@@ -3474,11 +2346,7 @@
       "daily_pct": -9.09,
       "daily_pct_underlying": -4.61,
       "five_day_pct": -12.73,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.88,
-=======
       "volume_ratio": 0.91,
->>>>>>> Stashed changes
       "rsi": 23.7,
       "drag_6m": 12.49,
       "underlying_6m_pct": -25.29,
@@ -3498,14 +2366,6 @@
       "near_52w_low": true,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 1354464.0,
-      "next_earnings": "2026-08-01",
-      "days_to_earnings": 75,
-      "earnings_window": null,
-      "eps_estimate": null,
-      "rec_score": -2.5,
-=======
       "dollar_volume_20d": 1357661.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -3517,7 +2377,6 @@
       "miss_streak": 0,
       "avg_surprise_pct": null,
       "rec_score": -4.0,
->>>>>>> Stashed changes
       "rec_reasons": [],
       "is_recommended": false
     },
@@ -3531,11 +2390,7 @@
       "daily_pct": -4.37,
       "daily_pct_underlying": -2.28,
       "five_day_pct": -22.59,
-<<<<<<< Updated upstream
-      "volume_ratio": 1.25,
-=======
       "volume_ratio": 1.26,
->>>>>>> Stashed changes
       "rsi": 23.6,
       "drag_6m": -12.08,
       "underlying_6m_pct": -47.29,
@@ -3544,42 +2399,28 @@
       "alerts": [
         "oversold",
         "five_day_crash"
-<<<<<<< Updated upstream
-      ],
-      "signals": [],
-=======
       ],
       "signals": [
         "macd_below_zero",
         "macd_momentum_down",
         "earnings_beats"
       ],
->>>>>>> Stashed changes
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": true,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 1690441.0,
-=======
       "dollar_volume_20d": 1690925.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": "2026-08-07",
       "days_to_earnings": 80,
       "earnings_window": null,
-<<<<<<< Updated upstream
-      "eps_estimate": -0.03214,
-      "rec_score": 0.5,
-=======
       "eps_estimate": -0.02857,
       "beat_streak": 2,
       "miss_streak": 0,
       "avg_surprise_pct": 14.14,
       "rec_score": -0.5,
->>>>>>> Stashed changes
       "rec_reasons": [],
       "is_recommended": false
     },
@@ -3605,30 +2446,16 @@
       ],
       "signals": [
         "ma_bear_align",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_below_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": true,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 253371.0,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": 0.17996,
-      "rec_score": -2.5,
-      "rec_reasons": [
-        "월정배",
-=======
       "dollar_volume_20d": 253369.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -3643,7 +2470,6 @@
       "rec_reasons": [
         "월정배",
         "4분기 연속 비트",
->>>>>>> Stashed changes
         "RSI 35"
       ],
       "is_recommended": false
@@ -3688,8 +2514,10 @@
       "days_to_earnings": 85,
       "earnings_window": null,
       "eps_estimate": -0.04,
-<<<<<<< Updated upstream
-      "rec_score": 4.0,
+      "beat_streak": 0,
+      "miss_streak": 4,
+      "avg_surprise_pct": -120.21,
+      "rec_score": 2.5,
       "rec_reasons": [
         "월정배",
         "일정배"
@@ -3715,544 +2543,14 @@
       "alerts": [
         "big_drop"
       ],
-      "signals": [],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 657900.0,
-      "next_earnings": "2026-05-11",
-      "days_to_earnings": -7,
-      "earnings_window": "post",
-      "eps_estimate": 0.305,
-      "rec_score": -1.5,
-      "rec_reasons": [],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "NBIL",
-      "ticker_underlying": "NBIS",
-      "issuer": "GraniteShares",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 33.7,
-      "daily_pct": -18.3,
-      "daily_pct_underlying": -9.13,
-      "five_day_pct": 11.15,
-      "volume_ratio": 0.97,
-      "rsi": 66.4,
-      "drag_6m": 41.14,
-      "underlying_6m_pct": 139.24,
-      "history_days_2x": 154,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop"
-      ],
       "signals": [
-        "ma_bull_align"
-      ],
-      "sectors": [
-        "AI"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 44166722.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": -0.74387,
-      "rec_score": 2.5,
-      "rec_reasons": [
-        "일정배"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "NEBX",
-      "ticker_underlying": "NBIS",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 104.64,
-      "daily_pct": -18.1,
-      "daily_pct_underlying": -9.13,
-      "five_day_pct": 11.69,
-      "volume_ratio": 0.86,
-      "rsi": 66.4,
-      "drag_6m": 43.63,
-      "underlying_6m_pct": 139.24,
-      "history_days_2x": 174,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop"
-      ],
-      "signals": [
-        "ma_bull_align"
-      ],
-      "sectors": [
-        "AI"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 79534493.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": -0.74387,
-      "rec_score": 2.5,
-      "rec_reasons": [
-        "일정배"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "ONDU",
-      "ticker_underlying": "ONDS",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 8.62,
-      "daily_pct": -17.83,
-      "daily_pct_underlying": -8.66,
-      "five_day_pct": 0.0,
-      "volume_ratio": 1.54,
-      "rsi": 42.0,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 87,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop"
-      ],
-      "signals": [
-        "dead_cross",
-        "monthly_bull_align",
-        "monthly_bull_near_long"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 1346359.0,
-      "next_earnings": "2026-08-12",
-      "days_to_earnings": 86,
-      "earnings_window": null,
-      "eps_estimate": -0.06,
-      "rec_score": 2.5,
-      "rec_reasons": [
-        "월정배+장기근접",
-        "RSI 42"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "ONDL",
-      "ticker_underlying": "ONDS",
-      "issuer": "Defiance",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 14.78,
-      "daily_pct": -17.71,
-      "daily_pct_underlying": -8.66,
-      "five_day_pct": -1.27,
-      "volume_ratio": 1.07,
-      "rsi": 41.5,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 96,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop"
-      ],
-      "signals": [
-        "dead_cross",
-        "monthly_bull_align",
-        "monthly_bull_near_long"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 26768156.0,
-      "next_earnings": "2026-08-12",
-      "days_to_earnings": 86,
-      "earnings_window": null,
-      "eps_estimate": -0.06,
-      "rec_score": 3.0,
-      "rec_reasons": [
-        "월정배+장기근접",
-        "RSI 42"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "AAOX",
-      "ticker_underlying": "AAOI",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 56.11,
-      "daily_pct": -17.49,
-      "daily_pct_underlying": -8.98,
-      "five_day_pct": -16.12,
-      "volume_ratio": 1.77,
-      "rsi": 54.9,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 39,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop"
-      ],
-      "signals": [
-        "ma_bull_align",
-        "ma20_support",
-        "bull_align_pullback",
-        "monthly_bull_align"
-      ],
-      "sectors": [
-        "AI",
-        "Semi"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": 238084808.0,
-      "next_earnings": "2026-08-07",
-      "days_to_earnings": 81,
-      "earnings_window": null,
-      "eps_estimate": 0.015,
-      "rec_score": 9.5,
-      "rec_reasons": [
-        "정배눌림",
-        "월정배",
-        "일정배",
-        "MA지지"
-      ],
-      "is_recommended": true
-    },
-    {
-      "ticker_2x": "AAOG",
-      "ticker_underlying": "AAOI",
-      "issuer": "LeverageShares",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 12.55,
-      "daily_pct": -17.38,
-      "daily_pct_underlying": -8.98,
-      "five_day_pct": -12.59,
-      "volume_ratio": null,
-      "rsi": 58.2,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 5,
-      "proxy_fields": [
-        "rsi",
-        "five_day"
-      ],
-      "alerts": [
-        "big_drop"
-      ],
-      "signals": [
-        "ma_bull_align",
-        "ma20_support",
-        "bull_align_pullback",
-        "monthly_bull_align"
-      ],
-      "sectors": [
-        "AI",
-        "Semi"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": null,
-      "next_earnings": "2026-08-07",
-      "days_to_earnings": 81,
-      "earnings_window": null,
-      "eps_estimate": 0.015,
-      "rec_score": 8.0,
-      "rec_reasons": [
-        "정배눌림",
-        "월정배",
-        "일정배",
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "VRTL",
-      "ticker_underlying": "VRT",
-      "issuer": "GraniteShares",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 174.69,
-      "daily_pct": -16.44,
-      "daily_pct_underlying": -8.41,
-      "five_day_pct": -15.77,
-      "volume_ratio": 1.46,
-      "rsi": 59.2,
-      "drag_6m": -2.23,
-      "underlying_6m_pct": 98.83,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop"
-      ],
-      "signals": [
-        "ma_bull_align",
-        "ma20_support",
-        "bull_align_pullback",
-        "monthly_bull_align"
-      ],
-      "sectors": [
-        "AI"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 16086822.0,
-      "next_earnings": "2026-07-29",
-      "days_to_earnings": 72,
-      "earnings_window": null,
-      "eps_estimate": 1.42783,
-      "rec_score": 8.5,
-      "rec_reasons": [
-        "정배눌림",
-        "월정배",
-        "일정배",
-        "MA지지"
-      ],
-      "is_recommended": true
-    },
-    {
-      "ticker_2x": "QUBX",
-      "ticker_underlying": "QUBT",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 12.86,
-      "daily_pct": -15.28,
-      "daily_pct_underlying": -7.52,
-      "five_day_pct": -14.21,
-      "volume_ratio": 0.84,
-      "rsi": 53.6,
-      "drag_6m": 35.67,
-      "underlying_6m_pct": -8.35,
-      "history_days_2x": 227,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop"
-      ],
-      "signals": [
-        "ma120_support"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 11959468.0,
-      "next_earnings": "2026-08-11",
-      "days_to_earnings": 85,
-      "earnings_window": null,
-      "eps_estimate": -0.08,
-      "rec_score": 2.0,
-      "rec_reasons": [
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "LABX",
-      "ticker_underlying": "ALAB",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 51.44,
-      "daily_pct": -14.98,
-      "daily_pct_underlying": -7.35,
-      "five_day_pct": 5.63,
-      "volume_ratio": 0.68,
-      "rsi": 61.6,
-      "drag_6m": 65.48,
-      "underlying_6m_pct": 49.36,
-      "history_days_2x": 193,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop"
-      ],
-      "signals": [],
-      "sectors": [
-        "AI",
-        "Semi"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 20517193.0,
-      "next_earnings": "2026-08-05",
-      "days_to_earnings": 79,
-      "earnings_window": null,
-      "eps_estimate": 0.69059,
-      "rec_score": 1.0,
-      "rec_reasons": [],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "BEX",
-      "ticker_underlying": "BE",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 51.94,
-      "daily_pct": -12.76,
-      "daily_pct_underlying": -6.25,
-      "five_day_pct": -18.65,
-      "volume_ratio": 1.02,
-      "rsi": 54.6,
-      "drag_6m": 75.81,
-      "underlying_6m_pct": 131.22,
-      "history_days_2x": 127,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop"
-      ],
-      "signals": [
-        "ma_bull_align",
-        "monthly_bull_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 45775502.0,
-      "next_earnings": "2026-04-28",
-      "days_to_earnings": -20,
-      "earnings_window": null,
-      "eps_estimate": 0.38607,
-      "rec_score": 4.5,
-      "rec_reasons": [
-=======
-      "beat_streak": 0,
-      "miss_streak": 4,
-      "avg_surprise_pct": -120.21,
-      "rec_score": 2.5,
-      "rec_reasons": [
->>>>>>> Stashed changes
-        "월정배",
-        "일정배"
-      ],
-      "is_recommended": false
-    },
-    {
-<<<<<<< Updated upstream
-      "ticker_2x": "CIEG",
-      "ticker_underlying": "CIEN",
-      "issuer": "LeverageShares",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 12.01,
-      "daily_pct": -12.14,
-      "daily_pct_underlying": -5.4,
-      "five_day_pct": -19.58,
-      "volume_ratio": null,
-      "rsi": 59.4,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 5,
-      "proxy_fields": [
-        "rsi",
-        "five_day"
-      ],
-      "alerts": [
-        "big_drop"
-      ],
-      "signals": [
-        "ma_bull_align",
-        "monthly_bull_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": null,
-      "next_earnings": "2026-06-04",
-      "days_to_earnings": 17,
-      "earnings_window": null,
-      "eps_estimate": 1.45863,
-      "rec_score": 4.0,
-      "rec_reasons": [
-        "월정배",
-        "일정배"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "CIFU",
-      "ticker_underlying": "CIFR",
-      "issuer": "REX",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 23.0,
-      "daily_pct": -12.05,
-      "daily_pct_underlying": -5.95,
-      "five_day_pct": -12.61,
-      "volume_ratio": 0.9,
-      "rsi": 53.9,
-=======
-      "ticker_2x": "FGRU",
-      "ticker_underlying": "FIGR",
-      "issuer": "REX",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 18.29,
-      "daily_pct": -22.73,
-      "daily_pct_underlying": -10.86,
-      "five_day_pct": -3.94,
-      "volume_ratio": 1.25,
-      "rsi": 59.0,
->>>>>>> Stashed changes
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 121,
-      "proxy_fields": [],
-      "alerts": [
-        "big_drop"
-      ],
-      "signals": [
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 6888632.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": -0.055,
-      "rec_score": 2.0,
-=======
       "dollar_volume_20d": 660312.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -4876,7 +3174,6 @@
       "miss_streak": 2,
       "avg_surprise_pct": -153.91,
       "rec_score": -0.5,
->>>>>>> Stashed changes
       "rec_reasons": [
         "월정배"
       ],
@@ -4892,11 +3189,7 @@
       "daily_pct": -11.18,
       "daily_pct_underlying": -5.29,
       "five_day_pct": -19.61,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.84,
-=======
       "volume_ratio": 0.85,
->>>>>>> Stashed changes
       "rsi": 49.1,
       "drag_6m": 69.44,
       "underlying_6m_pct": 92.36,
@@ -4907,14 +3200,10 @@
       ],
       "signals": [
         "ma_bull_align",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "sector_leader"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Crypto"
@@ -4923,17 +3212,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 7315860.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": -0.1725,
-      "rec_score": 4.5,
-      "rec_reasons": [
-        "월정배",
-        "일정배",
-=======
       "dollar_volume_20d": 7321012.0,
       "rs_20d": 9.19,
       "rs_benchmark": "ARKK",
@@ -4949,7 +3227,6 @@
         "월정배",
         "일정배",
         "섹터선도",
->>>>>>> Stashed changes
         "RSI 49"
       ],
       "is_recommended": false
@@ -4964,11 +3241,7 @@
       "daily_pct": -10.85,
       "daily_pct_underlying": -5.49,
       "five_day_pct": -12.8,
-<<<<<<< Updated upstream
-      "volume_ratio": 1.21,
-=======
       "volume_ratio": 1.22,
->>>>>>> Stashed changes
       "rsi": 53.9,
       "drag_6m": -8.47,
       "underlying_6m_pct": -43.63,
@@ -4979,27 +3252,16 @@
       ],
       "signals": [
         "ma20_support",
-<<<<<<< Updated upstream
-        "monthly_bear_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bear_align",
         "earnings_beats"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 3214598.0,
-      "next_earnings": "2026-07-23",
-      "days_to_earnings": 66,
-      "earnings_window": null,
-      "eps_estimate": -0.17761,
-=======
       "dollar_volume_20d": 3217145.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -5010,7 +3272,6 @@
       "beat_streak": 3,
       "miss_streak": 0,
       "avg_surprise_pct": 2.33,
->>>>>>> Stashed changes
       "rec_score": -1.0,
       "rec_reasons": [
         "MA지지"
@@ -5042,15 +3303,11 @@
         "ma_bull_align",
         "ma20_support",
         "bull_align_pullback",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "sector_laggard",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Semi"
@@ -5060,12 +3317,6 @@
       "volume_up_candle": false,
       "is_new": true,
       "dollar_volume_20d": null,
-<<<<<<< Updated upstream
-      "next_earnings": "2026-08-13",
-      "days_to_earnings": 87,
-      "earnings_window": null,
-      "eps_estimate": 3.38265,
-=======
       "rs_20d": -13.15,
       "rs_benchmark": "SOXX",
       "next_earnings": "2026-08-14",
@@ -5075,22 +3326,15 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 8.36,
->>>>>>> Stashed changes
       "rec_score": 8.0,
       "rec_reasons": [
         "정배눌림",
         "월정배",
         "일정배",
-<<<<<<< Updated upstream
-        "MA지지"
-      ],
-      "is_recommended": true
-=======
         "MA지지",
         "4분기 연속 비트"
       ],
       "is_recommended": false
->>>>>>> Stashed changes
     },
     {
       "ticker_2x": "AMAU",
@@ -5118,15 +3362,11 @@
         "ma_bull_align",
         "ma20_support",
         "bull_align_pullback",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "sector_laggard",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Semi"
@@ -5136,12 +3376,6 @@
       "volume_up_candle": false,
       "is_new": true,
       "dollar_volume_20d": null,
-<<<<<<< Updated upstream
-      "next_earnings": "2026-08-13",
-      "days_to_earnings": 87,
-      "earnings_window": null,
-      "eps_estimate": 3.38265,
-=======
       "rs_20d": -13.15,
       "rs_benchmark": "SOXX",
       "next_earnings": "2026-08-14",
@@ -5151,18 +3385,13 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 8.36,
->>>>>>> Stashed changes
       "rec_score": 8.0,
       "rec_reasons": [
         "정배눌림",
         "월정배",
         "일정배",
-<<<<<<< Updated upstream
-        "MA지지"
-=======
         "MA지지",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -5173,21 +3402,12 @@
       "expense_ratio": null,
       "category": "Other",
       "price_2x": 0.74,
-<<<<<<< Updated upstream
-      "daily_pct": -10.26,
-      "daily_pct_underlying": -5.13,
-      "five_day_pct": -10.26,
-      "volume_ratio": 0.52,
-      "rsi": 46.1,
-      "drag_6m": -30.88,
-=======
       "daily_pct": -10.24,
       "daily_pct_underlying": -5.13,
       "five_day_pct": -10.24,
       "volume_ratio": 0.53,
       "rsi": 46.1,
       "drag_6m": -30.89,
->>>>>>> Stashed changes
       "underlying_6m_pct": -59.65,
       "history_days_2x": 251,
       "proxy_fields": [],
@@ -5196,15 +3416,11 @@
       ],
       "signals": [
         "ma_bear_align",
-<<<<<<< Updated upstream
-        "monthly_bear_align"
-=======
         "macd_below_zero",
         "macd_momentum_down",
         "monthly_bear_align",
         "sector_laggard",
         "earnings_miss_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "EV"
@@ -5213,14 +3429,6 @@
       "near_52w_low": true,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 1083875.0,
-      "next_earnings": "2026-08-05",
-      "days_to_earnings": 79,
-      "earnings_window": null,
-      "eps_estimate": -2.382,
-      "rec_score": -6.0,
-=======
       "dollar_volume_20d": 1084118.0,
       "rs_20d": -15.3,
       "rs_benchmark": "LIT",
@@ -5232,7 +3440,6 @@
       "miss_streak": 4,
       "avg_surprise_pct": -17.32,
       "rec_score": -9.5,
->>>>>>> Stashed changes
       "rec_reasons": [
         "RSI 46"
       ],
@@ -5258,13 +3465,9 @@
         "big_drop"
       ],
       "signals": [
-<<<<<<< Updated upstream
-        "monthly_bear_align"
-=======
         "macd_below_zero",
         "monthly_bear_align",
         "sector_laggard"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Fintech"
@@ -5273,14 +3476,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 1803619.0,
-      "next_earnings": "2026-08-05",
-      "days_to_earnings": 79,
-      "earnings_window": null,
-      "eps_estimate": 0.58622,
-      "rec_score": -1.0,
-=======
       "dollar_volume_20d": 1804617.0,
       "rs_20d": -18.16,
       "rs_benchmark": "XLF",
@@ -5292,7 +3487,6 @@
       "miss_streak": 1,
       "avg_surprise_pct": 10.92,
       "rec_score": -2.5,
->>>>>>> Stashed changes
       "rec_reasons": [
         "RSI 32",
         "과매도 바닥"
@@ -5305,19 +3499,11 @@
       "issuer": "Defiance",
       "expense_ratio": null,
       "category": "Other",
-<<<<<<< Updated upstream
-      "price_2x": 67.05,
-      "daily_pct": -10.02,
-      "daily_pct_underlying": -4.78,
-      "five_day_pct": -7.02,
-      "volume_ratio": 1.43,
-=======
       "price_2x": 67.04,
       "daily_pct": -10.02,
       "daily_pct_underlying": -4.78,
       "five_day_pct": -7.02,
       "volume_ratio": 1.44,
->>>>>>> Stashed changes
       "rsi": 66.5,
       "drag_6m": null,
       "underlying_6m_pct": null,
@@ -5327,28 +3513,16 @@
         "big_drop"
       ],
       "signals": [
-<<<<<<< Updated upstream
-        "ma_bull_align"
-=======
         "ma_bull_align",
         "macd_above_zero",
         "macd_momentum_down",
         "earnings_miss_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 613253.0,
-      "next_earnings": "2026-08-10",
-      "days_to_earnings": 84,
-      "earnings_window": null,
-      "eps_estimate": null,
-      "rec_score": 0.0,
-=======
       "dollar_volume_20d": 613655.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -5360,7 +3534,6 @@
       "miss_streak": 4,
       "avg_surprise_pct": -379.47,
       "rec_score": -1.5,
->>>>>>> Stashed changes
       "rec_reasons": [
         "일정배"
       ],
@@ -5376,11 +3549,7 @@
       "daily_pct": -10.0,
       "daily_pct_underlying": -5.08,
       "five_day_pct": -26.34,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.59,
-=======
       "volume_ratio": 0.6,
->>>>>>> Stashed changes
       "rsi": 55.5,
       "drag_6m": 44.75,
       "underlying_6m_pct": 4.51,
@@ -5391,16 +3560,12 @@
       ],
       "signals": [
         "ma20_support",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_bear_cross",
         "macd_momentum_down",
         "monthly_bull_align",
         "sector_leader",
         "earnings_beats"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "AI",
@@ -5410,17 +3575,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 40022459.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": -0.29642,
-      "rec_score": 3.5,
-      "rec_reasons": [
-        "월정배",
-        "MA지지"
-=======
       "dollar_volume_20d": 40051031.0,
       "rs_20d": 8.11,
       "rs_benchmark": "ARKK",
@@ -5436,7 +3590,6 @@
         "월정배",
         "MA지지",
         "섹터선도"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -5499,140 +3652,33 @@
       "category": "Other",
       "price_2x": 5.83,
       "daily_pct": -9.05,
-<<<<<<< Updated upstream
-      "daily_pct_underlying": 0.56,
-      "five_day_pct": -18.46,
-      "volume_ratio": 0.95,
-      "rsi": 35.2,
-      "drag_6m": -4.39,
-      "underlying_6m_pct": -35.6,
-=======
       "daily_pct_underlying": -0.11,
       "five_day_pct": -18.46,
       "volume_ratio": 0.98,
       "rsi": 35.2,
       "drag_6m": -5.25,
       "underlying_6m_pct": -36.02,
->>>>>>> Stashed changes
       "history_days_2x": 251,
       "proxy_fields": [],
       "alerts": [
         "bb_breakdown"
-<<<<<<< Updated upstream
-=======
       ],
       "signals": [
         "macd_below_zero",
         "macd_momentum_down"
->>>>>>> Stashed changes
       ],
-      "signals": [],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 883489.0,
-=======
       "dollar_volume_20d": 885064.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
       "eps_estimate": null,
-<<<<<<< Updated upstream
-      "rec_score": -1.0,
-      "rec_reasons": [
-        "RSI 35"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "ETNG",
-      "ticker_underlying": "ETN",
-      "issuer": "LeverageShares",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 12.37,
-      "daily_pct": -9.01,
-      "daily_pct_underlying": -4.4,
-      "five_day_pct": -17.72,
-      "volume_ratio": null,
-      "rsi": 40.0,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 4,
-      "proxy_fields": [
-        "rsi",
-        "bb",
-        "five_day"
-      ],
-      "alerts": [
-        "bb_breakdown"
-      ],
-      "signals": [
-        "monthly_bull_align",
-        "monthly_bull_near_long"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": null,
-      "next_earnings": "2026-08-04",
-      "days_to_earnings": 78,
-      "earnings_window": null,
-      "eps_estimate": 3.07521,
-      "rec_score": 4.5,
-      "rec_reasons": [
-        "월정배+장기근접",
-        "RSI 40"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "MPWX",
-      "ticker_underlying": "MPWR",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 21.23,
-      "daily_pct": -8.49,
-      "daily_pct_underlying": -4.11,
-      "five_day_pct": -20.78,
-      "volume_ratio": null,
-      "rsi": 47.6,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 17,
-      "proxy_fields": [],
-      "alerts": [
-        "five_day_crash"
-      ],
-      "signals": [
-        "monthly_bull_align"
-      ],
-      "sectors": [
-        "AI",
-        "Semi"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": null,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": 5.85953,
-      "rec_score": 2.5,
-      "rec_reasons": [
-        "월정배",
-=======
       "rec_score": -2.5,
       "rec_reasons": [
         "RSI 35"
@@ -5738,7 +3784,6 @@
         "월정배",
         "섹터선도",
         "4분기 연속 비트",
->>>>>>> Stashed changes
         "RSI 48"
       ],
       "is_recommended": false
@@ -5753,11 +3798,7 @@
       "daily_pct": -6.53,
       "daily_pct_underlying": -3.19,
       "five_day_pct": -10.33,
-<<<<<<< Updated upstream
-      "volume_ratio": 1.19,
-=======
       "volume_ratio": 1.28,
->>>>>>> Stashed changes
       "rsi": 21.7,
       "drag_6m": 16.53,
       "underlying_6m_pct": -11.65,
@@ -5768,14 +3809,10 @@
       ],
       "signals": [
         "ma_bear_align",
-<<<<<<< Updated upstream
-        "dead_cross"
-=======
         "dead_cross",
         "macd_below_zero",
         "sector_laggard",
         "earnings_beats"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "EV"
@@ -5784,14 +3821,6 @@
       "near_52w_low": true,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 1667679.0,
-      "next_earnings": "2026-04-30",
-      "days_to_earnings": -18,
-      "earnings_window": null,
-      "eps_estimate": -0.62963,
-      "rec_score": -4.5,
-=======
       "dollar_volume_20d": 1673848.0,
       "rs_20d": -21.29,
       "rs_benchmark": "LIT",
@@ -5803,7 +3832,6 @@
       "miss_streak": 0,
       "avg_surprise_pct": 2.46,
       "rec_score": -5.5,
->>>>>>> Stashed changes
       "rec_reasons": [],
       "is_recommended": false
     },
@@ -5826,16 +3854,12 @@
       "alerts": [
         "five_day_crash"
       ],
-<<<<<<< Updated upstream
-      "signals": [],
-=======
       "signals": [
         "macd_above_zero",
         "macd_bear_cross",
         "macd_momentum_down",
         "sector_laggard"
       ],
->>>>>>> Stashed changes
       "sectors": [
         "Fintech",
         "Crypto"
@@ -5844,14 +3868,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 199653175.0,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": 0.11728,
-      "rec_score": 2.5,
-=======
       "dollar_volume_20d": 199770249.0,
       "rs_20d": -8.79,
       "rs_benchmark": "XLF",
@@ -5863,7 +3879,6 @@
       "miss_streak": 2,
       "avg_surprise_pct": -886.31,
       "rec_score": -1.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "RSI 46"
       ],
@@ -5876,15 +3891,9 @@
       "expense_ratio": null,
       "category": "Other",
       "price_2x": 15.4,
-<<<<<<< Updated upstream
-      "daily_pct": -5.97,
-      "daily_pct_underlying": -2.62,
-      "five_day_pct": -1.71,
-=======
       "daily_pct": -5.98,
       "daily_pct_underlying": -2.62,
       "five_day_pct": -1.72,
->>>>>>> Stashed changes
       "volume_ratio": 0.75,
       "rsi": 29.1,
       "drag_6m": null,
@@ -5895,30 +3904,16 @@
         "oversold"
       ],
       "signals": [
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_below_zero",
         "macd_momentum_up",
         "monthly_bull_align",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": true,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 348345.0,
-      "next_earnings": "2026-07-29",
-      "days_to_earnings": 72,
-      "earnings_window": null,
-      "eps_estimate": 1.17282,
-      "rec_score": -0.5,
-      "rec_reasons": [
-        "월정배"
-=======
       "dollar_volume_20d": 348353.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -5934,7 +3929,6 @@
         "월정배",
         "MACD모멘텀↑",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -5975,421 +3969,16 @@
       "days_to_earnings": 78,
       "earnings_window": null,
       "eps_estimate": -0.053,
-<<<<<<< Updated upstream
-      "rec_score": -4.5,
-      "rec_reasons": [],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "CCUP",
-      "ticker_underlying": "CRCL",
-      "issuer": "REX",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 5.36,
-      "daily_pct": -5.13,
-      "daily_pct_underlying": -2.29,
-      "five_day_pct": -29.93,
-      "volume_ratio": 0.82,
-      "rsi": 55.5,
-      "drag_6m": 67.97,
-      "underlying_6m_pct": 36.02,
-      "history_days_2x": 194,
-      "proxy_fields": [],
-      "alerts": [
-        "five_day_crash"
-      ],
-      "signals": [
-        "ma_bull_align",
-        "ma20_support",
-        "bull_align_pullback"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 24354436.0,
-      "next_earnings": "2026-08-11",
-      "days_to_earnings": 85,
-      "earnings_window": null,
-      "eps_estimate": 0.23063,
-      "rec_score": 7.0,
-      "rec_reasons": [
-        "정배눌림",
-        "일정배",
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "CRCG",
-      "ticker_underlying": "CRCL",
-      "issuer": "LeverageShares",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 31.5,
-      "daily_pct": -4.79,
-      "daily_pct_underlying": -2.29,
-      "five_day_pct": -29.79,
-      "volume_ratio": 0.6,
-      "rsi": 55.5,
-      "drag_6m": 69.76,
-      "underlying_6m_pct": 36.02,
-      "history_days_2x": 194,
-      "proxy_fields": [],
-      "alerts": [
-        "five_day_crash"
-      ],
-      "signals": [
-        "ma_bull_align",
-        "ma20_support",
-        "bull_align_pullback"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 98518739.0,
-      "next_earnings": "2026-08-11",
-      "days_to_earnings": 85,
-      "earnings_window": null,
-      "eps_estimate": 0.23063,
-      "rec_score": 7.0,
-      "rec_reasons": [
-        "정배눌림",
-        "일정배",
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "HLXX",
-      "ticker_underlying": "HL",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 21.52,
-      "daily_pct": -4.59,
-      "daily_pct_underlying": -2.15,
-      "five_day_pct": -31.93,
-      "volume_ratio": 2.79,
-      "rsi": 45.9,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 39,
-      "proxy_fields": [],
-      "alerts": [
-        "five_day_crash"
-      ],
-      "signals": [
-        "monthly_bull_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": true,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": 42114.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": 0.20895,
-      "rec_score": 0.5,
-      "rec_reasons": [
-        "월정배",
-        "RSI 46"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "PAAU",
-      "ticker_underlying": "PAAS",
-      "issuer": "REX",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 18.68,
-      "daily_pct": -4.44,
-      "daily_pct_underlying": -2.15,
-      "five_day_pct": -22.51,
-      "volume_ratio": 0.89,
-      "rsi": 53.5,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 47,
-      "proxy_fields": [],
-      "alerts": [
-        "five_day_crash"
-      ],
-      "signals": [
-        "monthly_bull_align",
-        "monthly_bull_near_long"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": 101101.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": 1.22722,
-      "rec_score": 2.0,
-=======
       "beat_streak": 0,
       "miss_streak": 2,
       "avg_surprise_pct": -70.42,
       "rec_score": -4.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "MACD모멘텀↑"
       ],
       "is_recommended": false
     },
     {
-<<<<<<< Updated upstream
-      "ticker_2x": "VSTL",
-      "ticker_underlying": "VST",
-      "issuer": "Defiance",
-      "expense_ratio": null,
-      "category": "Nuclear",
-      "price_2x": 22.56,
-      "daily_pct": -4.24,
-      "daily_pct_underlying": -2.1,
-      "five_day_pct": -19.72,
-      "volume_ratio": 1.39,
-      "rsi": 26.3,
-      "drag_6m": 7.74,
-      "underlying_6m_pct": -21.5,
-      "history_days_2x": 208,
-      "proxy_fields": [],
-      "alerts": [
-        "oversold"
-      ],
-      "signals": [
-        "ma_bear_align"
-      ],
-      "sectors": [
-        "Nuclear"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": true,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 2292048.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": 2.59081,
-      "rec_score": -3.0,
-      "rec_reasons": [],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "CEGX",
-      "ticker_underlying": "CEG",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 13.5,
-      "daily_pct": -3.57,
-      "daily_pct_underlying": -1.95,
-      "five_day_pct": -23.86,
-      "volume_ratio": 1.97,
-      "rsi": 30.5,
-      "drag_6m": 4.63,
-      "underlying_6m_pct": -22.29,
-      "history_days_2x": 215,
-      "proxy_fields": [],
-      "alerts": [
-        "five_day_crash"
-      ],
-      "signals": [
-        "ma_bear_align",
-        "dead_cross"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": true,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 2743321.0,
-      "next_earnings": "2026-08-10",
-      "days_to_earnings": 84,
-      "earnings_window": null,
-      "eps_estimate": 2.52649,
-      "rec_score": -4.0,
-      "rec_reasons": [
-        "RSI 30"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "INTW",
-      "ticker_underlying": "INTC",
-      "issuer": "GraniteShares",
-      "expense_ratio": null,
-      "category": "Semi",
-      "price_2x": 267.86,
-      "daily_pct": -1.18,
-      "daily_pct_underlying": -0.55,
-      "five_day_pct": -31.33,
-      "volume_ratio": 1.13,
-      "rsi": 61.1,
-      "drag_6m": -132.52,
-      "underlying_6m_pct": 204.53,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [
-        "five_day_crash"
-      ],
-      "signals": [
-        "ma_bull_align"
-      ],
-      "sectors": [
-        "Semi"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 266330297.0,
-      "next_earnings": "2026-07-24",
-      "days_to_earnings": 67,
-      "earnings_window": null,
-      "eps_estimate": 0.21038,
-      "rec_score": 2.5,
-      "rec_reasons": [
-        "일정배"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "METU",
-      "ticker_underlying": "META",
-      "issuer": "Direxion",
-      "expense_ratio": null,
-      "category": "Mag7",
-      "price_2x": 24.73,
-      "daily_pct": -1.16,
-      "daily_pct_underlying": -0.49,
-      "five_day_pct": 3.82,
-      "volume_ratio": 0.73,
-      "rsi": 24.1,
-      "drag_6m": 11.8,
-      "underlying_6m_pct": 0.45,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [
-        "oversold"
-      ],
-      "signals": [],
-      "sectors": [
-        "Mag7"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 127324426.0,
-      "next_earnings": "2026-07-30",
-      "days_to_earnings": 73,
-      "earnings_window": null,
-      "eps_estimate": 7.48333,
-      "rec_score": 2.0,
-      "rec_reasons": [],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "FBL",
-      "ticker_underlying": "META",
-      "issuer": "GraniteShares",
-      "expense_ratio": null,
-      "category": "Mag7",
-      "price_2x": 25.39,
-      "daily_pct": -1.01,
-      "daily_pct_underlying": -0.49,
-      "five_day_pct": 3.93,
-      "volume_ratio": 0.64,
-      "rsi": 24.1,
-      "drag_6m": 11.1,
-      "underlying_6m_pct": 0.45,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [
-        "oversold"
-      ],
-      "signals": [],
-      "sectors": [
-        "Mag7"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 39078966.0,
-      "next_earnings": "2026-07-30",
-      "days_to_earnings": 73,
-      "earnings_window": null,
-      "eps_estimate": 7.48333,
-      "rec_score": 1.0,
-      "rec_reasons": [],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "PONX",
-      "ticker_underlying": "PONY",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 4.96,
-      "daily_pct": -0.4,
-      "daily_pct_underlying": -0.72,
-      "five_day_pct": -17.96,
-      "volume_ratio": 1.31,
-      "rsi": 26.3,
-      "drag_6m": -1.83,
-      "underlying_6m_pct": -36.59,
-      "history_days_2x": 174,
-      "proxy_fields": [],
-      "alerts": [
-        "oversold"
-      ],
-      "signals": [
-        "ma_bear_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": true,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 242862.0,
-      "next_earnings": "2026-05-26",
-      "days_to_earnings": 8,
-      "earnings_window": null,
-      "eps_estimate": -0.12621,
-      "rec_score": -5.0,
-      "rec_reasons": [],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "BU",
-      "ticker_underlying": "B",
-      "issuer": "Defiance",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 19.51,
-      "daily_pct": -0.01,
-      "daily_pct_underlying": -0.02,
-      "five_day_pct": -26.09,
-      "volume_ratio": 3.49,
-      "rsi": 52.5,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 123,
-=======
       "ticker_2x": "CCUP",
       "ticker_underlying": "CRCL",
       "issuer": "REX",
@@ -6404,7 +3993,6 @@
       "drag_6m": 67.97,
       "underlying_6m_pct": 36.02,
       "history_days_2x": 194,
->>>>>>> Stashed changes
       "proxy_fields": [],
       "alerts": [
         "five_day_crash"
@@ -6422,13 +4010,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 38570.0,
-=======
       "dollar_volume_20d": 24385182.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": "2026-08-11",
       "days_to_earnings": 84,
       "earnings_window": null,
@@ -6495,60 +4079,11 @@
       "is_recommended": false
     },
     {
-      "ticker_2x": "SOFX",
-      "ticker_underlying": "SOFI",
-      "issuer": "Defiance",
+      "ticker_2x": "HLXX",
+      "ticker_underlying": "HL",
+      "issuer": "Tradr",
       "expense_ratio": null,
       "category": "Other",
-<<<<<<< Updated upstream
-      "price_2x": 8.37,
-      "daily_pct": 1.21,
-      "daily_pct_underlying": 0.64,
-      "five_day_pct": -7.87,
-      "volume_ratio": 0.8,
-      "rsi": 29.2,
-      "drag_6m": -11.64,
-      "underlying_6m_pct": -43.53,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [
-        "oversold"
-      ],
-      "signals": [
-        "ma_bear_align"
-      ],
-      "sectors": [
-        "Fintech"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": true,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 14608202.0,
-      "next_earnings": "2026-07-28",
-      "days_to_earnings": 71,
-      "earnings_window": null,
-      "eps_estimate": 0.11576,
-      "rec_score": -2.5,
-      "rec_reasons": [],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "QCML",
-      "ticker_underlying": "QCOM",
-      "issuer": "GraniteShares",
-      "expense_ratio": null,
-      "category": "Semi",
-      "price_2x": 26.52,
-      "daily_pct": 2.24,
-      "daily_pct_underlying": 1.07,
-      "five_day_pct": -28.48,
-      "volume_ratio": 0.49,
-      "rsi": 63.5,
-      "drag_6m": 17.18,
-      "underlying_6m_pct": 18.4,
-      "history_days_2x": 251,
-=======
       "price_2x": 21.52,
       "daily_pct": -4.61,
       "daily_pct_underlying": -2.15,
@@ -6558,7 +4093,6 @@
       "drag_6m": null,
       "underlying_6m_pct": null,
       "history_days_2x": 39,
->>>>>>> Stashed changes
       "proxy_fields": [],
       "alerts": [
         "five_day_crash"
@@ -6568,9 +4102,7 @@
         "macd_momentum_down",
         "monthly_bull_align"
       ],
-      "sectors": [
-        "Semi"
-      ],
+      "sectors": [],
       "near_52w_high": false,
       "near_52w_low": true,
       "volume_up_candle": false,
@@ -6622,17 +4154,6 @@
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
-<<<<<<< Updated upstream
-      "is_new": false,
-      "dollar_volume_20d": 71334622.0,
-      "next_earnings": "2026-07-30",
-      "days_to_earnings": 73,
-      "earnings_window": null,
-      "eps_estimate": 2.22896,
-      "rec_score": 2.5,
-      "rec_reasons": [
-        "월정배"
-=======
       "is_new": true,
       "dollar_volume_20d": 101102.0,
       "rs_20d": null,
@@ -7074,7 +4595,6 @@
         "월정배",
         "섹터선도",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -7109,13 +4629,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 531148.0,
-=======
       "dollar_volume_20d": 531049.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": "2026-04-29",
       "days_to_earnings": -20,
       "earnings_window": null,
@@ -7140,11 +4656,7 @@
       "daily_pct": 16.25,
       "daily_pct_underlying": -8.04,
       "five_day_pct": 23.0,
-<<<<<<< Updated upstream
-      "volume_ratio": 1.43,
-=======
       "volume_ratio": 1.44,
->>>>>>> Stashed changes
       "rsi": 27.1,
       "drag_6m": null,
       "underlying_6m_pct": null,
@@ -7154,36 +4666,23 @@
         "oversold"
       ],
       "signals": [
-<<<<<<< Updated upstream
-        "ma20_support"
-=======
         "ma20_support",
         "macd_above_zero",
         "macd_momentum_down",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 7427793.0,
-=======
       "dollar_volume_20d": 7434889.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": "2026-07-30",
       "days_to_earnings": 72,
       "earnings_window": null,
       "eps_estimate": null,
-<<<<<<< Updated upstream
-      "rec_score": 1.0,
-      "rec_reasons": [
-        "MA지지"
-=======
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 102.36,
@@ -7191,7 +4690,6 @@
       "rec_reasons": [
         "MA지지",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -7225,13 +4723,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 5720313.0,
-=======
       "dollar_volume_20d": 5722264.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": "2026-07-31",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -7255,39 +4749,23 @@
       "daily_pct": -9.43,
       "daily_pct_underlying": -4.68,
       "five_day_pct": -18.13,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.96,
-=======
       "volume_ratio": 0.97,
->>>>>>> Stashed changes
       "rsi": 53.6,
       "drag_6m": 60.76,
       "underlying_6m_pct": 8.82,
       "history_days_2x": 144,
       "proxy_fields": [],
       "alerts": [],
-<<<<<<< Updated upstream
-      "signals": [],
-=======
       "signals": [
         "macd_above_zero",
         "macd_bear_cross",
         "macd_momentum_down"
       ],
->>>>>>> Stashed changes
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 202285411.0,
-      "next_earnings": "2026-05-07",
-      "days_to_earnings": -11,
-      "earnings_window": null,
-      "eps_estimate": -0.395,
-      "rec_score": 2.0,
-=======
       "dollar_volume_20d": 202409599.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -7299,7 +4777,6 @@
       "miss_streak": 0,
       "avg_surprise_pct": -162.68,
       "rec_score": -0.5,
->>>>>>> Stashed changes
       "rec_reasons": [],
       "is_recommended": false
     },
@@ -7327,14 +4804,10 @@
         "ma_bull_align",
         "ma20_support",
         "bull_align_pullback",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -7348,24 +4821,16 @@
       "days_to_earnings": -12,
       "earnings_window": null,
       "eps_estimate": 1.61518,
-<<<<<<< Updated upstream
-      "rec_score": 8.0,
-=======
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 6.98,
       "rec_score": 9.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "정배눌림",
         "월정배",
         "일정배",
-<<<<<<< Updated upstream
-        "MA지지"
-=======
         "MA지지",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": true
     },
@@ -7379,11 +4844,7 @@
       "daily_pct": -9.36,
       "daily_pct_underlying": -4.68,
       "five_day_pct": -18.02,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.86,
-=======
       "volume_ratio": 0.87,
->>>>>>> Stashed changes
       "rsi": 53.9,
       "drag_6m": 56.21,
       "underlying_6m_pct": 8.82,
@@ -7400,14 +4861,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 41890690.0,
-      "next_earnings": "2026-05-07",
-      "days_to_earnings": -11,
-      "earnings_window": null,
-      "eps_estimate": -0.395,
-      "rec_score": 1.0,
-=======
       "dollar_volume_20d": 41917470.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -7419,7 +4872,6 @@
       "miss_streak": 0,
       "avg_surprise_pct": -162.68,
       "rec_score": -1.5,
->>>>>>> Stashed changes
       "rec_reasons": [],
       "is_recommended": false
     },
@@ -7456,13 +4908,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 78443423.0,
-      "next_earnings": "2026-05-28",
-      "days_to_earnings": 10,
-      "earnings_window": null,
-      "eps_estimate": 0.79663,
-=======
       "dollar_volume_20d": 78481421.0,
       "rs_20d": -4.49,
       "rs_benchmark": "SOXX",
@@ -7473,7 +4918,6 @@
       "beat_streak": 2,
       "miss_streak": 0,
       "avg_surprise_pct": 1.17,
->>>>>>> Stashed changes
       "rec_score": 8.5,
       "rec_reasons": [
         "정배눌림",
@@ -7501,14 +4945,10 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "ma60_support"
-=======
         "ma60_support",
         "macd_above_zero",
         "macd_momentum_down",
         "sector_laggard"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "AI"
@@ -7517,14 +4957,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 57161898.0,
-      "next_earnings": "2026-05-07",
-      "days_to_earnings": -11,
-      "earnings_window": null,
-      "eps_estimate": -1.0347,
-      "rec_score": 2.5,
-=======
       "dollar_volume_20d": 57184993.0,
       "rs_20d": -5.57,
       "rs_benchmark": "ARKK",
@@ -7536,7 +4968,6 @@
       "miss_streak": 2,
       "avg_surprise_pct": -3.38,
       "rec_score": 1.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "MA지지",
         "RSI 48"
@@ -7553,11 +4984,7 @@
       "daily_pct": -6.68,
       "daily_pct_underlying": -3.29,
       "five_day_pct": -18.93,
-<<<<<<< Updated upstream
-      "volume_ratio": 1.68,
-=======
       "volume_ratio": 1.69,
->>>>>>> Stashed changes
       "rsi": 47.7,
       "drag_6m": 60.1,
       "underlying_6m_pct": 34.14,
@@ -7565,14 +4992,10 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "ma60_support"
-=======
         "ma60_support",
         "macd_above_zero",
         "macd_momentum_down",
         "sector_laggard"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "AI"
@@ -7581,14 +5004,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 12733881.0,
-      "next_earnings": "2026-05-07",
-      "days_to_earnings": -11,
-      "earnings_window": null,
-      "eps_estimate": -1.0347,
-      "rec_score": 2.5,
-=======
       "dollar_volume_20d": 12742013.0,
       "rs_20d": -5.57,
       "rs_benchmark": "ARKK",
@@ -7600,7 +5015,6 @@
       "miss_streak": 2,
       "avg_surprise_pct": -3.38,
       "rec_score": 1.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "MA지지",
         "RSI 48"
@@ -7617,11 +5031,7 @@
       "daily_pct": -6.67,
       "daily_pct_underlying": -3.29,
       "five_day_pct": -8.0,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.43,
-=======
       "volume_ratio": 0.44,
->>>>>>> Stashed changes
       "rsi": 63.7,
       "drag_6m": 11.75,
       "underlying_6m_pct": -15.75,
@@ -7640,13 +5050,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 110691668.0,
-=======
       "dollar_volume_20d": 110751491.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": "2026-06-11",
       "days_to_earnings": 23,
       "earnings_window": null,
@@ -7670,38 +5076,23 @@
       "daily_pct": -6.58,
       "daily_pct_underlying": -3.52,
       "five_day_pct": -11.08,
-<<<<<<< Updated upstream
-      "volume_ratio": 1.23,
-=======
       "volume_ratio": 1.28,
->>>>>>> Stashed changes
       "rsi": 38.6,
       "drag_6m": -6.91,
       "underlying_6m_pct": 75.27,
       "history_days_2x": 215,
       "proxy_fields": [],
       "alerts": [],
-<<<<<<< Updated upstream
-      "signals": [],
-=======
       "signals": [
         "macd_above_zero",
         "macd_momentum_down",
         "earnings_beats"
       ],
->>>>>>> Stashed changes
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 8680737.0,
-      "next_earnings": "2026-07-29",
-      "days_to_earnings": 72,
-      "earnings_window": null,
-      "eps_estimate": 2.90576,
-=======
       "dollar_volume_20d": 8703033.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -7712,7 +5103,6 @@
       "beat_streak": 2,
       "miss_streak": 0,
       "avg_surprise_pct": 272.35,
->>>>>>> Stashed changes
       "rec_score": 1.0,
       "rec_reasons": [
         "RSI 39"
@@ -7727,21 +5117,12 @@
       "category": "Other",
       "price_2x": 18.95,
       "daily_pct": -5.92,
-<<<<<<< Updated upstream
-      "daily_pct_underlying": -0.39,
-      "five_day_pct": -12.71,
-      "volume_ratio": 0.68,
-      "rsi": 49.7,
-      "drag_6m": 8.58,
-      "underlying_6m_pct": -19.09,
-=======
       "daily_pct_underlying": -0.95,
       "five_day_pct": -12.71,
       "volume_ratio": 0.68,
       "rsi": 49.7,
       "drag_6m": 7.68,
       "underlying_6m_pct": -19.54,
->>>>>>> Stashed changes
       "history_days_2x": 251,
       "proxy_fields": [],
       "alerts": [],
@@ -7754,22 +5135,14 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 1177668.0,
-=======
       "dollar_volume_20d": 1177857.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
       "eps_estimate": null,
-<<<<<<< Updated upstream
-      "rec_score": 1.0,
-=======
       "rec_score": 0.5,
->>>>>>> Stashed changes
       "rec_reasons": [
         "RSI 50"
       ],
@@ -7794,11 +5167,8 @@
       "alerts": [],
       "signals": [
         "ma20_support",
-<<<<<<< Updated upstream
-=======
         "macd_above_zero",
         "macd_momentum_down",
->>>>>>> Stashed changes
         "monthly_bull_align",
         "monthly_bull_near_long"
       ],
@@ -7810,55 +5180,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 69184837.0,
-      "next_earnings": "2026-07-23",
-      "days_to_earnings": 66,
-      "earnings_window": null,
-      "eps_estimate": 0.45438,
-      "rec_score": 5.5,
-      "rec_reasons": [
-        "월정배+장기근접",
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "TSLR",
-      "ticker_underlying": "TSLA",
-      "issuer": "GraniteShares",
-      "expense_ratio": null,
-      "category": "Mag7",
-      "price_2x": 24.21,
-      "daily_pct": -5.72,
-      "daily_pct_underlying": -2.9,
-      "five_day_pct": -15.7,
-      "volume_ratio": 1.17,
-      "rsi": 60.5,
-      "drag_6m": 12.12,
-      "underlying_6m_pct": 1.39,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma20_support",
-        "monthly_bull_align",
-        "monthly_bull_near_long"
-      ],
-      "sectors": [
-        "Mag7",
-        "EV"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 57637026.0,
-=======
       "dollar_volume_20d": 69222716.0,
       "rs_20d": -4.68,
       "rs_benchmark": "QQQ",
->>>>>>> Stashed changes
       "next_earnings": "2026-07-23",
       "days_to_earnings": 65,
       "earnings_window": null,
@@ -7932,11 +5256,7 @@
       "daily_pct": -5.71,
       "daily_pct_underlying": -2.9,
       "five_day_pct": -15.65,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.92,
-=======
       "volume_ratio": 0.93,
->>>>>>> Stashed changes
       "rsi": 60.4,
       "drag_6m": 13.43,
       "underlying_6m_pct": 1.39,
@@ -7945,11 +5265,8 @@
       "alerts": [],
       "signals": [
         "ma20_support",
-<<<<<<< Updated upstream
-=======
         "macd_above_zero",
         "macd_momentum_down",
->>>>>>> Stashed changes
         "monthly_bull_align",
         "monthly_bull_near_long"
       ],
@@ -7961,26 +5278,17 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 1357863298.0,
-=======
       "dollar_volume_20d": 1359796414.0,
       "rs_20d": -4.68,
       "rs_benchmark": "QQQ",
->>>>>>> Stashed changes
       "next_earnings": "2026-07-23",
       "days_to_earnings": 65,
       "earnings_window": null,
-<<<<<<< Updated upstream
-      "eps_estimate": 0.45438,
-      "rec_score": 6.5,
-=======
       "eps_estimate": 0.45396,
       "beat_streak": 0,
       "miss_streak": 1,
       "avg_surprise_pct": -9.27,
       "rec_score": 6.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "월정배+장기근접",
         "MA지지"
@@ -8005,27 +5313,15 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "ma_bull_align"
-=======
         "ma_bull_align",
         "macd_above_zero",
         "macd_momentum_down"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 2851624.0,
-      "next_earnings": "2026-05-06",
-      "days_to_earnings": -12,
-      "earnings_window": null,
-      "eps_estimate": -0.06,
-      "rec_score": 2.5,
-=======
       "dollar_volume_20d": 2852049.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -8037,7 +5333,6 @@
       "miss_streak": 1,
       "avg_surprise_pct": 117.9,
       "rec_score": 2.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "일정배"
       ],
@@ -8050,11 +5345,7 @@
       "expense_ratio": null,
       "category": "Other",
       "price_2x": 13.06,
-<<<<<<< Updated upstream
-      "daily_pct": -4.82,
-=======
       "daily_pct": -4.81,
->>>>>>> Stashed changes
       "daily_pct_underlying": -2.74,
       "five_day_pct": -13.56,
       "volume_ratio": null,
@@ -8105,11 +5396,7 @@
       "daily_pct": -4.74,
       "daily_pct_underlying": -2.37,
       "five_day_pct": -11.76,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.55,
-=======
       "volume_ratio": 0.56,
->>>>>>> Stashed changes
       "rsi": 60.5,
       "drag_6m": -13.21,
       "underlying_6m_pct": 88.02,
@@ -8120,16 +5407,12 @@
         "ma_bull_align",
         "ma20_support",
         "bull_align_pullback",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_bear_cross",
         "macd_momentum_down",
         "monthly_bull_align",
         "sector_laggard",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Semi"
@@ -8138,19 +5421,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 5492224.0,
-      "next_earnings": "2026-07-30",
-      "days_to_earnings": 73,
-      "earnings_window": null,
-      "eps_estimate": 1.6774,
-      "rec_score": 8.0,
-      "rec_reasons": [
-        "정배눌림",
-        "월정배",
-        "일정배",
-        "MA지지"
-=======
       "dollar_volume_20d": 5494735.0,
       "rs_20d": -13.13,
       "rs_benchmark": "SOXX",
@@ -8220,55 +5490,10 @@
         "일정배",
         "섹터선도",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": true
     },
     {
-<<<<<<< Updated upstream
-      "ticker_2x": "TSMX",
-      "ticker_underlying": "TSM",
-      "issuer": "Direxion",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 75.46,
-      "daily_pct": -4.47,
-      "daily_pct_underlying": -2.08,
-      "five_day_pct": -4.9,
-      "volume_ratio": 0.69,
-      "rsi": 50.4,
-      "drag_6m": 7.84,
-      "underlying_6m_pct": 39.79,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma_bull_align",
-        "monthly_bull_align"
-      ],
-      "sectors": [
-        "AI",
-        "Semi"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 100929703.0,
-      "next_earnings": "2026-07-16",
-      "days_to_earnings": 59,
-      "earnings_window": null,
-      "eps_estimate": 3.73677,
-      "rec_score": 5.5,
-      "rec_reasons": [
-        "월정배",
-        "일정배"
-      ],
-      "is_recommended": false
-    },
-    {
-=======
->>>>>>> Stashed changes
       "ticker_2x": "MRAL",
       "ticker_underlying": "MARA",
       "issuer": "GraniteShares",
@@ -8278,11 +5503,7 @@
       "daily_pct": -4.33,
       "daily_pct_underlying": -2.09,
       "five_day_pct": -18.76,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.81,
-=======
       "volume_ratio": 0.82,
->>>>>>> Stashed changes
       "rsi": 56.4,
       "drag_6m": 36.39,
       "underlying_6m_pct": 1.58,
@@ -8293,15 +5514,11 @@
         "ma_bull_align",
         "ma20_support",
         "bull_align_pullback",
-<<<<<<< Updated upstream
-        "monthly_bear_align"
-=======
         "macd_above_zero",
         "macd_bear_cross",
         "macd_momentum_down",
         "monthly_bear_align",
         "sector_leader"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Crypto"
@@ -8310,18 +5527,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 8068341.0,
-      "next_earnings": "2026-07-29",
-      "days_to_earnings": 72,
-      "earnings_window": null,
-      "eps_estimate": -0.51,
-      "rec_score": 4.0,
-      "rec_reasons": [
-        "정배눌림",
-        "일정배",
-        "MA지지"
-=======
       "dollar_volume_20d": 8074158.0,
       "rs_20d": 10.79,
       "rs_benchmark": "ARKK",
@@ -8338,7 +5543,6 @@
         "일정배",
         "MA지지",
         "섹터선도"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -8361,15 +5565,11 @@
       "alerts": [],
       "signals": [
         "ma_bull_align",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "sector_leader",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "AI",
@@ -8379,17 +5579,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 8459420.0,
-      "next_earnings": "2026-07-16",
-      "days_to_earnings": 59,
-      "earnings_window": null,
-      "eps_estimate": 3.73677,
-      "rec_score": 4.0,
-      "rec_reasons": [
-        "월정배",
-        "일정배"
-=======
       "dollar_volume_20d": 8462631.0,
       "rs_20d": 14.18,
       "rs_benchmark": "ARKK",
@@ -8406,7 +5595,6 @@
         "일정배",
         "섹터선도",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -8419,11 +5607,7 @@
       "price_2x": 8.77,
       "daily_pct": -3.85,
       "daily_pct_underlying": -2.14,
-<<<<<<< Updated upstream
-      "five_day_pct": -7.59,
-=======
       "five_day_pct": -7.6,
->>>>>>> Stashed changes
       "volume_ratio": 0.67,
       "rsi": 50.8,
       "drag_6m": 20.24,
@@ -8431,14 +5615,10 @@
       "history_days_2x": 169,
       "proxy_fields": [],
       "alerts": [],
-<<<<<<< Updated upstream
-      "signals": [],
-=======
       "signals": [
         "macd_above_zero",
         "macd_momentum_down"
       ],
->>>>>>> Stashed changes
       "sectors": [
         "Fintech"
       ],
@@ -8446,199 +5626,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 470067.0,
-      "next_earnings": "2026-05-07",
-      "days_to_earnings": -11,
-      "earnings_window": null,
-      "eps_estimate": 0.8288,
-      "rec_score": -1.5,
-      "rec_reasons": [],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "ARCX",
-      "ticker_underlying": "ACHR",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 18.28,
-      "daily_pct": -3.79,
-      "daily_pct_underlying": -2.15,
-      "five_day_pct": -18.5,
-      "volume_ratio": 1.32,
-      "rsi": 50.4,
-      "drag_6m": 7.24,
-      "underlying_6m_pct": -24.87,
-      "history_days_2x": 236,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "golden_cross"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 1026618.0,
-      "next_earnings": "2026-08-11",
-      "days_to_earnings": 85,
-      "earnings_window": null,
-      "eps_estimate": -0.22121,
-      "rec_score": 2.5,
-      "rec_reasons": [
-        "골드크로스"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "UNX",
-      "ticker_underlying": "U",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 42.53,
-      "daily_pct": -3.78,
-      "daily_pct_underlying": -1.33,
-      "five_day_pct": -0.78,
-      "volume_ratio": 0.23,
-      "rsi": 50.7,
-      "drag_6m": 15.5,
-      "underlying_6m_pct": -27.02,
-      "history_days_2x": 169,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma20_support",
-        "monthly_bear_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 345157.0,
-      "next_earnings": "2026-08-05",
-      "days_to_earnings": 79,
-      "earnings_window": null,
-      "eps_estimate": 0.2429,
-      "rec_score": -3.0,
-      "rec_reasons": [
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "LLYX",
-      "ticker_underlying": "LLY",
-      "issuer": "Defiance",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 19.31,
-      "daily_pct": -3.21,
-      "daily_pct_underlying": -1.67,
-      "five_day_pct": 4.27,
-      "volume_ratio": 0.62,
-      "rsi": 68.0,
-      "drag_6m": 11.92,
-      "underlying_6m_pct": -3.3,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "monthly_bull_align",
-        "monthly_bull_near_long"
-      ],
-      "sectors": [
-        "Bio"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 14819301.0,
-      "next_earnings": "2026-08-05",
-      "days_to_earnings": 79,
-      "earnings_window": null,
-      "eps_estimate": 8.80842,
-      "rec_score": 4.0,
-      "rec_reasons": [
-        "월정배+장기근접"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "APPX",
-      "ticker_underlying": "APP",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 39.37,
-      "daily_pct": -3.13,
-      "daily_pct_underlying": -1.72,
-      "five_day_pct": 4.79,
-      "volume_ratio": 0.56,
-      "rsi": 58.2,
-      "drag_6m": 24.76,
-      "underlying_6m_pct": -11.71,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "monthly_bull_align",
-        "monthly_bull_near_long"
-      ],
-      "sectors": [
-        "AI"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 37069052.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": 4.09241,
-      "rec_score": 4.5,
-      "rec_reasons": [
-        "월정배+장기근접"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "MRNX",
-      "ticker_underlying": "MRNA",
-      "issuer": "Defiance",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 22.21,
-      "daily_pct": -3.05,
-      "daily_pct_underlying": -1.9,
-      "five_day_pct": -17.12,
-      "volume_ratio": 0.72,
-      "rsi": 50.8,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 72,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [],
-      "sectors": [
-        "Bio"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 918294.0,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": -1.95,
-      "rec_score": -1.5,
-=======
       "dollar_volume_20d": 470077.0,
       "rs_20d": -2.26,
       "rs_benchmark": "XLF",
@@ -8650,13 +5637,10 @@
       "miss_streak": 0,
       "avg_surprise_pct": 46.68,
       "rec_score": -2.0,
->>>>>>> Stashed changes
       "rec_reasons": [],
       "is_recommended": false
     },
     {
-<<<<<<< Updated upstream
-=======
       "ticker_2x": "ARCX",
       "ticker_underlying": "ACHR",
       "issuer": "Tradr",
@@ -8893,7 +5877,6 @@
       "is_recommended": false
     },
     {
->>>>>>> Stashed changes
       "ticker_2x": "DLLL",
       "ticker_underlying": "DELL",
       "issuer": "GraniteShares",
@@ -8903,11 +5886,7 @@
       "daily_pct": -2.96,
       "daily_pct_underlying": -1.64,
       "five_day_pct": -7.42,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.59,
-=======
       "volume_ratio": 0.6,
->>>>>>> Stashed changes
       "rsi": 62.5,
       "drag_6m": -1.9,
       "underlying_6m_pct": 79.28,
@@ -8916,16 +5895,12 @@
       "alerts": [],
       "signals": [
         "ma_bull_align",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_bear_cross",
         "macd_momentum_down",
         "monthly_bull_align",
         "sector_leader",
         "earnings_beats"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "AI"
@@ -8934,17 +5909,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 10292661.0,
-      "next_earnings": "2026-05-29",
-      "days_to_earnings": 11,
-      "earnings_window": null,
-      "eps_estimate": 2.9412,
-      "rec_score": 4.5,
-      "rec_reasons": [
-        "월정배",
-        "일정배"
-=======
       "dollar_volume_20d": 10306339.0,
       "rs_20d": 22.97,
       "rs_benchmark": "ARKK",
@@ -8960,7 +5924,6 @@
         "월정배",
         "일정배",
         "섹터선도"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -8974,11 +5937,7 @@
       "daily_pct": -2.74,
       "daily_pct_underlying": -1.33,
       "five_day_pct": 2.16,
-<<<<<<< Updated upstream
-      "volume_ratio": 1.23,
-=======
       "volume_ratio": 1.24,
->>>>>>> Stashed changes
       "rsi": 55.3,
       "drag_6m": 12.27,
       "underlying_6m_pct": 16.92,
@@ -8987,14 +5946,10 @@
       "alerts": [],
       "signals": [
         "ma_bull_align",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Mag7",
@@ -9005,18 +5960,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 86373096.0,
-      "next_earnings": "2026-05-21",
-      "days_to_earnings": 3,
-      "earnings_window": "soon",
-      "eps_estimate": 1.77461,
-      "rec_score": 4.0,
-      "rec_reasons": [
-        "월정배",
-        "일정배",
-        "실적 D-3"
-=======
       "dollar_volume_20d": 86422383.0,
       "rs_20d": 0.89,
       "rs_benchmark": "QQQ",
@@ -9033,7 +5976,6 @@
         "일정배",
         "4분기 연속 비트",
         "실적 D-2"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -9056,14 +5998,10 @@
       "alerts": [],
       "signals": [
         "ma_bull_align",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Mag7",
@@ -9074,18 +6012,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 235249175.0,
-      "next_earnings": "2026-05-21",
-      "days_to_earnings": 3,
-      "earnings_window": "soon",
-      "eps_estimate": 1.77461,
-      "rec_score": 5.0,
-      "rec_reasons": [
-        "월정배",
-        "일정배",
-        "실적 D-3"
-=======
       "dollar_volume_20d": 235356382.0,
       "rs_20d": 0.89,
       "rs_benchmark": "QQQ",
@@ -9102,7 +6028,6 @@
         "일정배",
         "4분기 연속 비트",
         "실적 D-2"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -9116,11 +6041,7 @@
       "daily_pct": -2.64,
       "daily_pct_underlying": -1.33,
       "five_day_pct": 1.95,
-<<<<<<< Updated upstream
-      "volume_ratio": 1.3,
-=======
       "volume_ratio": 1.31,
->>>>>>> Stashed changes
       "rsi": 55.3,
       "drag_6m": 12.13,
       "underlying_6m_pct": 16.92,
@@ -9129,14 +6050,10 @@
       "alerts": [],
       "signals": [
         "ma_bull_align",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Mag7",
@@ -9147,18 +6064,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 960634727.0,
-      "next_earnings": "2026-05-21",
-      "days_to_earnings": 3,
-      "earnings_window": "soon",
-      "eps_estimate": 1.77461,
-      "rec_score": 5.0,
-      "rec_reasons": [
-        "월정배",
-        "일정배",
-        "실적 D-3"
-=======
       "dollar_volume_20d": 961843487.0,
       "rs_20d": 0.89,
       "rs_benchmark": "QQQ",
@@ -9175,7 +6080,6 @@
         "일정배",
         "4분기 연속 비트",
         "실적 D-2"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -9197,14 +6101,10 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "ma_bull_align"
-=======
         "ma_bull_align",
         "macd_above_zero",
         "macd_momentum_down",
         "sector_leader"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Crypto"
@@ -9213,16 +6113,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 12465905.0,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": -0.22592,
-      "rec_score": 2.5,
-      "rec_reasons": [
-        "일정배"
-=======
       "dollar_volume_20d": 12467937.0,
       "rs_20d": 34.06,
       "rs_benchmark": "ARKK",
@@ -9237,7 +6127,6 @@
       "rec_reasons": [
         "일정배",
         "섹터선도"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -9251,11 +6140,7 @@
       "daily_pct": -2.53,
       "daily_pct_underlying": -1.05,
       "five_day_pct": -4.3,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.95,
-=======
       "volume_ratio": 0.96,
->>>>>>> Stashed changes
       "rsi": 57.0,
       "drag_6m": 16.57,
       "underlying_6m_pct": 23.34,
@@ -9266,15 +6151,11 @@
         "ma_bull_align",
         "ma20_support",
         "bull_align_pullback",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "sector_laggard",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Semi"
@@ -9283,13 +6164,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 2157227.0,
-      "next_earnings": "2026-06-04",
-      "days_to_earnings": 17,
-      "earnings_window": null,
-      "eps_estimate": 2.39061,
-=======
       "dollar_volume_20d": 2158525.0,
       "rs_20d": -13.48,
       "rs_benchmark": "SOXX",
@@ -9300,18 +6174,13 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 1.97,
->>>>>>> Stashed changes
       "rec_score": 8.0,
       "rec_reasons": [
         "정배눌림",
         "월정배",
         "일정배",
-<<<<<<< Updated upstream
-        "MA지지"
-=======
         "MA지지",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": true
     },
@@ -9334,27 +6203,16 @@
       "alerts": [],
       "signals": [
         "ma_bull_align",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beats"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 15627704.0,
-      "next_earnings": "2026-07-23",
-      "days_to_earnings": 66,
-      "earnings_window": null,
-      "eps_estimate": 0.06861,
-=======
       "dollar_volume_20d": 15634043.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -9365,7 +6223,6 @@
       "beat_streak": 2,
       "miss_streak": 0,
       "avg_surprise_pct": -23.34,
->>>>>>> Stashed changes
       "rec_score": 4.5,
       "rec_reasons": [
         "월정배",
@@ -9383,27 +6240,19 @@
       "daily_pct": -2.18,
       "daily_pct_underlying": -0.71,
       "five_day_pct": -3.25,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.5,
-=======
       "volume_ratio": 0.51,
->>>>>>> Stashed changes
       "rsi": 50.0,
       "drag_6m": 7.6,
       "underlying_6m_pct": -31.39,
       "history_days_2x": 227,
       "proxy_fields": [],
       "alerts": [],
-<<<<<<< Updated upstream
-      "signals": [],
-=======
       "signals": [
         "macd_above_zero",
         "macd_momentum_down",
         "sector_leader",
         "earnings_miss_streak"
       ],
->>>>>>> Stashed changes
       "sectors": [
         "AI"
       ],
@@ -9411,15 +6260,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 5651727.0,
-      "next_earnings": "2026-08-07",
-      "days_to_earnings": 81,
-      "earnings_window": null,
-      "eps_estimate": -0.04,
-      "rec_score": 1.0,
-      "rec_reasons": [
-=======
       "dollar_volume_20d": 5654605.0,
       "rs_20d": 6.42,
       "rs_benchmark": "ARKK",
@@ -9433,7 +6273,6 @@
       "rec_score": 1.0,
       "rec_reasons": [
         "섹터선도",
->>>>>>> Stashed changes
         "RSI 50"
       ],
       "is_recommended": false
@@ -9457,15 +6296,11 @@
       "alerts": [],
       "signals": [
         "ma20_support",
-<<<<<<< Updated upstream
-        "monthly_bear_align"
-=======
         "macd_above_zero",
         "macd_bear_cross",
         "macd_momentum_down",
         "monthly_bear_align",
         "sector_leader"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Bio"
@@ -9474,16 +6309,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 11257711.0,
-      "next_earnings": "2026-08-05",
-      "days_to_earnings": 79,
-      "earnings_window": null,
-      "eps_estimate": 5.188,
-      "rec_score": -0.5,
-      "rec_reasons": [
-        "MA지지"
-=======
       "dollar_volume_20d": 11259559.0,
       "rs_20d": 16.79,
       "rs_benchmark": "XBI",
@@ -9498,7 +6323,6 @@
       "rec_reasons": [
         "MA지지",
         "섹터선도"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -9512,40 +6336,23 @@
       "daily_pct": -2.07,
       "daily_pct_underlying": -0.71,
       "five_day_pct": -19.41,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.92,
-=======
       "volume_ratio": 0.93,
->>>>>>> Stashed changes
       "rsi": 30.9,
       "drag_6m": -3.82,
       "underlying_6m_pct": -36.3,
       "history_days_2x": 251,
       "proxy_fields": [],
       "alerts": [],
-<<<<<<< Updated upstream
-      "signals": [],
-=======
       "signals": [
         "macd_below_zero",
         "macd_momentum_down",
         "earnings_beat_streak"
       ],
->>>>>>> Stashed changes
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": true,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 6166300.0,
-      "next_earnings": "2026-05-05",
-      "days_to_earnings": -13,
-      "earnings_window": null,
-      "eps_estimate": -0.16,
-      "rec_score": 1.0,
-      "rec_reasons": [
-=======
       "dollar_volume_20d": 6170048.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -9559,7 +6366,6 @@
       "rec_score": 1.0,
       "rec_reasons": [
         "4분기 연속 비트",
->>>>>>> Stashed changes
         "RSI 31"
       ],
       "is_recommended": false
@@ -9574,11 +6380,7 @@
       "daily_pct": -2.02,
       "daily_pct_underlying": -0.9,
       "five_day_pct": -8.46,
-<<<<<<< Updated upstream
-      "volume_ratio": 2.02,
-=======
       "volume_ratio": 2.01,
->>>>>>> Stashed changes
       "rsi": 44.0,
       "drag_6m": -2.2,
       "underlying_6m_pct": -27.48,
@@ -9586,27 +6388,15 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "ma_bear_align"
-=======
         "ma_bear_align",
         "macd_below_zero",
         "macd_momentum_down"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": true,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 406804.0,
-      "next_earnings": "2026-05-27",
-      "days_to_earnings": 9,
-      "earnings_window": null,
-      "eps_estimate": 16.3658,
-      "rec_score": -4.0,
-=======
       "dollar_volume_20d": 406527.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -9618,7 +6408,6 @@
       "miss_streak": 1,
       "avg_surprise_pct": 5.17,
       "rec_score": -5.5,
->>>>>>> Stashed changes
       "rec_reasons": [
         "RSI 44"
       ],
@@ -9645,15 +6434,11 @@
         "ma_bull_align",
         "ma20_support",
         "bull_align_pullback",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "sector_laggard",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Semi"
@@ -9662,13 +6447,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 26555228.0,
-      "next_earnings": "2026-06-04",
-      "days_to_earnings": 17,
-      "earnings_window": null,
-      "eps_estimate": 2.39061,
-=======
       "dollar_volume_20d": 26563851.0,
       "rs_20d": -13.48,
       "rs_benchmark": "SOXX",
@@ -9679,18 +6457,13 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 1.97,
->>>>>>> Stashed changes
       "rec_score": 8.5,
       "rec_reasons": [
         "정배눌림",
         "월정배",
         "일정배",
-<<<<<<< Updated upstream
-        "MA지지"
-=======
         "MA지지",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": true
     },
@@ -9712,14 +6485,10 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Mag7"
@@ -9728,17 +6497,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 4035841.0,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": 1.89077,
-      "rec_score": 1.5,
-      "rec_reasons": [
-        "월정배",
-        "52신고가"
-=======
       "dollar_volume_20d": 4036033.0,
       "rs_20d": 0.04,
       "rs_benchmark": "QQQ",
@@ -9754,7 +6512,6 @@
         "월정배",
         "52신고가",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -9776,14 +6533,10 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Mag7"
@@ -9792,17 +6545,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 4042563.0,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": 1.89077,
-      "rec_score": 1.5,
-      "rec_reasons": [
-        "월정배",
-        "52신고가"
-=======
       "dollar_volume_20d": 4043527.0,
       "rs_20d": 0.04,
       "rs_benchmark": "QQQ",
@@ -9818,7 +6560,6 @@
         "월정배",
         "52신고가",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -9841,15 +6582,11 @@
       "alerts": [],
       "signals": [
         "ma20_support",
-<<<<<<< Updated upstream
-        "ma120_support"
-=======
         "ma120_support",
         "macd_above_zero",
         "macd_momentum_down",
         "sector_laggard",
         "earnings_beats"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Semi"
@@ -9858,14 +6595,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 32254392.0,
-      "next_earnings": "2026-08-05",
-      "days_to_earnings": 79,
-      "earnings_window": null,
-      "eps_estimate": 0.7133,
-      "rec_score": 2.0,
-=======
       "dollar_volume_20d": 32259034.0,
       "rs_20d": -11.68,
       "rs_benchmark": "SOXX",
@@ -9877,7 +6606,6 @@
       "miss_streak": 0,
       "avg_surprise_pct": 14.82,
       "rec_score": 1.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "MA지지"
       ],
@@ -9901,14 +6629,10 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Mag7"
@@ -9917,17 +6641,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 99168429.0,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": 1.89077,
-      "rec_score": 2.0,
-      "rec_reasons": [
-        "월정배",
-        "52신고가"
-=======
       "dollar_volume_20d": 99191656.0,
       "rs_20d": 0.04,
       "rs_benchmark": "QQQ",
@@ -9943,7 +6656,6 @@
         "월정배",
         "52신고가",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -9966,15 +6678,11 @@
       "alerts": [],
       "signals": [
         "ma_bull_align",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
         "sector_leader",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Semi"
@@ -9983,17 +6691,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 585557859.0,
-      "next_earnings": "2026-08-05",
-      "days_to_earnings": 79,
-      "earnings_window": null,
-      "eps_estimate": 1.60513,
-      "rec_score": 5.0,
-      "rec_reasons": [
-        "월정배",
-        "일정배"
-=======
       "dollar_volume_20d": 585722798.0,
       "rs_20d": 34.36,
       "rs_benchmark": "SOXX",
@@ -10010,7 +6707,6 @@
         "일정배",
         "섹터선도",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -10032,27 +6728,16 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "ma_bull_align"
-=======
         "ma_bull_align",
         "macd_above_zero",
         "macd_momentum_down",
         "earnings_beats"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 16943929.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": -0.09,
-=======
       "dollar_volume_20d": 16956590.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -10063,7 +6748,6 @@
       "beat_streak": 2,
       "miss_streak": 0,
       "avg_surprise_pct": -42.48,
->>>>>>> Stashed changes
       "rec_score": 2.5,
       "rec_reasons": [
         "일정배"
@@ -10080,11 +6764,7 @@
       "daily_pct": -1.44,
       "daily_pct_underlying": -0.71,
       "five_day_pct": 27.07,
-<<<<<<< Updated upstream
-      "volume_ratio": 2.83,
-=======
       "volume_ratio": 2.85,
->>>>>>> Stashed changes
       "rsi": 74.5,
       "drag_6m": null,
       "underlying_6m_pct": null,
@@ -10092,29 +6772,15 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "ma_bull_align"
-=======
         "ma_bull_align",
         "macd_above_zero",
         "macd_momentum_up"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 13416661.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": -0.15,
-      "rec_score": 2.5,
-      "rec_reasons": [
-        "일정배"
-=======
       "dollar_volume_20d": 13452394.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -10129,7 +6795,6 @@
       "rec_reasons": [
         "일정배",
         "MACD모멘텀↑"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -10152,15 +6817,11 @@
       "alerts": [],
       "signals": [
         "ma20_support",
-<<<<<<< Updated upstream
-        "ma120_support"
-=======
         "ma120_support",
         "macd_above_zero",
         "macd_momentum_down",
         "sector_laggard",
         "earnings_beats"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Semi"
@@ -10169,14 +6830,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 47935900.0,
-      "next_earnings": "2026-08-05",
-      "days_to_earnings": 79,
-      "earnings_window": null,
-      "eps_estimate": 0.7133,
-      "rec_score": 2.0,
-=======
       "dollar_volume_20d": 47962587.0,
       "rs_20d": -11.68,
       "rs_benchmark": "SOXX",
@@ -10188,7 +6841,6 @@
       "miss_streak": 0,
       "avg_surprise_pct": 14.82,
       "rec_score": 1.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "MA지지"
       ],
@@ -10204,11 +6856,7 @@
       "daily_pct": -0.68,
       "daily_pct_underlying": -0.1,
       "five_day_pct": -8.6,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.77,
-=======
       "volume_ratio": 0.79,
->>>>>>> Stashed changes
       "rsi": 59.0,
       "drag_6m": 5.62,
       "underlying_6m_pct": -28.17,
@@ -10216,27 +6864,16 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "golden_cross"
-=======
         "golden_cross",
         "macd_above_zero",
         "macd_momentum_down",
         "earnings_beats"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 3079609.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": null,
-=======
       "dollar_volume_20d": 3082416.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -10247,7 +6884,6 @@
       "beat_streak": 2,
       "miss_streak": 0,
       "avg_surprise_pct": -20.19,
->>>>>>> Stashed changes
       "rec_score": 2.5,
       "rec_reasons": [
         "골드크로스"
@@ -10272,27 +6908,15 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "ma60_support"
-=======
         "ma60_support",
         "macd_above_zero",
         "macd_momentum_down"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 2549490.0,
-      "next_earnings": "2026-08-05",
-      "days_to_earnings": 79,
-      "earnings_window": null,
-      "eps_estimate": 0.81,
-      "rec_score": 1.5,
-=======
       "dollar_volume_20d": 2549917.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -10304,7 +6928,6 @@
       "miss_streak": 2,
       "avg_surprise_pct": 47.63,
       "rec_score": 1.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "MA지지"
       ],
@@ -10329,15 +6952,11 @@
       "alerts": [],
       "signals": [
         "ma120_support",
-<<<<<<< Updated upstream
-        "monthly_bull_align",
-=======
         "macd_below_zero",
         "macd_momentum_up",
         "monthly_bull_align",
         "sector_laggard",
         "earnings_beat_streak",
->>>>>>> Stashed changes
         "monthly_bull_near_long"
       ],
       "sectors": [
@@ -10347,17 +6966,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 8099332.0,
-      "next_earnings": "2026-08-05",
-      "days_to_earnings": 79,
-      "earnings_window": null,
-      "eps_estimate": 0.88335,
-      "rec_score": 5.5,
-      "rec_reasons": [
-        "월정배+장기근접",
-        "MA지지",
-=======
       "dollar_volume_20d": 8103663.0,
       "rs_20d": -9.0,
       "rs_benchmark": "ARKK",
@@ -10374,7 +6982,6 @@
         "MA지지",
         "MACD모멘텀↑",
         "4분기 연속 비트",
->>>>>>> Stashed changes
         "RSI 31"
       ],
       "is_recommended": false
@@ -10388,11 +6995,7 @@
       "price_2x": 21.99,
       "daily_pct": -0.36,
       "daily_pct_underlying": 0.01,
-<<<<<<< Updated upstream
-      "five_day_pct": -9.59,
-=======
       "five_day_pct": -9.6,
->>>>>>> Stashed changes
       "volume_ratio": 0.33,
       "rsi": 40.9,
       "drag_6m": -1.83,
@@ -10413,13 +7016,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 3503001.0,
-=======
       "dollar_volume_20d": 3504484.0,
       "rs_20d": -13.78,
       "rs_benchmark": "XLF",
->>>>>>> Stashed changes
       "next_earnings": "2026-07-30",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -10444,11 +7043,7 @@
       "daily_pct": -0.2,
       "daily_pct_underlying": -0.05,
       "five_day_pct": 2.82,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.83,
-=======
       "volume_ratio": 0.85,
->>>>>>> Stashed changes
       "rsi": 73.1,
       "drag_6m": 2.28,
       "underlying_6m_pct": 42.12,
@@ -10471,26 +7066,17 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 8074917.0,
-=======
       "dollar_volume_20d": 8085607.0,
       "rs_20d": 8.07,
       "rs_benchmark": "QQQ",
->>>>>>> Stashed changes
       "next_earnings": "2026-07-24",
       "days_to_earnings": 66,
       "earnings_window": null,
-<<<<<<< Updated upstream
-      "eps_estimate": 2.88458,
-      "rec_score": 4.5,
-=======
       "eps_estimate": 2.88286,
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 33.26,
       "rec_score": 5.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "월정배",
         "일정배",
@@ -10509,13 +7095,8 @@
       "price_2x": 4.76,
       "daily_pct": -0.11,
       "daily_pct_underlying": 0.0,
-<<<<<<< Updated upstream
-      "five_day_pct": -0.3,
-      "volume_ratio": 1.11,
-=======
       "five_day_pct": -0.29,
       "volume_ratio": 1.1,
->>>>>>> Stashed changes
       "rsi": 47.2,
       "drag_6m": 12.22,
       "underlying_6m_pct": -18.19,
@@ -10523,36 +7104,22 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "ma120_support"
-=======
         "ma120_support",
         "macd_above_zero",
         "macd_momentum_down"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 164151.0,
-=======
       "dollar_volume_20d": 164122.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": "2026-05-22",
       "days_to_earnings": 3,
       "earnings_window": "soon",
       "eps_estimate": 0.03,
-<<<<<<< Updated upstream
-      "rec_score": 0.0,
-      "rec_reasons": [
-        "MA지지",
-        "RSI 47"
-=======
       "beat_streak": 0,
       "miss_streak": 1,
       "avg_surprise_pct": 48.0,
@@ -10561,7 +7128,6 @@
         "MA지지",
         "RSI 47",
         "실적 D-3"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -10595,13 +7161,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 38813669.0,
-=======
       "dollar_volume_20d": 38826947.0,
       "rs_20d": -13.78,
       "rs_benchmark": "XLF",
->>>>>>> Stashed changes
       "next_earnings": "2026-07-30",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -10635,16 +7197,12 @@
       "alerts": [],
       "signals": [
         "ma_bull_align",
-<<<<<<< Updated upstream
-        "monthly_bull_align"
-=======
         "macd_above_zero",
         "macd_bear_cross",
         "macd_momentum_down",
         "monthly_bull_align",
         "sector_leader",
         "earnings_beat_streak"
->>>>>>> Stashed changes
       ],
       "sectors": [
         "Mag7"
@@ -10653,18 +7211,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 189970920.0,
-      "next_earnings": "2026-07-24",
-      "days_to_earnings": 67,
-      "earnings_window": null,
-      "eps_estimate": 2.88458,
-      "rec_score": 6.0,
-      "rec_reasons": [
-        "월정배",
-        "일정배",
-        "52신고가"
-=======
       "dollar_volume_20d": 190064183.0,
       "rs_20d": 8.5,
       "rs_benchmark": "QQQ",
@@ -10682,7 +7228,6 @@
         "52신고가",
         "섹터선도",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -10706,14 +7251,10 @@
       ],
       "alerts": [],
       "signals": [
-<<<<<<< Updated upstream
-        "ma20_support"
-=======
         "ma20_support",
         "macd_above_zero",
         "macd_bull_cross",
         "macd_momentum_up"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -10721,26 +7262,17 @@
       "volume_up_candle": false,
       "is_new": true,
       "dollar_volume_20d": null,
-<<<<<<< Updated upstream
-=======
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
       "eps_estimate": null,
-<<<<<<< Updated upstream
-      "rec_score": 0.0,
-      "rec_reasons": [
-        "MA지지"
-=======
       "rec_score": 3.5,
       "rec_reasons": [
         "MA지지",
         "MACD골크",
         "MACD모멘텀↑"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -10754,11 +7286,7 @@
       "daily_pct": 0.23,
       "daily_pct_underlying": 0.32,
       "five_day_pct": 8.62,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.63,
-=======
       "volume_ratio": 0.68,
->>>>>>> Stashed changes
       "rsi": 66.3,
       "drag_6m": 20.21,
       "underlying_6m_pct": 0.54,
@@ -10775,13 +7303,6 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 34061.0,
-      "next_earnings": "2026-08-11",
-      "days_to_earnings": 85,
-      "earnings_window": null,
-      "eps_estimate": 0.58472,
-=======
       "dollar_volume_20d": 34155.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -10792,7 +7313,6 @@
       "beat_streak": 2,
       "miss_streak": 0,
       "avg_surprise_pct": -1.17,
->>>>>>> Stashed changes
       "rec_score": -2.0,
       "rec_reasons": [],
       "is_recommended": false
@@ -10807,11 +7327,7 @@
       "daily_pct": 0.24,
       "daily_pct_underlying": 0.04,
       "five_day_pct": 4.19,
-<<<<<<< Updated upstream
-      "volume_ratio": 2.0,
-=======
       "volume_ratio": 2.01,
->>>>>>> Stashed changes
       "rsi": 73.0,
       "drag_6m": null,
       "underlying_6m_pct": null,
@@ -10834,26 +7350,17 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 1906063.0,
-=======
       "dollar_volume_20d": 1906392.0,
       "rs_20d": 8.5,
       "rs_benchmark": "QQQ",
->>>>>>> Stashed changes
       "next_earnings": "2026-07-24",
       "days_to_earnings": 66,
       "earnings_window": null,
-<<<<<<< Updated upstream
-      "eps_estimate": 2.88458,
-      "rec_score": 4.5,
-=======
       "eps_estimate": 2.88286,
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 32.79,
       "rec_score": 5.0,
->>>>>>> Stashed changes
       "rec_reasons": [
         "월정배",
         "일정배",
@@ -11767,736 +8274,6 @@
       "is_recommended": false
     },
     {
-      "ticker_2x": "AMZZ",
-      "ticker_underlying": "AMZN",
-      "issuer": "GraniteShares",
-      "expense_ratio": null,
-      "category": "Mag7",
-      "price_2x": 38.86,
-      "daily_pct": 0.34,
-      "daily_pct_underlying": 0.27,
-      "five_day_pct": -3.29,
-      "volume_ratio": 0.84,
-      "rsi": 55.6,
-      "drag_6m": 8.13,
-      "underlying_6m_pct": 12.86,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma_bull_align",
-        "monthly_bull_align"
-      ],
-      "sectors": [
-        "Mag7"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 8835853.0,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": 1.81692,
-      "rec_score": 4.0,
-      "rec_reasons": [
-        "월정배",
-        "일정배"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "AMZU",
-      "ticker_underlying": "AMZN",
-      "issuer": "Direxion",
-      "expense_ratio": null,
-      "category": "Mag7",
-      "price_2x": 42.44,
-      "daily_pct": 0.45,
-      "daily_pct_underlying": 0.27,
-      "five_day_pct": -3.3,
-      "volume_ratio": 0.66,
-      "rsi": 55.4,
-      "drag_6m": 9.9,
-      "underlying_6m_pct": 12.86,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma_bull_align",
-        "monthly_bull_align"
-      ],
-      "sectors": [
-        "Mag7"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 150438424.0,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": 1.81692,
-      "rec_score": 5.5,
-      "rec_reasons": [
-        "월정배",
-        "일정배"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "MSFL",
-      "ticker_underlying": "MSFT",
-      "issuer": "GraniteShares",
-      "expense_ratio": null,
-      "category": "Mag7",
-      "price_2x": 19.46,
-      "daily_pct": 0.67,
-      "daily_pct_underlying": 0.38,
-      "five_day_pct": 4.91,
-      "volume_ratio": 1.04,
-      "rsi": 44.7,
-      "drag_6m": 2.95,
-      "underlying_6m_pct": -16.64,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma20_support"
-      ],
-      "sectors": [
-        "Mag7"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 31445197.0,
-      "next_earnings": "2026-07-30",
-      "days_to_earnings": 73,
-      "earnings_window": null,
-      "eps_estimate": 4.24777,
-      "rec_score": 2.5,
-      "rec_reasons": [
-        "MA지지",
-        "RSI 45"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "MSFU",
-      "ticker_underlying": "MSFT",
-      "issuer": "Direxion",
-      "expense_ratio": null,
-      "category": "Mag7",
-      "price_2x": 29.45,
-      "daily_pct": 0.72,
-      "daily_pct_underlying": 0.38,
-      "five_day_pct": 5.07,
-      "volume_ratio": 1.03,
-      "rsi": 44.9,
-      "drag_6m": 3.61,
-      "underlying_6m_pct": -16.64,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma20_support"
-      ],
-      "sectors": [
-        "Mag7"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 229572777.0,
-      "next_earnings": "2026-07-30",
-      "days_to_earnings": 73,
-      "earnings_window": null,
-      "eps_estimate": 4.24777,
-      "rec_score": 3.5,
-      "rec_reasons": [
-        "MA지지",
-        "RSI 45"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "MSFX",
-      "ticker_underlying": "MSFT",
-      "issuer": "REX",
-      "expense_ratio": null,
-      "category": "Mag7",
-      "price_2x": 19.43,
-      "daily_pct": 0.78,
-      "daily_pct_underlying": 0.38,
-      "five_day_pct": 5.08,
-      "volume_ratio": 1.04,
-      "rsi": 44.7,
-      "drag_6m": 5.2,
-      "underlying_6m_pct": -16.64,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma20_support"
-      ],
-      "sectors": [
-        "Mag7"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 4576578.0,
-      "next_earnings": "2026-07-30",
-      "days_to_earnings": 73,
-      "earnings_window": null,
-      "eps_estimate": 4.24777,
-      "rec_score": 2.0,
-      "rec_reasons": [
-        "MA지지",
-        "RSI 45"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "PLU",
-      "ticker_underlying": "PL",
-      "issuer": "Defiance",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 47.34,
-      "daily_pct": 0.92,
-      "daily_pct_underlying": -0.02,
-      "five_day_pct": -0.92,
-      "volume_ratio": 1.25,
-      "rsi": 61.0,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 91,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma_bull_align",
-        "monthly_bull_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 7388520.0,
-      "next_earnings": "2026-06-05",
-      "days_to_earnings": 18,
-      "earnings_window": null,
-      "eps_estimate": -0.042,
-      "rec_score": 4.0,
-      "rec_reasons": [
-        "월정배",
-        "일정배"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "RDTL",
-      "ticker_underlying": "RDDT",
-      "issuer": "GraniteShares",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 19.13,
-      "daily_pct": 1.0,
-      "daily_pct_underlying": 0.59,
-      "five_day_pct": -1.24,
-      "volume_ratio": 0.53,
-      "rsi": 57.4,
-      "drag_6m": 13.44,
-      "underlying_6m_pct": -17.69,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma20_support"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 14344553.0,
-      "next_earnings": "2026-07-31",
-      "days_to_earnings": 74,
-      "earnings_window": null,
-      "eps_estimate": 1.44852,
-      "rec_score": 2.0,
-      "rec_reasons": [
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "BABX",
-      "ticker_underlying": "BABA",
-      "issuer": "GraniteShares",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 26.83,
-      "daily_pct": 1.05,
-      "daily_pct_underlying": 0.51,
-      "five_day_pct": -7.07,
-      "volume_ratio": 0.57,
-      "rsi": 51.1,
-      "drag_6m": 7.22,
-      "underlying_6m_pct": -13.36,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "monthly_bull_align",
-        "monthly_bull_near_long"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 30808211.0,
-      "next_earnings": "2026-05-13",
-      "days_to_earnings": -5,
-      "earnings_window": "post",
-      "eps_estimate": 10.19646,
-      "rec_score": 4.5,
-      "rec_reasons": [
-        "월정배+장기근접"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "IBX",
-      "ticker_underlying": "IBM",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 19.54,
-      "daily_pct": 1.66,
-      "daily_pct_underlying": 1.57,
-      "five_day_pct": -3.12,
-      "volume_ratio": 0.3,
-      "rsi": 39.0,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 39,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma_bear_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": 901492.0,
-      "next_earnings": "2026-07-23",
-      "days_to_earnings": 66,
-      "earnings_window": null,
-      "eps_estimate": 3.0318,
-      "rec_score": -4.0,
-      "rec_reasons": [
-        "RSI 39"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "PTIR",
-      "ticker_underlying": "PLTR",
-      "issuer": "GraniteShares",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 13.31,
-      "daily_pct": 1.68,
-      "daily_pct_underlying": 0.86,
-      "five_day_pct": -3.06,
-      "volume_ratio": 0.79,
-      "rsi": 41.1,
-      "drag_6m": 5.06,
-      "underlying_6m_pct": -22.34,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma_bear_align",
-        "monthly_bull_align"
-      ],
-      "sectors": [
-        "AI"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 66285660.0,
-      "next_earnings": "2026-08-04",
-      "days_to_earnings": 78,
-      "earnings_window": null,
-      "eps_estimate": 0.34414,
-      "rec_score": 0.0,
-      "rec_reasons": [
-        "월정배",
-        "RSI 41"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "GMEU",
-      "ticker_underlying": "GME",
-      "issuer": "REX",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 8.58,
-      "daily_pct": 2.39,
-      "daily_pct_underlying": 1.48,
-      "five_day_pct": -11.73,
-      "volume_ratio": 0.81,
-      "rsi": 33.3,
-      "drag_6m": 23.83,
-      "underlying_6m_pct": 6.05,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "monthly_bear_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": true,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 3700486.0,
-      "next_earnings": "2026-06-10",
-      "days_to_earnings": 23,
-      "earnings_window": null,
-      "eps_estimate": 0.16,
-      "rec_score": -1.5,
-      "rec_reasons": [
-        "RSI 33"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "HONG",
-      "ticker_underlying": "HON",
-      "issuer": "LeverageShares",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 14.86,
-      "daily_pct": 3.56,
-      "daily_pct_underlying": 1.87,
-      "five_day_pct": -0.63,
-      "volume_ratio": null,
-      "rsi": 57.2,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 4,
-      "proxy_fields": [
-        "rsi",
-        "five_day"
-      ],
-      "alerts": [],
-      "signals": [
-        "ma20_support",
-        "monthly_bull_align",
-        "monthly_bull_near_long"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": true,
-      "dollar_volume_20d": null,
-      "next_earnings": "2026-07-23",
-      "days_to_earnings": 66,
-      "earnings_window": null,
-      "eps_estimate": 2.41836,
-      "rec_score": 5.0,
-      "rec_reasons": [
-        "월정배+장기근접",
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "AVXX",
-      "ticker_underlying": "AVAV",
-      "issuer": "Defiance",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 7.51,
-      "daily_pct": 4.6,
-      "daily_pct_underlying": 2.23,
-      "five_day_pct": -7.28,
-      "volume_ratio": 0.54,
-      "rsi": 30.8,
-      "drag_6m": -9.37,
-      "underlying_6m_pct": -44.53,
-      "history_days_2x": 141,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma_bear_align"
-      ],
-      "sectors": [
-        "Defense"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": true,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 2385126.0,
-      "next_earnings": "2026-06-24",
-      "days_to_earnings": 37,
-      "earnings_window": null,
-      "eps_estimate": 1.47206,
-      "rec_score": -2.0,
-      "rec_reasons": [
-        "RSI 31"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "NFLU",
-      "ticker_underlying": "NFLX",
-      "issuer": "REX",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 26.76,
-      "daily_pct": 5.77,
-      "daily_pct_underlying": 3.02,
-      "five_day_pct": 9.63,
-      "volume_ratio": 0.88,
-      "rsi": 40.2,
-      "drag_6m": 4.34,
-      "underlying_6m_pct": -19.39,
-      "history_days_2x": 251,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "dead_cross"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 3903059.0,
-      "next_earnings": "2026-07-17",
-      "days_to_earnings": 60,
-      "earnings_window": null,
-      "eps_estimate": 0.78931,
-      "rec_score": -1.0,
-      "rec_reasons": [
-        "RSI 40"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "CLSX",
-      "ticker_underlying": "CLSK",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Crypto",
-      "price_2x": 19.34,
-      "daily_pct": 5.86,
-      "daily_pct_underlying": 2.52,
-      "five_day_pct": -11.93,
-      "volume_ratio": 1.02,
-      "rsi": 58.5,
-      "drag_6m": 58.49,
-      "underlying_6m_pct": 22.63,
-      "history_days_2x": 169,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma20_support",
-        "monthly_bull_align"
-      ],
-      "sectors": [
-        "Crypto"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 5767438.0,
-      "next_earnings": "2026-08-07",
-      "days_to_earnings": 81,
-      "earnings_window": null,
-      "eps_estimate": -0.18,
-      "rec_score": 3.0,
-      "rec_reasons": [
-        "월정배",
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "DKNX",
-      "ticker_underlying": "DKNG",
-      "issuer": "Defiance",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 22.15,
-      "daily_pct": 6.12,
-      "daily_pct_underlying": 3.12,
-      "five_day_pct": 10.24,
-      "volume_ratio": 0.22,
-      "rsi": 67.4,
-      "drag_6m": 13.94,
-      "underlying_6m_pct": -12.85,
-      "history_days_2x": 201,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 278685.0,
-      "next_earnings": "2026-08-06",
-      "days_to_earnings": 80,
-      "earnings_window": null,
-      "eps_estimate": 0.33312,
-      "rec_score": -2.0,
-      "rec_reasons": [],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "PATX",
-      "ticker_underlying": "PATH",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "AI",
-      "price_2x": 7.9,
-      "daily_pct": 7.63,
-      "daily_pct_underlying": 3.6,
-      "five_day_pct": -1.24,
-      "volume_ratio": 2.22,
-      "rsi": 49.4,
-      "drag_6m": null,
-      "underlying_6m_pct": null,
-      "history_days_2x": 87,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma_bear_align",
-        "ma20_support",
-        "monthly_bear_align"
-      ],
-      "sectors": [
-        "AI"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": true,
-      "is_new": false,
-      "dollar_volume_20d": 421305.0,
-      "next_earnings": "2026-05-29",
-      "days_to_earnings": 11,
-      "earnings_window": null,
-      "eps_estimate": 0.15874,
-      "rec_score": -3.5,
-      "rec_reasons": [
-        "MA지지",
-        "거래량+양봉",
-        "RSI 49"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "KTUP",
-      "ticker_underlying": "KTOS",
-      "issuer": "REX",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 8.39,
-      "daily_pct": 7.98,
-      "daily_pct_underlying": 4.09,
-      "five_day_pct": -10.74,
-      "volume_ratio": 1.21,
-      "rsi": 36.3,
-      "drag_6m": 12.18,
-      "underlying_6m_pct": -25.16,
-      "history_days_2x": 169,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma_bear_align",
-        "monthly_bull_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 1751912.0,
-      "next_earnings": "2026-08-07",
-      "days_to_earnings": 81,
-      "earnings_window": null,
-      "eps_estimate": 0.15148,
-      "rec_score": -0.5,
-      "rec_reasons": [
-        "월정배",
-        "RSI 36"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "ASTX",
-      "ticker_underlying": "ASTS",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 34.01,
-      "daily_pct": 8.21,
-      "daily_pct_underlying": 3.78,
-      "five_day_pct": 7.59,
-      "volume_ratio": 1.31,
-      "rsi": 58.9,
-      "drag_6m": 87.7,
-      "underlying_6m_pct": 41.42,
-      "history_days_2x": 215,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma60_support",
-        "ma120_support",
-        "monthly_bull_align",
-        "monthly_bull_near_long"
-      ],
-      "sectors": [
-        "Defense"
-      ],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 163361902.0,
-      "next_earnings": "2026-08-11",
-      "days_to_earnings": 85,
-      "earnings_window": null,
-      "eps_estimate": -0.29367,
-      "rec_score": 6.5,
-      "rec_reasons": [
-        "월정배+장기근접",
-        "MA지지"
-      ],
-      "is_recommended": false
-    },
-    {
       "ticker_2x": "ISUL",
       "ticker_underlying": "ISRG",
       "issuer": "GraniteShares",
@@ -12523,13 +8300,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 1507955.0,
-=======
       "dollar_volume_20d": 1508439.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": "2026-07-22",
       "days_to_earnings": 64,
       "earnings_window": null,
@@ -12539,10 +8312,7 @@
       "avg_surprise_pct": 16.25,
       "rec_score": -1.0,
       "rec_reasons": [
-<<<<<<< Updated upstream
-=======
         "4분기 연속 비트",
->>>>>>> Stashed changes
         "RSI 34"
       ],
       "is_recommended": false
@@ -12557,11 +8327,7 @@
       "daily_pct": 8.45,
       "daily_pct_underlying": 4.17,
       "five_day_pct": 28.95,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.97,
-=======
       "volume_ratio": 0.99,
->>>>>>> Stashed changes
       "rsi": 91.1,
       "drag_6m": 23.27,
       "underlying_6m_pct": 15.12,
@@ -12582,13 +8348,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 6907290.0,
-=======
       "dollar_volume_20d": 6924483.0,
       "rs_20d": 48.93,
       "rs_benchmark": "ARKK",
->>>>>>> Stashed changes
       "next_earnings": "2026-06-04",
       "days_to_earnings": 16,
       "earnings_window": null,
@@ -12616,11 +8378,7 @@
       "daily_pct": 8.48,
       "daily_pct_underlying": 4.3,
       "five_day_pct": 18.18,
-<<<<<<< Updated upstream
-      "volume_ratio": 1.78,
-=======
       "volume_ratio": 1.82,
->>>>>>> Stashed changes
       "rsi": 70.2,
       "drag_6m": -4.52,
       "underlying_6m_pct": -36.1,
@@ -12642,13 +8400,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 3144158.0,
-=======
       "dollar_volume_20d": 3152084.0,
       "rs_20d": 15.24,
       "rs_benchmark": "ARKK",
->>>>>>> Stashed changes
       "next_earnings": "2026-05-28",
       "days_to_earnings": 9,
       "earnings_window": null,
@@ -12658,14 +8412,10 @@
       "avg_surprise_pct": 18.69,
       "rec_score": 3.0,
       "rec_reasons": [
-<<<<<<< Updated upstream
-        "MA지지"
-=======
         "MA지지",
         "MACD모멘텀↑",
         "섹터선도",
         "4분기 연속 비트"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -12679,11 +8429,7 @@
       "daily_pct": 10.28,
       "daily_pct_underlying": 5.12,
       "five_day_pct": 22.86,
-<<<<<<< Updated upstream
-      "volume_ratio": 1.38,
-=======
       "volume_ratio": 1.39,
->>>>>>> Stashed changes
       "rsi": 76.6,
       "drag_6m": 21.72,
       "underlying_6m_pct": 188.01,
@@ -12705,24 +8451,12 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 187753790.0,
-=======
       "dollar_volume_20d": 187962868.0,
       "rs_20d": 51.62,
       "rs_benchmark": "ITA",
->>>>>>> Stashed changes
       "next_earnings": "2026-08-07",
       "days_to_earnings": 80,
       "earnings_window": null,
-<<<<<<< Updated upstream
-      "eps_estimate": -0.025,
-      "rec_score": 5.0,
-      "rec_reasons": [
-        "월정배",
-        "일정배",
-        "52신고가"
-=======
       "eps_estimate": -0.03381,
       "beat_streak": 3,
       "miss_streak": 0,
@@ -12733,7 +8467,6 @@
         "일정배",
         "52신고가",
         "섹터선도"
->>>>>>> Stashed changes
       ],
       "is_recommended": false
     },
@@ -12747,11 +8480,7 @@
       "daily_pct": 10.35,
       "daily_pct_underlying": 5.3,
       "five_day_pct": 6.07,
-<<<<<<< Updated upstream
-      "volume_ratio": 0.68,
-=======
       "volume_ratio": 0.69,
->>>>>>> Stashed changes
       "rsi": 42.9,
       "drag_6m": -14.92,
       "underlying_6m_pct": -46.89,
@@ -12769,13 +8498,9 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 2943485.0,
-=======
       "dollar_volume_20d": 2945128.0,
       "rs_20d": null,
       "rs_benchmark": null,
->>>>>>> Stashed changes
       "next_earnings": "2026-08-07",
       "days_to_earnings": 80,
       "earnings_window": null,
@@ -12785,10 +8510,7 @@
       "avg_surprise_pct": 2.91,
       "rec_score": -4.0,
       "rec_reasons": [
-<<<<<<< Updated upstream
-=======
         "MACD모멘텀↑",
->>>>>>> Stashed changes
         "RSI 43"
       ],
       "is_recommended": false
@@ -12801,11 +8523,7 @@
       "category": "Other",
       "price_2x": 13.39,
       "daily_pct": 13.0,
-<<<<<<< Updated upstream
-      "daily_pct_underlying": 5.96,
-=======
       "daily_pct_underlying": 5.87,
->>>>>>> Stashed changes
       "five_day_pct": null,
       "volume_ratio": null,
       "rsi": null,
@@ -12835,97 +8553,6 @@
       "ticker_2x": "NOWL",
       "ticker_underlying": "NOW",
       "issuer": "GraniteShares",
-<<<<<<< Updated upstream
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 5.19,
-      "daily_pct": 17.42,
-      "daily_pct_underlying": 8.78,
-      "five_day_pct": 25.97,
-      "volume_ratio": 2.57,
-      "rsi": 66.5,
-      "drag_6m": -6.72,
-      "underlying_6m_pct": -39.2,
-      "history_days_2x": 213,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma60_support"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": true,
-      "is_new": false,
-      "dollar_volume_20d": 74820855.0,
-      "next_earnings": "2026-07-23",
-      "days_to_earnings": 66,
-      "earnings_window": null,
-      "eps_estimate": 0.85501,
-      "rec_score": 3.5,
-      "rec_reasons": [
-        "MA지지",
-        "거래량+양봉"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "FLYT",
-      "ticker_underlying": "FLY",
-      "issuer": "Tradr",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 31.02,
-      "daily_pct": 17.81,
-      "daily_pct_underlying": 8.71,
-      "five_day_pct": 29.52,
-      "volume_ratio": 1.1,
-      "rsi": 66.1,
-      "drag_6m": 107.36,
-      "underlying_6m_pct": 91.5,
-      "history_days_2x": 142,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma_bull_align"
-      ],
-      "sectors": [],
-      "near_52w_high": false,
-      "near_52w_low": false,
-      "volume_up_candle": false,
-      "is_new": false,
-      "dollar_volume_20d": 7521541.0,
-      "next_earnings": "2026-08-05",
-      "days_to_earnings": 79,
-      "earnings_window": null,
-      "eps_estimate": -0.51739,
-      "rec_score": 2.0,
-      "rec_reasons": [
-        "일정배"
-      ],
-      "is_recommended": false
-    },
-    {
-      "ticker_2x": "OSCX",
-      "ticker_underlying": "OSCR",
-      "issuer": "Defiance",
-      "expense_ratio": null,
-      "category": "Other",
-      "price_2x": 89.49,
-      "daily_pct": 18.29,
-      "daily_pct_underlying": 8.49,
-      "five_day_pct": 31.17,
-      "volume_ratio": 1.7,
-      "rsi": 85.6,
-      "drag_6m": 31.54,
-      "underlying_6m_pct": 82.28,
-      "history_days_2x": 162,
-      "proxy_fields": [],
-      "alerts": [],
-      "signals": [
-        "ma_bull_align",
-        "monthly_bull_align"
-=======
       "expense_ratio": null,
       "category": "Other",
       "price_2x": 5.19,
@@ -12991,22 +8618,12 @@
         "macd_above_zero",
         "macd_momentum_up",
         "earnings_beats"
->>>>>>> Stashed changes
       ],
       "sectors": [],
       "near_52w_high": false,
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 543653.0,
-      "next_earnings": "2026-05-06",
-      "days_to_earnings": -12,
-      "earnings_window": null,
-      "eps_estimate": 0.39645,
-      "rec_score": 0.5,
-      "rec_reasons": [
-=======
       "dollar_volume_20d": 7523768.0,
       "rs_20d": null,
       "rs_benchmark": null,
@@ -13063,7 +8680,6 @@
       "avg_surprise_pct": 10.1,
       "rec_score": 1.0,
       "rec_reasons": [
->>>>>>> Stashed changes
         "월정배",
         "일정배"
       ],
@@ -13079,11 +8695,7 @@
       "daily_pct": 22.99,
       "daily_pct_underlying": 11.63,
       "five_day_pct": 32.81,
-<<<<<<< Updated upstream
-      "volume_ratio": 1.24,
-=======
       "volume_ratio": 1.25,
->>>>>>> Stashed changes
       "rsi": 59.4,
       "drag_6m": null,
       "underlying_6m_pct": null,
@@ -13104,15 +8716,10 @@
       "near_52w_low": false,
       "volume_up_candle": false,
       "is_new": false,
-<<<<<<< Updated upstream
-      "dollar_volume_20d": 715648.0,
-      "next_earnings": "2026-04-30",
-=======
       "dollar_volume_20d": 715732.0,
       "rs_20d": null,
       "rs_benchmark": null,
       "next_earnings": "2026-05-01",
->>>>>>> Stashed changes
       "days_to_earnings": -18,
       "earnings_window": null,
       "eps_estimate": 0.1952,
