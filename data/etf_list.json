@@ -1,35 +1,35 @@
 {
-  "updated_at": "2026-05-19T07:28:46+09:00",
-  "total": 190,
+  "updated_at": "2026-05-20T07:35:25+09:00",
+  "total": 189,
   "per_issuer": {
     "Direxion": {
       "count": 10,
-      "ms": 353,
+      "ms": 279,
       "ok": true
     },
     "GraniteShares": {
       "count": 34,
-      "ms": 1097,
+      "ms": 581,
       "ok": true
     },
     "Defiance": {
       "count": 41,
-      "ms": 468,
+      "ms": 344,
       "ok": true
     },
     "REX": {
       "count": 31,
-      "ms": 479,
+      "ms": 288,
       "ok": true
     },
     "Tradr": {
-      "count": 62,
-      "ms": 223,
+      "count": 61,
+      "ms": 205,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 425,
+      "ms": 339,
       "ok": true
     }
   },
@@ -1003,35 +1003,27 @@
       "expense_ratio": null
     },
     {
-      "ticker_2x": "APLX",
-      "name": "APLX Tradr 2X Long APLD Daily ETF",
-      "underlying": "APLD",
+      "ticker_2x": "ASTX",
+      "name": "ASTX Tradr 2X Long ASTS Daily ETF",
+      "underlying": "ASTS",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/aplx?hsLang=en",
+      "url": "https://www.tradretfs.com/astx?hsLang=en",
       "expense_ratio": null
     },
     {
-      "ticker_2x": "COHX",
-      "name": "COHX Tradr 2X Long COHR Daily ETF",
-      "underlying": "COHR",
+      "ticker_2x": "LABX",
+      "name": "LABX Tradr 2X Long ALAB Daily ETF",
+      "underlying": "ALAB",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/cohx?hsLang=en",
+      "url": "https://www.tradretfs.com/labx?hsLang=en",
       "expense_ratio": null
     },
     {
-      "ticker_2x": "FLYT",
-      "name": "FLYT Tradr 2X Long FLY Daily ETF",
-      "underlying": "FLY",
+      "ticker_2x": "NEBX",
+      "name": "NEBX Tradr 2X Long NBIS Daily ETF",
+      "underlying": "NBIS",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/flyt?hsLang=en",
-      "expense_ratio": null
-    },
-    {
-      "ticker_2x": "NVTX",
-      "name": "NVTX Tradr 2X Long NVTS Daily ETF",
-      "underlying": "NVTS",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/nvtx?hsLang=en",
+      "url": "https://www.tradretfs.com/nebx?hsLang=en",
       "expense_ratio": null
     },
     {
@@ -1043,14 +1035,6 @@
       "expense_ratio": null
     },
     {
-      "ticker_2x": "SNXX",
-      "name": "SNXX Tradr 2X Long SNDK Daily ETF",
-      "underlying": "SNDK",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/snxx?hsLang=en",
-      "expense_ratio": null
-    },
-    {
       "ticker_2x": "LITX",
       "name": "LITX Tradr 2X Long LITE Daily ETF",
       "underlying": "LITE",
@@ -1059,11 +1043,19 @@
       "expense_ratio": null
     },
     {
-      "ticker_2x": "ASTX",
-      "name": "ASTX Tradr 2X Long ASTS Daily ETF",
-      "underlying": "ASTS",
+      "ticker_2x": "SNXX",
+      "name": "SNXX Tradr 2X Long SNDK Daily ETF",
+      "underlying": "SNDK",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/astx?hsLang=en",
+      "url": "https://www.tradretfs.com/snxx?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "NVTX",
+      "name": "NVTX Tradr 2X Long NVTS Daily ETF",
+      "underlying": "NVTS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/nvtx?hsLang=en",
       "expense_ratio": null
     },
     {
@@ -1075,11 +1067,11 @@
       "expense_ratio": null
     },
     {
-      "ticker_2x": "APLZ",
-      "name": "APLZ Tradr 2X Long APLD Daily ETF",
+      "ticker_2x": "APLX",
+      "name": "APLX Tradr 2X Long APLD Daily ETF",
       "underlying": "APLD",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/aplz?hsLang=en",
+      "url": "https://www.tradretfs.com/aplx?hsLang=en",
       "expense_ratio": null
     },
     {
@@ -1088,14 +1080,6 @@
       "underlying": "CRWV",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/cwvx?hsLang=en",
-      "expense_ratio": null
-    },
-    {
-      "ticker_2x": "NEBX",
-      "name": "NEBX Tradr 2X Long NBIS Daily ETF",
-      "underlying": "NBIS",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/nebx?hsLang=en",
       "expense_ratio": null
     },
     {
@@ -1136,6 +1120,14 @@
       "underlying": "SMR",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/smu?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "COHX",
+      "name": "COHX Tradr 2X Long COHR Daily ETF",
+      "underlying": "COHR",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/cohx?hsLang=en",
       "expense_ratio": null
     },
     {
@@ -1243,14 +1235,6 @@
       "expense_ratio": null
     },
     {
-      "ticker_2x": "LABX",
-      "name": "LABX Tradr 2X Long ALAB Daily ETF",
-      "underlying": "ALAB",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/labx?hsLang=en",
-      "expense_ratio": null
-    },
-    {
       "ticker_2x": "LRCU",
       "name": "LRCU Tradr 2X Long LRCX Daily ETF",
       "underlying": "LRCX",
@@ -1304,6 +1288,14 @@
       "underlying": "TEM",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/temt?hsLang=en",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "FLYT",
+      "name": "FLYT Tradr 2X Long FLY Daily ETF",
+      "underlying": "FLY",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/flyt?hsLang=en",
       "expense_ratio": null
     },
     {
