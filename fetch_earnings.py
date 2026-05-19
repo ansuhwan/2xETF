@@ -20,6 +20,7 @@ import time
 from datetime import date, datetime, timezone, timedelta
 from pathlib import Path
 
+import pandas as pd
 import yfinance as yf
 
 ROOT = Path(__file__).parent
@@ -32,7 +33,8 @@ KST = timezone(timedelta(hours=9))
 
 def get_next_earnings(t: str) -> dict | None:
     try:
-        cal = yf.Ticker(t).calendar
+        ticker = yf.Ticker(t)
+        cal = ticker.calendar
         if not cal or not isinstance(cal, dict):
             return None
         dates = cal.get("Earnings Date")
@@ -46,11 +48,56 @@ def get_next_earnings(t: str) -> dict | None:
             d_iso = d.isoformat()[:10]
         else:
             d_iso = str(d)[:10]
+
+        # Past 4 quarters surprise history
+        history: list[dict] = []
+        try:
+            ed = ticker.earnings_dates
+            if ed is not None and not ed.empty:
+                from datetime import datetime as _dt
+                now = _dt.now(tz=ed.index.tz) if ed.index.tz is not None else _dt.now()
+                past = ed[ed.index < now].head(4)  # most recent past 4
+                for ts, row in past.iterrows():
+                    surprise = row.get("Surprise(%)")
+                    est = row.get("EPS Estimate")
+                    rep = row.get("Reported EPS")
+                    if pd.isna(surprise):
+                        continue
+                    history.append({
+                        "date": ts.strftime("%Y-%m-%d"),
+                        "estimate": None if pd.isna(est) else float(est),
+                        "reported": None if pd.isna(rep) else float(rep),
+                        "surprise": float(surprise),
+                    })
+        except Exception:
+            pass
+
+        beat_streak = 0
+        for h in history:
+            if h["surprise"] > 0:
+                beat_streak += 1
+            else:
+                break
+        miss_streak = 0
+        for h in history:
+            if h["surprise"] < 0:
+                miss_streak += 1
+            else:
+                break
+        avg_surprise = (
+            round(sum(h["surprise"] for h in history) / len(history), 2)
+            if history else None
+        )
+
         return {
             "next_earnings": d_iso,
             "eps_estimate": cal.get("Earnings Average"),
             "eps_low": cal.get("Earnings Low"),
             "eps_high": cal.get("Earnings High"),
+            "history": history,
+            "beat_streak": beat_streak,
+            "miss_streak": miss_streak,
+            "avg_surprise_pct": avg_surprise,
         }
     except Exception:
         return None

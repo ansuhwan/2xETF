@@ -27,6 +27,20 @@ OUT = DATA / "data.json"
 
 KST = timezone(timedelta(hours=9))
 
+# Sector → benchmark ETF (for relative strength). One per sector.
+SECTOR_BENCHMARK: dict[str, str] = {
+    "Mag7":    "QQQ",
+    "AI":      "ARKK",
+    "Semi":    "SOXX",
+    "Nuclear": "URA",
+    "Defense": "ITA",
+    "Bio":     "XBI",
+    "Fintech": "XLF",
+    "Quantum": "ARKK",
+    "EV":      "LIT",
+    "Crypto":  "ARKK",
+}
+
 SECTORS: dict[str, set[str]] = {
     "Mag7":    {"AAPL", "MSFT", "NVDA", "AMZN", "META", "GOOGL", "GOOG", "TSLA"},
     "AI":      {"NVDA", "AAOI", "ALAB", "ANET", "CRWV", "NBIS", "SOUN", "BBAI",
@@ -84,6 +98,17 @@ def sectors_of(underlying: str) -> list[str]:
     return [name for name, members in SECTORS.items() if underlying in members]
 
 
+def relative_strength(close_u: pd.Series, close_b: pd.Series, period: int = 20) -> float | None:
+    """RS = underlying N-day return − benchmark N-day return (in pct)."""
+    if close_u.size < period + 1 or close_b.size < period + 1:
+        return None
+    u_ret = (close_u.iloc[-1] / close_u.iloc[-period - 1] - 1) * 100
+    b_ret = (close_b.iloc[-1] / close_b.iloc[-period - 1] - 1) * 100
+    if pd.isna(u_ret) or pd.isna(b_ret):
+        return None
+    return float(u_ret - b_ret)
+
+
 def categorize(underlying: str) -> str:
     # Legacy primary category — kept for back-compat in the JSON
     sects = sectors_of(underlying)
@@ -115,6 +140,49 @@ def volume_of(prices: pd.DataFrame, t: str) -> pd.Series:
 
 def low_of(prices: pd.DataFrame, t: str) -> pd.Series:
     return prices[(t, "Low")].dropna()
+
+
+def compute_macd_signals(close: pd.Series) -> list[str]:
+    """MACD-based signals (12/26/9) on close. Computed on underlying."""
+    sigs: list[str] = []
+    if close.size < 35:
+        return sigs
+    ema12 = close.ewm(span=12, adjust=False).mean()
+    ema26 = close.ewm(span=26, adjust=False).mean()
+    macd = ema12 - ema26
+    signal = macd.ewm(span=9, adjust=False).mean()
+    hist = macd - signal
+    if pd.isna(macd.iloc[-1]) or pd.isna(signal.iloc[-1]):
+        return sigs
+
+    # Zero-line direction (trend regime)
+    if macd.iloc[-1] > 0:
+        sigs.append("macd_above_zero")
+    else:
+        sigs.append("macd_below_zero")
+
+    # Recent cross — within last 3 days
+    if macd.size >= 4:
+        for i in range(-3, 0):
+            pd_prev = macd.iloc[i-1] - signal.iloc[i-1]
+            pd_curr = macd.iloc[i]   - signal.iloc[i]
+            if pd.isna(pd_prev) or pd.isna(pd_curr):
+                continue
+            if pd_prev <= 0 < pd_curr:
+                sigs.append("macd_bull_cross"); break
+            if pd_prev >= 0 > pd_curr:
+                sigs.append("macd_bear_cross"); break
+
+    # Histogram momentum (last 3 bars monotonic)
+    if hist.size >= 4:
+        recent = hist.iloc[-3:].diff().dropna()
+        if recent.size == 2:
+            if (recent > 0).all() and hist.iloc[-1] > hist.iloc[-3]:
+                sigs.append("macd_momentum_up")
+            elif (recent < 0).all() and hist.iloc[-1] < hist.iloc[-3]:
+                sigs.append("macd_momentum_down")
+
+    return sigs
 
 
 def compute_ma_signals(close: pd.Series, low: pd.Series) -> list[str]:
@@ -265,15 +333,38 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
         if not pd.isna(dv) and dv > 0:
             dollar_volume_20d = float(dv)
 
-    # MA signals — always computed on the underlying. 2X has daily-compounding
-    # distortion that makes its own MAs unreliable for trend identification.
+    # MA + MACD signals — always computed on the underlying. 2X has daily-compounding
+    # distortion that makes its own indicators unreliable for trend identification.
     if und and has_ticker(prices, und):
         ma_sigs = compute_ma_signals(cu, low_of(prices, und))
+        ma_sigs.extend(compute_macd_signals(cu))
     else:
         ma_sigs = []
     monthly_sig = monthly_alignment(monthly, und) if und else None
     if monthly_sig:
         ma_sigs.append(monthly_sig)
+
+    # Sector relative strength: underlying vs primary sector ETF (20-day return spread)
+    rs_20d = None
+    rs_sector = None
+    primary = next((s for s in sectors_of(und)), None)
+    if primary and primary in SECTOR_BENCHMARK:
+        bench = SECTOR_BENCHMARK[primary]
+        if has_ticker(prices, bench) and und and has_ticker(prices, und):
+            rs_20d = relative_strength(cu, close_of(prices, bench), 20)
+            rs_sector = bench
+            if rs_20d is not None:
+                if rs_20d >= 5: ma_sigs.append("sector_leader")
+                elif rs_20d <= -5: ma_sigs.append("sector_laggard")
+
+    # Earnings surprise consistency (4 quarters)
+    e_info = earnings.get(und) if und else None
+    if e_info:
+        bs = e_info.get("beat_streak", 0) or 0
+        ms = e_info.get("miss_streak", 0) or 0
+        if bs >= 4: ma_sigs.append("earnings_beat_streak")
+        elif bs >= 2: ma_sigs.append("earnings_beats")
+        if ms >= 3: ma_sigs.append("earnings_miss_streak")
 
     # Monthly bull alignment + daily price near long-term MA (MA60 or MA120)
     # = long-term uptrend in pullback to key support
@@ -318,6 +409,8 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
         "volume_up_candle": volume_up_candle,
         "is_new": is_new,
         "dollar_volume_20d": r(dollar_volume_20d, 0) if dollar_volume_20d is not None else None,
+        "rs_20d": r(rs_20d),
+        "rs_benchmark": rs_sector,
         **_earnings_fields(earnings.get(und) if und else None, today),
     }
 
@@ -356,6 +449,23 @@ def recommendation_score(p: dict) -> tuple[float, list[str]]:
         score += 2.0; reasons.append("거래량+양봉")
     if p.get("near_52w_high"):
         score += 1.0; reasons.append("52신고가")
+
+    # MACD
+    if "macd_bull_cross" in sigs: score += 2.0; reasons.append("MACD골크")
+    if "macd_momentum_up" in sigs: score += 1.0; reasons.append("MACD모멘텀↑")
+    if "macd_above_zero" in sigs: score += 0.5
+    if "macd_bear_cross" in sigs: score -= 2.0
+    if "macd_momentum_down" in sigs: score -= 1.0
+    if "macd_below_zero" in sigs: score -= 0.5
+
+    # Sector leadership
+    if "sector_leader" in sigs: score += 1.5; reasons.append("섹터선도")
+    if "sector_laggard" in sigs: score -= 1.0
+
+    # Earnings track record
+    if "earnings_beat_streak" in sigs: score += 1.5; reasons.append("4분기 연속 비트")
+    elif "earnings_beats" in sigs: score += 0.5
+    if "earnings_miss_streak" in sigs: score -= 1.0
 
     # RSI sweet spot
     rsi = p.get("rsi")
@@ -420,6 +530,9 @@ def _earnings_fields(info: dict | None, today: date) -> dict:
         "days_to_earnings": days,
         "earnings_window": window,
         "eps_estimate": info.get("eps_estimate"),
+        "beat_streak": info.get("beat_streak", 0),
+        "miss_streak": info.get("miss_streak", 0),
+        "avg_surprise_pct": info.get("avg_surprise_pct"),
     }
 
 

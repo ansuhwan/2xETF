@@ -321,6 +321,17 @@
     golden_cross:            { g: "X+", cls: "g", t: "골든크로스" },
     dead_cross:              { g: "X-", cls: "r", t: "데드크로스" },
     bull_align_pullback:     { g: "★", cls: "g", t: "정배열 눌림" },
+    macd_bull_cross:         { g: "M↑", cls: "g", t: "MACD 골든크로스" },
+    macd_bear_cross:         { g: "M↓", cls: "r", t: "MACD 데드크로스" },
+    macd_momentum_up:        { g: "M+", cls: "g", t: "MACD 모멘텀 상승" },
+    macd_momentum_down:      { g: "M-", cls: "r", t: "MACD 모멘텀 하락" },
+    macd_above_zero:         { g: "M0+", cls: "g", t: "MACD > 0 (강세 영역)" },
+    macd_below_zero:         { g: "M0-", cls: "r", t: "MACD < 0 (약세 영역)" },
+    sector_leader:           { g: "▶S", cls: "amb", t: "섹터 선도 (20일 RS ≥ +5%)" },
+    sector_laggard:          { g: "◀S", cls: "r", t: "섹터 부진 (20일 RS ≤ -5%)" },
+    earnings_beat_streak:    { g: "E✓4", cls: "g", t: "4분기 연속 실적 비트" },
+    earnings_beats:          { g: "E✓", cls: "g", t: "최근 실적 비트" },
+    earnings_miss_streak:    { g: "E✗", cls: "r", t: "3분기 연속 실적 미스" },
   };
   const FILTER_GROUPS = [
     { key: "status", label: "상태", chips: [
@@ -342,6 +353,9 @@
       { k:"ma_bull_align", label:"일봉정배" }, { k:"ma_bear_align", label:"일봉역배" },
       { k:"monthly_bull_align", label:"월봉정배" }, { k:"monthly_bear_align", label:"월봉역배" },
       { k:"golden_cross", label:"골든크로스" }, { k:"dead_cross", label:"데드크로스" },
+      { k:"macd_bull_cross", label:"MACD↑" }, { k:"macd_bear_cross", label:"MACD↓" },
+      { k:"sector_leader", label:"섹터선도" }, { k:"sector_laggard", label:"섹터부진" },
+      { k:"earnings_beat_streak", label:"실적연속비트" }, { k:"earnings_miss_streak", label:"실적연속미스" },
     ]},
     { key: "sector", label: "섹터", chips: [
       { k:"Mag7", label:"Mag7" }, { k:"AI", label:"AI" }, { k:"Semi", label:"반도체" },
@@ -563,6 +577,10 @@
     const dvFmt = dv == null ? "—" : dv >= 1e9 ? `$${(dv/1e9).toFixed(2)}B` : dv >= 1e6 ? `$${(dv/1e6).toFixed(0)}M` : `$${(dv/1e3).toFixed(0)}K`;
     const dvCls = dv == null ? "soft" : dv >= 100e6 ? "amb" : dv >= 10e6 ? "cyn" : dv >= 1e6 ? "" : "dim";
     const dvLine = `<span title="${krw(dv)}"><span class="soft">DV20</span> <span class="${dvCls}">${dvFmt}</span></span>`;
+    const rs = p.rs_20d;
+    const rsLine = rs != null ? `<span title="vs ${p.rs_benchmark} 20일"><span class="soft">RS20</span> <span class="${rs>=5?'amb':rs>=0?'pos':rs<=-5?'neg':'soft'} num">${fmtPct(rs)}%</span></span>` : "";
+    const surp = p.avg_surprise_pct;
+    const surpLine = surp != null ? `<span title="최근 4분기 평균 서프라이즈"><span class="soft">EPS±</span> <span class="${surp>0?'pos':'neg'} num">${fmtPct(surp)}%</span></span>` : "";
     const sigs = [...p.alerts, ...(p.signals||[])].map(k => {
       const d = ALERT_GLYPHS[k]||SIGNAL_GLYPHS[k];
       return d ? `<span class="cl ${d.cls}" title="${d.t}">${d.g}</span>` : "";
@@ -583,6 +601,8 @@
         <span><span class="soft">VOL</span> <span class="num ${p.volume_ratio>=2?'amb':''}">${fmtVol(p.volume_ratio)}×</span></span>
         ${drag}
         ${dvLine}
+        ${rsLine}
+        ${surpLine}
         ${earn}
       </span>
       <span class="meta">${sigs}</span>

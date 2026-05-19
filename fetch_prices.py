@@ -27,6 +27,21 @@ CHUNK = 40
 PERIOD = "1y"
 
 
+BENCHMARK_ETFS = {
+    "SPY":  "Market",     # S&P 500 broad
+    "QQQ":  "Nasdaq",     # Tech-heavy
+    "XLK":  "Tech",       # Tech sector
+    "SOXX": "Semi",       # Semiconductor
+    "XBI":  "Bio",        # Biotech
+    "ITA":  "Defense",    # Aerospace & Defense
+    "XLF":  "Fintech",    # Financials
+    "XLE":  "Energy",     # Energy
+    "URA":  "Nuclear",    # Uranium / Nuclear
+    "LIT":  "EV",         # Lithium / Battery
+    "ARKK": "AI",         # Innovation/AI proxy
+}
+
+
 def load_tickers() -> tuple[list[str], dict[str, str]]:
     payload = json.loads(ETF_LIST.read_text(encoding="utf-8"))
     kind: dict[str, str] = {}
@@ -37,6 +52,8 @@ def load_tickers() -> tuple[list[str], dict[str, str]]:
             kind[t2] = "2x"
         if und:
             kind.setdefault(und, "underlying")
+    for b in BENCHMARK_ETFS:
+        kind.setdefault(b, "benchmark")
     return sorted(kind.keys()), kind
 
 
