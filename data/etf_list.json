@@ -1,35 +1,35 @@
 {
-  "updated_at": "2026-05-21T07:38:09+09:00",
-  "total": 189,
+  "updated_at": "2026-05-22T07:36:37+09:00",
+  "total": 190,
   "per_issuer": {
     "Direxion": {
       "count": 10,
-      "ms": 5193,
+      "ms": 3670,
       "ok": true
     },
     "GraniteShares": {
       "count": 34,
-      "ms": 895,
+      "ms": 517,
       "ok": true
     },
     "Defiance": {
-      "count": 41,
-      "ms": 456,
+      "count": 42,
+      "ms": 482,
       "ok": true
     },
     "REX": {
       "count": 31,
-      "ms": 425,
+      "ms": 491,
       "ok": true
     },
     "Tradr": {
       "count": 61,
-      "ms": 248,
+      "ms": 246,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 408,
+      "ms": 305,
       "ok": true
     }
   },
@@ -712,6 +712,14 @@
       "underlying": "AMPX",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ampu/",
+      "expense_ratio": null
+    },
+    {
+      "ticker_2x": "ASTY",
+      "name": "ASTY Daily Target 2X Long ASTS ETF",
+      "underlying": "ASTS",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/asty/",
       "expense_ratio": null
     },
     {
