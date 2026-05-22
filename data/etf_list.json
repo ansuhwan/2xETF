@@ -1,35 +1,35 @@
 {
-  "updated_at": "2026-05-23T01:15:26+09:00",
+  "updated_at": "2026-05-23T01:48:58+09:00",
   "total": 210,
   "per_issuer": {
     "Direxion": {
       "count": 10,
-      "ms": 627,
+      "ms": 597,
       "ok": true
     },
     "GraniteShares": {
       "count": 34,
-      "ms": 1906,
+      "ms": 1774,
       "ok": true
     },
     "Defiance": {
       "count": 42,
-      "ms": 1768,
+      "ms": 2087,
       "ok": true
     },
     "REX": {
       "count": 31,
-      "ms": 1241,
+      "ms": 1380,
       "ok": true
     },
     "Tradr": {
       "count": 61,
-      "ms": 931,
+      "ms": 1151,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 1644,
+      "ms": 1849,
       "ok": true
     },
     "3X": {
@@ -1823,7 +1823,7 @@
     },
     {
       "ticker_2x": "WEBL",
-      "name": "MicroSectors Solactive FANG+ Internet 3X",
+      "name": "MicroSectors Solactive Internet 3X",
       "underlying": "",
       "issuer": "MicroSectors",
       "url": "",
@@ -1834,15 +1834,6 @@
       "ticker_2x": "FAS",
       "name": "Direxion Daily Financial Bull 3X",
       "underlying": "XLF",
-      "issuer": "Direxion",
-      "url": "",
-      "expense_ratio": null,
-      "leverage": 3
-    },
-    {
-      "ticker_2x": "ERX",
-      "name": "Direxion Daily Energy Bull 3X",
-      "underlying": "XLE",
       "issuer": "Direxion",
       "url": "",
       "expense_ratio": null,
@@ -1885,31 +1876,40 @@
       "leverage": 3
     },
     {
+      "ticker_2x": "ERX",
+      "name": "Direxion Daily Energy Bull 2X",
+      "underlying": "XLE",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "NUGT",
-      "name": "Direxion Daily Gold Miners Bull 3X",
+      "name": "Direxion Daily Gold Miners Bull 2X",
       "underlying": "GDX",
       "issuer": "Direxion",
       "url": "",
       "expense_ratio": null,
-      "leverage": 3
+      "leverage": 2
     },
     {
       "ticker_2x": "GUSH",
-      "name": "Direxion Daily Oil & Gas E&P Bull 3X",
+      "name": "Direxion Daily Oil & Gas E&P Bull 2X",
       "underlying": "XOP",
       "issuer": "Direxion",
       "url": "",
       "expense_ratio": null,
-      "leverage": 3
+      "leverage": 2
     },
     {
       "ticker_2x": "JNUG",
-      "name": "Direxion Daily Junior Gold Miners 3X",
+      "name": "Direxion Daily Junior Gold Miners 2X",
       "underlying": "GDXJ",
       "issuer": "Direxion",
       "url": "",
       "expense_ratio": null,
-      "leverage": 3
+      "leverage": 2
     },
     {
       "ticker_2x": "TMF",
