@@ -240,6 +240,7 @@ def compute_ma_signals(close: pd.Series, low: pd.Series) -> list[str]:
 def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], today: date, monthly: pd.DataFrame | None = None) -> dict | None:
     t2 = (etf.get("ticker_2x") or "").strip().upper()
     und = (etf.get("underlying") or "").strip().upper()
+    leverage = int(etf.get("leverage") or 2)
     if not t2 or not has_ticker(prices, t2):
         return None
 
@@ -258,7 +259,7 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
     if close2.size >= 6:
         five_day = float((close2.iloc[-1] / close2.iloc[-6] - 1) * 100)
     elif cu.size >= 6:
-        five_day = float((cu.iloc[-1] / cu.iloc[-6] - 1) * 100) * 2
+        five_day = float((cu.iloc[-1] / cu.iloc[-6] - 1) * 100) * leverage
         five_day_proxy = True
 
     # Volume ratio — only meaningful on the 2X itself
@@ -292,7 +293,7 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
     if cu.size >= 126 and close2.size >= 126:
         und_6m = float((cu.iloc[-1] / cu.iloc[-126] - 1) * 100)
         two_6m = float((close2.iloc[-1] / close2.iloc[-126] - 1) * 100)
-        drag = (und_6m * 2) - two_6m
+        drag = (und_6m * leverage) - two_6m
         und_6m_pct = und_6m
 
     alerts: list[str] = []
@@ -390,6 +391,7 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
         "ticker_underlying": und,
         "issuer": etf.get("issuer"),
         "expense_ratio": etf.get("expense_ratio"),
+        "leverage": leverage,
         "category": categorize(und),
         "price_2x": r(price),
         "daily_pct": r(daily),

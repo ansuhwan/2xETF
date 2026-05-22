@@ -199,6 +199,10 @@
   .fav { background: none; border: none; color: var(--amber); cursor: pointer; font-size: 13px; padding: 0; }
   .fav.off { color: var(--dim); }
   .new-tag { color: var(--magenta); font-size: 9px; margin-left: 2px; }
+  .lev-tag {
+    font-size: 9px; font-weight: 700; padding: 0 3px; margin-left: 3px;
+    background: var(--red); color: #000; letter-spacing: 0.05em;
+  }
   .rec-tag { margin-right: 4px; font-size: 12px; }
   table.tbl tbody tr.is-rec td:first-child { border-left: 2px solid var(--amber); }
   table.tbl tbody tr.is-rec .tk { color: var(--amber); }
@@ -337,6 +341,7 @@
     { key: "status", label: "상태", chips: [
       { k:"recommended", label:"🏆 추천" },
       { k:"alerts", label:"알림" }, { k:"favorites", label:"즐겨" },
+      { k:"lev_2x", label:"2X" }, { k:"lev_3x", label:"3X" },
       { k:"is_new", label:"신생" }, { k:"earnings_soon", label:"실적임박" },
       { k:"earnings_post", label:"실적후" }, { k:"volume_up_candle", label:"거래량+" },
       { k:"near_52w_high", label:"52신고" }, { k:"near_52w_low", label:"52신저" },
@@ -444,6 +449,8 @@
       if (k === "recommended") return !!p.is_recommended;
       if (k === "alerts") return p.alerts.length > 0;
       if (k === "favorites") return favs.has(p.ticker_2x);
+      if (k === "lev_2x") return (p.leverage || 2) === 2;
+      if (k === "lev_3x") return (p.leverage || 2) === 3;
       if (k === "is_new") return !!p.is_new;
       if (k === "earnings_soon") return p.earnings_window === "soon";
       if (k === "earnings_post") return p.earnings_window === "post";
@@ -505,7 +512,10 @@
       const isNew = p.is_new || (p.proxy_fields&&p.proxy_fields.length);
       const fav = favs.has(p.ticker_2x);
       const undKr = (tossIds[p.ticker_underlying]||{}).name_kr;
-      const subtitle = undKr || p.ticker_underlying || "—";
+      const lev = p.leverage === 3 ? "3X" : "2X";
+      const undBase = undKr || p.ticker_underlying || "";
+      const subtitle = undBase ? `${undBase} · ${lev}` : `${lev}`;
+      const levTag = p.leverage === 3 ? '<span class="lev-tag lev-3">3X</span>' : '';
       const earn = p.next_earnings && p.days_to_earnings!=null && Math.abs(p.days_to_earnings)<=7
         ? `<span class="earn-tag ${p.days_to_earnings<0?'past':''}">${p.days_to_earnings===0?'!E':p.days_to_earnings>0?'E-'+p.days_to_earnings:'E+'+(-p.days_to_earnings)}</span>` : "";
       const cluster = [...p.alerts, ...(p.signals||[])].map(k => {
@@ -515,7 +525,7 @@
       const rec = p.is_recommended ? `<span class="rec-tag" title="${(p.rec_reasons||[]).join(', ')} (score ${p.rec_score})">🏆</span>` : "";
       return `<tr data-ticker="${p.ticker_2x}" class="row${hasA?' has-alert':''}${p.is_recommended?' is-rec':''}">
         <td><button class="fav ${fav?'':'off'}" data-ticker="${p.ticker_2x}">${fav?'★':'☆'}</button></td>
-        <td class="l"><div class="tk">${rec}${p.ticker_2x}${isNew?'<span class="new-tag">NEW</span>':''}${earn}</div><div class="sub">${subtitle}</div></td>
+        <td class="l"><div class="tk">${rec}${p.ticker_2x}${levTag}${isNew?'<span class="new-tag">NEW</span>':''}${earn}</div><div class="sub">${subtitle}</div></td>
         <td class="num">${fmtPx(p.price_2x)}</td>
         <td class="num ${pctC(p.daily_pct)}">${fmtPct(p.daily_pct)}</td>
         <td class="num ${p.volume_ratio!=null&&p.volume_ratio>=2?'amb':''}">${fmtVol(p.volume_ratio)}</td>

@@ -40,7 +40,8 @@
       "underlying": "TSLA",
       "issuer": "Direxion",
       "url": "https://www.direxion.com/etfs/tsll",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AAPU",
@@ -48,7 +49,8 @@
       "underlying": "AAPL",
       "issuer": "Direxion",
       "url": "https://www.direxion.com/etfs/aapu",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AMZU",
@@ -56,7 +58,8 @@
       "underlying": "AMZN",
       "issuer": "Direxion",
       "url": "https://www.direxion.com/etfs/amzu",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "GGLL",
@@ -64,7 +67,8 @@
       "underlying": "GOOGL",
       "issuer": "Direxion",
       "url": "https://www.direxion.com/etfs/ggll",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "MSFU",
@@ -72,7 +76,8 @@
       "underlying": "MSFT",
       "issuer": "Direxion",
       "url": "https://www.direxion.com/etfs/msfu",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "NVDU",
@@ -80,7 +85,8 @@
       "underlying": "NVDA",
       "issuer": "Direxion",
       "url": "https://www.direxion.com/etfs/nvdu",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "METU",
@@ -88,7 +94,8 @@
       "underlying": "META",
       "issuer": "Direxion",
       "url": "https://www.direxion.com/etfs/metu",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "MUU",
@@ -96,7 +103,8 @@
       "underlying": "MU",
       "issuer": "Direxion",
       "url": "https://www.direxion.com/etfs/muu",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "TSMX",
@@ -104,7 +112,8 @@
       "underlying": "TSM",
       "issuer": "Direxion",
       "url": "https://www.direxion.com/etfs/tsmx",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "JPNL",
@@ -112,279 +121,314 @@
       "underlying": "JPM",
       "issuer": "Direxion",
       "url": "https://www.direxion.com/etfs/jpnl",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AAPB",
-      "name": "GraniteShares 2x Long AAPL Daily ETF 2x long exposure to\n                                Apple (AAPL)",
+      "name": "GraniteShares 2x Long AAPL Daily ETF 2x long exposure to\r\n                                Apple (AAPL)",
       "underlying": "AAPL",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/aapb/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AMDL",
-      "name": "GraniteShares 2x Long AMD Daily ETF 2x long exposure to\n                                Advanced Micro Devices, Inc (AMD",
+      "name": "GraniteShares 2x Long AMD Daily ETF 2x long exposure to\r\n                                Advanced Micro Devices, Inc (AM",
       "underlying": "AMD",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/amdl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AMZZ",
-      "name": "GraniteShares 2x Long AMZN Daily ETF 2x long exposure to\n                                Amazon (AMZN)",
+      "name": "GraniteShares 2x Long AMZN Daily ETF 2x long exposure to\r\n                                Amazon (AMZN)",
       "underlying": "AMZN",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/amzz/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AVGU",
-      "name": "GraniteShares 2x Long AVGO Daily ETF 2x long exposure to\n                                Broadcom Inc (AVGO)",
+      "name": "GraniteShares 2x Long AVGO Daily ETF 2x long exposure to\r\n                                Broadcom Inc (AVGO)",
       "underlying": "AVGO",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/avgu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "BABX",
-      "name": "GraniteShares 2x Long BABA Daily ETF 2x long exposure to\n                                Alibaba Group Holding Limited (",
+      "name": "GraniteShares 2x Long BABA Daily ETF 2x long exposure to\r\n                                Alibaba Group Holding Limited ",
       "underlying": "BABA",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/babx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "BULX",
-      "name": "GraniteShares 2x Long BULL Daily ETF 2x long exposure to\n                                Webull Corporation (BULL)",
+      "name": "GraniteShares 2x Long BULL Daily ETF 2x long exposure to\r\n                                Webull Corporation (BULL)",
       "underlying": "BULL",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/bulx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CONL",
-      "name": "GraniteShares 2x Long COIN Daily ETF 2x long exposure to\n                                Coinbase Global Inc (COIN)",
+      "name": "GraniteShares 2x Long COIN Daily ETF 2x long exposure to\r\n                                Coinbase Global Inc (COIN)",
       "underlying": "COIN",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/conl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CRWL",
-      "name": "GraniteShares 2x Long CRWD Daily ETF 2x long exposure to\n                                CrowdStrike Holdings Inc (CRWD)",
+      "name": "GraniteShares 2x Long CRWD Daily ETF 2x long exposure to\r\n                                CrowdStrike Holdings Inc (CRWD",
       "underlying": "CRWD",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/crwl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "DLLL",
-      "name": "GraniteShares 2x Long DELL Daily ETF 2x long exposure to\n                                Dell Technologies Inc (DELL)",
+      "name": "GraniteShares 2x Long DELL Daily ETF 2x long exposure to\r\n                                Dell Technologies Inc (DELL)",
       "underlying": "DELL",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/dlll/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "ETRL",
-      "name": "GraniteShares 2x Long ETOR Daily ETF 2x long exposure to\n                                eToro Group Ltd (ETOR)",
+      "name": "GraniteShares 2x Long ETOR Daily ETF 2x long exposure to\r\n                                eToro Group Ltd (ETOR)",
       "underlying": "ETOR",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/etrl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "GOU",
-      "name": "GraniteShares 2x Long GOOGL Daily ETF 2x long exposure to\n                                Alphabet Inc (GOOGL)",
+      "name": "GraniteShares 2x Long GOOGL Daily ETF 2x long exposure to\r\n                                Alphabet Inc (GOOGL)",
       "underlying": "GOOGL",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/gou/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "INTW",
-      "name": "GraniteShares 2x Long INTC Daily ETF 2x long exposure to\n                                Intel Corp (INTC)",
+      "name": "GraniteShares 2x Long INTC Daily ETF 2x long exposure to\r\n                                Intel Corp (INTC)",
       "underlying": "INTC",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/intw/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "IONL",
-      "name": "GraniteShares 2x Long IONQ Daily ETF 2x long exposure to\n                                IonQ Inc (IONQ)",
+      "name": "GraniteShares 2x Long IONQ Daily ETF 2x long exposure to\r\n                                IonQ Inc (IONQ)",
       "underlying": "IONQ",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/ionl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "ISUL",
-      "name": "GraniteShares 2x Long ISRG Daily ETF 2x long exposure to\n                                Intuitive Surgical, Inc (ISRG)",
+      "name": "GraniteShares 2x Long ISRG Daily ETF 2x long exposure to\r\n                                Intuitive Surgical, Inc (ISRG)",
       "underlying": "ISRG",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/isul/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "LCDL",
-      "name": "GraniteShares 2x Long LCID Daily ETF 2x long exposure to\n                                Lucid Group Inc (LCID)",
+      "name": "GraniteShares 2x Long LCID Daily ETF 2x long exposure to\r\n                                Lucid Group Inc (LCID)",
       "underlying": "LCID",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/lcdl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "MRAL",
-      "name": "GraniteShares 2x Long MARA Daily ETF 2x long exposure to\n                                MARA Holdings Inc (MARA)",
+      "name": "GraniteShares 2x Long MARA Daily ETF 2x long exposure to\r\n                                MARA Holdings Inc (MARA)",
       "underlying": "MARA",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/mral/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "FBL",
-      "name": "GraniteShares 2x Long META Daily ETF 2x long exposure to\n                                Meta Platforms Inc (META)",
+      "name": "GraniteShares 2x Long META Daily ETF 2x long exposure to\r\n                                Meta Platforms Inc (META)",
       "underlying": "META",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/fbl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "MVLL",
-      "name": "GraniteShares 2x Long MRVL Daily ETF 2x long exposure to\n                                Marvell Technology, Inc (MRVL)",
+      "name": "GraniteShares 2x Long MRVL Daily ETF 2x long exposure to\r\n                                Marvell Technology, Inc (MRVL)",
       "underlying": "MRVL",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/mvll/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "MSFL",
-      "name": "GraniteShares 2x Long MSFT Daily ETF 2x long exposure to\n                                Microsoft (MSFT)",
+      "name": "GraniteShares 2x Long MSFT Daily ETF 2x long exposure to\r\n                                Microsoft (MSFT)",
       "underlying": "MSFT",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/msfl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "MSTP",
-      "name": "GraniteShares 2x Long MSTR Daily ETF 2x long exposure to\n                                MicroStrategy Inc (MSTR)",
+      "name": "GraniteShares 2x Long MSTR Daily ETF 2x long exposure to\r\n                                MicroStrategy Inc (MSTR)",
       "underlying": "MSTR",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/mstp/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "MULL",
-      "name": "GraniteShares 2x Long MU Daily ETF 2x long exposure to\n                                Micron Technology Inc (MU)",
+      "name": "GraniteShares 2x Long MU Daily ETF 2x long exposure to\r\n                                Micron Technology Inc (MU)",
       "underlying": "MU",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/mull/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "NBIL",
-      "name": "GraniteShares 2x Long NBIS Daily ETF 2x long exposure to\n                                Nebius Group N.V (NBIS)",
+      "name": "GraniteShares 2x Long NBIS Daily ETF 2x long exposure to\r\n                                Nebius Group N.V (NBIS)",
       "underlying": "NBIS",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/nbil/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "NOWL",
-      "name": "GraniteShares 2x Long NOW Daily ETF 2x long exposure to\n                                ServiceNow Inc (NOW)",
+      "name": "GraniteShares 2x Long NOW Daily ETF 2x long exposure to\r\n                                ServiceNow Inc (NOW)",
       "underlying": "NOW",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/nowl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "NVDL",
-      "name": "GraniteShares 2x Long NVDA Daily ETF 2x long exposure to\n                                NVIDIA Corp (NVDA)",
+      "name": "GraniteShares 2x Long NVDA Daily ETF 2x long exposure to\r\n                                NVIDIA Corp (NVDA)",
       "underlying": "NVDA",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/nvdl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "PDDL",
-      "name": "GraniteShares 2x Long PDD Daily ETF 2x long exposure to\n                                PDD Holdings Inc (PDD)",
+      "name": "GraniteShares 2x Long PDD Daily ETF 2x long exposure to\r\n                                PDD Holdings Inc (PDD)",
       "underlying": "PDD",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/pddl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "PTIR",
-      "name": "GraniteShares 2x Long PLTR Daily ETF 2x long exposure to\n                                Palantir Technologies Inc (PLTR",
+      "name": "GraniteShares 2x Long PLTR Daily ETF 2x long exposure to\r\n                                Palantir Technologies Inc (PLT",
       "underlying": "PLTR",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/ptir/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "QCML",
-      "name": "GraniteShares 2x Long QCOM Daily ETF 2x long exposure to\n                                Qualcomm Inc (QCOM)",
+      "name": "GraniteShares 2x Long QCOM Daily ETF 2x long exposure to\r\n                                Qualcomm Inc (QCOM)",
       "underlying": "QCOM",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/qcml/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "RDTL",
-      "name": "GraniteShares 2x Long RDDT Daily ETF 2x long exposure to\n                                Reddit Inc (RDDT)",
+      "name": "GraniteShares 2x Long RDDT Daily ETF 2x long exposure to\r\n                                Reddit Inc (RDDT)",
       "underlying": "RDDT",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/rdtl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "RVNL",
-      "name": "GraniteShares 2x Long RIVN Daily ETF 2x long exposure to\n                                Rivian Automotive Inc (RIVN)",
+      "name": "GraniteShares 2x Long RIVN Daily ETF 2x long exposure to\r\n                                Rivian Automotive Inc (RIVN)",
       "underlying": "RIVN",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/rvnl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "SMCL",
-      "name": "GraniteShares 2x Long SMCI Daily ETF 2x long exposure to\n                                Super Micro Computer Inc (SMCI)",
+      "name": "GraniteShares 2x Long SMCI Daily ETF 2x long exposure to\r\n                                Super Micro Computer Inc (SMCI",
       "underlying": "SMCI",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/smcl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "TSLR",
-      "name": "GraniteShares 2x Long TSLA Daily ETF 2x long exposure to\n                                Tesla Inc (TSLA)",
+      "name": "GraniteShares 2x Long TSLA Daily ETF 2x long exposure to\r\n                                Tesla Inc (TSLA)",
       "underlying": "TSLA",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/tslr/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "TSMU",
-      "name": "GraniteShares 2x Long TSM Daily ETF 2x long exposure to\n                                Taiwan Semiconductor Manufacturi",
+      "name": "GraniteShares 2x Long TSM Daily ETF 2x long exposure to\r\n                                Taiwan Semiconductor Manufactur",
       "underlying": "TSM",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/tsmu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "UBRL",
-      "name": "GraniteShares 2x Long Uber Daily ETF 2x long exposure to\n                                Uber Technologies Inc (UBER)",
+      "name": "GraniteShares 2x Long Uber Daily ETF 2x long exposure to\r\n                                Uber Technologies Inc (UBER)",
       "underlying": "UBER",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/ubrl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "VRTL",
-      "name": "GraniteShares 2x Long VRT Daily ETF 2x long exposure to\n                                Vertiv Holdings Co (VRT)",
+      "name": "GraniteShares 2x Long VRT Daily ETF 2x long exposure to\r\n                                Vertiv Holdings Co (VRT)",
       "underlying": "VRT",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/vrtl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "STXL",
@@ -392,7 +436,8 @@
       "underlying": "STX",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/stxl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "ONDL",
@@ -400,7 +445,8 @@
       "underlying": "ONDS",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ondl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "MSTX",
@@ -408,7 +454,8 @@
       "underlying": "MSTR",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/mstx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "SMCX",
@@ -416,7 +463,8 @@
       "underlying": "SMCI",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/smcx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "ORCX",
@@ -424,7 +472,8 @@
       "underlying": "ORCL",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/orcx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "IONX",
@@ -432,7 +481,8 @@
       "underlying": "IONQ",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ionx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "HIMZ",
@@ -440,7 +490,8 @@
       "underlying": "HIMS",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/himz/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "OKLL",
@@ -448,7 +499,8 @@
       "underlying": "OKLO",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/okll/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "IRE",
@@ -456,7 +508,8 @@
       "underlying": "IREN",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ire/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AVGX",
@@ -464,7 +517,8 @@
       "underlying": "AVGO",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/avgx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "RKLX",
@@ -472,7 +526,8 @@
       "underlying": "RKLB",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/rklx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "RGTX",
@@ -480,7 +535,8 @@
       "underlying": "RGTI",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/rgtx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "SOFX",
@@ -488,7 +544,8 @@
       "underlying": "SOFI",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/sofx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "NVOX",
@@ -496,7 +553,8 @@
       "underlying": "NVO",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/nvox/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "LLYX",
@@ -504,7 +562,8 @@
       "underlying": "LLY",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/llyx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "SOUX",
@@ -512,7 +571,8 @@
       "underlying": "SOUN",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/soux/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "HOOX",
@@ -520,7 +580,8 @@
       "underlying": "HOOD",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/hoox/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "RIOX",
@@ -528,7 +589,8 @@
       "underlying": "RIOT",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/riox/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "QSU",
@@ -536,7 +598,8 @@
       "underlying": "QS",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/qsu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "MPL",
@@ -544,7 +607,8 @@
       "underlying": "MP",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/mpl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "OSCX",
@@ -552,7 +616,8 @@
       "underlying": "OSCR",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/oscx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "DKNX",
@@ -560,7 +625,8 @@
       "underlying": "DKNG",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/dknx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "ANEL",
@@ -568,7 +634,8 @@
       "underlying": "ANET",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/anel/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "VSTL",
@@ -576,7 +643,8 @@
       "underlying": "VST",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/vstl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CVNX",
@@ -584,7 +652,8 @@
       "underlying": "CVNA",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/cvnx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "LMNX",
@@ -592,7 +661,8 @@
       "underlying": "LMND",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/lmnx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AVXX",
@@ -600,7 +670,8 @@
       "underlying": "AVAV",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/avxx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "BU",
@@ -608,7 +679,8 @@
       "underlying": "B",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/bu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "PLU",
@@ -616,7 +688,8 @@
       "underlying": "PL",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/plu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "KEEX",
@@ -624,7 +697,8 @@
       "underlying": "KEEL",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/keex/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "RKTL",
@@ -632,7 +706,8 @@
       "underlying": "RKT",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/rktl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "LUNL",
@@ -640,7 +715,8 @@
       "underlying": "LUNR",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/lunl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "LNOK",
@@ -648,7 +724,8 @@
       "underlying": "NOK",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/lnok/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "RCAX",
@@ -656,7 +733,8 @@
       "underlying": "RCAT",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/rcax/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "MRNX",
@@ -664,7 +742,8 @@
       "underlying": "MRNA",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/mrnx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "ZETX",
@@ -672,7 +751,8 @@
       "underlying": "ZETA",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/zetx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AMA",
@@ -680,7 +760,8 @@
       "underlying": "AMAT",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ama/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "POEL",
@@ -688,7 +769,8 @@
       "underlying": "POET",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/poel/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "XOVL",
@@ -696,7 +778,8 @@
       "underlying": "XOVR",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/xovl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AMKL",
@@ -704,7 +787,8 @@
       "underlying": "AMKR",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/amkl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AMPU",
@@ -712,7 +796,17 @@
       "underlying": "AMPX",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ampu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "ASTY",
+      "name": "ASTY Daily Target 2X Long ASTS ETF",
+      "underlying": "ASTS",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/asty/",
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "ASTY",
@@ -728,7 +822,8 @@
       "underlying": "MSTR",
       "issuer": "REX",
       "url": "https://www.rexshares.com/mstu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "NVDX",
@@ -736,7 +831,8 @@
       "underlying": "NVDA",
       "issuer": "REX",
       "url": "https://www.rexshares.com/nvdx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "TSLT",
@@ -744,7 +840,8 @@
       "underlying": "TSLA",
       "issuer": "REX",
       "url": "https://www.rexshares.com/tslt/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "BTCL",
@@ -752,7 +849,8 @@
       "underlying": "BTC-USD",
       "issuer": "REX",
       "url": "https://www.rexshares.com/btcl/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CRWU",
@@ -760,7 +858,8 @@
       "underlying": "CRWV",
       "issuer": "REX",
       "url": "https://www.rexshares.com/crwu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CCUP",
@@ -768,7 +867,8 @@
       "underlying": "CRCL",
       "issuer": "REX",
       "url": "https://www.rexshares.com/ccup/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "ROBN",
@@ -776,7 +876,8 @@
       "underlying": "HOOD",
       "issuer": "REX",
       "url": "https://www.rexshares.com/robn/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "ETU",
@@ -784,7 +885,8 @@
       "underlying": "ETH-USD",
       "issuer": "REX",
       "url": "https://www.rexshares.com/etu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "NFLU",
@@ -792,7 +894,8 @@
       "underlying": "NFLX",
       "issuer": "REX",
       "url": "https://www.rexshares.com/nflu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "GMEU",
@@ -800,7 +903,8 @@
       "underlying": "GME",
       "issuer": "REX",
       "url": "https://www.rexshares.com/gmeu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "DJTU",
@@ -808,7 +912,8 @@
       "underlying": "DJT",
       "issuer": "REX",
       "url": "https://www.rexshares.com/djtu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AAPX",
@@ -816,7 +921,8 @@
       "underlying": "AAPL",
       "issuer": "REX",
       "url": "https://www.rexshares.com/aapx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "GOOX",
@@ -824,7 +930,8 @@
       "underlying": "GOOG",
       "issuer": "REX",
       "url": "https://www.rexshares.com/goox/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "MSFX",
@@ -832,7 +939,8 @@
       "underlying": "MSFT",
       "issuer": "REX",
       "url": "https://www.rexshares.com/msfx/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "RBLU",
@@ -840,7 +948,8 @@
       "underlying": "RBLX",
       "issuer": "REX",
       "url": "https://www.rexshares.com/rblu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "BMNU",
@@ -848,7 +957,8 @@
       "underlying": "BMNR",
       "issuer": "REX",
       "url": "https://www.rexshares.com/bmnu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "GLXU",
@@ -856,7 +966,8 @@
       "underlying": "GLXY",
       "issuer": "REX",
       "url": "https://www.rexshares.com/glxu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "TTDU",
@@ -864,7 +975,8 @@
       "underlying": "TTD",
       "issuer": "REX",
       "url": "https://www.rexshares.com/ttdu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "KTUP",
@@ -872,7 +984,8 @@
       "underlying": "KTOS",
       "issuer": "REX",
       "url": "https://www.rexshares.com/ktup/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "SMUP",
@@ -880,7 +993,8 @@
       "underlying": "SMR",
       "issuer": "REX",
       "url": "https://www.rexshares.com/smup/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AFRU",
@@ -888,7 +1002,8 @@
       "underlying": "AFRM",
       "issuer": "REX",
       "url": "https://www.rexshares.com/afru/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "SNOU",
@@ -896,7 +1011,8 @@
       "underlying": "SNOW",
       "issuer": "REX",
       "url": "https://www.rexshares.com/snou/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "SBTU",
@@ -904,7 +1020,8 @@
       "underlying": "SBET",
       "issuer": "REX",
       "url": "https://www.rexshares.com/sbtu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CIFU",
@@ -912,7 +1029,8 @@
       "underlying": "CIFR",
       "issuer": "REX",
       "url": "https://www.rexshares.com/cifu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "EOSU",
@@ -920,7 +1038,8 @@
       "underlying": "EOSE",
       "issuer": "REX",
       "url": "https://www.rexshares.com/eosu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "RDWU",
@@ -928,7 +1047,8 @@
       "underlying": "RDW",
       "issuer": "REX",
       "url": "https://www.rexshares.com/rdwu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "FGRU",
@@ -936,7 +1056,8 @@
       "underlying": "FIGR",
       "issuer": "REX",
       "url": "https://www.rexshares.com/fgru/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "APHU",
@@ -944,7 +1065,8 @@
       "underlying": "APH",
       "issuer": "REX",
       "url": "https://www.rexshares.com/aphu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "PAAU",
@@ -952,7 +1074,8 @@
       "underlying": "PAAS",
       "issuer": "REX",
       "url": "https://www.rexshares.com/paau/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "SNDU",
@@ -960,7 +1083,8 @@
       "underlying": "SNDK",
       "issuer": "REX",
       "url": "https://www.rexshares.com/sndu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AXTU",
@@ -968,7 +1092,8 @@
       "underlying": "AXTI",
       "issuer": "REX",
       "url": "https://www.rexshares.com/axtu/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "XNDX",
@@ -976,7 +1101,8 @@
       "underlying": "XNDU",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/xndx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AXTX",
@@ -984,7 +1110,8 @@
       "underlying": "AXTI",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/axtx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CPNX",
@@ -992,7 +1119,8 @@
       "underlying": "CPNG",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/cpnx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "MPWX",
@@ -1000,7 +1128,8 @@
       "underlying": "MPWR",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/mpwx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "STXX",
@@ -1248,7 +1377,8 @@
       "underlying": "LRCX",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/lrcu?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "WDCX",
@@ -1256,7 +1386,8 @@
       "underlying": "WDC",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/wdcx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "APPX",
@@ -1264,7 +1395,8 @@
       "underlying": "APP",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/appx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "IBX",
@@ -1272,7 +1404,8 @@
       "underlying": "IBM",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/ibx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "UNX",
@@ -1280,7 +1413,8 @@
       "underlying": "U",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/unx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "PATX",
@@ -1288,7 +1422,8 @@
       "underlying": "PATH",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/patx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "TEMT",
@@ -1296,7 +1431,17 @@
       "underlying": "TEM",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/temt?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "FLYT",
+      "name": "FLYT Tradr 2X Long FLY Daily ETF",
+      "underlying": "FLY",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/flyt?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "FLYT",
@@ -1312,7 +1457,8 @@
       "underlying": "ONDS",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/ondu?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "COZX",
@@ -1320,7 +1466,8 @@
       "underlying": "CORZ",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/cozx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "OPEX",
@@ -1328,7 +1475,8 @@
       "underlying": "OPEN",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/opex?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "SRPU",
@@ -1336,7 +1484,8 @@
       "underlying": "SRPT",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/srpu?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "UPSX",
@@ -1344,7 +1493,8 @@
       "underlying": "UPST",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/upsx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AURU",
@@ -1352,7 +1502,8 @@
       "underlying": "AUR",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/auru?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "BLSX",
@@ -1360,7 +1511,8 @@
       "underlying": "BLSH",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/blsx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CELT",
@@ -1368,7 +1520,8 @@
       "underlying": "CELH",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/celt?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "DASX",
@@ -1376,7 +1529,8 @@
       "underlying": "DASH",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/dasx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "DOGD",
@@ -1384,7 +1538,8 @@
       "underlying": "DDOG",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/dogd?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "ENPX",
@@ -1392,7 +1547,8 @@
       "underlying": "ENPH",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/enpx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "GSX",
@@ -1400,7 +1556,8 @@
       "underlying": "GS",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/gsx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "LYFX",
@@ -1408,7 +1565,8 @@
       "underlying": "LYFT",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/lyfx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "MDBX",
@@ -1416,7 +1574,8 @@
       "underlying": "MDB",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/mdbx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "NETX",
@@ -1424,7 +1583,8 @@
       "underlying": "NET",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/netx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "NWMX",
@@ -1432,7 +1592,8 @@
       "underlying": "NEM",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/nwmx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "OKTX",
@@ -1440,7 +1601,8 @@
       "underlying": "OKTA",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/oktx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "QSX",
@@ -1448,7 +1610,8 @@
       "underlying": "QS",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/qsx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "VOYX",
@@ -1456,7 +1619,8 @@
       "underlying": "VOYG",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/voyx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CBRG",
@@ -1464,7 +1628,8 @@
       "underlying": "CBRS",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-cbrs-daily-etf/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "STXU",
@@ -1472,7 +1637,8 @@
       "underlying": "STX",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-stx-daily-etf/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "SNDG",
@@ -1480,7 +1646,8 @@
       "underlying": "SNDK",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-sndk-daily-etf/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AAOG",
@@ -1488,7 +1655,8 @@
       "underlying": "AAOI",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-aaoi-daily-etf/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "COHH",
@@ -1496,7 +1664,8 @@
       "underlying": "COHR",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-cohr-daily-etf/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "GLWG",
@@ -1504,7 +1673,8 @@
       "underlying": "GLW",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-glw-daily-etf/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CRCG",
@@ -1512,7 +1682,8 @@
       "underlying": "CRCL",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-crcl-daily-etf/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CIEG",
@@ -1520,7 +1691,8 @@
       "underlying": "CIEN",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-cien-daily-etf/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CATG",
@@ -1528,7 +1700,8 @@
       "underlying": "CAT",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-cat-daily-etf/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "HONG",
@@ -1536,7 +1709,8 @@
       "underlying": "HON",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-hon-daily-etf/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AMAU",
@@ -1544,7 +1718,8 @@
       "underlying": "AMAT",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-amat-daily-etf/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "ETNG",
@@ -1552,7 +1727,188 @@
       "underlying": "ETN",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-etn-daily-etf/",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "TQQQ",
+      "name": "ProShares UltraPro QQQ",
+      "underlying": "QQQ",
+      "issuer": "ProShares",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "UPRO",
+      "name": "ProShares UltraPro S&P 500",
+      "underlying": "SPY",
+      "issuer": "ProShares",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "UDOW",
+      "name": "ProShares UltraPro Dow30",
+      "underlying": "DIA",
+      "issuer": "ProShares",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "TNA",
+      "name": "Direxion Daily Small Cap Bull 3X",
+      "underlying": "IWM",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "MIDU",
+      "name": "Direxion Daily Mid Cap Bull 3X",
+      "underlying": "MDY",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "SOXL",
+      "name": "Direxion Daily Semiconductor Bull 3X",
+      "underlying": "SOXX",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "TECL",
+      "name": "Direxion Daily Technology Bull 3X",
+      "underlying": "XLK",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "FNGU",
+      "name": "MicroSectors FANG+ 3X",
+      "underlying": "FNGS",
+      "issuer": "MicroSectors",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "WEBL",
+      "name": "MicroSectors Solactive FANG+ Internet 3X",
+      "underlying": "",
+      "issuer": "MicroSectors",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "FAS",
+      "name": "Direxion Daily Financial Bull 3X",
+      "underlying": "XLF",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "ERX",
+      "name": "Direxion Daily Energy Bull 3X",
+      "underlying": "XLE",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "LABU",
+      "name": "Direxion Daily S&P Biotech Bull 3X",
+      "underlying": "XBI",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "NAIL",
+      "name": "Direxion Daily Homebuilders Bull 3X",
+      "underlying": "ITB",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "RETL",
+      "name": "Direxion Daily Retail Bull 3X",
+      "underlying": "XRT",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "DPST",
+      "name": "Direxion Daily Regional Banks Bull 3X",
+      "underlying": "KRE",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "NUGT",
+      "name": "Direxion Daily Gold Miners Bull 3X",
+      "underlying": "GDX",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "GUSH",
+      "name": "Direxion Daily Oil & Gas E&P Bull 3X",
+      "underlying": "XOP",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "JNUG",
+      "name": "Direxion Daily Junior Gold Miners 3X",
+      "underlying": "GDXJ",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "TMF",
+      "name": "Direxion Daily 20+ Year Treasury 3X",
+      "underlying": "TLT",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
+    },
+    {
+      "ticker_2x": "TYD",
+      "name": "Direxion Daily 7-10 Year Treasury 3X",
+      "underlying": "IEF",
+      "issuer": "Direxion",
+      "url": "",
+      "expense_ratio": null,
+      "leverage": 3
     }
   ]
 }

@@ -1721,6 +1721,7 @@
       "ticker_underlying": "NOW",
       "issuer": "GraniteShares",
       "expense_ratio": null,
+      "leverage": 2,
       "category": "Other",
       "price_2x": 4.8,
       "daily_pct": -6.98,
@@ -1732,7 +1733,12 @@
       "underlying_6m_pct": -38.95,
       "history_days_2x": 216,
       "proxy_fields": [],
-      "alerts": [],
+      "alerts": [
+        "big_drop",
+        "oversold",
+        "five_day_crash",
+        "bb_breakdown"
+      ],
       "signals": [
         "macd_above_zero",
         "earnings_beat_streak"
@@ -1856,6 +1862,7 @@
       "ticker_underlying": "CBRS",
       "issuer": "LeverageShares",
       "expense_ratio": null,
+      "leverage": 2,
       "category": "Other",
       "price_2x": 12.1,
       "daily_pct": -5.32,
@@ -2351,6 +2358,7 @@
       "ticker_underlying": "NVO",
       "issuer": "Defiance",
       "expense_ratio": null,
+      "leverage": 2,
       "category": "Other",
       "price_2x": 14.22,
       "daily_pct": -3.2,
@@ -2399,6 +2407,7 @@
       "ticker_underlying": "ZETA",
       "issuer": "Defiance",
       "expense_ratio": null,
+      "leverage": 2,
       "category": "Other",
       "price_2x": 16.89,
       "daily_pct": -3.15,

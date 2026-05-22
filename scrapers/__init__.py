@@ -1,4 +1,4 @@
-from . import direxion, graniteshares, defiance, rex, tradr, leverage_shares
+from . import direxion, graniteshares, defiance, rex, tradr, leverage_shares, threex
 
 ALL_SCRAPERS = [
     ("Direxion", direxion.fetch),
@@ -7,4 +7,5 @@ ALL_SCRAPERS = [
     ("REX", rex.fetch),
     ("Tradr", tradr.fetch),
     ("LeverageShares", leverage_shares.fetch),
+    ("3X", threex.fetch),
 ]

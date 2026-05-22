@@ -38,6 +38,7 @@ class ETF:
     issuer: str
     url: str = ""
     expense_ratio: Optional[float] = None  # percent, e.g. 1.31
+    leverage: int = 2                       # 2 = 2X (single-stock), 3 = 3X (sector/index)
 
     def as_dict(self) -> dict:
         return asdict(self)
