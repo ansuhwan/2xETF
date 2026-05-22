@@ -1731,5 +1731,200 @@
     "name_kr": "레버리지셰어즈 씨게이트 2배 ETF",
     "market": "AMX"
   },
-  "ASTY": null
+  "ASTY": null,
+  "DIA": {
+    "code": "US19980120001",
+    "name_kr": null,
+    "market": "AMX"
+  },
+  "DPST": {
+    "code": "US20150819002",
+    "name_kr": "디렉시온 미국 지역은행 3배 ETF",
+    "market": "AMX"
+  },
+  "ERX": {
+    "code": "US20081106001",
+    "name_kr": "디렉시온 에너지 대형주 2배 ETF",
+    "market": "AMX"
+  },
+  "FAS": {
+    "code": "US20081106003",
+    "name_kr": "디렉시온 데일리 금융주 3배 ETF",
+    "market": "AMX"
+  },
+  "FNGS": {
+    "code": "US20191113002",
+    "name_kr": "마이크로섹터 FANG 플러스 ETN",
+    "market": "AMX"
+  },
+  "FNGU": {
+    "code": "AMX0250221002",
+    "name_kr": "마이크로섹터 FANG 플러스 3배 ETN",
+    "market": "AMX"
+  },
+  "GDX": {
+    "code": "US20060522001",
+    "name_kr": "반에크 금광 ETF",
+    "market": "AMX"
+  },
+  "GDXJ": {
+    "code": "US20091111001",
+    "name_kr": "반에크 소형 금광 ETF",
+    "market": "AMX"
+  },
+  "GUSH": {
+    "code": "US20150528002",
+    "name_kr": "디렉시온 S&P 석유/가스 2배 ETF",
+    "market": "AMX"
+  },
+  "IEF": {
+    "code": "US20170802005",
+    "name_kr": null,
+    "market": "NSQ"
+  },
+  "ITB": {
+    "code": "US20060505011",
+    "name_kr": "아이셰어즈 미국 주택건설 ETF",
+    "market": "AMX"
+  },
+  "IWM": {
+    "code": "US20000526007",
+    "name_kr": "아이셰어즈 러셀2000 ETF",
+    "market": "AMX"
+  },
+  "JNUG": {
+    "code": "US20131003003",
+    "name_kr": "디렉시온 금광/은광 2배 ETF",
+    "market": "AMX"
+  },
+  "KRE": {
+    "code": "US20060622001",
+    "name_kr": "SPDR 미국 지역은행 ETF",
+    "market": "AMX"
+  },
+  "LABU": {
+    "code": "US20150528004",
+    "name_kr": "디렉시온 S&P 바이오주 3배 ETF",
+    "market": "AMX"
+  },
+  "MDY": {
+    "code": "US19950504001",
+    "name_kr": "SPDR 미국 중형주 ETF",
+    "market": "AMX"
+  },
+  "MIDU": {
+    "code": "US20090108001",
+    "name_kr": "디렉시온 S&P400 중형주 3배 ETF",
+    "market": "AMX"
+  },
+  "NAIL": {
+    "code": "US20150819003",
+    "name_kr": "디렉시온 미국 건설주 3배 ETF",
+    "market": "AMX"
+  },
+  "NUGT": {
+    "code": "US20101208004",
+    "name_kr": "디렉시온 세계 금광 2배 ETF",
+    "market": "AMX"
+  },
+  "QQQ": {
+    "code": "US19990310001",
+    "name_kr": null,
+    "market": "NSQ"
+  },
+  "RETL": {
+    "code": "US20100714001",
+    "name_kr": "디렉시온 리테일 3배 ETF",
+    "market": "AMX"
+  },
+  "SOXL": {
+    "code": "US20100311002",
+    "name_kr": null,
+    "market": "AMX"
+  },
+  "SOXX": {
+    "code": "US20010713001",
+    "name_kr": "아이셰어즈 반도체 ETF",
+    "market": "NSQ"
+  },
+  "SPY": {
+    "code": "US19930122001",
+    "name_kr": null,
+    "market": "AMX"
+  },
+  "TECL": {
+    "code": "US20081217003",
+    "name_kr": "디렉시온 빅테크 3배 ETF",
+    "market": "AMX"
+  },
+  "TLT": {
+    "code": "US20020726001",
+    "name_kr": null,
+    "market": "NSQ"
+  },
+  "TMF": {
+    "code": "US20090416002",
+    "name_kr": "디렉시온 20년 미국채 3배 ETF",
+    "market": "AMX"
+  },
+  "TNA": {
+    "code": "US20081105003",
+    "name_kr": "디렉시온 소형주 3배 ETF",
+    "market": "AMX"
+  },
+  "TQQQ": {
+    "code": "US20100211003",
+    "name_kr": null,
+    "market": "NSQ"
+  },
+  "TYD": {
+    "code": "US20090416004",
+    "name_kr": "디렉시온 미국 중기채 3배 ETF",
+    "market": "AMX"
+  },
+  "UDOW": {
+    "code": "US20100211008",
+    "name_kr": "프로셰어즈 다우존스30 3배 ETF",
+    "market": "AMX"
+  },
+  "UPRO": {
+    "code": "US20090625003",
+    "name_kr": "프로셰어즈 S&P500 3배 ETF",
+    "market": "AMX"
+  },
+  "WEBL": {
+    "code": "US20191106009",
+    "name_kr": "디렉시온 인터넷 3배 ETF",
+    "market": "AMX"
+  },
+  "XBI": {
+    "code": "US20060206001",
+    "name_kr": "SPDR 바이오 ETF",
+    "market": "AMX"
+  },
+  "XLE": {
+    "code": "US19981222002",
+    "name_kr": "SPDR 미국 에너지 ETF",
+    "market": "AMX"
+  },
+  "XLF": {
+    "code": "US19981222003",
+    "name_kr": "SPDR 금융주 ETF",
+    "market": "AMX"
+  },
+  "XLK": {
+    "code": "US19981222005",
+    "name_kr": "SPDR 기술주 ETF",
+    "market": "AMX"
+  },
+  "XOP": {
+    "code": "US20060622004",
+    "name_kr": "SPDR 원유/가스 ETF",
+    "market": "AMX"
+  },
+  "XRT": {
+    "code": "US20060622006",
+    "name_kr": "SPDR 미국 소매기업 ETF",
+    "market": "AMX"
+  }
 }
