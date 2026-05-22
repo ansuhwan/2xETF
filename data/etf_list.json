@@ -1,35 +1,40 @@
 {
-  "updated_at": "2026-05-22T07:36:37+09:00",
-  "total": 190,
+  "updated_at": "2026-05-23T01:15:26+09:00",
+  "total": 210,
   "per_issuer": {
     "Direxion": {
       "count": 10,
-      "ms": 3670,
+      "ms": 627,
       "ok": true
     },
     "GraniteShares": {
       "count": 34,
-      "ms": 517,
+      "ms": 1906,
       "ok": true
     },
     "Defiance": {
       "count": 42,
-      "ms": 482,
+      "ms": 1768,
       "ok": true
     },
     "REX": {
       "count": 31,
-      "ms": 491,
+      "ms": 1241,
       "ok": true
     },
     "Tradr": {
       "count": 61,
-      "ms": 246,
+      "ms": 931,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 305,
+      "ms": 1644,
+      "ok": true
+    },
+    "3X": {
+      "count": 20,
+      "ms": 0,
       "ok": true
     }
   },
@@ -809,14 +814,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "ASTY",
-      "name": "ASTY Daily Target 2X Long ASTS ETF",
-      "underlying": "ASTS",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/asty/",
-      "expense_ratio": null
-    },
-    {
       "ticker_2x": "MSTU",
       "name": "MSTU | +2X Daily MSTR",
       "underlying": "MSTR",
@@ -1137,7 +1134,8 @@
       "underlying": "STX",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/stxx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "ASTX",
@@ -1145,7 +1143,8 @@
       "underlying": "ASTS",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/astx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "LABX",
@@ -1153,7 +1152,8 @@
       "underlying": "ALAB",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/labx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "NEBX",
@@ -1161,7 +1161,8 @@
       "underlying": "NBIS",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/nebx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "AAOX",
@@ -1169,7 +1170,8 @@
       "underlying": "AAOI",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/aaox?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "LITX",
@@ -1177,7 +1179,8 @@
       "underlying": "LITE",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/litx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "SNXX",
@@ -1185,7 +1188,8 @@
       "underlying": "SNDK",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/snxx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "NVTX",
@@ -1193,7 +1197,8 @@
       "underlying": "NVTS",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/nvtx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CRMX",
@@ -1201,7 +1206,8 @@
       "underlying": "CRML",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/crmx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "APLX",
@@ -1209,7 +1215,8 @@
       "underlying": "APLD",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/aplx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CWVX",
@@ -1217,7 +1224,8 @@
       "underlying": "CRWV",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/cwvx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "BEX",
@@ -1225,7 +1233,8 @@
       "underlying": "BE",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/bex?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CEGX",
@@ -1233,7 +1242,8 @@
       "underlying": "CEG",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/cegx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "GEVX",
@@ -1241,7 +1251,8 @@
       "underlying": "GEV",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/gevx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "LEUX",
@@ -1249,7 +1260,8 @@
       "underlying": "LEU",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/leux?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "SMU",
@@ -1257,7 +1269,8 @@
       "underlying": "SMR",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/smu?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "COHX",
@@ -1265,7 +1278,8 @@
       "underlying": "COHR",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/cohx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CRDU",
@@ -1273,7 +1287,8 @@
       "underlying": "CRDO",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/crdu?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CSEX",
@@ -1281,7 +1296,8 @@
       "underlying": "CLS",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/csex?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "CLSX",
@@ -1289,7 +1305,8 @@
       "underlying": "CLSK",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/clsx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "IREX",
@@ -1297,7 +1314,8 @@
       "underlying": "IREN",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/irex?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "WULX",
@@ -1305,7 +1323,8 @@
       "underlying": "WULF",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/wulx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "HLXX",
@@ -1313,7 +1332,8 @@
       "underlying": "HL",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/hlxx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "USAX",
@@ -1321,7 +1341,8 @@
       "underlying": "USAR",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/usax?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "ARCX",
@@ -1329,7 +1350,8 @@
       "underlying": "ACHR",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/arcx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "JOBX",
@@ -1337,7 +1359,8 @@
       "underlying": "JOBY",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/jobx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "PONX",
@@ -1345,7 +1368,8 @@
       "underlying": "PONY",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/ponx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "QBTX",
@@ -1353,7 +1377,8 @@
       "underlying": "QBTS",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/qbtx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "QUBX",
@@ -1361,7 +1386,8 @@
       "underlying": "QUBT",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/qubx?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "RGTU",
@@ -1369,7 +1395,8 @@
       "underlying": "RGTI",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/rgtu?hsLang=en",
-      "expense_ratio": null
+      "expense_ratio": null,
+      "leverage": 2
     },
     {
       "ticker_2x": "LRCU",
@@ -1442,14 +1469,6 @@
       "url": "https://www.tradretfs.com/flyt?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
-    },
-    {
-      "ticker_2x": "FLYT",
-      "name": "FLYT Tradr 2X Long FLY Daily ETF",
-      "underlying": "FLY",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/flyt?hsLang=en",
-      "expense_ratio": null
     },
     {
       "ticker_2x": "ONDU",
