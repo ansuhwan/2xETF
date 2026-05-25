@@ -46,6 +46,11 @@ jobs:
         run: python fetch_earnings.py
         continue-on-error: true
 
+      # 옵션 플로 (P/C 비율 + ATM IV) — 본주별 ~5분
+      - name: Fetch options snapshot
+        run: python fetch_options.py
+        continue-on-error: true
+
       # 토스 productCode (신규 ETF만 매핑)
       - name: Update Toss product IDs
         run: python build_toss_ids.py
@@ -59,7 +64,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/etf_list.json data/data.json data/earnings.json data/toss_ids.json 2>/dev/null || true
+          git add data/etf_list.json data/data.json data/earnings.json data/toss_ids.json data/options.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "::notice::No data changes to commit"
           else

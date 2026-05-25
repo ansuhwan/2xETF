@@ -23,6 +23,7 @@ ETF_LIST = DATA / "etf_list.json"
 PRICES_PKL = DATA / "prices.pkl"
 MONTHLY_PKL = DATA / "monthly.pkl"
 EARNINGS_JSON = DATA / "earnings.json"
+OPTIONS_JSON = DATA / "options.json"
 OUT = DATA / "data.json"
 
 KST = timezone(timedelta(hours=9))
@@ -237,7 +238,7 @@ def compute_ma_signals(close: pd.Series, low: pd.Series) -> list[str]:
     return sigs
 
 
-def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], today: date, monthly: pd.DataFrame | None = None) -> dict | None:
+def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], today: date, monthly: pd.DataFrame | None = None, options: dict[str, dict] | None = None) -> dict | None:
     t2 = (etf.get("ticker_2x") or "").strip().upper()
     und = (etf.get("underlying") or "").strip().upper()
     leverage = int(etf.get("leverage") or 2)
@@ -367,6 +368,20 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
         elif bs >= 2: ma_sigs.append("earnings_beats")
         if ms >= 3: ma_sigs.append("earnings_miss_streak")
 
+    # Options flow signals (front-month underlying)
+    o_info = (options or {}).get(und) if und else None
+    pc_vol = None
+    atm_iv = None
+    if o_info:
+        pc_vol = o_info.get("pc_ratio_vol")
+        atm_iv = o_info.get("atm_iv")
+        if pc_vol is not None:
+            if pc_vol >= 1.5: ma_sigs.append("put_heavy")     # 풋 매수 우세 (방어/약세)
+            elif pc_vol <= 0.4: ma_sigs.append("call_heavy")  # 콜 매수 우세 (강세)
+        if atm_iv is not None:
+            if atm_iv >= 60: ma_sigs.append("iv_elevated")    # 큰 변동 기대 (이벤트 임박)
+            elif atm_iv <= 20: ma_sigs.append("iv_crushed")   # 변동성 짓눌림
+
     # Monthly bull alignment + daily price near long-term MA (MA60 or MA120)
     # = long-term uptrend in pullback to key support
     if monthly_sig == "monthly_bull_align" and cu.size >= 60:
@@ -413,6 +428,8 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
         "dollar_volume_20d": r(dollar_volume_20d, 0) if dollar_volume_20d is not None else None,
         "rs_20d": r(rs_20d),
         "rs_benchmark": rs_sector,
+        "pc_ratio_vol": pc_vol,
+        "atm_iv": atm_iv,
         **_earnings_fields(earnings.get(und) if und else None, today),
     }
 
@@ -468,6 +485,11 @@ def recommendation_score(p: dict) -> tuple[float, list[str]]:
     if "earnings_beat_streak" in sigs: score += 1.5; reasons.append("4분기 연속 비트")
     elif "earnings_beats" in sigs: score += 0.5
     if "earnings_miss_streak" in sigs: score -= 1.0
+
+    # Options flow
+    if "call_heavy" in sigs: score += 2.0; reasons.append("콜 매수 우세")
+    if "put_heavy" in sigs: score -= 1.5
+    if "iv_elevated" in sigs: score -= 0.5  # 큰 이벤트 임박 — 양방향 위험
 
     # RSI sweet spot
     rsi = p.get("rsi")
@@ -547,6 +569,15 @@ def load_earnings() -> dict[str, dict]:
         return {}
 
 
+def load_options() -> dict[str, dict]:
+    if not OPTIONS_JSON.exists():
+        return {}
+    try:
+        return json.loads(OPTIONS_JSON.read_text(encoding="utf-8")).get("tickers", {})
+    except Exception:
+        return {}
+
+
 def load_monthly() -> pd.DataFrame | None:
     if not MONTHLY_PKL.exists():
         return None
@@ -581,6 +612,7 @@ def main() -> int:
     prices = pd.read_pickle(PRICES_PKL)
     earnings = load_earnings()
     monthly = load_monthly()
+    options = load_options()
     today = date.today()
 
     # Reference last trading date = max across all tickers; ETFs that haven't
@@ -605,7 +637,7 @@ def main() -> int:
                 "last_trade": str(ld.date()) if pd.notna(ld) else None,
             })
             continue
-        rec = analyze_pair(e, prices, earnings, today, monthly)
+        rec = analyze_pair(e, prices, earnings, today, monthly, options)
         if rec is None:
             skipped.append(t2 or "?")
             continue

@@ -336,6 +336,10 @@
     earnings_beat_streak:    { g: "E✓4", cls: "g", t: "4분기 연속 실적 비트" },
     earnings_beats:          { g: "E✓", cls: "g", t: "최근 실적 비트" },
     earnings_miss_streak:    { g: "E✗", cls: "r", t: "3분기 연속 실적 미스" },
+    call_heavy:              { g: "C↑", cls: "g",   t: "콜 매수 우세 (P/C ≤ 0.4) — 강세 베팅" },
+    put_heavy:               { g: "P↑", cls: "r",   t: "풋 매수 우세 (P/C ≥ 1.5) — 약세/헤지" },
+    iv_elevated:             { g: "IV↑", cls: "amb", t: "IV 60%+ — 큰 변동 기대 (이벤트 임박)" },
+    iv_crushed:              { g: "IV↓", cls: "dim", t: "IV 20% 이하 — 변동성 짓눌림 (스퀴즈 후보)" },
   };
   const FILTER_GROUPS = [
     { key: "status", label: "상태", chips: [
@@ -361,6 +365,8 @@
       { k:"macd_bull_cross", label:"MACD↑" }, { k:"macd_bear_cross", label:"MACD↓" },
       { k:"sector_leader", label:"섹터선도" }, { k:"sector_laggard", label:"섹터부진" },
       { k:"earnings_beat_streak", label:"실적연속비트" }, { k:"earnings_miss_streak", label:"실적연속미스" },
+      { k:"call_heavy", label:"콜우세" }, { k:"put_heavy", label:"풋우세" },
+      { k:"iv_elevated", label:"IV↑" }, { k:"iv_crushed", label:"IV↓" },
     ]},
     { key: "sector", label: "섹터", chips: [
       { k:"Mag7", label:"Mag7" }, { k:"AI", label:"AI" }, { k:"Semi", label:"반도체" },
@@ -591,6 +597,12 @@
     const rsLine = rs != null ? `<span title="vs ${p.rs_benchmark} 20일"><span class="soft">RS20</span> <span class="${rs>=5?'amb':rs>=0?'pos':rs<=-5?'neg':'soft'} num">${fmtPct(rs)}%</span></span>` : "";
     const surp = p.avg_surprise_pct;
     const surpLine = surp != null ? `<span title="최근 4분기 평균 서프라이즈"><span class="soft">EPS±</span> <span class="${surp>0?'pos':'neg'} num">${fmtPct(surp)}%</span></span>` : "";
+    const pcv = p.pc_ratio_vol;
+    const pcCls = pcv == null ? "soft" : pcv >= 1.5 ? "neg" : pcv <= 0.4 ? "pos" : "soft";
+    const pcLine = pcv != null ? `<span title="Put/Call 거래량 비율 (전월물)"><span class="soft">P/C</span> <span class="${pcCls} num">${pcv.toFixed(2)}</span></span>` : "";
+    const iv = p.atm_iv;
+    const ivCls = iv == null ? "soft" : iv >= 60 ? "amb" : iv <= 20 ? "dim" : "soft";
+    const ivLine = iv != null ? `<span title="ATM 옵션 내재변동성 (annualized)"><span class="soft">IV</span> <span class="${ivCls} num">${iv.toFixed(0)}%</span></span>` : "";
     const sigs = [...p.alerts, ...(p.signals||[])].map(k => {
       const d = ALERT_GLYPHS[k]||SIGNAL_GLYPHS[k];
       return d ? `<span class="cl ${d.cls}" title="${d.t}">${d.g}</span>` : "";
@@ -613,6 +625,8 @@
         ${dvLine}
         ${rsLine}
         ${surpLine}
+        ${pcLine}
+        ${ivLine}
         ${earn}
       </span>
       <span class="meta">${sigs}</span>
