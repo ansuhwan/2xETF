@@ -60,20 +60,23 @@ def snapshot(ticker_obj: yf.Ticker, spot: float | None) -> dict | None:
     pc_vol = (put_vol / call_vol) if call_vol > 0 else None
     pc_oi  = (put_oi  / call_oi)  if call_oi  > 0 else None
 
-    # ATM implied volatility = avg of nearest call + put IV
-    atm_iv = None
+    # ATM implied volatility — separate call/put for skew analysis
+    atm_call_iv = None
+    atm_put_iv = None
     if spot is not None and spot > 0:
-        ivs: list[float] = []
-        for df in (calls, puts):
+        for df, key in ((calls, "call"), (puts, "put")):
             if df is None or df.empty or "impliedVolatility" not in df.columns:
                 continue
             dist = (df["strike"] - spot).abs()
             atm = df.loc[dist.idxmin()]
             iv = atm.get("impliedVolatility")
             if pd.notna(iv) and iv > 0:
-                ivs.append(float(iv))
-        if ivs:
-            atm_iv = round(sum(ivs) / len(ivs) * 100, 1)  # to percent
+                v = round(float(iv) * 100, 1)
+                if key == "call": atm_call_iv = v
+                else:             atm_put_iv = v
+    # Averaged IV kept for back-compat
+    ivs_avg = [v for v in (atm_call_iv, atm_put_iv) if v is not None]
+    atm_iv = round(sum(ivs_avg) / len(ivs_avg), 1) if ivs_avg else None
 
     return {
         "expiration": front,
@@ -84,6 +87,8 @@ def snapshot(ticker_obj: yf.Ticker, spot: float | None) -> dict | None:
         "pc_ratio_vol": round(pc_vol, 2) if pc_vol is not None else None,
         "pc_ratio_oi":  round(pc_oi, 2)  if pc_oi  is not None else None,
         "atm_iv": atm_iv,
+        "atm_call_iv": atm_call_iv,
+        "atm_put_iv": atm_put_iv,
     }
 
 
@@ -99,6 +104,14 @@ def main() -> int:
         prices = pd.read_pickle(PRICES_PKL)
     except Exception:
         pass
+
+    # Carry forward previous snapshot's OI so analyze.py can compute day-over-day growth
+    prev_tickers: dict[str, dict] = {}
+    if OUT.exists():
+        try:
+            prev_tickers = json.loads(OUT.read_text(encoding="utf-8")).get("tickers", {})
+        except Exception:
+            pass
 
     out: dict[str, dict] = {}
     print(f"Fetching options for {len(underlyings)} underlyings...")
@@ -117,6 +130,9 @@ def main() -> int:
         except Exception:
             snap = None
         if snap:
+            prev = prev_tickers.get(t, {})
+            snap["call_oi_prev"] = prev.get("call_oi")
+            snap["put_oi_prev"]  = prev.get("put_oi")
             out[t] = snap
 
         time.sleep(0.25)

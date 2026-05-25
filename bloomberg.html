@@ -341,6 +341,9 @@
     iv_elevated:             { g: "IV↑", cls: "amb", t: "IV 60%+ — 큰 변동 기대 (이벤트 임박)" },
     iv_crushed:              { g: "IV↓", cls: "dim", t: "IV 20% 이하 — 변동성 짓눌림 (스퀴즈 후보)" },
     squeeze_setup:           { g: "★Sq", cls: "g",   t: "스퀴즈 셋업: 콜 우세 + IV 낮음 (변동성 압축 + 누적 매수)" },
+    call_oi_growth:          { g: "OI↑", cls: "g",   t: "콜 OI 전일 대비 20%+ 급증 (신규 매수 진입)" },
+    call_iv_premium:         { g: "C>P", cls: "g",   t: "콜 IV > 풋 IV (정상은 풋이 더 높음, 역전 시 강세)" },
+    unusual_call_activity:   { g: "UCA", cls: "g",   t: "이상 콜 거래량: 거래량이 OI의 2배+ (헤지펀드 진입 가능)" },
   };
   const FILTER_GROUPS = [
     { key: "status", label: "상태", chips: [
@@ -369,6 +372,8 @@
       { k:"earnings_beat_streak", label:"실적연속비트" }, { k:"earnings_miss_streak", label:"실적연속미스" },
       { k:"call_heavy", label:"콜우세" }, { k:"put_heavy", label:"풋우세" },
       { k:"iv_elevated", label:"IV↑" }, { k:"iv_crushed", label:"IV↓" },
+      { k:"call_oi_growth", label:"콜OI급증" }, { k:"call_iv_premium", label:"콜IV프리미엄" },
+      { k:"unusual_call_activity", label:"이상콜거래" },
     ]},
     { key: "sector", label: "섹터", chips: [
       { k:"Mag7", label:"Mag7" }, { k:"AI", label:"AI" }, { k:"Semi", label:"반도체" },

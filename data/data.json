@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-25T16:10:20+09:00",
+  "updated_at": "2026-05-25T16:20:51+09:00",
   "summary": {
     "total_pairs": 195,
     "alerts_count": 17,
@@ -9,6 +9,34 @@
     "as_of": "2026-05-22",
     "recommended_count": 10,
     "recommended": [
+      {
+        "ticker_2x": "UPRO",
+        "underlying": "SPY",
+        "score": 13.0,
+        "reasons": [
+          "정배눌림",
+          "월정배",
+          "일정배",
+          "MA지지",
+          "52신고가",
+          "콜IV프리미엄",
+          "이상콜거래"
+        ]
+      },
+      {
+        "ticker_2x": "IBX",
+        "underlying": "IBM",
+        "score": 12.5,
+        "reasons": [
+          "월정배+장기근접",
+          "52신고가",
+          "MACD골크",
+          "MACD모멘텀↑",
+          "4분기 연속 비트",
+          "콜 매수 우세",
+          "이상콜거래"
+        ]
+      },
       {
         "ticker_2x": "ERX",
         "underlying": "XLE",
@@ -23,119 +51,97 @@
         ]
       },
       {
-        "ticker_2x": "IBX",
-        "underlying": "IBM",
-        "score": 11.5,
-        "reasons": [
-          "월정배+장기근접",
-          "52신고가",
-          "MACD골크",
-          "MACD모멘텀↑",
-          "4분기 연속 비트",
-          "콜 매수 우세"
-        ]
-      },
-      {
-        "ticker_2x": "QCML",
-        "underlying": "QCOM",
-        "score": 11.0,
-        "reasons": [
-          "월정배",
-          "52신고가",
-          "MACD골크",
-          "MACD모멘텀↑",
-          "섹터선도",
-          "4분기 연속 비트",
-          "콜 매수 우세"
-        ]
-      },
-      {
         "ticker_2x": "RGTX",
         "underlying": "RGTI",
-        "score": 11.0,
+        "score": 12.0,
         "reasons": [
           "월정배",
           "거래량+양봉",
           "MACD골크",
           "MACD모멘텀↑",
           "섹터선도",
-          "콜 매수 우세"
-        ]
-      },
-      {
-        "ticker_2x": "GGLL",
-        "underlying": "GOOGL",
-        "score": 10.5,
-        "reasons": [
-          "정배눌림",
-          "월정배",
-          "일정배",
-          "MA지지",
-          "4분기 연속 비트"
-        ]
-      },
-      {
-        "ticker_2x": "DLLL",
-        "underlying": "DELL",
-        "score": 10.5,
-        "reasons": [
-          "월정배",
-          "일정배",
-          "거래량+양봉",
-          "52신고가",
-          "MACD골크",
-          "MACD모멘텀↑",
-          "섹터선도"
-        ]
-      },
-      {
-        "ticker_2x": "QBTX",
-        "underlying": "QBTS",
-        "score": 10.5,
-        "reasons": [
-          "월정배",
-          "거래량+양봉",
-          "MACD골크",
-          "MACD모멘텀↑",
-          "섹터선도",
-          "콜 매수 우세"
-        ]
-      },
-      {
-        "ticker_2x": "RGTU",
-        "underlying": "RGTI",
-        "score": 10.5,
-        "reasons": [
-          "월정배",
-          "거래량+양봉",
-          "MACD골크",
-          "MACD모멘텀↑",
-          "섹터선도",
-          "콜 매수 우세"
-        ]
-      },
-      {
-        "ticker_2x": "UPRO",
-        "underlying": "SPY",
-        "score": 10.5,
-        "reasons": [
-          "정배눌림",
-          "월정배",
-          "일정배",
-          "MA지지",
-          "52신고가"
+          "콜 매수 우세",
+          "이상콜거래"
         ]
       },
       {
         "ticker_2x": "UDOW",
         "underlying": "DIA",
-        "score": 10.5,
+        "score": 12.0,
         "reasons": [
           "월정배+장기근접",
           "MA지지",
           "52신고가",
           "MACD골크",
-          "MACD모멘텀↑"
+          "MACD모멘텀↑",
+          "콜IV프리미엄"
+        ]
+      },
+      {
+        "ticker_2x": "GGLL",
+        "underlying": "GOOGL",
+        "score": 11.5,
+        "reasons": [
+          "정배눌림",
+          "월정배",
+          "일정배",
+          "MA지지",
+          "4분기 연속 비트",
+          "이상콜거래"
+        ]
+      },
+      {
+        "ticker_2x": "CCUP",
+        "underlying": "CRCL",
+        "score": 11.5,
+        "reasons": [
+          "정배눌림",
+          "일정배",
+          "MA지지",
+          "콜 매수 우세",
+          "콜IV프리미엄",
+          "RSI 46"
+        ]
+      },
+      {
+        "ticker_2x": "QBTX",
+        "underlying": "QBTS",
+        "score": 11.5,
+        "reasons": [
+          "월정배",
+          "거래량+양봉",
+          "MACD골크",
+          "MACD모멘텀↑",
+          "섹터선도",
+          "콜 매수 우세",
+          "이상콜거래"
+        ]
+      },
+      {
+        "ticker_2x": "RGTU",
+        "underlying": "RGTI",
+        "score": 11.5,
+        "reasons": [
+          "월정배",
+          "거래량+양봉",
+          "MACD골크",
+          "MACD모멘텀↑",
+          "섹터선도",
+          "콜 매수 우세",
+          "이상콜거래"
+        ]
+      },
+      {
+        "ticker_2x": "CRCG",
+        "underlying": "CRCL",
+        "score": 11.5,
+        "reasons": [
+          "정배눌림",
+          "일정배",
+          "MA지지",
+          "콜 매수 우세",
+          "콜IV프리미엄",
+          "RSI 46"
         ]
       }
     ]
@@ -259,7 +265,8 @@
         "macd_above_zero",
         "macd_momentum_down",
         "call_heavy",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -271,6 +278,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.26,
       "atm_iv": 73.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-14",
       "days_to_earnings": 81,
       "earnings_window": null,
@@ -278,10 +286,11 @@
       "beat_streak": 0,
       "miss_streak": 2,
       "avg_surprise_pct": 17.78,
-      "rec_score": 1.0,
+      "rec_score": 2.5,
       "rec_reasons": [
         "MA지지",
         "콜 매수 우세",
+        "콜IV프리미엄",
         "과매도 바닥"
       ],
       "is_recommended": false
@@ -311,7 +320,8 @@
         "ma_bear_align",
         "macd_below_zero",
         "macd_bull_cross",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -323,6 +333,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.81,
       "atm_iv": 70.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-27",
       "days_to_earnings": 2,
       "earnings_window": "soon",
@@ -330,9 +341,10 @@
       "beat_streak": 0,
       "miss_streak": 1,
       "avg_surprise_pct": 5.17,
-      "rec_score": -3.5,
+      "rec_score": -2.0,
       "rec_reasons": [
         "MACD골크",
+        "콜IV프리미엄",
         "RSI 42",
         "실적 D-2"
       ],
@@ -374,7 +386,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.89,
-      "atm_iv": 68.6,
+      "atm_iv": 68.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -423,6 +436,7 @@
       "rs_benchmark": "XLF",
       "pc_ratio_vol": 0.36,
       "atm_iv": 66.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-07",
       "days_to_earnings": -18,
       "earnings_window": null,
@@ -473,6 +487,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.77,
       "atm_iv": 65.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -522,6 +537,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.49,
       "atm_iv": 136.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-26",
       "days_to_earnings": 1,
       "earnings_window": "soon",
@@ -575,6 +591,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.21,
       "atm_iv": 76.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-07",
       "days_to_earnings": 74,
       "earnings_window": null,
@@ -623,6 +640,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": null,
       "atm_iv": null,
+      "call_oi_growth_pct": null,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -669,6 +687,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.04,
       "atm_iv": 88.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-11",
       "days_to_earnings": -14,
       "earnings_window": null,
@@ -720,6 +739,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.49,
       "atm_iv": 72.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-05",
       "days_to_earnings": -20,
       "earnings_window": null,
@@ -759,7 +779,9 @@
         "macd_momentum_up",
         "monthly_bear_align",
         "call_heavy",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium",
+        "unusual_call_activity"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -771,6 +793,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.16,
       "atm_iv": 88.1,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -778,10 +801,12 @@
       "beat_streak": 1,
       "miss_streak": 0,
       "avg_surprise_pct": 21.89,
-      "rec_score": -2.0,
+      "rec_score": 0.5,
       "rec_reasons": [
         "MACD모멘텀↑",
-        "콜 매수 우세"
+        "콜 매수 우세",
+        "콜IV프리미엄",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -821,6 +846,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.03,
       "atm_iv": 65.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-01",
       "days_to_earnings": 68,
       "earnings_window": null,
@@ -862,7 +888,8 @@
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beats",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -874,6 +901,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.87,
       "atm_iv": 89.1,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-12",
       "days_to_earnings": 79,
       "earnings_window": null,
@@ -881,9 +909,10 @@
       "beat_streak": 3,
       "miss_streak": 0,
       "avg_surprise_pct": 281.49,
-      "rec_score": -5.5,
+      "rec_score": -4.0,
       "rec_reasons": [
         "월정배",
+        "콜IV프리미엄",
         "RSI 43"
       ],
       "is_recommended": false
@@ -916,7 +945,8 @@
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_beats",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -928,6 +958,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.87,
       "atm_iv": 89.1,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-12",
       "days_to_earnings": 79,
       "earnings_window": null,
@@ -935,9 +966,10 @@
       "beat_streak": 3,
       "miss_streak": 0,
       "avg_surprise_pct": 281.49,
-      "rec_score": -6.0,
+      "rec_score": -4.5,
       "rec_reasons": [
         "월정배",
+        "콜IV프리미엄",
         "RSI 44"
       ],
       "is_recommended": false
@@ -982,6 +1014,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 3.23,
       "atm_iv": 69.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-29",
       "days_to_earnings": 65,
       "earnings_window": null,
@@ -1034,6 +1067,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.09,
       "atm_iv": 77.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-28",
       "days_to_earnings": 64,
       "earnings_window": null,
@@ -1085,6 +1119,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.2,
       "atm_iv": 52.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -1118,7 +1153,8 @@
       "proxy_fields": [],
       "alerts": [],
       "signals": [
-        "iv_elevated"
+        "iv_elevated",
+        "unusual_call_activity"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -1129,13 +1165,16 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.93,
-      "atm_iv": 113.9,
+      "atm_iv": 113.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
       "eps_estimate": null,
-      "rec_score": -0.5,
-      "rec_reasons": [],
+      "rec_score": 0.5,
+      "rec_reasons": [
+        "이상콜거래"
+      ],
       "is_recommended": false
     },
     {
@@ -1174,6 +1213,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.57,
       "atm_iv": 108.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-30",
       "days_to_earnings": 66,
       "earnings_window": null,
@@ -1226,7 +1266,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.27,
-      "atm_iv": 64.1,
+      "atm_iv": 64.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -1281,7 +1322,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 1.94,
-      "atm_iv": 102.3,
+      "atm_iv": 102.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-24",
       "days_to_earnings": 91,
       "earnings_window": null,
@@ -1332,6 +1374,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.14,
       "atm_iv": 86.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-28",
       "days_to_earnings": 64,
       "earnings_window": null,
@@ -1383,7 +1426,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 1.94,
-      "atm_iv": 102.3,
+      "atm_iv": 102.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-24",
       "days_to_earnings": 91,
       "earnings_window": null,
@@ -1436,6 +1480,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.35,
       "atm_iv": 74.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-07",
       "days_to_earnings": 74,
       "earnings_window": null,
@@ -1487,6 +1532,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.16,
       "atm_iv": 70.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -1537,7 +1583,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 1.94,
-      "atm_iv": 102.3,
+      "atm_iv": 102.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-24",
       "days_to_earnings": 91,
       "earnings_window": null,
@@ -1590,6 +1637,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.6,
       "atm_iv": 66.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -1640,6 +1688,7 @@
       "rs_benchmark": "XLF",
       "pc_ratio_vol": 0.48,
       "atm_iv": 69.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -1688,6 +1737,7 @@
       "rs_benchmark": "XLF",
       "pc_ratio_vol": 0.5,
       "atm_iv": 60.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-30",
       "days_to_earnings": 66,
       "earnings_window": null,
@@ -1736,6 +1786,7 @@
       "rs_benchmark": "XLF",
       "pc_ratio_vol": 0.5,
       "atm_iv": 60.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-30",
       "days_to_earnings": 66,
       "earnings_window": null,
@@ -1785,6 +1836,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.29,
       "atm_iv": 40.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-06-10",
       "days_to_earnings": 16,
       "earnings_window": null,
@@ -1839,6 +1891,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 2.9,
       "atm_iv": 108.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -1889,6 +1942,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.41,
       "atm_iv": 52.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-11",
       "days_to_earnings": 78,
       "earnings_window": null,
@@ -1940,6 +1994,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 2.9,
       "atm_iv": 108.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -1992,6 +2047,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.33,
       "atm_iv": 97.1,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-23",
       "days_to_earnings": 59,
       "earnings_window": null,
@@ -2039,6 +2095,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": null,
       "atm_iv": null,
+      "call_oi_growth_pct": null,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -2087,6 +2144,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.57,
       "atm_iv": 86.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-30",
       "days_to_earnings": 66,
       "earnings_window": null,
@@ -2126,6 +2184,7 @@
         "macd_momentum_down",
         "monthly_bull_align",
         "earnings_miss_streak",
+        "call_iv_premium",
         "monthly_bull_near_long"
       ],
       "sectors": [],
@@ -2138,6 +2197,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.42,
       "atm_iv": 45.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-13",
       "days_to_earnings": -12,
       "earnings_window": null,
@@ -2145,9 +2205,10 @@
       "beat_streak": 0,
       "miss_streak": 4,
       "avg_surprise_pct": -38.4,
-      "rec_score": 2.5,
+      "rec_score": 4.0,
       "rec_reasons": [
         "월정배+장기근접",
+        "콜IV프리미엄",
         "RSI 45"
       ],
       "is_recommended": false
@@ -2178,7 +2239,8 @@
         "macd_bear_cross",
         "macd_momentum_down",
         "monthly_bull_align",
-        "earnings_beat_streak"
+        "earnings_beat_streak",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7",
@@ -2194,6 +2256,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.5,
       "atm_iv": 36.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-20",
       "days_to_earnings": -5,
       "earnings_window": "post",
@@ -2201,13 +2264,14 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 4.61,
-      "rec_score": 8.5,
+      "rec_score": 9.5,
       "rec_reasons": [
         "정배눌림",
         "월정배",
         "일정배",
         "MA지지",
-        "4분기 연속 비트"
+        "4분기 연속 비트",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -2237,7 +2301,8 @@
         "macd_bear_cross",
         "macd_momentum_down",
         "monthly_bull_align",
-        "earnings_beat_streak"
+        "earnings_beat_streak",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7",
@@ -2253,6 +2318,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.5,
       "atm_iv": 36.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-20",
       "days_to_earnings": -5,
       "earnings_window": "post",
@@ -2260,13 +2326,14 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 4.61,
-      "rec_score": 8.5,
+      "rec_score": 9.5,
       "rec_reasons": [
         "정배눌림",
         "월정배",
         "일정배",
         "MA지지",
-        "4분기 연속 비트"
+        "4분기 연속 비트",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -2306,6 +2373,7 @@
       "rs_benchmark": "XLF",
       "pc_ratio_vol": 0.51,
       "atm_iv": 53.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-28",
       "days_to_earnings": 64,
       "earnings_window": null,
@@ -2357,6 +2425,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.6,
       "atm_iv": 66.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -2403,7 +2472,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 2.91,
-      "atm_iv": 106.5,
+      "atm_iv": 106.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-07",
       "days_to_earnings": -18,
       "earnings_window": null,
@@ -2443,7 +2513,8 @@
         "macd_bear_cross",
         "macd_momentum_down",
         "monthly_bull_align",
-        "earnings_beat_streak"
+        "earnings_beat_streak",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7",
@@ -2459,6 +2530,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.5,
       "atm_iv": 36.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-20",
       "days_to_earnings": -5,
       "earnings_window": "post",
@@ -2466,13 +2538,14 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 4.61,
-      "rec_score": 7.5,
+      "rec_score": 8.5,
       "rec_reasons": [
         "정배눌림",
         "월정배",
         "일정배",
         "MA지지",
-        "4분기 연속 비트"
+        "4분기 연속 비트",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -2509,7 +2582,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 2.91,
-      "atm_iv": 106.5,
+      "atm_iv": 106.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-07",
       "days_to_earnings": -18,
       "earnings_window": null,
@@ -2560,6 +2634,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.6,
       "atm_iv": 66.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -2605,7 +2680,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.89,
-      "atm_iv": 134.2,
+      "atm_iv": 134.1,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -2645,6 +2721,7 @@
         "earnings_beat_streak",
         "call_heavy",
         "iv_elevated",
+        "call_iv_premium",
         "monthly_bull_near_long"
       ],
       "sectors": [],
@@ -2657,6 +2734,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.17,
       "atm_iv": 71.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-04-29",
       "days_to_earnings": -26,
       "earnings_window": null,
@@ -2664,14 +2742,15 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 17.28,
-      "rec_score": 5.5,
+      "rec_score": 7.0,
       "rec_reasons": [
         "월정배+장기근접",
         "MA지지",
         "MACD골크",
         "MACD모멘텀↑",
         "4분기 연속 비트",
-        "콜 매수 우세"
+        "콜 매수 우세",
+        "콜IV프리미엄"
       ],
       "is_recommended": false
     },
@@ -2709,6 +2788,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.5,
       "atm_iv": 76.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-11",
       "days_to_earnings": 78,
       "earnings_window": null,
@@ -2760,6 +2840,7 @@
       "rs_benchmark": "LIT",
       "pc_ratio_vol": 1.42,
       "atm_iv": 67.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-03",
       "days_to_earnings": 39,
       "earnings_window": null,
@@ -2795,7 +2876,8 @@
       "signals": [
         "macd_below_zero",
         "macd_momentum_up",
-        "call_heavy"
+        "call_heavy",
+        "call_iv_premium"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -2806,7 +2888,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.38,
-      "atm_iv": 32.0,
+      "atm_iv": 31.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-17",
       "days_to_earnings": 53,
       "earnings_window": null,
@@ -2814,10 +2897,11 @@
       "beat_streak": 0,
       "miss_streak": 1,
       "avg_surprise_pct": -3.38,
-      "rec_score": 3.5,
+      "rec_score": 5.0,
       "rec_reasons": [
         "MACD모멘텀↑",
         "콜 매수 우세",
+        "콜IV프리미엄",
         "RSI 40"
       ],
       "is_recommended": false
@@ -2859,6 +2943,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.96,
       "atm_iv": 94.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-05",
       "days_to_earnings": -20,
       "earnings_window": null,
@@ -2910,6 +2995,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.42,
       "atm_iv": 50.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -2957,6 +3043,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.26,
       "atm_iv": 59.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -3007,6 +3094,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 2.41,
       "atm_iv": 89.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-07",
       "days_to_earnings": -18,
       "earnings_window": null,
@@ -3058,7 +3146,8 @@
       "rs_20d": -6.92,
       "rs_benchmark": "XBI",
       "pc_ratio_vol": 0.05,
-      "atm_iv": 68.6,
+      "atm_iv": 68.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -3111,6 +3200,7 @@
       "rs_benchmark": "XLF",
       "pc_ratio_vol": 0.84,
       "atm_iv": 74.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -3158,6 +3248,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.0,
       "atm_iv": 42.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -3205,6 +3296,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 2.41,
       "atm_iv": 89.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-07",
       "days_to_earnings": -18,
       "earnings_window": null,
@@ -3258,6 +3350,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.59,
       "atm_iv": 48.1,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-04",
       "days_to_earnings": 71,
       "earnings_window": null,
@@ -3298,7 +3391,8 @@
         "macd_below_zero",
         "macd_bull_cross",
         "macd_momentum_up",
-        "earnings_beat_streak"
+        "earnings_beat_streak",
+        "call_iv_premium"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -3309,7 +3403,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.81,
-      "atm_iv": 38.6,
+      "atm_iv": 38.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-22",
       "days_to_earnings": 58,
       "earnings_window": null,
@@ -3317,11 +3412,12 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 16.25,
-      "rec_score": 2.0,
+      "rec_score": 3.5,
       "rec_reasons": [
         "MACD골크",
         "MACD모멘텀↑",
         "4분기 연속 비트",
+        "콜IV프리미엄",
         "RSI 41"
       ],
       "is_recommended": false
@@ -3365,6 +3461,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 2.04,
       "atm_iv": 47.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-16",
       "days_to_earnings": 52,
       "earnings_window": null,
@@ -3406,7 +3503,8 @@
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
-        "earnings_beat_streak"
+        "earnings_beat_streak",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7"
@@ -3420,6 +3518,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.41,
       "atm_iv": 27.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-24",
       "days_to_earnings": 60,
       "earnings_window": null,
@@ -3427,13 +3526,14 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 32.79,
-      "rec_score": 10.5,
+      "rec_score": 11.5,
       "rec_reasons": [
         "정배눌림",
         "월정배",
         "일정배",
         "MA지지",
-        "4분기 연속 비트"
+        "4분기 연속 비트",
+        "이상콜거래"
       ],
       "is_recommended": true
     },
@@ -3474,6 +3574,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 3.82,
       "atm_iv": 128.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-04-28",
       "days_to_earnings": -27,
       "earnings_window": null,
@@ -3528,6 +3629,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 1.04,
       "atm_iv": 55.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-06-04",
       "days_to_earnings": 10,
       "earnings_window": null,
@@ -3575,6 +3677,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.8,
       "atm_iv": 38.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -3613,7 +3716,8 @@
         "macd_above_zero",
         "macd_momentum_down",
         "monthly_bull_align",
-        "earnings_beat_streak"
+        "earnings_beat_streak",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7"
@@ -3627,6 +3731,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.41,
       "atm_iv": 27.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-24",
       "days_to_earnings": 60,
       "earnings_window": null,
@@ -3634,13 +3739,14 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 32.79,
-      "rec_score": 9.0,
+      "rec_score": 10.0,
       "rec_reasons": [
         "정배눌림",
         "월정배",
         "일정배",
         "MA지지",
-        "4분기 연속 비트"
+        "4분기 연속 비트",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -3681,6 +3787,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 1.04,
       "atm_iv": 55.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-06-04",
       "days_to_earnings": 10,
       "earnings_window": null,
@@ -3729,7 +3836,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.78,
-      "atm_iv": 52.9,
+      "atm_iv": 53.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -3764,6 +3872,7 @@
         "macd_below_zero",
         "macd_momentum_up",
         "monthly_bull_align",
+        "call_iv_premium",
         "monthly_bull_near_long"
       ],
       "sectors": [],
@@ -3776,15 +3885,17 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.24,
       "atm_iv": 32.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
       "eps_estimate": null,
-      "rec_score": 6.5,
+      "rec_score": 8.0,
       "rec_reasons": [
         "월정배+장기근접",
         "MA지지",
         "MACD모멘텀↑",
+        "콜IV프리미엄",
         "RSI 46"
       ],
       "is_recommended": false
@@ -3827,6 +3938,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.47,
       "atm_iv": 84.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-29",
       "days_to_earnings": 65,
       "earnings_window": null,
@@ -3881,6 +3993,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.04,
       "atm_iv": 94.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-06-04",
       "days_to_earnings": 10,
       "earnings_window": null,
@@ -3922,6 +4035,7 @@
         "call_heavy",
         "iv_crushed",
         "squeeze_setup",
+        "call_iv_premium",
         "monthly_bull_near_long"
       ],
       "sectors": [],
@@ -3933,17 +4047,19 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.38,
-      "atm_iv": 7.7,
+      "atm_iv": 7.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
       "eps_estimate": null,
-      "rec_score": 3.5,
+      "rec_score": 5.0,
       "rec_reasons": [
         "월정배+장기근접",
         "MACD모멘텀↑",
         "콜 매수 우세",
         "스퀴즈 셋업",
+        "콜IV프리미엄",
         "RSI 36"
       ],
       "is_recommended": false
@@ -3985,6 +4101,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.45,
       "atm_iv": 30.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-24",
       "days_to_earnings": 60,
       "earnings_window": null,
@@ -4039,6 +4156,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 2.04,
       "atm_iv": 47.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-16",
       "days_to_earnings": 52,
       "earnings_window": null,
@@ -4090,6 +4208,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.52,
       "atm_iv": 38.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -4128,7 +4247,8 @@
         "monthly_bull_align",
         "sector_laggard",
         "call_heavy",
-        "squeeze_setup"
+        "squeeze_setup",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7"
@@ -4142,6 +4262,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.36,
       "atm_iv": 27.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -4149,13 +4270,14 @@
       "beat_streak": 1,
       "miss_streak": 0,
       "avg_surprise_pct": 29.76,
-      "rec_score": 7.5,
+      "rec_score": 8.5,
       "rec_reasons": [
         "월정배",
         "MA지지",
         "MACD모멘텀↑",
         "콜 매수 우세",
         "스퀴즈 셋업",
+        "이상콜거래",
         "RSI 45"
       ],
       "is_recommended": false
@@ -4185,7 +4307,8 @@
         "monthly_bull_align",
         "sector_laggard",
         "call_heavy",
-        "squeeze_setup"
+        "squeeze_setup",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7"
@@ -4199,6 +4322,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.36,
       "atm_iv": 27.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -4206,13 +4330,14 @@
       "beat_streak": 1,
       "miss_streak": 0,
       "avg_surprise_pct": 29.76,
-      "rec_score": 9.0,
+      "rec_score": 10.0,
       "rec_reasons": [
         "월정배",
         "MA지지",
         "MACD모멘텀↑",
         "콜 매수 우세",
         "스퀴즈 셋업",
+        "이상콜거래",
         "RSI 44"
       ],
       "is_recommended": false
@@ -4253,6 +4378,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.47,
       "atm_iv": 84.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-29",
       "days_to_earnings": 65,
       "earnings_window": null,
@@ -4308,6 +4434,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.84,
       "atm_iv": 97.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-06",
       "days_to_earnings": -19,
       "earnings_window": null,
@@ -4361,6 +4488,7 @@
       "rs_benchmark": "LIT",
       "pc_ratio_vol": 0.41,
       "atm_iv": 59.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-04-30",
       "days_to_earnings": -25,
       "earnings_window": null,
@@ -4401,7 +4529,8 @@
         "sector_laggard",
         "earnings_beats",
         "call_heavy",
-        "squeeze_setup"
+        "squeeze_setup",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7"
@@ -4415,6 +4544,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.31,
       "atm_iv": 28.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-30",
       "days_to_earnings": 66,
       "earnings_window": null,
@@ -4422,11 +4552,12 @@
       "beat_streak": 2,
       "miss_streak": 0,
       "avg_surprise_pct": -12.04,
-      "rec_score": 1.0,
+      "rec_score": 2.0,
       "rec_reasons": [
         "MACD모멘텀↑",
         "콜 매수 우세",
         "스퀴즈 셋업",
+        "이상콜거래",
         "RSI 47"
       ],
       "is_recommended": false
@@ -4456,7 +4587,8 @@
         "sector_laggard",
         "earnings_beat_streak",
         "call_heavy",
-        "squeeze_setup"
+        "squeeze_setup",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7"
@@ -4470,6 +4602,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.31,
       "atm_iv": 24.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-30",
       "days_to_earnings": 66,
       "earnings_window": null,
@@ -4477,13 +4610,14 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 7.93,
-      "rec_score": 7.5,
+      "rec_score": 8.5,
       "rec_reasons": [
         "MA지지",
         "MACD모멘텀↑",
         "4분기 연속 비트",
         "콜 매수 우세",
-        "스퀴즈 셋업"
+        "스퀴즈 셋업",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -4523,6 +4657,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.47,
       "atm_iv": 84.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-29",
       "days_to_earnings": 65,
       "earnings_window": null,
@@ -4564,7 +4699,8 @@
         "sector_laggard",
         "earnings_beat_streak",
         "call_heavy",
-        "squeeze_setup"
+        "squeeze_setup",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7"
@@ -4578,6 +4714,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.31,
       "atm_iv": 24.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-30",
       "days_to_earnings": 66,
       "earnings_window": null,
@@ -4585,13 +4722,14 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 7.93,
-      "rec_score": 8.5,
+      "rec_score": 9.5,
       "rec_reasons": [
         "MA지지",
         "MACD모멘텀↑",
         "4분기 연속 비트",
         "콜 매수 우세",
-        "스퀴즈 셋업"
+        "스퀴즈 셋업",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -4621,7 +4759,8 @@
         "sector_laggard",
         "earnings_beats",
         "call_heavy",
-        "squeeze_setup"
+        "squeeze_setup",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7"
@@ -4635,6 +4774,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.31,
       "atm_iv": 28.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-30",
       "days_to_earnings": 66,
       "earnings_window": null,
@@ -4642,11 +4782,12 @@
       "beat_streak": 2,
       "miss_streak": 0,
       "avg_surprise_pct": -12.04,
-      "rec_score": 0.0,
+      "rec_score": 1.0,
       "rec_reasons": [
         "MACD모멘텀↑",
         "콜 매수 우세",
         "스퀴즈 셋업",
+        "이상콜거래",
         "RSI 47"
       ],
       "is_recommended": false
@@ -4676,7 +4817,8 @@
         "sector_laggard",
         "earnings_beat_streak",
         "call_heavy",
-        "squeeze_setup"
+        "squeeze_setup",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7"
@@ -4690,6 +4832,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.31,
       "atm_iv": 24.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-30",
       "days_to_earnings": 66,
       "earnings_window": null,
@@ -4697,13 +4840,14 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 7.93,
-      "rec_score": 7.0,
+      "rec_score": 8.0,
       "rec_reasons": [
         "MA지지",
         "MACD모멘텀↑",
         "4분기 연속 비트",
         "콜 매수 우세",
-        "스퀴즈 셋업"
+        "스퀴즈 셋업",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -4746,6 +4890,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.11,
       "atm_iv": 41.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -4796,6 +4941,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.5,
       "atm_iv": 67.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -4848,7 +4994,8 @@
       "rs_20d": 8.07,
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.89,
-      "atm_iv": 69.9,
+      "atm_iv": 69.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -4899,6 +5046,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.68,
       "atm_iv": 12.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -4947,6 +5095,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.84,
       "atm_iv": 97.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-06",
       "days_to_earnings": -19,
       "earnings_window": null,
@@ -5001,6 +5150,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.14,
       "atm_iv": 53.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -5039,6 +5189,7 @@
         "macd_momentum_up",
         "monthly_bull_align",
         "put_heavy",
+        "call_iv_premium",
         "monthly_bull_near_long"
       ],
       "sectors": [],
@@ -5051,15 +5202,17 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 2.37,
       "atm_iv": 45.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
       "eps_estimate": null,
-      "rec_score": 5.5,
+      "rec_score": 7.0,
       "rec_reasons": [
         "월정배+장기근접",
         "MA지지",
-        "MACD모멘텀↑"
+        "MACD모멘텀↑",
+        "콜IV프리미엄"
       ],
       "is_recommended": false
     },
@@ -5104,6 +5257,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 5.23,
       "atm_iv": 142.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-07",
       "days_to_earnings": 74,
       "earnings_window": null,
@@ -5159,6 +5313,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 1.94,
       "atm_iv": 93.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-06-25",
       "days_to_earnings": 31,
       "earnings_window": null,
@@ -5211,6 +5366,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.36,
       "atm_iv": 116.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-29",
       "days_to_earnings": 65,
       "earnings_window": null,
@@ -5264,6 +5420,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.25,
       "atm_iv": 85.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -5311,7 +5468,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.83,
-      "atm_iv": 79.4,
+      "atm_iv": 79.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-28",
       "days_to_earnings": 64,
       "earnings_window": null,
@@ -5368,6 +5526,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 1.94,
       "atm_iv": 93.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-06-25",
       "days_to_earnings": 31,
       "earnings_window": null,
@@ -5423,6 +5582,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 0.83,
       "atm_iv": 80.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-28",
       "days_to_earnings": 64,
       "earnings_window": null,
@@ -5460,7 +5620,8 @@
         "macd_above_zero",
         "macd_momentum_up",
         "earnings_beats",
-        "put_heavy"
+        "put_heavy",
+        "call_iv_premium"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -5471,7 +5632,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 1.56,
-      "atm_iv": 54.9,
+      "atm_iv": 55.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-29",
       "days_to_earnings": 65,
       "earnings_window": null,
@@ -5479,9 +5641,10 @@
       "beat_streak": 2,
       "miss_streak": 0,
       "avg_surprise_pct": 272.35,
-      "rec_score": 0.0,
+      "rec_score": 1.5,
       "rec_reasons": [
         "MACD모멘텀↑",
+        "콜IV프리미엄",
         "RSI 44"
       ],
       "is_recommended": false
@@ -5511,6 +5674,7 @@
         "monthly_bull_align",
         "earnings_beat_streak",
         "call_heavy",
+        "unusual_call_activity",
         "monthly_bull_near_long"
       ],
       "sectors": [],
@@ -5522,7 +5686,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.22,
-      "atm_iv": 47.6,
+      "atm_iv": 47.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-23",
       "days_to_earnings": 59,
       "earnings_window": null,
@@ -5530,14 +5695,15 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 6.13,
-      "rec_score": 11.5,
+      "rec_score": 12.5,
       "rec_reasons": [
         "월정배+장기근접",
         "52신고가",
         "MACD골크",
         "MACD모멘텀↑",
         "4분기 연속 비트",
-        "콜 매수 우세"
+        "콜 매수 우세",
+        "이상콜거래"
       ],
       "is_recommended": true
     },
@@ -5577,6 +5743,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.32,
       "atm_iv": 18.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -5627,6 +5794,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.9,
       "atm_iv": 88.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-08",
       "days_to_earnings": -17,
       "earnings_window": null,
@@ -5669,6 +5837,7 @@
         "monthly_bull_align",
         "earnings_beat_streak",
         "call_heavy",
+        "call_iv_premium",
         "monthly_bull_near_long"
       ],
       "sectors": [],
@@ -5681,6 +5850,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.13,
       "atm_iv": 31.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-23",
       "days_to_earnings": 59,
       "earnings_window": null,
@@ -5688,13 +5858,14 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 5.25,
-      "rec_score": 8.5,
+      "rec_score": 10.0,
       "rec_reasons": [
         "월정배+장기근접",
         "MA지지",
         "MACD모멘텀↑",
         "4분기 연속 비트",
-        "콜 매수 우세"
+        "콜 매수 우세",
+        "콜IV프리미엄"
       ],
       "is_recommended": false
     },
@@ -5735,7 +5906,8 @@
       "rs_20d": 13.18,
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 1.49,
-      "atm_iv": 93.3,
+      "atm_iv": 93.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -5777,7 +5949,9 @@
         "bull_align_pullback",
         "macd_above_zero",
         "monthly_bull_align",
-        "iv_crushed"
+        "iv_crushed",
+        "call_iv_premium",
+        "unusual_call_activity"
       ],
       "sectors": [],
       "near_52w_high": true,
@@ -5789,17 +5963,20 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.26,
       "atm_iv": 12.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
       "eps_estimate": null,
-      "rec_score": 10.5,
+      "rec_score": 13.0,
       "rec_reasons": [
         "정배눌림",
         "월정배",
         "일정배",
         "MA지지",
-        "52신고가"
+        "52신고가",
+        "콜IV프리미엄",
+        "이상콜거래"
       ],
       "is_recommended": true
     },
@@ -5840,6 +6017,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.4,
       "atm_iv": 82.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-07",
       "days_to_earnings": 74,
       "earnings_window": null,
@@ -5894,6 +6072,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.23,
       "atm_iv": 74.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-06",
       "days_to_earnings": -19,
       "earnings_window": null,
@@ -5944,6 +6123,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.41,
       "atm_iv": 22.1,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -5994,6 +6174,7 @@
       "rs_benchmark": "XBI",
       "pc_ratio_vol": 0.31,
       "atm_iv": 40.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -6034,6 +6215,7 @@
         "macd_momentum_up",
         "monthly_bull_align",
         "iv_crushed",
+        "call_iv_premium",
         "monthly_bull_near_long"
       ],
       "sectors": [],
@@ -6046,17 +6228,19 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.59,
       "atm_iv": 17.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
       "eps_estimate": null,
-      "rec_score": 10.5,
+      "rec_score": 12.0,
       "rec_reasons": [
         "월정배+장기근접",
         "MA지지",
         "52신고가",
         "MACD골크",
-        "MACD모멘텀↑"
+        "MACD모멘텀↑",
+        "콜IV프리미엄"
       ],
       "is_recommended": true
     },
@@ -6084,7 +6268,8 @@
         "macd_momentum_up",
         "monthly_bull_align",
         "earnings_beat_streak",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium"
       ],
       "sectors": [
         "AI",
@@ -6099,6 +6284,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.81,
       "atm_iv": 62.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -6106,12 +6292,13 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 2.37,
-      "rec_score": 4.0,
+      "rec_score": 5.5,
       "rec_reasons": [
         "월정배",
         "MA지지",
         "MACD모멘텀↑",
         "4분기 연속 비트",
+        "콜IV프리미엄",
         "RSI 49"
       ],
       "is_recommended": false
@@ -6139,7 +6326,8 @@
         "macd_above_zero",
         "monthly_bull_align",
         "put_heavy",
-        "iv_crushed"
+        "iv_crushed",
+        "unusual_call_activity"
       ],
       "sectors": [],
       "near_52w_high": true,
@@ -6151,15 +6339,17 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.58,
       "atm_iv": 18.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
       "eps_estimate": null,
-      "rec_score": 5.0,
+      "rec_score": 6.0,
       "rec_reasons": [
         "월정배",
         "일정배",
-        "52신고가"
+        "52신고가",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -6202,6 +6392,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 5.23,
       "atm_iv": 142.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-07",
       "days_to_earnings": 74,
       "earnings_window": null,
@@ -6252,7 +6443,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 1.16,
-      "atm_iv": 109.4,
+      "atm_iv": 109.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -6290,7 +6482,8 @@
         "ma20_support",
         "macd_above_zero",
         "macd_momentum_up",
-        "monthly_bull_align"
+        "monthly_bull_align",
+        "unusual_call_activity"
       ],
       "sectors": [],
       "near_52w_high": true,
@@ -6302,16 +6495,18 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.29,
       "atm_iv": 22.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
       "eps_estimate": null,
-      "rec_score": 7.0,
+      "rec_score": 8.0,
       "rec_reasons": [
         "월정배",
         "MA지지",
         "52신고가",
-        "MACD모멘텀↑"
+        "MACD모멘텀↑",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -6351,6 +6546,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.09,
       "atm_iv": 168.1,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-12",
       "days_to_earnings": 79,
       "earnings_window": null,
@@ -6402,6 +6598,7 @@
       "rs_benchmark": "URA",
       "pc_ratio_vol": 0.65,
       "atm_iv": 95.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-07",
       "days_to_earnings": 74,
       "earnings_window": null,
@@ -6454,6 +6651,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 1.02,
       "atm_iv": 82.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -6509,6 +6707,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 1.72,
       "atm_iv": 68.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-30",
       "days_to_earnings": 66,
       "earnings_window": null,
@@ -6556,6 +6755,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": null,
       "atm_iv": null,
+      "call_oi_growth_pct": null,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -6589,7 +6789,8 @@
         "monthly_bull_align",
         "sector_laggard",
         "earnings_beat_streak",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium"
       ],
       "sectors": [
         "Semi"
@@ -6603,6 +6804,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 1.29,
       "atm_iv": 61.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-14",
       "days_to_earnings": 81,
       "earnings_window": null,
@@ -6610,12 +6812,13 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 8.36,
-      "rec_score": 5.5,
+      "rec_score": 7.0,
       "rec_reasons": [
         "월정배",
         "일정배",
         "MACD모멘텀↑",
-        "4분기 연속 비트"
+        "4분기 연속 비트",
+        "콜IV프리미엄"
       ],
       "is_recommended": false
     },
@@ -6653,6 +6856,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.21,
       "atm_iv": 57.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-06-11",
       "days_to_earnings": 17,
       "earnings_window": null,
@@ -6691,7 +6895,8 @@
         "monthly_bull_align",
         "sector_leader",
         "earnings_beat_streak",
-        "iv_crushed"
+        "iv_crushed",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7"
@@ -6705,6 +6910,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.57,
       "atm_iv": 20.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -6712,13 +6918,14 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 5.95,
-      "rec_score": 7.0,
+      "rec_score": 8.0,
       "rec_reasons": [
         "월정배",
         "일정배",
         "52신고가",
         "섹터선도",
-        "4분기 연속 비트"
+        "4분기 연속 비트",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -6746,7 +6953,8 @@
         "monthly_bull_align",
         "sector_leader",
         "earnings_beat_streak",
-        "iv_crushed"
+        "iv_crushed",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7"
@@ -6760,6 +6968,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.57,
       "atm_iv": 20.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -6767,13 +6976,14 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 5.95,
-      "rec_score": 7.0,
+      "rec_score": 8.0,
       "rec_reasons": [
         "월정배",
         "일정배",
         "52신고가",
         "섹터선도",
-        "4분기 연속 비트"
+        "4분기 연속 비트",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -6814,6 +7024,7 @@
       "rs_benchmark": "URA",
       "pc_ratio_vol": 0.65,
       "atm_iv": 95.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-07",
       "days_to_earnings": 74,
       "earnings_window": null,
@@ -6862,6 +7073,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.39,
       "atm_iv": 51.1,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -6902,7 +7114,8 @@
         "monthly_bull_align",
         "sector_laggard",
         "earnings_beat_streak",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium"
       ],
       "sectors": [
         "Semi"
@@ -6916,6 +7129,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 1.29,
       "atm_iv": 61.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-14",
       "days_to_earnings": 81,
       "earnings_window": null,
@@ -6923,12 +7137,13 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 8.36,
-      "rec_score": 5.5,
+      "rec_score": 7.0,
       "rec_reasons": [
         "월정배",
         "일정배",
         "MACD모멘텀↑",
-        "4분기 연속 비트"
+        "4분기 연속 비트",
+        "콜IV프리미엄"
       ],
       "is_recommended": false
     },
@@ -6956,7 +7171,8 @@
         "monthly_bull_align",
         "sector_leader",
         "earnings_beat_streak",
-        "iv_crushed"
+        "iv_crushed",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Mag7"
@@ -6970,6 +7186,7 @@
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.57,
       "atm_iv": 20.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -6977,13 +7194,14 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 5.95,
-      "rec_score": 7.5,
+      "rec_score": 8.5,
       "rec_reasons": [
         "월정배",
         "일정배",
         "52신고가",
         "섹터선도",
-        "4분기 연속 비트"
+        "4분기 연속 비트",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -7027,6 +7245,7 @@
       "rs_benchmark": "LIT",
       "pc_ratio_vol": 0.31,
       "atm_iv": 86.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -7080,6 +7299,7 @@
       "rs_benchmark": "XBI",
       "pc_ratio_vol": 0.73,
       "atm_iv": 36.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -7133,7 +7353,8 @@
       "rs_20d": -1.22,
       "rs_benchmark": "URA",
       "pc_ratio_vol": 0.39,
-      "atm_iv": 82.0,
+      "atm_iv": 81.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -7186,6 +7407,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.28,
       "atm_iv": 65.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-23",
       "days_to_earnings": 59,
       "earnings_window": null,
@@ -7226,7 +7448,8 @@
         "macd_above_zero",
         "earnings_beats",
         "call_heavy",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -7238,6 +7461,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.39,
       "atm_iv": 91.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-11",
       "days_to_earnings": 78,
       "earnings_window": null,
@@ -7245,15 +7469,16 @@
       "beat_streak": 3,
       "miss_streak": 0,
       "avg_surprise_pct": -4.33,
-      "rec_score": 10.0,
+      "rec_score": 11.5,
       "rec_reasons": [
         "정배눌림",
         "일정배",
         "MA지지",
         "콜 매수 우세",
+        "콜IV프리미엄",
         "RSI 46"
       ],
-      "is_recommended": false
+      "is_recommended": true
     },
     {
       "ticker_2x": "ZETX",
@@ -7290,6 +7515,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.16,
       "atm_iv": 70.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-04-30",
       "days_to_earnings": -25,
       "earnings_window": null,
@@ -7330,7 +7556,8 @@
         "macd_above_zero",
         "earnings_beats",
         "call_heavy",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -7342,6 +7569,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.39,
       "atm_iv": 91.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-11",
       "days_to_earnings": 78,
       "earnings_window": null,
@@ -7349,15 +7577,16 @@
       "beat_streak": 3,
       "miss_streak": 0,
       "avg_surprise_pct": -4.33,
-      "rec_score": 10.0,
+      "rec_score": 11.5,
       "rec_reasons": [
         "정배눌림",
         "일정배",
         "MA지지",
         "콜 매수 우세",
+        "콜IV프리미엄",
         "RSI 46"
       ],
-      "is_recommended": false
+      "is_recommended": true
     },
     {
       "ticker_2x": "TECL",
@@ -7393,6 +7622,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 2.36,
       "atm_iv": 30.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -7429,7 +7659,8 @@
         "macd_below_zero",
         "macd_momentum_up",
         "earnings_beats",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -7441,6 +7672,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.49,
       "atm_iv": 68.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -7448,10 +7680,11 @@
       "beat_streak": 3,
       "miss_streak": 0,
       "avg_surprise_pct": 9.13,
-      "rec_score": -2.0,
+      "rec_score": -0.5,
       "rec_reasons": [
         "MA지지",
         "MACD모멘텀↑",
+        "콜IV프리미엄",
         "RSI 47"
       ],
       "is_recommended": false
@@ -7482,6 +7715,7 @@
         "macd_momentum_up",
         "monthly_bull_align",
         "earnings_beat_streak",
+        "call_iv_premium",
         "monthly_bull_near_long"
       ],
       "sectors": [],
@@ -7494,6 +7728,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.82,
       "atm_iv": 42.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-04",
       "days_to_earnings": 71,
       "earnings_window": null,
@@ -7501,12 +7736,13 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 1.18,
-      "rec_score": 7.5,
+      "rec_score": 9.0,
       "rec_reasons": [
         "월정배+장기근접",
         "MA지지",
         "MACD모멘텀↑",
         "4분기 연속 비트",
+        "콜IV프리미엄",
         "RSI 39"
       ],
       "is_recommended": false
@@ -7547,6 +7783,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.35,
       "atm_iv": 79.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-07",
       "days_to_earnings": 74,
       "earnings_window": null,
@@ -7602,6 +7839,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 0.91,
       "atm_iv": 88.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-24",
       "days_to_earnings": 60,
       "earnings_window": null,
@@ -7641,7 +7879,8 @@
         "ma20_support",
         "macd_above_zero",
         "monthly_bull_align",
-        "earnings_beats"
+        "earnings_beats",
+        "unusual_call_activity"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -7652,7 +7891,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.41,
-      "atm_iv": 44.3,
+      "atm_iv": 44.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-04",
       "days_to_earnings": 71,
       "earnings_window": null,
@@ -7660,10 +7900,11 @@
       "beat_streak": 3,
       "miss_streak": 0,
       "avg_surprise_pct": 8.67,
-      "rec_score": 4.0,
+      "rec_score": 5.0,
       "rec_reasons": [
         "월정배",
-        "MA지지"
+        "MA지지",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -7704,6 +7945,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.17,
       "atm_iv": 78.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-06",
       "days_to_earnings": -19,
       "earnings_window": null,
@@ -7757,6 +7999,7 @@
       "rs_benchmark": "URA",
       "pc_ratio_vol": 1.48,
       "atm_iv": 92.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-11",
       "days_to_earnings": 78,
       "earnings_window": null,
@@ -7796,6 +8039,7 @@
         "macd_bear_cross",
         "monthly_bull_align",
         "sector_leader",
+        "unusual_call_activity",
         "monthly_bull_near_long"
       ],
       "sectors": [
@@ -7810,7 +8054,8 @@
       "rs_20d": 5.8,
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.56,
-      "atm_iv": 40.4,
+      "atm_iv": 40.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-23",
       "days_to_earnings": 59,
       "earnings_window": null,
@@ -7818,11 +8063,12 @@
       "beat_streak": 0,
       "miss_streak": 1,
       "avg_surprise_pct": -9.27,
-      "rec_score": 5.5,
+      "rec_score": 6.5,
       "rec_reasons": [
         "월정배+장기근접",
         "MA지지",
-        "섹터선도"
+        "섹터선도",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -7850,6 +8096,7 @@
         "macd_bear_cross",
         "monthly_bull_align",
         "sector_leader",
+        "unusual_call_activity",
         "monthly_bull_near_long"
       ],
       "sectors": [
@@ -7864,7 +8111,8 @@
       "rs_20d": 5.8,
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.56,
-      "atm_iv": 40.4,
+      "atm_iv": 40.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-23",
       "days_to_earnings": 59,
       "earnings_window": null,
@@ -7872,11 +8120,12 @@
       "beat_streak": 0,
       "miss_streak": 1,
       "avg_surprise_pct": -9.27,
-      "rec_score": 5.5,
+      "rec_score": 6.5,
       "rec_reasons": [
         "월정배+장기근접",
         "MA지지",
-        "섹터선도"
+        "섹터선도",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -7904,6 +8153,7 @@
         "macd_bear_cross",
         "monthly_bull_align",
         "sector_leader",
+        "unusual_call_activity",
         "monthly_bull_near_long"
       ],
       "sectors": [
@@ -7918,7 +8168,8 @@
       "rs_20d": 5.8,
       "rs_benchmark": "QQQ",
       "pc_ratio_vol": 0.56,
-      "atm_iv": 40.4,
+      "atm_iv": 40.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-23",
       "days_to_earnings": 59,
       "earnings_window": null,
@@ -7926,11 +8177,12 @@
       "beat_streak": 0,
       "miss_streak": 1,
       "avg_surprise_pct": -9.27,
-      "rec_score": 6.5,
+      "rec_score": 7.5,
       "rec_reasons": [
         "월정배+장기근접",
         "MA지지",
-        "섹터선도"
+        "섹터선도",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -7972,6 +8224,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.62,
       "atm_iv": 56.1,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -8025,6 +8278,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.4,
       "atm_iv": 93.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-07",
       "days_to_earnings": -18,
       "earnings_window": null,
@@ -8080,6 +8334,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 1.1,
       "atm_iv": 145.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-28",
       "days_to_earnings": 3,
       "earnings_window": "soon",
@@ -8133,6 +8388,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.82,
       "atm_iv": 51.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-10",
       "days_to_earnings": 77,
       "earnings_window": null,
@@ -8188,6 +8444,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.2,
       "atm_iv": 85.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-29",
       "days_to_earnings": 65,
       "earnings_window": null,
@@ -8244,6 +8501,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.53,
       "atm_iv": 112.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -8297,6 +8555,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.25,
       "atm_iv": 79.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-11",
       "days_to_earnings": 78,
       "earnings_window": null,
@@ -8354,6 +8613,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.36,
       "atm_iv": 164.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-29",
       "days_to_earnings": 4,
       "earnings_window": "soon",
@@ -8406,6 +8666,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.55,
       "atm_iv": 55.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-11",
       "days_to_earnings": 78,
       "earnings_window": null,
@@ -8458,6 +8719,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.43,
       "atm_iv": 94.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-07",
       "days_to_earnings": 74,
       "earnings_window": null,
@@ -8511,6 +8773,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.47,
       "atm_iv": 145.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-28",
       "days_to_earnings": 3,
       "earnings_window": "soon",
@@ -8549,7 +8812,8 @@
         "macd_above_zero",
         "monthly_bull_align",
         "sector_leader",
-        "earnings_beat_streak"
+        "earnings_beat_streak",
+        "call_iv_premium"
       ],
       "sectors": [
         "AI"
@@ -8563,6 +8827,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 1.36,
       "atm_iv": 57.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-06-04",
       "days_to_earnings": 10,
       "earnings_window": null,
@@ -8570,13 +8835,14 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 6.55,
-      "rec_score": 7.0,
+      "rec_score": 8.5,
       "rec_reasons": [
         "월정배",
         "일정배",
         "52신고가",
         "섹터선도",
-        "4분기 연속 비트"
+        "4분기 연속 비트",
+        "콜IV프리미엄"
       ],
       "is_recommended": false
     },
@@ -8614,7 +8880,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 14.71,
-      "atm_iv": 54.4,
+      "atm_iv": 54.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
@@ -8664,6 +8931,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 1.14,
       "atm_iv": 74.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-30",
       "days_to_earnings": 66,
       "earnings_window": null,
@@ -8714,7 +8982,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.19,
-      "atm_iv": 120.1,
+      "atm_iv": 120.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-10",
       "days_to_earnings": 77,
       "earnings_window": null,
@@ -8767,7 +9036,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.75,
-      "atm_iv": 51.6,
+      "atm_iv": 51.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-29",
       "days_to_earnings": 65,
       "earnings_window": null,
@@ -8822,6 +9092,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 0.55,
       "atm_iv": 76.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -8875,6 +9146,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.33,
       "atm_iv": 65.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-07",
       "days_to_earnings": 74,
       "earnings_window": null,
@@ -8925,6 +9197,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.47,
       "atm_iv": 114.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-06-05",
       "days_to_earnings": 11,
       "earnings_window": null,
@@ -8980,6 +9253,7 @@
       "rs_benchmark": "URA",
       "pc_ratio_vol": 0.66,
       "atm_iv": 53.2,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -9031,7 +9305,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.66,
-      "atm_iv": 114.4,
+      "atm_iv": 114.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-11",
       "days_to_earnings": 78,
       "earnings_window": null,
@@ -9086,6 +9361,7 @@
       "rs_benchmark": "ITA",
       "pc_ratio_vol": 0.44,
       "atm_iv": 73.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-06-24",
       "days_to_earnings": 30,
       "earnings_window": null,
@@ -9143,6 +9419,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 8.3,
       "atm_iv": 187.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -9183,7 +9460,8 @@
         "macd_momentum_up",
         "earnings_beats",
         "call_heavy",
-        "iv_elevated"
+        "iv_elevated",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Semi"
@@ -9197,6 +9475,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 0.11,
       "atm_iv": 85.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -9204,11 +9483,12 @@
       "beat_streak": 2,
       "miss_streak": 0,
       "avg_surprise_pct": 14.82,
-      "rec_score": 6.5,
+      "rec_score": 7.5,
       "rec_reasons": [
         "MACD골크",
         "MACD모멘텀↑",
-        "콜 매수 우세"
+        "콜 매수 우세",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -9236,7 +9516,8 @@
         "macd_momentum_up",
         "earnings_beats",
         "call_heavy",
-        "iv_elevated"
+        "iv_elevated",
+        "unusual_call_activity"
       ],
       "sectors": [
         "Semi"
@@ -9250,6 +9531,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 0.11,
       "atm_iv": 85.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -9257,11 +9539,12 @@
       "beat_streak": 2,
       "miss_streak": 0,
       "avg_surprise_pct": 14.82,
-      "rec_score": 6.5,
+      "rec_score": 7.5,
       "rec_reasons": [
         "MACD골크",
         "MACD모멘텀↑",
-        "콜 매수 우세"
+        "콜 매수 우세",
+        "이상콜거래"
       ],
       "is_recommended": false
     },
@@ -9305,6 +9588,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 8.3,
       "atm_iv": 187.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-31",
       "days_to_earnings": 67,
       "earnings_window": null,
@@ -9358,6 +9642,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.11,
       "atm_iv": 107.0,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-07",
       "days_to_earnings": 74,
       "earnings_window": null,
@@ -9397,7 +9682,8 @@
         "macd_below_zero",
         "macd_momentum_up",
         "call_heavy",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -9408,15 +9694,17 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.3,
-      "atm_iv": 143.7,
+      "atm_iv": 143.6,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": null,
       "days_to_earnings": null,
       "earnings_window": null,
       "eps_estimate": null,
-      "rec_score": 2.5,
+      "rec_score": 4.0,
       "rec_reasons": [
         "MACD모멘텀↑",
-        "콜 매수 우세"
+        "콜 매수 우세",
+        "콜IV프리미엄"
       ],
       "is_recommended": false
     },
@@ -9454,6 +9742,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.22,
       "atm_iv": 83.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -9501,6 +9790,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.65,
       "atm_iv": 113.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-06-02",
       "days_to_earnings": 8,
       "earnings_window": null,
@@ -9554,6 +9844,7 @@
       "rs_benchmark": "ITA",
       "pc_ratio_vol": 0.29,
       "atm_iv": 117.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-11",
       "days_to_earnings": 78,
       "earnings_window": null,
@@ -9610,6 +9901,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.74,
       "atm_iv": 119.1,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -9668,6 +9960,7 @@
       "rs_benchmark": "ITA",
       "pc_ratio_vol": 0.29,
       "atm_iv": 117.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-11",
       "days_to_earnings": 78,
       "earnings_window": null,
@@ -9724,6 +10017,7 @@
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.74,
       "atm_iv": 119.1,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -9779,6 +10073,7 @@
       "rs_benchmark": "ITA",
       "pc_ratio_vol": 0.64,
       "atm_iv": 108.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-07",
       "days_to_earnings": 74,
       "earnings_window": null,
@@ -9829,6 +10124,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.89,
       "atm_iv": 150.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -9880,6 +10176,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.58,
       "atm_iv": 89.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-23",
       "days_to_earnings": 59,
       "earnings_window": null,
@@ -9937,6 +10234,7 @@
       "rs_benchmark": "SOXX",
       "pc_ratio_vol": 0.37,
       "atm_iv": 93.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-07-30",
       "days_to_earnings": 66,
       "earnings_window": null,
@@ -9954,7 +10252,7 @@
         "4분기 연속 비트",
         "콜 매수 우세"
       ],
-      "is_recommended": true
+      "is_recommended": false
     },
     {
       "ticker_2x": "FLYT",
@@ -9990,6 +10288,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.61,
       "atm_iv": 144.4,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-05",
       "days_to_earnings": 72,
       "earnings_window": null,
@@ -10027,7 +10326,8 @@
         "macd_above_zero",
         "macd_momentum_up",
         "call_heavy",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium"
       ],
       "sectors": [],
       "near_52w_high": true,
@@ -10039,6 +10339,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.28,
       "atm_iv": 176.3,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -10046,12 +10347,13 @@
       "beat_streak": 1,
       "miss_streak": 0,
       "avg_surprise_pct": -224.0,
-      "rec_score": 5.5,
+      "rec_score": 7.0,
       "rec_reasons": [
         "일정배",
         "52신고가",
         "MACD모멘텀↑",
-        "콜 매수 우세"
+        "콜 매수 우세",
+        "콜IV프리미엄"
       ],
       "is_recommended": false
     },
@@ -10079,7 +10381,8 @@
         "macd_momentum_up",
         "earnings_beat_streak",
         "call_heavy",
-        "iv_elevated"
+        "iv_elevated",
+        "call_iv_premium"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -10091,6 +10394,7 @@
       "rs_benchmark": null,
       "pc_ratio_vol": 0.17,
       "atm_iv": 130.7,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-11",
       "days_to_earnings": 78,
       "earnings_window": null,
@@ -10098,12 +10402,13 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 69.31,
-      "rec_score": 7.5,
+      "rec_score": 9.0,
       "rec_reasons": [
         "MACD골크",
         "MACD모멘텀↑",
         "4분기 연속 비트",
-        "콜 매수 우세"
+        "콜 매수 우세",
+        "콜IV프리미엄"
       ],
       "is_recommended": false
     },
@@ -10146,7 +10451,8 @@
       "rs_20d": 35.41,
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.58,
-      "atm_iv": 126.6,
+      "atm_iv": 126.5,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-29",
       "days_to_earnings": 4,
       "earnings_window": "soon",
@@ -10164,7 +10470,7 @@
         "MACD모멘텀↑",
         "섹터선도"
       ],
-      "is_recommended": true
+      "is_recommended": false
     },
     {
       "ticker_2x": "NVTX",
@@ -10201,7 +10507,8 @@
       "rs_20d": null,
       "rs_benchmark": null,
       "pc_ratio_vol": 0.84,
-      "atm_iv": 185.2,
+      "atm_iv": 185.1,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-04",
       "days_to_earnings": 71,
       "earnings_window": null,
@@ -10243,7 +10550,8 @@
         "monthly_bull_align",
         "sector_leader",
         "call_heavy",
-        "iv_elevated"
+        "iv_elevated",
+        "unusual_call_activity"
       ],
       "sectors": [
         "AI",
@@ -10257,7 +10565,8 @@
       "rs_20d": 67.07,
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.22,
-      "atm_iv": 144.7,
+      "atm_iv": 144.8,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-08-06",
       "days_to_earnings": 73,
       "earnings_window": null,
@@ -10265,14 +10574,15 @@
       "beat_streak": 1,
       "miss_streak": 0,
       "avg_surprise_pct": -5.68,
-      "rec_score": 10.5,
+      "rec_score": 11.5,
       "rec_reasons": [
         "월정배",
         "거래량+양봉",
         "MACD골크",
         "MACD모멘텀↑",
         "섹터선도",
-        "콜 매수 우세"
+        "콜 매수 우세",
+        "이상콜거래"
       ],
       "is_recommended": true
     },
@@ -10302,7 +10612,8 @@
         "sector_leader",
         "earnings_beats",
         "call_heavy",
-        "iv_elevated"
+        "iv_elevated",
+        "unusual_call_activity"
       ],
       "sectors": [
         "AI",
@@ -10316,7 +10627,8 @@
       "rs_20d": 63.82,
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.28,
-      "atm_iv": 156.0,
+      "atm_iv": 155.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-11",
       "days_to_earnings": -14,
       "earnings_window": null,
@@ -10324,14 +10636,15 @@
       "beat_streak": 3,
       "miss_streak": 0,
       "avg_surprise_pct": -0.22,
-      "rec_score": 11.0,
+      "rec_score": 12.0,
       "rec_reasons": [
         "월정배",
         "거래량+양봉",
         "MACD골크",
         "MACD모멘텀↑",
         "섹터선도",
-        "콜 매수 우세"
+        "콜 매수 우세",
+        "이상콜거래"
       ],
       "is_recommended": true
     },
@@ -10361,7 +10674,8 @@
         "sector_leader",
         "earnings_beats",
         "call_heavy",
-        "iv_elevated"
+        "iv_elevated",
+        "unusual_call_activity"
       ],
       "sectors": [
         "AI",
@@ -10375,7 +10689,8 @@
       "rs_20d": 63.82,
       "rs_benchmark": "ARKK",
       "pc_ratio_vol": 0.28,
-      "atm_iv": 156.0,
+      "atm_iv": 155.9,
+      "call_oi_growth_pct": 0.0,
       "next_earnings": "2026-05-11",
       "days_to_earnings": -14,
       "earnings_window": null,
@@ -10383,14 +10698,15 @@
       "beat_streak": 3,
       "miss_streak": 0,
       "avg_surprise_pct": -0.22,
-      "rec_score": 10.5,
+      "rec_score": 11.5,
       "rec_reasons": [
         "월정배",
         "거래량+양봉",
         "MACD골크",
         "MACD모멘텀↑",
         "섹터선도",
-        "콜 매수 우세"
+        "콜 매수 우세",
+        "이상콜거래"
       ],
       "is_recommended": true
     }

@@ -372,6 +372,7 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
     o_info = (options or {}).get(und) if und else None
     pc_vol = None
     atm_iv = None
+    call_oi_growth_pct = None
     if o_info:
         pc_vol = o_info.get("pc_ratio_vol")
         atm_iv = o_info.get("atm_iv")
@@ -387,6 +388,28 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
         # iv_crushed(≤20%)는 너무 엄격해서 별도 임계값 사용
         if "call_heavy" in ma_sigs and atm_iv is not None and atm_iv <= 30:
             ma_sigs.append("squeeze_setup")
+
+        # Call OI day-over-day growth — 신규 콜 포지션 진입 (≥20% 급증)
+        call_oi_now  = o_info.get("call_oi")
+        call_oi_prev = o_info.get("call_oi_prev")
+        if call_oi_now and call_oi_prev and call_oi_prev > 0:
+            call_oi_growth_pct = (call_oi_now - call_oi_prev) / call_oi_prev * 100
+            if call_oi_growth_pct >= 20:
+                ma_sigs.append("call_oi_growth")
+
+        # Call IV premium — 콜 IV > 풋 IV * 1.05 (정상은 풋이 더 높음, 역전 시 강세 시그널)
+        # 5% 마진을 둬서 ATM 행사가 선택 노이즈 제거
+        call_iv = o_info.get("atm_call_iv")
+        put_iv  = o_info.get("atm_put_iv")
+        if call_iv is not None and put_iv is not None and put_iv > 0 and call_iv >= put_iv * 1.05:
+            ma_sigs.append("call_iv_premium")
+
+        # Unusual call activity — 콜 거래량이 기존 OI의 2배 이상 (헤지펀드 진입 가능)
+        call_vol_now = o_info.get("call_volume")
+        if call_vol_now and call_oi_now and call_oi_now > 0:
+            v_oi_ratio = call_vol_now / call_oi_now
+            if v_oi_ratio >= 2.0:
+                ma_sigs.append("unusual_call_activity")
 
     # Monthly bull alignment + daily price near long-term MA (MA60 or MA120)
     # = long-term uptrend in pullback to key support
@@ -436,6 +459,7 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
         "rs_benchmark": rs_sector,
         "pc_ratio_vol": pc_vol,
         "atm_iv": atm_iv,
+        "call_oi_growth_pct": r(call_oi_growth_pct, 1) if call_oi_growth_pct is not None else None,
         **_earnings_fields(earnings.get(und) if und else None, today),
     }
 
@@ -497,6 +521,9 @@ def recommendation_score(p: dict) -> tuple[float, list[str]]:
     if "put_heavy" in sigs: score -= 1.5
     if "iv_elevated" in sigs: score -= 0.5  # 큰 이벤트 임박 — 양방향 위험
     if "squeeze_setup" in sigs: score += 1.5; reasons.append("스퀴즈 셋업")  # 콜+IV낮음 콤보 보너스
+    if "call_oi_growth" in sigs: score += 1.5; reasons.append("콜OI급증")
+    if "call_iv_premium" in sigs: score += 1.5; reasons.append("콜IV프리미엄")
+    if "unusual_call_activity" in sigs: score += 1.0; reasons.append("이상콜거래")
 
     # RSI sweet spot
     rsi = p.get("rsi")
