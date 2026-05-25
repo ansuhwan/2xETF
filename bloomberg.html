@@ -340,6 +340,7 @@
     put_heavy:               { g: "P↑", cls: "r",   t: "풋 매수 우세 (P/C ≥ 1.5) — 약세/헤지" },
     iv_elevated:             { g: "IV↑", cls: "amb", t: "IV 60%+ — 큰 변동 기대 (이벤트 임박)" },
     iv_crushed:              { g: "IV↓", cls: "dim", t: "IV 20% 이하 — 변동성 짓눌림 (스퀴즈 후보)" },
+    squeeze_setup:           { g: "★Sq", cls: "g",   t: "스퀴즈 셋업: 콜 우세 + IV 낮음 (변동성 압축 + 누적 매수)" },
   };
   const FILTER_GROUPS = [
     { key: "status", label: "상태", chips: [
@@ -357,6 +358,7 @@
       { k:"monthly_bull_near_long", label:"월정배+장기근접" },
       { k:"bull_align_pullback", label:"정배눌림" }, { k:"ma20_support", label:"MA20지지" },
       { k:"ma60_support", label:"MA60지지" }, { k:"ma120_support", label:"MA120지지" },
+      { k:"squeeze_setup", label:"스퀴즈셋업" },
     ]},
     { key: "trend", label: "추세", chips: [
       { k:"ma_bull_align", label:"일봉정배" }, { k:"ma_bear_align", label:"일봉역배" },

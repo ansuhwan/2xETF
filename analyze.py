@@ -382,6 +382,12 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
             if atm_iv >= 60: ma_sigs.append("iv_elevated")    # 큰 변동 기대 (이벤트 임박)
             elif atm_iv <= 20: ma_sigs.append("iv_crushed")   # 변동성 짓눌림
 
+        # Squeeze setup: 콜 우세 + 낮은 IV (≤30%) = 변동성 압축 + 누적 매수
+        # 강한 상승 직전 패턴 (싼 가격에 콜이 쌓이고 있다)
+        # iv_crushed(≤20%)는 너무 엄격해서 별도 임계값 사용
+        if "call_heavy" in ma_sigs and atm_iv is not None and atm_iv <= 30:
+            ma_sigs.append("squeeze_setup")
+
     # Monthly bull alignment + daily price near long-term MA (MA60 or MA120)
     # = long-term uptrend in pullback to key support
     if monthly_sig == "monthly_bull_align" and cu.size >= 60:
@@ -490,6 +496,7 @@ def recommendation_score(p: dict) -> tuple[float, list[str]]:
     if "call_heavy" in sigs: score += 2.0; reasons.append("콜 매수 우세")
     if "put_heavy" in sigs: score -= 1.5
     if "iv_elevated" in sigs: score -= 0.5  # 큰 이벤트 임박 — 양방향 위험
+    if "squeeze_setup" in sigs: score += 1.5; reasons.append("스퀴즈 셋업")  # 콜+IV낮음 콤보 보너스
 
     # RSI sweet spot
     rsi = p.get("rsi")
