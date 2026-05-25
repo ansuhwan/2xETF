@@ -1731,7 +1731,11 @@
     "name_kr": "레버리지셰어즈 씨게이트 2배 ETF",
     "market": "AMX"
   },
-  "ASTY": null,
+  "ASTY": {
+    "code": "AMX2605021001",
+    "name_kr": "DEFIANCE DAILY TARGET 2X LONG ASTS ETF",
+    "market": "AMX"
+  },
   "DIA": {
     "code": "US19980120001",
     "name_kr": null,
