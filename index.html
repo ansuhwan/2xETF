@@ -344,6 +344,13 @@
     call_oi_growth:          { g: "OI↑", cls: "g",   t: "콜 OI 전일 대비 20%+ 급증 (신규 매수 진입)" },
     call_iv_premium:         { g: "C>P", cls: "g",   t: "콜 IV > 풋 IV (정상은 풋이 더 높음, 역전 시 강세)" },
     unusual_call_activity:   { g: "UCA", cls: "g",   t: "이상 콜 거래량: 거래량이 OI의 2배+ (헤지펀드 진입 가능)" },
+    hv_compressed:           { g: "Vc",  cls: "g",   t: "변동성 압축: HV30이 1년 중 하위 20% (스퀴즈 셋업)" },
+    hv_expanded:             { g: "Vx",  cls: "r",   t: "변동성 확장: HV30이 1년 중 상위 20% (이미 폭발)" },
+    high_short_interest:     { g: "SI↑", cls: "amb", t: "공매도 잔량 15%+ (숏 포지션 누적)" },
+    short_squeeze_setup:     { g: "★Sq²", cls: "g",  t: "숏스퀴즈 셋업: 공매도 20%+ + 강세 패턴" },
+    insider_buying:          { g: "I+",  cls: "g",   t: "내부자 순매수 (최근 90일)" },
+    insider_buying_strong:   { g: "I++", cls: "g",   t: "내부자 $1M+ 대량 매수 (가장 강한 펀더멘털 신호)" },
+    analyst_upgrades:        { g: "A↑",  cls: "g",   t: "애널리스트 등급/목표가 상향 (최근 30일)" },
   };
   const FILTER_GROUPS = [
     { key: "status", label: "상태", chips: [
@@ -362,6 +369,8 @@
       { k:"bull_align_pullback", label:"정배눌림" }, { k:"ma20_support", label:"MA20지지" },
       { k:"ma60_support", label:"MA60지지" }, { k:"ma120_support", label:"MA120지지" },
       { k:"squeeze_setup", label:"스퀴즈셋업" }, { k:"unusual_call_activity", label:"이상콜거래" },
+      { k:"hv_compressed", label:"변동성압축" }, { k:"short_squeeze_setup", label:"숏스퀴즈셋업" },
+      { k:"insider_buying_strong", label:"내부자대량매수" }, { k:"insider_buying", label:"내부자매수" },
     ]},
     { key: "trend", label: "추세", chips: [
       { k:"ma_bull_align", label:"일봉정배" }, { k:"ma_bear_align", label:"일봉역배" },
@@ -373,6 +382,8 @@
       { k:"call_heavy", label:"콜우세" }, { k:"put_heavy", label:"풋우세" },
       { k:"iv_elevated", label:"IV↑" }, { k:"iv_crushed", label:"IV↓" },
       { k:"call_oi_growth", label:"콜OI급증" }, { k:"call_iv_premium", label:"콜IV프리미엄" },
+      { k:"high_short_interest", label:"공매도15%+" }, { k:"analyst_upgrades", label:"애널상향" },
+      { k:"hv_expanded", label:"변동성확장" },
     ]},
     { key: "sector", label: "섹터", chips: [
       { k:"Mag7", label:"Mag7" }, { k:"AI", label:"AI" }, { k:"Semi", label:"반도체" },

@@ -24,6 +24,7 @@ PRICES_PKL = DATA / "prices.pkl"
 MONTHLY_PKL = DATA / "monthly.pkl"
 EARNINGS_JSON = DATA / "earnings.json"
 OPTIONS_JSON = DATA / "options.json"
+FUNDAMENTALS_JSON = DATA / "fundamentals.json"
 OUT = DATA / "data.json"
 
 KST = timezone(timedelta(hours=9))
@@ -97,6 +98,32 @@ def sectors_of(underlying: str) -> list[str]:
     if not underlying:
         return []
     return [name for name, members in SECTORS.items() if underlying in members]
+
+
+def hv_percentile(close: pd.Series, window: int = 30, lookback: int = 252) -> float | None:
+    """30-day realized volatility percentile rank over 252-day lookback.
+
+    Returns 0.0~100.0 — where current HV30 falls in the 1-year distribution.
+    Low percentile = volatility is compressed = squeeze candidate setup.
+    """
+    if close.size < window + 10:
+        return None
+    log_ret = np.log(close / close.shift(1)).dropna()
+    if log_ret.size < window:
+        return None
+    # Annualized rolling std (252 trading days)
+    hv = log_ret.rolling(window).std() * np.sqrt(252) * 100
+    hv = hv.dropna()
+    if hv.size < 10:
+        return None
+    current = hv.iloc[-1]
+    if pd.isna(current):
+        return None
+    series = hv.iloc[-lookback:] if hv.size > lookback else hv
+    if series.size < 10:
+        return None
+    rank = (series <= current).sum() / series.size * 100
+    return float(rank)
 
 
 def relative_strength(close_u: pd.Series, close_b: pd.Series, period: int = 20) -> float | None:
@@ -238,7 +265,7 @@ def compute_ma_signals(close: pd.Series, low: pd.Series) -> list[str]:
     return sigs
 
 
-def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], today: date, monthly: pd.DataFrame | None = None, options: dict[str, dict] | None = None) -> dict | None:
+def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], today: date, monthly: pd.DataFrame | None = None, options: dict[str, dict] | None = None, fundamentals: dict[str, dict] | None = None) -> dict | None:
     t2 = (etf.get("ticker_2x") or "").strip().upper()
     und = (etf.get("underlying") or "").strip().upper()
     leverage = int(etf.get("leverage") or 2)
@@ -411,6 +438,44 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
             if v_oi_ratio >= 2.0:
                 ma_sigs.append("unusual_call_activity")
 
+    # HV percentile rank — 변동성 압축 감지 (옵션 IV 히스토리 대체)
+    hv_pct = hv_percentile(cu) if cu.size >= 40 else None
+    if hv_pct is not None:
+        if hv_pct <= 20: ma_sigs.append("hv_compressed")   # 1년 중 하위 20% — 스퀴즈 후보
+        elif hv_pct >= 80: ma_sigs.append("hv_expanded")    # 상위 20% — 변동성 폭발 중
+
+    # Fundamentals: short interest + insider + analyst
+    f_info = (fundamentals or {}).get(und) if und else None
+    short_pct = None
+    insider_net = None
+    upgrades_30d = None
+    pt_raises_30d = None
+    if f_info:
+        short_pct = f_info.get("short_pct_of_float")
+        insider_net = f_info.get("insider_net_value_90d")
+        upgrades_30d = f_info.get("upgrades_30d")
+        downgrades_30d = f_info.get("downgrades_30d") or 0
+        pt_raises_30d = f_info.get("pt_raises_30d")
+        pt_lowers_30d = f_info.get("pt_lowers_30d") or 0
+
+        if short_pct is not None:
+            if short_pct >= 15: ma_sigs.append("high_short_interest")
+            # 숏 스퀴즈 후보: 숏 비중 높음 + 강세 셋업 동반
+            if short_pct >= 20 and ("ma_bull_align" in ma_sigs or "call_heavy" in ma_sigs):
+                ma_sigs.append("short_squeeze_setup")
+
+        if insider_net is not None:
+            if insider_net >= 1_000_000:
+                ma_sigs.append("insider_buying_strong")  # $1M+ 순매수
+            elif insider_net > 0:
+                ma_sigs.append("insider_buying")          # 순매수 (작아도 의미)
+
+        # 애널리스트: 업그레이드 2+ 또는 목표가 상향 5+ (다운 < 업)
+        upgrade_pos = (upgrades_30d or 0) >= 2 and (upgrades_30d or 0) > downgrades_30d
+        pt_pos = (pt_raises_30d or 0) >= 5 and (pt_raises_30d or 0) > pt_lowers_30d
+        if upgrade_pos or pt_pos:
+            ma_sigs.append("analyst_upgrades")
+
     # Monthly bull alignment + daily price near long-term MA (MA60 or MA120)
     # = long-term uptrend in pullback to key support
     if monthly_sig == "monthly_bull_align" and cu.size >= 60:
@@ -460,6 +525,11 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
         "pc_ratio_vol": pc_vol,
         "atm_iv": atm_iv,
         "call_oi_growth_pct": r(call_oi_growth_pct, 1) if call_oi_growth_pct is not None else None,
+        "hv_pct_rank": r(hv_pct, 0) if hv_pct is not None else None,
+        "short_pct_of_float": short_pct,
+        "insider_net_value_90d": insider_net,
+        "upgrades_30d": upgrades_30d,
+        "pt_raises_30d": pt_raises_30d,
         **_earnings_fields(earnings.get(und) if und else None, today),
     }
 
@@ -524,6 +594,17 @@ def recommendation_score(p: dict) -> tuple[float, list[str]]:
     if "call_oi_growth" in sigs: score += 1.5; reasons.append("콜OI급증")
     if "call_iv_premium" in sigs: score += 1.5; reasons.append("콜IV프리미엄")
     if "unusual_call_activity" in sigs: score += 1.0; reasons.append("이상콜거래")
+
+    # Volatility compression
+    if "hv_compressed" in sigs: score += 1.0; reasons.append("변동성압축")
+    if "hv_expanded" in sigs: score -= 0.5  # 이미 폭발 중 — 추격 위험
+
+    # Fundamentals
+    if "short_squeeze_setup" in sigs: score += 2.5; reasons.append("숏스퀴즈셋업")
+    elif "high_short_interest" in sigs: score += 0.5  # 단독으로는 약함
+    if "insider_buying_strong" in sigs: score += 2.5; reasons.append("내부자대량매수")
+    elif "insider_buying" in sigs: score += 1.0; reasons.append("내부자매수")
+    if "analyst_upgrades" in sigs: score += 1.0; reasons.append("애널리스트상향")
 
     # RSI sweet spot
     rsi = p.get("rsi")
@@ -612,6 +693,15 @@ def load_options() -> dict[str, dict]:
         return {}
 
 
+def load_fundamentals() -> dict[str, dict]:
+    if not FUNDAMENTALS_JSON.exists():
+        return {}
+    try:
+        return json.loads(FUNDAMENTALS_JSON.read_text(encoding="utf-8")).get("tickers", {})
+    except Exception:
+        return {}
+
+
 def load_monthly() -> pd.DataFrame | None:
     if not MONTHLY_PKL.exists():
         return None
@@ -647,6 +737,7 @@ def main() -> int:
     earnings = load_earnings()
     monthly = load_monthly()
     options = load_options()
+    fundamentals = load_fundamentals()
     today = date.today()
 
     # Reference last trading date = max across all tickers; ETFs that haven't
@@ -671,7 +762,7 @@ def main() -> int:
                 "last_trade": str(ld.date()) if pd.notna(ld) else None,
             })
             continue
-        rec = analyze_pair(e, prices, earnings, today, monthly, options)
+        rec = analyze_pair(e, prices, earnings, today, monthly, options, fundamentals)
         if rec is None:
             skipped.append(t2 or "?")
             continue
