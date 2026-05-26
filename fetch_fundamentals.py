@@ -76,20 +76,31 @@ def insider_summary(t: yf.Ticker) -> dict:
 
     # yfinance encodes direction in Text column ("Purchase at price..." / "Sale at price...")
     # Transaction column itself is often empty. Grants/gifts (Value=0) are ignored.
+    # IMPORTANT: Exclude 10%+ beneficial owners (institutions like Volkswagen→RIVN).
+    # Their large block "purchases" are strategic investments / fund flows, NOT
+    # insider signals. True insider buying = officers/directors using own money.
     text_col = "Text" if "Text" in df.columns else None
     val_col = "Value" if "Value" in df.columns else None
+    pos_col = "Position" if "Position" in df.columns else None
+
+    def is_institutional(position: str) -> bool:
+        p = (position or "").lower()
+        return "10%" in p or "beneficial owner" in p or "more than" in p
 
     buy_count = sell_count = 0
     net_value = 0.0
     if text_col is not None and val_col is not None:
         for _, row in df.iterrows():
             text = str(row.get(text_col, "")).lower()
+            position = str(row.get(pos_col, "")) if pos_col else ""
             try:
                 val = float(row.get(val_col) or 0)
             except Exception:
                 val = 0.0
             if val <= 0:
-                continue  # skip grants/gifts and unknowns
+                continue  # skip grants/gifts
+            if is_institutional(position):
+                continue  # skip 10%+ holders — not a true insider signal
             if "purchase" in text or "buy" in text or "acquisition" in text:
                 buy_count += 1; net_value += val
             elif "sale" in text or "sold" in text or "sell" in text or "disposition" in text:
