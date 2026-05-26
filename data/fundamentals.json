@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-26T13:02:48+09:00",
+  "updated_at": "2026-05-27T07:39:49+09:00",
   "tickers": {
     "AAOI": {
       "short_pct_of_float": 13.14,
@@ -22,7 +22,7 @@
       "insider_sell_count_90d": 5,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 10,
+      "pt_raises_30d": 11,
       "pt_lowers_30d": 0
     },
     "ACHR": {
@@ -82,7 +82,7 @@
       "insider_sell_count_90d": 9,
       "upgrades_30d": 3,
       "downgrades_30d": 3,
-      "pt_raises_30d": 26,
+      "pt_raises_30d": 28,
       "pt_lowers_30d": 0
     },
     "AMKR": {
@@ -359,7 +359,7 @@
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 1,
-      "pt_lowers_30d": 2
+      "pt_lowers_30d": 3
     },
     "CIEN": {
       "short_pct_of_float": 4.87,
@@ -370,7 +370,7 @@
       "insider_sell_count_90d": 16,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 3,
+      "pt_raises_30d": 4,
       "pt_lowers_30d": 0
     },
     "CIFR": {
@@ -502,7 +502,7 @@
       "insider_sell_count_90d": 34,
       "upgrades_30d": 1,
       "downgrades_30d": 0,
-      "pt_raises_30d": 11,
+      "pt_raises_30d": 12,
       "pt_lowers_30d": 0
     },
     "CRWV": {
@@ -550,7 +550,7 @@
       "insider_sell_count_90d": 37,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 17,
+      "pt_raises_30d": 18,
       "pt_lowers_30d": 1
     },
     "DELL": {
@@ -815,7 +815,7 @@
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 3,
-      "pt_lowers_30d": 3
+      "pt_lowers_30d": 4
     },
     "HL": {
       "short_pct_of_float": 0.0,
@@ -1054,7 +1054,7 @@
       "insider_sell_count_90d": 0,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 2,
+      "pt_raises_30d": 3,
       "pt_lowers_30d": 0
     },
     "LMND": {
@@ -1097,9 +1097,9 @@
       "short_pct_of_float": 22.47,
       "short_ratio_days": 6.67,
       "shares_short": 85095283,
-      "insider_net_value_90d": -771832.0,
+      "insider_net_value_90d": -457077.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 4,
+      "insider_sell_count_90d": 3,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 2,
@@ -1126,7 +1126,7 @@
       "insider_sell_count_90d": 5,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 3,
+      "pt_raises_30d": 4,
       "pt_lowers_30d": 0
     },
     "MDY": {
@@ -1145,9 +1145,9 @@
       "short_pct_of_float": 1.32,
       "short_ratio_days": 1.69,
       "shares_short": 28980090,
-      "insider_net_value_90d": -61120205.0,
+      "insider_net_value_90d": -60868149.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 17,
+      "insider_sell_count_90d": 16,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 0,
@@ -1196,9 +1196,9 @@
       "insider_net_value_90d": -28798673.0,
       "insider_buy_count_90d": 0,
       "insider_sell_count_90d": 11,
-      "upgrades_30d": 0,
+      "upgrades_30d": 1,
       "downgrades_30d": 0,
-      "pt_raises_30d": 8,
+      "pt_raises_30d": 12,
       "pt_lowers_30d": 0
     },
     "MSFT": {
@@ -1234,7 +1234,7 @@
       "insider_sell_count_90d": 7,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 4,
+      "pt_raises_30d": 5,
       "pt_lowers_30d": 0
     },
     "NBIS": {
@@ -1253,9 +1253,9 @@
       "short_pct_of_float": 1.85,
       "short_ratio_days": 2.07,
       "shares_short": 17148547,
-      "insider_net_value_90d": -4120967.0,
+      "insider_net_value_90d": -3477592.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 8,
+      "insider_sell_count_90d": 7,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 0,
@@ -1414,15 +1414,15 @@
       "insider_sell_count_90d": 7,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 3,
+      "pt_raises_30d": 4,
       "pt_lowers_30d": 0
     },
     "PAAS": {
       "short_pct_of_float": null,
       "short_ratio_days": 0.79,
       "shares_short": 3606568,
-      "insider_net_value_90d": 27914484.0,
-      "insider_buy_count_90d": 16,
+      "insider_net_value_90d": 25433153.0,
+      "insider_buy_count_90d": 14,
       "insider_sell_count_90d": 1,
       "upgrades_30d": 1,
       "downgrades_30d": 0,
@@ -1709,9 +1709,9 @@
       "short_pct_of_float": 11.41,
       "short_ratio_days": 0.68,
       "shares_short": 10827454,
-      "insider_net_value_90d": -6555097.0,
+      "insider_net_value_90d": -4358737.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 3,
+      "insider_sell_count_90d": 2,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 10,
@@ -1727,7 +1727,7 @@
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 0,
-      "pt_lowers_30d": 0
+      "pt_lowers_30d": 1
     },
     "SOFI": {
       "short_pct_of_float": 12.72,
@@ -1798,7 +1798,7 @@
       "insider_sell_count_90d": 12,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 12,
+      "pt_raises_30d": 13,
       "pt_lowers_30d": 0
     },
     "TEM": {
@@ -1829,9 +1829,9 @@
       "short_pct_of_float": 2.3,
       "short_ratio_days": 1.13,
       "shares_short": 76673071,
-      "insider_net_value_90d": -32201169.0,
+      "insider_net_value_90d": -21508355.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 5,
+      "insider_sell_count_90d": 4,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 0,
@@ -1865,9 +1865,9 @@
       "short_pct_of_float": 7.94,
       "short_ratio_days": 2.67,
       "shares_short": 34529609,
-      "insider_net_value_90d": -773350.0,
+      "insider_net_value_90d": -361824.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 4,
+      "insider_sell_count_90d": 2,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 6,
@@ -1954,7 +1954,7 @@
       "insider_sell_count_90d": 10,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 10,
+      "pt_raises_30d": 11,
       "pt_lowers_30d": 0
     },
     "WULF": {
