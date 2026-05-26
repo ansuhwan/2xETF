@@ -327,30 +327,29 @@
     <div class="modal-body">
 
       <h3>🔔 알림 (Alerts) — 최우선 이벤트</h3>
-      <div class="grp"><span class="tag r">BD</span><b>큰 폭락</b> — 일일 변동 ≤ -10%
-        <div class="desc">패닉 매도 또는 대형 악재. 단기 반등 트레이딩 후보 (펀더 좋은 종목 한정)</div></div>
-      <div class="grp"><span class="tag r">VS</span><b>거래량 폭증 매도</b> — 거래량 ≥ 20일 평균×2 + 하락 ≥ -5%
-        <div class="desc">공포 매도(capitulation). 매도 압력 정점 신호, 단기 바닥 가능성</div></div>
-      <div class="grp"><span class="tag amb">OS</span><b>과매도</b> — RSI 14 &lt; 30
-        <div class="desc">통계적으로 너무 떨어진 상태. 평균회귀 반등 후보 (단, 추세 죽으면 더 떨어짐)</div></div>
-      <div class="grp"><span class="tag r">5D</span><b>5일 폭락</b> — 5거래일 누적 ≤ -20%
-        <div class="desc">1주일에 -20%. 펀더 무너지지 않았는지 체크 후 반등 후보</div></div>
-      <div class="grp"><span class="tag r">BB</span><b>볼린저 하단 이탈</b> — 종가 &lt; 20일 BB 하단 (mean - 2σ)
-        <div class="desc">통계적 95% 이탈. 평균회귀 후보, 추세 동반 확인 필요</div></div>
+      <table>
+        <tr><th>글리프</th><th>필터</th><th>기준</th><th>활용</th></tr>
+        <tr><td><code style="color:var(--red)">BD</code></td><td>큰 폭락</td><td>일일 변동 ≤ -10%</td><td>패닉 매도 / 악재. 펀더 좋은 종목이면 반등 후보</td></tr>
+        <tr><td><code style="color:var(--red)">VS</code></td><td>거래량 폭증 매도</td><td>거래량 ≥ 20일 평균 × 2 + 하락 ≥ -5%</td><td>공포 매도(capitulation). 단기 바닥 가능성</td></tr>
+        <tr><td><code style="color:var(--amber)">OS</code></td><td>과매도</td><td>RSI 14 &lt; 30</td><td>평균회귀 반등 후보. 추세 죽으면 더 빠질 수도</td></tr>
+        <tr><td><code style="color:var(--red)">5D</code></td><td>5일 폭락</td><td>5거래일 누적 ≤ -20%</td><td>1주일에 -20%. 펀더 체크 후 반등 후보</td></tr>
+        <tr><td><code style="color:var(--red)">BB</code></td><td>볼린저 하단 이탈</td><td>종가 &lt; 20일 BB 하단 (mean - 2σ)</td><td>통계 95% 이탈. 평균회귀 + 추세 확인 필요</td></tr>
+      </table>
 
       <h3>🟢 상태 (Status)</h3>
-      <div class="grp"><span class="tag amb">🏆</span><b>추천</b> — 종합 점수 ≥ 5 상위 10개
-        <div class="desc">매일 자동 갱신. 아침 데일리 픽으로 사용</div></div>
-      <div class="grp"><span class="tag">2X / 3X</span><b>레버리지</b> — 2X 단일주 / 3X 섹터·인덱스
-        <div class="desc">3X는 SEC 규제로 개별주 불가, 섹터/인덱스만 (TQQQ/SOXL 등)</div></div>
-      <div class="grp"><span class="tag amb">신생</span><b>거래 60일 미만</b>
-        <div class="desc">2X 데이터 부족 — 본주 지표로 대체 분석</div></div>
-      <div class="grp"><span class="tag amb">실적임박 / 실적후</span><b>실적 ±7일 윈도우</b>
-        <div class="desc">실적 변동성 베팅 or 회피용</div></div>
-      <div class="grp"><span class="tag">거래량+</span><b>거래량 ≥ 2× 평균 + 상승 ≥ +3%</b>
-        <div class="desc">매수 모멘텀 발생 — 돌파 신호</div></div>
-      <div class="grp"><span class="tag amb">52신고 / 52신저</span><b>52주 고가의 95%+ / 저가 105%-</b>
-        <div class="desc">신고가 = 강세 지속, 신저가 = 바닥 시도</div></div>
+      <table>
+        <tr><th>필터</th><th>기준</th><th>활용</th></tr>
+        <tr><td><code>🏆 추천</code></td><td>종합 점수 ≥ 5 상위 10개</td><td>매일 자동 갱신, 아침 데일리 픽</td></tr>
+        <tr><td><code>알림</code></td><td>위 5개 알림 중 하나라도 발생</td><td>오늘 주목 종목 빠른 스캔</td></tr>
+        <tr><td><code>즐겨</code></td><td>★ 누른 종목</td><td>관심 종목 워치리스트 (로컬 저장)</td></tr>
+        <tr><td><code>2X / 3X</code></td><td>레버리지 배율</td><td>2X = 단일주, 3X = 섹터·인덱스 (SEC 규제로 개별주 3X 불가)</td></tr>
+        <tr><td><code>신생</code></td><td>2X 거래 60일 미만</td><td>본주 지표로 대체 분석</td></tr>
+        <tr><td><code>실적임박</code></td><td>실적 발표일 ≤ 7일</td><td>실적 변동성 베팅 or 회피</td></tr>
+        <tr><td><code>실적후</code></td><td>실적 발표 직후 7일 이내</td><td>드리프트 트레이딩 후보</td></tr>
+        <tr><td><code>거래량+</code></td><td>거래량 ≥ 2× 평균 + 상승 ≥ +3%</td><td>매수 모멘텀 발생, 돌파 신호</td></tr>
+        <tr><td><code>52신고</code></td><td>52주 고가의 95% 이상</td><td>강세 지속</td></tr>
+        <tr><td><code>52신저</code></td><td>52주 저가의 105% 이내</td><td>바닥 시도</td></tr>
+      </table>
 
       <h3>💰 거래대금 (Liquidity)</h3>
       <table>
@@ -361,49 +360,51 @@
       </table>
 
       <h3>⭐ 셋업 (Setup) — 진입 패턴</h3>
-      <div class="grp"><span class="tag">★M</span><b>월정배 + 장기근접</b> (+3.5점)
-        <div class="desc">월봉 5/20/60 정배열 + 일봉이 MA60d 또는 MA120d 의 ±5% 이내. <b>가장 강한 매수 신호</b></div></div>
-      <div class="grp"><span class="tag">★</span><b>정배눌림</b> (+3.0점)
-        <div class="desc">일봉 5/20/60/120 정배열 + MA20/60/120 중 하나에서 지지. 추세 추종 진입</div></div>
-      <div class="grp"><span class="tag">20·60·120</span><b>MA 지지</b>
-        <div class="desc">오늘 저가 ≤ MA×102% + 종가 &gt; MA (꼬리만 닿고 위로 마감). 정배열 동반 필요</div></div>
-      <div class="grp"><span class="tag">★Sq</span><b>스퀴즈셋업</b> (+1.5점)
-        <div class="desc">콜우세(P/C≤0.4) + IV ≤ 30%. 변동성 압축 + 콜 매수 누적 = 강한 상승 직전</div></div>
-      <div class="grp"><span class="tag">UCA</span><b>이상 콜 거래</b> (+1.0점)
-        <div class="desc">콜 거래량 ≥ 미결제약정×2. 신규 대량 진입, 스마트머니 베팅 추적</div></div>
-      <div class="grp"><span class="tag">Vc</span><b>변동성 압축</b> (+1.0점)
-        <div class="desc">HV30이 1년 중 하위 20%. 변동성 1년래 최저 → 폭발 가능성</div></div>
-      <div class="grp"><span class="tag">★Sq²</span><b>숏스퀴즈 셋업</b> (+2.5점)
-        <div class="desc">공매도 ≥ 20% + (일봉 정배열 또는 콜우세). GME 같은 극단 폭등 후보</div></div>
-      <div class="grp"><span class="tag">I++</span><b>내부자 대량매수</b> (+2.5점)
-        <div class="desc">90일 임원·이사 순매수 ≥ $1M. TTD(CEO $148M)처럼 강한 펀더 신호. 10%+ 대주주(기관)는 제외</div></div>
-      <div class="grp"><span class="tag amb">I+</span><b>내부자 매수</b> (+1.0점)
-        <div class="desc">90일 순매수 양수 ($0~$1M). <b>금액 직접 확인 필요</b> — BMNR $15K 같은 노이즈 가능</div></div>
+      <table>
+        <tr><th>글리프</th><th>필터</th><th>기준</th><th>활용 / 의미</th><th>점수</th></tr>
+        <tr><td><code style="color:var(--green)">★M</code></td><td>월정배+장기근접</td><td>월봉 5/20/60 정배열 + 일봉이 MA60d 또는 MA120d ±5% 이내</td><td>장기 상승 추세 종목이 핵심 지지선까지 눌림 — <b>가장 강한 매수 신호</b></td><td class="pos">+3.5</td></tr>
+        <tr><td><code style="color:var(--green)">★</code></td><td>정배눌림</td><td>일봉 5/20/60/120 정배열 + MA20/60/120 지지</td><td>추세 종목의 단기 눌림목 — 실전 매수 후보</td><td class="pos">+3.0</td></tr>
+        <tr><td><code>20</code></td><td>MA20 지지</td><td>오늘 저가 ≤ MA20 × 1.02 + 종가 &gt; MA20</td><td>20일선에서 단기 반등. 정배열 동반 필요</td><td class="pos">+1.0</td></tr>
+        <tr><td><code>60</code></td><td>MA60 지지</td><td>오늘 저가 ≤ MA60 × 1.02 + 종가 &gt; MA60</td><td>60일선 = 중기 추세선 지지</td><td class="pos">+1.0</td></tr>
+        <tr><td><code>120</code></td><td>MA120 지지</td><td>오늘 저가 ≤ MA120 × 1.02 + 종가 &gt; MA120</td><td>120일선 = 장기 추세선 지지</td><td class="pos">+1.0</td></tr>
+        <tr><td><code style="color:var(--green)">★Sq</code></td><td>스퀴즈셋업</td><td>콜우세 (P/C ≤ 0.4) + IV ≤ 30%</td><td>변동성 압축 + 콜 매수 누적 = 강한 상승 직전 패턴</td><td class="pos">+1.5</td></tr>
+        <tr><td><code style="color:var(--green)">UCA</code></td><td>이상 콜 거래</td><td>콜 거래량 ≥ 미결제약정 × 2</td><td>평소의 7~20배 거래 = 헤지펀드 진입 가능</td><td class="pos">+1.0</td></tr>
+        <tr><td><code style="color:var(--green)">Vc</code></td><td>변동성 압축</td><td>HV30이 1년 중 하위 20%</td><td>1년래 최저 변동성 → 평균회귀로 폭발 가능</td><td class="pos">+1.0</td></tr>
+        <tr><td><code style="color:var(--green)">★Sq²</code></td><td>숏스퀴즈셋업</td><td>공매도 ≥ 20% + (일봉 정배열 또는 콜우세)</td><td>GME 같은 극단 폭등 후보 (도박성)</td><td class="pos">+2.5</td></tr>
+        <tr><td><code style="color:var(--green)">I++</code></td><td>내부자 대량매수</td><td>90일 임원·이사 순매수 ≥ $1M (10%+ 대주주 제외)</td><td>TTD CEO $148M처럼 가장 강한 펀더 신호</td><td class="pos">+2.5</td></tr>
+        <tr><td><code style="color:var(--amber)">I+</code></td><td>내부자 매수</td><td>90일 순매수 양수 ($0~$1M)</td><td>금액 직접 확인 필요 (BMNR $15K 같은 노이즈 가능)</td><td class="pos">+1.0</td></tr>
+      </table>
 
       <h3>📈 추세 (Trend)</h3>
-      <div class="grp"><span class="tag">▲</span><b>일봉 정배열</b> (+2.0점) — MA5 &gt; MA20 &gt; MA60 &gt; MA120</div>
-      <div class="grp"><span class="tag r">▽</span><b>일봉 역배열</b> (-3.0점) — 약세 추세</div>
-      <div class="grp"><span class="tag">▲M</span><b>월봉 정배열</b> (+1.5점) — 장기 강세, 단기 노이즈 무시 가능</div>
-      <div class="grp"><span class="tag r">▽M</span><b>월봉 역배열</b> (-2.5점)</div>
-      <div class="grp"><span class="tag">★</span><b>골든크로스</b> (+2.0점) / <span class="tag r">X</span><b>데드크로스</b> (-2.0점) — 5일 내 MA20·60 교차</div>
-      <div class="grp"><span class="tag">M↑</span><b>MACD 골든크로스</b> (+2.0점) — 3일 내 MACD가 시그널선 상향 돌파</div>
-      <div class="grp"><span class="tag r">M↓</span><b>MACD 데드크로스</b> (-2.0점)</div>
-      <div class="grp"><span class="tag">M+</span><b>MACD 모멘텀↑</b> (+1.0점) — 히스토그램 3일 연속 증가</div>
-      <div class="grp"><span class="tag r">M-</span><b>MACD 모멘텀↓</b> (-1.0점)</div>
-      <div class="grp"><span class="tag">M0+</span><b>MACD 0선 위</b> (+0.5점) / <span class="tag r">M0-</span><b>0선 아래</b> (-0.5점)</div>
-      <div class="grp"><span class="tag amb">▶S</span><b>섹터 선도</b> (+1.5점) — 20일 수익률이 벤치마크보다 +5%p 이상</div>
-      <div class="grp"><span class="tag r">◀S</span><b>섹터 부진</b> (-1.0점) — 벤치마크 대비 -5%p 이하</div>
-      <div class="grp"><span class="tag">E✓4</span><b>4분기 연속 비트</b> (+1.5점) — EPS 추정치 4회 연속 상회</div>
-      <div class="grp"><span class="tag">E✓</span><b>최근 비트</b> (+0.5점) / <span class="tag r">E✗</span><b>3분기 연속 미스</b> (-1.0점)</div>
-      <div class="grp"><span class="tag">C↑</span><b>콜 우세</b> (+2.0점) — P/C 비율 ≤ 0.4 (콜이 풋의 2.5배+)</div>
-      <div class="grp"><span class="tag r">P↑</span><b>풋 우세</b> (-1.5점) — P/C ≥ 1.5</div>
-      <div class="grp"><span class="tag amb">IV↑</span><b>IV 높음</b> (-0.5점) — ATM IV ≥ 60%. 이벤트 임박, 양방향 위험</div>
-      <div class="grp"><span class="tag">IV↓</span><b>IV 낮음</b> — ATM IV ≤ 20%. 변동성 짓눌림, 폭발 직전 후보</div>
-      <div class="grp"><span class="tag">OI↑</span><b>콜 OI 급증</b> (+1.5점) — 콜 미결제약정 전일 대비 +20% (신규 진입)</div>
-      <div class="grp"><span class="tag">C&gt;P</span><b>콜 IV 프리미엄</b> (+1.5점) — 콜 IV ≥ 풋 IV × 1.05. 정상은 반대(강세 신호)</div>
-      <div class="grp"><span class="tag amb">SI↑</span><b>공매도 15%+</b> — 잔량/유통주식 ≥ 15%, 숏스퀴즈 후보 풀</div>
-      <div class="grp"><span class="tag">A↑</span><b>애널 상향</b> (+1.0점) — 30일 내 업그레이드 ≥ 2건 또는 PT상향 ≥ 5건</div>
-      <div class="grp"><span class="tag r">Vx</span><b>변동성 확장</b> (-0.5점) — HV30이 상위 20%, 이미 폭발 중 → 추격 위험</div>
+      <table>
+        <tr><th>글리프</th><th>필터</th><th>기준</th><th>활용 / 의미</th><th>점수</th></tr>
+        <tr><td><code style="color:var(--green)">▲</code></td><td>일봉 정배열</td><td>MA5 &gt; MA20 &gt; MA60 &gt; MA120</td><td>모든 이평선 정상 순서 = 강세 추세 확립</td><td class="pos">+2.0</td></tr>
+        <tr><td><code style="color:var(--red)">▽</code></td><td>일봉 역배열</td><td>MA5 &lt; MA20 &lt; MA60 &lt; MA120</td><td>매수 회피</td><td class="neg">-3.0</td></tr>
+        <tr><td><code style="color:var(--green)">▲M</code></td><td>월봉 정배열</td><td>월봉 MA5 &gt; MA20 &gt; MA60</td><td>장기 강세 추세 (5년 단위 큰 흐름)</td><td class="pos">+1.5</td></tr>
+        <tr><td><code style="color:var(--red)">▽M</code></td><td>월봉 역배열</td><td>월봉 MA5 &lt; MA20 &lt; MA60</td><td>장기 약세</td><td class="neg">-2.5</td></tr>
+        <tr><td><code style="color:var(--green)">★</code></td><td>골든크로스</td><td>최근 5일 내 MA20이 MA60 상향 돌파</td><td>중기 추세 전환 시점</td><td class="pos">+2.0</td></tr>
+        <tr><td><code style="color:var(--red)">X</code></td><td>데드크로스</td><td>최근 5일 내 MA20이 MA60 하향 돌파</td><td>약세 전환</td><td class="neg">-2.0</td></tr>
+        <tr><td><code style="color:var(--green)">M↑</code></td><td>MACD 골든크로스</td><td>최근 3일 내 MACD가 시그널선 상향 돌파</td><td>모멘텀 전환</td><td class="pos">+2.0</td></tr>
+        <tr><td><code style="color:var(--red)">M↓</code></td><td>MACD 데드크로스</td><td>최근 3일 내 MACD가 시그널선 하향 돌파</td><td>모멘텀 약화</td><td class="neg">-2.0</td></tr>
+        <tr><td><code style="color:var(--green)">M+</code></td><td>MACD 모멘텀↑</td><td>히스토그램 3일 연속 증가</td><td>상승 가속</td><td class="pos">+1.0</td></tr>
+        <tr><td><code style="color:var(--red)">M-</code></td><td>MACD 모멘텀↓</td><td>히스토그램 3일 연속 감소</td><td>하락 가속</td><td class="neg">-1.0</td></tr>
+        <tr><td><code style="color:var(--green)">M0+</code></td><td>MACD 0선 위</td><td>MACD &gt; 0</td><td>큰 강세 영역</td><td class="pos">+0.5</td></tr>
+        <tr><td><code style="color:var(--red)">M0-</code></td><td>MACD 0선 아래</td><td>MACD &lt; 0</td><td>큰 약세 영역</td><td class="neg">-0.5</td></tr>
+        <tr><td><code style="color:var(--amber)">▶S</code></td><td>섹터 선도</td><td>20일 수익률이 섹터 벤치마크보다 +5%p 이상</td><td>같은 섹터 중 가장 강한 종목</td><td class="pos">+1.5</td></tr>
+        <tr><td><code style="color:var(--red)">◀S</code></td><td>섹터 부진</td><td>벤치마크 대비 -5%p 이하</td><td>섹터 평균 못 따라감</td><td class="neg">-1.0</td></tr>
+        <tr><td><code style="color:var(--green)">E✓4</code></td><td>4분기 연속 비트</td><td>최근 4분기 모두 EPS 추정치 상회</td><td>펀더멘털 일관성</td><td class="pos">+1.5</td></tr>
+        <tr><td><code style="color:var(--green)">E✓</code></td><td>최근 비트</td><td>최근 2분기 비트</td><td>실적 트렌드 양호</td><td class="pos">+0.5</td></tr>
+        <tr><td><code style="color:var(--red)">E✗</code></td><td>3분기 연속 미스</td><td>3분기 연속 EPS 미스</td><td>펀더멘털 악화 시그널</td><td class="neg">-1.0</td></tr>
+        <tr><td><code style="color:var(--green)">C↑</code></td><td>콜 우세</td><td>P/C ≤ 0.4 (콜이 풋의 2.5배+)</td><td>옵션 시장 강세 베팅</td><td class="pos">+2.0</td></tr>
+        <tr><td><code style="color:var(--red)">P↑</code></td><td>풋 우세</td><td>P/C ≥ 1.5</td><td>약세 / 헷지</td><td class="neg">-1.5</td></tr>
+        <tr><td><code style="color:var(--amber)">IV↑</code></td><td>IV 높음</td><td>ATM IV ≥ 60%</td><td>이벤트 임박, 양방향 위험</td><td class="neg">-0.5</td></tr>
+        <tr><td><code>IV↓</code></td><td>IV 낮음</td><td>ATM IV ≤ 20%</td><td>변동성 짓눌림, 폭발 직전 후보</td><td>—</td></tr>
+        <tr><td><code style="color:var(--green)">OI↑</code></td><td>콜 OI 급증</td><td>콜 미결제약정 전일 대비 +20%</td><td>신규 콜 포지션 대량 진입</td><td class="pos">+1.5</td></tr>
+        <tr><td><code style="color:var(--green)">C&gt;P</code></td><td>콜 IV 프리미엄</td><td>콜 IV ≥ 풋 IV × 1.05</td><td>정상은 풋이 비쌈 — 역전 시 강세 신호</td><td class="pos">+1.5</td></tr>
+        <tr><td><code style="color:var(--amber)">SI↑</code></td><td>공매도 15%+</td><td>공매도 잔량 / 유통주식 ≥ 15%</td><td>숏스퀴즈 후보 풀 (강세 패턴 동반 필요)</td><td>—</td></tr>
+        <tr><td><code style="color:var(--green)">A↑</code></td><td>애널 상향</td><td>30일 내 업그레이드 ≥ 2건 또는 PT상향 ≥ 5건</td><td>컨센서스 강세 전환</td><td class="pos">+1.0</td></tr>
+        <tr><td><code style="color:var(--red)">Vx</code></td><td>변동성 확장</td><td>HV30이 1년 중 상위 20%</td><td>이미 폭발 중 → 추격 위험</td><td class="neg">-0.5</td></tr>
+      </table>
 
       <h3>📐 옵션 데이터 — P/C와 IV 핵심</h3>
       <h4>P/C 비율 (Put/Call Ratio)</h4>
