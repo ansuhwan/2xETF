@@ -620,6 +620,22 @@
     const iv = p.atm_iv;
     const ivCls = iv == null ? "soft" : iv >= 60 ? "amb" : iv <= 20 ? "dim" : "soft";
     const ivLine = iv != null ? `<span title="ATM 옵션 내재변동성 (annualized)"><span class="soft">IV</span> <span class="${ivCls} num">${iv.toFixed(0)}%</span></span>` : "";
+    const hvr = p.hv_pct_rank;
+    const hvrCls = hvr == null ? "soft" : hvr <= 20 ? "pos" : hvr >= 80 ? "neg" : "soft";
+    const hvrLine = hvr != null ? `<span title="HV30 1년 percentile rank — 낮을수록 변동성 압축"><span class="soft">HV%</span> <span class="${hvrCls} num">${hvr.toFixed(0)}</span></span>` : "";
+    const ins = p.insider_net_value_90d;
+    const insFmt = ins == null ? null
+      : Math.abs(ins) >= 1e6 ? `$${(ins/1e6).toFixed(1)}M`
+      : Math.abs(ins) >= 1e3 ? `$${(ins/1e3).toFixed(0)}K`
+      : `$${ins.toFixed(0)}`;
+    const insCls = ins == null ? "soft" : ins >= 1e6 ? "pos" : ins > 0 ? "amb" : ins < 0 ? "neg" : "soft";
+    const insLine = ins != null && ins !== 0 ? `<span title="최근 90일 내부자 순매수 (10%+ 대주주 제외)"><span class="soft">INS</span> <span class="${insCls} num">${insFmt}</span></span>` : "";
+    const si = p.short_pct_of_float;
+    const siCls = si == null ? "soft" : si >= 20 ? "amb" : si >= 15 ? "amb" : "soft";
+    const siLine = si != null ? `<span title="공매도 잔량 / 유통주식 비율"><span class="soft">SI</span> <span class="${siCls} num">${si.toFixed(1)}%</span></span>` : "";
+    const upg = p.upgrades_30d || 0;
+    const ptr = p.pt_raises_30d || 0;
+    const anLine = (upg + ptr) > 0 ? `<span title="최근 30일 애널리스트 등급 상향 / 목표가 상향 횟수"><span class="soft">A↑</span> <span class="pos num">${upg}/${ptr}</span></span>` : "";
     const sigs = [...p.alerts, ...(p.signals||[])].map(k => {
       const d = ALERT_GLYPHS[k]||SIGNAL_GLYPHS[k];
       return d ? `<span class="cl ${d.cls}" title="${d.t}">${d.g}</span>` : "";
@@ -644,6 +660,10 @@
         ${surpLine}
         ${pcLine}
         ${ivLine}
+        ${hvrLine}
+        ${insLine}
+        ${siLine}
+        ${anLine}
         ${earn}
       </span>
       <span class="meta">${sigs}</span>
