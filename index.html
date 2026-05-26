@@ -66,6 +66,87 @@
     padding: 0 12px; border-left: 1px solid var(--rule-2);
     display: flex; align-items: center; color: var(--amber);
   }
+  header.bbg .help-btn {
+    padding: 0 12px; border-left: 1px solid var(--rule-2); border-right: none; border-top: none; border-bottom: none;
+    background: transparent; color: var(--green); cursor: pointer;
+    font-family: inherit; font-size: 11px; letter-spacing: 0.1em; font-weight: 700;
+    display: flex; align-items: center;
+  }
+  header.bbg .help-btn:hover { background: var(--green); color: #000; }
+
+  /* HELP MODAL */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+    z-index: 100; display: none; align-items: flex-start; justify-content: center;
+    padding: 40px 20px; overflow-y: auto;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--bg-1); border: 1px solid var(--green-d);
+    max-width: 980px; width: 100%; max-height: calc(100vh - 80px); overflow-y: auto;
+    padding: 0; font-size: 12px; line-height: 1.6;
+  }
+  .modal-head {
+    position: sticky; top: 0; background: var(--bg-1); border-bottom: 1px solid var(--green-d);
+    padding: 12px 20px; display: flex; align-items: center; justify-content: space-between;
+    z-index: 2;
+  }
+  .modal-head h2 { margin: 0; color: var(--green); font-size: 14px; letter-spacing: 0.1em; font-weight: 700; }
+  .modal-close {
+    background: transparent; border: 1px solid var(--rule-2); color: var(--white);
+    padding: 4px 12px; cursor: pointer; font-family: inherit; font-size: 12px;
+  }
+  .modal-close:hover { background: var(--amber); color: #000; border-color: var(--amber); }
+  .modal-body { padding: 16px 20px 28px; }
+  .modal-body h3 {
+    color: var(--amber); font-size: 13px; margin: 20px 0 8px;
+    padding-bottom: 4px; border-bottom: 1px solid var(--rule-2);
+    letter-spacing: 0.05em;
+  }
+  .modal-body h3:first-child { margin-top: 0; }
+  .modal-body h4 { color: var(--cyn); font-size: 12px; margin: 12px 0 6px; font-weight: 600; }
+  .modal-body p, .modal-body li { color: var(--txt); font-size: 11.5px; }
+  .modal-body ul { margin: 4px 0 8px; padding-left: 20px; }
+  .modal-body ul li { margin: 2px 0; }
+  .modal-body code, .modal-body .gl {
+    background: var(--bg); padding: 1px 6px; border: 1px solid var(--rule-2);
+    color: var(--green); font-family: inherit; font-size: 11px;
+    display: inline-block; min-width: 24px; text-align: center;
+  }
+  .modal-body .gl.amb { color: var(--amber); }
+  .modal-body .gl.r { color: var(--red); }
+  .modal-body .gl.cyn { color: var(--cyn); }
+  .modal-body table {
+    width: 100%; border-collapse: collapse; font-size: 11px; margin: 8px 0;
+  }
+  .modal-body th, .modal-body td {
+    padding: 4px 8px; text-align: left; border-bottom: 1px solid var(--rule-2);
+    color: var(--txt);
+  }
+  .modal-body th { color: var(--amber); font-weight: 600; }
+  .modal-body td.pos { color: var(--green); }
+  .modal-body td.neg { color: var(--red); }
+  .modal-body .combo {
+    background: var(--bg); border: 1px solid var(--green-d); padding: 10px 14px;
+    margin: 8px 0; font-size: 11px;
+  }
+  .modal-body .combo strong { color: var(--amber); display: block; margin-bottom: 4px; }
+  .modal-body .grp {
+    background: var(--bg); padding: 10px 12px; border-left: 2px solid var(--green);
+    margin: 6px 0;
+  }
+  .modal-body .grp .tag {
+    display: inline-block; min-width: 30px; padding: 1px 6px; margin-right: 6px;
+    background: var(--green-d); color: var(--white); font-size: 11px;
+    border: 1px solid var(--green); font-weight: 600;
+  }
+  .modal-body .grp .tag.r { background: rgba(255,80,80,0.15); border-color: var(--red); color: var(--red); }
+  .modal-body .grp .tag.amb { background: rgba(255,180,40,0.15); border-color: var(--amber); color: var(--amber); }
+  .modal-body .grp .desc { color: var(--txt-soft); margin-left: 36px; font-size: 11px; }
+  @media (max-width: 1023px) {
+    .modal-overlay { padding: 0; }
+    .modal { max-height: 100vh; height: 100vh; }
+  }
 
   /* MAIN */
   main.bbg { padding-top: var(--hdr-h); padding-bottom: var(--foot-h); height: 100vh; display: grid; grid-template-columns: minmax(0,1fr) 460px; }
@@ -160,6 +241,7 @@
     letter-spacing: 0.1em;
   }
   .filter-group .chips { flex: 1; display: flex; flex-wrap: wrap; gap: 2px; }
+  .filter-group[data-key="liquidity"] .chips { flex-wrap: nowrap; }
   .chip {
     background: var(--bg-1); border: 1px solid var(--rule-2); color: var(--txt-soft);
     padding: 1px 5px; font-family: inherit; font-size: 10px; cursor: pointer;
@@ -240,8 +322,184 @@
 <header class="bbg">
   <div class="brand">BBG/2X · TERMINAL</div>
   <div class="summary num" id="summary"></div>
+  <button class="help-btn" id="help-btn" type="button" title="필터 자세히 보기">? 자세히</button>
   <div class="clock" id="clock">--:--:--</div>
 </header>
+
+<div class="modal-overlay" id="help-modal">
+  <div class="modal" role="dialog" aria-labelledby="help-title">
+    <div class="modal-head">
+      <h2 id="help-title">📋 전체 필터 · 시그널 가이드</h2>
+      <button class="modal-close" id="help-close" type="button">닫기 (ESC)</button>
+    </div>
+    <div class="modal-body">
+
+      <h3>🔔 알림 (Alerts) — 최우선 이벤트</h3>
+      <div class="grp"><span class="tag r">BD</span><b>큰 폭락</b> — 일일 변동 ≤ -10%
+        <div class="desc">패닉 매도 또는 대형 악재. 단기 반등 트레이딩 후보 (펀더 좋은 종목 한정)</div></div>
+      <div class="grp"><span class="tag r">VS</span><b>거래량 폭증 매도</b> — 거래량 ≥ 20일 평균×2 + 하락 ≥ -5%
+        <div class="desc">공포 매도(capitulation). 매도 압력 정점 신호, 단기 바닥 가능성</div></div>
+      <div class="grp"><span class="tag amb">OS</span><b>과매도</b> — RSI 14 &lt; 30
+        <div class="desc">통계적으로 너무 떨어진 상태. 평균회귀 반등 후보 (단, 추세 죽으면 더 떨어짐)</div></div>
+      <div class="grp"><span class="tag r">5D</span><b>5일 폭락</b> — 5거래일 누적 ≤ -20%
+        <div class="desc">1주일에 -20%. 펀더 무너지지 않았는지 체크 후 반등 후보</div></div>
+      <div class="grp"><span class="tag r">BB</span><b>볼린저 하단 이탈</b> — 종가 &lt; 20일 BB 하단 (mean - 2σ)
+        <div class="desc">통계적 95% 이탈. 평균회귀 후보, 추세 동반 확인 필요</div></div>
+
+      <h3>🟢 상태 (Status)</h3>
+      <div class="grp"><span class="tag amb">🏆</span><b>추천</b> — 종합 점수 ≥ 5 상위 10개
+        <div class="desc">매일 자동 갱신. 아침 데일리 픽으로 사용</div></div>
+      <div class="grp"><span class="tag">2X / 3X</span><b>레버리지</b> — 2X 단일주 / 3X 섹터·인덱스
+        <div class="desc">3X는 SEC 규제로 개별주 불가, 섹터/인덱스만 (TQQQ/SOXL 등)</div></div>
+      <div class="grp"><span class="tag amb">신생</span><b>거래 60일 미만</b>
+        <div class="desc">2X 데이터 부족 — 본주 지표로 대체 분석</div></div>
+      <div class="grp"><span class="tag amb">실적임박 / 실적후</span><b>실적 ±7일 윈도우</b>
+        <div class="desc">실적 변동성 베팅 or 회피용</div></div>
+      <div class="grp"><span class="tag">거래량+</span><b>거래량 ≥ 2× 평균 + 상승 ≥ +3%</b>
+        <div class="desc">매수 모멘텀 발생 — 돌파 신호</div></div>
+      <div class="grp"><span class="tag amb">52신고 / 52신저</span><b>52주 고가의 95%+ / 저가 105%-</b>
+        <div class="desc">신고가 = 강세 지속, 신저가 = 바닥 시도</div></div>
+
+      <h3>💰 거래대금 (Liquidity)</h3>
+      <table>
+        <tr><th>필터</th><th>기준</th><th>활용</th></tr>
+        <tr><td><code>$100M+</code></td><td>20일 평균 거래대금 ≥ $100M</td><td class="pos">슬리피지 없음, 노이즈 거의 없음</td></tr>
+        <tr><td><code>$10M+</code></td><td>≥ $10M</td><td>일반 개인 진입 가능 (권장)</td></tr>
+        <tr><td><code>$1M+</code></td><td>≥ $1M</td><td>최소 안전선 (이하 청산 위험)</td></tr>
+      </table>
+
+      <h3>⭐ 셋업 (Setup) — 진입 패턴</h3>
+      <div class="grp"><span class="tag">★M</span><b>월정배 + 장기근접</b> (+3.5점)
+        <div class="desc">월봉 5/20/60 정배열 + 일봉이 MA60d 또는 MA120d 의 ±5% 이내. <b>가장 강한 매수 신호</b></div></div>
+      <div class="grp"><span class="tag">★</span><b>정배눌림</b> (+3.0점)
+        <div class="desc">일봉 5/20/60/120 정배열 + MA20/60/120 중 하나에서 지지. 추세 추종 진입</div></div>
+      <div class="grp"><span class="tag">20·60·120</span><b>MA 지지</b>
+        <div class="desc">오늘 저가 ≤ MA×102% + 종가 &gt; MA (꼬리만 닿고 위로 마감). 정배열 동반 필요</div></div>
+      <div class="grp"><span class="tag">★Sq</span><b>스퀴즈셋업</b> (+1.5점)
+        <div class="desc">콜우세(P/C≤0.4) + IV ≤ 30%. 변동성 압축 + 콜 매수 누적 = 강한 상승 직전</div></div>
+      <div class="grp"><span class="tag">UCA</span><b>이상 콜 거래</b> (+1.0점)
+        <div class="desc">콜 거래량 ≥ 미결제약정×2. 신규 대량 진입, 스마트머니 베팅 추적</div></div>
+      <div class="grp"><span class="tag">Vc</span><b>변동성 압축</b> (+1.0점)
+        <div class="desc">HV30이 1년 중 하위 20%. 변동성 1년래 최저 → 폭발 가능성</div></div>
+      <div class="grp"><span class="tag">★Sq²</span><b>숏스퀴즈 셋업</b> (+2.5점)
+        <div class="desc">공매도 ≥ 20% + (일봉 정배열 또는 콜우세). GME 같은 극단 폭등 후보</div></div>
+      <div class="grp"><span class="tag">I++</span><b>내부자 대량매수</b> (+2.5점)
+        <div class="desc">90일 임원·이사 순매수 ≥ $1M. TTD(CEO $148M)처럼 강한 펀더 신호. 10%+ 대주주(기관)는 제외</div></div>
+      <div class="grp"><span class="tag amb">I+</span><b>내부자 매수</b> (+1.0점)
+        <div class="desc">90일 순매수 양수 ($0~$1M). <b>금액 직접 확인 필요</b> — BMNR $15K 같은 노이즈 가능</div></div>
+
+      <h3>📈 추세 (Trend)</h3>
+      <div class="grp"><span class="tag">▲</span><b>일봉 정배열</b> (+2.0점) — MA5 &gt; MA20 &gt; MA60 &gt; MA120</div>
+      <div class="grp"><span class="tag r">▽</span><b>일봉 역배열</b> (-3.0점) — 약세 추세</div>
+      <div class="grp"><span class="tag">▲M</span><b>월봉 정배열</b> (+1.5점) — 장기 강세, 단기 노이즈 무시 가능</div>
+      <div class="grp"><span class="tag r">▽M</span><b>월봉 역배열</b> (-2.5점)</div>
+      <div class="grp"><span class="tag">★</span><b>골든크로스</b> (+2.0점) / <span class="tag r">X</span><b>데드크로스</b> (-2.0점) — 5일 내 MA20·60 교차</div>
+      <div class="grp"><span class="tag">M↑</span><b>MACD 골든크로스</b> (+2.0점) — 3일 내 MACD가 시그널선 상향 돌파</div>
+      <div class="grp"><span class="tag r">M↓</span><b>MACD 데드크로스</b> (-2.0점)</div>
+      <div class="grp"><span class="tag">M+</span><b>MACD 모멘텀↑</b> (+1.0점) — 히스토그램 3일 연속 증가</div>
+      <div class="grp"><span class="tag r">M-</span><b>MACD 모멘텀↓</b> (-1.0점)</div>
+      <div class="grp"><span class="tag">M0+</span><b>MACD 0선 위</b> (+0.5점) / <span class="tag r">M0-</span><b>0선 아래</b> (-0.5점)</div>
+      <div class="grp"><span class="tag amb">▶S</span><b>섹터 선도</b> (+1.5점) — 20일 수익률이 벤치마크보다 +5%p 이상</div>
+      <div class="grp"><span class="tag r">◀S</span><b>섹터 부진</b> (-1.0점) — 벤치마크 대비 -5%p 이하</div>
+      <div class="grp"><span class="tag">E✓4</span><b>4분기 연속 비트</b> (+1.5점) — EPS 추정치 4회 연속 상회</div>
+      <div class="grp"><span class="tag">E✓</span><b>최근 비트</b> (+0.5점) / <span class="tag r">E✗</span><b>3분기 연속 미스</b> (-1.0점)</div>
+      <div class="grp"><span class="tag">C↑</span><b>콜 우세</b> (+2.0점) — P/C 비율 ≤ 0.4 (콜이 풋의 2.5배+)</div>
+      <div class="grp"><span class="tag r">P↑</span><b>풋 우세</b> (-1.5점) — P/C ≥ 1.5</div>
+      <div class="grp"><span class="tag amb">IV↑</span><b>IV 높음</b> (-0.5점) — ATM IV ≥ 60%. 이벤트 임박, 양방향 위험</div>
+      <div class="grp"><span class="tag">IV↓</span><b>IV 낮음</b> — ATM IV ≤ 20%. 변동성 짓눌림, 폭발 직전 후보</div>
+      <div class="grp"><span class="tag">OI↑</span><b>콜 OI 급증</b> (+1.5점) — 콜 미결제약정 전일 대비 +20% (신규 진입)</div>
+      <div class="grp"><span class="tag">C&gt;P</span><b>콜 IV 프리미엄</b> (+1.5점) — 콜 IV ≥ 풋 IV × 1.05. 정상은 반대(강세 신호)</div>
+      <div class="grp"><span class="tag amb">SI↑</span><b>공매도 15%+</b> — 잔량/유통주식 ≥ 15%, 숏스퀴즈 후보 풀</div>
+      <div class="grp"><span class="tag">A↑</span><b>애널 상향</b> (+1.0점) — 30일 내 업그레이드 ≥ 2건 또는 PT상향 ≥ 5건</div>
+      <div class="grp"><span class="tag r">Vx</span><b>변동성 확장</b> (-0.5점) — HV30이 상위 20%, 이미 폭발 중 → 추격 위험</div>
+
+      <h3>📐 옵션 데이터 — P/C와 IV 핵심</h3>
+      <h4>P/C 비율 (Put/Call Ratio)</h4>
+      <ul>
+        <li><b>P/C ≤ 0.4</b> = 풋 1 : 콜 2.5+ → 콜 우세 (강세)</li>
+        <li><b>P/C 0.5~1.0</b> = 중립~약강세 (시장 평균)</li>
+        <li><b>P/C ≥ 1.5</b> = 풋 우세 (헷지/약세)</li>
+      </ul>
+      <h4>IV (Implied Volatility, 내재변동성)</h4>
+      <ul>
+        <li>옵션 시장이 예상하는 미래 변동성, 연환산 %</li>
+        <li><b>≤ 20%</b> = 안정 (SPY/QQQ 평소)</li>
+        <li><b>20~40%</b> = 일반 (MSFT/AAPL 평소)</li>
+        <li><b>40~80%</b> = 변동성 큰 종목 (TSLA/NVDA)</li>
+        <li><b>80%+</b> = 이벤트 임박 또는 위기 (실적·FDA·바이오)</li>
+      </ul>
+
+      <h3>🎯 실전 조합 추천</h3>
+      <div class="combo">
+        <strong>📈 내일 폭등 후보 발굴</strong>
+        셋업: <code>정배눌림</code> + <code>변동성압축</code> + <code>이상콜거래</code><br>
+        거래대금: <code>$10M+</code>
+      </div>
+      <div class="combo">
+        <strong>💎 장기 매수 진입</strong>
+        셋업: <code>월정배+장기근접</code><br>
+        추세: <code>콜IV프리미엄</code> + <code>애널상향</code><br>
+        거래대금: <code>$100M+</code>
+      </div>
+      <div class="combo">
+        <strong>🚀 숏스퀴즈 도박</strong>
+        셋업: <code>숏스퀴즈셋업</code><br>
+        추세: <code>콜우세</code> + <code>공매도15%+</code><br>
+        거래대금: <code>$10M+</code>
+      </div>
+      <div class="combo">
+        <strong>🛡 안전 매수 (펀더 강한 우량주)</strong>
+        셋업: <code>내부자대량매수</code><br>
+        추세: <code>일봉정배열</code> + <code>실적연속비트</code><br>
+        거래대금: <code>$100M+</code>
+      </div>
+      <div class="combo">
+        <strong>🔄 단기 반등 (역추세 트레이딩)</strong>
+        알림: <code>과매도</code> + <code>큰폭락</code><br>
+        추세: <code>MACD모멘텀↑</code><br>
+        거래대금: <code>$10M+</code>
+      </div>
+
+      <h3>💡 차트 헤더 필드 의미</h3>
+      <table>
+        <tr><th>필드</th><th>의미</th><th>해석</th></tr>
+        <tr><td><code>UND</code></td><td>본주 일일 변동</td><td>2X의 절반쯤 움직여야 정상</td></tr>
+        <tr><td><code>5D</code></td><td>5일 누적 수익률</td><td>단기 흐름 파악</td></tr>
+        <tr><td><code>RSI</code></td><td>14일 상대강도</td><td>&lt;30 과매도, &gt;70 과매수</td></tr>
+        <tr><td><code>VOL</code></td><td>거래량 / 20일 평균</td><td>≥2× = 평소의 2배</td></tr>
+        <tr><td><code>DRAG6M</code></td><td>6개월 변동성 드래그</td><td>레버리지 손실 누적량</td></tr>
+        <tr><td><code>DV20</code></td><td>20일 평균 거래대금</td><td>유동성 지표</td></tr>
+        <tr><td><code>RS20</code></td><td>20일 섹터 상대강도</td><td>+ = 섹터 평균보다 강함</td></tr>
+        <tr><td><code>EPS±</code></td><td>최근 4분기 평균 서프라이즈</td><td>+ = 실적 상회 일관성</td></tr>
+        <tr><td><code>P/C</code></td><td>Put/Call 거래량 비율</td><td>≤0.4 강세, ≥1.5 약세</td></tr>
+        <tr><td><code>IV</code></td><td>ATM 내재변동성</td><td>옵션 시장 변동 예상치</td></tr>
+        <tr><td><code>HV%</code></td><td>HV30 percentile</td><td>낮을수록 변동성 압축 = 폭발 직전 후보</td></tr>
+        <tr><td><code>INS</code></td><td>90일 내부자 순매수 금액</td><td>$1M+ 강세, 음수 = 임원 매도</td></tr>
+        <tr><td><code>SI</code></td><td>공매도 비중</td><td>15%+ = 숏스퀴즈 후보 풀</td></tr>
+        <tr><td><code>A↑</code></td><td>30일 업그레이드/PT상향</td><td>x/y = 등급상향/목표가상향 횟수</td></tr>
+        <tr><td><code>EARN</code></td><td>다음 실적 발표일</td><td>D-N = N일 후, D+N = N일 전 발표</td></tr>
+      </table>
+
+      <h3>📌 신호 강도 등급</h3>
+      <ul>
+        <li><span class="pos">★★★★★ 최강</span> — 내부자 대량매수 + 정배열 + 거래대금 $100M+ (TTD 같은 케이스)</li>
+        <li><span class="pos">★★★★ 강함</span> — 월정배+장기근접 + 콜우세 + 변동성압축</li>
+        <li><span class="pos">★★★ 보통</span> — 정배눌림 + MA지지 + 거래량+</li>
+        <li><span class="amb">★★ 약함</span> — 단일 신호만 (오버솔드, 52신고 등)</li>
+      </ul>
+
+      <h3>⚠️ 주의사항</h3>
+      <ul>
+        <li>모든 데이터는 <b>전일 미국장 마감 기준</b> (EOD). 실시간 아님</li>
+        <li>옵션 데이터는 <b>가장 가까운 만기(front-month)</b> 만 봄</li>
+        <li>2X ETF는 <b>일일 복리 구조</b>로 장기 보유 시 변동성 드래그 발생</li>
+        <li>추천 점수 ≥ 10점이라도 진입 타이밍은 별도 판단 필요</li>
+        <li>거래대금 $10M 미만 종목은 슬리피지·청산 위험 있음</li>
+      </ul>
+
+    </div>
+  </div>
+</div>
 <button class="mobile-back" id="mobile-back" type="button">◀ 리스트</button>
 
 <main class="bbg">
@@ -515,7 +773,7 @@
         const on = sel.has(c.k);
         return `<button data-group="${g.key}" data-chip="${c.k}" class="chip ${on?'on':''} ${n===0&&!on?'zero':''}">${c.label}<span class="n">${n}</span></button>`;
       }).join("");
-      return `<div class="filter-group"><span class="gl">${g.label}</span><div class="chips">${chips}</div></div>`;
+      return `<div class="filter-group" data-key="${g.key}"><span class="gl">${g.label}</span><div class="chips">${chips}</div></div>`;
     }).join("");
     host.querySelectorAll("button.chip").forEach(b => b.addEventListener("click", () => {
       const g = b.dataset.group, k = b.dataset.chip;
@@ -737,6 +995,11 @@
     if (tag === "INPUT" || tag === "TEXTAREA") return;
 
     if (e.key === "Escape") {
+      const helpOpen = document.getElementById("help-modal").classList.contains("open");
+      if (helpOpen) {
+        e.preventDefault(); closeHelp();
+        return;
+      }
       if (isMobile() && document.body.classList.contains("chart-open")) {
         e.preventDefault(); closeChart();
       }
@@ -778,6 +1041,21 @@
     state.filters = emptyFilters(); state.search = "";
     document.getElementById("search").value = "";
     saveState(); renderFilters(); applyAndRender();
+  });
+
+  // Help modal — open/close
+  function openHelp() {
+    document.getElementById("help-modal").classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeHelp() {
+    document.getElementById("help-modal").classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  document.getElementById("help-btn").addEventListener("click", openHelp);
+  document.getElementById("help-close").addEventListener("click", closeHelp);
+  document.getElementById("help-modal").addEventListener("click", (e) => {
+    if (e.target.id === "help-modal") closeHelp();
   });
 
   function clock() {
