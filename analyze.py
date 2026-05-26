@@ -751,8 +751,12 @@ def main() -> int:
     pairs: list[dict] = []
     skipped: list[str] = []
     delisted: list[dict] = []
+    seen_tickers: set[str] = set()
     for e in payload["etfs"]:
         t2 = (e.get("ticker_2x") or "").strip().upper()
+        if t2 in seen_tickers:
+            continue  # dedupe — scrape_all가 중복 추가하는 경우 방어
+        seen_tickers.add(t2)
         if t2 in stale_set:
             ld = last_dates.get(t2)
             delisted.append({
