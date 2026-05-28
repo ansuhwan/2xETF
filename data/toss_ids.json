@@ -1930,5 +1930,30 @@
     "code": "US20060622006",
     "name_kr": "SPDR 미국 소매기업 ETF",
     "market": "AMX"
-  }
+  },
+  "CBRX": null,
+  "MCHP": {
+    "code": "US19930326002",
+    "name_kr": "MCHP",
+    "market": "NSQ"
+  },
+  "MCHU": null,
+  "NXPI": {
+    "code": "US20100806001",
+    "name_kr": "NXPI",
+    "market": "NSQ"
+  },
+  "NXPX": null,
+  "ON": {
+    "code": "US20150407001",
+    "name_kr": "ON",
+    "market": "NSQ"
+  },
+  "ONX": null,
+  "OSS": {
+    "code": "US20180131002",
+    "name_kr": "OSS",
+    "market": "NSQ"
+  },
+  "OSSL": null
 }
