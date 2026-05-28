@@ -373,6 +373,7 @@
         <tr><td><code style="color:var(--green)">★Sq²</code></td><td>숏스퀴즈셋업</td><td>공매도 ≥ 20% + (일봉 정배열 또는 콜우세)</td><td>GME 같은 극단 폭등 후보 (도박성)</td><td class="pos">+2.5</td></tr>
         <tr><td><code style="color:var(--green)">I++</code></td><td>내부자 대량매수</td><td>90일 임원·이사 순매수 ≥ $1M (10%+ 대주주 제외)</td><td>TTD CEO $148M처럼 가장 강한 펀더 신호</td><td class="pos">+2.5</td></tr>
         <tr><td><code style="color:var(--amber)">I+</code></td><td>내부자 매수</td><td>90일 순매수 양수 ($0~$1M)</td><td>금액 직접 확인 필요 (BMNR $15K 같은 노이즈 가능)</td><td class="pos">+1.0</td></tr>
+        <tr><td><code style="color:var(--green)">🔪⬆</code></td><td>폭락 코일링</td><td>6m 본주 -40% 이상 + 5일 2X -20% 이상 + 본주 MA20 위</td><td><b>백테스트 최강 시그널.</b> 20일 내 50%+ 도달 확률 64.7% (n=17). 1년 약 43회 발생, 시장 조정 시 집중</td><td class="pos">+5.0</td></tr>
       </table>
 
       <h3>📈 추세 (Trend)</h3>
@@ -736,6 +737,7 @@
     insider_buying:          { g: "I+",  cls: "g",   t: "내부자 순매수 (최근 90일)" },
     insider_buying_strong:   { g: "I++", cls: "g",   t: "내부자 $1M+ 대량 매수 (가장 강한 펀더멘털 신호)" },
     analyst_upgrades:        { g: "A↑",  cls: "g",   t: "애널리스트 등급/목표가 상향 (최근 30일)" },
+    falling_knife_setup:     { g: "🔪⬆", cls: "g",   t: "폭락 코일링: 6m -40%+ + 5일 -20%+ + MA20 위. 백테스트 결과 20일 내 50%+ 도달 확률 64.7% (n=17)" },
   };
   const FILTER_GROUPS = [
     { key: "status", label: "상태", chips: [
@@ -756,6 +758,7 @@
       { k:"squeeze_setup", label:"스퀴즈셋업" }, { k:"unusual_call_activity", label:"이상콜거래" },
       { k:"hv_compressed", label:"변동성압축" }, { k:"short_squeeze_setup", label:"숏스퀴즈셋업" },
       { k:"insider_buying_strong", label:"내부자대량매수" }, { k:"insider_buying", label:"내부자매수" },
+      { k:"falling_knife_setup", label:"🔪 폭락코일링" },
     ]},
     { key: "trend", label: "추세", chips: [
       { k:"ma_bull_align", label:"일봉정배" }, { k:"ma_bear_align", label:"일봉역배" },
