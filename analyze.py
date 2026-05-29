@@ -543,7 +543,15 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
                     v2_3d_ratio = float(vol2.iloc[-3:].mean()) / avg_v2_20
                 v2_5d_ratio = float(vol2.iloc[-5:].mean()) / avg_v2_20
 
-        # Trigger A: Silent FK (가장 강력)
+        # Trigger S: Silent FK Strict (가장 극단, 가장 높은 확률)
+        # Silent FK + 6m -50% 깊은 폭락 → 30일 30%+ 확률 87.5% (n=8, CI [53%, 98%])
+        if (dd_6m_und is not None and dd_6m_und <= -50
+            and ret_5d_2x_t <= -20
+            and last_u > ma20_und_t
+            and vu_ratio_today is not None and vu_ratio_today < 1.5):
+            ma_sigs.append("trigger_s_extreme_fk")
+
+        # Trigger A: Silent FK (가장 강력 — 표본 큼)
         if (dd_6m_und is not None and dd_6m_und <= -40
             and ret_5d_2x_t <= -20
             and last_u > ma20_und_t
@@ -617,15 +625,17 @@ def recommendation_score(p: dict) -> tuple[float, list[str]]:
     alerts = p.get("alerts") or []
 
     # Premium setups (long-term + tactical entry)
-    # 백테스트 검증: 트리거 A/B/C 가 최고 강도 시그널
-    if "trigger_a_silent_fk" in sigs:
+    # 백테스트 검증: 트리거 S/A/B/C 가 최고 강도 시그널
+    if "trigger_s_extreme_fk" in sigs:
+        score += 7.0; reasons.append("트리거S(극한폭락)")  # 30일 87.5% (n=8)
+    if "trigger_a_silent_fk" in sigs and "trigger_s_extreme_fk" not in sigs:
         score += 6.0; reasons.append("트리거A(폭락코일링)")  # 30일 82% (n=11)
     if "trigger_b_3d_momentum" in sigs:
         score += 4.5; reasons.append("트리거B(3일모멘텀)")    # 30일 60% (n=200)
     if "trigger_c_runner_quiet" in sigs:
         score += 4.0; reasons.append("트리거C(조용한모멘텀)")  # 30일 55% (n=583)
-    if "falling_knife_setup" in sigs and "trigger_a_silent_fk" not in sigs:
-        score += 5.0; reasons.append("폭락코일링")  # 트리거A 미발동 시만
+    if "falling_knife_setup" in sigs and "trigger_a_silent_fk" not in sigs and "trigger_s_extreme_fk" not in sigs:
+        score += 5.0; reasons.append("폭락코일링")  # 트리거 S/A 미발동 시만
     if "monthly_bull_near_long" in sigs:
         score += 3.5; reasons.append("월정배+장기근접")
     if "bull_align_pullback" in sigs:
