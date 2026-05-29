@@ -620,17 +620,146 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
             and cu.size >= 2 and close_und.size if 'close_und' in dir() else False):
             pass
         # Recovery 패턴: 어제 종가 > 어제 시가 + 오늘 종가 > 오늘 시가
-        if (dd_3m_und is not None and -30 <= dd_3m_und <= -20
-            and last_u > ma20_und_t and und and has_ticker(prices, und)):
+        open_u_series = None
+        if dd_3m_und is not None and und and has_ticker(prices, und):
             try:
-                open_u = prices[(und, "Open")].dropna()
-                if open_u.size >= 2:
-                    yest_green = float(cu.iloc[-2]) > float(open_u.iloc[-2])
-                    today_green = float(cu.iloc[-1]) > float(open_u.iloc[-1])
+                open_u_series = prices[(und, "Open")].dropna()
+                if open_u_series.size >= 2 and -30 <= dd_3m_und <= -20 and last_u > ma20_und_t:
+                    yest_green = float(cu.iloc[-2]) > float(open_u_series.iloc[-2])
+                    today_green = float(cu.iloc[-1]) > float(open_u_series.iloc[-1])
                     if yest_green and today_green:
                         ma_sigs.append("trigger_f_pullback_recovery")
             except Exception:
+                open_u_series = None
+
+        # === 신규 트리거 G~P (3년 백테스트 검증) ===
+        # Common context: RSI, MACD, 6m/4m/2m drawdowns, MA60 reclaim
+        rsi_und = None
+        if cu.size >= 15:
+            delta_und = cu.diff().iloc[-14:].values
+            gains_u = np.where(delta_und > 0, delta_und, 0).mean()
+            losses_u = np.where(delta_und < 0, -delta_und, 0).mean()
+            rsi_und = 100 - 100 / (1 + gains_u / (losses_u + 1e-9))
+
+        # 6m / 4m / 2m drawdowns on underlying
+        dd_6m_real = None
+        if cu.size >= 126:
+            dd_6m_real = (float(cu.iloc[-1]) / float(cu.iloc[-126:].max()) - 1) * 100
+        dd_4m = None
+        if cu.size >= 84:
+            dd_4m = (float(cu.iloc[-1]) / float(cu.iloc[-84:].max()) - 1) * 100
+        dd_2m = None
+        if cu.size >= 42:
+            dd_2m = (float(cu.iloc[-1]) / float(cu.iloc[-42:].max()) - 1) * 100
+
+        # MA60 reclaim (yesterday below, today above)
+        ma60_reclaim = False
+        if cu.size >= 60:
+            ma60_und = float(cu.iloc[-60:].mean())
+            if cu.size >= 6:
+                recently_below = any(float(cu.iloc[-k]) < ma60_und for k in range(1, 6))
+                ma60_reclaim = recently_below and last_u > ma60_und
+
+        # MACD bull cross (last 3 days)
+        macd_bull_cross_recent = False
+        if cu.size >= 35:
+            cu_series_m = pd.Series(cu.values)
+            ema12_m = cu_series_m.ewm(span=12, adjust=False).mean()
+            ema26_m = cu_series_m.ewm(span=26, adjust=False).mean()
+            macd_m = ema12_m - ema26_m
+            sig_m = macd_m.ewm(span=9, adjust=False).mean()
+            for k in range(-3, 0):
+                if k-1 >= -len(macd_m) and macd_m.iloc[k-1] <= sig_m.iloc[k-1] and macd_m.iloc[k] > sig_m.iloc[k]:
+                    macd_bull_cross_recent = True; break
+
+        # Days since 6m high
+        days_since_high = 126
+        if cu.size >= 126:
+            high_6m = float(cu.iloc[-126:].max())
+            for k in range(126):
+                if k < cu.size and float(cu.iloc[-1-k]) >= high_6m * 0.99:
+                    days_since_high = k; break
+
+        # Bullish engulfing (today vs yesterday)
+        bullish_engulfing = False
+        if open_u_series is not None and open_u_series.size >= 2:
+            try:
+                yest_c = float(cu.iloc[-2]); yest_o = float(open_u_series.iloc[-2])
+                today_c = float(cu.iloc[-1]); today_o = float(open_u_series.iloc[-1])
+                bullish_engulfing = (
+                    yest_c < yest_o and today_c > today_o and
+                    today_o <= yest_c and today_c >= yest_o
+                )
+            except Exception:
                 pass
+
+        # 5d return on 2X (for K, L)
+        ret_3d_2x_now = None
+        if close2.size >= 4:
+            ret_3d_2x_now = (float(close2.iloc[-1]) / float(close2.iloc[-4]) - 1) * 100
+
+        # Trigger G — RSI Bottom (76%, n=25)
+        if (rsi_und is not None and 30 <= rsi_und <= 45
+            and dd_3m_und is not None and -30 <= dd_3m_und <= -20
+            and last_u > ma20_und_t):
+            ma_sigs.append("trigger_g_rsi_bottom")
+
+        # Trigger H — Failed Breakdown (55%, n=146)
+        if (ma60_reclaim and dd_3m_und is not None and dd_3m_und <= -15
+            and open_u_series is not None and open_u_series.size >= 1):
+            try:
+                today_o = float(open_u_series.iloc[-1])
+                if float(cu.iloc[-1]) > today_o:
+                    ma_sigs.append("trigger_h_failed_breakdown")
+            except Exception:
+                pass
+
+        # Trigger I — MACD Bottom (49%, n=238)
+        if (macd_bull_cross_recent
+            and dd_3m_und is not None and -30 <= dd_3m_und <= -20):
+            ma_sigs.append("trigger_i_macd_bottom")
+
+        # Trigger J — Deep RSI Pullback (45%, n=666) — 가장 큰 표본
+        if (rsi_und is not None and 30 <= rsi_und <= 45
+            and dd_6m_real is not None and -40 <= dd_6m_real <= -25
+            and vu_ratio_today is not None and vu_ratio_today < 1.5):
+            ma_sigs.append("trigger_j_deep_rsi")
+
+        # Trigger K — Soft Recovery (45%, n=289)
+        if (ret_3d_2x_now is not None and 3 <= ret_3d_2x_now <= 10
+            and dd_3m_und is not None and -30 <= dd_3m_und <= -15
+            and last_u > ma20_und_t):
+            ma_sigs.append("trigger_k_soft_recovery")
+
+        # Trigger L — Steady Recovery (44%, n=248)
+        if (5 <= ret_5d_2x_t <= 15
+            and dd_3m_und is not None and -30 <= dd_3m_und <= -20
+            and v2_5d_ratio is not None and v2_5d_ratio < 1.5):
+            ma_sigs.append("trigger_l_steady_recovery")
+
+        # Trigger M — 2-Month Pullback (59%, n=34)
+        if (dd_2m is not None and -25 <= dd_2m <= -15
+            and bull_align_und
+            and vu_ratio_today is not None and vu_ratio_today < 1.5):
+            ma_sigs.append("trigger_m_2m_pullback")
+
+        # Trigger N — Stale Drawdown (47%, n=294)
+        if (40 <= days_since_high <= 80
+            and dd_6m_real is not None and -35 <= dd_6m_real <= -20
+            and last_u > ma20_und_t):
+            ma_sigs.append("trigger_n_stale_drawdown")
+
+        # Trigger O — 4-Month Bottom (42.5%, n=492)
+        if (dd_4m is not None and -30 <= dd_4m <= -20
+            and last_u > ma20_und_t
+            and vu_ratio_today is not None and vu_ratio_today < 1.5):
+            ma_sigs.append("trigger_o_4m_bottom")
+
+        # Trigger P — Bullish Engulfing (59%, n=22)
+        if (bullish_engulfing
+            and dd_3m_und is not None and -30 <= dd_3m_und <= -20
+            and last_u > ma20_und_t):
+            ma_sigs.append("trigger_p_engulfing")
 
     proxies: list[str] = []
     if rsi_proxy:
@@ -703,12 +832,70 @@ def recommendation_score(p: dict) -> tuple[float, list[str]]:
         score += 4.0; reasons.append("트리거E(저점표준)")   # 30일 56% (n=353)
     if "trigger_f_pullback_recovery" in sigs:
         score += 3.5; reasons.append("트리거F(저점회복)")   # 30일 51% (n=229)
+    if "trigger_g_rsi_bottom" in sigs:
+        score += 5.0; reasons.append("트리거G(RSI저점)")    # 30일 76% (n=25) — 콤보 핵심
+    if "trigger_h_failed_breakdown" in sigs:
+        score += 4.0; reasons.append("트리거H(지지사수)")    # 30일 55% (n=146)
+    if "trigger_i_macd_bottom" in sigs:
+        score += 3.5; reasons.append("트리거I(MACD저점)")   # 30일 49% (n=238)
+    if "trigger_j_deep_rsi" in sigs:
+        score += 3.5; reasons.append("트리거J(딥RSI)")      # 30일 45% (n=666) — 큰 표본
+    if "trigger_k_soft_recovery" in sigs:
+        score += 3.5; reasons.append("트리거K(소프트회복)")  # 30일 45% (n=289)
+    if "trigger_l_steady_recovery" in sigs:
+        score += 3.5; reasons.append("트리거L(안정회복)")    # 30일 44% (n=248)
+    if "trigger_m_2m_pullback" in sigs:
+        score += 4.5; reasons.append("트리거M(2개월눌림)")   # 30일 59% (n=34)
+    if "trigger_n_stale_drawdown" in sigs:
+        score += 3.5; reasons.append("트리거N(스테일DD)")    # 30일 47% (n=294)
+    if "trigger_o_4m_bottom" in sigs:
+        score += 3.5; reasons.append("트리거O(4개월저점)")   # 30일 43% (n=492)
+    if "trigger_p_engulfing" in sigs:
+        score += 4.0; reasons.append("트리거P(불리시엔걸핑)") # 30일 59% (n=22)
+
+    # === 콤보 보너스 (다중 트리거 동시 발동) ===
+    # E+G 콤보 (85.7%, n=14)
+    if "trigger_e_pullback_std" in sigs and "trigger_g_rsi_bottom" in sigs:
+        score += 2.5; reasons.append("콤보E+G(86%)")
+    # I+O 콤보 (67.8%, n=59) — 가장 실용적
+    if "trigger_i_macd_bottom" in sigs and "trigger_o_4m_bottom" in sigs:
+        score += 2.0; reasons.append("콤보I+O(68%)")
+    # E+I 콤보 (68.4%, n=38)
+    if "trigger_e_pullback_std" in sigs and "trigger_i_macd_bottom" in sigs:
+        score += 2.0; reasons.append("콤보E+I(68%)")
+    # G+I 콤보 (69.2%, n=13)
+    if "trigger_g_rsi_bottom" in sigs and "trigger_i_macd_bottom" in sigs:
+        score += 1.5; reasons.append("콤보G+I(69%)")
+    # E+N 콤보 (56.9%, n=116) — 큰 표본
+    if "trigger_e_pullback_std" in sigs and "trigger_n_stale_drawdown" in sigs:
+        score += 1.5; reasons.append("콤보E+N(57%)")
+    # I+N 콤보 (67.6%, n=34)
+    if "trigger_i_macd_bottom" in sigs and "trigger_n_stale_drawdown" in sigs:
+        score += 1.5; reasons.append("콤보I+N(68%)")
+    # J+N 콤보 (78.6%, n=14)
+    if "trigger_j_deep_rsi" in sigs and "trigger_n_stale_drawdown" in sigs:
+        score += 2.0; reasons.append("콤보J+N(79%)")
+    # G+O, G+N, G+J 콤보 (75%+)
+    if "trigger_g_rsi_bottom" in sigs:
+        if "trigger_o_4m_bottom" in sigs:
+            score += 1.5; reasons.append("콤보G+O(75%)")
+        if "trigger_n_stale_drawdown" in sigs:
+            score += 1.5; reasons.append("콤보G+N(76%)")
+        if "trigger_j_deep_rsi" in sigs:
+            score += 1.5; reasons.append("콤보G+J(75%)")
+
+    # 3개 이상 트리거 동시 발동 시 보너스
+    trigger_count = sum(1 for k in sigs if k.startswith("trigger_"))
+    if trigger_count >= 4:
+        score += 3.0; reasons.append(f"트리거{trigger_count}개동시")
+    elif trigger_count >= 3:
+        score += 2.0; reasons.append(f"트리거{trigger_count}개동시")
     if "falling_knife_setup" in sigs and "trigger_a_silent_fk" not in sigs and "trigger_s_extreme_fk" not in sigs:
         score += 5.0; reasons.append("폭락코일링")  # 트리거 S/A 미발동 시만
     if "monthly_bull_near_long" in sigs:
         score += 3.5; reasons.append("월정배+장기근접")
     if "bull_align_pullback" in sigs:
-        score += 3.0; reasons.append("정배눌림")
+        score += 0.5; reasons.append("정배눌림")  # 실측 2.55% (base 5.35%의 절반) — 비효율
 
     # Trend confirmation
     if "monthly_bull_align" in sigs and "monthly_bull_near_long" not in sigs:
