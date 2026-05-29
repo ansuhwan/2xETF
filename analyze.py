@@ -155,18 +155,31 @@ def r(x, n=2):
 
 
 def has_ticker(prices: pd.DataFrame, t: str) -> bool:
-    return t in prices.columns.get_level_values(0)
+    """Check if ticker has the essential Close column.
+
+    yfinance occasionally returns partial data (no Close field) for delisted
+    or thinly-traded tickers. Just checking level-0 isn't enough.
+    """
+    if t not in prices.columns.get_level_values(0):
+        return False
+    return (t, "Close") in prices.columns
 
 
 def close_of(prices: pd.DataFrame, t: str) -> pd.Series:
+    if (t, "Close") not in prices.columns:
+        return pd.Series(dtype=float)
     return prices[(t, "Close")].dropna()
 
 
 def volume_of(prices: pd.DataFrame, t: str) -> pd.Series:
+    if (t, "Volume") not in prices.columns:
+        return pd.Series(dtype=float)
     return prices[(t, "Volume")].dropna()
 
 
 def low_of(prices: pd.DataFrame, t: str) -> pd.Series:
+    if (t, "Low") not in prices.columns:
+        return pd.Series(dtype=float)
     return prices[(t, "Low")].dropna()
 
 
