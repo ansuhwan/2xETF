@@ -666,7 +666,11 @@
     "name_kr": "",
     "market": "NYS"
   },
-  "IBX": null,
+  "IBX": {
+    "code": "AMX2603024005",
+    "name_kr": "TRADR 2배 롱 IBM 데일리 ETF",
+    "market": "AMX"
+  },
   "INTC": {
     "code": "US19711013001",
     "name_kr": "INTC",
