@@ -1035,7 +1035,9 @@
       const chips = g.chips.map(c => {
         const n = countMatching(g.key, c.k);
         const on = sel.has(c.k);
-        return `<button data-group="${g.key}" data-chip="${c.k}" class="chip ${on?'on':''} ${n===0&&!on?'zero':''}">${c.label}<span class="n">${n}</span></button>`;
+        const tip = (SIGNAL_GLYPHS[c.k] && SIGNAL_GLYPHS[c.k].t) || "";
+        const titleAttr = tip ? ` title="${tip.replace(/"/g,"&quot;")}"` : "";
+        return `<button data-group="${g.key}" data-chip="${c.k}"${titleAttr} class="chip ${on?'on':''} ${n===0&&!on?'zero':''}">${c.label}<span class="n">${n}</span></button>`;
       }).join("");
       return `<div class="filter-group" data-key="${g.key}"><span class="gl">${g.label}</span><div class="chips">${chips}</div></div>`;
     }).join("");
