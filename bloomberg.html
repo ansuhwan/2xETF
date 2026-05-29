@@ -399,6 +399,18 @@
             <td>2X 5일 +30%↑ + 5일 평균 거래량 정상 (&lt;1.5x) + 본주 MA20 위</td>
             <td>거래량 없이 조용히 오르는 종목 = 폭등 직전 패턴. 매우 자주 발생</td>
             <td class="pos">54.9%</td><td>n=583</td><td class="pos">+4.0</td></tr>
+        <tr><td><code style="color:var(--green)">🅓</code></td><td><b>D · 저점 강세</b></td>
+            <td>본주 정배열 + 3개월 -15~25% 눌림 + MA20 위 + 거래량 정상</td>
+            <td><b>저점 매수 최강 시그널.</b> 강세 종목의 적당한 눌림 = 매수 기회. 추격 X, 저점 진입 ⭕</td>
+            <td class="pos">81.5%</td><td>n=27</td><td class="pos">+5.5</td></tr>
+        <tr><td><code style="color:var(--green)">🅔</code></td><td><b>E · 저점 표준</b></td>
+            <td>본주 3개월 -20~25% drawdown + MA20 위 + 거래량 정상</td>
+            <td><b>가장 자주 발생하는 저점 매수.</b> 정배열 조건 없어도 좋음. 자주 트리거 → 분산 매수 가능</td>
+            <td class="pos">55.5%</td><td>n=353</td><td class="pos">+4.0</td></tr>
+        <tr><td><code style="color:var(--green)">🅕</code></td><td><b>F · 저점 회복</b></td>
+            <td>본주 3개월 -20~30% + 어제·오늘 양봉 마감 + MA20 위</td>
+            <td>떨어졌다가 회복 시작한 종목 진입. 양봉 2일 연속 = 반등 시작 확인</td>
+            <td class="pos">50.7%</td><td>n=229</td><td class="pos">+3.5</td></tr>
       </table>
 
       <h3>📈 추세 (Trend)</h3>
@@ -767,6 +779,9 @@
     trigger_a_silent_fk:     { g: "🅐",  cls: "g",   t: "트리거 A — Silent FK: 6m -40% + 5일 -20% + 본주 MA20 위 + 본주 거래량 정상(<1.5x). 30일 내 30%+ 도달 확률 81.8% (n=11)" },
     trigger_b_3d_momentum:   { g: "🅑",  cls: "g",   t: "트리거 B — 3일 +30% + 거래량 증가: 2X 3일 +30%↑ + 3일 평균 거래량 ≥1.5x. 30일 30%+ 확률 60.0% (n=200)" },
     trigger_c_runner_quiet:  { g: "🅒",  cls: "g",   t: "트리거 C — Strong Runner Quiet: 2X 5일 +30%↑ + 5일 평균 거래량 정상(<1.5x) + 본주 MA20 위. 30일 30%+ 확률 54.9% (n=583)" },
+    trigger_d_pullback_pro:  { g: "🅓",  cls: "g",   t: "트리거 D — Pullback Pro: 본주 정배열 + 3개월 -15~25% 눌림 + MA20 위 + 거래량 정상. 30일 30%+ 확률 81.5% (n=27). 저점 매수 최강" },
+    trigger_e_pullback_std:  { g: "🅔",  cls: "g",   t: "트리거 E — Pullback Standard: 본주 3개월 -20~25% + MA20 위 + 거래량 정상. 30일 30%+ 확률 55.5% (n=353). 자주 발생하는 저점 매수" },
+    trigger_f_pullback_recovery: { g: "🅕", cls: "g", t: "트리거 F — Pullback Recovery: 본주 3개월 -20~30% + 어제·오늘 양봉 마감 + MA20 위. 30일 30%+ 확률 50.7% (n=229). 반등 시작 시점 진입" },
   };
   const FILTER_GROUPS = [
     { key: "status", label: "상태", chips: [
@@ -809,10 +824,13 @@
       { k:"Crypto", label:"크립토" },
     ]},
     { key: "trigger", label: "트리거", chips: [
-      { k:"trigger_s_extreme_fk",   label:"S · 극한 폭락 (88%)" },
-      { k:"trigger_a_silent_fk",    label:"A · 폭락 코일링 (82%)" },
-      { k:"trigger_b_3d_momentum",  label:"B · 3일 모멘텀 (60%)" },
-      { k:"trigger_c_runner_quiet", label:"C · 조용한 모멘텀 (55%)" },
+      { k:"trigger_s_extreme_fk",       label:"S · 극한 폭락 (88%)" },
+      { k:"trigger_a_silent_fk",        label:"A · 폭락 코일링 (82%)" },
+      { k:"trigger_d_pullback_pro",     label:"D · 저점 강세 (82%)" },
+      { k:"trigger_b_3d_momentum",      label:"B · 3일 모멘텀 (60%)" },
+      { k:"trigger_e_pullback_std",     label:"E · 저점 표준 (56%)" },
+      { k:"trigger_c_runner_quiet",     label:"C · 조용한 모멘텀 (55%)" },
+      { k:"trigger_f_pullback_recovery",label:"F · 저점 회복 (51%)" },
     ]},
   ];
 

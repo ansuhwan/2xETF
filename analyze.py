@@ -582,6 +582,56 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
             and last_u > ma20_und_t):
             ma_sigs.append("trigger_c_runner_quiet")
 
+        # === 저점 매수 트리거 D/E/F (3개월 drawdown 기반) ===
+        # 본주 3개월 drawdown 계산
+        dd_3m_und = None
+        if cu.size >= 63:
+            und_3m_high = float(cu.iloc[-63:].max())
+            if und_3m_high > 0:
+                dd_3m_und = (last_u / und_3m_high - 1) * 100
+
+        # 본주 정배열
+        bull_align_und = False
+        if cu.size >= 120:
+            ma5_und  = float(cu.iloc[-5:].mean())
+            ma60_und = float(cu.iloc[-60:].mean())
+            ma120_und= float(cu.iloc[-120:].mean())
+            bull_align_und = ma5_und > ma20_und_t > ma60_und > ma120_und
+
+        # Trigger D: Pullback Pro — 정배열 + 3m -15~25% + MA20 위 + 거래량 정상
+        # 30일 30%+ 도달 확률 81.5% (n=27, CI [63%, 92%])
+        if (bull_align_und
+            and dd_3m_und is not None and -25 <= dd_3m_und <= -15
+            and last_u > ma20_und_t
+            and vu_ratio_today is not None and vu_ratio_today < 1.5):
+            ma_sigs.append("trigger_d_pullback_pro")
+
+        # Trigger E: Pullback Standard — 3m -20~25% + MA20 위 + 거래량 정상
+        # 30일 30%+ 확률 55.5% (n=353, CI [50%, 61%]) — 큰 표본
+        if (dd_3m_und is not None and -25 <= dd_3m_und <= -20
+            and last_u > ma20_und_t
+            and vu_ratio_today is not None and vu_ratio_today < 1.5):
+            ma_sigs.append("trigger_e_pullback_std")
+
+        # Trigger F: Pullback Recovery — 3m -20~30% + 어제·오늘 양봉 + MA20 위
+        # 30일 30%+ 확률 50.7% (n=229, CI [44%, 57%])
+        if (dd_3m_und is not None and -30 <= dd_3m_und <= -20
+            and last_u > ma20_und_t
+            and cu.size >= 2 and close_und.size if 'close_und' in dir() else False):
+            pass
+        # Recovery 패턴: 어제 종가 > 어제 시가 + 오늘 종가 > 오늘 시가
+        if (dd_3m_und is not None and -30 <= dd_3m_und <= -20
+            and last_u > ma20_und_t and und and has_ticker(prices, und)):
+            try:
+                open_u = prices[(und, "Open")].dropna()
+                if open_u.size >= 2:
+                    yest_green = float(cu.iloc[-2]) > float(open_u.iloc[-2])
+                    today_green = float(cu.iloc[-1]) > float(open_u.iloc[-1])
+                    if yest_green and today_green:
+                        ma_sigs.append("trigger_f_pullback_recovery")
+            except Exception:
+                pass
+
     proxies: list[str] = []
     if rsi_proxy:
         proxies.append("rsi")
@@ -647,6 +697,12 @@ def recommendation_score(p: dict) -> tuple[float, list[str]]:
         score += 4.5; reasons.append("트리거B(3일모멘텀)")    # 30일 60% (n=200)
     if "trigger_c_runner_quiet" in sigs:
         score += 4.0; reasons.append("트리거C(조용한모멘텀)")  # 30일 55% (n=583)
+    if "trigger_d_pullback_pro" in sigs:
+        score += 5.5; reasons.append("트리거D(저점강세)")   # 30일 82% (n=27)
+    if "trigger_e_pullback_std" in sigs:
+        score += 4.0; reasons.append("트리거E(저점표준)")   # 30일 56% (n=353)
+    if "trigger_f_pullback_recovery" in sigs:
+        score += 3.5; reasons.append("트리거F(저점회복)")   # 30일 51% (n=229)
     if "falling_knife_setup" in sigs and "trigger_a_silent_fk" not in sigs and "trigger_s_extreme_fk" not in sigs:
         score += 5.0; reasons.append("폭락코일링")  # 트리거 S/A 미발동 시만
     if "monthly_bull_near_long" in sigs:

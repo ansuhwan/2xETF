@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29T19:47:51+09:00",
+  "updated_at": "2026-05-29T20:24:31+09:00",
   "summary": {
     "total_pairs": 199,
     "alerts_count": 21,
@@ -663,7 +663,8 @@
         "earnings_beats",
         "put_heavy",
         "iv_elevated",
-        "call_iv_premium"
+        "call_iv_premium",
+        "trigger_d_pullback_pro"
       ],
       "sectors": [
         "Semi"
@@ -691,8 +692,9 @@
       "beat_streak": 3,
       "miss_streak": 0,
       "avg_surprise_pct": 38.67,
-      "rec_score": 8.5,
+      "rec_score": 14.0,
       "rec_reasons": [
+        "트리거D(저점강세)",
         "정배눌림",
         "월정배",
         "일정배",
@@ -734,7 +736,8 @@
         "earnings_beats",
         "put_heavy",
         "iv_elevated",
-        "call_iv_premium"
+        "call_iv_premium",
+        "trigger_d_pullback_pro"
       ],
       "sectors": [
         "Semi"
@@ -762,8 +765,9 @@
       "beat_streak": 3,
       "miss_streak": 0,
       "avg_surprise_pct": 38.67,
-      "rec_score": 7.0,
+      "rec_score": 12.5,
       "rec_reasons": [
+        "트리거D(저점강세)",
         "정배눌림",
         "월정배",
         "일정배",
@@ -4785,7 +4789,9 @@
         "monthly_bull_align",
         "earnings_beat_streak",
         "call_heavy",
-        "monthly_bull_near_long"
+        "monthly_bull_near_long",
+        "trigger_e_pullback_std",
+        "trigger_f_pullback_recovery"
       ],
       "sectors": [],
       "near_52w_high": false,
@@ -4811,8 +4817,10 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 38.7,
-      "rec_score": 6.5,
+      "rec_score": 14.0,
       "rec_reasons": [
+        "트리거E(저점표준)",
+        "트리거F(저점회복)",
         "월정배+장기근접",
         "MA지지",
         "MACD골크",
