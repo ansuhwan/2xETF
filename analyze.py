@@ -503,6 +503,64 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
             if float(cu.iloc[-1]) > ma20_und:
                 ma_sigs.append("falling_knife_setup")
 
+    # === 트리거 A/B/C — 3년 백테스트로 검증된 매수 트리거 ===
+    # 트리거 A: Silent FK (조용한 폭락 코일링) — 30일 내 30%+ 확률 81.8% (n=11)
+    #   6m 본주 -40% + 5일 2X -20% + 본주 MA20 위 + 본주 거래량 평소 수준 (<1.5x)
+    # 트리거 B: 3일 +30% 거래량 증가 — 30일 30%+ 확률 60.0% (n=200)
+    #   2X 3일 +30%↑ + 3일 평균 거래량 ≥1.5배
+    # 트리거 C: Strong Runner Quiet — 30일 30%+ 확률 54.9% (n=583)
+    #   2X 5일 +30%↑ + 5일 평균 거래량 정상 (<1.5x) + 본주 MA20 위
+    if close2.size >= 6 and cu.size >= 20:
+        # 본주 거래량 비율 (당일 + 5일 평균 vs 20일 평균)
+        vol_und = None
+        try:
+            vol_und = prices[(und, "Volume")].dropna() if und and has_ticker(prices, und) else None
+        except Exception:
+            vol_und = None
+
+        ma20_und_t = float(cu.iloc[-20:].mean())
+        last_u = float(cu.iloc[-1])
+        last_2x = float(close2.iloc[-1])
+        ret_5d_2x_t = float((last_2x / close2.iloc[-6] - 1) * 100)
+        ret_3d_2x_t = float((last_2x / close2.iloc[-4] - 1) * 100) if close2.size >= 4 else None
+
+        # Underlying volume ratios
+        vu_ratio_today = None
+        vu_5d_ratio = None
+        if vol_und is not None and vol_und.size >= 20:
+            avg_vol20 = float(vol_und.iloc[-21:-1].mean())
+            if avg_vol20 > 0:
+                vu_ratio_today = float(vol_und.iloc[-1]) / avg_vol20
+                vu_5d_ratio = float(vol_und.iloc[-5:].mean()) / avg_vol20
+
+        # 2X volume ratios (for trigger B/C)
+        v2_3d_ratio = None
+        v2_5d_ratio = None
+        if vol2.size >= 20:
+            avg_v2_20 = float(vol2.iloc[-21:-1].mean())
+            if avg_v2_20 > 0:
+                if vol2.size >= 3:
+                    v2_3d_ratio = float(vol2.iloc[-3:].mean()) / avg_v2_20
+                v2_5d_ratio = float(vol2.iloc[-5:].mean()) / avg_v2_20
+
+        # Trigger A: Silent FK (가장 강력)
+        if (dd_6m_und is not None and dd_6m_und <= -40
+            and ret_5d_2x_t <= -20
+            and last_u > ma20_und_t
+            and vu_ratio_today is not None and vu_ratio_today < 1.5):
+            ma_sigs.append("trigger_a_silent_fk")
+
+        # Trigger B: 3일 +30% + 거래량 증가 (자주, 높은 확률)
+        if (ret_3d_2x_t is not None and ret_3d_2x_t >= 30
+            and v2_3d_ratio is not None and v2_3d_ratio >= 1.5):
+            ma_sigs.append("trigger_b_3d_momentum")
+
+        # Trigger C: Strong Runner Quiet (안정 모멘텀, 큰 표본)
+        if (ret_5d_2x_t >= 30
+            and v2_5d_ratio is not None and v2_5d_ratio < 1.5
+            and last_u > ma20_und_t):
+            ma_sigs.append("trigger_c_runner_quiet")
+
     proxies: list[str] = []
     if rsi_proxy:
         proxies.append("rsi")
@@ -559,9 +617,15 @@ def recommendation_score(p: dict) -> tuple[float, list[str]]:
     alerts = p.get("alerts") or []
 
     # Premium setups (long-term + tactical entry)
-    # 백테스트 검증: falling_knife_setup이 최고 강도 (20일 30%+ 70.6%, 50%+ 64.7%)
-    if "falling_knife_setup" in sigs:
-        score += 5.0; reasons.append("폭락코일링")
+    # 백테스트 검증: 트리거 A/B/C 가 최고 강도 시그널
+    if "trigger_a_silent_fk" in sigs:
+        score += 6.0; reasons.append("트리거A(폭락코일링)")  # 30일 82% (n=11)
+    if "trigger_b_3d_momentum" in sigs:
+        score += 4.5; reasons.append("트리거B(3일모멘텀)")    # 30일 60% (n=200)
+    if "trigger_c_runner_quiet" in sigs:
+        score += 4.0; reasons.append("트리거C(조용한모멘텀)")  # 30일 55% (n=583)
+    if "falling_knife_setup" in sigs and "trigger_a_silent_fk" not in sigs:
+        score += 5.0; reasons.append("폭락코일링")  # 트리거A 미발동 시만
     if "monthly_bull_near_long" in sigs:
         score += 3.5; reasons.append("월정배+장기근접")
     if "bull_align_pullback" in sigs:
