@@ -154,6 +154,28 @@ def r(x, n=2):
     return round(float(x), n)
 
 
+def spy_regime(prices: pd.DataFrame) -> str:
+    """SPY 기반 시장 국면 분류. 백테스트(backtest_v2.py)와 동일 정의."""
+    if "SPY" not in prices.columns.get_level_values(0):
+        return "unknown"
+    try:
+        spy = prices[("SPY", "Close")].dropna()
+    except Exception:
+        return "unknown"
+    if spy.size < 200:
+        return "unknown"
+    ma200 = float(spy.iloc[-200:].mean())
+    high_6m = float(spy.iloc[-126:].max())
+    last = float(spy.iloc[-1])
+    if high_6m <= 0:
+        return "unknown"
+    dd = (last / high_6m - 1) * 100
+    if dd <= -15: return "bear"
+    if dd <= -7:  return "correction"
+    if last > ma200 and dd > -5: return "bull"
+    return "transition"
+
+
 def has_ticker(prices: pd.DataFrame, t: str) -> bool:
     """Check if ticker has the essential Close column.
 
@@ -489,6 +511,45 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
         if upgrade_pos or pt_pos:
             ma_sigs.append("analyst_upgrades")
 
+        # === 성장성 + 밸류에이션 시그널 ===
+        rev_g  = f_info.get("revenue_growth_yoy")
+        eps_g  = f_info.get("earnings_growth_yoy")
+        opm    = f_info.get("operating_margins")
+        pm     = f_info.get("profit_margins")
+        fpe    = f_info.get("forward_pe")
+        tpe    = f_info.get("trailing_pe")
+        peg    = f_info.get("peg_ratio")
+        roe    = f_info.get("roe")
+
+        if rev_g is not None and rev_g >= 20:
+            ma_sigs.append("strong_revenue_growth")  # 매출 +20%↑ (NVO 같은 안정형 포섭)
+        elif rev_g is not None and rev_g <= -10:
+            ma_sigs.append("revenue_decline")
+
+        if eps_g is not None and eps_g >= 30:
+            ma_sigs.append("strong_eps_growth")  # EPS +30%↑
+
+        if opm is not None and opm >= 25:
+            ma_sigs.append("high_margins")  # 영업이익률 25%↑
+
+        if pm is not None and pm < 0:
+            ma_sigs.append("loss_making")  # 적자
+
+        # 저평가 성장주: PER 합리적 + 매출 두 자릿수 성장 + 흑자
+        pe_eff = fpe if fpe is not None and fpe > 0 else tpe
+        if (pe_eff is not None and 0 < pe_eff <= 18
+            and rev_g is not None and rev_g >= 15
+            and pm is not None and pm > 0):
+            ma_sigs.append("value_growth")
+
+        # PEG 1.5 이하 + EPS 성장 양수 = PEG 가치주
+        if peg is not None and 0 < peg <= 1.5 and eps_g is not None and eps_g > 0:
+            ma_sigs.append("peg_value")
+
+        # ROE 20%↑ + 흑자 = 우량
+        if roe is not None and roe >= 20 and pm is not None and pm > 0:
+            ma_sigs.append("high_roe")
+
     # Monthly bull alignment + daily price near long-term MA (MA60 or MA120)
     # = long-term uptrend in pullback to key support
     if monthly_sig == "monthly_bull_align" and cu.size >= 60:
@@ -761,6 +822,67 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
             and last_u > ma20_und_t):
             ma_sigs.append("trigger_p_engulfing")
 
+        # Trigger Q — Gap Hold Recovery (66.7%, n=15)
+        # 본주 갭 ≤-10% → 5거래일 ±7% 횡보 → 오늘 종가 갭종가 위
+        # 백테스트: 승률 66.7%, 평균 +13.75%, 타임아웃 0%
+        # 인덱싱: 갭일=iloc[-6] (5거래일 전), 횡보=iloc[-5:](오늘 포함)
+        if open_u_series is not None and open_u_series.size >= 7 and cu.size >= 7:
+            try:
+                gap_pos = -6  # 5거래일 전
+                prev_close = float(cu.iloc[gap_pos - 1])
+                gap_open = float(open_u_series.iloc[gap_pos])
+                gap_close = float(cu.iloc[gap_pos])
+                if prev_close > 0:
+                    gap_pct = (gap_open / prev_close - 1) * 100
+                    if gap_pct <= -10:
+                        holds = cu.iloc[gap_pos + 1:]  # 갭 다음날 ~ 오늘 (5일)
+                        if holds.size == 5:
+                            rng_max = (float(holds.max()) / gap_close - 1) * 100
+                            rng_min = (float(holds.min()) / gap_close - 1) * 100
+                            if (rng_max <= 7 and rng_min >= -7
+                                and last_u >= gap_close):
+                                ma_sigs.append("trigger_q_gap_hold_recovery")
+            except Exception:
+                pass
+
+        # Trigger R — Monthly MA60 Support + Daily Bear Align (48.6%, n=706)
+        # 일봉 역배(MA5<MA20<MA60<MA120) + 월봉 MA60 ±10% 영역 + 종가 위
+        # 백테스트: 승률 48.6%, 평균 +5.19% (baseline +0.51% 대비 +4.68%p)
+        # 의미: 단기 조정 깊지만 5년 추세선이 지지하는 가치 매수 진입점
+        if "ma_bear_align" in ma_sigs and monthly is not None and und in monthly.columns:
+            try:
+                mu = monthly[und].dropna()
+                if mu.size >= 60:
+                    ma60_monthly = float(mu.iloc[-60:].mean())
+                    if ma60_monthly > 0:
+                        proximity = abs(last_u / ma60_monthly - 1) * 100
+                        if proximity <= 10 and last_u >= ma60_monthly:
+                            ma_sigs.append("trigger_r_monthly_ma60_support")
+            except Exception:
+                pass
+
+        # Trigger T — Monthly Bull + (MA60 OR MA120) Support (47.4%, n=2732)
+        # 월봉 MA20>MA60>MA120 정배 + 최근 20일 일봉 저가 MA60 OR MA120 ±10% 영역 + 종가 위
+        # 백테스트: 승률 47.4%, 평균 +3.49% (baseline +0.51% 대비 +2.98%p)
+        # 의미: 월봉 장기 추세 유지 + 일봉 일시 조정 후 지지선 반등
+        if monthly is not None and und in monthly.columns:
+            try:
+                mu = monthly[und].dropna()
+                if mu.size >= 120:
+                    ma20m = float(mu.iloc[-20:].mean())
+                    ma60m = float(mu.iloc[-60:].mean())
+                    ma120m = float(mu.iloc[-120:].mean())
+                    if ma20m > ma60m > ma120m:
+                        lows_recent = low_of(prices, und).iloc[-20:]
+                        if lows_recent.size > 0:
+                            min_low = float(lows_recent.min())
+                            in_ma60 = (ma60m * 0.9 <= min_low <= ma60m * 1.05) and last_u >= ma60m
+                            in_ma120 = (ma120m * 0.9 <= min_low <= ma120m * 1.05) and last_u >= ma120m
+                            if in_ma60 or in_ma120:
+                                ma_sigs.append("trigger_t_monthly_bull_support")
+            except Exception:
+                pass
+
     proxies: list[str] = []
     if rsi_proxy:
         proxies.append("rsi")
@@ -768,6 +890,18 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
         proxies.append("bb")
     if five_day_proxy:
         proxies.append("five_day")
+
+    # 필터 보너스용 피처 (트리거 multiplier 계산에 사용)
+    ma20_dist_und = None
+    if und and has_ticker(prices, und) and cu.size >= 20:
+        _ma20 = float(cu.iloc[-20:].mean())
+        if _ma20 > 0:
+            ma20_dist_und = (float(cu.iloc[-1]) / _ma20 - 1) * 100
+    vol_2x_std = None
+    if close2.size >= 21:
+        _rets = close2.iloc[-21:].pct_change().dropna()
+        if _rets.size >= 15:
+            vol_2x_std = float(_rets.std() * 100)
 
     return {
         "ticker_2x": t2,
@@ -801,12 +935,66 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
         "call_oi_growth_pct": r(call_oi_growth_pct, 1) if call_oi_growth_pct is not None else None,
         "hv_pct_rank": r(hv_pct, 0) if hv_pct is not None else None,
         "dd_6m_und": r(dd_6m_und, 1) if dd_6m_und is not None else None,
+        "ma20_dist_und": r(ma20_dist_und, 2) if ma20_dist_und is not None else None,
+        "vol_2x_std": r(vol_2x_std, 2) if vol_2x_std is not None else None,
         "short_pct_of_float": short_pct,
         "insider_net_value_90d": insider_net,
+        "revenue_growth_yoy":  (f_info or {}).get("revenue_growth_yoy") if f_info else None,
+        "earnings_growth_yoy": (f_info or {}).get("earnings_growth_yoy") if f_info else None,
+        "forward_pe":          (f_info or {}).get("forward_pe") if f_info else None,
+        "trailing_pe":         (f_info or {}).get("trailing_pe") if f_info else None,
+        "peg_ratio":           (f_info or {}).get("peg_ratio") if f_info else None,
+        "operating_margins":   (f_info or {}).get("operating_margins") if f_info else None,
+        "profit_margins":      (f_info or {}).get("profit_margins") if f_info else None,
+        "roe":                 (f_info or {}).get("roe") if f_info else None,
         "upgrades_30d": upgrades_30d,
         "pt_raises_30d": pt_raises_30d,
         **_earnings_fields(earnings.get(und) if und else None, today),
     }
+
+
+# === 트리거 메타 ===
+# backtest_all_triggers.py 검증 결과 기반.
+# base_score = 베이스 점수
+# kind = "pullback" (regime≠bull 선호), "momentum" (bull+정배열 선호), "disabled" (100% SL → 거의 무효)
+# label = 사용자 표시 이유
+TRIGGER_META: dict[str, dict] = {
+    "trigger_s_extreme_fk":       {"base": 7.0, "kind": "disabled", "label": "트리거S(극한폭락)"},
+    "trigger_a_silent_fk":        {"base": 6.0, "kind": "disabled", "label": "트리거A(폭락코일링)"},
+    "trigger_b_3d_momentum":      {"base": 4.5, "kind": "momentum", "label": "트리거B(3일모멘텀)"},
+    "trigger_c_runner_quiet":     {"base": 4.0, "kind": "momentum", "label": "트리거C(조용한모멘텀)"},
+    "trigger_d_pullback_pro":     {"base": 5.5, "kind": "disabled", "label": "트리거D(저점강세)"},
+    "trigger_e_pullback_std":     {"base": 4.0, "kind": "pullback", "label": "트리거E(저점표준)"},
+    "trigger_f_pullback_recovery":{"base": 3.5, "kind": "pullback", "label": "트리거F(저점회복)"},
+    "trigger_g_rsi_bottom":       {"base": 5.0, "kind": "pullback", "label": "트리거G(RSI저점)"},
+    "trigger_h_failed_breakdown": {"base": 4.0, "kind": "pullback", "label": "트리거H(지지사수)"},
+    "trigger_i_macd_bottom":      {"base": 3.5, "kind": "pullback", "label": "트리거I(MACD저점)"},
+    "trigger_j_deep_rsi":         {"base": 3.5, "kind": "pullback", "label": "트리거J(딥RSI)"},
+    "trigger_k_soft_recovery":    {"base": 3.5, "kind": "pullback", "label": "트리거K(소프트회복)"},
+    "trigger_l_steady_recovery":  {"base": 3.5, "kind": "pullback", "label": "트리거L(안정회복)"},
+    "trigger_m_2m_pullback":      {"base": 4.5, "kind": "disabled", "label": "트리거M(2개월눌림)"},
+    "trigger_n_stale_drawdown":   {"base": 3.5, "kind": "pullback", "label": "트리거N(스테일DD)"},
+    "trigger_o_4m_bottom":        {"base": 3.5, "kind": "pullback", "label": "트리거O(4개월저점)"},
+    "trigger_p_engulfing":        {"base": 4.0, "kind": "pullback", "label": "트리거P(불리시엔걸핑)"},
+    "trigger_q_gap_hold_recovery":{"base": 6.0, "kind": "pullback", "label": "트리거Q(갭홀드회복)"},
+    "trigger_r_monthly_ma60_support":{"base": 4.0, "kind": "pullback", "label": "트리거R(월봉MA60지지)"},
+    "trigger_t_monthly_bull_support":{"base": 4.5, "kind": "pullback", "label": "트리거T(월봉정배지지)"},
+}
+
+
+def trigger_multiplier(kind: str, regime: str | None) -> float:
+    """필터 검증 결과: pullback은 regime≠bull, momentum은 bull+정배열."""
+    if kind == "disabled":
+        return 0.1  # 거의 무효 (전부 -15% 손절)
+    if kind == "pullback":
+        if regime == "bull":         return 0.3
+        if regime in ("correction", "bear"): return 1.5
+        return 1.0  # transition / unknown
+    if kind == "momentum":
+        if regime == "bull":         return 1.3
+        if regime in ("correction", "bear"): return 0.3
+        return 1.0
+    return 1.0
 
 
 def recommendation_score(p: dict) -> tuple[float, list[str]]:
@@ -815,43 +1003,41 @@ def recommendation_score(p: dict) -> tuple[float, list[str]]:
     reasons: list[str] = []
     sigs = p.get("signals") or []
     alerts = p.get("alerts") or []
+    regime = p.get("spy_regime")
+    ma20_dist = p.get("ma20_dist_und")
+    vol_2x_std = p.get("vol_2x_std")
 
-    # Premium setups (long-term + tactical entry)
-    # 백테스트 검증: 트리거 S/A/B/C 가 최고 강도 시그널
+    # === 트리거 점수 (regime multiplier 적용) ===
+    # S/A 중복 가산 방지
+    skip = set()
     if "trigger_s_extreme_fk" in sigs:
-        score += 7.0; reasons.append("트리거S(극한폭락)")  # 30일 87.5% (n=8)
-    if "trigger_a_silent_fk" in sigs and "trigger_s_extreme_fk" not in sigs:
-        score += 6.0; reasons.append("트리거A(폭락코일링)")  # 30일 82% (n=11)
-    if "trigger_b_3d_momentum" in sigs:
-        score += 4.5; reasons.append("트리거B(3일모멘텀)")    # 30일 60% (n=200)
-    if "trigger_c_runner_quiet" in sigs:
-        score += 4.0; reasons.append("트리거C(조용한모멘텀)")  # 30일 55% (n=583)
-    if "trigger_d_pullback_pro" in sigs:
-        score += 5.5; reasons.append("트리거D(저점강세)")   # 30일 82% (n=27)
-    if "trigger_e_pullback_std" in sigs:
-        score += 4.0; reasons.append("트리거E(저점표준)")   # 30일 56% (n=353)
-    if "trigger_f_pullback_recovery" in sigs:
-        score += 3.5; reasons.append("트리거F(저점회복)")   # 30일 51% (n=229)
-    if "trigger_g_rsi_bottom" in sigs:
-        score += 5.0; reasons.append("트리거G(RSI저점)")    # 30일 76% (n=25) — 콤보 핵심
-    if "trigger_h_failed_breakdown" in sigs:
-        score += 4.0; reasons.append("트리거H(지지사수)")    # 30일 55% (n=146)
-    if "trigger_i_macd_bottom" in sigs:
-        score += 3.5; reasons.append("트리거I(MACD저점)")   # 30일 49% (n=238)
-    if "trigger_j_deep_rsi" in sigs:
-        score += 3.5; reasons.append("트리거J(딥RSI)")      # 30일 45% (n=666) — 큰 표본
-    if "trigger_k_soft_recovery" in sigs:
-        score += 3.5; reasons.append("트리거K(소프트회복)")  # 30일 45% (n=289)
-    if "trigger_l_steady_recovery" in sigs:
-        score += 3.5; reasons.append("트리거L(안정회복)")    # 30일 44% (n=248)
-    if "trigger_m_2m_pullback" in sigs:
-        score += 4.5; reasons.append("트리거M(2개월눌림)")   # 30일 59% (n=34)
-    if "trigger_n_stale_drawdown" in sigs:
-        score += 3.5; reasons.append("트리거N(스테일DD)")    # 30일 47% (n=294)
-    if "trigger_o_4m_bottom" in sigs:
-        score += 3.5; reasons.append("트리거O(4개월저점)")   # 30일 43% (n=492)
-    if "trigger_p_engulfing" in sigs:
-        score += 4.0; reasons.append("트리거P(불리시엔걸핑)") # 30일 59% (n=22)
+        skip.add("trigger_a_silent_fk")
+    if ("trigger_a_silent_fk" in sigs and "trigger_s_extreme_fk" not in sigs):
+        skip.add("trigger_s_extreme_fk")  # noop
+
+    triggered_pullback = False
+    triggered_momentum = False
+    for trig, meta in TRIGGER_META.items():
+        if trig not in sigs or trig in skip: continue
+        mult = trigger_multiplier(meta["kind"], regime)
+        gained = meta["base"] * mult
+        if gained < 0.5:  # 너무 미미하면 표시 생략
+            continue
+        score += gained
+        reasons.append(f"{meta['label']}×{mult:.1f}")
+        if meta["kind"] == "pullback": triggered_pullback = True
+        if meta["kind"] == "momentum": triggered_momentum = True
+
+    # === 보조 필터 보너스 ===
+    # MA20 +2% 이상 위 (pullback 트리거의 최강 보조 필터)
+    if triggered_pullback and ma20_dist is not None and ma20_dist >= 2:
+        score += 1.0; reasons.append(f"MA20+{ma20_dist:.1f}%")
+    # 2X 일간 변동성 ≥ 8% (반등 폭 ↑)
+    if triggered_pullback and vol_2x_std is not None and vol_2x_std >= 8:
+        score += 0.5; reasons.append(f"변동성{vol_2x_std:.1f}%")
+    # regime 정보 reason에 표시
+    if regime and (triggered_pullback or triggered_momentum):
+        reasons.append(f"[regime={regime}]")
 
     # === 콤보 보너스 (다중 트리거 동시 발동) ===
     # E+G 콤보 (85.7%, n=14)
@@ -956,6 +1142,22 @@ def recommendation_score(p: dict) -> tuple[float, list[str]]:
     elif "insider_buying" in sigs: score += 1.0; reasons.append("내부자매수")
     if "analyst_upgrades" in sigs: score += 1.0; reasons.append("애널리스트상향")
 
+    # === 펀더멘털 (성장 + 밸류에이션) ===
+    # "주가 빠진 좋은 회사" 식별 — NVO 같은 디버전스 케이스를 잡음
+    if "strong_revenue_growth" in sigs: score += 1.5; reasons.append("매출+20%↑")
+    if "strong_eps_growth" in sigs:     score += 1.5; reasons.append("EPS+30%↑")
+    if "high_margins" in sigs:          score += 1.0; reasons.append("영업이익률25%↑")
+    if "high_roe" in sigs:              score += 1.0; reasons.append("ROE20%↑")
+    if "value_growth" in sigs:          score += 2.0; reasons.append("저평가성장주")  # PER<18 + 매출15%+ 흑자
+    if "peg_value" in sigs:             score += 1.5; reasons.append("PEG≤1.5")
+    # 음수
+    if "loss_making" in sigs:           score -= 1.5; reasons.append("적자")
+    if "revenue_decline" in sigs:       score -= 1.5; reasons.append("매출역성장")
+
+    # 펀더멘털 + 트리거 콤보: "주가 빠진 우량 성장주" 가산
+    if "value_growth" in sigs and any(s.startswith("trigger_") for s in sigs):
+        score += 1.5; reasons.append("우량+트리거")
+
     # RSI sweet spot
     rsi = p.get("rsi")
     if rsi is not None:
@@ -992,6 +1194,122 @@ def recommendation_score(p: dict) -> tuple[float, list[str]]:
     # Recent big drop = potentially bounce candidate, slight bonus if oversold
     if "big_drop" in alerts and rsi is not None and rsi < 35:
         score += 0.5; reasons.append("과매도 바닥")
+
+    return round(score, 2), reasons
+
+
+def hidden_gem_score(p: dict) -> tuple[float, list[str]]:
+    """폭주 전 우량 종목 식별 — rec_score와 별개의 랭킹.
+
+    철학: '시장이 아직 안 알아본 좋은 회사'를 찾기.
+      - 펀더멘털 우량 (필수): 최소 2개 시그널 발동 못하면 후보 자격 박탈
+      - 가격 빠진 상태 (눌림): 6m DD, 눌림 트리거
+      - 폭주 페널티: 이미 5일 +15%↑, 모멘텀 트리거, 52신고가, 거래량 급증
+    """
+    score = 0.0
+    reasons: list[str] = []
+    sigs = p.get("signals") or []
+
+    # === [1] 펀더멘털 우량 (필수 — 부족하면 즉시 자격 박탈) ===
+    fund_n = 0
+    if "value_growth" in sigs:
+        score += 3.0; reasons.append("저평가성장주"); fund_n += 1
+    if "peg_value" in sigs:
+        score += 2.0; reasons.append("PEG≤1.5"); fund_n += 1
+    if "strong_revenue_growth" in sigs:
+        score += 1.5; reasons.append("매출+20%↑"); fund_n += 1
+    if "strong_eps_growth" in sigs:
+        score += 1.5; reasons.append("EPS+30%↑"); fund_n += 1
+    if "high_margins" in sigs:
+        score += 1.0; reasons.append("영업이익률25%↑"); fund_n += 1
+    if "high_roe" in sigs:
+        score += 1.0; reasons.append("ROE20%↑"); fund_n += 1
+
+    if fund_n < 2:
+        return 0.0, []  # 펀더멘털 부재 — Hidden Gem 후보 아님
+
+    if "loss_making" in sigs:
+        score -= 3.0; reasons.append("적자")
+    if "revenue_decline" in sigs:
+        score -= 2.0; reasons.append("매출역성장")
+
+    # === [2] 가격 빠진 상태 (눌림) — 폭주 전이려면 빠져있어야 함 ===
+    dd_6m = p.get("dd_6m_und")
+    if dd_6m is not None:
+        if -40 <= dd_6m <= -15:
+            score += 2.0; reasons.append(f"6m {dd_6m:.0f}%")
+        elif -15 < dd_6m <= -8:
+            score += 1.0; reasons.append(f"6m {dd_6m:.0f}%")
+        elif dd_6m < -40:
+            score += 0.5; reasons.append(f"6m {dd_6m:.0f}%(심층)")
+        elif dd_6m > -3:
+            score -= 1.5; reasons.append("이미 고점권")  # 안 빠짐 = 폭주 시작했거나 이미 진행
+
+    # 눌림 트리거 (모멘텀 트리거 제외) — 매수 타이밍 필수 조건
+    PULLBACK = {
+        "trigger_e_pullback_std", "trigger_f_pullback_recovery", "trigger_g_rsi_bottom",
+        "trigger_h_failed_breakdown", "trigger_i_macd_bottom", "trigger_j_deep_rsi",
+        "trigger_k_soft_recovery", "trigger_l_steady_recovery",
+        "trigger_n_stale_drawdown", "trigger_o_4m_bottom", "trigger_p_engulfing",
+        "trigger_q_gap_hold_recovery", "trigger_r_monthly_ma60_support",
+        "trigger_t_monthly_bull_support",
+    }
+    n_pull = sum(1 for t in sigs if t in PULLBACK)
+    if n_pull < 1:
+        return 0.0, []  # 매수 타이밍 없음 — Hidden Gem 자격 박탈
+    bonus = min(2.0, n_pull * 1.0)
+    score += bonus; reasons.append(f"눌림트리거{n_pull}개")
+
+    # === [3] 폭주 페널티 — 이미 터졌으면 후보 아님 ===
+    five_day = p.get("five_day_pct")
+    if five_day is not None:
+        if five_day > 15:
+            score -= 3.0; reasons.append(f"5일+{five_day:.0f}%(폭주중)")
+        elif five_day > 10:
+            score -= 1.5; reasons.append(f"5일+{five_day:.0f}%")
+        elif five_day < -15:
+            score -= 1.0; reasons.append(f"5일{five_day:+.0f}%(급락중)")
+
+    if "trigger_b_3d_momentum" in sigs:
+        score -= 3.0; reasons.append("3일+30%(폭주)")
+    if "trigger_c_runner_quiet" in sigs:
+        score -= 2.5; reasons.append("5일+30%(폭주)")
+    if "trigger_s_extreme_fk" in sigs or "trigger_a_silent_fk" in sigs:
+        score -= 2.0; reasons.append("폭락중(추가 하락 위험)")
+
+    if p.get("near_52w_high"):
+        score -= 2.0; reasons.append("52신고가 근접")
+    if "golden_cross" in sigs:
+        score -= 1.0; reasons.append("골크(이미 전환)")
+
+    vr = p.get("volume_ratio")
+    if vr is not None and vr >= 2.0:
+        score -= 1.5; reasons.append(f"거래량{vr:.1f}x(인식됨)")
+
+    # 메가캡 페널티 — Mag7은 절대 hidden 아님 (시장 모두가 보고 있음)
+    MEGA_TICKERS = {"AAPL", "MSFT", "NVDA", "AMZN", "META", "GOOGL", "GOOG", "TSLA",
+                    "AVGO", "BRK-B", "BRK.B", "WMT", "JPM", "ORCL", "MA", "V"}
+    und = p.get("ticker_underlying")
+    if und in MEGA_TICKERS:
+        score -= 3.0; reasons.append(f"메가캡({und})")
+
+    # === [4] 보조 가산 ===
+    if "ma20_support" in sigs or "ma60_support" in sigs or "ma120_support" in sigs:
+        score += 0.5; reasons.append("MA지지")
+    if "insider_buying_strong" in sigs:
+        score += 1.5; reasons.append("내부자대량매수")
+    elif "insider_buying" in sigs:
+        score += 0.5; reasons.append("내부자매수")
+    # 월정배는 가산 (장기 우상향 추세)
+    if "monthly_bull_align" in sigs:
+        score += 1.0; reasons.append("월정배")
+    elif "monthly_bear_align" in sigs:
+        score -= 1.5; reasons.append("월역배(추세 약함)")
+
+    # 유동성 (마이크로캡 함정 회피)
+    dv = p.get("dollar_volume_20d")
+    if dv is not None and dv < 1e6:
+        score -= 2.0; reasons.append("저유동성")
 
     return round(score, 2), reasons
 
@@ -1126,11 +1444,19 @@ def main() -> int:
     alerts_count = sum(1 for p in pairs if p["alerts"])
     proxy_count = sum(1 for p in pairs if p.get("proxy_fields"))
 
+    # SPY regime — 모든 pair에 동일하게 적용 (시장 국면 필터)
+    regime = spy_regime(prices)
+    for p in pairs:
+        p["spy_regime"] = regime
+
     # Recommendation scoring — top picks for today
     for p in pairs:
         score, reasons = recommendation_score(p)
         p["rec_score"] = score
         p["rec_reasons"] = reasons
+        gem_score, gem_reasons = hidden_gem_score(p)
+        p["gem_score"] = gem_score
+        p["gem_reasons"] = gem_reasons
     REC_MIN_SCORE = 5.0
     REC_TOP_N = 10
     rec_candidates = sorted(
@@ -1140,6 +1466,26 @@ def main() -> int:
     rec_tickers = {p["ticker_2x"] for p in rec_candidates}
     for p in pairs:
         p["is_recommended"] = p["ticker_2x"] in rec_tickers
+
+    # Hidden Gem 랭킹 — '폭주 전 우량주' 별도 후보
+    GEM_MIN_SCORE = 5.0
+    GEM_TOP_N = 10
+    gem_pool = sorted(
+        [p for p in pairs if p.get("gem_score", 0) >= GEM_MIN_SCORE],
+        key=lambda p: -p["gem_score"],
+    )
+    # underlying 별 dedupe — 같은 기초자산의 2X ETF 여러개는 가장 점수 높은 것만
+    seen_und: set[str] = set()
+    gem_candidates: list[dict] = []
+    for p in gem_pool:
+        und = p.get("ticker_underlying") or p["ticker_2x"]
+        if und in seen_und: continue
+        seen_und.add(und)
+        gem_candidates.append(p)
+        if len(gem_candidates) >= GEM_TOP_N: break
+    gem_tickers = {p["ticker_2x"] for p in gem_candidates}
+    for p in pairs:
+        p["is_hidden_gem"] = p["ticker_2x"] in gem_tickers
 
     summary = {
         "total_pairs": len(pairs),
@@ -1153,6 +1499,12 @@ def main() -> int:
             {"ticker_2x": p["ticker_2x"], "underlying": p["ticker_underlying"],
              "score": p["rec_score"], "reasons": p["rec_reasons"]}
             for p in rec_candidates
+        ],
+        "hidden_gems_count": len(gem_candidates),
+        "hidden_gems": [
+            {"ticker_2x": p["ticker_2x"], "underlying": p["ticker_underlying"],
+             "score": p["gem_score"], "reasons": p["gem_reasons"]}
+            for p in gem_candidates
         ],
     }
 
@@ -1182,6 +1534,10 @@ def main() -> int:
     for p in rec_candidates:
         rs = ", ".join(p["rec_reasons"][:4])
         print(f"    {p['ticker_2x']:6s} {p['ticker_underlying']:6s}  score={p['rec_score']:>4.1f}  [{rs}]")
+    print(f"  hidden gems  : {len(gem_candidates)}")
+    for p in gem_candidates:
+        rs = ", ".join(p["gem_reasons"][:5])
+        print(f"    {p['ticker_2x']:6s} {p['ticker_underlying']:6s}  gem={p['gem_score']:>4.1f}  [{rs}]")
     return 0
 
 

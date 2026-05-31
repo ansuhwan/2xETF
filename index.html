@@ -288,6 +288,16 @@
   .rec-tag { margin-right: 4px; font-size: 12px; }
   table.tbl tbody tr.is-rec td:first-child { border-left: 2px solid var(--amber); }
   table.tbl tbody tr.is-rec .tk { color: var(--amber); }
+  .gem-tag { margin-right: 4px; font-size: 12px; }
+  table.tbl tbody tr.is-gem td:first-child { border-left: 2px solid var(--cyan); }
+  table.tbl tbody tr.is-gem.is-rec td:first-child {
+    border-left: 2px solid var(--cyan);
+    box-shadow: inset 2px 0 0 0 var(--amber);
+  }
+  .chart-head .gem-badge {
+    background: var(--cyan); color: #000; padding: 1px 8px; font-size: 10px;
+    font-weight: 700; letter-spacing: 0.04em; border-radius: 0;
+  }
   .earn-tag {
     background: var(--amber); color: #000; font-size: 9px; padding: 0 3px; margin-left: 3px;
     font-weight: 700;
@@ -860,10 +870,14 @@
     trigger_n_stale_drawdown:{ g: "🅝", cls: "g", t: "트리거 N — Stale Drawdown: 고점 후 40~80일 + 6m -20~35% + MA20 위. 30일 30%+ 확률 47% (n=294)" },
     trigger_o_4m_bottom:     { g: "🅞", cls: "g", t: "트리거 O — 4-Month Bottom: 본주 4개월 -20~30% + MA20 + 거래량 정상. 30일 30%+ 확률 43% (n=492)" },
     trigger_p_engulfing:     { g: "🅟", cls: "g", t: "트리거 P — Bullish Engulfing: 본주 양봉 인걸핑 + 3m -20~30% + MA20. 30일 30%+ 확률 59% (n=22)" },
+    trigger_q_gap_hold_recovery: { g: "🅠", cls: "g", t: "트리거 Q — Gap Hold Recovery: 본주 갭다운 ≤-10% → 5거래일 ±7% 횡보 (바닥 다지기) → 갭종가 위 회복. 백테스트 승률 66.7%, 평균 +13.75%, 타임아웃 0% (n=15, 가장 강력한 신규 트리거)" },
+    trigger_r_monthly_ma60_support: { g: "🅡", cls: "g", t: "트리거 R — Monthly MA60 Support: 일봉 역배(MA5<MA20<MA60<MA120) + 월봉 MA60 ±10% 영역에서 지지 + 종가 위. 단기 조정 깊지만 5년 추세선이 지지. 백테스트 승률 48.6%, 평균 +5.19% (n=706, baseline +4.68%p)" },
+    trigger_t_monthly_bull_support: { g: "🅣", cls: "g", t: "트리거 T — Monthly Bull + MA60/MA120 Support: 월봉 MA20>MA60>MA120 정배 + 최근 20일 일봉 저가가 월봉 MA60 OR MA120 ±10% 영역 + 종가 위. 월봉 장기 추세 + 일시 조정 후 지지 반등. 백테스트 승률 47.4%, 평균 +3.49% (n=2732, baseline +2.98%p)" },
   };
   const FILTER_GROUPS = [
     { key: "status", label: "상태", chips: [
       { k:"recommended", label:"🏆 추천" },
+      { k:"hidden_gem", label:"💎 보석" },
       { k:"alerts", label:"알림" }, { k:"favorites", label:"즐겨" },
       { k:"lev_2x", label:"2X" }, { k:"lev_3x", label:"3X" },
       { k:"is_new", label:"신생" }, { k:"earnings_soon", label:"실적임박" },
@@ -906,6 +920,9 @@
       { k:"trigger_a_silent_fk",        label:"A · 폭락 코일링 (82%)" },
       { k:"trigger_d_pullback_pro",     label:"D · 저점 강세 (82%)" },
       { k:"trigger_g_rsi_bottom",       label:"G · RSI 저점 (76%)" },
+      { k:"trigger_q_gap_hold_recovery",label:"Q · 갭홀드회복 (67%)" },
+      { k:"trigger_r_monthly_ma60_support", label:"R · 월봉지지 (49%)" },
+      { k:"trigger_t_monthly_bull_support", label:"T · 월봉정배지지 (47%)" },
       { k:"trigger_b_3d_momentum",      label:"B · 3일 모멘텀 (60%)" },
       { k:"trigger_p_engulfing",        label:"P · 인걸핑 (59%)" },
       { k:"trigger_m_2m_pullback",      label:"M · 2개월 눌림 (59%)" },
@@ -999,6 +1016,7 @@
   function passStatus(p, sel) {
     return sel.some(k => {
       if (k === "recommended") return !!p.is_recommended;
+      if (k === "hidden_gem") return !!p.is_hidden_gem;
       if (k === "alerts") return p.alerts.length > 0;
       if (k === "favorites") return favs.has(p.ticker_2x);
       if (k === "lev_2x") return (p.leverage || 2) === 2;
@@ -1078,9 +1096,10 @@
         return d ? `<span class="cl ${d.cls}" title="${d.t}">${d.g}</span>` : "";
       }).join(" ");
       const rec = p.is_recommended ? `<span class="rec-tag" title="${(p.rec_reasons||[]).join(', ')} (score ${p.rec_score})">🏆</span>` : "";
-      return `<tr data-ticker="${p.ticker_2x}" class="row${hasA?' has-alert':''}${p.is_recommended?' is-rec':''}">
+      const gem = p.is_hidden_gem ? `<span class="gem-tag" title="${(p.gem_reasons||[]).join(', ')} (gem ${p.gem_score})">💎</span>` : "";
+      return `<tr data-ticker="${p.ticker_2x}" class="row${hasA?' has-alert':''}${p.is_recommended?' is-rec':''}${p.is_hidden_gem?' is-gem':''}">
         <td><button class="fav ${fav?'':'off'}" data-ticker="${p.ticker_2x}">${fav?'★':'☆'}</button></td>
-        <td class="l"><div class="tk">${rec}${p.ticker_2x}${levTag}${isNew?'<span class="new-tag">NEW</span>':''}${earn}</div><div class="sub">${subtitle}</div></td>
+        <td class="l"><div class="tk">${rec}${gem}${p.ticker_2x}${levTag}${isNew?'<span class="new-tag">NEW</span>':''}${earn}</div><div class="sub">${subtitle}</div></td>
         <td class="num">${fmtPx(p.price_2x)}</td>
         <td class="num ${pctC(p.daily_pct)}">${fmtPct(p.daily_pct)}</td>
         <td class="num ${p.volume_ratio!=null&&p.volume_ratio>=2?'amb':''}">${fmtVol(p.volume_ratio)}</td>
@@ -1174,11 +1193,14 @@
     }).join(" ");
     const recBadge = p.is_recommended
       ? `<span class="rec-badge" title="점수 ${p.rec_score}">🏆 추천 · ${(p.rec_reasons||[]).slice(0,3).join(', ')}</span>` : "";
+    const gemBadge = p.is_hidden_gem
+      ? `<span class="gem-badge" title="gem ${p.gem_score} — 폭주 전 우량주">💎 보석 · ${(p.gem_reasons||[]).slice(0,3).join(', ')}</span>` : "";
     document.getElementById("chart-head").innerHTML = `
       <button class="star ${isFav?'':'off'}" id="chart-fav">${isFav?'★':'☆'}</button>
       <span class="tk">${p.ticker_2x}</span>
       <span class="name">${undKr ? undKr+' 2X' : p.ticker_underlying+' 2X'} · ${p.issuer}</span>
       ${recBadge}
+      ${gemBadge}
       <span class="price">${fmtPx(p.price_2x)}</span>
       <span class="num ${pctC(p.daily_pct)}">${fmtPct(p.daily_pct)}%</span>
       <span class="meta">

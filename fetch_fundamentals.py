@@ -159,6 +159,27 @@ def analyst_changes(t: yf.Ticker) -> dict:
     }
 
 
+def growth_profitability(info: dict) -> dict:
+    """매출/이익 성장률, 마진, 밸류에이션 — '저평가 성장주' 식별용."""
+    def _pct(x):
+        return round(x * 100, 1) if isinstance(x, (int, float)) else None
+    def _num(x, n=2):
+        return round(x, n) if isinstance(x, (int, float)) else None
+    return {
+        "revenue_growth_yoy":   _pct(info.get("revenueGrowth")),
+        "earnings_growth_yoy":  _pct(info.get("earningsGrowth")),
+        "earnings_growth_q":    _pct(info.get("earningsQuarterlyGrowth")),
+        "gross_margins":        _pct(info.get("grossMargins")),
+        "operating_margins":    _pct(info.get("operatingMargins")),
+        "profit_margins":       _pct(info.get("profitMargins")),
+        "roe":                  _pct(info.get("returnOnEquity")),
+        "trailing_pe":          _num(info.get("trailingPE")),
+        "forward_pe":           _num(info.get("forwardPE")),
+        "peg_ratio":            _num(info.get("pegRatio")),
+        "ps_ratio":             _num(info.get("priceToSalesTrailing12Months")),
+    }
+
+
 def fetch_one(ticker: str) -> dict | None:
     try:
         t = yf.Ticker(ticker)
@@ -171,6 +192,7 @@ def fetch_one(ticker: str) -> dict | None:
         out.update(short_interest(info))
         out.update(insider_summary(t))
         out.update(analyst_changes(t))
+        out.update(growth_profitability(info))
         return out
     except Exception:
         return None
