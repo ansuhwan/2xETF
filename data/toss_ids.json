@@ -1935,29 +1935,49 @@
     "name_kr": "SPDR 미국 소매기업 ETF",
     "market": "AMX"
   },
-  "CBRX": null,
+  "CBRX": {
+    "code": "AMX2605029001",
+    "name_kr": "TRADR 2X LONG CBRS DAILY ETF",
+    "market": "AMX"
+  },
   "MCHP": {
     "code": "US19930326002",
     "name_kr": "MCHP",
     "market": "NSQ"
   },
-  "MCHU": null,
+  "MCHU": {
+    "code": "AMX2605028006",
+    "name_kr": "TRADR 2X LONG MCHP DAILY ETF",
+    "market": "AMX"
+  },
   "NXPI": {
     "code": "US20100806001",
     "name_kr": "NXPI",
     "market": "NSQ"
   },
-  "NXPX": null,
+  "NXPX": {
+    "code": "AMX2605028007",
+    "name_kr": "TRADR 2X LONG NXPI DAILY ETF",
+    "market": "AMX"
+  },
   "ON": {
     "code": "US20150407001",
     "name_kr": "ON",
     "market": "NSQ"
   },
-  "ONX": null,
+  "ONX": {
+    "code": "AMX2605028008",
+    "name_kr": "TRADR 2X LONG ON DAILY ETF",
+    "market": "AMX"
+  },
   "OSS": {
     "code": "US20180131002",
     "name_kr": "OSS",
     "market": "NSQ"
   },
-  "OSSL": null
+  "OSSL": {
+    "code": "AMX2605027003",
+    "name_kr": "DEFIANCE DAILY TARGET 2X LONG OSS ETF",
+    "market": "AMX"
+  }
 }
