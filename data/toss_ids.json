@@ -1979,5 +1979,15 @@
     "code": "AMX2605027003",
     "name_kr": "DEFIANCE DAILY TARGET 2X LONG OSS ETF",
     "market": "AMX"
+  },
+  "NXPG": {
+    "code": "AMX2606002011",
+    "name_kr": "LEVERAGE SHARES 2X LONG NXPI DAILY ETF",
+    "market": "AMX"
+  },
+  "ONG": {
+    "code": "AMX2606002012",
+    "name_kr": "LEVERAGE SHARES 2X LONG ON DAILY ETF",
+    "market": "AMX"
   }
 }
