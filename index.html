@@ -212,6 +212,15 @@
   .charts { flex: 1; display: flex; flex-direction: column; min-height: 0; }
   .chart-cell { flex: 1; position: relative; min-height: 0; border-top: 1px solid var(--rule); }
   .chart-cell:first-child { border-top: none; }
+  /* Underlying daily/weekly/monthly split: horizontal row */
+  .chart-row { flex: 1; display: flex; min-height: 0; border-top: 1px solid var(--rule); }
+  .chart-row .chart-cell { border-top: none; border-left: 1px solid var(--rule); }
+  .chart-row .chart-cell:first-child { border-left: none; }
+  @media (max-width: 1023px) {
+    .chart-row { flex-direction: column; }
+    .chart-row .chart-cell { border-left: none; border-top: 1px solid var(--rule); }
+    .chart-row .chart-cell:first-child { border-top: none; }
+  }
   .chart-cell .label {
     position: absolute; top: 4px; left: 8px; z-index: 5;
     font-size: 10px; font-weight: 700; color: var(--green); padding: 1px 5px;
@@ -756,9 +765,19 @@
         <span class="label" id="label-2x">2X</span>
         <div class="wrap" id="chart-2x-wrap"></div>
       </div>
-      <div class="chart-cell">
-        <span class="label und" id="label-und">UND</span>
-        <div class="wrap" id="chart-und-wrap"></div>
+      <div class="chart-row">
+        <div class="chart-cell">
+          <span class="label und" id="label-und-d">UND · D</span>
+          <div class="wrap" id="chart-und-d-wrap"></div>
+        </div>
+        <div class="chart-cell">
+          <span class="label und" id="label-und-w">UND · W</span>
+          <div class="wrap" id="chart-und-w-wrap"></div>
+        </div>
+        <div class="chart-cell">
+          <span class="label und" id="label-und-m">UND · M</span>
+          <div class="wrap" id="chart-und-m-wrap"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -870,9 +889,11 @@
     trigger_n_stale_drawdown:{ g: "🅝", cls: "g", t: "트리거 N — Stale Drawdown: 고점 후 40~80일 + 6m -20~35% + MA20 위. 30일 30%+ 확률 47% (n=294)" },
     trigger_o_4m_bottom:     { g: "🅞", cls: "g", t: "트리거 O — 4-Month Bottom: 본주 4개월 -20~30% + MA20 + 거래량 정상. 30일 30%+ 확률 43% (n=492)" },
     trigger_p_engulfing:     { g: "🅟", cls: "g", t: "트리거 P — Bullish Engulfing: 본주 양봉 인걸핑 + 3m -20~30% + MA20. 30일 30%+ 확률 59% (n=22)" },
-    trigger_q_gap_hold_recovery: { g: "🅠", cls: "g", t: "트리거 Q — Gap Hold Recovery: 본주 갭다운 ≤-10% → 5거래일 ±7% 횡보 (바닥 다지기) → 갭종가 위 회복. 백테스트 승률 66.7%, 평균 +13.75%, 타임아웃 0% (n=15, 가장 강력한 신규 트리거)" },
+    trigger_q_gap_hold_recovery: { g: "🅠", cls: "g", t: "트리거 Q — Gap Hold Recovery: 본주 갭다운 ≤-8% → 5거래일 ±7% 횡보 (바닥 다지기) → 갭종가 위 회복. 백테스트 승률 64.7%, 평균 +10.41% (n=34, baseline +9.90%p)" },
+    trigger_v_gap_hold_wide: { g: "🅥", cls: "g", t: "트리거 V — Gap Hold Wide: Q와 동일하지만 ±10% 넓은 횡보 (덜 엄격, 더 자주 발동). 백테스트 승률 61.8%, 평균 +10.05% (n=55, baseline +9.54%p)" },
     trigger_r_monthly_ma60_support: { g: "🅡", cls: "g", t: "트리거 R — Monthly MA60 Support: 일봉 역배(MA5<MA20<MA60<MA120) + 월봉 MA60 ±10% 영역에서 지지 + 종가 위. 단기 조정 깊지만 5년 추세선이 지지. 백테스트 승률 48.6%, 평균 +5.19% (n=706, baseline +4.68%p)" },
     trigger_t_monthly_bull_support: { g: "🅣", cls: "g", t: "트리거 T — Monthly Bull + MA60/MA120 Support: 월봉 MA20>MA60>MA120 정배 + 최근 20일 일봉 저가가 월봉 MA60 OR MA120 ±10% 영역 + 종가 위. 월봉 장기 추세 + 일시 조정 후 지지 반등. 백테스트 승률 47.4%, 평균 +3.49% (n=2732, baseline +2.98%p)" },
+    trigger_u_institutional_accum: { g: "🅤", cls: "g", t: "트리거 U — Institutional Accumulation: 본주 5일 거래량이 20일 평균의 1.5배+ + 5일 가격 범위 ±3% + RSI 40~55. 큰 손이 가격 안 올리고 흡수 중 — 폭발 전 조용한 매집. 백테스트 승률 54.8%, 평균 +5.50%, 손절 14.3% (n=42, baseline +4.99%p)" },
   };
   const FILTER_GROUPS = [
     { key: "status", label: "상태", chips: [
@@ -920,9 +941,11 @@
       { k:"trigger_a_silent_fk",        label:"A · 폭락 코일링 (82%)" },
       { k:"trigger_d_pullback_pro",     label:"D · 저점 강세 (82%)" },
       { k:"trigger_g_rsi_bottom",       label:"G · RSI 저점 (76%)" },
-      { k:"trigger_q_gap_hold_recovery",label:"Q · 갭홀드회복 (67%)" },
+      { k:"trigger_q_gap_hold_recovery",label:"Q · 갭홀드회복 (65%)" },
+      { k:"trigger_v_gap_hold_wide", label:"V · 갭홀드넓은 (62%)" },
       { k:"trigger_r_monthly_ma60_support", label:"R · 월봉지지 (49%)" },
       { k:"trigger_t_monthly_bull_support", label:"T · 월봉정배지지 (47%)" },
+      { k:"trigger_u_institutional_accum", label:"U · 기관매집 (55%)" },
       { k:"trigger_b_3d_momentum",      label:"B · 3일 모멘텀 (60%)" },
       { k:"trigger_p_engulfing",        label:"P · 인걸핑 (59%)" },
       { k:"trigger_m_2m_pullback",      label:"M · 2개월 눌림 (59%)" },
@@ -1232,9 +1255,9 @@
     });
   }
 
-  function tvWidget(id, sym, primary) {
+  function tvWidget(id, sym, primary, interval) {
     new TradingView.widget({
-      container_id: id, symbol: sym, interval: "D", timezone: "Asia/Seoul",
+      container_id: id, symbol: sym, interval: interval || "D", timezone: "Asia/Seoul",
       theme: "dark", style: "1", locale: "kr", toolbar_bg: "#000",
       enable_publishing: false, allow_symbol_change: false, hide_side_toolbar: true,
       hide_top_toolbar: !primary, withdateranges: primary, save_image: false, autosize: true,
@@ -1246,19 +1269,25 @@
       ],
     });
   }
+  const UND_TFS = [["d", "D"], ["w", "W"], ["m", "M"]];
   function renderCharts(p) {
     document.getElementById("label-2x").textContent = p.ticker_2x;
-    document.getElementById("label-und").textContent = p.ticker_underlying || "UND";
+    const und = p.ticker_underlying;
+    UND_TFS.forEach(([tf, iv]) => {
+      document.getElementById("label-und-" + tf).textContent = (und || "UND") + " · " + iv;
+    });
     const t = document.getElementById("chart-2x-wrap");
-    const b = document.getElementById("chart-und-wrap");
     t.innerHTML = '<div id="tv_2x" style="position:absolute;inset:0"></div>';
-    tvWidget("tv_2x", p.ticker_2x, true);
-    if (p.ticker_underlying) {
-      b.innerHTML = '<div id="tv_und" style="position:absolute;inset:0"></div>';
-      tvWidget("tv_und", p.ticker_underlying, false);
-    } else {
-      b.innerHTML = '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#444">NO UND</div>';
-    }
+    tvWidget("tv_2x", p.ticker_2x, true, "D");
+    UND_TFS.forEach(([tf, iv]) => {
+      const el = document.getElementById("chart-und-" + tf + "-wrap");
+      if (und) {
+        el.innerHTML = '<div id="tv_und_' + tf + '" style="position:absolute;inset:0"></div>';
+        tvWidget("tv_und_" + tf, und, false, iv);
+      } else {
+        el.innerHTML = '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#444">NO UND</div>';
+      }
+    });
   }
   const isMobile = () => window.matchMedia("(max-width: 1023px)").matches;
   function openChart() {
