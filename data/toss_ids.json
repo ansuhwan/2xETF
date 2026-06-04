@@ -1989,5 +1989,23 @@
     "code": "AMX2606002012",
     "name_kr": "LEVERAGE SHARES 2X LONG ON DAILY ETF",
     "market": "AMX"
-  }
+  },
+  "INFH": null,
+  "INFQ": {
+    "code": "NAS0250707002",
+    "name_kr": "INFQ",
+    "market": "NYS"
+  },
+  "VELL": null,
+  "VELO": {
+    "code": "US20210930018",
+    "name_kr": "VELO",
+    "market": "NSQ"
+  },
+  "WYFI": {
+    "code": "NAS0250807007",
+    "name_kr": "WYFI",
+    "market": "NSQ"
+  },
+  "WYFL": null
 }
