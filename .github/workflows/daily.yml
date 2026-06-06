@@ -41,6 +41,11 @@ jobs:
         run: python fetch_monthly.py
         continue-on-error: true
 
+      # 주봉 본주 (주봉 MA60/120 역배열 계산에 필요)
+      - name: Fetch weekly closes
+        run: python fetch_weekly.py
+        continue-on-error: true
+
       # 실적 캘린더 (incremental, 지난 실적만 재호출)
       - name: Fetch earnings calendar
         run: python fetch_earnings.py

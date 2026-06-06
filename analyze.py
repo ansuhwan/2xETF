@@ -22,6 +22,7 @@ DATA = ROOT / "data"
 ETF_LIST = DATA / "etf_list.json"
 PRICES_PKL = DATA / "prices.pkl"
 MONTHLY_PKL = DATA / "monthly.pkl"
+WEEKLY_PKL = DATA / "weekly.pkl"
 EARNINGS_JSON = DATA / "earnings.json"
 OPTIONS_JSON = DATA / "options.json"
 FUNDAMENTALS_JSON = DATA / "fundamentals.json"
@@ -300,7 +301,7 @@ def compute_ma_signals(close: pd.Series, low: pd.Series) -> list[str]:
     return sigs
 
 
-def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], today: date, monthly: pd.DataFrame | None = None, options: dict[str, dict] | None = None, fundamentals: dict[str, dict] | None = None) -> dict | None:
+def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], today: date, monthly: pd.DataFrame | None = None, options: dict[str, dict] | None = None, fundamentals: dict[str, dict] | None = None, weekly: pd.DataFrame | None = None) -> dict | None:
     t2 = (etf.get("ticker_2x") or "").strip().upper()
     und = (etf.get("underlying") or "").strip().upper()
     leverage = int(etf.get("leverage") or 2)
@@ -407,6 +408,23 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
     monthly_sig = monthly_alignment(monthly, und) if und else None
     if monthly_sig:
         ma_sigs.append(monthly_sig)
+
+    # 월봉 MA60/120 정배열(단기선>장기선) 기반 눌림목 셋업 — 사용자 정의 필터
+    mbull_6012 = (
+        bull_60_120(monthly[und]) if (und and monthly is not None and und in monthly.columns) else None
+    )
+    if mbull_6012:
+        # A: 일봉 종가가 120일선보다 5%+ 아래 + 월봉 정배열 (장기추세 살아있는 깊은 눌림)
+        if cu.size >= 120:
+            ma120_d = float(cu.iloc[-120:].mean())
+            if ma120_d > 0 and float(cu.iloc[-1]) <= ma120_d * 0.95:
+                ma_sigs.append("daily_dip_mbull")
+        # B: 월봉 정배열 + 주봉 역배열 (MA60<MA120) — 장기 강세 속 중기 조정
+        wk_state = (
+            bull_60_120(weekly[und]) if (weekly is not None and und in weekly.columns) else None
+        )
+        if wk_state is False:
+            ma_sigs.append("mbull_wbear")
 
     # Sector relative strength: underlying vs primary sector ETF (20-day return spread)
     rs_20d = None
@@ -822,9 +840,9 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
             and last_u > ma20_und_t):
             ma_sigs.append("trigger_p_engulfing")
 
-        # Trigger Q — Gap Hold Recovery (66.7%, n=15)
-        # 본주 갭 ≤-10% → 5거래일 ±7% 횡보 → 오늘 종가 갭종가 위
-        # 백테스트: 승률 66.7%, 평균 +13.75%, 타임아웃 0%
+        # Trigger Q — Gap Hold Recovery (64.7%, n=34, 갭-8% 완화)
+        # 본주 갭 ≤-8% → 5거래일 ±7% 횡보 → 오늘 종가 갭종가 위
+        # 백테스트: 승률 64.7%, 평균 +10.41%, 손절 32.4% (baseline +9.90%p)
         # 인덱싱: 갭일=iloc[-6] (5거래일 전), 횡보=iloc[-5:](오늘 포함)
         if open_u_series is not None and open_u_series.size >= 7 and cu.size >= 7:
             try:
@@ -834,7 +852,7 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
                 gap_close = float(cu.iloc[gap_pos])
                 if prev_close > 0:
                     gap_pct = (gap_open / prev_close - 1) * 100
-                    if gap_pct <= -10:
+                    if gap_pct <= -8:
                         holds = cu.iloc[gap_pos + 1:]  # 갭 다음날 ~ 오늘 (5일)
                         if holds.size == 5:
                             rng_max = (float(holds.max()) / gap_close - 1) * 100
@@ -842,6 +860,19 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
                             if (rng_max <= 7 and rng_min >= -7
                                 and last_u >= gap_close):
                                 ma_sigs.append("trigger_q_gap_hold_recovery")
+
+        # Trigger V — Gap Hold Recovery (Wide, 61.8%, n=55)
+        # 갭-8% 완화 + 5일 ±10% 넓은 횡보 — 더 자주 발동
+        # 백테스트: 승률 61.8%, 평균 +10.05% (baseline +9.54%p)
+                    if gap_pct <= -8:
+                        holds_wide = cu.iloc[gap_pos + 1:]
+                        if holds_wide.size == 5:
+                            rng_max_w = (float(holds_wide.max()) / gap_close - 1) * 100
+                            rng_min_w = (float(holds_wide.min()) / gap_close - 1) * 100
+                            if (rng_max_w <= 10 and rng_min_w >= -10
+                                and last_u >= gap_close
+                                and "trigger_q_gap_hold_recovery" not in ma_sigs):
+                                ma_sigs.append("trigger_v_gap_hold_wide")
             except Exception:
                 pass
 
@@ -858,6 +889,26 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
                         proximity = abs(last_u / ma60_monthly - 1) * 100
                         if proximity <= 10 and last_u >= ma60_monthly:
                             ma_sigs.append("trigger_r_monthly_ma60_support")
+            except Exception:
+                pass
+
+        # Trigger U — Institutional Accumulation (54.8%, n=42)
+        # 본주 5일 거래량 평균이 20일 평균의 1.5배+ + 5일 가격 범위 ±3% + RSI 40~55
+        # 백테스트: 승률 54.8%, 평균 +5.50%, 손절 14.3% (baseline +4.99%p alpha)
+        # 의미: 큰 손이 가격 안 올리고 흡수 중 — 가격 폭발 전 조용한 매집
+        if und and has_ticker(prices, und):
+            try:
+                vu_full = volume_of(prices, und)
+                if vu_full.size >= 25 and cu.size >= 5:
+                    avg5_vol = float(vu_full.iloc[-5:].mean())
+                    avg20_vol = float(vu_full.iloc[-25:-5].mean())
+                    if avg20_vol > 0 and (avg5_vol / avg20_vol) >= 1.5:
+                        recent5 = cu.iloc[-5:]
+                        if recent5.min() > 0:
+                            pct_range = (float(recent5.max()) / float(recent5.min()) - 1) * 100
+                            if (pct_range <= 3.0
+                                and rsi_und is not None and 40 <= rsi_und <= 55):
+                                ma_sigs.append("trigger_u_institutional_accum")
             except Exception:
                 pass
 
@@ -976,9 +1027,11 @@ TRIGGER_META: dict[str, dict] = {
     "trigger_n_stale_drawdown":   {"base": 3.5, "kind": "pullback", "label": "트리거N(스테일DD)"},
     "trigger_o_4m_bottom":        {"base": 3.5, "kind": "pullback", "label": "트리거O(4개월저점)"},
     "trigger_p_engulfing":        {"base": 4.0, "kind": "pullback", "label": "트리거P(불리시엔걸핑)"},
-    "trigger_q_gap_hold_recovery":{"base": 6.0, "kind": "pullback", "label": "트리거Q(갭홀드회복)"},
+    "trigger_q_gap_hold_recovery":{"base": 5.5, "kind": "pullback", "label": "트리거Q(갭홀드회복)"},
+    "trigger_v_gap_hold_wide":    {"base": 4.5, "kind": "pullback", "label": "트리거V(갭홀드넓은범위)"},
     "trigger_r_monthly_ma60_support":{"base": 4.0, "kind": "pullback", "label": "트리거R(월봉MA60지지)"},
     "trigger_t_monthly_bull_support":{"base": 4.5, "kind": "pullback", "label": "트리거T(월봉정배지지)"},
+    "trigger_u_institutional_accum":{"base": 5.0, "kind": "pullback", "label": "트리거U(기관매집)"},
 }
 
 
@@ -1252,7 +1305,8 @@ def hidden_gem_score(p: dict) -> tuple[float, list[str]]:
         "trigger_k_soft_recovery", "trigger_l_steady_recovery",
         "trigger_n_stale_drawdown", "trigger_o_4m_bottom", "trigger_p_engulfing",
         "trigger_q_gap_hold_recovery", "trigger_r_monthly_ma60_support",
-        "trigger_t_monthly_bull_support",
+        "trigger_t_monthly_bull_support", "trigger_u_institutional_accum",
+        "trigger_v_gap_hold_wide",
     }
     n_pull = sum(1 for t in sigs if t in PULLBACK)
     if n_pull < 1:
@@ -1379,6 +1433,29 @@ def load_monthly() -> pd.DataFrame | None:
         return None
 
 
+def load_weekly() -> pd.DataFrame | None:
+    if not WEEKLY_PKL.exists():
+        return None
+    try:
+        return pd.read_pickle(WEEKLY_PKL)
+    except Exception:
+        return None
+
+
+def bull_60_120(series: pd.Series | None) -> bool | None:
+    """MA60 > MA120 정배열 여부 (말단 60/120 평균 기준). 데이터 부족 시 None."""
+    if series is None:
+        return None
+    s = series.dropna()
+    if s.size < 120:
+        return None
+    ma60 = s.iloc[-60:].mean()
+    ma120 = s.iloc[-120:].mean()
+    if pd.isna(ma60) or pd.isna(ma120):
+        return None
+    return bool(ma60 > ma120)
+
+
 def monthly_alignment(monthly: pd.DataFrame | None, ticker: str) -> str | None:
     """Returns 'monthly_bull_align' / 'monthly_bear_align' / None based on
     monthly MA5/MA20/MA60 alignment on the underlying."""
@@ -1404,6 +1481,7 @@ def main() -> int:
     prices = pd.read_pickle(PRICES_PKL)
     earnings = load_earnings()
     monthly = load_monthly()
+    weekly = load_weekly()
     options = load_options()
     fundamentals = load_fundamentals()
     today = date.today()
@@ -1434,7 +1512,7 @@ def main() -> int:
                 "last_trade": str(ld.date()) if pd.notna(ld) else None,
             })
             continue
-        rec = analyze_pair(e, prices, earnings, today, monthly, options, fundamentals)
+        rec = analyze_pair(e, prices, earnings, today, monthly, options, fundamentals, weekly)
         if rec is None:
             skipped.append(t2 or "?")
             continue

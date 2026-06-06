@@ -839,6 +839,8 @@
     monthly_bull_align:      { g: "▲M", cls: "g", t: "월봉 정배열" },
     monthly_bear_align:      { g: "▽M", cls: "r", t: "월봉 역배열" },
     monthly_bull_near_long:  { g: "★M", cls: "g", t: "월봉정배 + MA60/120 근접" },
+    daily_dip_mbull:         { g: "▼120M", cls: "g", t: "월봉 정배열(MA60>MA120) + 일봉 종가가 120일선보다 5%+ 아래. 장기추세 살아있는 깊은 눌림" },
+    mbull_wbear:             { g: "▲M▽W", cls: "g", t: "월봉 정배열(MA60>MA120) + 주봉 역배열(MA60<MA120). 장기 강세 속 중기 조정" },
     ma20_support:            { g: "20", cls: "c", t: "MA20 지지" },
     ma60_support:            { g: "60", cls: "c", t: "MA60 지지" },
     ma120_support:           { g: "120", cls: "c", t: "MA120 지지" },
@@ -910,6 +912,7 @@
     ]},
     { key: "setup", label: "셋업", chips: [
       { k:"monthly_bull_near_long", label:"월정배+장기근접" },
+      { k:"daily_dip_mbull", label:"일봉120↓+월정배" }, { k:"mbull_wbear", label:"월정배+주역배" },
       { k:"bull_align_pullback", label:"정배눌림" }, { k:"ma20_support", label:"MA20지지" },
       { k:"ma60_support", label:"MA60지지" }, { k:"ma120_support", label:"MA120지지" },
       { k:"squeeze_setup", label:"스퀴즈셋업" }, { k:"unusual_call_activity", label:"이상콜거래" },

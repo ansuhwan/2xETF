@@ -8,6 +8,7 @@ venv/
 # Ephemeral pipeline outputs (regenerated each run, too big for git)
 data/prices.pkl
 data/monthly.pkl
+data/weekly.pkl
 data/prices_meta.json
 data/series/
 
