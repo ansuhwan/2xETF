@@ -1990,13 +1990,21 @@
     "name_kr": "LEVERAGE SHARES 2X LONG ON DAILY ETF",
     "market": "AMX"
   },
-  "INFH": null,
+  "INFH": {
+    "code": "AMX2606005001",
+    "name_kr": "DEFIANCE DAILY TARGET 2X LONG INFQ ETF",
+    "market": "AMX"
+  },
   "INFQ": {
     "code": "NAS0250707002",
     "name_kr": "INFQ",
     "market": "NYS"
   },
-  "VELL": null,
+  "VELL": {
+    "code": "AMX2606005003",
+    "name_kr": "DEFIANCE DAILY TARGET 2X LONG VELO ETF",
+    "market": "AMX"
+  },
   "VELO": {
     "code": "US20210930018",
     "name_kr": "VELO",
@@ -2007,7 +2015,11 @@
     "name_kr": "WYFI",
     "market": "NSQ"
   },
-  "WYFL": null,
+  "WYFL": {
+    "code": "AMX2606004008",
+    "name_kr": "DEFIANCE DAILY TARGET 2X LONG WYFI ETF",
+    "market": "AMX"
+  },
   "SPACEX": null,
   "SPAL": null
 }
