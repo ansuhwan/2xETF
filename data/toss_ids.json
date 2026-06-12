@@ -2023,5 +2023,9 @@
   "SPACEX": null,
   "SPAL": null,
   "SPCH": null,
-  "SPCX": null
+  "SPCX": {
+    "code": "NAS2606012004",
+    "name_kr": "SPCX",
+    "market": "NSQ"
+  }
 }
