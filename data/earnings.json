@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-19T07:47:36+09:00",
+  "updated_at": "2026-06-20T07:28:49+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-08-07",
@@ -2640,14 +2640,14 @@
         {
           "date": "2026-04-29",
           "estimate": -0.57,
-          "reported": -0.47,
-          "surprise": 17.01
+          "reported": -0.49,
+          "surprise": 13.79
         },
         {
           "date": "2026-02-19",
-          "estimate": -0.39,
+          "estimate": -0.43,
           "reported": -0.29,
-          "surprise": 26.11
+          "surprise": 32.56
         },
         {
           "date": "2025-11-05",
@@ -2664,7 +2664,7 @@
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 17.72
+      "avg_surprise_pct": 18.53
     },
     "LRCX": {
       "next_earnings": "2026-07-30",
