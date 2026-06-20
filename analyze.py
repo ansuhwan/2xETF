@@ -206,6 +206,84 @@ def low_of(prices: pd.DataFrame, t: str) -> pd.Series:
     return prices[(t, "Low")].dropna()
 
 
+def high_of(prices: pd.DataFrame, t: str) -> pd.Series:
+    if (t, "High") not in prices.columns:
+        return pd.Series(dtype=float)
+    return prices[(t, "High")].dropna()
+
+
+def open_of(prices: pd.DataFrame, t: str) -> pd.Series:
+    if (t, "Open") not in prices.columns:
+        return pd.Series(dtype=float)
+    return prices[(t, "Open")].dropna()
+
+
+def _zigzag_pivots(p, pct):
+    """% 임계 지그재그. 반환 [(idx, price, 'H'/'L')] (마지막은 진행 중 잠정 극값)."""
+    thr = pct / 100.0
+    n = len(p)
+    piv = []
+    if n < 2:
+        return piv
+    trend = 0
+    ext_i, ext = 0, p[0]
+    for i in range(1, n):
+        if trend == 0:
+            if p[i] >= ext * (1 + thr):
+                piv.append((0, p[0], 'L')); trend = 1; ext_i, ext = i, p[i]
+            elif p[i] <= ext * (1 - thr):
+                piv.append((0, p[0], 'H')); trend = -1; ext_i, ext = i, p[i]
+            else:
+                if p[i] > ext: ext_i, ext = i, p[i]
+        elif trend == 1:
+            if p[i] > ext: ext_i, ext = i, p[i]
+            elif p[i] <= ext * (1 - thr):
+                piv.append((ext_i, ext, 'H')); trend = -1; ext_i, ext = i, p[i]
+        else:
+            if p[i] < ext: ext_i, ext = i, p[i]
+            elif p[i] >= ext * (1 + thr):
+                piv.append((ext_i, ext, 'L')); trend = 1; ext_i, ext = i, p[i]
+    piv.append((ext_i, ext, 'H' if trend == 1 else 'L'))
+    return piv
+
+
+def rising_lows_support(close: pd.Series, pct=10.0, min_lows=3,
+                        win=200, near_lo=-3.0, near_hi=10.0, min_below_high=7.0):
+    """상승 추세선(저점 절상) 지지 테스트 여부. 현재가가 추세선 근접하면 True.
+    고점 추격 배제: 52주 고점 대비 -min_below_high% 이상 눌린 것만.
+    스크리닝용 — 백테스트상 엣지는 약함(자동 매수 신호 아님)."""
+    if close.size < 60:
+        return False
+    # 고점 달리는 종목 제외 (52주 고점 대비 충분히 눌렸어야)
+    high_52w = float(close.iloc[-252:].max()) if close.size >= 252 else float(close.max())
+    if high_52w > 0 and (close.iloc[-1] / high_52w - 1) * 100 > -min_below_high:
+        return False
+    p = close.values[-win:]
+    piv = _zigzag_pivots(p, pct)
+    lows = [(i, pr) for (i, pr, t) in piv[:-1] if t == 'L']
+    if len(lows) < min_lows:
+        return False
+    run = [lows[-1]]
+    for j in range(len(lows) - 2, -1, -1):
+        if lows[j][1] < run[-1][1]:
+            run.append(lows[j])
+        else:
+            break
+    if len(run) < min_lows:
+        return False
+    run = run[::-1]
+    xs = np.array([x for x, _ in run], float)
+    ys = np.array([y for _, y in run], float)
+    slope, intercept = np.polyfit(xs, ys, 1)
+    if slope <= 0:
+        return False
+    line = slope * (len(p) - 1) + intercept
+    if line <= 0:
+        return False
+    dist = (p[-1] / line - 1) * 100
+    return near_lo <= dist <= near_hi
+
+
 def compute_macd_signals(close: pd.Series) -> list[str]:
     """MACD-based signals (12/26/9) on close. Computed on underlying."""
     sigs: list[str] = []
@@ -408,6 +486,62 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
     monthly_sig = monthly_alignment(monthly, und) if und else None
     if monthly_sig:
         ma_sigs.append(monthly_sig)
+
+    # 급락 + 2X 60일선 터치: 기초 당일 -5%↓ + 2X 당일 Low가 2X MA60에 걸침(Low≤MA60≤High)
+    high2 = high_of(prices, t2)
+    low2 = low_of(prices, t2)
+    if (daily_und is not None and daily_und <= -5
+            and close2.size >= 60 and high2.size and low2.size):
+        ma60_2x = float(close2.iloc[-60:].mean())
+        lo_today = float(low2.iloc[-1])
+        hi_today = float(high2.iloc[-1])
+        if lo_today <= ma60_2x <= hi_today:
+            ma_sigs.append("drop5_2x_ma60_touch")
+
+    # 2X 종가가 자기 60일선과 120일선 사이에 위치 (정배/역배 구분)
+    if close2.size >= 120:
+        ma60_2x = float(close2.iloc[-60:].mean())
+        ma120_2x = float(close2.iloc[-120:].mean())
+        px2 = float(close2.iloc[-1])
+        lo_b, hi_b = min(ma60_2x, ma120_2x), max(ma60_2x, ma120_2x)
+        if lo_b <= px2 <= hi_b:
+            if ma60_2x > ma120_2x:
+                ma_sigs.append("px_between_ma60_120_bull")   # 정배 — 상승추세 눌림
+            else:
+                ma_sigs.append("px_between_ma60_120_bear")   # 역배 — 회복 초기
+
+    # 상승 추세선(저점 절상) 지지 테스트 — 스크리닝 필터 (백테 엣지 약함, 점수 X)
+    if cu.size >= 60 and rising_lows_support(cu):
+        ma_sigs.append("rising_lows_support")
+
+    # 딥 눌림 반등 — 저점 필터 (백테 non-bull 85%/+19%): 기초 3개월 -20~-40% + 양봉
+    o_und = open_of(prices, und) if und else pd.Series(dtype=float)
+    if cu.size >= 64 and o_und.size:
+        o_und = o_und.reindex(cu.index).ffill()
+        max3 = float(cu.iloc[-64:].max())
+        dd3 = (cu.iloc[-1] / max3 - 1) * 100 if max3 > 0 else 0.0
+        is_green_und = float(cu.iloc[-1]) > float(o_und.iloc[-1])
+        if -40 <= dd3 <= -20 and is_green_und:
+            ma_sigs.append("deep_pullback_bounce")
+            ret = cu.pct_change()
+            hv20 = float(ret.iloc[-20:].std() * 100)
+            hv60 = float(ret.iloc[-60:].std() * 100)
+            if hv60 > 0 and hv20 / hv60 <= 0.7:   # 변동성 압축 동반 = 추가 확신
+                ma_sigs.append("deep_pullback_compressed")
+
+    # HLBO (저점절상반등): 저점 2회 절상 + 양봉 + 3m DD≤-10% + 종가>MA20. non-bull 80%/+24%
+    lo_und = low_of(prices, und) if und else pd.Series(dtype=float)
+    if cu.size >= 64 and o_und.size and lo_und.size >= 9:
+        o_und2 = o_und.reindex(cu.index).ffill()
+        lov = lo_und.reindex(cu.index).ffill().values
+        l1 = lov[-9:-5].min(); l2v = lov[-5:-1].min(); l3 = lov[-2]; lo_today = lov[-1]
+        hl = (l1 < l2v < lo_today) and (l2v < l3)
+        ma20_d = float(cu.iloc[-20:].mean())
+        max3h = float(cu.iloc[-64:].max())
+        dd3h = (cu.iloc[-1] / max3h - 1) * 100 if max3h > 0 else 0.0
+        green_h = float(cu.iloc[-1]) > float(o_und2.iloc[-1])
+        if hl and green_h and dd3h <= -10 and float(cu.iloc[-1]) > ma20_d:
+            ma_sigs.append("hlbo")
 
     # 월봉 MA60/120 정배열(단기선>장기선) 기반 눌림목 셋업 — 사용자 정의 필터
     mbull_6012 = (
@@ -1584,6 +1718,9 @@ def main() -> int:
              "score": p["gem_score"], "reasons": p["gem_reasons"]}
             for p in gem_candidates
         ],
+        # 갱신 건강 상태 — 스크래퍼 폴백(stale) 발행사 + 유니버스 갱신 시각
+        "stale_issuers": payload.get("stale_issuers") or [],
+        "universe_updated_at": payload.get("updated_at"),
     }
 
     pairs_sorted = sorted(

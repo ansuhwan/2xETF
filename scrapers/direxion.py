@@ -28,6 +28,27 @@ FALLBACK: dict[str, str] = {
     "JPNL": "JPM",   # adjust if Direxion uses a different ticker
 }
 
+# Direxion's index/sector leveraged Bull ETFs (long only). Site blocks crawlers,
+# and these are a stable, slow-changing set, so curate directly.
+# (ticker_2x, underlying, leverage, name)
+INDEX_ETFS: list[tuple[str, str, int, str]] = [
+    ("TNA",  "IWM",  3, "Daily Small Cap Bull 3X Shares"),
+    ("MIDU", "MDY",  3, "Daily Mid Cap Bull 3X Shares"),
+    ("SOXL", "SOXX", 3, "Daily Semiconductor Bull 3X Shares"),
+    ("TECL", "XLK",  3, "Daily Technology Bull 3X Shares"),
+    ("FAS",  "XLF",  3, "Daily Financial Bull 3X Shares"),
+    ("LABU", "XBI",  3, "Daily S&P Biotech Bull 3X Shares"),
+    ("NAIL", "ITB",  3, "Daily Homebuilders & Supplies Bull 3X Shares"),
+    ("RETL", "XRT",  3, "Daily Retail Bull 3X Shares"),
+    ("DPST", "KRE",  3, "Daily Regional Banks Bull 3X Shares"),
+    ("ERX",  "XLE",  2, "Daily Energy Bull 2X Shares"),
+    ("NUGT", "GDX",  2, "Daily Gold Miners Bull 2X Shares"),
+    ("GUSH", "XOP",  2, "Daily S&P Oil & Gas E&P Bull 2X Shares"),
+    ("JNUG", "GDXJ", 2, "Daily Junior Gold Miners Bull 2X Shares"),
+    ("TMF",  "TLT",  3, "Daily 20+ Year Treasury Bull 3X Shares"),
+    ("TYD",  "IEF",  3, "Daily 7-10 Year Treasury Bull 3X Shares"),
+]
+
 NAME_RE = re.compile(
     r"Daily\s+([A-Z.\-]{2,6})\s+Bull\s+2X\s+Shares",
     re.I,
@@ -64,6 +85,14 @@ def fetch() -> list[ETF]:
             out.append(ETF(ticker_2x=tk, name=f"Daily {und} Bull 2X Shares",
                            underlying=und, issuer=ISSUER,
                            url=f"https://www.direxion.com/etfs/{tk.lower()}"))
+    # Always add the curated index/sector leveraged ETFs (not on the single-stock page).
+    have = {e.ticker_2x for e in out}
+    for tk, und, lev, name in INDEX_ETFS:
+        if tk in have:
+            continue
+        out.append(ETF(ticker_2x=tk, name=name, underlying=und, issuer=ISSUER,
+                       leverage=lev,
+                       url=f"https://www.direxion.com/etfs/{tk.lower()}"))
     return out
 
 

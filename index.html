@@ -246,8 +246,8 @@
   .ctrl button.reset:hover { color: var(--amber); border-color: var(--amber); }
   .filter-group { display: flex; align-items: flex-start; gap: 5px; margin-top: 4px; }
   .filter-group .gl {
-    width: 36px; flex-shrink: 0; font-size: 10px; color: var(--txt-soft); padding-top: 2px;
-    letter-spacing: 0.1em;
+    width: 46px; flex-shrink: 0; font-size: 10px; color: var(--txt-soft); padding-top: 2px;
+    letter-spacing: 0.1em; white-space: nowrap;
   }
   .filter-group .chips { flex: 1; display: flex; flex-wrap: wrap; gap: 2px; }
   .filter-group[data-key="liquidity"] .chips { flex-wrap: nowrap; }
@@ -261,6 +261,33 @@
   .chip .n { color: var(--dim); font-size: 9px; }
   .chip.on .n { color: rgba(0,0,0,0.55); }
   .chip.zero { opacity: 0.35; }
+  /* 갱신 실패 배너 */
+  #stale-banner { background: var(--red-d); color: #fff; padding: 5px 14px;
+    font-size: 12px; letter-spacing: .03em; border-bottom: 1px solid var(--red);
+    display: flex; align-items: center; gap: 8px; }
+  #stale-banner b { color: #fff; }
+  #stale-banner.warn { background: var(--amber-d); }
+  /* 트리거 kind 색상 */
+  .chip.k-mo  { color: var(--green); border-color: var(--green-d); }
+  .chip.k-pb  { color: var(--amber); border-color: var(--amber-d); }
+  .chip.k-off { color: var(--dim); border-color: var(--rule-2); text-decoration: line-through; opacity: .5; }
+  .chip.k-mo.on  { background: var(--green); color:#000; border-color: var(--green); }
+  .chip.k-pb.on  { background: var(--amber); color:#000; border-color: var(--amber); }
+  /* regime 유불리: 현재 장세에 불리한 kind는 흐리게 */
+  #filter-groups.rg-bull .chip.k-pb:not(.on) { opacity: .4; }
+  #filter-groups.rg-correction .chip.k-mo:not(.on),
+  #filter-groups.rg-bear .chip.k-mo:not(.on),
+  #filter-groups.rg-transition .chip.k-mo:not(.on) { opacity: .4; }
+  /* regime 배지 + 빠른필터 */
+  .rg-badge { display:inline-flex; align-items:center; gap:5px; padding:1px 8px;
+    font-size:10px; font-weight:700; letter-spacing:.08em; border:1px solid; border-radius:2px; }
+  .rg-badge.bull { color:var(--green); border-color:var(--green-d); }
+  .rg-badge.correction, .rg-badge.transition { color:var(--amber); border-color:var(--amber-d); }
+  .rg-badge.bear { color:var(--red); border-color:var(--red-d); }
+  .rg-badge .hint { font-weight:400; color:var(--txt-soft); letter-spacing:0; }
+  .chip.quick { color:var(--cyan); border-color:#0a6470; }
+  .chip.quick.on { background:var(--cyan); color:#000; border-color:var(--cyan); }
+  .filter-group[data-key="trigger"] .gl { color: var(--amber); }
 
   .meta-bar { display: flex; justify-content: space-between; padding: 3px 8px; font-size: 10px; border-bottom: 1px solid var(--rule); color: var(--txt-soft); }
   .meta-bar .active { color: var(--amber); }
@@ -344,6 +371,8 @@
   <button class="help-btn" id="help-btn" type="button" title="필터 자세히 보기">? 자세히</button>
   <div class="clock" id="clock">--:--:--</div>
 </header>
+
+<div id="stale-banner" style="display:none"></div>
 
 <div class="modal-overlay" id="help-modal">
   <div class="modal" role="dialog" aria-labelledby="help-title">
@@ -834,6 +863,13 @@
     bb_breakdown:   { g: "B", cls: "a", t: "BB이탈" },
   };
   const SIGNAL_GLYPHS = {
+    drop5_2x_ma60_touch:     { g: "↓60", cls: "amb", t: "급락+60선터치: 기초 당일 -5%↓ 급락 + 2X 당일 저가가 2X 60일선에 걸침 (Low≤MA60≤High)" },
+    px_between_ma60_120_bull:{ g: "60·120▲", cls: "g", t: "2X 종가가 자기 60~120선 사이 (정배 MA60>MA120, 상승추세 눌림)" },
+    px_between_ma60_120_bear:{ g: "60·120▽", cls: "amb", t: "2X 종가가 자기 60~120선 사이 (역배 MA60<MA120, 회복 초기)" },
+    rising_lows_support:     { g: "／L", cls: "c", t: "상승추세선 지지: 저점 절상(3개+) 추세선 + 현재가 근접(지지 테스트). 스크리닝용 — 백테 엣지 약함" },
+    deep_pullback_bounce:    { g: "▽▲", cls: "g", t: "딥눌림 반등: 기초 3개월 -20~40% + 양봉 마감. 백테 non-bull 85%/+19% (강세장에선 약함)" },
+    deep_pullback_compressed:{ g: "▽▲≈", cls: "g", t: "딥눌림 반등 + 변동성 압축(HV20/HV60≤0.7) 동반 = 추가 확신" },
+    hlbo:                    { g: "HL↑", cls: "g", t: "HLBO 저점절상반등: 저점 2회 절상 + 양봉 + 3개월 -10%↓ + 종가>MA20. non-bull 80%/+24% (강세장 약함, 하루 0~2건 희소)" },
     ma_bull_align:           { g: "▲", cls: "g", t: "일봉 정배열" },
     ma_bear_align:           { g: "▽", cls: "r", t: "일봉 역배열" },
     monthly_bull_align:      { g: "▲M", cls: "g", t: "월봉 정배열" },
@@ -897,41 +933,70 @@
     trigger_t_monthly_bull_support: { g: "🅣", cls: "g", t: "트리거 T — Monthly Bull + MA60/MA120 Support: 월봉 MA20>MA60>MA120 정배 + 최근 20일 일봉 저가가 월봉 MA60 OR MA120 ±10% 영역 + 종가 위. 월봉 장기 추세 + 일시 조정 후 지지 반등. 백테스트 승률 47.4%, 평균 +3.49% (n=2732, baseline +2.98%p)" },
     trigger_u_institutional_accum: { g: "🅤", cls: "g", t: "트리거 U — Institutional Accumulation: 본주 5일 거래량이 20일 평균의 1.5배+ + 5일 가격 범위 ±3% + RSI 40~55. 큰 손이 가격 안 올리고 흡수 중 — 폭발 전 조용한 매집. 백테스트 승률 54.8%, 평균 +5.50%, 손절 14.3% (n=42, baseline +4.99%p)" },
   };
+  // 트리거 kind: mo=모멘텀(강세장 유리), pb=눌림(조정/약세 유리), off=비활성(백테스트 손실)
   const FILTER_GROUPS = [
     { key: "status", label: "상태", chips: [
       { k:"recommended", label:"🏆 추천" },
       { k:"hidden_gem", label:"💎 보석" },
       { k:"alerts", label:"알림" }, { k:"favorites", label:"즐겨" },
       { k:"lev_2x", label:"2X" }, { k:"lev_3x", label:"3X" },
-      { k:"is_new", label:"신생" }, { k:"earnings_soon", label:"실적임박" },
-      { k:"earnings_post", label:"실적후" }, { k:"volume_up_candle", label:"거래량+" },
+      { k:"volume_up_candle", label:"거래량+" },
       { k:"near_52w_high", label:"52신고" }, { k:"near_52w_low", label:"52신저" },
     ]},
     { key: "liquidity", label: "거래대금", chips: [
       { k:"dv_100m", label:"$100M+" }, { k:"dv_10m", label:"$10M+" }, { k:"dv_1m", label:"$1M+" },
     ]},
+    { key: "drop", label: "포착", chips: [
+      { k:"drop5_2x_ma60_touch", label:"↓5%+60선터치" },
+      { k:"px_between_ma60_120_bull", label:"60~120사이·정배" },
+      { k:"px_between_ma60_120_bear", label:"60~120사이·역배" },
+      { k:"rising_lows_support", label:"상승추세선지지" },
+      { k:"deep_pullback_bounce", label:"딥눌림반등" },
+      { k:"deep_pullback_compressed", label:"딥눌림+압축" },
+      { k:"hlbo", label:"HLBO저점절상" },
+    ]},
     { key: "setup", label: "셋업", chips: [
       { k:"monthly_bull_near_long", label:"월정배+장기근접" },
-      { k:"daily_dip_mbull", label:"일봉120↓+월정배" }, { k:"mbull_wbear", label:"월정배+주역배" },
-      { k:"bull_align_pullback", label:"정배눌림" }, { k:"ma20_support", label:"MA20지지" },
-      { k:"ma60_support", label:"MA60지지" }, { k:"ma120_support", label:"MA120지지" },
-      { k:"squeeze_setup", label:"스퀴즈셋업" }, { k:"unusual_call_activity", label:"이상콜거래" },
-      { k:"hv_compressed", label:"변동성압축" }, { k:"short_squeeze_setup", label:"숏스퀴즈셋업" },
-      { k:"insider_buying_strong", label:"내부자대량매수" }, { k:"insider_buying", label:"내부자매수" },
-      { k:"falling_knife_setup", label:"🔪 폭락코일링" },
+      { k:"daily_dip_mbull", label:"일봉120↓+월정배" },
+      { k:"mbull_wbear", label:"월정배+주역배" },
+      { k:"bull_align_pullback", label:"정배눌림" },
+      { k:"ma20_support", label:"MA20지지" },
+      { k:"ma60_support", label:"MA60지지" },
+      { k:"ma120_support", label:"MA120지지" },
     ]},
-    { key: "trend", label: "추세", chips: [
-      { k:"ma_bull_align", label:"일봉정배" }, { k:"ma_bear_align", label:"일봉역배" },
-      { k:"monthly_bull_align", label:"월봉정배" }, { k:"monthly_bear_align", label:"월봉역배" },
-      { k:"golden_cross", label:"골든크로스" }, { k:"dead_cross", label:"데드크로스" },
-      { k:"macd_bull_cross", label:"MACD↑" }, { k:"macd_bear_cross", label:"MACD↓" },
-      { k:"sector_leader", label:"섹터선도" }, { k:"sector_laggard", label:"섹터부진" },
-      { k:"earnings_beat_streak", label:"실적연속비트" }, { k:"earnings_miss_streak", label:"실적연속미스" },
-      { k:"call_heavy", label:"콜우세" }, { k:"put_heavy", label:"풋우세" },
-      { k:"iv_elevated", label:"IV↑" }, { k:"iv_crushed", label:"IV↓" },
-      { k:"call_oi_growth", label:"콜OI급증" }, { k:"call_iv_premium", label:"콜IV프리미엄" },
-      { k:"high_short_interest", label:"공매도15%+" }, { k:"analyst_upgrades", label:"애널상향" },
-      { k:"hv_expanded", label:"변동성확장" },
+    { key: "trigger", label: "트리거", regimeAware: true, chips: [
+      // 모멘텀 — 강세장 유리
+      { k:"trigger_b_3d_momentum",          label:"B·3일모멘텀",   kind:"mo" },
+      { k:"trigger_c_runner_quiet",         label:"C·조용한모멘텀", kind:"mo" },
+      // 눌림 — 조정/약세장 유리
+      { k:"trigger_t_monthly_bull_support", label:"T·월봉정배지지", kind:"pb" },
+      { k:"trigger_r_monthly_ma60_support", label:"R·월봉MA60지지", kind:"pb" },
+      { k:"trigger_i_macd_bottom",          label:"I·MACD저점",    kind:"pb" },
+      { k:"trigger_j_deep_rsi",             label:"J·딥RSI",       kind:"pb" },
+      { k:"trigger_g_rsi_bottom",           label:"G·RSI저점",     kind:"pb" },
+      { k:"trigger_e_pullback_std",         label:"E·저점표준",    kind:"pb" },
+      { k:"trigger_n_stale_drawdown",       label:"N·스테일DD",    kind:"pb" },
+      { k:"trigger_o_4m_bottom",            label:"O·4개월저점",   kind:"pb" },
+      { k:"trigger_h_failed_breakdown",     label:"H·지지사수",    kind:"pb" },
+      { k:"trigger_p_engulfing",            label:"P·엔걸핑",      kind:"pb" },
+      { k:"trigger_q_gap_hold_recovery",    label:"Q·갭홀드회복",  kind:"pb" },
+      { k:"trigger_v_gap_hold_wide",        label:"V·갭홀드와이드", kind:"pb" },
+      { k:"trigger_u_institutional_accum",  label:"U·기관매집",    kind:"pb" },
+      { k:"trigger_k_soft_recovery",        label:"K·소프트회복",  kind:"pb" },
+      { k:"trigger_l_steady_recovery",      label:"L·안정회복",    kind:"pb" },
+      { k:"trigger_f_pullback_recovery",    label:"F·저점회복",    kind:"pb" },
+      // 비활성 — 백테스트 100% 손절
+      { k:"trigger_s_extreme_fk",           label:"S·극한폭락",    kind:"off" },
+      { k:"trigger_a_silent_fk",            label:"A·폭락코일링",  kind:"off" },
+      { k:"trigger_d_pullback_pro",         label:"D·저점강세",    kind:"off" },
+      { k:"trigger_m_2m_pullback",          label:"M·2개월눌림",   kind:"off" },
+    ]},
+    { key: "chart", label: "차트", chips: [
+      { k:"ma_bull_align", label:"일봉정배" }, { k:"monthly_bull_align", label:"월봉정배" },
+      { k:"bull_align_pullback", label:"정배눌림" },
+      { k:"ma20_support", label:"MA20지지" }, { k:"ma60_support", label:"MA60지지" },
+      { k:"ma120_support", label:"MA120지지" },
+      { k:"golden_cross", label:"골든크로스" }, { k:"macd_bull_cross", label:"MACD↑" },
     ]},
     { key: "sector", label: "섹터", chips: [
       { k:"Mag7", label:"Mag7" }, { k:"AI", label:"AI" }, { k:"Semi", label:"반도체" },
@@ -939,34 +1004,26 @@
       { k:"Fintech", label:"핀테크" }, { k:"Quantum", label:"양자" }, { k:"EV", label:"전기차" },
       { k:"Crypto", label:"크립토" },
     ]},
-    { key: "trigger", label: "트리거", chips: [
-      { k:"trigger_s_extreme_fk",       label:"S · 극한 폭락 (88%)" },
-      { k:"trigger_a_silent_fk",        label:"A · 폭락 코일링 (82%)" },
-      { k:"trigger_d_pullback_pro",     label:"D · 저점 강세 (82%)" },
-      { k:"trigger_g_rsi_bottom",       label:"G · RSI 저점 (76%)" },
-      { k:"trigger_q_gap_hold_recovery",label:"Q · 갭홀드회복 (65%)" },
-      { k:"trigger_v_gap_hold_wide", label:"V · 갭홀드넓은 (62%)" },
-      { k:"trigger_r_monthly_ma60_support", label:"R · 월봉지지 (49%)" },
-      { k:"trigger_t_monthly_bull_support", label:"T · 월봉정배지지 (47%)" },
-      { k:"trigger_u_institutional_accum", label:"U · 기관매집 (55%)" },
-      { k:"trigger_b_3d_momentum",      label:"B · 3일 모멘텀 (60%)" },
-      { k:"trigger_p_engulfing",        label:"P · 인걸핑 (59%)" },
-      { k:"trigger_m_2m_pullback",      label:"M · 2개월 눌림 (59%)" },
-      { k:"trigger_e_pullback_std",     label:"E · 저점 표준 (56%)" },
-      { k:"trigger_h_failed_breakdown", label:"H · 지지 사수 (55%)" },
-      { k:"trigger_c_runner_quiet",     label:"C · 조용한 모멘텀 (55%)" },
-      { k:"trigger_f_pullback_recovery",label:"F · 저점 회복 (51%)" },
-      { k:"trigger_i_macd_bottom",      label:"I · MACD 저점 (49%)" },
-      { k:"trigger_n_stale_drawdown",   label:"N · 스테일 DD (47%)" },
-      { k:"trigger_j_deep_rsi",         label:"J · 딥 RSI (45%)" },
-      { k:"trigger_k_soft_recovery",    label:"K · 소프트 회복 (45%)" },
-      { k:"trigger_l_steady_recovery",  label:"L · 안정 회복 (44%)" },
-      { k:"trigger_o_4m_bottom",        label:"O · 4개월 저점 (43%)" },
-    ]},
   ];
+  // 신규 페이지에서 화면에 노출할 필터 그룹
+  const VISIBLE_GROUPS = ["status", "liquidity", "drop", "setup"];
+  // 그룹별로 일부 칩만 노출 (없으면 전체 노출)
+  const VISIBLE_CHIPS = { status: ["lev_2x", "lev_3x"] };
+  // 신호 기반 그룹 (p.signals 매칭)
+  const SIGNAL_GROUPS = ["trigger", "chart", "drop", "setup"];
+  // regime별 유리한 트리거 kind
+  const REGIME_FAV = { bull:"mo", correction:"pb", bear:"pb", transition:"pb" };
+  const REGIME_HINT = {
+    bull:"강세장 — 모멘텀 유리, 눌림 트리거는 통계적 열위(흐림)",
+    correction:"조정 — 눌림 트리거 골든타임",
+    bear:"약세장 — 눌림 유효하나 수익폭 작음",
+    transition:"전환 — 눌림 유리(알파 큰 구간)",
+    unknown:"",
+  };
+  let REGIME = "unknown";
 
   const FAVS_KEY = "us2x_favs";
-  const STATE_KEY = "us2x_state_v2";
+  const STATE_KEY = "us2x_state_new";
   let favs = new Set();
   try { favs = new Set(JSON.parse(localStorage.getItem(FAVS_KEY) || "[]")); } catch {}
 
@@ -1019,6 +1076,27 @@
 
   let pairs = [], pairsByTicker = {}, tossIds = {}, currentTicker = null;
 
+  function renderStaleBanner(d) {
+    const el = document.getElementById("stale-banner");
+    const s = d.summary || {};
+    const stale = s.stale_issuers || [];
+    // 데이터 신선도: 최신 거래일(as_of)이 4일 넘게 지났으면 오래됨 판단
+    let ageDays = 999;
+    if (s.as_of) ageDays = (Date.now() - new Date(s.as_of + "T00:00:00Z").getTime()) / 86400000;
+    if (stale.length) {
+      el.className = "";
+      el.innerHTML = `⚠ <b>갱신 실패</b> — 발행사 [${stale.join(", ")}] 스크래핑 실패. `
+        + `<b>직전 정상 데이터를 표시 중</b>입니다 (해당 종목은 최신이 아닐 수 있음).`;
+      el.style.display = "flex";
+    } else if (ageDays > 4) {
+      el.className = "warn";
+      el.innerHTML = `⚠ <b>데이터 오래됨</b> — 최신 거래일 ${s.as_of} (약 ${Math.floor(ageDays)}일 전). 가격 갱신이 멈췄을 수 있습니다.`;
+      el.style.display = "flex";
+    } else {
+      el.style.display = "none";
+    }
+  }
+
   function renderSummary(d) {
     const s = d.summary;
     const dt = new Date(d.updated_at).toLocaleString("ko-KR", { timeZone: "Asia/Seoul", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit" });
@@ -1064,17 +1142,18 @@
     }
     if (f.status.length    && !passStatus(p, f.status))             return false;
     if (f.liquidity && f.liquidity.length && !passLiquidity(p, f.liquidity)) return false;
-    if (f.setup.length     && !f.setup.some(k => (p.signals||[]).includes(k))) return false;
-    if (f.trend.length     && !f.trend.some(k => (p.signals||[]).includes(k))) return false;
     if (f.sector.length    && !f.sector.some(k => (p.sectors||[]).includes(k))) return false;
-    if (f.trigger && f.trigger.length && !f.trigger.some(k => (p.signals||[]).includes(k))) return false;
+    for (const gk of SIGNAL_GROUPS) {
+      const sel = f[gk] || [];
+      if (sel.length && !sel.some(k => (p.signals||[]).includes(k))) return false;
+    }
     return true;
   }
   function countMatching(gk, ck) {
     return pairs.filter(p => {
       if (gk === "status") return passStatus(p, [ck]);
       if (gk === "liquidity") return passLiquidity(p, [ck]);
-      if (gk === "setup" || gk === "trend" || gk === "trigger") return (p.signals||[]).includes(ck);
+      if (SIGNAL_GROUPS.includes(gk)) return (p.signals||[]).includes(ck);
       if (gk === "sector") return (p.sectors||[]).includes(ck);
       return false;
     }).length;
@@ -1082,22 +1161,43 @@
 
   function renderFilters() {
     const host = document.getElementById("filter-groups");
-    host.innerHTML = FILTER_GROUPS.map(g => {
+    if (!host) return;  // 신규 페이지: 필터 제거됨
+    host.className = "rg-" + REGIME;
+    const fav = REGIME_FAV[REGIME] || null;
+    host.innerHTML = FILTER_GROUPS.filter(g => VISIBLE_GROUPS.includes(g.key)).map(g => {
       const sel = new Set(state.filters[g.key]||[]);
-      const chips = g.chips.map(c => {
+      const chipList = VISIBLE_CHIPS[g.key] ? g.chips.filter(c => VISIBLE_CHIPS[g.key].includes(c.k)) : g.chips;
+      const chips = chipList.map(c => {
         const n = countMatching(g.key, c.k);
         const on = sel.has(c.k);
         const tip = (SIGNAL_GLYPHS[c.k] && SIGNAL_GLYPHS[c.k].t) || "";
         const titleAttr = tip ? ` title="${tip.replace(/"/g,"&quot;")}"` : "";
-        return `<button data-group="${g.key}" data-chip="${c.k}"${titleAttr} class="chip ${on?'on':''} ${n===0&&!on?'zero':''}">${c.label}<span class="n">${n}</span></button>`;
+        const kc = c.kind ? ` k-${c.kind}` : "";
+        return `<button data-group="${g.key}" data-chip="${c.k}"${titleAttr} class="chip${kc} ${on?'on':''} ${n===0&&!on?'zero':''}">${c.label}<span class="n">${n}</span></button>`;
       }).join("");
-      return `<div class="filter-group" data-key="${g.key}"><span class="gl">${g.label}</span><div class="chips">${chips}</div></div>`;
+      let head = `<span class="gl">${g.label}</span>`;
+      if (g.regimeAware && REGIME !== "unknown") {
+        const favKeys = g.chips.filter(c => c.kind === fav).map(c => c.k);
+        const allOn = favKeys.length && favKeys.every(k => sel.has(k));
+        const quick = `<button class="chip quick ${allOn?'on':''}" data-quick="${g.key}" title="현재 장세(${REGIME})에 유리한 ${fav==='mo'?'모멘텀':'눌림'} 트리거만 선택">⚡ 지금유리</button>`;
+        head = `<span class="gl">${g.label}</span><span class="rg-badge ${REGIME}">${REGIME.toUpperCase()}<span class="hint">· ${REGIME_HINT[REGIME]||''}</span></span>${quick}`;
+      }
+      return `<div class="filter-group" data-key="${g.key}">${head}<div class="chips">${chips}</div></div>`;
     }).join("");
-    host.querySelectorAll("button.chip").forEach(b => b.addEventListener("click", () => {
+    host.querySelectorAll("button.chip[data-chip]").forEach(b => b.addEventListener("click", () => {
       const g = b.dataset.group, k = b.dataset.chip;
       const arr = state.filters[g];
       const i = arr.indexOf(k);
       if (i>=0) arr.splice(i,1); else arr.push(k);
+      saveState(); renderFilters(); applyAndRender();
+    }));
+    host.querySelectorAll("button.quick[data-quick]").forEach(b => b.addEventListener("click", () => {
+      const gk = b.dataset.quick, g = FILTER_GROUPS.find(x=>x.key===gk);
+      const favKeys = g.chips.filter(c => c.kind === (REGIME_FAV[REGIME]||"")).map(c => c.k);
+      const arr = state.filters[gk];
+      const allOn = favKeys.length && favKeys.every(k => arr.includes(k));
+      state.filters[gk] = allOn ? arr.filter(k => !favKeys.includes(k))
+                                : [...new Set([...arr, ...favKeys])];
       saveState(); renderFilters(); applyAndRender();
     }));
     const active = Object.values(state.filters).reduce((s,a)=>s+a.length,0);
@@ -1402,7 +1502,9 @@
     tossIds = t || {};
     pairs = d.pairs;
     pairsByTicker = Object.fromEntries(pairs.map(p => [p.ticker_2x, p]));
+    REGIME = (pairs.find(p => p.spy_regime) || {}).spy_regime || "unknown";
     renderSummary(d);
+    renderStaleBanner(d);
     renderFilters();
     applyAndRender();
     const initial = (location.hash||"").replace(/^#/,"").toUpperCase();
