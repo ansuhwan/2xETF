@@ -2050,29 +2050,61 @@
     "name_kr": "ADI",
     "market": "NSQ"
   },
-  "ADIU": null,
-  "APHG": null,
-  "AXTL": null,
+  "ADIU": {
+    "code": "AMX2606016002",
+    "name_kr": "LEVERAGE SHARES 2X LONG ADI DAILY ETF",
+    "market": "AMX"
+  },
+  "APHG": {
+    "code": "AMX2606016003",
+    "name_kr": "LEVERAGE SHARES 2X LONG APH DAILY ETF",
+    "market": "AMX"
+  },
+  "AXTL": {
+    "code": "AMX2606016004",
+    "name_kr": "LEVERAGE SHARES 2X LONG AXTI DAILY ETF",
+    "market": "AMX"
+  },
   "FN": {
     "code": "US20100625003",
     "name_kr": "FN",
     "market": "NYS"
   },
-  "FNG": null,
-  "KEYG": null,
+  "FNG": {
+    "code": "AMX2606016005",
+    "name_kr": "LEVERAGE SHARES 2X LONG FN DAILY ETF",
+    "market": "AMX"
+  },
+  "KEYG": {
+    "code": "AMX2606016006",
+    "name_kr": "LEVERAGE SHARES 2X LONG KEYS DAILY ETF",
+    "market": "AMX"
+  },
   "KEYS": {
     "code": "US20141104006",
     "name_kr": "KEYS",
     "market": "NYS"
   },
-  "MCHG": null,
+  "MCHG": {
+    "code": "AMX2606016007",
+    "name_kr": "LEVERAGE SHARES 2X LONG MCHP DAILY ETF",
+    "market": "AMX"
+  },
   "TEL": {
     "code": "US20070614002",
     "name_kr": "TEL",
     "market": "NYS"
   },
-  "TELG": null,
-  "TSEG": null,
+  "TELG": {
+    "code": "AMX2606016008",
+    "name_kr": "LEVERAGE SHARES 2X LONG TEL DAILY ETF",
+    "market": "AMX"
+  },
+  "TSEG": {
+    "code": "AMX2606016009",
+    "name_kr": "LEVERAGE SHARES 2X LONG TSEM DAILY ETF",
+    "market": "AMX"
+  },
   "TSEM": {
     "code": "US19941025001",
     "name_kr": "TSEM",
@@ -2083,5 +2115,9 @@
     "name_kr": "UMAC",
     "market": "AMX"
   },
-  "UMAL": null
+  "UMAL": {
+    "code": "AMX2606018001",
+    "name_kr": "디파이언스 언유주얼 머신스 2배 ETF",
+    "market": "AMX"
+  }
 }
