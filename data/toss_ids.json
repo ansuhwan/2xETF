@@ -2119,5 +2119,54 @@
     "code": "AMX2606018001",
     "name_kr": "디파이언스 언유주얼 머신스 2배 ETF",
     "market": "AMX"
-  }
+  },
+  "ASTG": null,
+  "CDNG": null,
+  "CDNS": {
+    "code": "US19900326003",
+    "name_kr": "CDNS",
+    "market": "NSQ"
+  },
+  "ENTG": {
+    "code": "US20000711002",
+    "name_kr": "ENTG",
+    "market": "NSQ"
+  },
+  "ENTL": null,
+  "FOMG": null,
+  "FORM": {
+    "code": "US20030612001",
+    "name_kr": "FORM",
+    "market": "NSQ"
+  },
+  "FPS": {
+    "code": "NYS2602005004",
+    "name_kr": "FPS",
+    "market": "NYS"
+  },
+  "FPSX": null,
+  "GFS": {
+    "code": "US20211027013",
+    "name_kr": "GFS",
+    "market": "NSQ"
+  },
+  "GFSG": null,
+  "HPE": {
+    "code": "US20151102003",
+    "name_kr": "HPE",
+    "market": "NYS"
+  },
+  "HPEL": null,
+  "MTSG": null,
+  "MTSI": {
+    "code": "US20120315001",
+    "name_kr": "MTSI",
+    "market": "NSQ"
+  },
+  "SMTC": {
+    "code": "US19920317010",
+    "name_kr": "SMTC",
+    "market": "NSQ"
+  },
+  "SMTG": null
 }
