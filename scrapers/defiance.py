@@ -13,11 +13,16 @@ the 2X-Long single-stock funds (dropping 2X Short, income, and thematic ETFs).
 from __future__ import annotations
 
 import re
+import time
 from concurrent.futures import ThreadPoolExecutor
 
 from bs4 import BeautifulSoup
 
 from .base import ETF, http_get
+
+# Defiance는 ~38종을 운용. 이보다 한참 적으면 사이트 빈응답(silent-0)으로 보고 재시도.
+SANE_FLOOR = 10
+RETRIES = 3
 
 ISSUER = "Defiance"
 SITEMAP = "https://www.defianceetfs.com/etf-sitemap.xml"
@@ -85,7 +90,7 @@ def _parse_fund(slug: str) -> ETF | None:
     )
 
 
-def fetch() -> list[ETF]:
+def _fetch_once() -> list[ETF]:
     slugs = _fund_slugs()
     out: list[ETF] = []
     with ThreadPoolExecutor(max_workers=8) as ex:
@@ -100,6 +105,21 @@ def fetch() -> list[ETF]:
             seen.add(r.ticker_2x)
             uniq.append(r)
     return uniq
+
+
+def fetch() -> list[ETF]:
+    """빈응답(silent-0) 방지: 결과가 SANE_FLOOR 미만이면 백오프 재시도."""
+    res: list[ETF] = []
+    for attempt in range(RETRIES):
+        try:
+            res = _fetch_once()
+        except Exception:
+            res = []
+        if len(res) >= SANE_FLOOR:
+            return res
+        if attempt < RETRIES - 1:
+            time.sleep(3 * (attempt + 1))  # 3s, 6s 백오프
+    return res  # 끝까지 적으면 그대로 반환 (scrape_all 가드가 직전본 유지)
 
 
 if __name__ == "__main__":
