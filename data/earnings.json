@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T07:37:05+09:00",
+  "updated_at": "2026-06-26T07:40:14+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-08-07",
@@ -954,9 +954,9 @@
     },
     "CELH": {
       "next_earnings": "2026-05-07",
-      "eps_estimate": 0.43131,
+      "eps_estimate": 0.43138,
       "eps_low": 0.34,
-      "eps_high": 0.58,
+      "eps_high": 0.53,
       "history": [
         {
           "date": "2026-05-07",
@@ -1375,7 +1375,7 @@
     },
     "CRWV": {
       "next_earnings": "2026-05-07",
-      "eps_estimate": -1.03372,
+      "eps_estimate": -1.03921,
       "eps_low": -1.82,
       "eps_high": -0.38,
       "history": [
@@ -3620,7 +3620,7 @@
     },
     "OSCR": {
       "next_earnings": "2026-05-06",
-      "eps_estimate": 0.333,
+      "eps_estimate": 0.316,
       "eps_low": -0.18,
       "eps_high": 0.69,
       "history": [
@@ -5125,9 +5125,9 @@
     "XOVR": null,
     "ZETA": {
       "next_earnings": "2026-04-30",
-      "eps_estimate": 0.19557,
+      "eps_estimate": 0.18603,
       "eps_low": 0.14,
-      "eps_high": 0.31,
+      "eps_high": 0.22,
       "history": [
         {
           "date": "2026-05-01",
