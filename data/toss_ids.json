@@ -2180,5 +2180,11 @@
     "name_kr": "TRADR 스페이스X 데일리 2배 인버스 ETF",
     "market": "AMX"
   },
-  "XIGV": null
+  "XIGV": null,
+  "AEHG": null,
+  "AEHR": {
+    "code": "US19970815001",
+    "name_kr": "AEHR",
+    "market": "NSQ"
+  }
 }
