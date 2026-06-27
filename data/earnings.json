@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T07:35:56+09:00",
+  "updated_at": "2026-06-28T07:31:41+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-08-07",
@@ -5704,7 +5704,7 @@
     },
     "FPS": {
       "next_earnings": "2026-05-14",
-      "eps_estimate": 0.23665,
+      "eps_estimate": 0.23498,
       "eps_low": 0.16,
       "eps_high": 0.26,
       "history": [],
