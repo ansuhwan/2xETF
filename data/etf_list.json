@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-06-28T07:29:51+09:00",
+  "updated_at": "2026-06-28T16:14:25+09:00",
   "total": 216,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 374,
+      "ms": 630,
       "ok": true
     },
     "GraniteShares": {
       "count": 35,
-      "ms": 1457,
+      "ms": 1696,
       "ok": true
     },
     "Defiance": {
       "count": 40,
-      "ms": 10395,
+      "ms": 26641,
       "ok": true
     },
     "REX": {
       "count": 31,
-      "ms": 368,
+      "ms": 1379,
       "ok": true
     },
     "Tradr": {
       "count": 67,
-      "ms": 374,
+      "ms": 1013,
       "ok": true
     },
     "LeverageShares": {
       "count": 13,
-      "ms": 420,
+      "ms": 1166,
       "ok": true
     },
     "3X": {
@@ -267,7 +267,7 @@
     },
     {
       "ticker_2x": "AAPB",
-      "name": "GraniteShares 2x Long AAPL Daily ETF 2x long exposure to\n                                Apple (AAPL)",
+      "name": "GraniteShares 2x Long AAPL Daily ETF 2x long exposure to\r\n                                Apple (AAPL)",
       "underlying": "AAPL",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/aapb/",
@@ -276,7 +276,7 @@
     },
     {
       "ticker_2x": "AMDL",
-      "name": "GraniteShares 2x Long AMD Daily ETF 2x long exposure to\n                                Advanced Micro Devices, Inc (AMD",
+      "name": "GraniteShares 2x Long AMD Daily ETF 2x long exposure to\r\n                                Advanced Micro Devices, Inc (AM",
       "underlying": "AMD",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/amdl/",
@@ -285,7 +285,7 @@
     },
     {
       "ticker_2x": "AMZZ",
-      "name": "GraniteShares 2x Long AMZN Daily ETF 2x long exposure to\n                                Amazon (AMZN)",
+      "name": "GraniteShares 2x Long AMZN Daily ETF 2x long exposure to\r\n                                Amazon (AMZN)",
       "underlying": "AMZN",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/amzz/",
@@ -294,7 +294,7 @@
     },
     {
       "ticker_2x": "AVGU",
-      "name": "GraniteShares 2x Long AVGO Daily ETF 2x long exposure to\n                                Broadcom Inc (AVGO)",
+      "name": "GraniteShares 2x Long AVGO Daily ETF 2x long exposure to\r\n                                Broadcom Inc (AVGO)",
       "underlying": "AVGO",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/avgu/",
@@ -303,7 +303,7 @@
     },
     {
       "ticker_2x": "BABX",
-      "name": "GraniteShares 2x Long BABA Daily ETF 2x long exposure to\n                                Alibaba Group Holding Limited (",
+      "name": "GraniteShares 2x Long BABA Daily ETF 2x long exposure to\r\n                                Alibaba Group Holding Limited ",
       "underlying": "BABA",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/babx/",
@@ -312,7 +312,7 @@
     },
     {
       "ticker_2x": "BULX",
-      "name": "GraniteShares 2x Long BULL Daily ETF 2x long exposure to\n                                Webull Corporation (BULL)",
+      "name": "GraniteShares 2x Long BULL Daily ETF 2x long exposure to\r\n                                Webull Corporation (BULL)",
       "underlying": "BULL",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/bulx/",
@@ -321,7 +321,7 @@
     },
     {
       "ticker_2x": "CONL",
-      "name": "GraniteShares 2x Long COIN Daily ETF 2x long exposure to\n                                Coinbase Global Inc (COIN)",
+      "name": "GraniteShares 2x Long COIN Daily ETF 2x long exposure to\r\n                                Coinbase Global Inc (COIN)",
       "underlying": "COIN",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/conl/",
@@ -330,7 +330,7 @@
     },
     {
       "ticker_2x": "CRWL",
-      "name": "GraniteShares 2x Long CRWD Daily ETF 2x long exposure to\n                                CrowdStrike Holdings Inc (CRWD)",
+      "name": "GraniteShares 2x Long CRWD Daily ETF 2x long exposure to\r\n                                CrowdStrike Holdings Inc (CRWD",
       "underlying": "CRWD",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/crwl/",
@@ -339,7 +339,7 @@
     },
     {
       "ticker_2x": "DLLL",
-      "name": "GraniteShares 2x Long DELL Daily ETF 2x long exposure to\n                                Dell Technologies Inc (DELL)",
+      "name": "GraniteShares 2x Long DELL Daily ETF 2x long exposure to\r\n                                Dell Technologies Inc (DELL)",
       "underlying": "DELL",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/dlll/",
@@ -348,7 +348,7 @@
     },
     {
       "ticker_2x": "ETRL",
-      "name": "GraniteShares 2x Long ETOR Daily ETF 2x long exposure to\n                                eToro Group Ltd (ETOR)",
+      "name": "GraniteShares 2x Long ETOR Daily ETF 2x long exposure to\r\n                                eToro Group Ltd (ETOR)",
       "underlying": "ETOR",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/etrl/",
@@ -357,7 +357,7 @@
     },
     {
       "ticker_2x": "GOU",
-      "name": "GraniteShares 2x Long GOOGL Daily ETF 2x long exposure to\n                                Alphabet Inc (GOOGL)",
+      "name": "GraniteShares 2x Long GOOGL Daily ETF 2x long exposure to\r\n                                Alphabet Inc (GOOGL)",
       "underlying": "GOOGL",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/gou/",
@@ -366,7 +366,7 @@
     },
     {
       "ticker_2x": "INTW",
-      "name": "GraniteShares 2x Long INTC Daily ETF 2x long exposure to\n                                Intel Corp (INTC)",
+      "name": "GraniteShares 2x Long INTC Daily ETF 2x long exposure to\r\n                                Intel Corp (INTC)",
       "underlying": "INTC",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/intw/",
@@ -375,7 +375,7 @@
     },
     {
       "ticker_2x": "IONL",
-      "name": "GraniteShares 2x Long IONQ Daily ETF 2x long exposure to\n                                IonQ Inc (IONQ)",
+      "name": "GraniteShares 2x Long IONQ Daily ETF 2x long exposure to\r\n                                IonQ Inc (IONQ)",
       "underlying": "IONQ",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/ionl/",
@@ -384,7 +384,7 @@
     },
     {
       "ticker_2x": "ISUL",
-      "name": "GraniteShares 2x Long ISRG Daily ETF 2x long exposure to\n                                Intuitive Surgical, Inc (ISRG)",
+      "name": "GraniteShares 2x Long ISRG Daily ETF 2x long exposure to\r\n                                Intuitive Surgical, Inc (ISRG)",
       "underlying": "ISRG",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/isul/",
@@ -393,7 +393,7 @@
     },
     {
       "ticker_2x": "LCDL",
-      "name": "GraniteShares 2x Long LCID Daily ETF 2x long exposure to\n                                Lucid Group Inc (LCID)",
+      "name": "GraniteShares 2x Long LCID Daily ETF 2x long exposure to\r\n                                Lucid Group Inc (LCID)",
       "underlying": "LCID",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/lcdl/",
@@ -402,7 +402,7 @@
     },
     {
       "ticker_2x": "MRAL",
-      "name": "GraniteShares 2x Long MARA Daily ETF 2x long exposure to\n                                MARA Holdings Inc (MARA)",
+      "name": "GraniteShares 2x Long MARA Daily ETF 2x long exposure to\r\n                                MARA Holdings Inc (MARA)",
       "underlying": "MARA",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/mral/",
@@ -411,7 +411,7 @@
     },
     {
       "ticker_2x": "FBL",
-      "name": "GraniteShares 2x Long META Daily ETF 2x long exposure to\n                                Meta Platforms Inc (META)",
+      "name": "GraniteShares 2x Long META Daily ETF 2x long exposure to\r\n                                Meta Platforms Inc (META)",
       "underlying": "META",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/fbl/",
@@ -420,7 +420,7 @@
     },
     {
       "ticker_2x": "MVLL",
-      "name": "GraniteShares 2x Long MRVL Daily ETF 2x long exposure to\n                                Marvell Technology, Inc (MRVL)",
+      "name": "GraniteShares 2x Long MRVL Daily ETF 2x long exposure to\r\n                                Marvell Technology, Inc (MRVL)",
       "underlying": "MRVL",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/mvll/",
@@ -429,7 +429,7 @@
     },
     {
       "ticker_2x": "MSFL",
-      "name": "GraniteShares 2x Long MSFT Daily ETF 2x long exposure to\n                                Microsoft (MSFT)",
+      "name": "GraniteShares 2x Long MSFT Daily ETF 2x long exposure to\r\n                                Microsoft (MSFT)",
       "underlying": "MSFT",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/msfl/",
@@ -438,7 +438,7 @@
     },
     {
       "ticker_2x": "MSTP",
-      "name": "GraniteShares 2x Long MSTR Daily ETF 2x long exposure to\n                                MicroStrategy Inc (MSTR)",
+      "name": "GraniteShares 2x Long MSTR Daily ETF 2x long exposure to\r\n                                MicroStrategy Inc (MSTR)",
       "underlying": "MSTR",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/mstp/",
@@ -447,7 +447,7 @@
     },
     {
       "ticker_2x": "MULL",
-      "name": "GraniteShares 2x Long MU Daily ETF 2x long exposure to\n                                Micron Technology Inc (MU)",
+      "name": "GraniteShares 2x Long MU Daily ETF 2x long exposure to\r\n                                Micron Technology Inc (MU)",
       "underlying": "MU",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/mull/",
@@ -456,7 +456,7 @@
     },
     {
       "ticker_2x": "NBIL",
-      "name": "GraniteShares 2x Long NBIS Daily ETF 2x long exposure to\n                                Nebius Group N.V (NBIS)",
+      "name": "GraniteShares 2x Long NBIS Daily ETF 2x long exposure to\r\n                                Nebius Group N.V (NBIS)",
       "underlying": "NBIS",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/nbil/",
@@ -465,7 +465,7 @@
     },
     {
       "ticker_2x": "NOWL",
-      "name": "GraniteShares 2x Long NOW Daily ETF 2x long exposure to\n                                ServiceNow Inc (NOW)",
+      "name": "GraniteShares 2x Long NOW Daily ETF 2x long exposure to\r\n                                ServiceNow Inc (NOW)",
       "underlying": "NOW",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/nowl/",
@@ -474,7 +474,7 @@
     },
     {
       "ticker_2x": "NVDL",
-      "name": "GraniteShares 2x Long NVDA Daily ETF 2x long exposure to\n                                NVIDIA Corp (NVDA)",
+      "name": "GraniteShares 2x Long NVDA Daily ETF 2x long exposure to\r\n                                NVIDIA Corp (NVDA)",
       "underlying": "NVDA",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/nvdl/",
@@ -483,7 +483,7 @@
     },
     {
       "ticker_2x": "PDDL",
-      "name": "GraniteShares 2x Long PDD Daily ETF 2x long exposure to\n                                PDD Holdings Inc (PDD)",
+      "name": "GraniteShares 2x Long PDD Daily ETF 2x long exposure to\r\n                                PDD Holdings Inc (PDD)",
       "underlying": "PDD",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/pddl/",
@@ -492,7 +492,7 @@
     },
     {
       "ticker_2x": "PTIR",
-      "name": "GraniteShares 2x Long PLTR Daily ETF 2x long exposure to\n                                Palantir Technologies Inc (PLTR",
+      "name": "GraniteShares 2x Long PLTR Daily ETF 2x long exposure to\r\n                                Palantir Technologies Inc (PLT",
       "underlying": "PLTR",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/ptir/",
@@ -501,7 +501,7 @@
     },
     {
       "ticker_2x": "QCML",
-      "name": "GraniteShares 2x Long QCOM Daily ETF 2x long exposure to\n                                Qualcomm Inc (QCOM)",
+      "name": "GraniteShares 2x Long QCOM Daily ETF 2x long exposure to\r\n                                Qualcomm Inc (QCOM)",
       "underlying": "QCOM",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/qcml/",
@@ -510,7 +510,7 @@
     },
     {
       "ticker_2x": "RDTL",
-      "name": "GraniteShares 2x Long RDDT Daily ETF 2x long exposure to\n                                Reddit Inc (RDDT)",
+      "name": "GraniteShares 2x Long RDDT Daily ETF 2x long exposure to\r\n                                Reddit Inc (RDDT)",
       "underlying": "RDDT",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/rdtl/",
@@ -519,7 +519,7 @@
     },
     {
       "ticker_2x": "RVNL",
-      "name": "GraniteShares 2x Long RIVN Daily ETF 2x long exposure to\n                                Rivian Automotive Inc (RIVN)",
+      "name": "GraniteShares 2x Long RIVN Daily ETF 2x long exposure to\r\n                                Rivian Automotive Inc (RIVN)",
       "underlying": "RIVN",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/rvnl/",
@@ -528,7 +528,7 @@
     },
     {
       "ticker_2x": "SMCL",
-      "name": "GraniteShares 2x Long SMCI Daily ETF 2x long exposure to\n                                Super Micro Computer Inc (SMCI)",
+      "name": "GraniteShares 2x Long SMCI Daily ETF 2x long exposure to\r\n                                Super Micro Computer Inc (SMCI",
       "underlying": "SMCI",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/smcl/",
@@ -537,7 +537,7 @@
     },
     {
       "ticker_2x": "SPAL",
-      "name": "GraniteShares 2x Long SpaceX Daily ETF 2x long exposure to\n                                Space Exploration Technologie",
+      "name": "GraniteShares 2x Long SpaceX Daily ETF 2x long exposure to\r\n                                Space Exploration Technologi",
       "underlying": "SPACEX",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/spal/",
@@ -546,7 +546,7 @@
     },
     {
       "ticker_2x": "TSLR",
-      "name": "GraniteShares 2x Long TSLA Daily ETF 2x long exposure to\n                                Tesla Inc (TSLA)",
+      "name": "GraniteShares 2x Long TSLA Daily ETF 2x long exposure to\r\n                                Tesla Inc (TSLA)",
       "underlying": "TSLA",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/tslr/",
@@ -555,7 +555,7 @@
     },
     {
       "ticker_2x": "TSMU",
-      "name": "GraniteShares 2x Long TSM Daily ETF 2x long exposure to\n                                Taiwan Semiconductor Manufacturi",
+      "name": "GraniteShares 2x Long TSM Daily ETF 2x long exposure to\r\n                                Taiwan Semiconductor Manufactur",
       "underlying": "TSM",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/tsmu/",
@@ -564,7 +564,7 @@
     },
     {
       "ticker_2x": "UBRL",
-      "name": "GraniteShares 2x Long Uber Daily ETF 2x long exposure to\n                                Uber Technologies Inc (UBER)",
+      "name": "GraniteShares 2x Long Uber Daily ETF 2x long exposure to\r\n                                Uber Technologies Inc (UBER)",
       "underlying": "UBER",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/ubrl/",
@@ -573,7 +573,7 @@
     },
     {
       "ticker_2x": "VRTL",
-      "name": "GraniteShares 2x Long VRT Daily ETF 2x long exposure to\n                                Vertiv Holdings Co (VRT)",
+      "name": "GraniteShares 2x Long VRT Daily ETF 2x long exposure to\r\n                                Vertiv Holdings Co (VRT)",
       "underlying": "VRT",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/vrtl/",

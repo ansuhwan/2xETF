@@ -863,6 +863,7 @@
     bb_breakdown:   { g: "B", cls: "a", t: "BB이탈" },
   };
   const SIGNAL_GLYPHS = {
+    drop10_und:              { g: "↓10", cls: "r", t: "전날 10%+ 급락: 기초 당일 등락 ≤ -10% (2X로는 -20%대)" },
     drop5_2x_ma60_touch:     { g: "↓60", cls: "amb", t: "급락+60선터치: 기초 당일 -5%↓ 급락 + 2X 당일 저가가 2X 60일선에 걸침 (Low≤MA60≤High)" },
     px_between_ma60_120_bull:{ g: "60·120▲", cls: "g", t: "2X 종가가 자기 60~120선 사이 (정배 MA60>MA120, 상승추세 눌림)" },
     px_between_ma60_120_bear:{ g: "60·120▽", cls: "amb", t: "2X 종가가 자기 60~120선 사이 (역배 MA60<MA120, 회복 초기)" },
@@ -947,6 +948,7 @@
       { k:"dv_100m", label:"$100M+" }, { k:"dv_10m", label:"$10M+" }, { k:"dv_1m", label:"$1M+" },
     ]},
     { key: "drop", label: "포착", chips: [
+      { k:"drop10_und", label:"↓10%급락" },
       { k:"drop5_2x_ma60_touch", label:"↓5%+60선터치" },
       { k:"px_between_ma60_120_bull", label:"60~120사이·정배" },
       { k:"px_between_ma60_120_bear", label:"60~120사이·역배" },

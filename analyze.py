@@ -498,6 +498,10 @@ def analyze_pair(etf: dict, prices: pd.DataFrame, earnings: dict[str, dict], tod
         if lo_today <= ma60_2x <= hi_today:
             ma_sigs.append("drop5_2x_ma60_touch")
 
+    # 전날 10%+ 급락 (기초 당일 등락 ≤ -10%)
+    if daily_und is not None and daily_und <= -10:
+        ma_sigs.append("drop10_und")
+
     # 2X 종가가 자기 60일선과 120일선 사이에 위치 (정배/역배 구분)
     if close2.size >= 120:
         ma60_2x = float(close2.iloc[-60:].mean())
