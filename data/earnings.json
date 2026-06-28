@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28T07:31:41+09:00",
+  "updated_at": "2026-06-29T07:31:12+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-08-07",
@@ -1381,9 +1381,9 @@
       "history": [
         {
           "date": "2026-05-07",
-          "estimate": -1.2,
-          "reported": -1.4,
-          "surprise": -16.26
+          "estimate": -0.91,
+          "reported": -1.12,
+          "surprise": -22.36
         },
         {
           "date": "2026-02-26",
@@ -1399,14 +1399,14 @@
         },
         {
           "date": "2025-08-12",
-          "estimate": -0.21,
-          "reported": -0.27,
-          "surprise": -29.81
+          "estimate": -0.49,
+          "reported": -0.6,
+          "surprise": -21.68
         }
       ],
       "beat_streak": 0,
       "miss_streak": 2,
-      "avg_surprise_pct": -5.42
+      "avg_surprise_pct": -4.91
     },
     "CVNA": {
       "next_earnings": "2026-07-30",
@@ -1451,21 +1451,21 @@
       "history": [
         {
           "date": "2026-05-06",
-          "estimate": 0.36,
-          "reported": 0.42,
-          "surprise": 15.4
+          "estimate": 1.06,
+          "reported": 1.14,
+          "surprise": 7.71
         },
         {
           "date": "2026-02-18",
-          "estimate": 0.58,
-          "reported": 0.48,
-          "surprise": -17.73
+          "estimate": 1.29,
+          "reported": 1.27,
+          "surprise": -1.36
         },
         {
           "date": "2025-11-05",
-          "estimate": 0.68,
-          "reported": 0.55,
-          "surprise": -18.73
+          "estimate": 1.25,
+          "reported": 1.28,
+          "surprise": 2.18
         },
         {
           "date": "2025-08-06",
@@ -1476,7 +1476,7 @@
       ],
       "beat_streak": 1,
       "miss_streak": 0,
-      "avg_surprise_pct": 7.12
+      "avg_surprise_pct": 14.51
     },
     "DDOG": {
       "next_earnings": "2026-08-06",
@@ -2647,14 +2647,14 @@
         {
           "date": "2026-04-29",
           "estimate": -0.57,
-          "reported": -0.47,
-          "surprise": 17.01
+          "reported": -0.49,
+          "surprise": 13.79
         },
         {
           "date": "2026-02-19",
-          "estimate": -0.39,
+          "estimate": -0.43,
           "reported": -0.29,
-          "surprise": 26.11
+          "surprise": 32.56
         },
         {
           "date": "2025-11-05",
@@ -2671,7 +2671,7 @@
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 17.72
+      "avg_surprise_pct": 18.53
     },
     "LRCX": {
       "next_earnings": "2026-07-30",
@@ -4244,9 +4244,9 @@
       "history": [
         {
           "date": "2026-04-30",
-          "estimate": -0.72,
-          "reported": -0.33,
-          "surprise": 53.92
+          "estimate": -0.6,
+          "reported": -0.55,
+          "surprise": 8.7
         },
         {
           "date": "2026-02-12",
@@ -4262,14 +4262,14 @@
         },
         {
           "date": "2025-08-05",
-          "estimate": -0.78,
-          "reported": -0.97,
-          "surprise": -24.7
+          "estimate": -0.64,
+          "reported": -0.8,
+          "surprise": -25.41
         }
       ],
       "beat_streak": 2,
       "miss_streak": 0,
-      "avg_surprise_pct": 8.68
+      "avg_surprise_pct": -2.8
     },
     "RKLB": {
       "next_earnings": "2026-08-07",
