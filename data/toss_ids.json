@@ -2169,7 +2169,11 @@
     "market": "NSQ"
   },
   "SMTG": null,
-  "DRAL": null,
+  "DRAL": {
+    "code": "AMX2606025001",
+    "name_kr": "DEFIANCE DAILY TARGET 2X LONG DRAM ETF",
+    "market": "AMX"
+  },
   "DRAM": {
     "code": "AMX2604002001",
     "name_kr": "라운드힐 메모리 ETF",
@@ -2180,8 +2184,16 @@
     "name_kr": "TRADR 스페이스X 데일리 2배 인버스 ETF",
     "market": "AMX"
   },
-  "XIGV": null,
-  "AEHG": null,
+  "XIGV": {
+    "code": "AMX2606025002",
+    "name_kr": "DEFIANCE US 100 TECH EX SOFTWARE ETF",
+    "market": "AMX"
+  },
+  "AEHG": {
+    "code": "AMX2606026001",
+    "name_kr": "LEVERAGE SHARES 2X LONG AEHR DAILY ETF",
+    "market": "AMX"
+  },
   "AEHR": {
     "code": "US19970815001",
     "name_kr": "AEHR",
