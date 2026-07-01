@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-07-01T07:34:27+09:00",
+  "updated_at": "2026-07-02T07:36:50+09:00",
   "total": 221,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 290,
+      "ms": 224,
       "ok": true
     },
     "GraniteShares": {
       "count": 35,
-      "ms": 460,
+      "ms": 534,
       "ok": true
     },
     "Defiance": {
       "count": 40,
-      "ms": 9650,
+      "ms": 9584,
       "ok": true
     },
     "REX": {
       "count": 31,
-      "ms": 394,
+      "ms": 404,
       "ok": true
     },
     "Tradr": {
       "count": 72,
-      "ms": 241,
+      "ms": 285,
       "ok": true
     },
     "LeverageShares": {
       "count": 13,
-      "ms": 294,
+      "ms": 321,
       "ok": true
     },
     "3X": {
@@ -1220,6 +1220,51 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "CIEX",
+      "name": "CIEX Tradr 2X Long CIEN Daily ETF",
+      "underlying": "CIEN",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/ciex?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "QNTU",
+      "name": "QNTU Tradr 2X Long QNT Daily ETF",
+      "underlying": "QNT",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/qntu?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "RMBX",
+      "name": "RMBX Tradr 2X Long RMBS Daily ETF",
+      "underlying": "RMBS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/rmbx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "TSEU",
+      "name": "TSEU Tradr 2X Long TSEM Daily ETF",
+      "underlying": "TSEM",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/tseu?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "TTMX",
+      "name": "TTMX Tradr 2X Long TTMI Daily ETF",
+      "underlying": "TTMI",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/ttmx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "SPCM",
       "name": "SPCM Tradr 2X Long SpaceX Daily ETF",
       "underlying": "SPACEX",
@@ -1652,15 +1697,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "CIEX",
-      "name": "Tradr 2X Long CIEN Daily ETF",
-      "underlying": "CIEN",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/ciex?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "COZX",
       "name": "Tradr 2X Long CORZ Daily ETF",
       "underlying": "CORZ",
@@ -1684,42 +1720,6 @@
       "underlying": "OPEN",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/opex?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "QNTU",
-      "name": "Tradr 2X Long QNT Daily ETF",
-      "underlying": "QNT",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/qntu?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "RMBX",
-      "name": "Tradr 2X Long RMBS Daily ETF",
-      "underlying": "RMBS",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/rmbx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "TSEU",
-      "name": "Tradr 2X Long TSEM Daily ETF",
-      "underlying": "TSEM",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/tseu?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "TTMX",
-      "name": "Tradr 2X Long TTMI Daily ETF",
-      "underlying": "TTMI",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/ttmx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
