@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-07-02T07:36:50+09:00",
-  "total": 221,
+  "updated_at": "2026-07-03T07:28:35+09:00",
+  "total": 218,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 224,
+      "ms": 305,
       "ok": true
     },
     "GraniteShares": {
-      "count": 35,
-      "ms": 534,
+      "count": 33,
+      "ms": 424,
       "ok": true
     },
     "Defiance": {
       "count": 40,
-      "ms": 9584,
+      "ms": 10841,
       "ok": true
     },
     "REX": {
       "count": 31,
-      "ms": 404,
+      "ms": 483,
       "ok": true
     },
     "Tradr": {
       "count": 72,
-      "ms": 285,
+      "ms": 415,
       "ok": true
     },
     "LeverageShares": {
-      "count": 13,
-      "ms": 321,
+      "count": 12,
+      "ms": 586,
       "ok": true
     },
     "3X": {
@@ -311,15 +311,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "BULX",
-      "name": "GraniteShares 2x Long BULL Daily ETF 2x long exposure to\n                                Webull Corporation (BULL)",
-      "underlying": "BULL",
-      "issuer": "GraniteShares",
-      "url": "https://graniteshares.com/etfs/bulx/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "CONL",
       "name": "GraniteShares 2x Long COIN Daily ETF 2x long exposure to\n                                Coinbase Global Inc (COIN)",
       "underlying": "COIN",
@@ -347,11 +338,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "ETRL",
-      "name": "GraniteShares 2x Long ETOR Daily ETF 2x long exposure to\n                                eToro Group Ltd (ETOR)",
-      "underlying": "ETOR",
+      "ticker_2x": "FBL",
+      "name": "GraniteShares 2x Long META Daily ETF 2x long exposure to\n                                Meta Platforms Inc (META)",
+      "underlying": "META",
       "issuer": "GraniteShares",
-      "url": "https://graniteshares.com/etfs/etrl/",
+      "url": "https://graniteshares.com/etfs/fbl/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -410,24 +401,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "FBL",
-      "name": "GraniteShares 2x Long META Daily ETF 2x long exposure to\n                                Meta Platforms Inc (META)",
-      "underlying": "META",
-      "issuer": "GraniteShares",
-      "url": "https://graniteshares.com/etfs/fbl/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "MVLL",
-      "name": "GraniteShares 2x Long MRVL Daily ETF 2x long exposure to\n                                Marvell Technology, Inc (MRVL)",
-      "underlying": "MRVL",
-      "issuer": "GraniteShares",
-      "url": "https://graniteshares.com/etfs/mvll/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "MSFL",
       "name": "GraniteShares 2x Long MSFT Daily ETF 2x long exposure to\n                                Microsoft (MSFT)",
       "underlying": "MSFT",
@@ -451,6 +424,15 @@
       "underlying": "MU",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/mull/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "MVLL",
+      "name": "GraniteShares 2x Long MRVL Daily ETF 2x long exposure to\n                                Marvell Technology, Inc (MRVL)",
+      "underlying": "MRVL",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/mvll/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1877,20 +1859,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "CBRG",
-      "name": "CBRG 2x Long CBRS",
-      "underlying": "CBRS",
+      "ticker_2x": "SKHX",
+      "name": "SKHX 2x Long SK Hynix HOT",
+      "underlying": "SKHYNIX",
       "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-cbrs-daily-etf/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "SNDG",
-      "name": "SNDG 2x Long SNDK",
-      "underlying": "SNDK",
-      "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-sndk-daily-etf/",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-sk-hynix-daily-etf/",
       "expense_ratio": null,
       "leverage": 2
     },
