@@ -2199,26 +2199,47 @@
     "name_kr": "AEHR",
     "market": "NSQ"
   },
-  "CIEX": null,
+  "CIEX": {
+    "code": "AMX2607001002",
+    "name_kr": "TRADR 2X LONG CIEN DAILY ETF",
+    "market": "AMX"
+  },
   "QNT": {
     "code": "NAS2606004007",
     "name_kr": "QNT",
     "market": "NSQ"
   },
-  "QNTU": null,
+  "QNTU": {
+    "code": "AMX2607001009",
+    "name_kr": "TRADR 2X LONG QNT DAILY ETF",
+    "market": "AMX"
+  },
   "RMBS": {
     "code": "US19970514001",
     "name_kr": "RMBS",
     "market": "NSQ"
   },
-  "RMBX": null,
-  "TSEU": null,
+  "RMBX": {
+    "code": "AMX2607001010",
+    "name_kr": "TRADR 2X LONG RMBS DAILY ETF",
+    "market": "AMX"
+  },
+  "TSEU": {
+    "code": "AMX2607001011",
+    "name_kr": "TRADR 2X LONG TSEM DAILY ETF",
+    "market": "AMX"
+  },
   "TTMI": {
     "code": "US20000921001",
     "name_kr": "TTMI",
     "market": "NSQ"
   },
-  "TTMX": null,
+  "TTMX": {
+    "code": "AMX2607001012",
+    "name_kr": "TRADR 2X LONG TTMI DAILY ETF",
+    "market": "AMX"
+  },
   "SKHX": null,
-  "SKHYNIX": null
+  "SKHYNIX": null,
+  "CRBS": null
 }
