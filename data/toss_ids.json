@@ -2241,5 +2241,29 @@
   },
   "SKHX": null,
   "SKHYNIX": null,
-  "CRBS": null
+  "CRBS": null,
+  "AAPE": null,
+  "AMZG": null,
+  "BB": {
+    "code": "US20171016002",
+    "name_kr": "BB",
+    "market": "NYS"
+  },
+  "BBUL": null,
+  "GOOL": null,
+  "JBL": {
+    "code": "US19930429001",
+    "name_kr": "JBL",
+    "market": "NYS"
+  },
+  "JBLG": null,
+  "METG": null,
+  "P": null,
+  "PUL": null,
+  "VIAG": null,
+  "VIAV": {
+    "code": "US20150805004",
+    "name_kr": "VIAV",
+    "market": "NSQ"
+  }
 }
