@@ -2121,7 +2121,11 @@
     "market": "AMX"
   },
   "ASTG": null,
-  "CDNG": null,
+  "CDNG": {
+    "code": "AMX2606023003",
+    "name_kr": "LEVERAGE SHARES 2X LONG CDNS DAILY ETF",
+    "market": "AMX"
+  },
   "CDNS": {
     "code": "US19900326003",
     "name_kr": "CDNS",
@@ -2132,8 +2136,16 @@
     "name_kr": "ENTG",
     "market": "NSQ"
   },
-  "ENTL": null,
-  "FOMG": null,
+  "ENTL": {
+    "code": "AMX2606023005",
+    "name_kr": "LEVERAGE SHARES 2X LONG ENTG DAILY ETF",
+    "market": "AMX"
+  },
+  "FOMG": {
+    "code": "AMX2606023006",
+    "name_kr": "LEVERAGE SHARES 2X LONG FORM DAILY ETF",
+    "market": "AMX"
+  },
   "FORM": {
     "code": "US20030612001",
     "name_kr": "FORM",
@@ -2144,7 +2156,11 @@
     "name_kr": "FPS",
     "market": "NYS"
   },
-  "FPSX": null,
+  "FPSX": {
+    "code": "AMX2606023007",
+    "name_kr": "LEVERAGE SHARES 2X LONG FPS DAILY ETF",
+    "market": "AMX"
+  },
   "GFS": {
     "code": "US20211027013",
     "name_kr": "GFS",

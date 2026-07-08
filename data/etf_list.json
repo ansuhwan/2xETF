@@ -1,36 +1,40 @@
 {
-  "updated_at": "2026-07-08T07:29:33+09:00",
+  "updated_at": "2026-07-09T07:26:25+09:00",
   "total": 220,
-  "stale_issuers": [],
+  "stale_issuers": [
+    "Defiance"
+  ],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 292,
+      "ms": 180,
       "ok": true
     },
     "GraniteShares": {
       "count": 35,
-      "ms": 402,
+      "ms": 569,
       "ok": true
     },
     "Defiance": {
       "count": 39,
-      "ms": 9943,
-      "ok": true
+      "scraped": 0,
+      "ok": false,
+      "fellback": true,
+      "reason": "empty"
     },
     "REX": {
       "count": 31,
-      "ms": 454,
+      "ms": 509,
       "ok": true
     },
     "Tradr": {
       "count": 73,
-      "ms": 442,
+      "ms": 272,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 428,
+      "ms": 440,
       "ok": true
     },
     "3X": {
@@ -587,7 +591,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/mrnx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "ZETX",
@@ -596,7 +602,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/zetx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "RCAX",
@@ -605,7 +613,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/rcax/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "ANEL",
@@ -614,7 +624,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/anel/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "DKNX",
@@ -623,7 +635,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/dknx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "LMNX",
@@ -632,7 +646,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/lmnx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "LUNL",
@@ -641,7 +657,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/lunl/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "OSCX",
@@ -650,7 +668,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/oscx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "PLU",
@@ -659,7 +679,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/plu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "RKTL",
@@ -668,7 +690,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/rktl/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "VSTL",
@@ -677,7 +701,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/vstl/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "LNOK",
@@ -686,7 +712,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/lnok/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "STXL",
@@ -695,7 +723,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/stxl/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "POEL",
@@ -704,7 +734,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/poel/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "AMA",
@@ -713,7 +745,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ama/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "AMKL",
@@ -722,7 +756,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/amkl/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "AMPU",
@@ -731,7 +767,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ampu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "ASTY",
@@ -740,7 +778,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/asty/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "OSSL",
@@ -749,7 +789,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ossl/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "WYFL",
@@ -758,7 +800,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/wyfl/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "INFH",
@@ -767,7 +811,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/infh/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "VELL",
@@ -776,7 +822,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/vell/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "UMAL",
@@ -785,7 +833,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/umal/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "DRAL",
@@ -794,7 +844,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/dral/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "RIOX",
@@ -803,7 +855,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/riox/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "LLYX",
@@ -812,7 +866,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/llyx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "MSTX",
@@ -821,7 +877,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/mstx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "AVGX",
@@ -830,7 +888,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/avgx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "SMCX",
@@ -839,7 +899,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/smcx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "ORCX",
@@ -848,7 +910,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/orcx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "SOFX",
@@ -857,7 +921,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/sofx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "SOUX",
@@ -866,7 +932,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/soux/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "HIMZ",
@@ -875,7 +943,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/himz/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "HOOX",
@@ -884,7 +954,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/hoox/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "IONX",
@@ -893,7 +965,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ionx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "RGTX",
@@ -902,7 +976,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/rgtx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "RKLX",
@@ -911,7 +987,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/rklx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "OKLL",
@@ -920,7 +998,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/okll/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "NVOX",
@@ -929,7 +1009,9 @@
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/nvox/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-07-08T07:29:33+09:00"
     },
     {
       "ticker_2x": "MSTU",
