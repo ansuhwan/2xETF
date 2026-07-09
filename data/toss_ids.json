@@ -2281,5 +2281,11 @@
     "code": "US20150805004",
     "name_kr": "VIAV",
     "market": "NSQ"
+  },
+  "PUR": null,
+  "PURR": {
+    "code": "NAS0251203006",
+    "name_kr": "PURR",
+    "market": "NSQ"
   }
 }
