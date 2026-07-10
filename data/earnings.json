@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10T07:38:02+09:00",
+  "updated_at": "2026-07-11T07:29:41+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-08-07",
@@ -954,8 +954,8 @@
     },
     "CELH": {
       "next_earnings": "2026-05-07",
-      "eps_estimate": 0.42859,
-      "eps_low": 0.34,
+      "eps_estimate": 0.42311,
+      "eps_low": 0.33,
       "eps_high": 0.53,
       "history": [
         {
@@ -1736,8 +1736,8 @@
     },
     "FIGR": {
       "next_earnings": "2026-05-11",
-      "eps_estimate": 0.3,
-      "eps_low": 0.26,
+      "eps_estimate": 0.28667,
+      "eps_low": 0.22,
       "eps_high": 0.32,
       "history": [
         {
@@ -2640,9 +2640,9 @@
     },
     "LMND": {
       "next_earnings": "2026-04-29",
-      "eps_estimate": -0.55,
-      "eps_low": -0.55,
-      "eps_high": -0.55,
+      "eps_estimate": -0.52,
+      "eps_low": -0.52,
+      "eps_high": -0.52,
       "history": [
         {
           "date": "2026-04-29",
@@ -3620,7 +3620,7 @@
     },
     "OSCR": {
       "next_earnings": "2026-05-06",
-      "eps_estimate": 0.316,
+      "eps_estimate": 0.3264,
       "eps_low": -0.18,
       "eps_high": 0.69,
       "history": [
@@ -5704,9 +5704,9 @@
     },
     "FPS": {
       "next_earnings": "2026-05-14",
-      "eps_estimate": 0.23498,
+      "eps_estimate": 0.23748,
       "eps_low": 0.16,
-      "eps_high": 0.26,
+      "eps_high": 0.28,
       "history": [],
       "beat_streak": 0,
       "miss_streak": 0,
@@ -6123,6 +6123,111 @@
       "beat_streak": 1,
       "miss_streak": 0,
       "avg_surprise_pct": -325.96
+    },
+    "BTDR": {
+      "next_earnings": "2026-05-14",
+      "eps_estimate": -0.34667,
+      "eps_low": -0.37,
+      "eps_high": -0.33,
+      "history": [
+        {
+          "date": "2026-05-14",
+          "estimate": -0.34,
+          "reported": -0.46,
+          "surprise": -32.38
+        },
+        {
+          "date": "2026-02-12",
+          "estimate": -0.11,
+          "reported": -0.31,
+          "surprise": -167.91
+        },
+        {
+          "date": "2025-12-10",
+          "estimate": -0.13,
+          "reported": -0.16,
+          "surprise": -16.57
+        },
+        {
+          "date": "2025-08-18",
+          "estimate": -0.09,
+          "reported": -0.13,
+          "surprise": -32.35
+        }
+      ],
+      "beat_streak": 0,
+      "miss_streak": 4,
+      "avg_surprise_pct": -62.3
+    },
+    "NTAP": {
+      "next_earnings": "2026-05-28",
+      "eps_estimate": 2.11102,
+      "eps_low": 2.08202,
+      "eps_high": 2.16,
+      "history": [
+        {
+          "date": "2026-05-28",
+          "estimate": 2.27,
+          "reported": 2.43,
+          "surprise": 7.22
+        },
+        {
+          "date": "2026-02-26",
+          "estimate": 2.06,
+          "reported": 2.12,
+          "surprise": 2.78
+        },
+        {
+          "date": "2025-11-25",
+          "estimate": 1.88,
+          "reported": 2.05,
+          "surprise": 8.76
+        },
+        {
+          "date": "2025-08-27",
+          "estimate": 1.54,
+          "reported": 1.55,
+          "surprise": 0.74
+        }
+      ],
+      "beat_streak": 4,
+      "miss_streak": 0,
+      "avg_surprise_pct": 4.87
+    },
+    "TDC": {
+      "next_earnings": "2026-08-04",
+      "eps_estimate": 0.55484,
+      "eps_low": 0.53,
+      "eps_high": 0.58,
+      "history": [
+        {
+          "date": "2026-05-05",
+          "estimate": 0.77,
+          "reported": 0.88,
+          "surprise": 14.21
+        },
+        {
+          "date": "2026-02-10",
+          "estimate": 0.56,
+          "reported": 0.74,
+          "surprise": 33.08
+        },
+        {
+          "date": "2025-11-04",
+          "estimate": 0.54,
+          "reported": 0.72,
+          "surprise": 34.31
+        },
+        {
+          "date": "2025-08-05",
+          "estimate": 0.4,
+          "reported": 0.47,
+          "surprise": 16.92
+        }
+      ],
+      "beat_streak": 4,
+      "miss_streak": 0,
+      "avg_surprise_pct": 24.63
     }
   }
 }
