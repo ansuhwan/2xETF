@@ -2258,31 +2258,63 @@
   "SKHX": null,
   "SKHYNIX": null,
   "CRBS": null,
-  "AAPE": null,
-  "AMZG": null,
+  "AAPE": {
+    "code": "AMX2607007001",
+    "name_kr": "LEVERAGE SHARES 2X LONG AAPL DAILY ETF",
+    "market": "AMX"
+  },
+  "AMZG": {
+    "code": "AMX2607007003",
+    "name_kr": "LEVERAGE SHARES 2X LONG AMZN DAILY ETF",
+    "market": "AMX"
+  },
   "BB": {
     "code": "US20171016002",
     "name_kr": "BB",
     "market": "NYS"
   },
-  "BBUL": null,
-  "GOOL": null,
+  "BBUL": {
+    "code": "NAS2607007002",
+    "name_kr": "GRANITESHARES 2X LONG BB DAILY ETF",
+    "market": "NSQ"
+  },
+  "GOOL": {
+    "code": "AMX2607007010",
+    "name_kr": "LEVERAGE SHARES 2X LONG GOOGL DAILY ETF",
+    "market": "AMX"
+  },
   "JBL": {
     "code": "US19930429001",
     "name_kr": "JBL",
     "market": "NYS"
   },
-  "JBLG": null,
-  "METG": null,
+  "JBLG": {
+    "code": "AMX2607007011",
+    "name_kr": "LEVERAGE SHARES 2X LONG JBL DAILY ETF",
+    "market": "AMX"
+  },
+  "METG": {
+    "code": "AMX2607007014",
+    "name_kr": "LEVERAGE SHARES 2X LONG META DAILY ETF",
+    "market": "AMX"
+  },
   "P": null,
-  "PUL": null,
+  "PUL": {
+    "code": "NAS2607007009",
+    "name_kr": "GRANITESHARES 2X LONG P DAILY ETF",
+    "market": "NSQ"
+  },
   "VIAG": null,
   "VIAV": {
     "code": "US20150805004",
     "name_kr": "VIAV",
     "market": "NSQ"
   },
-  "PUR": null,
+  "PUR": {
+    "code": "NAS2607008004",
+    "name_kr": "디파이언스 데일리 타겟 2배 롱 PURR ETF",
+    "market": "NSQ"
+  },
   "PURR": {
     "code": "NAS0251203006",
     "name_kr": "PURR",
