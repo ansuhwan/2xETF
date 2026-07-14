@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-14T07:27:14+09:00",
+  "updated_at": "2026-07-15T07:28:25+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-08-07",
@@ -807,7 +807,7 @@
       "avg_surprise_pct": -0.9
     },
     "BMNR": {
-      "next_earnings": "2026-07-13",
+      "next_earnings": "2026-07-15",
       "eps_estimate": 0.18,
       "eps_low": 0.18,
       "eps_high": 0.18,
@@ -954,7 +954,7 @@
     },
     "CELH": {
       "next_earnings": "2026-05-07",
-      "eps_estimate": 0.42311,
+      "eps_estimate": 0.42256,
       "eps_low": 0.33,
       "eps_high": 0.53,
       "history": [
@@ -6228,6 +6228,41 @@
       "beat_streak": 4,
       "miss_streak": 0,
       "avg_surprise_pct": 24.63
+    },
+    "OUST": {
+      "next_earnings": "2026-08-06",
+      "eps_estimate": -0.136,
+      "eps_low": -0.21,
+      "eps_high": -0.08,
+      "history": [
+        {
+          "date": "2026-05-05",
+          "estimate": -0.11,
+          "reported": -0.25,
+          "surprise": -115.65
+        },
+        {
+          "date": "2026-03-02",
+          "estimate": -0.13,
+          "reported": 0.07,
+          "surprise": 149.33
+        },
+        {
+          "date": "2025-11-04",
+          "estimate": -0.18,
+          "reported": -0.16,
+          "surprise": 10.79
+        },
+        {
+          "date": "2025-08-07",
+          "estimate": -0.2,
+          "reported": -0.26,
+          "surprise": -28.78
+        }
+      ],
+      "beat_streak": 0,
+      "miss_streak": 1,
+      "avg_surprise_pct": 3.92
     }
   }
 }

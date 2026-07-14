@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-07-14T07:24:24+09:00",
-  "total": 224,
+  "updated_at": "2026-07-15T07:26:03+09:00",
+  "total": 225,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 7854,
+      "ms": 3528,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 937,
+      "ms": 539,
       "ok": true
     },
     "Defiance": {
-      "count": 40,
-      "ms": 12166,
+      "count": 41,
+      "ms": 12223,
       "ok": true
     },
     "REX": {
       "count": 31,
-      "ms": 490,
+      "ms": 234,
       "ok": true
     },
     "Tradr": {
       "count": 73,
-      "ms": 477,
+      "ms": 272,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 449,
+      "ms": 457,
       "ok": true
     },
     "3X": {
@@ -964,6 +964,15 @@
       "underlying": "PURR",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/pur/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "OUSL",
+      "name": "OUSL | Defiance Daily Target 2X Long OUST ETF",
+      "underlying": "OUST",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/ousl/",
       "expense_ratio": null,
       "leverage": 2
     },
