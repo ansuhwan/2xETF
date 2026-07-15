@@ -2324,13 +2324,21 @@
     "name_kr": "PURR",
     "market": "NSQ"
   },
-  "BTDL": null,
+  "BTDL": {
+    "code": "NAS2607014002",
+    "name_kr": "GRANITESHARES 2X LONG BTDR DAILY ETF",
+    "market": "NSQ"
+  },
   "BTDR": {
     "code": "NAS0230414002",
     "name_kr": "BTDR",
     "market": "NSQ"
   },
-  "NTAL": null,
+  "NTAL": {
+    "code": "NAS2607014006",
+    "name_kr": "GRANITESHARES 2X LONG NTAP DAILY ETF",
+    "market": "NSQ"
+  },
   "NTAP": {
     "code": "US19951121003",
     "name_kr": "NTAP",
@@ -2341,8 +2349,16 @@
     "name_kr": "TDC",
     "market": "NYS"
   },
-  "TDCL": null,
-  "OUSL": null,
+  "TDCL": {
+    "code": "NAS2607014010",
+    "name_kr": "GRANITESHARES 2X LONG TDC DAILY ETF",
+    "market": "NSQ"
+  },
+  "OUSL": {
+    "code": "AMX2607014013",
+    "name_kr": "디파이언스 데일리 타겟 2X 롱 OUST ETF",
+    "market": "AMX"
+  },
   "OUST": {
     "code": "US20210312013",
     "name_kr": "OUST",
