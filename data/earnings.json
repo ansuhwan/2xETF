@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T07:23:21+09:00",
+  "updated_at": "2026-07-19T07:24:01+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-08-07",
@@ -1135,7 +1135,7 @@
     },
     "COHR": {
       "next_earnings": "2026-05-06",
-      "eps_estimate": 1.61623,
+      "eps_estimate": 1.61709,
       "eps_low": 1.49,
       "eps_high": 1.75,
       "history": [
@@ -3240,11 +3240,17 @@
       "avg_surprise_pct": 10.26
     },
     "NFLX": {
-      "next_earnings": "2026-07-17",
-      "eps_estimate": 0.78931,
-      "eps_low": 0.74,
-      "eps_high": 0.83,
+      "next_earnings": "2026-07-16",
+      "eps_estimate": 0.82336,
+      "eps_low": 0.79,
+      "eps_high": 0.87,
       "history": [
+        {
+          "date": "2026-07-16",
+          "estimate": 0.79,
+          "reported": 0.8,
+          "surprise": 1.45
+        },
         {
           "date": "2026-04-16",
           "estimate": 1.25,
@@ -3262,17 +3268,11 @@
           "estimate": 0.7,
           "reported": 0.59,
           "surprise": -15.79
-        },
-        {
-          "date": "2025-07-17",
-          "estimate": 0.7,
-          "reported": 0.72,
-          "surprise": 2.24
         }
       ],
-      "beat_streak": 0,
-      "miss_streak": 1,
-      "avg_surprise_pct": -3.38
+      "beat_streak": 1,
+      "miss_streak": 0,
+      "avg_surprise_pct": -3.58
     },
     "NOK": {
       "next_earnings": "2026-07-23",
@@ -4072,35 +4072,10 @@
       "eps_estimate": -0.17,
       "eps_low": -0.17,
       "eps_high": -0.17,
-      "history": [
-        {
-          "date": "2026-05-07",
-          "estimate": -0.12,
-          "reported": -0.22,
-          "surprise": -88.57
-        },
-        {
-          "date": "2026-03-18",
-          "estimate": -0.15,
-          "reported": -0.17,
-          "surprise": -13.33
-        },
-        {
-          "date": "2025-11-13",
-          "estimate": -0.1,
-          "reported": -0.16,
-          "surprise": -60.0
-        },
-        {
-          "date": "2025-08-14",
-          "estimate": -0.11,
-          "reported": -0.09,
-          "surprise": 17.56
-        }
-      ],
+      "history": [],
       "beat_streak": 0,
-      "miss_streak": 3,
-      "avg_surprise_pct": -36.08
+      "miss_streak": 0,
+      "avg_surprise_pct": null
     },
     "RDDT": {
       "next_earnings": "2026-07-31",
@@ -6167,7 +6142,7 @@
     },
     "NTAP": {
       "next_earnings": "2026-05-28",
-      "eps_estimate": 2.11102,
+      "eps_estimate": 2.11059,
       "eps_low": 2.08202,
       "eps_high": 2.16,
       "history": [
