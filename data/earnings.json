@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T07:24:37+09:00",
+  "updated_at": "2026-07-21T07:28:33+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-08-07",
@@ -1381,7 +1381,7 @@
     },
     "CRWV": {
       "next_earnings": "2026-05-07",
-      "eps_estimate": -1.10634,
+      "eps_estimate": -1.12361,
       "eps_low": -1.82,
       "eps_high": -0.38,
       "history": [
@@ -3240,7 +3240,7 @@
       "avg_surprise_pct": 10.26
     },
     "NFLX": {
-      "next_earnings": "2026-07-16",
+      "next_earnings": "2026-10-20",
       "eps_estimate": 0.82336,
       "eps_low": 0.79,
       "eps_high": 0.87,
@@ -4068,7 +4068,7 @@
       "avg_surprise_pct": 9.13
     },
     "RCAT": {
-      "next_earnings": "2026-05-07",
+      "next_earnings": "2026-08-06",
       "eps_estimate": -0.17,
       "eps_low": -0.17,
       "eps_high": -0.17,
