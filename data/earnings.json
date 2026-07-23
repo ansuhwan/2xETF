@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-23T07:29:26+09:00",
+  "updated_at": "2026-07-24T07:29:27+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-08-07",
@@ -959,7 +959,7 @@
       "avg_surprise_pct": -9.04
     },
     "CELH": {
-      "next_earnings": "2026-05-07",
+      "next_earnings": "2026-08-10",
       "eps_estimate": 0.41904,
       "eps_low": 0.33,
       "eps_high": 0.53,
@@ -994,7 +994,7 @@
       "avg_surprise_pct": 55.5
     },
     "CIEN": {
-      "next_earnings": "2026-06-04",
+      "next_earnings": "2026-09-09",
       "eps_estimate": 1.72068,
       "eps_low": 1.68,
       "eps_high": 1.76361,
@@ -1204,7 +1204,7 @@
       "avg_surprise_pct": -886.31
     },
     "CORZ": {
-      "next_earnings": "2026-05-06",
+      "next_earnings": "2026-08-07",
       "eps_estimate": -0.06,
       "eps_low": -0.1,
       "eps_high": -0.02,
@@ -1309,7 +1309,7 @@
       "avg_surprise_pct": -4.33
     },
     "CRDO": {
-      "next_earnings": "2026-06-01",
+      "next_earnings": "2026-09-02",
       "eps_estimate": 1.1632,
       "eps_low": 1.07,
       "eps_high": 1.22,
@@ -1380,7 +1380,7 @@
       "avg_surprise_pct": 4.66
     },
     "CRWV": {
-      "next_earnings": "2026-05-07",
+      "next_earnings": "2026-08-12",
       "eps_estimate": -1.16371,
       "eps_low": -1.82,
       "eps_high": -0.42,
@@ -1910,7 +1910,7 @@
       "avg_surprise_pct": 57.82
     },
     "GME": {
-      "next_earnings": "2026-06-02",
+      "next_earnings": "2026-09-08",
       "eps_estimate": 0.27,
       "eps_low": 0.27,
       "eps_high": 0.27,
@@ -2330,11 +2330,17 @@
       "avg_surprise_pct": 71.96
     },
     "ISRG": {
-      "next_earnings": "2026-07-22",
-      "eps_estimate": 2.50267,
-      "eps_low": 2.41,
-      "eps_high": 2.61,
+      "next_earnings": "2026-10-20",
+      "eps_estimate": 2.63331,
+      "eps_low": 2.53,
+      "eps_high": 2.76,
       "history": [
+        {
+          "date": "2026-07-16",
+          "estimate": 2.5,
+          "reported": 2.8,
+          "surprise": 11.86
+        },
         {
           "date": "2026-04-21",
           "estimate": 2.11,
@@ -2352,17 +2358,11 @@
           "estimate": 1.99,
           "reported": 2.4,
           "surprise": 20.7
-        },
-        {
-          "date": "2025-07-22",
-          "estimate": 1.92,
-          "reported": 2.19,
-          "surprise": 14.08
         }
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 16.25
+      "avg_surprise_pct": 15.7
     },
     "JOBY": {
       "next_earnings": "2026-08-06",
@@ -3695,7 +3695,7 @@
       "avg_surprise_pct": 8.09
     },
     "PATH": {
-      "next_earnings": "2026-05-28",
+      "next_earnings": "2026-09-03",
       "eps_estimate": 0.14738,
       "eps_low": 0.11,
       "eps_high": 0.17,
@@ -3765,7 +3765,7 @@
       "avg_surprise_pct": 4.65
     },
     "PL": {
-      "next_earnings": "2026-06-04",
+      "next_earnings": "2026-09-09",
       "eps_estimate": -0.02,
       "eps_low": -0.03,
       "eps_high": -0.01,
@@ -4173,7 +4173,7 @@
       "avg_surprise_pct": -224.0
     },
     "RGTI": {
-      "next_earnings": "2026-05-11",
+      "next_earnings": "2026-08-06",
       "eps_estimate": -0.04625,
       "eps_low": -0.06,
       "eps_high": -0.03,
@@ -4348,7 +4348,7 @@
       "avg_surprise_pct": 38.7
     },
     "SBET": {
-      "next_earnings": "2026-05-08",
+      "next_earnings": "2026-08-13",
       "eps_estimate": null,
       "eps_low": null,
       "eps_high": null,
@@ -6006,7 +6006,7 @@
       "avg_surprise_pct": 77.63
     },
     "JBL": {
-      "next_earnings": "2026-06-17",
+      "next_earnings": "2026-09-24",
       "eps_estimate": 4.06554,
       "eps_low": 4.0,
       "eps_high": 4.17,
@@ -6140,7 +6140,7 @@
       "avg_surprise_pct": -325.96
     },
     "BTDR": {
-      "next_earnings": "2026-05-14",
+      "next_earnings": "2026-08-17",
       "eps_estimate": -0.34667,
       "eps_low": -0.37,
       "eps_high": -0.33,
@@ -6175,7 +6175,7 @@
       "avg_surprise_pct": -62.3
     },
     "NTAP": {
-      "next_earnings": "2026-05-28",
+      "next_earnings": "2026-09-02",
       "eps_estimate": 2.11059,
       "eps_low": 2.08202,
       "eps_high": 2.16,
@@ -6278,6 +6278,7 @@
       "beat_streak": 0,
       "miss_streak": 1,
       "avg_surprise_pct": 3.92
-    }
+    },
+    "MEMORY": null
   }
 }

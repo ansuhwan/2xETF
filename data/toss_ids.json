@@ -2363,5 +2363,7 @@
     "code": "US20210312013",
     "name_kr": "OUST",
     "market": "NSQ"
-  }
+  },
+  "MEMORY": null,
+  "RAML": null
 }
