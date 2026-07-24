@@ -2365,5 +2365,9 @@
     "market": "NSQ"
   },
   "MEMORY": null,
-  "RAML": null
+  "RAML": {
+    "code": "AMX2607023001",
+    "name_kr": "레버리지 셰어즈 2X 롱 메모리 데일리 ETF",
+    "market": "AMX"
+  }
 }
