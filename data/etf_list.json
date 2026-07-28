@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-26T07:22:55+09:00",
+  "updated_at": "2026-07-29T07:27:08+09:00",
   "total": 224,
   "stale_issuers": [
     "REX"
@@ -7,17 +7,17 @@
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 340,
+      "ms": 6493,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 589,
+      "ms": 633,
       "ok": true
     },
     "Defiance": {
       "count": 41,
-      "ms": 7984,
+      "ms": 8970,
       "ok": true
     },
     "REX": {
@@ -28,12 +28,12 @@
     },
     "Tradr": {
       "count": 72,
-      "ms": 361,
+      "ms": 333,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 178,
+      "ms": 250,
       "ok": true
     },
     "3X": {
@@ -692,24 +692,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "POEL",
-      "name": "POEL | Defiance Daily Target 2X Long POET ETF",
-      "underlying": "POET",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/poel/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "AMA",
-      "name": "AMA | Defiance Daily Target 2X Long AMAT ETF",
-      "underlying": "AMAT",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/ama/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "AMKL",
       "name": "AMKL | Defiance Daily Target 2X Long AMKR ETF",
       "underlying": "AMKR",
@@ -724,24 +706,6 @@
       "underlying": "AMPX",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ampu/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "ASTY",
-      "name": "ASTY | Defiance Daily Target 2X Long ASTS ETF",
-      "underlying": "ASTS",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/asty/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "WYFL",
-      "name": "WYFL | Defiance Daily Target 2X Long WYFI ETF",
-      "underlying": "WYFI",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/wyfl/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -773,74 +737,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "DRAL",
-      "name": "DRAL | Defiance Daily Target 2X Long DRAM ETF",
-      "underlying": "DRAM",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/dral/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "RIOX",
       "name": "RIOX | Daily Target 2X Long RIOT ETF",
       "underlying": "RIOT",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/riox/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "AVGX",
-      "name": "AVGX | Defiance Daily Target 2X Long AVGO ETF",
-      "underlying": "AVGO",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/avgx/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "SMCX",
-      "name": "SMCX | Defiance Daily Target 2X Long SMCI ETF",
-      "underlying": "SMCI",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/smcx/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "ORCX",
-      "name": "ORCX | Daily Target 2X Long ORCL ETF",
-      "underlying": "ORCL",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/orcx/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "HOOX",
-      "name": "HOOX | Defiance Daily Target 2X Long HOOD ETF",
-      "underlying": "HOOD",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/hoox/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "IONX",
-      "name": "IONX | Defiance Daily Target 2X Long IONQ ETF",
-      "underlying": "IONQ",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/ionx/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "RGTX",
-      "name": "RGTX | Defiance Daily Target 2X Long RGTI ETF",
-      "underlying": "RGTI",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/rgtx/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -863,56 +764,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "RKLX",
-      "name": "RKLX | Defiance Daily Target 2X Long RKLB ETF",
-      "underlying": "RKLB",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/rklx/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "OKLL",
       "name": "OKLL | Defiance Daily Target 2X Long OKLO ETF",
       "underlying": "OKLO",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/okll/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "HIMZ",
-      "name": "HIMZ | Defiance Daily Target 2X Long HIMS ETF",
-      "underlying": "HIMS",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/himz/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "NVOX",
-      "name": "NVOX | Defiance Daily Target 2X Long NVO ETF",
-      "underlying": "NVO",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/nvox/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "LLYX",
-      "name": "LLYX | Defiance Daily Target 2X Long LLY ETF",
-      "underlying": "LLY",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/llyx/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "MSTX",
-      "name": "MSTX | Defiance Daily Target 2X Long MSTR ETF",
-      "underlying": "MSTR",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/mstx/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -935,24 +791,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "VSTL",
-      "name": "VSTL | Defiance Daily Target 2X Long VST ETF",
-      "underlying": "VST",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/vstl/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "SOUX",
-      "name": "SOUX | Defiance Daily Target 2X Long SOUN ETF",
-      "underlying": "SOUN",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/soux/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "OSCX",
       "name": "OSCX | Defiance Daily Target 2X Long OSCR ETF",
       "underlying": "OSCR",
@@ -971,11 +809,173 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "RKLX",
+      "name": "RKLX | Defiance Daily Target 2X Long RKLB ETF",
+      "underlying": "RKLB",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/rklx/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "LLYX",
+      "name": "LLYX | Defiance Daily Target 2X Long LLY ETF",
+      "underlying": "LLY",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/llyx/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "MSTX",
+      "name": "MSTX | Defiance Daily Target 2X Long MSTR ETF",
+      "underlying": "MSTR",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/mstx/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "AVGX",
+      "name": "AVGX | Defiance Daily Target 2X Long AVGO ETF",
+      "underlying": "AVGO",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/avgx/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "SMCX",
+      "name": "SMCX | Defiance Daily Target 2X Long SMCI ETF",
+      "underlying": "SMCI",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/smcx/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "NVOX",
+      "name": "NVOX | Defiance Daily Target 2X Long NVO ETF",
+      "underlying": "NVO",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/nvox/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "ORCX",
+      "name": "ORCX | Daily Target 2X Long ORCL ETF",
+      "underlying": "ORCL",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/orcx/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "IONX",
+      "name": "IONX | Defiance Daily Target 2X Long IONQ ETF",
+      "underlying": "IONQ",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/ionx/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "HIMZ",
+      "name": "HIMZ | Defiance Daily Target 2X Long HIMS ETF",
+      "underlying": "HIMS",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/himz/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "HOOX",
+      "name": "HOOX | Defiance Daily Target 2X Long HOOD ETF",
+      "underlying": "HOOD",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/hoox/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "RGTX",
+      "name": "RGTX | Defiance Daily Target 2X Long RGTI ETF",
+      "underlying": "RGTI",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/rgtx/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "SOUX",
+      "name": "SOUX | Defiance Daily Target 2X Long SOUN ETF",
+      "underlying": "SOUN",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/soux/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "VSTL",
+      "name": "VSTL | Defiance Daily Target 2X Long VST ETF",
+      "underlying": "VST",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/vstl/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "POEL",
+      "name": "POEL | Defiance Daily Target 2X Long POET ETF",
+      "underlying": "POET",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/poel/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "AMA",
+      "name": "AMA | Defiance Daily Target 2X Long AMAT ETF",
+      "underlying": "AMAT",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/ama/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "OSSL",
       "name": "OSSL | Defiance Daily Target 2X Long OSS ETF",
       "underlying": "OSS",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ossl/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "ASTY",
+      "name": "ASTY | Defiance Daily Target 2X Long ASTS ETF",
+      "underlying": "ASTS",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/asty/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "WYFL",
+      "name": "WYFL | Defiance Daily Target 2X Long WYFI ETF",
+      "underlying": "WYFI",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/wyfl/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "DRAL",
+      "name": "DRAL | Defiance Daily Target 2X Long DRAM ETF",
+      "underlying": "DRAM",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/dral/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1321,51 +1321,6 @@
       "last_ok": "2026-07-22T07:23:27+09:00"
     },
     {
-      "ticker_2x": "CIEX",
-      "name": "CIEX Tradr 2X Long CIEN Daily ETF",
-      "underlying": "CIEN",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/ciex?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "QNTU",
-      "name": "QNTU Tradr 2X Long QNT Daily ETF",
-      "underlying": "QNT",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/qntu?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "RMBX",
-      "name": "RMBX Tradr 2X Long RMBS Daily ETF",
-      "underlying": "RMBS",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/rmbx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "TSEU",
-      "name": "TSEU Tradr 2X Long TSEM Daily ETF",
-      "underlying": "TSEM",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/tseu?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "TTMX",
-      "name": "TTMX Tradr 2X Long TTMI Daily ETF",
-      "underlying": "TTMI",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/ttmx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "ONDU",
       "name": "ONDU Tradr 2X Long ONDS Daily ETF",
       "underlying": "ONDS",
@@ -1510,6 +1465,15 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "CIEX",
+      "name": "CIEX Tradr 2X Long CIEN Daily ETF",
+      "underlying": "CIEN",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/ciex?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "COHX",
       "name": "COHX Tradr 2X Long COHR Daily ETF",
       "underlying": "COHR",
@@ -1560,6 +1524,15 @@
       "underlying": "IREN",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/irex?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "TTMX",
+      "name": "TTMX Tradr 2X Long TTMI Daily ETF",
+      "underlying": "TTMI",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/ttmx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1654,6 +1627,15 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "QNTU",
+      "name": "QNTU Tradr 2X Long QNT Daily ETF",
+      "underlying": "QNT",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/qntu?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "QUBX",
       "name": "QUBX Tradr 2X Long QUBT Daily ETF",
       "underlying": "QUBT",
@@ -1731,6 +1713,24 @@
       "underlying": "ON",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/onx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "RMBX",
+      "name": "RMBX Tradr 2X Long RMBS Daily ETF",
+      "underlying": "RMBS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/rmbx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "TSEU",
+      "name": "TSEU Tradr 2X Long TSEM Daily ETF",
+      "underlying": "TSEM",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/tseu?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
