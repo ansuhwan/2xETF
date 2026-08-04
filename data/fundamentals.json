@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04T07:32:00+09:00",
+  "updated_at": "2026-08-05T07:33:54+09:00",
   "tickers": {
     "AAOI": {
       "short_pct_of_float": 12.86,
@@ -20,19 +20,19 @@
       "profit_margins": -8.5,
       "roe": -6.1,
       "trailing_pe": null,
-      "forward_pe": 23.1,
+      "forward_pe": 27.58,
       "peg_ratio": 0.78,
-      "ps_ratio": 17.44
+      "ps_ratio": 20.83
     },
     "AAPL": {
       "short_pct_of_float": 1.0,
       "short_ratio_days": 2.28,
       "shares_short": 146547784,
-      "insider_net_value_90d": -87144418.0,
+      "insider_net_value_90d": -15954696.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 4,
+      "insider_sell_count_90d": 3,
       "upgrades_30d": 1,
-      "downgrades_30d": 1,
+      "downgrades_30d": 2,
       "pt_raises_30d": 6,
       "pt_lowers_30d": 4,
       "revenue_growth_yoy": 16.4,
@@ -42,10 +42,10 @@
       "operating_margins": 32.6,
       "profit_margins": 27.6,
       "roe": 148.8,
-      "trailing_pe": 34.84,
-      "forward_pe": 31.9,
+      "trailing_pe": 35.52,
+      "forward_pe": 32.52,
       "peg_ratio": 2.46,
-      "ps_ratio": 9.55
+      "ps_ratio": 9.67
     },
     "ACHR": {
       "short_pct_of_float": 14.36,
@@ -66,9 +66,9 @@
       "profit_margins": 0.0,
       "roe": -48.0,
       "trailing_pe": null,
-      "forward_pe": -5.18,
+      "forward_pe": -5.68,
       "peg_ratio": null,
-      "ps_ratio": 1943.3
+      "ps_ratio": 2132.01
     },
     "AFRM": {
       "short_pct_of_float": 5.73,
@@ -88,10 +88,10 @@
       "operating_margins": 8.5,
       "profit_margins": 9.6,
       "roe": 11.5,
-      "trailing_pe": 68.75,
-      "forward_pe": 20.34,
+      "trailing_pe": 71.02,
+      "forward_pe": 21.01,
       "peg_ratio": 0.72,
-      "ps_ratio": 6.38
+      "ps_ratio": 6.59
     },
     "ALAB": {
       "short_pct_of_float": 7.32,
@@ -111,10 +111,10 @@
       "operating_margins": 20.1,
       "profit_margins": 26.7,
       "roe": 21.1,
-      "trailing_pe": 215.47,
-      "forward_pe": 69.39,
+      "trailing_pe": 244.37,
+      "forward_pe": 77.09,
       "peg_ratio": null,
-      "ps_ratio": 54.95
+      "ps_ratio": 61.9
     },
     "AMAT": {
       "short_pct_of_float": 2.11,
@@ -134,10 +134,10 @@
       "operating_margins": 31.9,
       "profit_margins": 29.3,
       "roe": 39.7,
-      "trailing_pe": 48.84,
-      "forward_pe": 30.66,
+      "trailing_pe": 51.47,
+      "forward_pe": 32.15,
       "peg_ratio": 1.28,
-      "ps_ratio": 14.18
+      "ps_ratio": 14.95
     },
     "AMD": {
       "short_pct_of_float": 2.45,
@@ -157,13 +157,13 @@
       "operating_margins": 14.4,
       "profit_margins": 13.4,
       "roe": 8.1,
-      "trailing_pe": 161.55,
-      "forward_pe": 34.82,
+      "trailing_pe": 172.86,
+      "forward_pe": 37.26,
       "peg_ratio": 1.12,
-      "ps_ratio": null
+      "ps_ratio": 22.58
     },
     "AMKR": {
-      "short_pct_of_float": 14.22,
+      "short_pct_of_float": 14.2,
       "short_ratio_days": 1.47,
       "shares_short": 8672282,
       "insider_net_value_90d": -6735497.0,
@@ -180,10 +180,10 @@
       "operating_margins": 10.5,
       "profit_margins": 7.4,
       "roe": 12.5,
-      "trailing_pe": 22.8,
-      "forward_pe": 18.01,
+      "trailing_pe": 25.05,
+      "forward_pe": 19.8,
       "peg_ratio": 0.76,
-      "ps_ratio": 1.69
+      "ps_ratio": 1.86
     },
     "AMPX": {
       "short_pct_of_float": 20.1,
@@ -204,9 +204,9 @@
       "profit_margins": -44.0,
       "roe": -44.2,
       "trailing_pe": null,
-      "forward_pe": 168.67,
+      "forward_pe": 180.17,
       "peg_ratio": null,
-      "ps_ratio": 15.88
+      "ps_ratio": 16.96
     },
     "AMZN": {
       "short_pct_of_float": 1.09,
@@ -226,10 +226,10 @@
       "operating_margins": 13.7,
       "profit_margins": 17.4,
       "roe": 30.6,
-      "trailing_pe": 22.83,
-      "forward_pe": 27.53,
+      "trailing_pe": 22.3,
+      "forward_pe": 26.86,
       "peg_ratio": 1.46,
-      "ps_ratio": 3.94
+      "ps_ratio": 3.86
     },
     "ANET": {
       "short_pct_of_float": 1.91,
@@ -249,10 +249,10 @@
       "operating_margins": 42.7,
       "profit_margins": 38.3,
       "roe": 31.5,
-      "trailing_pe": 63.76,
-      "forward_pe": 41.39,
+      "trailing_pe": 65.69,
+      "forward_pe": 42.64,
       "peg_ratio": 2.3,
-      "ps_ratio": 23.98
+      "ps_ratio": 24.71
     },
     "APH": {
       "short_pct_of_float": 1.52,
@@ -272,13 +272,13 @@
       "operating_margins": 29.8,
       "profit_margins": 17.7,
       "roe": 38.1,
-      "trailing_pe": 40.84,
-      "forward_pe": 25.33,
+      "trailing_pe": 42.83,
+      "forward_pe": 26.57,
       "peg_ratio": 1.07,
-      "ps_ratio": null
+      "ps_ratio": 7.28
     },
     "APLD": {
-      "short_pct_of_float": 26.54,
+      "short_pct_of_float": 26.33,
       "short_ratio_days": 3.65,
       "shares_short": 69869887,
       "insider_net_value_90d": 0.0,
@@ -296,9 +296,9 @@
       "profit_margins": -39.9,
       "roe": -8.4,
       "trailing_pe": null,
-      "forward_pe": 232.81,
+      "forward_pe": 246.86,
       "peg_ratio": 1.83,
-      "ps_ratio": 13.89
+      "ps_ratio": 14.73
     },
     "APP": {
       "short_pct_of_float": 4.3,
@@ -309,7 +309,7 @@
       "insider_sell_count_90d": 11,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 1,
+      "pt_raises_30d": 2,
       "pt_lowers_30d": 0,
       "revenue_growth_yoy": 59.0,
       "earnings_growth_yoy": 113.1,
@@ -318,10 +318,10 @@
       "operating_margins": 78.2,
       "profit_margins": 64.3,
       "roe": 266.4,
-      "trailing_pe": 35.38,
-      "forward_pe": 18.81,
+      "trailing_pe": 36.53,
+      "forward_pe": 19.44,
       "peg_ratio": 1.09,
-      "ps_ratio": 22.14
+      "ps_ratio": 22.87
     },
     "ASTS": {
       "short_pct_of_float": 19.93,
@@ -342,9 +342,9 @@
       "profit_margins": 0.0,
       "roe": -37.8,
       "trailing_pe": null,
-      "forward_pe": -244.12,
+      "forward_pe": -270.22,
       "peg_ratio": null,
-      "ps_ratio": 290.27
+      "ps_ratio": 321.29
     },
     "AUR": {
       "short_pct_of_float": 16.74,
@@ -365,9 +365,9 @@
       "profit_margins": 0.0,
       "roe": -45.6,
       "trailing_pe": null,
-      "forward_pe": -15.09,
+      "forward_pe": -16.07,
       "peg_ratio": null,
-      "ps_ratio": 2663.31
+      "ps_ratio": 2835.9
     },
     "AVGO": {
       "short_pct_of_float": 1.47,
@@ -387,10 +387,10 @@
       "operating_margins": 49.0,
       "profit_margins": 38.8,
       "roe": 37.3,
-      "trailing_pe": 65.48,
-      "forward_pe": 20.12,
+      "trailing_pe": 69.23,
+      "forward_pe": 21.45,
       "peg_ratio": 0.44,
-      "ps_ratio": 24.73
+      "ps_ratio": 26.36
     },
     "AXTI": {
       "short_pct_of_float": 17.59,
@@ -410,10 +410,10 @@
       "operating_margins": 21.9,
       "profit_margins": 3.2,
       "roe": 1.0,
-      "trailing_pe": 2289.0,
-      "forward_pe": 30.85,
+      "trailing_pe": 2175.67,
+      "forward_pe": 29.32,
       "peg_ratio": 12.09,
-      "ps_ratio": 35.8
+      "ps_ratio": 34.02
     },
     "BABA": {
       "short_pct_of_float": 1.79,
@@ -433,8 +433,8 @@
       "operating_margins": 1.0,
       "profit_margins": 10.1,
       "roe": 9.2,
-      "trailing_pe": 19.58,
-      "forward_pe": 14.04,
+      "trailing_pe": 19.84,
+      "forward_pe": 14.23,
       "peg_ratio": 0.5,
       "ps_ratio": 0.3
     },
@@ -456,13 +456,13 @@
       "operating_margins": 10.3,
       "profit_margins": 10.3,
       "roe": 8.1,
-      "trailing_pe": 85.2,
-      "forward_pe": 37.28,
+      "trailing_pe": 88.7,
+      "forward_pe": 38.81,
       "peg_ratio": 2.21,
-      "ps_ratio": 8.61
+      "ps_ratio": 8.96
     },
     "BE": {
-      "short_pct_of_float": 7.72,
+      "short_pct_of_float": 7.45,
       "short_ratio_days": 1.29,
       "shares_short": 19185518,
       "insider_net_value_90d": -34238909.0,
@@ -479,10 +479,10 @@
       "operating_margins": 17.1,
       "profit_margins": 7.9,
       "roe": 22.2,
-      "trailing_pe": 287.26,
-      "forward_pe": 44.59,
+      "trailing_pe": 300.14,
+      "forward_pe": 46.59,
       "peg_ratio": 0.86,
-      "ps_ratio": 20.65
+      "ps_ratio": 21.58
     },
     "BLSH": {
       "short_pct_of_float": 19.64,
@@ -503,9 +503,9 @@
       "profit_margins": 0.0,
       "roe": -44.6,
       "trailing_pe": null,
-      "forward_pe": 26.97,
+      "forward_pe": 27.99,
       "peg_ratio": null,
-      "ps_ratio": 12.98
+      "ps_ratio": 13.47
     },
     "BMNR": {
       "short_pct_of_float": 8.15,
@@ -526,9 +526,9 @@
       "profit_margins": 0.0,
       "roe": -150.9,
       "trailing_pe": null,
-      "forward_pe": 18.53,
+      "forward_pe": 19.26,
       "peg_ratio": null,
-      "ps_ratio": 171.72
+      "ps_ratio": 178.42
     },
     "BTC-USD": {
       "short_pct_of_float": null,
@@ -562,7 +562,7 @@
       "insider_sell_count_90d": 0,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 0,
+      "pt_raises_30d": 1,
       "pt_lowers_30d": 1,
       "revenue_growth_yoy": 169.4,
       "earnings_growth_yoy": null,
@@ -572,9 +572,9 @@
       "profit_margins": -27.0,
       "roe": -26.1,
       "trailing_pe": null,
-      "forward_pe": -28.97,
+      "forward_pe": -28.99,
       "peg_ratio": null,
-      "ps_ratio": 3.74
+      "ps_ratio": 3.75
     },
     "CBRS": {
       "short_pct_of_float": 11.32,
@@ -594,13 +594,13 @@
       "operating_margins": -7.8,
       "profit_margins": 41.0,
       "roe": 18.8,
-      "trailing_pe": 478.2,
-      "forward_pe": 228.84,
+      "trailing_pe": 493.8,
+      "forward_pe": 236.29,
       "peg_ratio": null,
-      "ps_ratio": 81.18
+      "ps_ratio": 83.82
     },
     "CDNS": {
-      "short_pct_of_float": 2.25,
+      "short_pct_of_float": 2.26,
       "short_ratio_days": 2.76,
       "shares_short": 6187380,
       "insider_net_value_90d": -60689627.0,
@@ -617,10 +617,10 @@
       "operating_margins": 28.6,
       "profit_margins": 23.6,
       "roe": 23.2,
-      "trailing_pe": 66.83,
-      "forward_pe": 35.25,
+      "trailing_pe": 67.72,
+      "forward_pe": 35.72,
       "peg_ratio": 3.11,
-      "ps_ratio": 15.86
+      "ps_ratio": 16.09
     },
     "CEG": {
       "short_pct_of_float": 3.33,
@@ -640,10 +640,10 @@
       "operating_margins": 21.9,
       "profit_margins": 12.7,
       "roe": 16.1,
-      "trailing_pe": 23.78,
-      "forward_pe": 20.54,
+      "trailing_pe": 23.2,
+      "forward_pe": 20.05,
       "peg_ratio": 3.74,
-      "ps_ratio": 3.27
+      "ps_ratio": 3.2
     },
     "CELH": {
       "short_pct_of_float": 15.89,
@@ -663,10 +663,10 @@
       "operating_margins": 19.8,
       "profit_margins": 5.9,
       "roe": 8.1,
-      "trailing_pe": 65.65,
-      "forward_pe": 14.31,
-      "peg_ratio": 0.3,
-      "ps_ratio": 2.43
+      "trailing_pe": 68.7,
+      "forward_pe": 14.98,
+      "peg_ratio": 0.29,
+      "ps_ratio": 2.54
     },
     "CIEN": {
       "short_pct_of_float": 4.44,
@@ -686,18 +686,18 @@
       "operating_margins": 15.2,
       "profit_margins": 7.9,
       "roe": 15.5,
-      "trailing_pe": 129.39,
-      "forward_pe": 40.54,
+      "trailing_pe": 131.35,
+      "forward_pe": 42.66,
       "peg_ratio": 0.65,
-      "ps_ratio": 9.93
+      "ps_ratio": 10.45
     },
     "CIFR": {
       "short_pct_of_float": 16.74,
       "short_ratio_days": 2.32,
       "shares_short": 56099030,
-      "insider_net_value_90d": -7851437.0,
+      "insider_net_value_90d": -6787995.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 7,
+      "insider_sell_count_90d": 5,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 1,
@@ -710,9 +710,9 @@
       "profit_margins": 0.0,
       "roe": -121.7,
       "trailing_pe": null,
-      "forward_pe": 46.69,
+      "forward_pe": 39.38,
       "peg_ratio": null,
-      "ps_ratio": 47.1
+      "ps_ratio": 39.73
     },
     "CLS": {
       "short_pct_of_float": 2.65,
@@ -732,10 +732,10 @@
       "operating_margins": 9.8,
       "profit_margins": 7.2,
       "roe": 52.7,
-      "trailing_pe": 37.53,
-      "forward_pe": 17.23,
+      "trailing_pe": 39.48,
+      "forward_pe": 18.71,
       "peg_ratio": 1.0,
-      "ps_ratio": 2.52
+      "ps_ratio": 2.74
     },
     "CLSK": {
       "short_pct_of_float": 42.54,
@@ -756,9 +756,9 @@
       "profit_margins": -67.7,
       "roe": -34.8,
       "trailing_pe": null,
-      "forward_pe": -14.41,
+      "forward_pe": -13.94,
       "peg_ratio": null,
-      "ps_ratio": 5.08
+      "ps_ratio": 4.91
     },
     "COHR": {
       "short_pct_of_float": 5.21,
@@ -778,13 +778,13 @@
       "operating_margins": 13.6,
       "profit_margins": 7.1,
       "roe": 4.7,
-      "trailing_pe": 137.21,
-      "forward_pe": 34.76,
+      "trailing_pe": 154.16,
+      "forward_pe": 39.05,
       "peg_ratio": 0.92,
-      "ps_ratio": 8.54
+      "ps_ratio": 9.59
     },
     "COIN": {
-      "short_pct_of_float": 11.41,
+      "short_pct_of_float": 11.39,
       "short_ratio_days": 3.23,
       "shares_short": 25046921,
       "insider_net_value_90d": -7332812.0,
@@ -802,12 +802,12 @@
       "profit_margins": -16.3,
       "roe": -7.8,
       "trailing_pe": null,
-      "forward_pe": 44.87,
+      "forward_pe": 47.62,
       "peg_ratio": 1.4,
-      "ps_ratio": 6.4
+      "ps_ratio": 6.58
     },
     "CORZ": {
-      "short_pct_of_float": 22.56,
+      "short_pct_of_float": 22.43,
       "short_ratio_days": 5.33,
       "shares_short": 63359713,
       "insider_net_value_90d": -2998289.0,
@@ -825,9 +825,9 @@
       "profit_margins": 0.0,
       "roe": null,
       "trailing_pe": null,
-      "forward_pe": 163.07,
+      "forward_pe": 162.93,
       "peg_ratio": null,
-      "ps_ratio": 16.66
+      "ps_ratio": 16.65
     },
     "CPNG": {
       "short_pct_of_float": 6.29,
@@ -848,17 +848,17 @@
       "profit_margins": -0.5,
       "roe": -4.0,
       "trailing_pe": null,
-      "forward_pe": 56.72,
+      "forward_pe": 57.97,
       "peg_ratio": 0.45,
-      "ps_ratio": 0.84
+      "ps_ratio": 0.86
     },
     "CRCL": {
       "short_pct_of_float": 12.03,
       "short_ratio_days": 1.82,
       "shares_short": 27099251,
-      "insider_net_value_90d": -153988513.0,
+      "insider_net_value_90d": -153549328.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 22,
+      "insider_sell_count_90d": 21,
       "upgrades_30d": 1,
       "downgrades_30d": 1,
       "pt_raises_30d": 0,
@@ -871,9 +871,9 @@
       "profit_margins": -2.8,
       "roe": -3.0,
       "trailing_pe": null,
-      "forward_pe": 30.83,
+      "forward_pe": 31.45,
       "peg_ratio": 4.34,
-      "ps_ratio": 5.64
+      "ps_ratio": 5.91
     },
     "CRDO": {
       "short_pct_of_float": 3.62,
@@ -893,10 +893,10 @@
       "operating_margins": 35.7,
       "profit_margins": 35.4,
       "roe": 34.4,
-      "trailing_pe": 87.34,
-      "forward_pe": 24.06,
+      "trailing_pe": 95.17,
+      "forward_pe": 26.21,
       "peg_ratio": null,
-      "ps_ratio": 30.5
+      "ps_ratio": 33.23
     },
     "CRML": {
       "short_pct_of_float": 23.68,
@@ -917,17 +917,17 @@
       "profit_margins": 0.0,
       "roe": -141.0,
       "trailing_pe": null,
-      "forward_pe": -33.58,
+      "forward_pe": -35.68,
       "peg_ratio": null,
-      "ps_ratio": 1219.34
+      "ps_ratio": 1295.79
     },
     "CRWD": {
       "short_pct_of_float": 2.74,
       "short_ratio_days": 2.46,
       "shares_short": 27450228,
-      "insider_net_value_90d": -222212141.0,
+      "insider_net_value_90d": -219855517.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 67,
+      "insider_sell_count_90d": 66,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 6,
@@ -940,17 +940,17 @@
       "profit_margins": -0.6,
       "roe": -0.2,
       "trailing_pe": null,
-      "forward_pe": 129.61,
+      "forward_pe": 135.17,
       "peg_ratio": 6.21,
-      "ps_ratio": 40.48
+      "ps_ratio": 42.22
     },
     "CRWV": {
       "short_pct_of_float": 21.44,
       "short_ratio_days": 2.2,
       "shares_short": 64362421,
-      "insider_net_value_90d": -974346724.0,
+      "insider_net_value_90d": -962869291.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 73,
+      "insider_sell_count_90d": 71,
       "upgrades_30d": 1,
       "downgrades_30d": 0,
       "pt_raises_30d": 0,
@@ -963,9 +963,9 @@
       "profit_margins": -25.6,
       "roe": -40.7,
       "trailing_pe": null,
-      "forward_pe": -53.73,
+      "forward_pe": -57.37,
       "peg_ratio": null,
-      "ps_ratio": 7.51
+      "ps_ratio": 8.05
     },
     "DASH": {
       "short_pct_of_float": 4.59,
@@ -976,7 +976,7 @@
       "insider_sell_count_90d": 18,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 1,
+      "pt_raises_30d": 2,
       "pt_lowers_30d": 3,
       "revenue_growth_yoy": 33.1,
       "earnings_growth_yoy": -6.1,
@@ -985,10 +985,10 @@
       "operating_margins": 5.3,
       "profit_margins": 6.3,
       "roe": 9.9,
-      "trailing_pe": 94.58,
-      "forward_pe": 26.33,
+      "trailing_pe": 95.91,
+      "forward_pe": 26.12,
       "peg_ratio": 4.49,
-      "ps_ratio": 5.93
+      "ps_ratio": 5.99
     },
     "DDOG": {
       "short_pct_of_float": 4.35,
@@ -999,7 +999,7 @@
       "insider_sell_count_90d": 40,
       "upgrades_30d": 0,
       "downgrades_30d": 2,
-      "pt_raises_30d": 16,
+      "pt_raises_30d": 18,
       "pt_lowers_30d": 0,
       "revenue_growth_yoy": 32.2,
       "earnings_growth_yoy": 104.0,
@@ -1008,10 +1008,10 @@
       "operating_margins": 0.8,
       "profit_margins": 3.7,
       "roe": 3.9,
-      "trailing_pe": 684.0,
-      "forward_pe": 94.84,
+      "trailing_pe": 720.38,
+      "forward_pe": 99.89,
       "peg_ratio": 1.67,
-      "ps_ratio": 26.52
+      "ps_ratio": 27.93
     },
     "DELL": {
       "short_pct_of_float": 4.33,
@@ -1031,10 +1031,10 @@
       "operating_margins": 8.9,
       "profit_margins": 6.3,
       "roe": null,
-      "trailing_pe": 34.13,
-      "forward_pe": 19.63,
+      "trailing_pe": 37.17,
+      "forward_pe": 21.38,
       "peg_ratio": 0.66,
-      "ps_ratio": 2.07
+      "ps_ratio": 2.25
     },
     "DIA": {
       "short_pct_of_float": null,
@@ -1054,7 +1054,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": null,
+      "trailing_pe": 25.54,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -1080,7 +1080,7 @@
       "trailing_pe": null,
       "forward_pe": null,
       "peg_ratio": null,
-      "ps_ratio": 742.73
+      "ps_ratio": 767.21
     },
     "DKNG": {
       "short_pct_of_float": 8.16,
@@ -1100,10 +1100,10 @@
       "operating_margins": 0.4,
       "profit_margins": 0.9,
       "roe": 7.9,
-      "trailing_pe": 261.11,
-      "forward_pe": 13.96,
+      "trailing_pe": 262.33,
+      "forward_pe": 14.03,
       "peg_ratio": 0.09,
-      "ps_ratio": 1.85
+      "ps_ratio": 1.86
     },
     "DRAM": {
       "short_pct_of_float": null,
@@ -1123,13 +1123,13 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 23.02,
+      "trailing_pe": 24.72,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
     },
     "ENPH": {
-      "short_pct_of_float": 20.94,
+      "short_pct_of_float": 20.87,
       "short_ratio_days": 3.56,
       "shares_short": 22918331,
       "insider_net_value_90d": 240459.0,
@@ -1146,10 +1146,10 @@
       "operating_margins": 18.0,
       "profit_margins": 10.1,
       "roe": 13.0,
-      "trailing_pe": 38.96,
-      "forward_pe": 17.06,
+      "trailing_pe": 41.36,
+      "forward_pe": 18.14,
       "peg_ratio": 1.08,
-      "ps_ratio": 3.91
+      "ps_ratio": 4.14
     },
     "EOSE": {
       "short_pct_of_float": 30.15,
@@ -1170,9 +1170,9 @@
       "profit_margins": -296.1,
       "roe": null,
       "trailing_pe": null,
-      "forward_pe": -93.89,
+      "forward_pe": -108.91,
       "peg_ratio": null,
-      "ps_ratio": 8.44
+      "ps_ratio": 9.79
     },
     "ETH-USD": {
       "short_pct_of_float": null,
@@ -1215,10 +1215,10 @@
       "operating_margins": 24.9,
       "profit_margins": 35.2,
       "roe": 21.7,
-      "trailing_pe": 32.78,
-      "forward_pe": 19.06,
+      "trailing_pe": 33.71,
+      "forward_pe": 19.6,
       "peg_ratio": null,
-      "ps_ratio": 11.65
+      "ps_ratio": 11.97
     },
     "FLY": {
       "short_pct_of_float": 12.17,
@@ -1239,9 +1239,9 @@
       "profit_margins": -193.8,
       "roe": -62.1,
       "trailing_pe": null,
-      "forward_pe": -14.5,
+      "forward_pe": -15.45,
       "peg_ratio": null,
-      "ps_ratio": null
+      "ps_ratio": 20.72
     },
     "FNGS": {
       "short_pct_of_float": null,
@@ -1261,7 +1261,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 30.87,
+      "trailing_pe": 32.14,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -1284,10 +1284,10 @@
       "operating_margins": 24.0,
       "profit_margins": 12.8,
       "roe": 11.0,
-      "trailing_pe": 75.03,
-      "forward_pe": 31.31,
+      "trailing_pe": 82.97,
+      "forward_pe": 34.62,
       "peg_ratio": 1.39,
-      "ps_ratio": 9.4
+      "ps_ratio": 10.39
     },
     "GDX": {
       "short_pct_of_float": null,
@@ -1307,7 +1307,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": null,
+      "trailing_pe": 14.04,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -1330,7 +1330,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 13.32,
+      "trailing_pe": 13.76,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -1353,10 +1353,10 @@
       "operating_margins": 7.5,
       "profit_margins": 23.0,
       "roe": 82.6,
-      "trailing_pe": 28.88,
-      "forward_pe": 40.46,
+      "trailing_pe": 29.24,
+      "forward_pe": 40.93,
       "peg_ratio": 1.68,
-      "ps_ratio": 6.48
+      "ps_ratio": 6.56
     },
     "GLXY": {
       "short_pct_of_float": 16.16,
@@ -1377,7 +1377,7 @@
       "profit_margins": -0.3,
       "roe": -6.5,
       "trailing_pe": null,
-      "forward_pe": 1056.49,
+      "forward_pe": 288.96,
       "peg_ratio": null,
       "ps_ratio": 0.15
     },
@@ -1399,10 +1399,10 @@
       "operating_margins": 16.6,
       "profit_margins": 20.4,
       "roe": 14.1,
-      "trailing_pe": 14.22,
-      "forward_pe": 13.91,
+      "trailing_pe": 14.34,
+      "forward_pe": 14.02,
       "peg_ratio": 0.31,
-      "ps_ratio": 2.29
+      "ps_ratio": 2.31
     },
     "GOOG": {
       "short_pct_of_float": null,
@@ -1422,10 +1422,10 @@
       "operating_margins": 34.0,
       "profit_margins": 54.8,
       "roe": 48.7,
-      "trailing_pe": 18.68,
-      "forward_pe": 25.28,
+      "trailing_pe": 18.83,
+      "forward_pe": 25.47,
       "peg_ratio": 0.97,
-      "ps_ratio": 10.22
+      "ps_ratio": 10.3
     },
     "GOOGL": {
       "short_pct_of_float": 1.34,
@@ -1445,21 +1445,21 @@
       "operating_margins": 34.0,
       "profit_margins": 54.8,
       "roe": 48.7,
-      "trailing_pe": 18.73,
-      "forward_pe": 25.35,
+      "trailing_pe": 18.93,
+      "forward_pe": 25.63,
       "peg_ratio": 0.97,
-      "ps_ratio": 10.25
+      "ps_ratio": 10.36
     },
     "GS": {
       "short_pct_of_float": 2.15,
       "short_ratio_days": 2.84,
       "shares_short": 6311123,
-      "insider_net_value_90d": -20384799.0,
+      "insider_net_value_90d": -6963564.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 3,
+      "insider_sell_count_90d": 2,
       "upgrades_30d": 1,
       "downgrades_30d": 0,
-      "pt_raises_30d": 12,
+      "pt_raises_30d": 13,
       "pt_lowers_30d": 1,
       "revenue_growth_yoy": 42.5,
       "earnings_growth_yoy": 92.3,
@@ -1468,10 +1468,10 @@
       "operating_margins": 42.3,
       "profit_margins": 31.0,
       "roe": 17.0,
-      "trailing_pe": 15.86,
-      "forward_pe": 13.87,
+      "trailing_pe": 16.26,
+      "forward_pe": 14.22,
       "peg_ratio": 1.45,
-      "ps_ratio": null
+      "ps_ratio": 4.6
     },
     "HIMS": {
       "short_pct_of_float": 31.94,
@@ -1492,9 +1492,9 @@
       "profit_margins": -0.6,
       "roe": -2.7,
       "trailing_pe": null,
-      "forward_pe": 23.62,
+      "forward_pe": 24.65,
       "peg_ratio": 2.15,
-      "ps_ratio": 3.01
+      "ps_ratio": 3.14
     },
     "HL": {
       "short_pct_of_float": 0.0,
@@ -1514,13 +1514,13 @@
       "operating_margins": 55.5,
       "profit_margins": 16.8,
       "roe": 19.9,
-      "trailing_pe": 20.91,
-      "forward_pe": 12.13,
+      "trailing_pe": 22.3,
+      "forward_pe": 13.76,
       "peg_ratio": 5.64,
-      "ps_ratio": 5.94
+      "ps_ratio": 6.34
     },
     "HOOD": {
-      "short_pct_of_float": 4.88,
+      "short_pct_of_float": 4.87,
       "short_ratio_days": 1.28,
       "shares_short": 38088351,
       "insider_net_value_90d": -11173932.0,
@@ -1537,10 +1537,10 @@
       "operating_margins": 43.9,
       "profit_margins": 42.0,
       "roe": 23.6,
-      "trailing_pe": 39.97,
-      "forward_pe": 28.37,
+      "trailing_pe": 41.38,
+      "forward_pe": 29.36,
       "peg_ratio": 2.34,
-      "ps_ratio": 16.47
+      "ps_ratio": 17.05
     },
     "IBM": {
       "short_pct_of_float": 3.9,
@@ -1560,10 +1560,10 @@
       "operating_margins": 16.5,
       "profit_margins": 15.5,
       "roe": 34.5,
-      "trailing_pe": 20.12,
-      "forward_pe": 17.18,
+      "trailing_pe": 20.87,
+      "forward_pe": 17.85,
       "peg_ratio": 2.27,
-      "ps_ratio": 3.09
+      "ps_ratio": 3.21
     },
     "IEF": {
       "short_pct_of_float": null,
@@ -1607,9 +1607,9 @@
       "profit_margins": -166.8,
       "roe": null,
       "trailing_pe": null,
-      "forward_pe": -42.2,
+      "forward_pe": -44.04,
       "peg_ratio": null,
-      "ps_ratio": 71.26
+      "ps_ratio": 74.37
     },
     "INTC": {
       "short_pct_of_float": 2.4,
@@ -1630,17 +1630,17 @@
       "profit_margins": -19.8,
       "roe": -10.7,
       "trailing_pe": null,
-      "forward_pe": 44.67,
+      "forward_pe": 49.1,
       "peg_ratio": 1.36,
-      "ps_ratio": 8.05
+      "ps_ratio": 8.92
     },
     "IONQ": {
       "short_pct_of_float": 12.67,
       "short_ratio_days": 2.14,
       "shares_short": 47045003,
-      "insider_net_value_90d": -701489.0,
+      "insider_net_value_90d": -513216.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 4,
+      "insider_sell_count_90d": 3,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 0,
@@ -1652,10 +1652,10 @@
       "operating_margins": -401.8,
       "profit_margins": 174.9,
       "roe": 11.3,
-      "trailing_pe": 99.62,
-      "forward_pe": -34.6,
+      "trailing_pe": 106.97,
+      "forward_pe": -37.06,
       "peg_ratio": null,
-      "ps_ratio": 77.5
+      "ps_ratio": 83.22
     },
     "IREN": {
       "short_pct_of_float": 27.09,
@@ -1675,10 +1675,10 @@
       "operating_margins": -64.5,
       "profit_margins": 20.9,
       "roe": 7.7,
-      "trailing_pe": 51.62,
-      "forward_pe": -42.29,
+      "trailing_pe": 53.05,
+      "forward_pe": -43.46,
       "peg_ratio": 3.11,
-      "ps_ratio": 18.76
+      "ps_ratio": 19.28
     },
     "ISRG": {
       "short_pct_of_float": 1.9,
@@ -1698,10 +1698,10 @@
       "operating_margins": 33.6,
       "profit_margins": 28.4,
       "roe": 17.4,
-      "trailing_pe": 43.0,
-      "forward_pe": 31.1,
+      "trailing_pe": 42.28,
+      "forward_pe": 30.51,
       "peg_ratio": 1.73,
-      "ps_ratio": 12.19
+      "ps_ratio": 11.96
     },
     "ITB": {
       "short_pct_of_float": null,
@@ -1721,7 +1721,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 15.85,
+      "trailing_pe": 16.26,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -1744,7 +1744,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 18.35,
+      "trailing_pe": 18.69,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -1767,18 +1767,18 @@
       "operating_margins": 5.2,
       "profit_margins": 2.6,
       "roe": 65.9,
-      "trailing_pe": 39.8,
-      "forward_pe": 19.01,
+      "trailing_pe": 42.55,
+      "forward_pe": 20.3,
       "peg_ratio": 0.82,
-      "ps_ratio": 0.99
+      "ps_ratio": 1.06
     },
     "JOBY": {
       "short_pct_of_float": 16.73,
       "short_ratio_days": 2.33,
       "shares_short": 109764445,
-      "insider_net_value_90d": -19631431.0,
+      "insider_net_value_90d": -18882991.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 19,
+      "insider_sell_count_90d": 18,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 0,
@@ -1791,9 +1791,9 @@
       "profit_margins": 0.0,
       "roe": -68.0,
       "trailing_pe": null,
-      "forward_pe": -14.76,
+      "forward_pe": -15.94,
       "peg_ratio": null,
-      "ps_ratio": 93.46
+      "ps_ratio": 100.93
     },
     "JPM": {
       "short_pct_of_float": 1.11,
@@ -1804,7 +1804,7 @@
       "insider_sell_count_90d": 6,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 13,
+      "pt_raises_30d": 14,
       "pt_lowers_30d": 0,
       "revenue_growth_yoy": 30.4,
       "earnings_growth_yoy": 46.9,
@@ -1813,10 +1813,10 @@
       "operating_margins": 50.4,
       "profit_margins": 34.9,
       "roe": 17.8,
-      "trailing_pe": 15.12,
-      "forward_pe": 14.17,
+      "trailing_pe": 15.32,
+      "forward_pe": 14.36,
       "peg_ratio": 1.72,
-      "ps_ratio": null
+      "ps_ratio": 5.1
     },
     "KRE": {
       "short_pct_of_float": null,
@@ -1836,7 +1836,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 13.85,
+      "trailing_pe": 13.99,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -1851,7 +1851,7 @@
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 0,
-      "pt_lowers_30d": 1,
+      "pt_lowers_30d": 2,
       "revenue_growth_yoy": 22.6,
       "earnings_growth_yoy": 130.6,
       "earnings_growth_q": 164.4,
@@ -1859,10 +1859,10 @@
       "operating_margins": 1.8,
       "profit_margins": 2.1,
       "roe": 1.2,
-      "trailing_pe": 289.47,
-      "forward_pe": 45.1,
+      "trailing_pe": 305.12,
+      "forward_pe": 47.54,
       "peg_ratio": 36.41,
-      "ps_ratio": 6.52
+      "ps_ratio": 6.87
     },
     "LCID": {
       "short_pct_of_float": 40.3,
@@ -1883,9 +1883,9 @@
       "profit_margins": -239.8,
       "roe": -97.6,
       "trailing_pe": null,
-      "forward_pe": -1.62,
+      "forward_pe": -1.64,
       "peg_ratio": null,
-      "ps_ratio": 2.14
+      "ps_ratio": 2.17
     },
     "LEU": {
       "short_pct_of_float": 26.55,
@@ -1905,10 +1905,10 @@
       "operating_margins": -0.3,
       "profit_margins": 13.4,
       "roe": 12.3,
-      "trailing_pe": 67.43,
-      "forward_pe": 40.98,
+      "trailing_pe": 66.17,
+      "forward_pe": 41.98,
       "peg_ratio": 2.87,
-      "ps_ratio": 8.04
+      "ps_ratio": 8.23
     },
     "LITE": {
       "short_pct_of_float": 12.5,
@@ -1928,10 +1928,10 @@
       "operating_margins": 21.8,
       "profit_margins": 17.7,
       "roe": 22.8,
-      "trailing_pe": 136.58,
-      "forward_pe": 42.49,
+      "trailing_pe": 149.29,
+      "forward_pe": 46.28,
       "peg_ratio": 0.63,
-      "ps_ratio": 24.38
+      "ps_ratio": 26.56
     },
     "LLY": {
       "short_pct_of_float": 1.15,
@@ -1951,13 +1951,13 @@
       "operating_margins": 49.4,
       "profit_margins": 35.0,
       "roe": 107.5,
-      "trailing_pe": 39.84,
-      "forward_pe": 24.87,
+      "trailing_pe": 39.63,
+      "forward_pe": 24.75,
       "peg_ratio": 1.61,
-      "ps_ratio": null
+      "ps_ratio": 13.77
     },
     "LMND": {
-      "short_pct_of_float": 14.46,
+      "short_pct_of_float": 14.35,
       "short_ratio_days": 6.89,
       "shares_short": 10146150,
       "insider_net_value_90d": -6518750.0,
@@ -1975,9 +1975,9 @@
       "profit_margins": -14.2,
       "roe": -27.0,
       "trailing_pe": null,
-      "forward_pe": -60.98,
+      "forward_pe": -62.2,
       "peg_ratio": null,
-      "ps_ratio": 4.21
+      "ps_ratio": 4.29
     },
     "LRCX": {
       "short_pct_of_float": 2.64,
@@ -1997,10 +1997,10 @@
       "operating_margins": 37.4,
       "profit_margins": 31.3,
       "roe": 65.1,
-      "trailing_pe": 51.06,
-      "forward_pe": 25.56,
+      "trailing_pe": 55.07,
+      "forward_pe": 27.57,
       "peg_ratio": 1.38,
-      "ps_ratio": 15.87
+      "ps_ratio": 17.11
     },
     "LUNR": {
       "short_pct_of_float": 28.8,
@@ -2021,9 +2021,9 @@
       "profit_margins": -32.7,
       "roe": -30.3,
       "trailing_pe": null,
-      "forward_pe": -262.0,
+      "forward_pe": -279.2,
       "peg_ratio": null,
-      "ps_ratio": 6.29
+      "ps_ratio": 6.7
     },
     "LYFT": {
       "short_pct_of_float": 23.81,
@@ -2043,10 +2043,10 @@
       "operating_margins": -0.3,
       "profit_margins": 43.8,
       "roe": 147.8,
-      "trailing_pe": 2.39,
-      "forward_pe": 7.95,
+      "trailing_pe": 2.37,
+      "forward_pe": 8.12,
       "peg_ratio": 0.15,
-      "ps_ratio": 0.95
+      "ps_ratio": 0.97
     },
     "MARA": {
       "short_pct_of_float": 33.15,
@@ -2089,10 +2089,10 @@
       "operating_margins": 17.1,
       "profit_margins": 4.9,
       "roe": 3.4,
-      "trailing_pe": 341.91,
-      "forward_pe": 17.95,
+      "trailing_pe": 366.68,
+      "forward_pe": 19.26,
       "peg_ratio": 0.27,
-      "ps_ratio": 8.67
+      "ps_ratio": 9.29
     },
     "MDB": {
       "short_pct_of_float": 3.62,
@@ -2113,9 +2113,9 @@
       "profit_margins": -1.1,
       "roe": -1.0,
       "trailing_pe": null,
-      "forward_pe": 48.78,
+      "forward_pe": 51.79,
       "peg_ratio": 1.67,
-      "ps_ratio": 11.06
+      "ps_ratio": 11.75
     },
     "MDY": {
       "short_pct_of_float": null,
@@ -2135,7 +2135,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 21.87,
+      "trailing_pe": 22.26,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -2181,18 +2181,18 @@
       "operating_margins": 30.9,
       "profit_margins": 29.8,
       "roe": 29.8,
-      "trailing_pe": 22.22,
-      "forward_pe": 16.91,
+      "trailing_pe": 22.14,
+      "forward_pe": 16.85,
       "peg_ratio": 0.83,
-      "ps_ratio": 6.59
+      "ps_ratio": 6.56
     },
     "MPWR": {
       "short_pct_of_float": 6.73,
       "short_ratio_days": 2.06,
       "shares_short": 2456955,
-      "insider_net_value_90d": -132341549.0,
+      "insider_net_value_90d": -60721026.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 13,
+      "insider_sell_count_90d": 9,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 4,
@@ -2204,10 +2204,10 @@
       "operating_margins": 31.0,
       "profit_margins": 24.5,
       "roe": 22.0,
-      "trailing_pe": 81.97,
-      "forward_pe": 38.64,
+      "trailing_pe": 81.4,
+      "forward_pe": 38.37,
       "peg_ratio": 1.87,
-      "ps_ratio": 20.18
+      "ps_ratio": 20.04
     },
     "MRNA": {
       "short_pct_of_float": 16.15,
@@ -2228,9 +2228,9 @@
       "profit_margins": -141.4,
       "roe": -39.0,
       "trailing_pe": null,
-      "forward_pe": -11.4,
+      "forward_pe": -11.77,
       "peg_ratio": null,
-      "ps_ratio": 9.82
+      "ps_ratio": 10.21
     },
     "MRVL": {
       "short_pct_of_float": 4.34,
@@ -2250,10 +2250,10 @@
       "operating_margins": 14.5,
       "profit_margins": 29.0,
       "roe": 16.0,
-      "trailing_pe": 66.59,
-      "forward_pe": 31.05,
+      "trailing_pe": 75.12,
+      "forward_pe": 35.03,
       "peg_ratio": 1.06,
-      "ps_ratio": 19.95
+      "ps_ratio": 22.51
     },
     "MSFT": {
       "short_pct_of_float": 1.24,
@@ -2273,10 +2273,10 @@
       "operating_margins": 45.1,
       "profit_margins": 40.3,
       "roe": 34.0,
-      "trailing_pe": 27.18,
-      "forward_pe": 20.78,
+      "trailing_pe": 27.45,
+      "forward_pe": 21.0,
       "peg_ratio": 1.52,
-      "ps_ratio": 10.91
+      "ps_ratio": 11.03
     },
     "MSTR": {
       "short_pct_of_float": 11.76,
@@ -2297,9 +2297,9 @@
       "profit_margins": 0.0,
       "roe": -63.6,
       "trailing_pe": null,
-      "forward_pe": 21.26,
+      "forward_pe": 21.89,
       "peg_ratio": 2.85,
-      "ps_ratio": 69.54
+      "ps_ratio": 71.58
     },
     "MU": {
       "short_pct_of_float": 3.21,
@@ -2319,18 +2319,18 @@
       "operating_margins": 80.4,
       "profit_margins": 55.9,
       "roe": 66.6,
-      "trailing_pe": 18.73,
-      "forward_pe": 5.33,
+      "trailing_pe": 20.19,
+      "forward_pe": 5.74,
       "peg_ratio": 0.12,
-      "ps_ratio": null
+      "ps_ratio": 11.17
     },
     "NBIS": {
       "short_pct_of_float": 28.0,
       "short_ratio_days": 3.42,
       "shares_short": 61068467,
-      "insider_net_value_90d": -140793045.0,
+      "insider_net_value_90d": -138792995.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 13,
+      "insider_sell_count_90d": 12,
       "upgrades_30d": 1,
       "downgrades_30d": 0,
       "pt_raises_30d": 2,
@@ -2342,10 +2342,10 @@
       "operating_margins": -32.1,
       "profit_margins": 93.1,
       "roe": 14.1,
-      "trailing_pe": 82.08,
-      "forward_pe": -131.76,
+      "trailing_pe": 87.16,
+      "forward_pe": -104.44,
       "peg_ratio": 0.63,
-      "ps_ratio": 61.48
+      "ps_ratio": 65.29
     },
     "NEM": {
       "short_pct_of_float": 2.16,
@@ -2365,10 +2365,10 @@
       "operating_margins": 51.6,
       "profit_margins": 33.4,
       "roe": 25.9,
-      "trailing_pe": 12.03,
-      "forward_pe": 9.04,
+      "trailing_pe": 12.32,
+      "forward_pe": 9.26,
       "peg_ratio": 2.78,
-      "ps_ratio": 3.9
+      "ps_ratio": 4.0
     },
     "NET": {
       "short_pct_of_float": 3.47,
@@ -2389,9 +2389,9 @@
       "profit_margins": -3.7,
       "roe": -5.9,
       "trailing_pe": null,
-      "forward_pe": 178.28,
+      "forward_pe": 190.01,
       "peg_ratio": 2.38,
-      "ps_ratio": 43.1
+      "ps_ratio": 45.93
     },
     "NFLX": {
       "short_pct_of_float": 2.41,
@@ -2411,10 +2411,10 @@
       "operating_margins": 33.4,
       "profit_margins": 28.2,
       "roe": 49.5,
-      "trailing_pe": 23.06,
-      "forward_pe": 19.21,
+      "trailing_pe": 23.14,
+      "forward_pe": 19.27,
       "peg_ratio": 1.61,
-      "ps_ratio": 6.31
+      "ps_ratio": 6.33
     },
     "NOK": {
       "short_pct_of_float": 0.9,
@@ -2434,10 +2434,10 @@
       "operating_margins": 7.9,
       "profit_margins": 3.5,
       "roe": 3.5,
-      "trailing_pe": 66.86,
-      "forward_pe": 18.84,
+      "trailing_pe": 70.86,
+      "forward_pe": 19.96,
       "peg_ratio": 0.9,
-      "ps_ratio": null
+      "ps_ratio": 2.72
     },
     "NOW": {
       "short_pct_of_float": 5.4,
@@ -2457,13 +2457,13 @@
       "operating_margins": 4.1,
       "profit_margins": 11.3,
       "roe": 14.2,
-      "trailing_pe": 71.37,
-      "forward_pe": 22.81,
+      "trailing_pe": 72.04,
+      "forward_pe": 23.6,
       "peg_ratio": 0.99,
-      "ps_ratio": 8.01
+      "ps_ratio": 8.29
     },
     "NTAP": {
-      "short_pct_of_float": 7.6,
+      "short_pct_of_float": 7.58,
       "short_ratio_days": 3.93,
       "shares_short": 12870550,
       "insider_net_value_90d": -9465266.0,
@@ -2480,10 +2480,10 @@
       "operating_margins": 27.3,
       "profit_margins": 18.4,
       "roe": 106.7,
-      "trailing_pe": 28.81,
-      "forward_pe": 18.59,
+      "trailing_pe": 29.99,
+      "forward_pe": 19.36,
       "peg_ratio": 2.01,
-      "ps_ratio": 5.18
+      "ps_ratio": 5.39
     },
     "NVDA": {
       "short_pct_of_float": 1.39,
@@ -2503,10 +2503,10 @@
       "operating_margins": 65.6,
       "profit_margins": 63.0,
       "roe": 114.3,
-      "trailing_pe": 31.69,
-      "forward_pe": 16.03,
+      "trailing_pe": 32.51,
+      "forward_pe": 16.44,
       "peg_ratio": 0.55,
-      "ps_ratio": 19.74
+      "ps_ratio": 20.25
     },
     "NVO": {
       "short_pct_of_float": 0.98,
@@ -2526,13 +2526,13 @@
       "operating_margins": 61.6,
       "profit_margins": 37.2,
       "roe": 71.4,
-      "trailing_pe": 11.21,
-      "forward_pe": 14.38,
+      "trailing_pe": 10.52,
+      "forward_pe": 13.52,
       "peg_ratio": 3.16,
-      "ps_ratio": 0.64
+      "ps_ratio": 0.6
     },
     "NVTS": {
-      "short_pct_of_float": 18.35,
+      "short_pct_of_float": 16.96,
       "short_ratio_days": 1.97,
       "shares_short": 39390044,
       "insider_net_value_90d": -225058654.0,
@@ -2550,9 +2550,9 @@
       "profit_margins": 0.0,
       "roe": -52.6,
       "trailing_pe": null,
-      "forward_pe": -91.41,
+      "forward_pe": -100.7,
       "peg_ratio": null,
-      "ps_ratio": 82.33
+      "ps_ratio": 90.69
     },
     "NXPI": {
       "short_pct_of_float": 3.86,
@@ -2572,10 +2572,10 @@
       "operating_margins": 30.4,
       "profit_margins": 22.6,
       "roe": 27.9,
-      "trailing_pe": 44.66,
-      "forward_pe": 12.34,
+      "trailing_pe": 47.33,
+      "forward_pe": 13.13,
       "peg_ratio": 0.55,
-      "ps_ratio": 4.29
+      "ps_ratio": 4.54
     },
     "OKLO": {
       "short_pct_of_float": 18.39,
@@ -2596,7 +2596,7 @@
       "profit_margins": 0.0,
       "roe": -8.9,
       "trailing_pe": null,
-      "forward_pe": -48.86,
+      "forward_pe": -51.36,
       "peg_ratio": null,
       "ps_ratio": null
     },
@@ -2618,10 +2618,10 @@
       "operating_margins": 7.3,
       "profit_margins": 8.2,
       "roe": 3.7,
-      "trailing_pe": 102.59,
-      "forward_pe": 33.07,
+      "trailing_pe": 107.9,
+      "forward_pe": 34.52,
       "peg_ratio": 1.35,
-      "ps_ratio": 8.21
+      "ps_ratio": 8.65
     },
     "ON": {
       "short_pct_of_float": 11.05,
@@ -2632,19 +2632,19 @@
       "insider_sell_count_90d": 0,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 1,
-      "pt_lowers_30d": 2,
-      "revenue_growth_yoy": 4.7,
-      "earnings_growth_yoy": null,
-      "earnings_growth_q": null,
-      "gross_margins": 42.7,
-      "operating_margins": 18.2,
-      "profit_margins": 9.5,
-      "roe": 7.5,
-      "trailing_pe": 59.12,
-      "forward_pe": 18.51,
+      "pt_raises_30d": 2,
+      "pt_lowers_30d": 6,
+      "revenue_growth_yoy": 9.2,
+      "earnings_growth_yoy": 36.6,
+      "earnings_growth_q": 33.2,
+      "gross_margins": 42.8,
+      "operating_margins": 16.1,
+      "profit_margins": 10.2,
+      "roe": 8.3,
+      "trailing_pe": 60.28,
+      "forward_pe": 18.6,
       "peg_ratio": 0.27,
-      "ps_ratio": 5.16
+      "ps_ratio": 5.07
     },
     "ONDS": {
       "short_pct_of_float": 40.53,
@@ -2664,10 +2664,10 @@
       "operating_margins": -85.1,
       "profit_margins": 251.9,
       "roe": 42.9,
-      "trailing_pe": 93.0,
-      "forward_pe": -279.0,
+      "trailing_pe": 98.44,
+      "forward_pe": -295.33,
       "peg_ratio": null,
-      "ps_ratio": 49.37
+      "ps_ratio": 52.26
     },
     "OPEN": {
       "short_pct_of_float": 19.55,
@@ -2688,9 +2688,9 @@
       "profit_margins": -35.2,
       "roe": -173.6,
       "trailing_pe": null,
-      "forward_pe": -180.4,
+      "forward_pe": -188.64,
       "peg_ratio": null,
-      "ps_ratio": 0.97
+      "ps_ratio": 1.01
     },
     "ORCL": {
       "short_pct_of_float": 2.91,
@@ -2710,10 +2710,10 @@
       "operating_margins": 36.2,
       "profit_margins": 25.4,
       "roe": 53.4,
-      "trailing_pe": 24.33,
-      "forward_pe": 13.03,
+      "trailing_pe": 25.0,
+      "forward_pe": 13.38,
       "peg_ratio": 0.73,
-      "ps_ratio": 6.07
+      "ps_ratio": 6.23
     },
     "OSCR": {
       "short_pct_of_float": 7.98,
@@ -2734,9 +2734,9 @@
       "profit_margins": -0.3,
       "roe": -2.6,
       "trailing_pe": null,
-      "forward_pe": 19.63,
+      "forward_pe": 19.4,
       "peg_ratio": null,
-      "ps_ratio": 0.7
+      "ps_ratio": 0.69
     },
     "OSS": {
       "short_pct_of_float": 13.97,
@@ -2757,9 +2757,9 @@
       "profit_margins": 18.8,
       "roe": -3.3,
       "trailing_pe": null,
-      "forward_pe": 118.73,
+      "forward_pe": 129.73,
       "peg_ratio": null,
-      "ps_ratio": 9.22
+      "ps_ratio": 10.08
     },
     "OUST": {
       "short_pct_of_float": 9.31,
@@ -2780,9 +2780,9 @@
       "profit_margins": -30.1,
       "roe": -25.2,
       "trailing_pe": null,
-      "forward_pe": -944.0,
+      "forward_pe": -1063.11,
       "peg_ratio": null,
-      "ps_ratio": 15.42
+      "ps_ratio": 17.37
     },
     "P": {
       "short_pct_of_float": 4.43,
@@ -2802,10 +2802,10 @@
       "operating_margins": -18.5,
       "profit_margins": 5.7,
       "roe": 16.8,
-      "trailing_pe": 121.42,
-      "forward_pe": 26.66,
+      "trailing_pe": 127.15,
+      "forward_pe": 27.92,
       "peg_ratio": 1.64,
-      "ps_ratio": null
+      "ps_ratio": 7.08
     },
     "PATH": {
       "short_pct_of_float": 28.11,
@@ -2825,10 +2825,10 @@
       "operating_margins": 7.3,
       "profit_margins": 19.6,
       "roe": 18.2,
-      "trailing_pe": 21.75,
-      "forward_pe": 14.4,
+      "trailing_pe": 23.5,
+      "forward_pe": 15.55,
       "peg_ratio": 0.46,
-      "ps_ratio": 4.04
+      "ps_ratio": 4.37
     },
     "PDD": {
       "short_pct_of_float": 3.8,
@@ -2848,8 +2848,8 @@
       "operating_margins": 18.4,
       "profit_margins": 21.6,
       "roe": 25.4,
-      "trailing_pe": 9.45,
-      "forward_pe": 7.37,
+      "trailing_pe": 9.52,
+      "forward_pe": 7.44,
       "peg_ratio": 0.82,
       "ps_ratio": 0.29
     },
@@ -2872,9 +2872,9 @@
       "profit_margins": -111.2,
       "roe": -84.0,
       "trailing_pe": null,
-      "forward_pe": 6465.47,
+      "forward_pe": 6855.86,
       "peg_ratio": null,
-      "ps_ratio": 22.86
+      "ps_ratio": 24.24
     },
     "PLTR": {
       "short_pct_of_float": 3.64,
@@ -2883,21 +2883,21 @@
       "insider_net_value_90d": -154342647.0,
       "insider_buy_count_90d": 0,
       "insider_sell_count_90d": 11,
-      "upgrades_30d": 0,
+      "upgrades_30d": 1,
       "downgrades_30d": 0,
-      "pt_raises_30d": 0,
+      "pt_raises_30d": 5,
       "pt_lowers_30d": 1,
-      "revenue_growth_yoy": 84.7,
-      "earnings_growth_yoy": 325.0,
-      "earnings_growth_q": 306.7,
-      "gross_margins": 84.1,
-      "operating_margins": 46.2,
-      "profit_margins": 43.7,
-      "roe": 32.6,
-      "trailing_pe": 141.18,
-      "forward_pe": 59.99,
+      "revenue_growth_yoy": 92.8,
+      "earnings_growth_yoy": 215.4,
+      "earnings_growth_q": 225.0,
+      "gross_margins": 84.8,
+      "operating_margins": 47.1,
+      "profit_margins": 49.0,
+      "roe": 38.1,
+      "trailing_pe": 182.76,
+      "forward_pe": 75.1,
       "peg_ratio": 1.76,
-      "ps_ratio": 57.66
+      "ps_ratio": 63.34
     },
     "POET": {
       "short_pct_of_float": 15.8,
@@ -2918,9 +2918,9 @@
       "profit_margins": 0.0,
       "roe": -33.9,
       "trailing_pe": null,
-      "forward_pe": -43.29,
+      "forward_pe": -50.41,
       "peg_ratio": null,
-      "ps_ratio": 899.94
+      "ps_ratio": 1047.89
     },
     "PONY": {
       "short_pct_of_float": 7.68,
@@ -2941,9 +2941,9 @@
       "profit_margins": -128.2,
       "roe": -7.2,
       "trailing_pe": null,
-      "forward_pe": -13.33,
+      "forward_pe": -13.3,
       "peg_ratio": null,
-      "ps_ratio": 31.71
+      "ps_ratio": 31.63
     },
     "PURR": {
       "short_pct_of_float": null,
@@ -2964,7 +2964,7 @@
       "profit_margins": 0.0,
       "roe": null,
       "trailing_pe": null,
-      "forward_pe": -29.03,
+      "forward_pe": -30.04,
       "peg_ratio": null,
       "ps_ratio": null
     },
@@ -2987,17 +2987,17 @@
       "profit_margins": 0.0,
       "roe": -55.3,
       "trailing_pe": null,
-      "forward_pe": -51.32,
+      "forward_pe": -56.07,
       "peg_ratio": null,
-      "ps_ratio": 594.78
+      "ps_ratio": 649.86
     },
     "QCOM": {
-      "short_pct_of_float": 3.84,
+      "short_pct_of_float": 3.83,
       "short_ratio_days": 1.83,
       "shares_short": 36152231,
-      "insider_net_value_90d": -1642418.0,
+      "insider_net_value_90d": -2112946.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 4,
+      "insider_sell_count_90d": 5,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 1,
@@ -3009,10 +3009,10 @@
       "operating_margins": 18.5,
       "profit_margins": 21.0,
       "roe": 33.8,
-      "trailing_pe": 17.32,
-      "forward_pe": 14.72,
+      "trailing_pe": 18.59,
+      "forward_pe": 15.8,
       "peg_ratio": 0.63,
-      "ps_ratio": 3.61
+      "ps_ratio": 3.88
     },
     "QNT": {
       "short_pct_of_float": 6.65,
@@ -3033,9 +3033,9 @@
       "profit_margins": 0.0,
       "roe": null,
       "trailing_pe": null,
-      "forward_pe": -35.56,
+      "forward_pe": -37.15,
       "peg_ratio": null,
-      "ps_ratio": 844.65
+      "ps_ratio": 882.45
     },
     "QQQ": {
       "short_pct_of_float": null,
@@ -3055,7 +3055,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 31.07,
+      "trailing_pe": 32.12,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -3064,9 +3064,9 @@
       "short_pct_of_float": 20.67,
       "short_ratio_days": 4.06,
       "shares_short": 104450395,
-      "insider_net_value_90d": -5967736.0,
+      "insider_net_value_90d": -5574031.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 9,
+      "insider_sell_count_90d": 8,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 0,
@@ -3079,7 +3079,7 @@
       "profit_margins": 0.0,
       "roe": -39.1,
       "trailing_pe": null,
-      "forward_pe": -7.85,
+      "forward_pe": -8.36,
       "peg_ratio": null,
       "ps_ratio": null
     },
@@ -3102,12 +3102,12 @@
       "profit_margins": 0.0,
       "roe": -4.4,
       "trailing_pe": null,
-      "forward_pe": -23.0,
+      "forward_pe": -24.29,
       "peg_ratio": null,
-      "ps_ratio": 454.82
+      "ps_ratio": 480.32
     },
     "RBLX": {
-      "short_pct_of_float": 4.52,
+      "short_pct_of_float": 4.53,
       "short_ratio_days": 2.77,
       "shares_short": 29317704,
       "insider_net_value_90d": -7608691.0,
@@ -3116,7 +3116,7 @@
       "upgrades_30d": 0,
       "downgrades_30d": 5,
       "pt_raises_30d": 0,
-      "pt_lowers_30d": 11,
+      "pt_lowers_30d": 12,
       "revenue_growth_yoy": 35.9,
       "earnings_growth_yoy": null,
       "earnings_growth_q": null,
@@ -3125,17 +3125,17 @@
       "profit_margins": -17.6,
       "roe": -432.3,
       "trailing_pe": null,
-      "forward_pe": -30.12,
+      "forward_pe": -30.25,
       "peg_ratio": 8.18,
-      "ps_ratio": 4.61
+      "ps_ratio": 4.65
     },
     "RCAT": {
       "short_pct_of_float": 23.58,
       "short_ratio_days": 3.01,
       "shares_short": 32643274,
-      "insider_net_value_90d": -3174322.0,
+      "insider_net_value_90d": -1897822.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 2,
+      "insider_sell_count_90d": 1,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 0,
@@ -3148,12 +3148,12 @@
       "profit_margins": -138.4,
       "roe": -56.4,
       "trailing_pe": null,
-      "forward_pe": -22.94,
+      "forward_pe": -24.61,
       "peg_ratio": null,
-      "ps_ratio": 23.04
+      "ps_ratio": 24.71
     },
     "RDDT": {
-      "short_pct_of_float": 12.06,
+      "short_pct_of_float": 11.74,
       "short_ratio_days": 4.08,
       "shares_short": 16986699,
       "insider_net_value_90d": -36900347.0,
@@ -3170,10 +3170,10 @@
       "operating_margins": 28.8,
       "profit_margins": 31.3,
       "roe": 30.7,
-      "trailing_pe": 35.98,
-      "forward_pe": 16.07,
+      "trailing_pe": 37.2,
+      "forward_pe": 16.61,
       "peg_ratio": 1.01,
-      "ps_ratio": 10.72
+      "ps_ratio": 11.08
     },
     "RDW": {
       "short_pct_of_float": 21.01,
@@ -3194,9 +3194,9 @@
       "profit_margins": -80.9,
       "roe": -48.7,
       "trailing_pe": null,
-      "forward_pe": -29.21,
+      "forward_pe": -32.21,
       "peg_ratio": null,
-      "ps_ratio": 6.21
+      "ps_ratio": 6.84
     },
     "RGTI": {
       "short_pct_of_float": 18.54,
@@ -3217,9 +3217,9 @@
       "profit_margins": 0.0,
       "roe": -57.1,
       "trailing_pe": null,
-      "forward_pe": -79.66,
+      "forward_pe": -86.77,
       "peg_ratio": null,
-      "ps_ratio": 531.65
+      "ps_ratio": 579.11
     },
     "RIOT": {
       "short_pct_of_float": 15.32,
@@ -3240,9 +3240,9 @@
       "profit_margins": -132.8,
       "roe": -32.5,
       "trailing_pe": null,
-      "forward_pe": -30.09,
+      "forward_pe": -30.29,
       "peg_ratio": null,
-      "ps_ratio": 12.4
+      "ps_ratio": 12.48
     },
     "RIVN": {
       "short_pct_of_float": 12.39,
@@ -3263,9 +3263,9 @@
       "profit_margins": -55.0,
       "roe": -57.5,
       "trailing_pe": null,
-      "forward_pe": -8.61,
+      "forward_pe": -8.81,
       "peg_ratio": null,
-      "ps_ratio": 3.78
+      "ps_ratio": 3.88
     },
     "RKLB": {
       "short_pct_of_float": 7.97,
@@ -3286,9 +3286,9 @@
       "profit_margins": -26.9,
       "roe": -13.5,
       "trailing_pe": null,
-      "forward_pe": 8454.98,
+      "forward_pe": 8941.18,
       "peg_ratio": null,
-      "ps_ratio": 64.75
+      "ps_ratio": 68.48
     },
     "RKT": {
       "short_pct_of_float": 14.09,
@@ -3309,12 +3309,12 @@
       "profit_margins": 2.7,
       "roe": 1.7,
       "trailing_pe": null,
-      "forward_pe": 14.31,
+      "forward_pe": 14.76,
       "peg_ratio": 0.53,
-      "ps_ratio": null
+      "ps_ratio": 4.48
     },
     "RMBS": {
-      "short_pct_of_float": 5.75,
+      "short_pct_of_float": 5.73,
       "short_ratio_days": 1.23,
       "shares_short": 4581716,
       "insider_net_value_90d": -11335623.0,
@@ -3331,10 +3331,10 @@
       "operating_margins": 36.7,
       "profit_margins": 31.7,
       "roe": 17.8,
-      "trailing_pe": 42.3,
-      "forward_pe": 24.94,
+      "trailing_pe": 46.12,
+      "forward_pe": 27.2,
       "peg_ratio": 3.8,
-      "ps_ratio": 13.22
+      "ps_ratio": 14.38
     },
     "SBET": {
       "short_pct_of_float": 18.62,
@@ -3355,9 +3355,9 @@
       "profit_margins": 0.0,
       "roe": -163.1,
       "trailing_pe": null,
-      "forward_pe": 3.13,
+      "forward_pe": 3.18,
       "peg_ratio": null,
-      "ps_ratio": 33.22
+      "ps_ratio": 33.75
     },
     "SKHYNIX": {
       "short_pct_of_float": null,
@@ -3400,10 +3400,10 @@
       "operating_margins": 6.1,
       "profit_margins": 3.7,
       "roe": 17.9,
-      "trailing_pe": 15.07,
-      "forward_pe": 8.65,
+      "trailing_pe": 16.68,
+      "forward_pe": 9.57,
       "peg_ratio": 0.91,
-      "ps_ratio": 0.55
+      "ps_ratio": 0.61
     },
     "SMR": {
       "short_pct_of_float": 23.15,
@@ -3424,9 +3424,9 @@
       "profit_margins": 0.0,
       "roe": -83.0,
       "trailing_pe": null,
-      "forward_pe": -12.57,
+      "forward_pe": -13.24,
       "peg_ratio": null,
-      "ps_ratio": 167.04
+      "ps_ratio": 175.94
     },
     "SNDK": {
       "short_pct_of_float": 8.28,
@@ -3446,10 +3446,10 @@
       "operating_margins": 70.0,
       "profit_margins": 34.2,
       "roe": 39.3,
-      "trailing_pe": 43.99,
-      "forward_pe": 6.05,
+      "trailing_pe": 48.82,
+      "forward_pe": 6.7,
       "peg_ratio": null,
-      "ps_ratio": 14.47
+      "ps_ratio": 16.04
     },
     "SNOW": {
       "short_pct_of_float": 6.42,
@@ -3470,12 +3470,12 @@
       "profit_margins": -23.8,
       "roe": -54.9,
       "trailing_pe": null,
-      "forward_pe": 113.95,
+      "forward_pe": 117.37,
       "peg_ratio": 7.41,
-      "ps_ratio": 21.18
+      "ps_ratio": 21.82
     },
     "SOFI": {
-      "short_pct_of_float": 14.7,
+      "short_pct_of_float": 14.61,
       "short_ratio_days": 2.13,
       "shares_short": 185956377,
       "insider_net_value_90d": -1621524.0,
@@ -3492,10 +3492,10 @@
       "operating_margins": 17.0,
       "profit_margins": 14.9,
       "roe": 7.1,
-      "trailing_pe": 36.8,
-      "forward_pe": 22.2,
+      "trailing_pe": 38.16,
+      "forward_pe": 23.02,
       "peg_ratio": 0.78,
-      "ps_ratio": 5.45
+      "ps_ratio": 5.65
     },
     "SOUN": {
       "short_pct_of_float": 42.35,
@@ -3516,9 +3516,9 @@
       "profit_margins": -91.8,
       "roe": -39.4,
       "trailing_pe": null,
-      "forward_pe": -50.83,
+      "forward_pe": -54.25,
       "peg_ratio": null,
-      "ps_ratio": 14.44
+      "ps_ratio": 15.42
     },
     "SOXX": {
       "short_pct_of_float": null,
@@ -3538,7 +3538,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 35.89,
+      "trailing_pe": 38.33,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -3585,9 +3585,9 @@
       "profit_margins": -45.0,
       "roe": null,
       "trailing_pe": null,
-      "forward_pe": 126.83,
+      "forward_pe": 138.79,
       "peg_ratio": null,
-      "ps_ratio": 78.17
+      "ps_ratio": 85.55
     },
     "SPY": {
       "short_pct_of_float": null,
@@ -3607,7 +3607,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 27.25,
+      "trailing_pe": 27.74,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -3630,16 +3630,16 @@
       "operating_margins": 49.0,
       "profit_margins": 3.0,
       "roe": 4.9,
-      "trailing_pe": 45.37,
-      "forward_pe": 6.49,
+      "trailing_pe": 44.3,
+      "forward_pe": 6.7,
       "peg_ratio": -0.09,
-      "ps_ratio": 0.77
+      "ps_ratio": 0.79
     },
     "STX": {
-      "short_pct_of_float": 3.72,
+      "short_pct_of_float": 3.7,
       "short_ratio_days": 1.41,
       "shares_short": 7342100,
-      "insider_net_value_90d": -120801044.0,
+      "insider_net_value_90d": -103999302.0,
       "insider_buy_count_90d": 0,
       "insider_sell_count_90d": 20,
       "upgrades_30d": 1,
@@ -3653,18 +3653,18 @@
       "operating_margins": 43.1,
       "profit_margins": 26.1,
       "roe": 371.5,
-      "trailing_pe": 59.92,
-      "forward_pe": 15.01,
+      "trailing_pe": 60.95,
+      "forward_pe": 15.27,
       "peg_ratio": 0.49,
-      "ps_ratio": 15.47
+      "ps_ratio": 15.68
     },
     "TDC": {
       "short_pct_of_float": 25.66,
       "short_ratio_days": 4.56,
       "shares_short": 17261670,
-      "insider_net_value_90d": null,
+      "insider_net_value_90d": -3564794.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 0,
+      "insider_sell_count_90d": 7,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 0,
@@ -3676,13 +3676,13 @@
       "operating_margins": 19.1,
       "profit_margins": 24.9,
       "roe": 117.8,
-      "trailing_pe": 7.34,
-      "forward_pe": 11.11,
+      "trailing_pe": 7.87,
+      "forward_pe": 11.91,
       "peg_ratio": 6.0,
-      "ps_ratio": null
+      "ps_ratio": 1.92
     },
     "TEM": {
-      "short_pct_of_float": 30.66,
+      "short_pct_of_float": 30.45,
       "short_ratio_days": 5.03,
       "shares_short": 30360084,
       "insider_net_value_90d": -33832505.0,
@@ -3691,7 +3691,7 @@
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 1,
-      "pt_lowers_30d": 3,
+      "pt_lowers_30d": 4,
       "revenue_growth_yoy": 21.6,
       "earnings_growth_yoy": null,
       "earnings_growth_q": null,
@@ -3700,9 +3700,9 @@
       "profit_margins": -17.8,
       "roe": -67.4,
       "trailing_pe": null,
-      "forward_pe": -710.98,
+      "forward_pe": -1899.48,
       "peg_ratio": null,
-      "ps_ratio": 5.8
+      "ps_ratio": 5.93
     },
     "TLT": {
       "short_pct_of_float": null,
@@ -3723,7 +3723,7 @@
       "profit_margins": null,
       "roe": null,
       "trailing_pe": null,
-      "forward_pe": -4109.5,
+      "forward_pe": -4141.0,
       "peg_ratio": null,
       "ps_ratio": null
     },
@@ -3745,10 +3745,10 @@
       "operating_margins": 15.6,
       "profit_margins": 15.1,
       "roe": 8.7,
-      "trailing_pe": 108.99,
-      "forward_pe": 40.25,
-      "peg_ratio": 6.32,
-      "ps_ratio": 16.33
+      "trailing_pe": 110.89,
+      "forward_pe": 40.64,
+      "peg_ratio": 6.76,
+      "ps_ratio": 16.7
     },
     "TSLA": {
       "short_pct_of_float": 2.0,
@@ -3768,10 +3768,10 @@
       "operating_margins": 1.4,
       "profit_margins": 3.7,
       "roe": 4.7,
-      "trailing_pe": 295.49,
-      "forward_pe": 145.13,
+      "trailing_pe": 297.59,
+      "forward_pe": 147.51,
       "peg_ratio": 4.56,
-      "ps_ratio": 12.28
+      "ps_ratio": 12.48
     },
     "TSM": {
       "short_pct_of_float": 0.69,
@@ -3791,10 +3791,10 @@
       "operating_margins": 60.3,
       "profit_margins": 49.9,
       "roe": 40.0,
-      "trailing_pe": 35.75,
-      "forward_pe": 18.79,
+      "trailing_pe": 36.82,
+      "forward_pe": 19.31,
       "peg_ratio": 0.98,
-      "ps_ratio": 0.47
+      "ps_ratio": 0.49
     },
     "TTD": {
       "short_pct_of_float": 20.25,
@@ -3814,10 +3814,10 @@
       "operating_margins": 9.7,
       "profit_margins": 14.6,
       "roe": 16.7,
-      "trailing_pe": 20.8,
-      "forward_pe": 8.52,
+      "trailing_pe": 21.98,
+      "forward_pe": 8.93,
       "peg_ratio": 0.86,
-      "ps_ratio": 2.9
+      "ps_ratio": 3.06
     },
     "TTMI": {
       "short_pct_of_float": 3.27,
@@ -3837,10 +3837,10 @@
       "operating_margins": 8.6,
       "profit_margins": 6.3,
       "roe": 11.4,
-      "trailing_pe": 65.88,
-      "forward_pe": 22.45,
+      "trailing_pe": 72.17,
+      "forward_pe": 24.59,
       "peg_ratio": 0.36,
-      "ps_ratio": 4.06
+      "ps_ratio": 4.44
     },
     "U": {
       "short_pct_of_float": 7.8,
@@ -3851,7 +3851,7 @@
       "insider_sell_count_90d": 5,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
-      "pt_raises_30d": 3,
+      "pt_raises_30d": 4,
       "pt_lowers_30d": 0,
       "revenue_growth_yoy": 16.8,
       "earnings_growth_yoy": null,
@@ -3861,9 +3861,9 @@
       "profit_margins": -35.0,
       "roe": -20.1,
       "trailing_pe": null,
-      "forward_pe": 25.36,
+      "forward_pe": 26.76,
       "peg_ratio": null,
-      "ps_ratio": 7.58
+      "ps_ratio": 8.0
     },
     "UBER": {
       "short_pct_of_float": 2.64,
@@ -3883,10 +3883,10 @@
       "operating_margins": 14.6,
       "profit_margins": 15.9,
       "roe": 35.3,
-      "trailing_pe": 17.77,
-      "forward_pe": 16.22,
+      "trailing_pe": 17.86,
+      "forward_pe": 16.17,
       "peg_ratio": 7.8,
-      "ps_ratio": 2.72
+      "ps_ratio": 2.73
     },
     "UMAC": {
       "short_pct_of_float": 19.66,
@@ -3907,9 +3907,9 @@
       "profit_margins": -32.7,
       "roe": -3.2,
       "trailing_pe": null,
-      "forward_pe": -115.4,
+      "forward_pe": -133.35,
       "peg_ratio": null,
-      "ps_ratio": 63.94
+      "ps_ratio": 73.88
     },
     "UPST": {
       "short_pct_of_float": 31.36,
@@ -3929,10 +3929,10 @@
       "operating_margins": 0.9,
       "profit_margins": 4.2,
       "roe": 7.0,
-      "trailing_pe": 71.78,
-      "forward_pe": 8.74,
+      "trailing_pe": 68.91,
+      "forward_pe": 9.0,
       "peg_ratio": null,
-      "ps_ratio": 2.4
+      "ps_ratio": 2.47
     },
     "USAR": {
       "short_pct_of_float": 15.11,
@@ -3953,9 +3953,9 @@
       "profit_margins": 0.0,
       "roe": -44.8,
       "trailing_pe": null,
-      "forward_pe": 528.67,
+      "forward_pe": 575.83,
       "peg_ratio": null,
-      "ps_ratio": 528.6
+      "ps_ratio": 575.77
     },
     "VELO": {
       "short_pct_of_float": 35.1,
@@ -3976,17 +3976,17 @@
       "profit_margins": -105.7,
       "roe": -126.4,
       "trailing_pe": null,
-      "forward_pe": -20.69,
+      "forward_pe": -21.9,
       "peg_ratio": null,
-      "ps_ratio": 6.72
+      "ps_ratio": 8.08
     },
     "VIAV": {
       "short_pct_of_float": 6.78,
       "short_ratio_days": 1.36,
       "shares_short": 12069921,
-      "insider_net_value_90d": -15825289.0,
+      "insider_net_value_90d": -13418882.0,
       "insider_buy_count_90d": 0,
-      "insider_sell_count_90d": 3,
+      "insider_sell_count_90d": 1,
       "upgrades_30d": 0,
       "downgrades_30d": 0,
       "pt_raises_30d": 0,
@@ -3999,9 +3999,9 @@
       "profit_margins": -4.0,
       "roe": -7.0,
       "trailing_pe": null,
-      "forward_pe": 29.37,
+      "forward_pe": 31.37,
       "peg_ratio": 1.34,
-      "ps_ratio": 6.82
+      "ps_ratio": 7.28
     },
     "VOYG": {
       "short_pct_of_float": 21.65,
@@ -4022,9 +4022,9 @@
       "profit_margins": -72.9,
       "roe": -54.1,
       "trailing_pe": null,
-      "forward_pe": -20.3,
+      "forward_pe": -24.27,
       "peg_ratio": null,
-      "ps_ratio": 9.93
+      "ps_ratio": 11.87
     },
     "VRT": {
       "short_pct_of_float": 2.92,
@@ -4044,10 +4044,10 @@
       "operating_margins": 20.4,
       "profit_margins": 15.1,
       "roe": 43.9,
-      "trailing_pe": 59.51,
-      "forward_pe": 28.95,
+      "trailing_pe": 61.07,
+      "forward_pe": 29.71,
       "peg_ratio": 1.14,
-      "ps_ratio": 8.82
+      "ps_ratio": 9.05
     },
     "VST": {
       "short_pct_of_float": 4.32,
@@ -4067,10 +4067,10 @@
       "operating_margins": 26.6,
       "profit_margins": 11.5,
       "roe": 42.9,
-      "trailing_pe": 26.03,
-      "forward_pe": 15.1,
+      "trailing_pe": 23.99,
+      "forward_pe": 13.85,
       "peg_ratio": 0.44,
-      "ps_ratio": 2.7
+      "ps_ratio": 2.48
     },
     "WDC": {
       "short_pct_of_float": 7.61,
@@ -4090,10 +4090,10 @@
       "operating_margins": 37.0,
       "profit_margins": 55.3,
       "roe": 85.9,
-      "trailing_pe": 31.51,
-      "forward_pe": 28.71,
+      "trailing_pe": 32.79,
+      "forward_pe": 29.87,
       "peg_ratio": 0.48,
-      "ps_ratio": null
+      "ps_ratio": 16.05
     },
     "WULF": {
       "short_pct_of_float": 24.8,
@@ -4114,9 +4114,9 @@
       "profit_margins": 0.0,
       "roe": -2215.9,
       "trailing_pe": null,
-      "forward_pe": 96.56,
+      "forward_pe": 96.82,
       "peg_ratio": null,
-      "ps_ratio": 55.52
+      "ps_ratio": 55.67
     },
     "WYFI": {
       "short_pct_of_float": 51.59,
@@ -4137,9 +4137,9 @@
       "profit_margins": -46.1,
       "roe": -13.3,
       "trailing_pe": null,
-      "forward_pe": 44.49,
+      "forward_pe": 45.6,
       "peg_ratio": null,
-      "ps_ratio": 12.11
+      "ps_ratio": 12.42
     },
     "XBI": {
       "short_pct_of_float": null,
@@ -4182,7 +4182,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 21.84,
+      "trailing_pe": 21.74,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -4205,7 +4205,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 18.17,
+      "trailing_pe": 18.33,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -4228,7 +4228,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": null,
+      "trailing_pe": 34.96,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -4252,9 +4252,9 @@
       "profit_margins": 0.0,
       "roe": -45.2,
       "trailing_pe": null,
-      "forward_pe": -9.16,
+      "forward_pe": -9.39,
       "peg_ratio": null,
-      "ps_ratio": 500.17
+      "ps_ratio": 513.0
     },
     "XOP": {
       "short_pct_of_float": null,
@@ -4274,8 +4274,8 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 12.75,
-      "forward_pe": -17428.0,
+      "trailing_pe": 12.58,
+      "forward_pe": -17195.0,
       "peg_ratio": null,
       "ps_ratio": null
     },
@@ -4297,7 +4297,7 @@
       "operating_margins": null,
       "profit_margins": null,
       "roe": null,
-      "trailing_pe": 17.69,
+      "trailing_pe": 17.87,
       "forward_pe": null,
       "peg_ratio": null,
       "ps_ratio": null
@@ -4321,9 +4321,9 @@
       "profit_margins": -1.6,
       "roe": -3.0,
       "trailing_pe": null,
-      "forward_pe": 19.59,
+      "forward_pe": 21.06,
       "peg_ratio": 0.77,
-      "ps_ratio": 3.91
+      "ps_ratio": 4.21
     }
   }
 }
