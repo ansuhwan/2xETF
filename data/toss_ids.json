@@ -2369,5 +2369,23 @@
     "code": "AMX2607023001",
     "name_kr": "레버리지 셰어즈 2X 롱 메모리 데일리 ETF",
     "market": "AMX"
-  }
+  },
+  "MRAM": {
+    "code": "US20161007001",
+    "name_kr": "MRAM",
+    "market": "NSQ"
+  },
+  "MRAX": null,
+  "SITM": {
+    "code": "US20191120002",
+    "name_kr": "SITM",
+    "market": "NSQ"
+  },
+  "SITX": null,
+  "UMC": {
+    "code": "US20000919001",
+    "name_kr": "",
+    "market": "NYS"
+  },
+  "UMCU": null
 }

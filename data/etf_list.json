@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-08-07T09:04:19+09:00",
-  "total": 222,
+  "updated_at": "2026-08-08T07:15:37+09:00",
+  "total": 225,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 213,
+      "ms": 370,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 518,
+      "ms": 650,
       "ok": true
     },
     "Defiance": {
       "count": 41,
-      "ms": 18312,
+      "ms": 17452,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 330,
+      "ms": 400,
       "ok": true
     },
     "Tradr": {
-      "count": 72,
-      "ms": 211,
+      "count": 75,
+      "ms": 339,
       "ok": true
     },
     "LeverageShares": {
       "count": 11,
-      "ms": 215,
+      "ms": 322,
       "ok": true
     },
     "3X": {
@@ -1742,11 +1742,38 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "MRAX",
+      "name": "Tradr 2X Long MRAM Daily ETF",
+      "underlying": "MRAM",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/mrax?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "OPEX",
       "name": "Tradr 2X Long OPEN Daily ETF",
       "underlying": "OPEN",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/opex?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "SITX",
+      "name": "Tradr 2X Long SITM Daily ETF",
+      "underlying": "SITM",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/sitx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "UMCU",
+      "name": "Tradr 2X Long UMC Daily ETF",
+      "underlying": "UMC",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/umcu?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
