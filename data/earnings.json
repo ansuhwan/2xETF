@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09T07:13:09+09:00",
+  "updated_at": "2026-08-11T07:19:25+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -1100,9 +1100,9 @@
     },
     "CLSK": {
       "next_earnings": "2026-08-06",
-      "eps_estimate": -0.3,
-      "eps_low": -0.36,
-      "eps_high": -0.24,
+      "eps_estimate": -0.38,
+      "eps_low": -0.38,
+      "eps_high": -0.38,
       "history": [
         {
           "date": "2026-08-06",
@@ -3556,7 +3556,7 @@
     },
     "OPEN": {
       "next_earnings": "2026-08-04",
-      "eps_estimate": -0.045,
+      "eps_estimate": -0.04333,
       "eps_low": -0.05,
       "eps_high": -0.04,
       "history": [
@@ -3626,9 +3626,9 @@
     },
     "OSCR": {
       "next_earnings": "2026-08-06",
-      "eps_estimate": -0.2525,
-      "eps_low": -0.27,
-      "eps_high": -0.24,
+      "eps_estimate": -0.17642,
+      "eps_low": -0.31,
+      "eps_high": 0.04583,
       "history": [
         {
           "date": "2026-08-06",
@@ -5078,9 +5078,9 @@
     },
     "WULF": {
       "next_earnings": "2026-08-05",
-      "eps_estimate": -0.4,
+      "eps_estimate": -0.375,
       "eps_low": -0.4,
-      "eps_high": -0.4,
+      "eps_high": -0.35,
       "history": [
         {
           "date": "2026-08-05",
@@ -5550,7 +5550,7 @@
     },
     "TSEM": {
       "next_earnings": "2026-08-04",
-      "eps_estimate": 1.054,
+      "eps_estimate": 1.05679,
       "eps_low": 0.99,
       "eps_high": 1.12,
       "history": [
