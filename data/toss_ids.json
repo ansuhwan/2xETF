@@ -2387,5 +2387,18 @@
     "name_kr": "",
     "market": "NYS"
   },
-  "UMCU": null
+  "UMCU": null,
+  "LITG": null,
+  "MXL": {
+    "code": "US20211213009",
+    "name_kr": "MXL",
+    "market": "NSQ"
+  },
+  "MXLL": null,
+  "STLL": null,
+  "STRL": {
+    "code": "US19921001001",
+    "name_kr": "STRL",
+    "market": "NSQ"
+  }
 }
