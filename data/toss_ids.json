@@ -2375,27 +2375,51 @@
     "name_kr": "MRAM",
     "market": "NSQ"
   },
-  "MRAX": null,
+  "MRAX": {
+    "code": "AMX2608011010",
+    "name_kr": "TRADR 2X LONG MRAM DAILY ETF",
+    "market": "AMX"
+  },
   "SITM": {
     "code": "US20191120002",
     "name_kr": "SITM",
     "market": "NSQ"
   },
-  "SITX": null,
+  "SITX": {
+    "code": "AMX2608011012",
+    "name_kr": "TRADR 2X LONG SITM DAILY ETF",
+    "market": "AMX"
+  },
   "UMC": {
     "code": "US20000919001",
     "name_kr": "",
     "market": "NYS"
   },
-  "UMCU": null,
-  "LITG": null,
+  "UMCU": {
+    "code": "AMX2608011014",
+    "name_kr": "TRADR 2X LONG UMC DAILY ETF",
+    "market": "AMX"
+  },
+  "LITG": {
+    "code": "AMX2608011005",
+    "name_kr": "LEVERAGE SHARES 2X LONG LITE DAILY ETF",
+    "market": "AMX"
+  },
   "MXL": {
     "code": "US20211213009",
     "name_kr": "MXL",
     "market": "NSQ"
   },
-  "MXLL": null,
-  "STLL": null,
+  "MXLL": {
+    "code": "AMX2608011011",
+    "name_kr": "LEVERAGE SHARES 2X LONG MXL DAILY ETF",
+    "market": "AMX"
+  },
+  "STLL": {
+    "code": "AMX2608011013",
+    "name_kr": "LEVERAGE SHARES 2X LONG STRL DAILY ETF",
+    "market": "AMX"
+  },
   "STRL": {
     "code": "US19921001001",
     "name_kr": "STRL",
