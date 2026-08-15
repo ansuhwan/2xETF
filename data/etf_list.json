@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-08-15T07:08:01+09:00",
+  "updated_at": "2026-08-16T07:07:22+09:00",
   "total": 225,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 275,
+      "ms": 166,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 856,
+      "ms": 588,
       "ok": true
     },
     "Defiance": {
       "count": 41,
-      "ms": 8188,
+      "ms": 8798,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 168,
+      "ms": 220,
       "ok": true
     },
     "Tradr": {
       "count": 75,
-      "ms": 428,
+      "ms": 234,
       "ok": true
     },
     "LeverageShares": {
       "count": 11,
-      "ms": 168,
+      "ms": 181,
       "ok": true
     },
     "3X": {
