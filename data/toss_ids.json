@@ -2424,5 +2424,11 @@
     "code": "US19921001001",
     "name_kr": "STRL",
     "market": "NSQ"
-  }
+  },
+  "LWLG": {
+    "code": "US20210901003",
+    "name_kr": "LWLG",
+    "market": "NSQ"
+  },
+  "LWLX": null
 }

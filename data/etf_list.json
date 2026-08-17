@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-08-17T07:07:07+09:00",
+  "updated_at": "2026-08-18T07:08:38+09:00",
   "total": 225,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 270,
+      "ms": 9409,
       "ok": true
     },
     "GraniteShares": {
-      "count": 38,
-      "ms": 527,
+      "count": 37,
+      "ms": 819,
       "ok": true
     },
     "Defiance": {
       "count": 41,
-      "ms": 6325,
+      "ms": 6756,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 244,
+      "ms": 408,
       "ok": true
     },
     "Tradr": {
-      "count": 75,
-      "ms": 320,
+      "count": 76,
+      "ms": 289,
       "ok": true
     },
     "LeverageShares": {
       "count": 11,
-      "ms": 212,
+      "ms": 152,
       "ok": true
     },
     "3X": {
@@ -397,15 +397,6 @@
       "underlying": "ISRG",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/isul/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "LCDL",
-      "name": "GraniteShares 2x Long LCID Daily ETF 2x long exposure to\n                                Lucid Group Inc (LCID)",
-      "underlying": "LCID",
-      "issuer": "GraniteShares",
-      "url": "https://graniteshares.com/etfs/lcdl/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1004,6 +995,24 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "SNDU",
+      "name": "SNDU | +2X Daily SNDK",
+      "underlying": "SNDK",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/sndu/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "BMNU",
+      "name": "BMNU | +2X Daily BMNR",
+      "underlying": "BMNR",
+      "issuer": "REX",
+      "url": "https://www.rexshares.com/bmnu/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "BTCL",
       "name": "BTCL | +2X Daily Bitcoin",
       "underlying": "BTC-USD",
@@ -1112,15 +1121,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "BMNU",
-      "name": "BMNU | +2X Daily BMNR",
-      "underlying": "BMNR",
-      "issuer": "REX",
-      "url": "https://www.rexshares.com/bmnu/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "GLXU",
       "name": "GLXU | +2X Daily GLXY",
       "underlying": "GLXY",
@@ -1225,15 +1225,6 @@
       "underlying": "APH",
       "issuer": "REX",
       "url": "https://www.rexshares.com/aphu/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "SNDU",
-      "name": "SNDU | +2X Daily SNDK",
-      "underlying": "SNDK",
-      "issuer": "REX",
-      "url": "https://www.rexshares.com/sndu/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1765,6 +1756,15 @@
       "underlying": "CPNG",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/cpnx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "LWLX",
+      "name": "Tradr 2X Long LWLG Daily ETF",
+      "underlying": "LWLG",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/lwlx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
