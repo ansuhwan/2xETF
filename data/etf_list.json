@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-08-18T07:08:38+09:00",
-  "total": 225,
+  "updated_at": "2026-08-19T07:08:03+09:00",
+  "total": 224,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 9409,
+      "ms": 242,
       "ok": true
     },
     "GraniteShares": {
       "count": 37,
-      "ms": 819,
+      "ms": 506,
       "ok": true
     },
     "Defiance": {
       "count": 41,
-      "ms": 6756,
+      "ms": 7857,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 408,
+      "ms": 336,
       "ok": true
     },
     "Tradr": {
-      "count": 76,
-      "ms": 289,
+      "count": 75,
+      "ms": 384,
       "ok": true
     },
     "LeverageShares": {
       "count": 11,
-      "ms": 152,
+      "ms": 199,
       "ok": true
     },
     "3X": {
@@ -1238,29 +1238,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "MRAX",
-      "name": "MRAX Tradr 2X Long MRAM Daily ETF",
-      "underlying": "MRAM",
+      "ticker_2x": "LWLX",
+      "name": "LWLX Tradr 2X Long LWLG Daily ETF",
+      "underlying": "LWLG",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/mrax?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "SITX",
-      "name": "SITX Tradr 2X Long SITM Daily ETF",
-      "underlying": "SITM",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/sitx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "UMCU",
-      "name": "UMCU Tradr 2X Long UMC Daily ETF",
-      "underlying": "UMC",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/umcu?hsLang=en",
+      "url": "https://www.tradretfs.com/lwlx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1535,15 +1517,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "HLXX",
-      "name": "HLXX Tradr 2X Long HL Daily ETF",
-      "underlying": "HL",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/hlxx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "USAX",
       "name": "USAX Tradr 2X Long USAR Daily ETF",
       "underlying": "USAR",
@@ -1652,6 +1625,15 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "MRAX",
+      "name": "MRAX Tradr 2X Long MRAM Daily ETF",
+      "underlying": "MRAM",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/mrax?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "NVTX",
       "name": "NVTX Tradr 2X Long NVTS Daily ETF",
       "underlying": "NVTS",
@@ -1688,11 +1670,29 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "SITX",
+      "name": "SITX Tradr 2X Long SITM Daily ETF",
+      "underlying": "SITM",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/sitx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "TSEU",
       "name": "TSEU Tradr 2X Long TSEM Daily ETF",
       "underlying": "TSEM",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/tseu?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "UMCU",
+      "name": "UMCU Tradr 2X Long UMC Daily ETF",
+      "underlying": "UMC",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/umcu?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1756,15 +1756,6 @@
       "underlying": "CPNG",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/cpnx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "LWLX",
-      "name": "Tradr 2X Long LWLG Daily ETF",
-      "underlying": "LWLG",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/lwlx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
