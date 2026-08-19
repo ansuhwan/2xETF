@@ -2430,5 +2430,24 @@
     "name_kr": "LWLG",
     "market": "NSQ"
   },
-  "LWLX": null
+  "LWLX": null,
+  "FIX": {
+    "code": "US19970627001",
+    "name_kr": "FIX",
+    "market": "NYS"
+  },
+  "FIXX": null,
+  "FLEL": null,
+  "FLEX": {
+    "code": "US19870928001",
+    "name_kr": "FLEX",
+    "market": "NSQ"
+  },
+  "MUG": null,
+  "STM": {
+    "code": "US19941208001",
+    "name_kr": "STM",
+    "market": "NYS"
+  },
+  "STMX": null
 }

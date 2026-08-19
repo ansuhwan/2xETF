@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-08-19T07:08:03+09:00",
+  "updated_at": "2026-08-20T07:09:05+09:00",
   "total": 224,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 242,
+      "ms": 4075,
       "ok": true
     },
     "GraniteShares": {
       "count": 37,
-      "ms": 506,
+      "ms": 570,
       "ok": true
     },
     "Defiance": {
       "count": 41,
-      "ms": 7857,
+      "ms": 10459,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 336,
+      "ms": 166,
       "ok": true
     },
     "Tradr": {
       "count": 75,
-      "ms": 384,
+      "ms": 505,
       "ok": true
     },
     "LeverageShares": {
       "count": 11,
-      "ms": 199,
+      "ms": 156,
       "ok": true
     },
     "3X": {
@@ -1922,6 +1922,42 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "STMX",
+      "name": "STMX 2x Long STM ETF",
+      "underlying": "STM",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-stm-daily-etf",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "FLEL",
+      "name": "FLEL 2x Long FLEX ETF",
+      "underlying": "FLEX",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-flex-daily-etf",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "FIXX",
+      "name": "FIXX 2x Long FIX ETF",
+      "underlying": "FIX",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-fix-daily-etf",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "MUG",
+      "name": "MUG 2x Long MU ETF",
+      "underlying": "MU",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-mu-daily-etf",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "STLL",
       "name": "STLL 2x Long STRL ETF",
       "underlying": "STRL",
@@ -1940,24 +1976,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "LITG",
-      "name": "LITG 2x Long LITE ETF",
-      "underlying": "LITE",
-      "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-lite-daily-etf/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "RAML",
-      "name": "RAML 2x Long Memory Daily ETF",
-      "underlying": "MEMORY",
-      "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-memory-daily-etf/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "SKHX",
       "name": "SKHX 2x Long SK Hynix HOT",
       "underlying": "SKHYNIX",
@@ -1967,47 +1985,29 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "LITG",
+      "name": "LITG 2x Long LITE",
+      "underlying": "LITE",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-lite-daily-etf/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "RAML",
+      "name": "RAML 2x Long Memory",
+      "underlying": "MEMORY",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-memory-daily-etf/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "AMZG",
       "name": "AMZG 2x Long AMZN",
       "underlying": "AMZN",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-amzn-daily-etf/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "METG",
-      "name": "METG 2x Long META",
-      "underlying": "META",
-      "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-meta-daily-etf/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "AAPE",
-      "name": "AAPE 2x Long AAPL",
-      "underlying": "AAPL",
-      "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-aapl-daily-etf/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "JBLG",
-      "name": "JBLG 2x Long JBL",
-      "underlying": "JBL",
-      "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-jbl-daily-etf/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "VIAG",
-      "name": "VIAG 2x Long VIAV",
-      "underlying": "VIAV",
-      "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-viav-daily-etf/",
       "expense_ratio": null,
       "leverage": 2
     },
