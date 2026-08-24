@@ -2430,24 +2430,44 @@
     "name_kr": "LWLG",
     "market": "NSQ"
   },
-  "LWLX": null,
+  "LWLX": {
+    "code": "AMX2608018004",
+    "name_kr": "TRADR 2X LONG LWLG DAILY ETF",
+    "market": "AMX"
+  },
   "FIX": {
     "code": "US19970627001",
     "name_kr": "FIX",
     "market": "NYS"
   },
-  "FIXX": null,
-  "FLEL": null,
+  "FIXX": {
+    "code": "AMX2608019003",
+    "name_kr": "LEVERAGE SHARES 2X LONG FIX DAILY ETF",
+    "market": "AMX"
+  },
+  "FLEL": {
+    "code": "AMX2608019004",
+    "name_kr": "LEVERAGE SHARES 2X LONG FLEX DAILY ETF",
+    "market": "AMX"
+  },
   "FLEX": {
     "code": "US19870928001",
     "name_kr": "FLEX",
     "market": "NSQ"
   },
-  "MUG": null,
+  "MUG": {
+    "code": "AMX2608019006",
+    "name_kr": "LEVERAGE SHARES 2X LONG MU DAILY ETF",
+    "market": "AMX"
+  },
   "STM": {
     "code": "US19941208001",
     "name_kr": "STM",
     "market": "NYS"
   },
-  "STMX": null
+  "STMX": {
+    "code": "AMX2608019009",
+    "name_kr": "LEVERAGE SHARES 2X LONG STM DAILY ETF",
+    "market": "AMX"
+  }
 }
