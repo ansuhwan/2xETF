@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-30T07:17:33+09:00",
+  "updated_at": "2026-08-31T07:18:08+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -3008,9 +3008,9 @@
     },
     "MRVL": {
       "next_earnings": "2026-08-27",
-      "eps_estimate": 0.93077,
-      "eps_low": 0.88,
-      "eps_high": 0.95707,
+      "eps_estimate": 1.09842,
+      "eps_low": 1.05,
+      "eps_high": 1.13,
       "history": [
         {
           "date": "2026-08-27",
@@ -3498,9 +3498,9 @@
     },
     "OKTA": {
       "next_earnings": "2026-08-26",
-      "eps_estimate": 0.92684,
-      "eps_low": 0.92,
-      "eps_high": 0.94,
+      "eps_estimate": 0.93596,
+      "eps_low": 0.92104,
+      "eps_high": 0.99,
       "history": [
         {
           "date": "2026-08-26",
@@ -6101,9 +6101,9 @@
     },
     "P": {
       "next_earnings": "2026-08-26",
-      "eps_estimate": 0.65081,
-      "eps_low": 0.58,
-      "eps_high": 0.72,
+      "eps_estimate": 0.77122,
+      "eps_low": 0.66,
+      "eps_high": 0.842,
       "history": [
         {
           "date": "2026-08-26",
