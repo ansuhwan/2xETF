@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-09-01T07:17:38+09:00",
+  "updated_at": "2026-09-02T07:16:34+09:00",
   "total": 219,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 360,
+      "ms": 435,
       "ok": true
     },
     "GraniteShares": {
       "count": 37,
-      "ms": 586,
+      "ms": 379,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 14929,
+      "ms": 15561,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 255,
+      "ms": 301,
       "ok": true
     },
     "Tradr": {
       "count": 74,
-      "ms": 335,
+      "ms": 454,
       "ok": true
     },
     "LeverageShares": {
       "count": 11,
-      "ms": 158,
+      "ms": 248,
       "ok": true
     },
     "3X": {
@@ -1881,7 +1881,7 @@
       "name": "MUG 2x Long MU ETF",
       "underlying": "MU",
       "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-mu-daily-etf",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-mu-daily-etf/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1890,7 +1890,7 @@
       "name": "FIXX 2x Long FIX ETF",
       "underlying": "FIX",
       "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-fix-daily-etf",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-fix-daily-etf/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1899,7 +1899,7 @@
       "name": "FLEL 2x Long FLEX ETF",
       "underlying": "FLEX",
       "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-flex-daily-etf",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-flex-daily-etf/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1908,7 +1908,7 @@
       "name": "STMX 2x Long STM ETF",
       "underlying": "STM",
       "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-stm-daily-etf",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-stm-daily-etf/",
       "expense_ratio": null,
       "leverage": 2
     },

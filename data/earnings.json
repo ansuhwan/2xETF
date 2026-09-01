@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T07:19:32+09:00",
+  "updated_at": "2026-09-02T07:18:06+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -3007,9 +3007,9 @@
       "avg_surprise_pct": 28.04
     },
     "MRVL": {
-      "next_earnings": "2026-08-27",
-      "eps_estimate": 1.09842,
-      "eps_low": 1.05,
+      "next_earnings": "2026-12-01",
+      "eps_estimate": 1.1004,
+      "eps_low": 1.07628,
       "eps_high": 1.13,
       "history": [
         {
