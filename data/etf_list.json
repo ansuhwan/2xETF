@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-09-02T07:16:34+09:00",
+  "updated_at": "2026-09-03T07:17:57+09:00",
   "total": 219,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 435,
+      "ms": 4314,
       "ok": true
     },
     "GraniteShares": {
       "count": 37,
-      "ms": 379,
+      "ms": 275,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 15561,
+      "ms": 16112,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 301,
+      "ms": 372,
       "ok": true
     },
     "Tradr": {
       "count": 74,
-      "ms": 454,
+      "ms": 405,
       "ok": true
     },
     "LeverageShares": {
       "count": 11,
-      "ms": 248,
+      "ms": 250,
       "ok": true
     },
     "3X": {
@@ -707,38 +707,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "AMA",
-      "name": "AMA | Defiance Daily Target 2X Long AMAT ETF",
-      "underlying": "AMAT",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/ama/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "HOOX",
-      "name": "HOOX | Defiance Daily Target 2X Long HOOD ETF",
-      "underlying": "HOOD",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/hoox/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "IONX",
       "name": "IONX | Defiance Daily Target 2X Long IONQ ETF",
       "underlying": "IONQ",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ionx/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "LNOK",
-      "name": "LNOK | Daily Target 2X Long NOK ETF",
-      "underlying": "NOK",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/lnok/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -761,29 +734,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "ORCX",
-      "name": "ORCX | Daily Target 2X Long ORCL ETF",
-      "underlying": "ORCL",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/orcx/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "POEL",
       "name": "POEL | Defiance Daily Target 2X Long POET ETF",
       "underlying": "POET",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/poel/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "SOFX",
-      "name": "SOFX | Daily Target 2X Long SOFI ETF | Defiance ETFs",
-      "underlying": "SOFI",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/sofx/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -928,6 +883,51 @@
       "underlying": "NVO",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/nvox/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "LNOK",
+      "name": "LNOK | Daily Target 2X Long NOK ETF",
+      "underlying": "NOK",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/lnok/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "SOFX",
+      "name": "SOFX | Daily Target 2X Long SOFI ETF | Defiance ETFs",
+      "underlying": "SOFI",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/sofx/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "AMA",
+      "name": "AMA | Defiance Daily Target 2X Long AMAT ETF",
+      "underlying": "AMAT",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/ama/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "ORCX",
+      "name": "ORCX | Daily Target 2X Long ORCL ETF",
+      "underlying": "ORCL",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/orcx/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "HOOX",
+      "name": "HOOX | Defiance Daily Target 2X Long HOOD ETF",
+      "underlying": "HOOD",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/hoox/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1913,8 +1913,17 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "SKHX",
+      "name": "SKHX 2x Long SK Hynix HOT",
+      "underlying": "SKHYNIX",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-sk-hynix-daily-etf/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "MXLL",
-      "name": "MXLL 2x Long MXL ETF",
+      "name": "MXLL 2x Long MXL",
       "underlying": "MXL",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-mxl-daily-etf/",
@@ -1923,19 +1932,10 @@
     },
     {
       "ticker_2x": "STLL",
-      "name": "STLL 2x Long STRL ETF",
+      "name": "STLL 2x Long STRL",
       "underlying": "STRL",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-strl-daily-etf/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "SKHX",
-      "name": "SKHX 2x Long SK Hynix HOT",
-      "underlying": "SKHYNIX",
-      "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-sk-hynix-daily-etf/",
       "expense_ratio": null,
       "leverage": 2
     },

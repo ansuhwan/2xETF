@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T07:18:06+09:00",
+  "updated_at": "2026-09-03T07:19:52+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -1351,39 +1351,39 @@
     },
     "CRML": null,
     "CRWD": {
-      "next_earnings": "2026-09-01",
-      "eps_estimate": 1.15917,
-      "eps_low": 1.1,
-      "eps_high": 1.21,
+      "next_earnings": "2026-12-01",
+      "eps_estimate": 0.31113,
+      "eps_low": 0.30946,
+      "eps_high": 0.33,
       "history": [
         {
+          "date": "2026-08-26",
+          "estimate": 0.29,
+          "reported": 0.31,
+          "surprise": 6.38
+        },
+        {
           "date": "2026-06-03",
-          "estimate": 1.07,
-          "reported": 1.1,
+          "estimate": 0.27,
+          "reported": 0.28,
           "surprise": 3.05
         },
         {
           "date": "2026-03-03",
-          "estimate": 1.1,
-          "reported": 1.12,
+          "estimate": 0.28,
+          "reported": 0.28,
           "surprise": 1.56
         },
         {
           "date": "2025-12-02",
-          "estimate": 0.94,
-          "reported": 0.96,
+          "estimate": 0.24,
+          "reported": 0.24,
           "surprise": 1.98
-        },
-        {
-          "date": "2025-08-27",
-          "estimate": 0.83,
-          "reported": 0.93,
-          "surprise": 12.05
         }
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 4.66
+      "avg_surprise_pct": 3.24
     },
     "CRWV": {
       "next_earnings": "2026-11-11",
@@ -2832,11 +2832,17 @@
       "avg_surprise_pct": -749.32
     },
     "MDB": {
-      "next_earnings": "2026-09-01",
-      "eps_estimate": 1.60897,
-      "eps_low": 1.54,
-      "eps_high": 1.73027,
+      "next_earnings": "2026-12-01",
+      "eps_estimate": 1.59803,
+      "eps_low": 1.56,
+      "eps_high": 1.68,
       "history": [
+        {
+          "date": "2026-09-01",
+          "estimate": 1.61,
+          "reported": 1.9,
+          "surprise": 18.09
+        },
         {
           "date": "2026-05-28",
           "estimate": 1.18,
@@ -2854,17 +2860,11 @@
           "estimate": 0.79,
           "reported": 1.32,
           "surprise": 66.24
-        },
-        {
-          "date": "2025-08-26",
-          "estimate": 0.66,
-          "reported": 1.0,
-          "surprise": 52.39
         }
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 35.56
+      "avg_surprise_pct": 26.99
     },
     "META": {
       "next_earnings": "2026-10-28",
@@ -3498,7 +3498,7 @@
     },
     "OKTA": {
       "next_earnings": "2026-08-26",
-      "eps_estimate": 0.93596,
+      "eps_estimate": 0.93474,
       "eps_low": 0.92104,
       "eps_high": 0.99,
       "history": [
