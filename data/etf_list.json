@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-09-04T07:17:42+09:00",
+  "updated_at": "2026-09-05T07:16:54+09:00",
   "total": 219,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 265,
+      "ms": 432,
       "ok": true
     },
     "GraniteShares": {
       "count": 37,
-      "ms": 595,
+      "ms": 442,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 15450,
+      "ms": 15562,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 299,
+      "ms": 250,
       "ok": true
     },
     "Tradr": {
       "count": 74,
-      "ms": 356,
+      "ms": 326,
       "ok": true
     },
     "LeverageShares": {
       "count": 11,
-      "ms": 180,
+      "ms": 202,
       "ok": true
     },
     "3X": {
@@ -707,56 +707,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "OKLL",
-      "name": "OKLL | Defiance Daily Target 2X Long OKLO ETF",
-      "underlying": "OKLO",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/okll/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "POEL",
       "name": "POEL | Defiance Daily Target 2X Long POET ETF",
       "underlying": "POET",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/poel/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "SOUX",
-      "name": "SOUX | Defiance Daily Target 2X Long SOUN ETF",
-      "underlying": "SOUN",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/soux/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "VSTL",
-      "name": "VSTL | Defiance Daily Target 2X Long VST ETF",
-      "underlying": "VST",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/vstl/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "RGTX",
-      "name": "RGTX | Defiance Daily Target 2X Long RGTI ETF",
-      "underlying": "RGTI",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/rgtx/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "RKLX",
-      "name": "RKLX | Defiance Daily Target 2X Long RKLB ETF",
-      "underlying": "RKLB",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/rklx/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -928,6 +883,51 @@
       "underlying": "IONQ",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/ionx/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "RKLX",
+      "name": "RKLX | Defiance Daily Target 2X Long RKLB ETF",
+      "underlying": "RKLB",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/rklx/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "OKLL",
+      "name": "OKLL | Defiance Daily Target 2X Long OKLO ETF",
+      "underlying": "OKLO",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/okll/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "RGTX",
+      "name": "RGTX | Defiance Daily Target 2X Long RGTI ETF",
+      "underlying": "RGTI",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/rgtx/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "SOUX",
+      "name": "SOUX | Defiance Daily Target 2X Long SOUN ETF",
+      "underlying": "SOUN",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/soux/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "VSTL",
+      "name": "VSTL | Defiance Daily Target 2X Long VST ETF",
+      "underlying": "VST",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/vstl/",
       "expense_ratio": null,
       "leverage": 2
     },
