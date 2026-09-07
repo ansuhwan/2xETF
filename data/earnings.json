@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07T07:18:27+09:00",
+  "updated_at": "2026-09-08T07:18:52+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -603,12 +603,6 @@
       "eps_high": 3.91,
       "history": [
         {
-          "date": "2026-09-02",
-          "estimate": 3.24,
-          "reported": 3.32,
-          "surprise": 2.53
-        },
-        {
           "date": "2026-06-03",
           "estimate": 2.4,
           "reported": 2.44,
@@ -627,9 +621,9 @@
           "surprise": 4.38
         }
       ],
-      "beat_streak": 4,
+      "beat_streak": 3,
       "miss_streak": 0,
-      "avg_surprise_pct": 2.49
+      "avg_surprise_pct": 2.48
     },
     "AXTI": {
       "next_earnings": "2026-10-29",
