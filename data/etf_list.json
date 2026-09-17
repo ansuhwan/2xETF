@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-09-17T07:16:58+09:00",
-  "total": 219,
+  "updated_at": "2026-09-18T07:17:07+09:00",
+  "total": 220,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 349,
+      "ms": 219,
       "ok": true
     },
     "GraniteShares": {
-      "count": 37,
-      "ms": 735,
+      "count": 38,
+      "ms": 450,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 14225,
+      "ms": 17258,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 358,
+      "ms": 349,
       "ok": true
     },
     "Tradr": {
       "count": 74,
-      "ms": 398,
+      "ms": 383,
       "ok": true
     },
     "LeverageShares": {
       "count": 11,
-      "ms": 300,
+      "ms": 258,
       "ok": true
     },
     "3X": {
@@ -271,6 +271,15 @@
       "underlying": "AAPL",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/aapb/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "AIL",
+      "name": "GraniteShares 2x Long Anthropic Daily ETF 2x long exposure to\n                                Anthropic ()",
+      "underlying": "ANTHROPIC",
+      "issuer": "GraniteShares",
+      "url": "https://graniteshares.com/etfs/ail/",
       "expense_ratio": null,
       "leverage": 2
     },
