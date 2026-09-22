@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-09-22T07:18:31+09:00",
+  "updated_at": "2026-09-23T07:17:01+09:00",
   "total": 220,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 5202,
+      "ms": 206,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 395,
+      "ms": 1100,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 16575,
+      "ms": 20139,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 299,
+      "ms": 211,
       "ok": true
     },
     "Tradr": {
       "count": 74,
-      "ms": 495,
+      "ms": 337,
       "ok": true
     },
     "LeverageShares": {
       "count": 11,
-      "ms": 292,
+      "ms": 184,
       "ok": true
     },
     "3X": {
@@ -276,7 +276,7 @@
     },
     {
       "ticker_2x": "AIL",
-      "name": "GraniteShares 2x Long Anthropic Daily ETF 2x long exposure to\n                                Anthropic ()",
+      "name": "GraniteShares 2x Long Anthropic Daily ETF 2x long exposure to\n                                Anthropic",
       "underlying": "ANTHROPIC",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/ail/",
@@ -1220,38 +1220,20 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "BEX",
-      "name": "BEX Tradr 2X Long BE Daily ETF",
-      "underlying": "BE",
+      "ticker_2x": "LABX",
+      "name": "LABX Tradr 2X Long ALAB Daily ETF",
+      "underlying": "ALAB",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/bex?hsLang=en",
+      "url": "https://www.tradretfs.com/labx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
     {
-      "ticker_2x": "IREX",
-      "name": "IREX Tradr 2X Long IREN Daily ETF",
-      "underlying": "IREN",
+      "ticker_2x": "CRMX",
+      "name": "CRMX Tradr 2X Long CRML Daily ETF",
+      "underlying": "CRML",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/irex?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "NEBX",
-      "name": "NEBX Tradr 2X Long NBIS Daily ETF",
-      "underlying": "NBIS",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/nebx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "CWVX",
-      "name": "CWVX Tradr 2X Long CRWV Daily ETF",
-      "underlying": "CRWV",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/cwvx?hsLang=en",
+      "url": "https://www.tradretfs.com/crmx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1261,6 +1243,15 @@
       "underlying": "AXTI",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/axtx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "CRDU",
+      "name": "CRDU Tradr 2X Long CRDO Daily ETF",
+      "underlying": "CRDO",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/crdu?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1283,38 +1274,29 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "ASTX",
-      "name": "ASTX Tradr 2X Long ASTS Daily ETF",
-      "underlying": "ASTS",
+      "ticker_2x": "XNDX",
+      "name": "XNDX Tradr 2X Long XNDU Daily ETF",
+      "underlying": "XNDU",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/astx?hsLang=en",
+      "url": "https://www.tradretfs.com/xndx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
     {
-      "ticker_2x": "LITX",
-      "name": "LITX Tradr 2X Long LITE Daily ETF",
-      "underlying": "LITE",
+      "ticker_2x": "SMU",
+      "name": "SMU Tradr 2X Long SMR Daily ETF",
+      "underlying": "SMR",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/litx?hsLang=en",
+      "url": "https://www.tradretfs.com/smu?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
     {
-      "ticker_2x": "CRDU",
-      "name": "CRDU Tradr 2X Long CRDO Daily ETF",
-      "underlying": "CRDO",
+      "ticker_2x": "BEX",
+      "name": "BEX Tradr 2X Long BE Daily ETF",
+      "underlying": "BE",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/crdu?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "PATX",
-      "name": "PATX Tradr 2X Long PATH Daily ETF",
-      "underlying": "PATH",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/patx?hsLang=en",
+      "url": "https://www.tradretfs.com/bex?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1355,15 +1337,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "SMU",
-      "name": "SMU Tradr 2X Long SMR Daily ETF",
-      "underlying": "SMR",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/smu?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "CIEX",
       "name": "CIEX Tradr 2X Long CIEN Daily ETF",
       "underlying": "CIEN",
@@ -1387,6 +1360,15 @@
       "underlying": "CLS",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/csex?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "LITX",
+      "name": "LITX Tradr 2X Long LITE Daily ETF",
+      "underlying": "LITE",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/litx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1427,15 +1409,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "CRMX",
-      "name": "CRMX Tradr 2X Long CRML Daily ETF",
-      "underlying": "CRML",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/crmx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "USAX",
       "name": "USAX Tradr 2X Long USAR Daily ETF",
       "underlying": "USAR",
@@ -1459,6 +1432,33 @@
       "underlying": "CORZ",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/cozx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "CWVX",
+      "name": "CWVX Tradr 2X Long CRWV Daily ETF",
+      "underlying": "CRWV",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/cwvx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "IREX",
+      "name": "IREX Tradr 2X Long IREN Daily ETF",
+      "underlying": "IREN",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/irex?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "NEBX",
+      "name": "NEBX Tradr 2X Long NBIS Daily ETF",
+      "underlying": "NBIS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/nebx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1535,29 +1535,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "XNDX",
-      "name": "XNDX Tradr 2X Long XNDU Daily ETF",
-      "underlying": "XNDU",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/xndx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "CBRX",
       "name": "CBRX Tradr 2X Long CBRS Daily ETF",
       "underlying": "CBRS",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/cbrx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "LABX",
-      "name": "LABX Tradr 2X Long ALAB Daily ETF",
-      "underlying": "ALAB",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/labx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1679,11 +1661,29 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "PATX",
+      "name": "PATX Tradr 2X Long PATH Daily ETF",
+      "underlying": "PATH",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/patx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "TEMT",
       "name": "TEMT Tradr 2X Long TEM Daily ETF",
       "underlying": "TEM",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/temt?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "ASTX",
+      "name": "ASTX Tradr 2X Long ASTS Daily ETF",
+      "underlying": "ASTS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/astx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
