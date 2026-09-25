@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T07:22:51+09:00",
+  "updated_at": "2026-09-26T07:23:25+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -6018,11 +6018,17 @@
     "SKHYNIX": null,
     "CRBS": null,
     "BB": {
-      "next_earnings": "2026-09-24",
-      "eps_estimate": 0.04,
-      "eps_low": 0.03,
+      "next_earnings": "2026-12-17",
+      "eps_estimate": 0.04667,
+      "eps_low": 0.04,
       "eps_high": 0.05,
       "history": [
+        {
+          "date": "2026-09-24",
+          "estimate": 0.04,
+          "reported": 0.07,
+          "surprise": 75.0
+        },
         {
           "date": "2026-06-25",
           "estimate": 0.03,
@@ -6040,17 +6046,11 @@
           "estimate": 0.04,
           "reported": 0.05,
           "surprise": 36.35
-        },
-        {
-          "date": "2025-09-25",
-          "estimate": 0.01,
-          "reported": 0.04,
-          "surprise": 185.71
         }
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 77.63
+      "avg_surprise_pct": 49.95
     },
     "JBL": {
       "next_earnings": "2026-09-24",
