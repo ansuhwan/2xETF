@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-09-30T07:19:28+09:00",
-  "total": 220,
+  "updated_at": "2026-10-01T07:20:26+09:00",
+  "total": 221,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 3690,
+      "ms": 200,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 550,
+      "ms": 509,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 19006,
+      "ms": 25212,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 280,
+      "ms": 161,
       "ok": true
     },
     "Tradr": {
       "count": 74,
-      "ms": 301,
+      "ms": 433,
       "ok": true
     },
     "LeverageShares": {
-      "count": 11,
-      "ms": 279,
+      "count": 12,
+      "ms": 194,
       "ok": true
     },
     "3X": {
@@ -1886,20 +1886,20 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "NSUU",
+      "name": "NSUU 2x Long Nscale",
+      "underlying": "NSCALE",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-nscale-daily-etf/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "SPCH",
       "name": "SPCH 2x Long SPCX ETF",
       "underlying": "SPCX",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-spcx-daily-etf/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "MUG",
-      "name": "MUG 2x Long MU ETF",
-      "underlying": "MU",
-      "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-mu-daily-etf/",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1936,6 +1936,15 @@
       "underlying": "STM",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-stm-daily-etf/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "MUG",
+      "name": "MUG 2x Long MU",
+      "underlying": "MU",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-mu-daily-etf/",
       "expense_ratio": null,
       "leverage": 2
     },

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T07:24:17+09:00",
+  "updated_at": "2026-10-01T07:25:14+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -995,7 +995,7 @@
     },
     "CIEN": {
       "next_earnings": "2026-09-03",
-      "eps_estimate": 2.07831,
+      "eps_estimate": 2.07665,
       "eps_low": 1.89,
       "eps_high": 2.2237,
       "history": [
@@ -6623,6 +6623,7 @@
       "miss_streak": 3,
       "avg_surprise_pct": -28.68
     },
-    "ANTHROPIC": null
+    "ANTHROPIC": null,
+    "NSCALE": null
   }
 }
