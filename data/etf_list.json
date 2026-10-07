@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-10-07T07:20:15+09:00",
+  "updated_at": "2026-10-08T07:18:22+09:00",
   "total": 221,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 3990,
+      "ms": 518,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 615,
+      "ms": 482,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 24959,
+      "ms": 24808,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 240,
+      "ms": 379,
       "ok": true
     },
     "Tradr": {
       "count": 74,
-      "ms": 352,
+      "ms": 640,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 203,
+      "ms": 318,
       "ok": true
     },
     "3X": {
@@ -617,15 +617,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "AMKL",
-      "name": "AMKL | Defiance Daily Target 2X Long AMKR ETF",
-      "underlying": "AMKR",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/amkl/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "AMPU",
       "name": "AMPU | Defiance Daily Target 2X Long AMPX ETF",
       "underlying": "AMPX",
@@ -941,6 +932,15 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "AMKL",
+      "name": "AMKL | Defiance Daily Target 2X Long AMKR ETF",
+      "underlying": "AMKR",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/amkl/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "MSTU",
       "name": "MSTU | +2X Daily MSTR",
       "underlying": "MSTR",
@@ -1220,29 +1220,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "LABX",
-      "name": "LABX Tradr 2X Long ALAB Daily ETF",
-      "underlying": "ALAB",
+      "ticker_2x": "TEMT",
+      "name": "TEMT Tradr 2X Long TEM Daily ETF",
+      "underlying": "TEM",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/labx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "CRMX",
-      "name": "CRMX Tradr 2X Long CRML Daily ETF",
-      "underlying": "CRML",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/crmx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "AXTX",
-      "name": "AXTX Tradr 2X Long AXTI Daily ETF",
-      "underlying": "AXTI",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/axtx?hsLang=en",
+      "url": "https://www.tradretfs.com/temt?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1274,20 +1256,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "XNDX",
-      "name": "XNDX Tradr 2X Long XNDU Daily ETF",
-      "underlying": "XNDU",
+      "ticker_2x": "AXTX",
+      "name": "AXTX Tradr 2X Long AXTI Daily ETF",
+      "underlying": "AXTI",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/xndx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "SMU",
-      "name": "SMU Tradr 2X Long SMR Daily ETF",
-      "underlying": "SMR",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/smu?hsLang=en",
+      "url": "https://www.tradretfs.com/axtx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1297,6 +1270,24 @@
       "underlying": "BE",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/bex?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "XNDX",
+      "name": "XNDX Tradr 2X Long XNDU Daily ETF",
+      "underlying": "XNDU",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/xndx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "CRMX",
+      "name": "CRMX Tradr 2X Long CRML Daily ETF",
+      "underlying": "CRML",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/crmx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1333,6 +1324,15 @@
       "underlying": "LEU",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/leux?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "SMU",
+      "name": "SMU Tradr 2X Long SMR Daily ETF",
+      "underlying": "SMR",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/smu?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1544,6 +1544,15 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "LABX",
+      "name": "LABX Tradr 2X Long ALAB Daily ETF",
+      "underlying": "ALAB",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/labx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "LRCU",
       "name": "LRCU Tradr 2X Long LRCX Daily ETF",
       "underlying": "LRCX",
@@ -1666,15 +1675,6 @@
       "underlying": "PATH",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/patx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "TEMT",
-      "name": "TEMT Tradr 2X Long TEM Daily ETF",
-      "underlying": "TEM",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/temt?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
