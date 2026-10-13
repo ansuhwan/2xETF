@@ -1,36 +1,39 @@
 {
-  "updated_at": "2026-10-13T07:19:47+09:00",
+  "updated_at": "2026-10-14T07:16:30+09:00",
   "total": 221,
-  "stale_issuers": [],
+  "stale_issuers": [
+    "REX"
+  ],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 336,
+      "ms": 224,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 281,
+      "ms": 680,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 24295,
+      "ms": 30727,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 328,
-      "ok": true
+      "ok": false,
+      "fellback": true,
+      "error": "GET https://www.rexshares.com/t-rex-leveraged-etfs/ failed: 403 Client Error: Forbidden for url: https://www.rexshares.com/t-rex-leveraged-etfs/"
     },
     "Tradr": {
       "count": 74,
-      "ms": 456,
+      "ms": 369,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 189,
+      "ms": 649,
       "ok": true
     },
     "3X": {
@@ -947,7 +950,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/mstu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "NVDX",
@@ -956,7 +961,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/nvdx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "TSLT",
@@ -965,7 +972,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/tslt/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "SNDU",
@@ -974,7 +983,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/sndu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "BMNU",
@@ -983,7 +994,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/bmnu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "BTCL",
@@ -992,7 +1005,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/btcl/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "CRWU",
@@ -1001,7 +1016,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/crwu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "CCUP",
@@ -1010,7 +1027,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/ccup/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "ROBN",
@@ -1019,7 +1038,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/robn/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "ETU",
@@ -1028,7 +1049,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/etu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "NFLU",
@@ -1037,7 +1060,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/nflu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "GMEU",
@@ -1046,7 +1071,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/gmeu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "DJTU",
@@ -1055,7 +1082,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/djtu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "AAPX",
@@ -1064,7 +1093,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/aapx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "GOOX",
@@ -1073,7 +1104,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/goox/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "MSFX",
@@ -1082,7 +1115,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/msfx/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "RBLU",
@@ -1091,7 +1126,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/rblu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "GLXU",
@@ -1100,7 +1137,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/glxu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "TTDU",
@@ -1109,7 +1148,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/ttdu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "KTUP",
@@ -1118,7 +1159,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/ktup/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "SMUP",
@@ -1127,7 +1170,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/smup/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "AFRU",
@@ -1136,7 +1181,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/afru/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "SNOU",
@@ -1145,7 +1192,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/snou/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "SBTU",
@@ -1154,7 +1203,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/sbtu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "CIFU",
@@ -1163,7 +1214,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/cifu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "EOSU",
@@ -1172,7 +1225,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/eosu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "RDWU",
@@ -1181,7 +1236,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/rdwu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "FGRU",
@@ -1190,7 +1247,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/fgru/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "APHU",
@@ -1199,7 +1258,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/aphu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "AXTU",
@@ -1208,7 +1269,9 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/axtu/",
       "expense_ratio": null,
-      "leverage": 2
+      "leverage": 2,
+      "stale": true,
+      "last_ok": "2026-10-13T07:19:47+09:00"
     },
     {
       "ticker_2x": "LWLX",
