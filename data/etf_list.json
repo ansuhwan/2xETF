@@ -1,39 +1,36 @@
 {
-  "updated_at": "2026-10-14T07:16:30+09:00",
-  "total": 221,
-  "stale_issuers": [
-    "REX"
-  ],
+  "updated_at": "2026-10-15T07:17:08+09:00",
+  "total": 222,
+  "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 224,
+      "ms": 284,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 680,
+      "ms": 899,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 30727,
+      "ms": 20902,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ok": false,
-      "fellback": true,
-      "error": "GET https://www.rexshares.com/t-rex-leveraged-etfs/ failed: 403 Client Error: Forbidden for url: https://www.rexshares.com/t-rex-leveraged-etfs/"
+      "ms": 229,
+      "ok": true
     },
     "Tradr": {
-      "count": 74,
-      "ms": 369,
+      "count": 75,
+      "ms": 382,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 649,
+      "ms": 575,
       "ok": true
     },
     "3X": {
@@ -414,7 +411,7 @@
     },
     {
       "ticker_2x": "MRAL",
-      "name": "GraniteShares 2x Long MARA Daily ETF 2x long exposure to\n                                MARA Holdings Inc (MARA)",
+      "name": "GraniteShares 2x Long MARA Daily ETF 2x long exposure to\n                                MARA Holdings Inc",
       "underlying": "MARA",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/mral/",
@@ -495,7 +492,7 @@
     },
     {
       "ticker_2x": "PDDL",
-      "name": "GraniteShares 2x Long PDD Daily ETF 2x long exposure to\n                                PDD Holdings Inc (PDD)",
+      "name": "GraniteShares 2x Long PDD Daily ETF 2x long exposure to\n                                PDD Holdings Inc",
       "underlying": "PDD",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/pddl/",
@@ -950,9 +947,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/mstu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "NVDX",
@@ -961,9 +956,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/nvdx/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "TSLT",
@@ -972,9 +965,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/tslt/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "SNDU",
@@ -983,9 +974,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/sndu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "BMNU",
@@ -994,9 +983,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/bmnu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "BTCL",
@@ -1005,9 +992,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/btcl/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "CRWU",
@@ -1016,9 +1001,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/crwu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "CCUP",
@@ -1027,9 +1010,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/ccup/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "ROBN",
@@ -1038,9 +1019,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/robn/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "ETU",
@@ -1049,9 +1028,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/etu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "NFLU",
@@ -1060,9 +1037,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/nflu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "GMEU",
@@ -1071,9 +1046,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/gmeu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "DJTU",
@@ -1082,9 +1055,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/djtu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "AAPX",
@@ -1093,9 +1064,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/aapx/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "GOOX",
@@ -1104,9 +1073,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/goox/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "MSFX",
@@ -1115,9 +1082,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/msfx/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "RBLU",
@@ -1126,9 +1091,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/rblu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "GLXU",
@@ -1137,9 +1100,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/glxu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "TTDU",
@@ -1148,9 +1109,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/ttdu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "KTUP",
@@ -1159,9 +1118,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/ktup/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "SMUP",
@@ -1170,9 +1127,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/smup/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "AFRU",
@@ -1181,9 +1136,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/afru/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "SNOU",
@@ -1192,9 +1145,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/snou/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "SBTU",
@@ -1203,9 +1154,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/sbtu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "CIFU",
@@ -1214,9 +1163,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/cifu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "EOSU",
@@ -1225,9 +1172,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/eosu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "RDWU",
@@ -1236,9 +1181,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/rdwu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "FGRU",
@@ -1247,9 +1190,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/fgru/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "APHU",
@@ -1258,9 +1199,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/aphu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "AXTU",
@@ -1269,9 +1208,7 @@
       "issuer": "REX",
       "url": "https://www.rexshares.com/axtu/",
       "expense_ratio": null,
-      "leverage": 2,
-      "stale": true,
-      "last_ok": "2026-10-13T07:19:47+09:00"
+      "leverage": 2
     },
     {
       "ticker_2x": "LWLX",
@@ -1283,20 +1220,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "CEGX",
-      "name": "CEGX Tradr 2X Long CEG Daily ETF",
-      "underlying": "CEG",
+      "ticker_2x": "AAOZ",
+      "name": "AAOZ Tradr 2X Long AAOI Daily ETF",
+      "underlying": "AAOI",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/cegx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "CRDU",
-      "name": "CRDU Tradr 2X Long CRDO Daily ETF",
-      "underlying": "CRDO",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/crdu?hsLang=en",
+      "url": "https://www.tradretfs.com/aaoz?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1310,6 +1238,15 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "ASTX",
+      "name": "ASTX Tradr 2X Long ASTS Daily ETF",
+      "underlying": "ASTS",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/astx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "SNXX",
       "name": "SNXX Tradr 2X Long SNDK Daily ETF",
       "underlying": "SNDK",
@@ -1319,11 +1256,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "LITX",
-      "name": "LITX Tradr 2X Long LITE Daily ETF",
-      "underlying": "LITE",
+      "ticker_2x": "BEX",
+      "name": "BEX Tradr 2X Long BE Daily ETF",
+      "underlying": "BE",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/litx?hsLang=en",
+      "url": "https://www.tradretfs.com/bex?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1337,20 +1274,20 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "TEMT",
-      "name": "TEMT Tradr 2X Long TEM Daily ETF",
-      "underlying": "TEM",
+      "ticker_2x": "CIEX",
+      "name": "CIEX Tradr 2X Long CIEN Daily ETF",
+      "underlying": "CIEN",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/temt?hsLang=en",
+      "url": "https://www.tradretfs.com/ciex?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
     {
-      "ticker_2x": "BEX",
-      "name": "BEX Tradr 2X Long BE Daily ETF",
-      "underlying": "BE",
+      "ticker_2x": "CEGX",
+      "name": "CEGX Tradr 2X Long CEG Daily ETF",
+      "underlying": "CEG",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/bex?hsLang=en",
+      "url": "https://www.tradretfs.com/cegx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1391,15 +1328,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "CIEX",
-      "name": "CIEX Tradr 2X Long CIEN Daily ETF",
-      "underlying": "CIEN",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/ciex?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "COHX",
       "name": "COHX Tradr 2X Long COHR Daily ETF",
       "underlying": "COHR",
@@ -1409,11 +1337,29 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "CRDU",
+      "name": "CRDU Tradr 2X Long CRDO Daily ETF",
+      "underlying": "CRDO",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/crdu?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "CSEX",
       "name": "CSEX Tradr 2X Long CLS Daily ETF",
       "underlying": "CLS",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/csex?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "LITX",
+      "name": "LITX Tradr 2X Long LITE Daily ETF",
+      "underlying": "LITE",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/litx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1715,11 +1661,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "ASTX",
-      "name": "ASTX Tradr 2X Long ASTS Daily ETF",
-      "underlying": "ASTS",
+      "ticker_2x": "TEMT",
+      "name": "TEMT Tradr 2X Long TEM Daily ETF",
+      "underlying": "TEM",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/astx?hsLang=en",
+      "url": "https://www.tradretfs.com/temt?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },

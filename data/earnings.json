@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14T07:21:41+09:00",
+  "updated_at": "2026-10-15T07:22:12+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -2016,10 +2016,16 @@
     },
     "GS": {
       "next_earnings": "2026-10-13",
-      "eps_estimate": 14.50251,
-      "eps_low": 13.68,
-      "eps_high": 15.17,
+      "eps_estimate": 15.9638,
+      "eps_low": 14.8,
+      "eps_high": 18.45,
       "history": [
+        {
+          "date": "2026-10-13",
+          "estimate": 13.09,
+          "reported": 17.01,
+          "surprise": 29.98
+        },
         {
           "date": "2026-07-14",
           "estimate": 14.54,
@@ -2037,17 +2043,11 @@
           "estimate": 11.76,
           "reported": 14.01,
           "surprise": 19.09
-        },
-        {
-          "date": "2025-10-14",
-          "estimate": 11.09,
-          "reported": 12.25,
-          "surprise": 10.49
         }
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 20.48
+      "avg_surprise_pct": 25.36
     },
     "HIMS": {
       "next_earnings": "2026-11-09",
@@ -2400,11 +2400,17 @@
       "avg_surprise_pct": 5.58
     },
     "JPM": {
-      "next_earnings": "2026-10-13",
-      "eps_estimate": 5.47676,
-      "eps_low": 5.20136,
-      "eps_high": 5.77,
+      "next_earnings": "2027-01-14",
+      "eps_estimate": 5.94066,
+      "eps_low": 5.65,
+      "eps_high": 6.4,
       "history": [
+        {
+          "date": "2026-10-13",
+          "estimate": 5.94,
+          "reported": 5.75,
+          "surprise": -3.24
+        },
         {
           "date": "2026-07-14",
           "estimate": 5.8,
@@ -2422,17 +2428,11 @@
           "estimate": 4.82,
           "reported": 4.63,
           "surprise": -3.91
-        },
-        {
-          "date": "2025-10-14",
-          "estimate": 4.87,
-          "reported": 5.07,
-          "surprise": 4.01
         }
       ],
-      "beat_streak": 2,
-      "miss_streak": 0,
-      "avg_surprise_pct": 3.44
+      "beat_streak": 0,
+      "miss_streak": 1,
+      "avg_surprise_pct": 1.62
     },
     "KEEL": {
       "next_earnings": "2026-08-10",

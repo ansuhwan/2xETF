@@ -2474,5 +2474,10 @@
   "ANUU": null,
   "AIL": null,
   "NSCALE": null,
-  "NSUU": null
+  "NSUU": null,
+  "AAOZ": {
+    "code": "AMX2607015001",
+    "name_kr": "TRADR 어플라이드 옵토일렉트로닉스(AAOI) -2X ETF",
+    "market": "AMX"
+  }
 }
