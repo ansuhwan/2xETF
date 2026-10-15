@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T07:22:12+09:00",
+  "updated_at": "2026-10-16T07:23:25+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -2016,7 +2016,7 @@
     },
     "GS": {
       "next_earnings": "2026-10-13",
-      "eps_estimate": 15.9638,
+      "eps_estimate": 15.99751,
       "eps_low": 14.8,
       "eps_high": 18.45,
       "history": [
