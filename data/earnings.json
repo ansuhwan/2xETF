@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16T07:23:25+09:00",
+  "updated_at": "2026-10-17T07:21:43+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -4739,11 +4739,17 @@
       "avg_surprise_pct": -5.19
     },
     "TSM": {
-      "next_earnings": "2026-10-15",
-      "eps_estimate": 4.49778,
-      "eps_low": 4.32,
-      "eps_high": 4.65,
+      "next_earnings": "2027-01-14",
+      "eps_estimate": 5.1641,
+      "eps_low": 5.102,
+      "eps_high": 5.28,
       "history": [
+        {
+          "date": "2026-10-15",
+          "estimate": 4.52,
+          "reported": 4.6,
+          "surprise": 1.67
+        },
         {
           "date": "2026-07-16",
           "estimate": 3.89,
@@ -4761,17 +4767,11 @@
           "estimate": 2.98,
           "reported": 3.14,
           "surprise": 5.53
-        },
-        {
-          "date": "2025-10-15",
-          "estimate": 2.63,
-          "reported": 2.92,
-          "surprise": 11.23
         }
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 8.08
+      "avg_surprise_pct": 5.69
     },
     "TTD": {
       "next_earnings": "2026-11-05",
