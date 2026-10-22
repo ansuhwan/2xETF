@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-10-22T07:17:16+09:00",
+  "updated_at": "2026-10-23T07:16:38+09:00",
   "total": 222,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 296,
+      "ms": 265,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 564,
+      "ms": 575,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 24620,
+      "ms": 22932,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 145,
+      "ms": 296,
       "ok": true
     },
     "Tradr": {
       "count": 75,
-      "ms": 285,
+      "ms": 341,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 667,
+      "ms": 513,
       "ok": true
     },
     "3X": {
@@ -635,15 +635,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "ASTY",
-      "name": "ASTY | Defiance Daily Target 2X Long ASTS ETF",
-      "underlying": "ASTS",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/asty/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "AVGX",
       "name": "AVGX | Defiance Daily Target 2X Long AVGO ETF",
       "underlying": "AVGO",
@@ -937,6 +928,15 @@
       "underlying": "AMKR",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/amkl/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "ASTY",
+      "name": "ASTY | Defiance Daily Target 2X Long ASTS ETF",
+      "underlying": "ASTS",
+      "issuer": "Defiance",
+      "url": "https://www.defianceetfs.com/asty/",
       "expense_ratio": null,
       "leverage": 2
     },
