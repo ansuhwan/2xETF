@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T07:21:52+09:00",
+  "updated_at": "2026-10-25T07:21:08+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -1204,10 +1204,10 @@
       "avg_surprise_pct": -1069.73
     },
     "CORZ": {
-      "next_earnings": "2026-10-23",
-      "eps_estimate": -0.04,
+      "next_earnings": "2026-11-05",
+      "eps_estimate": -0.00411,
       "eps_low": -0.05,
-      "eps_high": -0.03,
+      "eps_high": 0.06356,
       "history": [
         {
           "date": "2026-07-28",
@@ -2681,7 +2681,7 @@
     },
     "LRCX": {
       "next_earnings": "2026-10-21",
-      "eps_estimate": 2.3473,
+      "eps_estimate": 2.34922,
       "eps_low": 2.326,
       "eps_high": 2.55,
       "history": [
@@ -3171,15 +3171,15 @@
     },
     "NEM": {
       "next_earnings": "2026-10-22",
-      "eps_estimate": 2.15772,
-      "eps_low": 1.82,
-      "eps_high": 2.49,
+      "eps_estimate": 2.00292,
+      "eps_low": 1.86,
+      "eps_high": 2.23,
       "history": [
         {
           "date": "2026-10-22",
-          "estimate": 1.94,
+          "estimate": 1.95,
           "reported": 2.2,
-          "surprise": 13.16
+          "surprise": 13.03
         },
         {
           "date": "2026-07-23",
@@ -3202,7 +3202,7 @@
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 19.14
+      "avg_surprise_pct": 19.1
     },
     "NET": {
       "next_earnings": "2026-10-29",
@@ -3276,8 +3276,8 @@
     },
     "NOK": {
       "next_earnings": "2026-10-22",
-      "eps_estimate": 0.17736,
-      "eps_low": 0.168,
+      "eps_estimate": 0.17316,
+      "eps_low": 0.157,
       "eps_high": 0.19081,
       "history": [
         {
@@ -4705,7 +4705,7 @@
     },
     "TSLA": {
       "next_earnings": "2026-10-21",
-      "eps_estimate": 0.48563,
+      "eps_estimate": 0.49431,
       "eps_low": 0.34213,
       "eps_high": 0.88,
       "history": [
@@ -6440,9 +6440,9 @@
     },
     "MXL": {
       "next_earnings": "2026-10-22",
-      "eps_estimate": 0.78,
+      "eps_estimate": 0.786,
       "eps_low": 0.78,
-      "eps_high": 0.78,
+      "eps_high": 0.79,
       "history": [
         {
           "date": "2026-10-22",
