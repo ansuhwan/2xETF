@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T07:21:15+09:00",
+  "updated_at": "2026-10-27T07:24:27+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -3171,8 +3171,8 @@
     },
     "NEM": {
       "next_earnings": "2026-10-22",
-      "eps_estimate": 2.00292,
-      "eps_low": 1.86,
+      "eps_estimate": 1.94243,
+      "eps_low": 1.67,
       "eps_high": 2.23,
       "history": [
         {
@@ -3276,8 +3276,8 @@
     },
     "NOK": {
       "next_earnings": "2026-10-22",
-      "eps_estimate": 0.17316,
-      "eps_low": 0.157,
+      "eps_estimate": 0.16864,
+      "eps_low": 0.146,
       "eps_high": 0.19081,
       "history": [
         {
@@ -3970,9 +3970,9 @@
     },
     "QS": {
       "next_earnings": "2026-10-21",
-      "eps_estimate": -0.16132,
+      "eps_estimate": -0.16532,
       "eps_low": -0.17,
-      "eps_high": -0.14,
+      "eps_high": -0.16,
       "history": [
         {
           "date": "2026-10-21",
@@ -4705,7 +4705,7 @@
     },
     "TSLA": {
       "next_earnings": "2026-10-21",
-      "eps_estimate": 0.49431,
+      "eps_estimate": 0.50329,
       "eps_low": 0.34213,
       "eps_high": 0.88,
       "history": [
@@ -6520,9 +6520,9 @@
     },
     "FIX": {
       "next_earnings": "2026-10-22",
-      "eps_estimate": 13.14671,
-      "eps_low": 12.32,
-      "eps_high": 15.02,
+      "eps_estimate": 14.02535,
+      "eps_low": 13.27,
+      "eps_high": 14.65,
       "history": [
         {
           "date": "2026-10-22",

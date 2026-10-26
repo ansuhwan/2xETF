@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-10-26T07:15:49+09:00",
-  "total": 222,
+  "updated_at": "2026-10-27T07:19:27+09:00",
+  "total": 219,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 295,
+      "ms": 3764,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 342,
+      "ms": 978,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 53091,
+      "ms": 21165,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 295,
+      "ms": 304,
       "ok": true
     },
     "Tradr": {
-      "count": 75,
-      "ms": 415,
+      "count": 72,
+      "ms": 478,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 872,
+      "ms": 600,
       "ok": true
     },
     "3X": {
@@ -1706,42 +1706,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "CPNX",
-      "name": "Tradr 2X Long CPNG Daily ETF",
-      "underlying": "CPNG",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/cpnx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "NXPX",
-      "name": "Tradr 2X Long NXPI Daily ETF",
-      "underlying": "NXPI",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/nxpx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "PONX",
-      "name": "Tradr 2X Long PONY Daily ETF",
-      "underlying": "PONY",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/ponx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "TSEU",
-      "name": "Tradr 2X Long TSEM Daily ETF",
-      "underlying": "TSEM",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/tseu?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "UPSX",
       "name": "Tradr 2X Long UPST Daily ETF",
       "underlying": "UPST",
@@ -1855,6 +1819,15 @@
       "underlying": "OKTA",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/oktx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "PONX",
+      "name": "Tradr 2X Long PONY Daily ETF",
+      "underlying": "PONY",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/ponx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
