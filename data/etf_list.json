@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-10-28T07:12:15+09:00",
-  "total": 219,
+  "updated_at": "2026-10-29T07:13:34+09:00",
+  "total": 218,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 371,
+      "ms": 304,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 779,
+      "ms": 582,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 11266,
+      "ms": 9736,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 301,
+      "ms": 408,
       "ok": true
     },
     "Tradr": {
-      "count": 72,
-      "ms": 312,
+      "count": 71,
+      "ms": 410,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 608,
+      "ms": 584,
       "ok": true
     },
     "3X": {
@@ -1220,11 +1220,20 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "AAOZ",
-      "name": "AAOZ Tradr 2X Long AAOI Daily ETF",
-      "underlying": "AAOI",
+      "ticker_2x": "CRMX",
+      "name": "CRMX Tradr 2X Long CRML Daily ETF",
+      "underlying": "CRML",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/aaoz?hsLang=en",
+      "url": "https://www.tradretfs.com/crmx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "TEMT",
+      "name": "TEMT Tradr 2X Long TEM Daily ETF",
+      "underlying": "TEM",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/temt?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1396,15 +1405,6 @@
       "underlying": "WDC",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/wdcx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "CRMX",
-      "name": "CRMX Tradr 2X Long CRML Daily ETF",
-      "underlying": "CRML",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/crmx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1657,15 +1657,6 @@
       "underlying": "PATH",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/patx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "TEMT",
-      "name": "TEMT Tradr 2X Long TEM Daily ETF",
-      "underlying": "TEM",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/temt?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
