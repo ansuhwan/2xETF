@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-10-30T07:13:42+09:00",
+  "updated_at": "2026-10-31T07:10:32+09:00",
   "total": 218,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 4967,
+      "ms": 9275,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 383,
+      "ms": 552,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 8966,
+      "ms": 11926,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 465,
+      "ms": 115,
       "ok": true
     },
     "Tradr": {
       "count": 71,
-      "ms": 414,
+      "ms": 324,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 654,
+      "ms": 538,
       "ok": true
     },
     "3X": {
@@ -1238,6 +1238,15 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "XNDX",
+      "name": "XNDX Tradr 2X Long XNDU Daily ETF",
+      "underlying": "XNDU",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/xndx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "AAOX",
       "name": "AAOX Tradr 2X Long AAOI Daily ETF",
       "underlying": "AAOI",
@@ -1247,11 +1256,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "LITX",
-      "name": "LITX Tradr 2X Long LITE Daily ETF",
-      "underlying": "LITE",
+      "ticker_2x": "ASTX",
+      "name": "ASTX Tradr 2X Long ASTS Daily ETF",
+      "underlying": "ASTS",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/litx?hsLang=en",
+      "url": "https://www.tradretfs.com/astx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1265,20 +1274,20 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "BEX",
-      "name": "BEX Tradr 2X Long BE Daily ETF",
-      "underlying": "BE",
+      "ticker_2x": "LITX",
+      "name": "LITX Tradr 2X Long LITE Daily ETF",
+      "underlying": "LITE",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/bex?hsLang=en",
+      "url": "https://www.tradretfs.com/litx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
     {
-      "ticker_2x": "OPEX",
-      "name": "OPEX Tradr 2X Long OPEN Daily ETF",
-      "underlying": "OPEN",
+      "ticker_2x": "TTMX",
+      "name": "TTMX Tradr 2X Long TTMI Daily ETF",
+      "underlying": "TTMI",
       "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/opex?hsLang=en",
+      "url": "https://www.tradretfs.com/ttmx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1288,6 +1297,15 @@
       "underlying": "AXTI",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/axtx?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "BEX",
+      "name": "BEX Tradr 2X Long BE Daily ETF",
+      "underlying": "BE",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/bex?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1378,15 +1396,6 @@
       "underlying": "MPWR",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/mpwx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "TTMX",
-      "name": "TTMX Tradr 2X Long TTMI Daily ETF",
-      "underlying": "TTMI",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/ttmx?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
@@ -1526,15 +1535,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "XNDX",
-      "name": "XNDX Tradr 2X Long XNDU Daily ETF",
-      "underlying": "XNDU",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/xndx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "CBRX",
       "name": "CBRX Tradr 2X Long CBRS Daily ETF",
       "underlying": "CBRS",
@@ -1661,15 +1661,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "ASTX",
-      "name": "ASTX Tradr 2X Long ASTS Daily ETF",
-      "underlying": "ASTS",
-      "issuer": "Tradr",
-      "url": "https://www.tradretfs.com/astx?hsLang=en",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "FLYT",
       "name": "FLYT Tradr 2X Long FLY Daily ETF",
       "underlying": "FLY",
@@ -1693,6 +1684,15 @@
       "underlying": "SPACEX",
       "issuer": "Tradr",
       "url": "https://www.tradretfs.com/spcm?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "OPEX",
+      "name": "Tradr 2X Long OPEN Daily ETF",
+      "underlying": "OPEN",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/opex?hsLang=en",
       "expense_ratio": null,
       "leverage": 2
     },
