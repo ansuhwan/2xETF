@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-04T07:15:16+09:00",
+  "updated_at": "2026-11-05T07:15:44+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -143,10 +143,22 @@
     },
     "ALAB": {
       "next_earnings": "2026-11-03",
-      "eps_estimate": 0.99486,
-      "eps_low": 0.73,
-      "eps_high": 1.2,
+      "eps_estimate": 1.45657,
+      "eps_low": 1.28762,
+      "eps_high": 1.71317,
       "history": [
+        {
+          "date": "2026-11-03",
+          "estimate": 1.19,
+          "reported": 1.32,
+          "surprise": 10.73
+        },
+        {
+          "date": "2026-08-04",
+          "estimate": 0.69,
+          "reported": 0.8,
+          "surprise": 15.62
+        },
         {
           "date": "2026-05-05",
           "estimate": 0.54,
@@ -158,23 +170,11 @@
           "estimate": 0.51,
           "reported": 0.58,
           "surprise": 12.64
-        },
-        {
-          "date": "2025-11-04",
-          "estimate": 0.39,
-          "reported": 0.49,
-          "surprise": 25.6
-        },
-        {
-          "date": "2025-08-05",
-          "estimate": 0.32,
-          "reported": 0.44,
-          "surprise": 35.74
         }
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 21.86
+      "avg_surprise_pct": 13.12
     },
     "AMAT": {
       "next_earnings": "2026-11-12",
@@ -212,16 +212,22 @@
       "avg_surprise_pct": 5.29
     },
     "AMD": {
-      "next_earnings": "2026-11-03",
-      "eps_estimate": 1.85947,
-      "eps_low": 1.65,
-      "eps_high": 2.27,
+      "next_earnings": "2027-02-02",
+      "eps_estimate": 2.94829,
+      "eps_low": 2.92,
+      "eps_high": 2.99,
       "history": [
+        {
+          "date": "2026-11-03",
+          "estimate": 1.94,
+          "reported": 2.09,
+          "surprise": 7.46
+        },
         {
           "date": "2026-08-04",
           "estimate": 1.61,
           "reported": 1.66,
-          "surprise": 3.06
+          "surprise": 3.21
         },
         {
           "date": "2026-05-05",
@@ -233,18 +239,12 @@
           "date": "2026-02-03",
           "estimate": 1.32,
           "reported": 1.53,
-          "surprise": 15.98
-        },
-        {
-          "date": "2025-11-04",
-          "estimate": 1.17,
-          "reported": 1.2,
-          "surprise": 2.48
+          "surprise": 15.53
         }
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 6.83
+      "avg_surprise_pct": 8.01
     },
     "AMKR": {
       "next_earnings": "2026-10-26",
@@ -353,10 +353,16 @@
     },
     "ANET": {
       "next_earnings": "2026-11-03",
-      "eps_estimate": 0.92409,
-      "eps_low": 0.87,
-      "eps_high": 1.08,
+      "eps_estimate": 1.3065,
+      "eps_low": 1.28,
+      "eps_high": 1.37,
       "history": [
+        {
+          "date": "2026-11-03",
+          "estimate": 1.08,
+          "reported": 1.2,
+          "surprise": 11.22
+        },
         {
           "date": "2026-08-04",
           "estimate": 0.89,
@@ -374,17 +380,11 @@
           "estimate": 0.76,
           "reported": 0.82,
           "surprise": 8.17
-        },
-        {
-          "date": "2025-11-04",
-          "estimate": 0.71,
-          "reported": 0.75,
-          "surprise": 4.98
         }
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 9.02
+      "avg_surprise_pct": 10.57
     },
     "APH": {
       "next_earnings": "2027-01-27",
@@ -732,7 +732,7 @@
     },
     "BE": {
       "next_earnings": "2026-10-22",
-      "eps_estimate": 1.10913,
+      "eps_estimate": 1.1176,
       "eps_low": 0.99,
       "eps_high": 1.22377,
       "history": [
@@ -1030,7 +1030,7 @@
     },
     "CIFR": {
       "next_earnings": "2026-11-02",
-      "eps_estimate": -0.0325,
+      "eps_estimate": -0.04,
       "eps_low": -0.46,
       "eps_high": 0.03,
       "history": [
@@ -2470,10 +2470,10 @@
       "avg_surprise_pct": -379.47
     },
     "KTOS": {
-      "next_earnings": "2026-11-03",
-      "eps_estimate": 0.20709,
-      "eps_low": 0.17862,
-      "eps_high": 0.23068,
+      "next_earnings": "2026-11-05",
+      "eps_estimate": 0.20712,
+      "eps_low": 0.14,
+      "eps_high": 0.26,
       "history": [
         {
           "date": "2026-08-04",
@@ -3416,10 +3416,16 @@
     },
     "NVTS": {
       "next_earnings": "2026-11-03",
-      "eps_estimate": -0.03714,
-      "eps_low": -0.04,
+      "eps_estimate": -0.03,
+      "eps_low": -0.03,
       "eps_high": -0.03,
       "history": [
+        {
+          "date": "2026-11-03",
+          "estimate": -0.04,
+          "reported": -0.03,
+          "surprise": 19.22
+        },
         {
           "date": "2026-07-27",
           "estimate": -0.04,
@@ -3439,9 +3445,9 @@
           "surprise": 3.86
         }
       ],
-      "beat_streak": 3,
+      "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 8.36
+      "avg_surprise_pct": 11.07
     },
     "OKLO": {
       "next_earnings": "2026-11-10",
@@ -4104,7 +4110,7 @@
     },
     "RDDT": {
       "next_earnings": "2026-10-29",
-      "eps_estimate": 2.46669,
+      "eps_estimate": 2.45535,
       "eps_low": 2.25677,
       "eps_high": 2.57,
       "history": [
@@ -4243,11 +4249,17 @@
       "avg_surprise_pct": -45.83
     },
     "RIVN": {
-      "next_earnings": "2026-11-03",
-      "eps_estimate": -0.64886,
-      "eps_low": -0.86,
-      "eps_high": -0.55,
+      "next_earnings": "2026-10-29",
+      "eps_estimate": -0.53567,
+      "eps_low": -0.68,
+      "eps_high": -0.48,
       "history": [
+        {
+          "date": "2026-10-29",
+          "estimate": -0.73,
+          "reported": -0.63,
+          "surprise": 13.5
+        },
         {
           "date": "2026-07-30",
           "estimate": -0.78,
@@ -4265,17 +4277,11 @@
           "estimate": -0.79,
           "reported": -0.66,
           "surprise": 16.65
-        },
-        {
-          "date": "2025-11-04",
-          "estimate": -0.86,
-          "reported": -0.96,
-          "surprise": -11.14
         }
       ],
-      "beat_streak": 3,
+      "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 19.57
+      "avg_surprise_pct": 25.73
     },
     "RKLB": {
       "next_earnings": "2026-11-09",
@@ -4383,11 +4389,17 @@
       "avg_surprise_pct": -14743.92
     },
     "SMCI": {
-      "next_earnings": "2026-11-03",
-      "eps_estimate": 0.75544,
-      "eps_low": 0.52,
-      "eps_high": 1.32,
+      "next_earnings": "2027-02-02",
+      "eps_estimate": 1.22279,
+      "eps_low": 0.85,
+      "eps_high": 1.774,
       "history": [
+        {
+          "date": "2026-11-03",
+          "estimate": 1.23,
+          "reported": 1.81,
+          "surprise": 46.61
+        },
         {
           "date": "2026-08-11",
           "estimate": 0.96,
@@ -4405,17 +4417,11 @@
           "estimate": 0.49,
           "reported": 0.69,
           "surprise": 41.43
-        },
-        {
-          "date": "2025-11-04",
-          "estimate": 0.39,
-          "reported": 0.35,
-          "surprise": -10.08
         }
       ],
-      "beat_streak": 3,
+      "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 35.85
+      "avg_surprise_pct": 50.02
     },
     "SMR": {
       "next_earnings": "2026-11-05",
@@ -4663,16 +4669,22 @@
       "avg_surprise_pct": 10.45
     },
     "TEM": {
-      "next_earnings": "2026-11-03",
-      "eps_estimate": -0.07996,
+      "next_earnings": "2026-11-02",
+      "eps_estimate": -0.07648,
       "eps_low": -0.17,
-      "eps_high": -0.01961,
+      "eps_high": 0.0,
       "history": [
+        {
+          "date": "2026-11-02",
+          "estimate": -0.08,
+          "reported": 0.07,
+          "surprise": 191.53
+        },
         {
           "date": "2026-07-30",
           "estimate": -0.15,
           "reported": -0.04,
-          "surprise": 73.97
+          "surprise": 73.63
         },
         {
           "date": "2026-05-05",
@@ -4685,17 +4697,11 @@
           "estimate": -0.05,
           "reported": -0.04,
           "surprise": 22.06
-        },
-        {
-          "date": "2025-11-04",
-          "estimate": -0.18,
-          "reported": -0.11,
-          "surprise": 37.26
         }
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 42.16
+      "avg_surprise_pct": 80.64
     },
     "TSLA": {
       "next_earnings": "2027-01-27",
@@ -4838,11 +4844,23 @@
       "avg_surprise_pct": 10.64
     },
     "UBER": {
-      "next_earnings": "2026-11-03",
-      "eps_estimate": 0.80459,
-      "eps_low": 0.77,
-      "eps_high": 0.84,
+      "next_earnings": "2026-11-04",
+      "eps_estimate": 0.97136,
+      "eps_low": 0.85,
+      "eps_high": 1.03,
       "history": [
+        {
+          "date": "2026-11-04",
+          "estimate": 0.9,
+          "reported": 0.25,
+          "surprise": -72.32
+        },
+        {
+          "date": "2026-08-05",
+          "estimate": 0.83,
+          "reported": 1.17,
+          "surprise": 40.22
+        },
         {
           "date": "2026-05-06",
           "estimate": 0.71,
@@ -4854,35 +4872,29 @@
           "estimate": 0.78,
           "reported": 0.14,
           "surprise": -81.94
-        },
-        {
-          "date": "2025-11-04",
-          "estimate": 0.69,
-          "reported": 3.11,
-          "surprise": 353.17
-        },
-        {
-          "date": "2025-08-06",
-          "estimate": 0.82,
-          "reported": 0.65,
-          "surprise": -19.72
         }
       ],
       "beat_streak": 0,
-      "miss_streak": 2,
-      "avg_surprise_pct": 42.44
+      "miss_streak": 1,
+      "avg_surprise_pct": -48.94
     },
     "UPST": {
       "next_earnings": "2026-11-03",
-      "eps_estimate": 0.6846,
-      "eps_low": 0.55987,
-      "eps_high": 0.8723,
+      "eps_estimate": 0.73362,
+      "eps_low": 0.63175,
+      "eps_high": 0.85,
       "history": [
+        {
+          "date": "2026-11-03",
+          "estimate": 0.65,
+          "reported": 0.65,
+          "surprise": 0.39
+        },
         {
           "date": "2026-08-04",
           "estimate": 0.55,
           "reported": 0.57,
-          "surprise": 4.25
+          "surprise": 2.74
         },
         {
           "date": "2026-05-05",
@@ -4895,17 +4907,11 @@
           "estimate": 0.46,
           "reported": 0.5,
           "surprise": 7.58
-        },
-        {
-          "date": "2025-11-04",
-          "estimate": 0.42,
-          "reported": 0.52,
-          "surprise": 23.42
         }
       ],
-      "beat_streak": 1,
+      "beat_streak": 2,
       "miss_streak": 0,
-      "avg_surprise_pct": 1.57
+      "avg_surprise_pct": -4.56
     },
     "USAR": {
       "next_earnings": "2026-11-05",
@@ -4944,7 +4950,7 @@
     },
     "VOYG": {
       "next_earnings": "2026-11-02",
-      "eps_estimate": -0.78506,
+      "eps_estimate": -0.80882,
       "eps_low": -0.99,
       "eps_high": -0.73,
       "history": [
@@ -4952,7 +4958,7 @@
           "date": "2026-11-02",
           "estimate": -0.86,
           "reported": -0.87,
-          "surprise": -1.18
+          "surprise": -1.37
         },
         {
           "date": "2026-08-03",
@@ -4975,7 +4981,7 @@
       ],
       "beat_streak": 0,
       "miss_streak": 1,
-      "avg_surprise_pct": 3.1
+      "avg_surprise_pct": 3.06
     },
     "VRT": {
       "next_earnings": "2026-10-28",
@@ -5267,7 +5273,7 @@
     },
     "ON": {
       "next_earnings": "2026-11-02",
-      "eps_estimate": 1.00778,
+      "eps_estimate": 1.01265,
       "eps_low": 0.85,
       "eps_high": 0.93,
       "history": [
@@ -5418,14 +5424,27 @@
     },
     "SPACEX": null,
     "SPCX": {
-      "next_earnings": "2026-11-03",
-      "eps_estimate": -0.22725,
-      "eps_low": -0.4,
-      "eps_high": -0.11,
-      "history": [],
-      "beat_streak": 0,
+      "next_earnings": "2026-10-20",
+      "eps_estimate": 0.31884,
+      "eps_low": 0.02,
+      "eps_high": 0.75029,
+      "history": [
+        {
+          "date": "2026-10-20",
+          "estimate": 0.16,
+          "reported": 0.35,
+          "surprise": 112.49
+        },
+        {
+          "date": "2026-08-04",
+          "estimate": -0.29,
+          "reported": -0.09,
+          "surprise": 68.89
+        }
+      ],
+      "beat_streak": 2,
       "miss_streak": 0,
-      "avg_surprise_pct": null
+      "avg_surprise_pct": 90.69
     },
     "ADI": {
       "next_earnings": "2026-08-19",
@@ -6257,11 +6276,17 @@
       "avg_surprise_pct": 10.07
     },
     "TDC": {
-      "next_earnings": "2026-11-03",
-      "eps_estimate": 0.62294,
-      "eps_low": 0.57,
-      "eps_high": 0.66341,
+      "next_earnings": "2026-11-05",
+      "eps_estimate": 0.5785,
+      "eps_low": 0.56735,
+      "eps_high": 0.60268,
       "history": [
+        {
+          "date": "2026-08-04",
+          "estimate": 0.56,
+          "reported": 0.69,
+          "surprise": 23.13
+        },
         {
           "date": "2026-05-05",
           "estimate": 0.77,
@@ -6279,24 +6304,24 @@
           "estimate": 0.54,
           "reported": 0.72,
           "surprise": 34.31
-        },
-        {
-          "date": "2025-08-05",
-          "estimate": 0.4,
-          "reported": 0.47,
-          "surprise": 16.92
         }
       ],
       "beat_streak": 4,
       "miss_streak": 0,
-      "avg_surprise_pct": 24.63
+      "avg_surprise_pct": 26.18
     },
     "OUST": {
       "next_earnings": "2026-11-03",
-      "eps_estimate": -0.096,
-      "eps_low": -0.15,
-      "eps_high": -0.06,
+      "eps_estimate": -0.065,
+      "eps_low": -0.19,
+      "eps_high": -0.01,
       "history": [
+        {
+          "date": "2026-11-03",
+          "estimate": -0.1,
+          "reported": -0.19,
+          "surprise": -94.67
+        },
         {
           "date": "2026-08-06",
           "estimate": -0.14,
@@ -6314,17 +6339,11 @@
           "estimate": -0.13,
           "reported": 0.07,
           "surprise": 149.33
-        },
-        {
-          "date": "2025-11-04",
-          "estimate": -0.18,
-          "reported": -0.16,
-          "surprise": 10.79
         }
       ],
       "beat_streak": 0,
-      "miss_streak": 2,
-      "avg_surprise_pct": -11.62
+      "miss_streak": 3,
+      "avg_surprise_pct": -37.99
     },
     "MEMORY": null,
     "MRAM": {
