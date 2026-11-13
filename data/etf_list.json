@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-11-13T07:11:17+09:00",
-  "total": 220,
+  "updated_at": "2026-11-14T07:10:41+09:00",
+  "total": 221,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 5120,
+      "ms": 6391,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 409,
+      "ms": 675,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 15976,
+      "ms": 9049,
       "ok": true
     },
     "REX": {
       "count": 30,
-      "ms": 300,
+      "ms": 349,
       "ok": true
     },
     "Tradr": {
-      "count": 73,
-      "ms": 409,
+      "count": 74,
+      "ms": 383,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 593,
+      "ms": 595,
       "ok": true
     },
     "3X": {
@@ -1688,6 +1688,15 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "ANTT",
+      "name": "Tradr 2X Long ANT Daily ETF",
+      "underlying": "ANT",
+      "issuer": "Tradr",
+      "url": "https://www.tradretfs.com/antt?hsLang=en",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "FCEX",
       "name": "Tradr 2X Long FCEX Daily ETF",
       "underlying": "FCEX",
@@ -1904,6 +1913,15 @@
       "leverage": 2
     },
     {
+      "ticker_2x": "MUG",
+      "name": "MUG 2x Long MU",
+      "underlying": "MU",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-mu-daily-etf/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
       "ticker_2x": "FIXX",
       "name": "FIXX 2x Long FIX",
       "underlying": "FIX",
@@ -1931,24 +1949,6 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "MUG",
-      "name": "MUG 2x Long MU",
-      "underlying": "MU",
-      "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-mu-daily-etf/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "MXLL",
-      "name": "MXLL 2x Long MXL",
-      "underlying": "MXL",
-      "issuer": "LeverageShares",
-      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-mxl-daily-etf/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "STLL",
       "name": "STLL 2x Long STRL",
       "underlying": "STRL",
@@ -1963,6 +1963,15 @@
       "underlying": "LITE",
       "issuer": "LeverageShares",
       "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-lite-daily-etf/",
+      "expense_ratio": null,
+      "leverage": 2
+    },
+    {
+      "ticker_2x": "MXLL",
+      "name": "MXLL 2x Long MXL",
+      "underlying": "MXL",
+      "issuer": "LeverageShares",
+      "url": "https://leverageshares.com/us/etfs/leverage-shares-2x-long-mxl-daily-etf/",
       "expense_ratio": null,
       "leverage": 2
     },
