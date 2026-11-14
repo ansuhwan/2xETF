@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-11-14T07:10:41+09:00",
-  "total": 221,
+  "updated_at": "2026-11-15T07:10:43+09:00",
+  "total": 219,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 6391,
+      "ms": 3842,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 675,
+      "ms": 411,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 9049,
+      "ms": 29391,
       "ok": true
     },
     "REX": {
-      "count": 30,
-      "ms": 349,
+      "count": 28,
+      "ms": 510,
       "ok": true
     },
     "Tradr": {
       "count": 74,
-      "ms": 383,
+      "ms": 399,
       "ok": true
     },
     "LeverageShares": {
       "count": 12,
-      "ms": 595,
+      "ms": 632,
       "ok": true
     },
     "3X": {
@@ -1130,29 +1130,11 @@
       "leverage": 2
     },
     {
-      "ticker_2x": "AFRU",
-      "name": "AFRU | +2X Daily AFRM",
-      "underlying": "AFRM",
-      "issuer": "REX",
-      "url": "https://www.rexshares.com/afru/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
       "ticker_2x": "SNOU",
       "name": "SNOU | +2X Daily SNOW",
       "underlying": "SNOW",
       "issuer": "REX",
       "url": "https://www.rexshares.com/snou/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "SBTU",
-      "name": "SBTU | +2X Daily SBET",
-      "underlying": "SBET",
-      "issuer": "REX",
-      "url": "https://www.rexshares.com/sbtu/",
       "expense_ratio": null,
       "leverage": 2
     },
