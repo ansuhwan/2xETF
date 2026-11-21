@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21T07:16:32+09:00",
+  "updated_at": "2026-11-22T07:16:14+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -801,11 +801,17 @@
       "avg_surprise_pct": 14.02
     },
     "BMNR": {
-      "next_earnings": "2026-11-20",
+      "next_earnings": "2027-01-12",
       "eps_estimate": null,
       "eps_low": null,
       "eps_high": null,
       "history": [
+        {
+          "date": "2026-11-10",
+          "estimate": 0.02,
+          "reported": 7.4,
+          "surprise": 49233.33
+        },
         {
           "date": "2026-07-14",
           "estimate": 0.18,
@@ -823,17 +829,11 @@
           "estimate": 0.15,
           "reported": -0.19,
           "surprise": -229.07
-        },
-        {
-          "date": "2025-11-21",
-          "estimate": -0.1,
-          "reported": 16.01,
-          "surprise": 16110.0
         }
       ],
-      "beat_streak": 0,
-      "miss_streak": 3,
-      "avg_surprise_pct": 3890.66
+      "beat_streak": 1,
+      "miss_streak": 0,
+      "avg_surprise_pct": 12171.49
     },
     "BTC-USD": null,
     "BULL": {
@@ -1783,7 +1783,7 @@
     },
     "FLY": {
       "next_earnings": "2026-11-10",
-      "eps_estimate": -0.45867,
+      "eps_estimate": -0.46389,
       "eps_low": -0.52333,
       "eps_high": -0.43,
       "history": [
@@ -3457,8 +3457,8 @@
     },
     "OKLO": {
       "next_earnings": "2026-11-06",
-      "eps_estimate": -0.28003,
-      "eps_low": -0.3,
+      "eps_estimate": -0.28649,
+      "eps_low": -0.33,
       "eps_high": -0.23,
       "history": [
         {
@@ -4472,7 +4472,7 @@
     },
     "SNDK": {
       "next_earnings": "2026-10-29",
-      "eps_estimate": 7.14263,
+      "eps_estimate": 7.14271,
       "eps_low": 7.0,
       "eps_high": 7.51,
       "history": [
@@ -4997,7 +4997,7 @@
     },
     "VRT": {
       "next_earnings": "2026-10-28",
-      "eps_estimate": 2.28794,
+      "eps_estimate": 2.28763,
       "eps_low": 2.23,
       "eps_high": 2.42,
       "history": [
