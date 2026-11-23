@@ -1,36 +1,36 @@
 {
-  "updated_at": "2026-11-23T07:11:29+09:00",
+  "updated_at": "2026-11-24T07:10:53+09:00",
   "total": 218,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
       "count": 25,
-      "ms": 259,
+      "ms": 298,
       "ok": true
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 575,
+      "ms": 601,
       "ok": true
     },
     "Defiance": {
       "count": 37,
-      "ms": 26531,
+      "ms": 9162,
       "ok": true
     },
     "REX": {
       "count": 28,
-      "ms": 285,
+      "ms": 197,
       "ok": true
     },
     "Tradr": {
       "count": 74,
-      "ms": 265,
+      "ms": 388,
       "ok": true
     },
     "LeverageShares": {
       "count": 11,
-      "ms": 480,
+      "ms": 639,
       "ok": true
     },
     "3X": {
@@ -276,7 +276,7 @@
     },
     {
       "ticker_2x": "AIL",
-      "name": "GraniteShares 2x Long Anthropic Daily ETF 2x long exposure to\n                                Anthropic",
+      "name": "GraniteShares 2x Long Anthropic Daily ETF 2x long exposure to\n                                Anthropic, PBC (ANT)",
       "underlying": "ANTHROPIC",
       "issuer": "GraniteShares",
       "url": "https://graniteshares.com/etfs/ail/",
