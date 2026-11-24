@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-24T07:10:53+09:00",
-  "total": 218,
+  "updated_at": "2026-11-25T07:10:40+09:00",
+  "total": 217,
   "stale_issuers": [],
   "per_issuer": {
     "Direxion": {
@@ -10,27 +10,27 @@
     },
     "GraniteShares": {
       "count": 38,
-      "ms": 601,
+      "ms": 376,
       "ok": true
     },
     "Defiance": {
-      "count": 37,
-      "ms": 9162,
+      "count": 36,
+      "ms": 6251,
       "ok": true
     },
     "REX": {
       "count": 28,
-      "ms": 197,
+      "ms": 252,
       "ok": true
     },
     "Tradr": {
       "count": 74,
-      "ms": 388,
+      "ms": 321,
       "ok": true
     },
     "LeverageShares": {
       "count": 11,
-      "ms": 639,
+      "ms": 603,
       "ok": true
     },
     "3X": {
@@ -802,15 +802,6 @@
       "underlying": "PURR",
       "issuer": "Defiance",
       "url": "https://www.defianceetfs.com/pur/",
-      "expense_ratio": null,
-      "leverage": 2
-    },
-    {
-      "ticker_2x": "RCAX",
-      "name": "RCAX | Daily Target 2X Long RCAT ETF",
-      "underlying": "RCAT",
-      "issuer": "Defiance",
-      "url": "https://www.defianceetfs.com/rcax/",
       "expense_ratio": null,
       "leverage": 2
     },
