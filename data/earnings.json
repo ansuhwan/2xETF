@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T07:16:38+09:00",
+  "updated_at": "2026-11-26T07:16:36+09:00",
   "tickers": {
     "AAOI": {
       "next_earnings": "2026-11-05",
@@ -696,11 +696,17 @@
       "avg_surprise_pct": 9.06
     },
     "BABA": {
-      "next_earnings": "2026-11-24",
-      "eps_estimate": 10.90073,
-      "eps_low": 8.59,
-      "eps_high": 15.46022,
+      "next_earnings": "2027-02-17",
+      "eps_estimate": 15.18461,
+      "eps_low": 12.18,
+      "eps_high": 17.42,
       "history": [
+        {
+          "date": "2026-11-19",
+          "estimate": 11.03,
+          "reported": 8.1,
+          "surprise": -26.53
+        },
         {
           "date": "2026-08-20",
           "estimate": 10.82,
@@ -718,17 +724,11 @@
           "estimate": 10.94,
           "reported": 7.09,
           "surprise": -35.18
-        },
-        {
-          "date": "2025-11-25",
-          "estimate": 5.78,
-          "reported": 4.36,
-          "surprise": -24.55
         }
       ],
       "beat_streak": 0,
       "miss_streak": 4,
-      "avg_surprise_pct": -42.55
+      "avg_surprise_pct": -43.04
     },
     "BE": {
       "next_earnings": "2027-02-04",
@@ -1105,10 +1105,10 @@
       "avg_surprise_pct": 8.3
     },
     "CLSK": {
-      "next_earnings": "2026-11-24",
-      "eps_estimate": -0.415,
-      "eps_low": -0.45,
-      "eps_high": -0.38,
+      "next_earnings": "2027-02-04",
+      "eps_estimate": -0.39,
+      "eps_low": -0.39,
+      "eps_high": -0.39,
       "history": [
         {
           "date": "2026-08-06",
@@ -1783,8 +1783,8 @@
     },
     "FLY": {
       "next_earnings": "2026-11-10",
-      "eps_estimate": -0.46389,
-      "eps_low": -0.52333,
+      "eps_estimate": -0.48167,
+      "eps_low": -0.54,
       "eps_high": -0.43,
       "history": [
         {
@@ -3352,7 +3352,7 @@
     },
     "NVDA": {
       "next_earnings": "2026-11-17",
-      "eps_estimate": 2.88028,
+      "eps_estimate": 2.87956,
       "eps_low": 2.8,
       "eps_high": 3.11,
       "history": [
@@ -4612,7 +4612,7 @@
     },
     "SRPT": {
       "next_earnings": "2026-11-05",
-      "eps_estimate": -0.08057,
+      "eps_estimate": -0.07966,
       "eps_low": -1.2538,
       "eps_high": 0.64,
       "history": [
